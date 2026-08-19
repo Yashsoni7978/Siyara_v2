@@ -50,7 +50,7 @@ export default function Hero() {
   });
 
   const scaleFade = (delayMs) => ({
-    hidden: { opacity: 0, scale: shouldReduceMotion ? 1 : 0.95, y: shouldReduceMotion ? 0 : 20 },
+    hidden: { opacity: 0, scale: shouldReduceMotion ? 1 : 0.96, y: shouldReduceMotion ? 0 : 20 },
     visible: {
       opacity: 1,
       scale: 1,
@@ -74,20 +74,20 @@ export default function Hero() {
       onMouseLeave={handleMouseLeave}
       className="relative min-h-[92vh] lg:min-h-[96vh] pt-32 pb-16 lg:pt-36 lg:pb-24 bg-[#080B0A] overflow-hidden flex items-center"
     >
-      {/* BASE LAYER: Obsidian Dark Canvas */}
+      {/* CANVAS BASE: Obsidian Canvas */}
       <div className="absolute inset-0 bg-[#080B0A] z-0" />
 
-      {/* LAYER 1: Deep Emerald Background Atmosphere Smoke (Concentrated Right/Center) */}
+      {/* LAYER 1: Emerald Atmosphere Background Smoke (Seamless Blend) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.6, delay: 0.15 }}
         style={{
           ...getParallaxStyle(3),
-          maskImage: 'radial-gradient(ellipse 75% 85% at 70% 50%, black 20%, transparent 80%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 75% 85% at 70% 50%, black 20%, transparent 80%)',
+          maskImage: 'radial-gradient(ellipse 85% 85% at 70% 50%, black 30%, transparent 85%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 85% 85% at 70% 50%, black 30%, transparent 85%)',
         }}
-        className="absolute inset-0 pointer-events-none z-[1] overflow-hidden"
+        className="absolute inset-0 pointer-events-none z-[1]"
       >
         <img
           src="/images/Gemini_Generated_Image_v8ldi5v8ldi5v8ld.png"
@@ -96,51 +96,51 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* LAYER 2: Deep Emerald Ambient Glow Circle Directly Behind Portal */}
-      <div className="absolute right-[8%] top-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-[#063C2D]/60 via-[#19A878]/20 to-transparent blur-3xl rounded-full pointer-events-none z-[2]" />
+      {/* LAYER 2: Deep Emerald Ambient Glow Sphere Behind Portal */}
+      <div className="absolute right-[5%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#063C2D]/60 via-[#19A878]/20 to-transparent blur-3xl rounded-full pointer-events-none z-[2]" />
 
-      {/* LAYER 3: Emerald Energy Wisps (Strictly Right Side) */}
+      {/* LAYER 3: Emerald Energy Wisps (Right-Anchored) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 1.1 }}
         style={{
           ...getParallaxStyle(6),
-          maskImage: 'radial-gradient(ellipse 70% 70% at 80% 50%, black 20%, transparent 75%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 70% 70% at 80% 50%, black 20%, transparent 75%)',
+          maskImage: 'radial-gradient(ellipse 75% 75% at 75% 50%, black 25%, transparent 80%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 75% 75% at 75% 50%, black 25%, transparent 80%)',
         }}
-        className="absolute right-0 top-0 w-full lg:w-[60%] h-full pointer-events-none z-[3] overflow-hidden"
+        className="absolute right-0 top-0 w-full lg:w-[65%] h-full pointer-events-none z-[3]"
       >
         <img
           src="/images/Gemini_Generated_Image_aid1xoaid1xoaid1.png"
           alt="Emerald Energy Wisps"
-          className="w-full h-full object-cover object-right mix-blend-screen opacity-45 animate-energy-drift scale-110"
+          className="w-full h-full object-cover object-right mix-blend-screen opacity-45 animate-energy-drift scale-105"
         />
       </motion.div>
 
-      {/* LAYER 4: Champagne Gold Energy (Strictly Right Side - NO Headline Crossing) */}
+      {/* LAYER 4: Champagne Gold Energy Ribbons (Right-Anchored - NO Headline Crossing or Screen Edge Crop) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 1.3 }}
         style={{
           ...getParallaxStyle(10),
-          maskImage: 'radial-gradient(circle at 75% 50%, black 30%, transparent 75%)',
-          WebkitMaskImage: 'radial-gradient(circle at 75% 50%, black 30%, transparent 75%)',
+          maskImage: 'radial-gradient(ellipse 80% 80% at 65% 50%, black 35%, transparent 85%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 65% 50%, black 35%, transparent 85%)',
         }}
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[50%] h-[80%] pointer-events-none z-[4] overflow-hidden"
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[55%] h-[85%] pointer-events-none z-[4]"
       >
         <img
           src="/images/Gemini_Generated_Image_p03y7gp03y7gp03y.png"
           alt="Gold Energy Ribbons"
-          className="w-full h-full object-contain mix-blend-screen opacity-50 animate-gold-flow"
+          className="w-full h-full object-cover object-right mix-blend-screen opacity-55 animate-gold-flow"
         />
       </motion.div>
 
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
 
-          {/* LEFT COLUMN: Clean Editorial Typography & CTAs (Clean Negative Space) */}
+          {/* LEFT COLUMN: Clean Editorial Typography & CTAs */}
           <div className="lg:col-span-6 flex flex-col justify-center relative z-20">
             
             {/* Eyebrow */}
@@ -159,7 +159,7 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            {/* Main Headline */}
+            {/* Main Editorial Headline */}
             <div className="mb-6">
               <motion.h1
                 initial="hidden"
@@ -229,7 +229,7 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* RIGHT COLUMN: ISOLATED 3D PORTAL OBJECT (Occupies ~48-52% Desktop Visual Weight) */}
+          {/* RIGHT COLUMN: PERFECTED SEAMLESS 3D PORTAL OBJECT */}
           <div className="lg:col-span-6 relative mt-12 lg:mt-0 flex justify-center lg:justify-end items-center">
             <motion.div
               initial="hidden"
@@ -238,46 +238,42 @@ export default function Hero() {
               className="relative w-full max-w-xl lg:max-w-2xl xl:max-w-3xl flex justify-center items-center"
             >
               
-              {/* LAYER 5: Sparse Gold Glints Highlights (Restricted to Portal Area) */}
+              {/* LAYER 5: Sparse Gold Glints Highlights */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, delay: 1.6 }}
                 style={{
                   ...getParallaxStyle(14),
-                  maskImage: 'radial-gradient(circle at 50% 50%, black 15%, transparent 55%)',
-                  WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 15%, transparent 55%)',
+                  maskImage: 'radial-gradient(circle at 50% 50%, black 20%, transparent 60%)',
+                  WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 20%, transparent 60%)',
                 }}
-                className="absolute right-[-5%] top-[-5%] w-[420px] h-[420px] pointer-events-none z-[5] overflow-hidden"
+                className="absolute right-[5%] top-[5%] w-[380px] h-[380px] pointer-events-none z-[5]"
               >
                 <img
                   src="/images/Gemini_Generated_Image_19sjf619sjf619sj.png"
                   alt="Gold Glints Highlights"
-                  className="w-full h-full object-cover mix-blend-screen opacity-40 animate-glint"
+                  className="w-full h-full object-cover mix-blend-screen opacity-45 animate-glint"
                 />
               </motion.div>
 
-              {/* Grounding Soft Drop Shadow Below Floating Portal */}
-              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-4/5 h-12 bg-black/95 blur-2xl rounded-full z-[6] pointer-events-none" />
+              {/* Grounding Soft Ambient Shadow */}
+              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-4/5 h-12 bg-black/90 blur-2xl rounded-full z-[6] pointer-events-none" />
 
-              {/* LAYER 6: ISOLATED 3D PORTAL OBJECT */}
+              {/* LAYER 6: ISOLATED 3D PORTAL OBJECT (Zero Rectangular Box, Zero Edge Crop) */}
               <div style={getParallaxStyle(5)} className="relative z-[7] w-full flex justify-center">
-                <div className="relative animate-portal-float w-full max-w-[560px] sm:max-w-[640px] lg:max-w-[720px] flex justify-center items-center">
+                <div className="relative animate-portal-float w-full max-w-[580px] sm:max-w-[660px] lg:max-w-[740px] flex justify-center items-center">
                   
-                  {/* Outer Feathered Radial Mask Container to 100% Melt Away PNG Dark Background */}
-                  <div
-                    className="relative w-full flex justify-center items-center overflow-hidden"
+                  {/* Portal 3D Image with Precise Soft Feathered Radial Falloff & Screen Compositing */}
+                  <img
+                    src="/images/Gemini_Generated_Image_i6e37zi6e37zi6e3.png"
+                    alt="Siyara 3D Digital Portal Display"
+                    className="w-full h-auto object-contain pointer-events-none mix-blend-screen contrast-[1.12] brightness-[1.02] drop-shadow-[0_20px_50px_rgba(0,0,0,0.9)] transform transition-transform duration-700 hover:scale-[1.02]"
                     style={{
-                      maskImage: 'radial-gradient(ellipse 64% 64% at 50% 50%, black 48%, transparent 72%)',
-                      WebkitMaskImage: 'radial-gradient(ellipse 64% 64% at 50% 50%, black 48%, transparent 72%)',
+                      maskImage: 'radial-gradient(ellipse 72% 72% at 50% 50%, black 50%, transparent 92%)',
+                      WebkitMaskImage: 'radial-gradient(ellipse 72% 72% at 50% 50%, black 50%, transparent 92%)',
                     }}
-                  >
-                    <img
-                      src="/images/Gemini_Generated_Image_i6e37zi6e37zi6e3.png"
-                      alt="Siyara 3D Digital Portal Display"
-                      className="w-full h-auto object-contain pointer-events-none mix-blend-screen scale-[1.32] sm:scale-[1.38] contrast-[1.08] brightness-[1.02] drop-shadow-[0_30px_60px_rgba(0,0,0,0.95)] transform transition-transform duration-700 hover:scale-[1.40]"
-                    />
-                  </div>
+                  />
 
                 </div>
               </div>
