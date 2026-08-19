@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 export default function Navbar({ currentPage = 'home', onNavigate }) {
@@ -81,11 +81,11 @@ export default function Navbar({ currentPage = 'home', onNavigate }) {
           onClick={(e) => handleLinkClick(e, { id: 'home' })}
           className="flex flex-col group focus:outline-none"
         >
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1.5">
             <span className="font-sans text-xl sm:text-2xl font-bold tracking-[0.2em] text-[#F3EFE4] group-hover:text-[#D4AF37] transition-colors">
               SIYARA
             </span>
-            <span className="text-[#D4AF37] text-sm group-hover:rotate-45 transition-transform duration-300">
+            <span className="text-[#D4AF37] text-xs font-bold group-hover:rotate-45 transition-transform duration-300">
               ✦
             </span>
           </div>
@@ -124,10 +124,10 @@ export default function Navbar({ currentPage = 'home', onNavigate }) {
           <a
             href="#contact"
             onClick={(e) => handleLinkClick(e, { href: '#contact' })}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-none border border-[#D4AF37]/40 bg-[#063C2D]/30 hover:bg-[#D4AF37] text-[#F3EFE4] hover:text-[#080B0A] text-[11px] font-semibold tracking-[0.16em] uppercase transition-all duration-300 group shadow-lg hover:shadow-[#D4AF37]/20"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#D4AF37]/50 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-[11px] font-bold tracking-[0.16em] uppercase transition-all duration-300 group shadow-lg shadow-[#D4AF37]/15 hover:shadow-[#D4AF37]/30 hover:-translate-y-0.5"
           >
-            <span>START A PROJECT</span>
-            <ArrowUpRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover:text-[#080B0A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <span>BOOK STRATEGY SESSION</span>
+            <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </a>
         </div>
 
@@ -162,9 +162,9 @@ export default function Navbar({ currentPage = 'home', onNavigate }) {
             <a
               href="#contact"
               onClick={(e) => handleLinkClick(e, { href: '#contact' })}
-              className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 border border-[#D4AF37] bg-[#D4AF37] text-[#080B0A] font-semibold tracking-[0.16em] uppercase text-xs shadow-lg"
+              className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 border border-[#D4AF37] bg-[#E5C378] text-[#080B0A] font-bold tracking-[0.16em] uppercase text-xs rounded-full shadow-lg"
             >
-              <span>START A PROJECT</span>
+              <span>BOOK STRATEGY SESSION</span>
               <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
@@ -173,5 +173,3 @@ export default function Navbar({ currentPage = 'home', onNavigate }) {
     </header>
   );
 }
-
-
