@@ -31,84 +31,6 @@ function StarGlint({ top = '20%', left = '60%', delay = 0, size = 'sm' }) {
   );
 }
 
-// Faceted 3D Crystal Gem Component with Proximity Hover Tilt & Light Response
-function EmeraldCrystal({ size = 'md', className = '', style = {}, floatDuration = 7 }) {
-  const [hovered, setHovered] = useState(false);
-
-  const scale = size === 'lg' ? 'w-24 h-40 sm:w-32 sm:h-52 lg:w-40 lg:h-64' : size === 'md' ? 'w-14 h-22 sm:w-18 sm:h-28' : 'w-8 h-14 sm:w-11 sm:h-18';
-
-  return (
-    <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={style}
-      className={`absolute cursor-pointer transition-all duration-500 ease-out ${scale} ${className}`}
-    >
-      <div
-        className="w-full h-full relative"
-        style={{
-          transform: hovered ? 'rotate(4deg) scale(1.04) translate3d(0, -3px, 0)' : 'rotate(0deg) scale(1)',
-          transition: 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
-          animation: `crystalFloat ${floatDuration}s ease-in-out infinite`,
-        }}
-      >
-        <svg
-          viewBox="0 0 100 160"
-          className={`w-full h-full filter transition-all duration-500 ${
-            hovered
-              ? 'drop-shadow-[0_0_35px_rgba(25,168,120,0.8)] brightness-125'
-              : 'drop-shadow-[0_12px_32px_rgba(6,60,45,0.7)] brightness-100'
-          }`}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <linearGradient id={`facetTopLeft-${size}`} x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#19A878" stopOpacity={hovered ? '0.98' : '0.92'} />
-              <stop offset="100%" stopColor="#063C2D" stopOpacity="0.98" />
-            </linearGradient>
-            <linearGradient id={`facetTopRight-${size}`} x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#0B5A43" stopOpacity={hovered ? '0.95' : '0.88'} />
-              <stop offset="100%" stopColor="#04261C" stopOpacity="0.99" />
-            </linearGradient>
-            <linearGradient id={`facetBottomLeft-${size}`} x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#04261C" stopOpacity="0.99" />
-              <stop offset="100%" stopColor="#084433" stopOpacity="0.9" />
-            </linearGradient>
-            <linearGradient id={`facetBottomRight-${size}`} x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#084433" stopOpacity="0.85" />
-              <stop offset="100%" stopColor="#19A878" stopOpacity={hovered ? '0.98' : '0.92'} />
-            </linearGradient>
-            <radialGradient id={`crystalGlow-${size}`} cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="#19A878" stopOpacity={hovered ? 0.85 : 0.35} />
-              <stop offset="100%" stopColor="transparent" stopOpacity="0" />
-            </radialGradient>
-          </defs>
-
-          {/* Internal Glow Sphere */}
-          <circle cx="50" cy="80" r="45" fill={`url(#crystalGlow-${size})`} />
-
-          {/* Faceted 3D Crystal Gem Polygons */}
-          <polygon points="50,5 82,65 50,95" fill={`url(#facetTopRight-${size})`} />
-          <polygon points="50,5 18,65 50,95" fill={`url(#facetTopLeft-${size})`} />
-          <polygon points="50,95 18,65 50,155" fill={`url(#facetBottomLeft-${size})`} />
-          <polygon points="50,95 82,65 50,155" fill={`url(#facetBottomRight-${size})`} />
-
-          {/* Champagne Gold Specular Facet Highlight Lines */}
-          <line x1="50" y1="5" x2="82" y2="65" stroke="#E5C378" strokeWidth="1.2" strokeOpacity={hovered ? '1.0' : '0.7'} />
-          <line x1="50" y1="5" x2="18" y2="65" stroke="#F3EFE4" strokeWidth="1.0" strokeOpacity={hovered ? '0.8' : '0.5'} />
-          <line x1="50" y1="5" x2="50" y2="95" stroke="#D4AF37" strokeWidth="1.5" strokeOpacity={hovered ? '1.0' : '0.75'} />
-          <line x1="18" y1="65" x2="82" y2="65" stroke="#E5C378" strokeWidth="0.8" strokeOpacity="0.4" />
-          <line x1="50" y1="95" x2="82" y2="65" stroke="#D4AF37" strokeWidth="1.0" strokeOpacity="0.5" />
-          <line x1="50" y1="95" x2="50" y2="155" stroke="#E5C378" strokeWidth="1.2" strokeOpacity={hovered ? '0.95' : '0.6'} />
-
-          {/* Specular Light Reflection Point */}
-          <circle cx="50" cy="95" r={hovered ? '3.5' : '2.5'} fill="#E5C378" className="transition-all duration-300" />
-        </svg>
-      </div>
-    </div>
-  );
-}
-
 export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
   
@@ -218,60 +140,17 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* LAYER 06: Gold Orbital Lines Overlay with Travelling Light Effect (Parallax: 9px) */}
+      {/* LAYER 06: Fine Gold Stardust Particles Overlay (Parallax: 12px) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.5, delay: 1.1 }}
+        transition={{ duration: 1.2, delay: 1.2 }}
         style={{
-          ...getParallaxStyle(9),
-          maskImage: 'radial-gradient(ellipse 80% 80% at 70% 50%, black 35%, transparent 85%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 70% 50%, black 35%, transparent 85%)',
-        }}
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[55%] h-[85%] pointer-events-none z-[5] overflow-hidden"
-      >
-        <img
-          src="/images/Gemini_Generated_Image_p03y7gp03y7gp03y.png"
-          alt="Gold Orbital Energy Lines"
-          className="w-full h-full object-cover object-right mix-blend-screen opacity-45"
-        />
-      </motion.div>
-
-      {/* LAYER 07: Faceted Emerald Crystal Field (Dimensional Proximity Response - Parallax: 12px) */}
-      <div style={getParallaxStyle(12)} className="absolute inset-0 pointer-events-auto z-[6]">
-        {/* Crystal 1: Prominent Large Foreground Crystal (Bottom Right) */}
-        <EmeraldCrystal
-          size="lg"
-          floatDuration={7.5}
-          style={{ right: '11%', bottom: '13%' }}
-        />
-
-        {/* Crystal 2: Medium Floating Crystal (Top Center-Right) */}
-        <EmeraldCrystal
-          size="md"
-          floatDuration={6.5}
-          style={{ right: '35%', top: '18%' }}
-        />
-
-        {/* Crystal 3: Medium Floating Crystal (Mid Right) */}
-        <EmeraldCrystal
-          size="md"
-          floatDuration={8}
-          style={{ right: '7%', top: '36%' }}
-        />
-      </div>
-
-      {/* LAYER 08: Fine Gold Stardust Particles Overlay (Parallax: 15px) */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.2, delay: 1.3 }}
-        style={{
-          ...getParallaxStyle(15),
+          ...getParallaxStyle(12),
           maskImage: 'radial-gradient(circle at 60% 50%, black 20%, transparent 70%)',
           WebkitMaskImage: 'radial-gradient(circle at 60% 50%, black 20%, transparent 70%)',
         }}
-        className="absolute right-[4%] top-[4%] w-[520px] h-[520px] pointer-events-none z-[7] overflow-hidden"
+        className="absolute right-[4%] top-[4%] w-[520px] h-[520px] pointer-events-none z-[5] overflow-hidden"
       >
         <img
           src="/images/Gemini_Generated_Image_19sjf619sjf619sj.png"
@@ -280,8 +159,8 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* LAYER 09: Gold Star Glints (Randomized Timed Sparkle Flares - Parallax: 18px) */}
-      <div style={getParallaxStyle(18)} className="absolute inset-0 pointer-events-none z-[8]">
+      {/* LAYER 07: Gold Star Glints (Randomized Timed Sparkle Flares - Parallax: 16px) */}
+      <div style={getParallaxStyle(16)} className="absolute inset-0 pointer-events-none z-[6]">
         <StarGlint top="18%" left="62%" delay={0} size="lg" />
         <StarGlint top="32%" left="78%" delay={1.5} size="md" />
         <StarGlint top="58%" left="84%" delay={3.0} size="lg" />
