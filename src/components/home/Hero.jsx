@@ -72,75 +72,75 @@ export default function Hero() {
       ref={heroRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative min-h-[92vh] lg:min-h-[96vh] pt-32 pb-16 lg:pt-36 lg:pb-24 bg-[#080B0A] overflow-hidden flex items-center"
+      className="relative min-h-[90vh] lg:min-h-[95vh] pt-32 pb-16 lg:pt-36 lg:pb-24 bg-[#080B0A] overflow-hidden flex items-center"
     >
-      {/* CANVAS BASE: Obsidian Canvas */}
+      {/* BASE CANVAS: Obsidian Black Base Layer */}
       <div className="absolute inset-0 bg-[#080B0A] z-0" />
 
-      {/* LAYER 1: Emerald Atmosphere Background Smoke (Seamless Blend) */}
+      {/* LAYER 1: Deep Emerald Background Atmosphere Smoke */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.6, delay: 0.15 }}
         style={{
           ...getParallaxStyle(3),
-          maskImage: 'radial-gradient(ellipse 85% 85% at 70% 50%, black 30%, transparent 85%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 85% 85% at 70% 50%, black 30%, transparent 85%)',
+          maskImage: 'radial-gradient(ellipse 90% 90% at 65% 50%, black 25%, transparent 85%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 90% 90% at 65% 50%, black 25%, transparent 85%)',
         }}
-        className="absolute inset-0 pointer-events-none z-[1]"
+        className="absolute inset-0 pointer-events-none z-[1] overflow-hidden"
       >
         <img
           src="/images/Gemini_Generated_Image_v8ldi5v8ldi5v8ld.png"
           alt="Siyara Emerald Atmosphere"
-          className="w-full h-full object-cover object-right mix-blend-screen opacity-50 animate-atmosphere scale-105"
+          className="w-full h-full object-cover object-right mix-blend-screen opacity-45 animate-atmosphere scale-105"
         />
       </motion.div>
 
       {/* LAYER 2: Deep Emerald Ambient Glow Sphere Behind Portal */}
-      <div className="absolute right-[5%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#063C2D]/60 via-[#19A878]/20 to-transparent blur-3xl rounded-full pointer-events-none z-[2]" />
+      <div className="absolute right-[6%] top-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-[#063C2D]/55 via-[#19A878]/18 to-transparent blur-3xl rounded-full pointer-events-none z-[2]" />
 
-      {/* LAYER 3: Emerald Energy Wisps (Right-Anchored) */}
+      {/* LAYER 3: Emerald Energy Wisps — Subtle Visual Bridge from Headline to Portal */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 1.1 }}
         style={{
           ...getParallaxStyle(6),
-          maskImage: 'radial-gradient(ellipse 75% 75% at 75% 50%, black 25%, transparent 80%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 75% 75% at 75% 50%, black 25%, transparent 80%)',
+          maskImage: 'radial-gradient(ellipse 85% 75% at 55% 50%, black 20%, transparent 80%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 85% 75% at 55% 50%, black 20%, transparent 80%)',
         }}
-        className="absolute right-0 top-0 w-full lg:w-[65%] h-full pointer-events-none z-[3]"
+        className="absolute left-[15%] right-0 top-0 w-[85%] h-full pointer-events-none z-[3] overflow-hidden"
       >
         <img
           src="/images/Gemini_Generated_Image_aid1xoaid1xoaid1.png"
           alt="Emerald Energy Wisps"
-          className="w-full h-full object-cover object-right mix-blend-screen opacity-45 animate-energy-drift scale-105"
+          className="w-full h-full object-cover object-center mix-blend-screen opacity-38 animate-energy-drift scale-105"
         />
       </motion.div>
 
-      {/* LAYER 4: Champagne Gold Energy Ribbons (Right-Anchored - NO Headline Crossing or Screen Edge Crop) */}
+      {/* LAYER 4: Champagne Gold Energy Ribbons (Strictly Right Side - Zero Headline Interference) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 1.3 }}
         style={{
           ...getParallaxStyle(10),
-          maskImage: 'radial-gradient(ellipse 80% 80% at 65% 50%, black 35%, transparent 85%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 65% 50%, black 35%, transparent 85%)',
+          maskImage: 'radial-gradient(ellipse 80% 80% at 70% 50%, black 30%, transparent 80%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 70% 50%, black 30%, transparent 80%)',
         }}
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[55%] h-[85%] pointer-events-none z-[4]"
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[52%] h-[85%] pointer-events-none z-[4] overflow-hidden"
       >
         <img
           src="/images/Gemini_Generated_Image_p03y7gp03y7gp03y.png"
           alt="Gold Energy Ribbons"
-          className="w-full h-full object-cover object-right mix-blend-screen opacity-55 animate-gold-flow"
+          className="w-full h-full object-cover object-right mix-blend-screen opacity-45 animate-gold-flow"
         />
       </motion.div>
 
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
 
-          {/* LEFT COLUMN: Clean Editorial Typography & CTAs */}
+          {/* LEFT COLUMN: Art-Directed Rebalanced Editorial Typography & CTAs */}
           <div className="lg:col-span-6 flex flex-col justify-center relative z-20">
             
             {/* Eyebrow */}
@@ -159,13 +159,13 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            {/* Main Editorial Headline */}
+            {/* Rebalanced Headline (~10% scale reduction for perfect breathing room) */}
             <div className="mb-6">
               <motion.h1
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(580)}
-                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[1.02] tracking-tight text-[#F3EFE4]"
+                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[1.04] tracking-tight text-[#F3EFE4]"
               >
                 WE BUILD
               </motion.h1>
@@ -174,7 +174,7 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(680)}
-                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[1.02] tracking-tight text-[#F3EFE4]"
+                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[1.04] tracking-tight text-[#F3EFE4]"
               >
                 BRANDS.
               </motion.h1>
@@ -183,7 +183,7 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(780)}
-                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[1.02] tracking-tight text-[#E5C378] italic drop-shadow-[0_4px_24px_rgba(212,175,55,0.18)]"
+                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[1.04] tracking-tight text-[#E5C378] italic drop-shadow-[0_4px_24px_rgba(212,175,55,0.18)]"
               >
                 THAT DOMINATE.
               </motion.h1>
@@ -213,7 +213,7 @@ export default function Hero() {
             >
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 shadow-xl shadow-[#D4AF37]/15 hover:shadow-[#D4AF37]/30 hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 shadow-xl shadow-[#D4AF37]/15 hover:shadow-[#D4AF37]/30 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>START A PROJECT</span>
                 <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
@@ -221,7 +221,7 @@ export default function Hero() {
 
               <a
                 href="#work"
-                className="inline-flex items-center gap-2 px-6 py-4 border-b border-[#D4AF37]/40 text-[#F3EFE4] hover:text-[#D4AF37] text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 group"
+                className="inline-flex items-center gap-2 px-6 py-3.5 border-b border-[#D4AF37]/40 text-[#F3EFE4] hover:text-[#D4AF37] text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 group"
               >
                 <span>VIEW OUR WORK</span>
                 <ArrowRight className="w-4 h-4 text-[#D4AF37] group-hover:translate-x-1.5 transition-transform" />
@@ -229,8 +229,8 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* RIGHT COLUMN: PERFECTED SEAMLESS 3D PORTAL OBJECT */}
-          <div className="lg:col-span-6 relative mt-12 lg:mt-0 flex justify-center lg:justify-end items-center">
+          {/* RIGHT COLUMN: PERFECTED 100% ISOLATED 3D PORTAL OBJECT */}
+          <div className="lg:col-span-6 relative mt-10 lg:mt-0 flex justify-center lg:justify-end items-center">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -238,40 +238,40 @@ export default function Hero() {
               className="relative w-full max-w-xl lg:max-w-2xl xl:max-w-3xl flex justify-center items-center"
             >
               
-              {/* LAYER 5: Sparse Gold Glints Highlights */}
+              {/* LAYER 5: Sparse Gold Glints (Occasional Light Refraction Points) */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, delay: 1.6 }}
                 style={{
                   ...getParallaxStyle(14),
-                  maskImage: 'radial-gradient(circle at 50% 50%, black 20%, transparent 60%)',
-                  WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 20%, transparent 60%)',
+                  maskImage: 'radial-gradient(circle at 50% 50%, black 15%, transparent 50%)',
+                  WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 15%, transparent 50%)',
                 }}
-                className="absolute right-[5%] top-[5%] w-[380px] h-[380px] pointer-events-none z-[5]"
+                className="absolute right-[5%] top-[5%] w-[350px] h-[350px] pointer-events-none z-[5] overflow-hidden"
               >
                 <img
                   src="/images/Gemini_Generated_Image_19sjf619sjf619sj.png"
                   alt="Gold Glints Highlights"
-                  className="w-full h-full object-cover mix-blend-screen opacity-45 animate-glint"
+                  className="w-full h-full object-cover mix-blend-screen opacity-30 animate-glint"
                 />
               </motion.div>
 
               {/* Grounding Soft Ambient Shadow */}
-              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-4/5 h-12 bg-black/90 blur-2xl rounded-full z-[6] pointer-events-none" />
+              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-black/95 blur-2xl rounded-full z-[6] pointer-events-none" />
 
-              {/* LAYER 6: ISOLATED 3D PORTAL OBJECT (Zero Rectangular Box, Zero Edge Crop) */}
+              {/* LAYER 6: ISOLATED 3D PORTAL OBJECT (Zero Dark Box, Zero Edge Crop) */}
               <div style={getParallaxStyle(5)} className="relative z-[7] w-full flex justify-center">
-                <div className="relative animate-portal-float w-full max-w-[580px] sm:max-w-[660px] lg:max-w-[740px] flex justify-center items-center">
+                <div className="relative animate-portal-float w-full max-w-[560px] sm:max-w-[640px] lg:max-w-[700px] flex justify-center items-center">
                   
-                  {/* Portal 3D Image with Precise Soft Feathered Radial Falloff & Screen Compositing */}
+                  {/* Black Point Crushing & Double Radial Feather Falloff — Completely Crushes Near-Black Charcoal PNG Background */}
                   <img
                     src="/images/Gemini_Generated_Image_i6e37zi6e37zi6e3.png"
                     alt="Siyara 3D Digital Portal Display"
-                    className="w-full h-auto object-contain pointer-events-none mix-blend-screen contrast-[1.12] brightness-[1.02] drop-shadow-[0_20px_50px_rgba(0,0,0,0.9)] transform transition-transform duration-700 hover:scale-[1.02]"
+                    className="w-full h-auto object-contain pointer-events-none mix-blend-screen contrast-[1.28] brightness-[0.96] drop-shadow-[0_20px_50px_rgba(0,0,0,0.95)] transform transition-transform duration-700 hover:scale-[1.02]"
                     style={{
-                      maskImage: 'radial-gradient(ellipse 72% 72% at 50% 50%, black 50%, transparent 92%)',
-                      WebkitMaskImage: 'radial-gradient(ellipse 72% 72% at 50% 50%, black 50%, transparent 92%)',
+                      maskImage: 'radial-gradient(ellipse 58% 58% at 50% 50%, black 40%, transparent 68%)',
+                      WebkitMaskImage: 'radial-gradient(ellipse 58% 58% at 50% 50%, black 40%, transparent 68%)',
                     }}
                   />
 
