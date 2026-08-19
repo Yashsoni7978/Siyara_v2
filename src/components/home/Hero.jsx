@@ -2,6 +2,85 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
 
+// Faceted Emerald Crystal Component (Sharp 3D Geometry, Gold Specular Facets, No UI Card Box)
+function EmeraldCrystal({ size = 'md', className = '', style = {}, delay = 0, floatDuration = 6 }) {
+  const [hovered, setHovered] = useState(false);
+
+  // Scaled dimensions
+  const scale = size === 'lg' ? 'w-28 h-44 sm:w-36 sm:h-56 lg:w-44 lg:h-68' : size === 'md' ? 'w-16 h-24 sm:w-20 sm:h-32' : 'w-9 h-14 sm:w-12 sm:h-18';
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1.2, delay }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={style}
+      className={`absolute cursor-pointer transition-transform duration-500 ease-out ${scale} ${className}`}
+    >
+      <div
+        className="w-full h-full relative"
+        style={{
+          transform: hovered ? 'rotate(5deg) scale(1.10)' : 'rotate(0deg) scale(1)',
+          transition: 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+          animation: `crystalFloat ${floatDuration}s ease-in-out infinite`,
+        }}
+      >
+        <svg
+          viewBox="0 0 100 160"
+          className="w-full h-full filter drop-shadow-[0_12px_30px_rgba(6,60,45,0.7)]"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            {/* Facet Gradients for Refractive Translucent Depth */}
+            <linearGradient id={`facetTopLeft-${size}`} x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#19A878" stopOpacity="0.95" />
+              <stop offset="100%" stopColor="#063C2D" stopOpacity="0.98" />
+            </linearGradient>
+            <linearGradient id={`facetTopRight-${size}`} x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#0B5A43" stopOpacity="0.9" />
+              <stop offset="100%" stopColor="#04261C" stopOpacity="0.99" />
+            </linearGradient>
+            <linearGradient id={`facetBottomLeft-${size}`} x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#04261C" stopOpacity="0.99" />
+              <stop offset="100%" stopColor="#084433" stopOpacity="0.9" />
+            </linearGradient>
+            <linearGradient id={`facetBottomRight-${size}`} x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#084433" stopOpacity="0.85" />
+              <stop offset="100%" stopColor="#19A878" stopOpacity="0.95" />
+            </linearGradient>
+            <radialGradient id={`crystalGlow-${size}`} cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor="#19A878" stopOpacity={hovered ? 0.7 : 0.3} />
+              <stop offset="100%" stopColor="transparent" stopOpacity="0" />
+            </radialGradient>
+          </defs>
+
+          {/* Internal Glow Sphere */}
+          <circle cx="50" cy="80" r="45" fill={`url(#crystalGlow-${size})`} />
+
+          {/* Main Facet Polygons (Faceted 3D Crystal Gem Body) */}
+          <polygon points="50,5 82,65 50,95" fill={`url(#facetTopRight-${size})`} />
+          <polygon points="50,5 18,65 50,95" fill={`url(#facetTopLeft-${size})`} />
+          <polygon points="50,95 18,65 50,155" fill={`url(#facetBottomLeft-${size})`} />
+          <polygon points="50,95 82,65 50,155" fill={`url(#facetBottomRight-${size})`} />
+
+          {/* Facet Reflection Lines (Champagne Gold Edge Highlights) */}
+          <line x1="50" y1="5" x2="82" y2="65" stroke="#E5C378" strokeWidth="1.2" strokeOpacity={hovered ? '0.95' : '0.7'} />
+          <line x1="50" y1="5" x2="18" y2="65" stroke="#F3EFE4" strokeWidth="1.0" strokeOpacity="0.5" />
+          <line x1="50" y1="5" x2="50" y2="95" stroke="#D4AF37" strokeWidth="1.4" strokeOpacity={hovered ? '1.0' : '0.75'} />
+          <line x1="18" y1="65" x2="82" y2="65" stroke="#E5C378" strokeWidth="0.8" strokeOpacity="0.4" />
+          <line x1="50" y1="95" x2="82" y2="65" stroke="#D4AF37" strokeWidth="1.0" strokeOpacity="0.5" />
+          <line x1="50" y1="95" x2="50" y2="155" stroke="#E5C378" strokeWidth="1.2" strokeOpacity={hovered ? '0.9' : '0.6'} />
+
+          {/* Specular Light Point Highlight */}
+          <circle cx="50" cy="95" r="2.5" fill="#E5C378" className="animate-pulse" />
+        </svg>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
   
@@ -49,16 +128,6 @@ export default function Hero() {
     },
   });
 
-  const scaleFade = (delayMs) => ({
-    hidden: { opacity: 0, scale: shouldReduceMotion ? 1 : 0.96, y: shouldReduceMotion ? 0 : 20 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: { duration: 1.0, delay: delayMs / 1000, ease: easeCustom },
-    },
-  });
-
   const getParallaxStyle = (multiplier) => {
     if (isMobile || shouldReduceMotion) return {};
     return {
@@ -72,120 +141,187 @@ export default function Hero() {
       ref={heroRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative min-h-[90vh] lg:min-h-[95vh] pt-32 pb-16 lg:pt-36 lg:pb-24 bg-[#080B0A] overflow-hidden flex items-center"
+      className="relative min-h-[92vh] lg:min-h-[96vh] pt-32 pb-20 lg:pt-36 lg:pb-24 bg-[#080B0A] overflow-hidden flex items-center"
     >
-      {/* BASE CANVAS: Obsidian Black Base Layer */}
+      {/* LAYER 01: Obsidian Black Base Canvas */}
       <div className="absolute inset-0 bg-[#080B0A] z-0" />
 
-      {/* LAYER 1: Deep Emerald Background Atmosphere Smoke */}
+      {/* LAYER 02: Deep Emerald Atmosphere Smoke */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.6, delay: 0.15 }}
         style={{
           ...getParallaxStyle(3),
-          maskImage: 'radial-gradient(ellipse 90% 90% at 65% 50%, black 25%, transparent 85%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 90% 90% at 65% 50%, black 25%, transparent 85%)',
+          maskImage: 'radial-gradient(ellipse 90% 90% at 70% 50%, black 30%, transparent 85%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 90% 90% at 70% 50%, black 30%, transparent 85%)',
         }}
         className="absolute inset-0 pointer-events-none z-[1] overflow-hidden"
       >
         <img
           src="/images/Gemini_Generated_Image_v8ldi5v8ldi5v8ld.png"
           alt="Siyara Emerald Atmosphere"
-          className="w-full h-full object-cover object-right mix-blend-screen opacity-45 animate-atmosphere scale-105"
+          className="w-full h-full object-cover object-right mix-blend-screen opacity-50 animate-atmosphere scale-105"
         />
       </motion.div>
 
-      {/* LAYER 2: Deep Emerald Ambient Glow Sphere Behind Portal */}
-      <div className="absolute right-[6%] top-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-[#063C2D]/55 via-[#19A878]/18 to-transparent blur-3xl rounded-full pointer-events-none z-[2]" />
-
-      {/* LAYER 3: Emerald Energy Wisps — Subtle Visual Bridge from Headline to Portal */}
+      {/* LAYER 03: Flowing Luminous Emerald Energy Silk Structure (Primary Visual Centerpiece) */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5, delay: 1.1 }}
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.6, delay: 1.0, ease: easeCustom }}
         style={{
           ...getParallaxStyle(6),
-          maskImage: 'radial-gradient(ellipse 85% 75% at 55% 50%, black 20%, transparent 80%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 85% 75% at 55% 50%, black 20%, transparent 80%)',
+          maskImage: 'radial-gradient(ellipse 85% 85% at 65% 50%, black 40%, transparent 92%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 85% 85% at 65% 50%, black 40%, transparent 92%)',
         }}
-        className="absolute left-[15%] right-0 top-0 w-[85%] h-full pointer-events-none z-[3] overflow-hidden"
+        className="absolute right-0 top-0 w-full lg:w-[68%] h-full pointer-events-none z-[2] overflow-hidden"
       >
         <img
           src="/images/Gemini_Generated_Image_aid1xoaid1xoaid1.png"
-          alt="Emerald Energy Wisps"
-          className="w-full h-full object-cover object-center mix-blend-screen opacity-38 animate-energy-drift scale-105"
+          alt="Luminous Emerald Energy Silk"
+          className="w-full h-full object-cover object-right mix-blend-screen opacity-65 animate-energy-drift scale-110"
         />
       </motion.div>
 
-      {/* LAYER 4: Champagne Gold Energy Ribbons (Strictly Right Side - Zero Headline Interference) */}
+      {/* LAYER 04: Champagne-Gold Energy Orbital Ribbons */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.5, delay: 1.3 }}
+        transition={{ duration: 1.5, delay: 1.4 }}
         style={{
           ...getParallaxStyle(10),
-          maskImage: 'radial-gradient(ellipse 80% 80% at 70% 50%, black 30%, transparent 80%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 70% 50%, black 30%, transparent 80%)',
+          maskImage: 'radial-gradient(ellipse 80% 80% at 70% 50%, black 35%, transparent 85%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 70% 50%, black 35%, transparent 85%)',
         }}
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[52%] h-[85%] pointer-events-none z-[4] overflow-hidden"
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[55%] h-[85%] pointer-events-none z-[3] overflow-hidden"
       >
         <img
           src="/images/Gemini_Generated_Image_p03y7gp03y7gp03y.png"
-          alt="Gold Energy Ribbons"
-          className="w-full h-full object-cover object-right mix-blend-screen opacity-45 animate-gold-flow"
+          alt="Champagne Gold Energy Trails"
+          className="w-full h-full object-cover object-right mix-blend-screen opacity-55 animate-gold-flow"
         />
       </motion.div>
+
+      {/* LAYER 05: Fine Gold Glints & Stardust Particles */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5, delay: 1.6 }}
+        style={{
+          ...getParallaxStyle(18),
+          maskImage: 'radial-gradient(circle at 60% 50%, black 25%, transparent 75%)',
+          WebkitMaskImage: 'radial-gradient(circle at 60% 50%, black 25%, transparent 75%)',
+        }}
+        className="absolute right-[5%] top-[5%] w-[500px] h-[500px] pointer-events-none z-[4] overflow-hidden"
+      >
+        <img
+          src="/images/Gemini_Generated_Image_19sjf619sjf619sj.png"
+          alt="Fine Gold Stardust"
+          className="w-full h-full object-cover mix-blend-screen opacity-40 animate-glint"
+        />
+      </motion.div>
+
+      {/* LAYER 06: Faceted Translucent Emerald Crystal Field (Suspended 3D Geometry) */}
+      <div style={getParallaxStyle(14)} className="absolute inset-0 pointer-events-auto z-[5]">
+        {/* Crystal 1: Prominent Large Foreground Crystal (Bottom Right) */}
+        <EmeraldCrystal
+          size="lg"
+          delay={1.2}
+          floatDuration={7}
+          style={{ right: '12%', bottom: '15%' }}
+        />
+
+        {/* Crystal 2: Medium Floating Crystal (Top Center-Right) */}
+        <EmeraldCrystal
+          size="md"
+          delay={1.35}
+          floatDuration={6.5}
+          style={{ right: '36%', top: '18%' }}
+        />
+
+        {/* Crystal 3: Medium Floating Crystal (Mid Right) */}
+        <EmeraldCrystal
+          size="md"
+          delay={1.5}
+          floatDuration={8}
+          style={{ right: '8%', top: '38%' }}
+        />
+
+        {/* Crystal 4: Small Fragment (Center Floating) */}
+        <EmeraldCrystal
+          size="sm"
+          delay={1.65}
+          floatDuration={5.5}
+          style={{ right: '48%', bottom: '38%' }}
+        />
+
+        {/* Crystal 5: Small Fragment (Top Far Right) */}
+        <EmeraldCrystal
+          size="sm"
+          delay={1.8}
+          floatDuration={6}
+          style={{ right: '22%', top: '28%' }}
+        />
+
+        {/* Crystal 6: Small Fragment (Bottom Far Right) */}
+        <EmeraldCrystal
+          size="sm"
+          delay={1.95}
+          floatDuration={7.5}
+          style={{ right: '28%', bottom: '22%' }}
+        />
+      </div>
+
+      {/* LAYER 07: Ambient Emerald Radial Glow */}
+      <div className="absolute right-[12%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#063C2D]/60 via-[#19A878]/20 to-transparent blur-3xl rounded-full pointer-events-none z-[6]" />
 
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
 
-          {/* LEFT COLUMN: Art-Directed Rebalanced Editorial Typography & CTAs */}
-          <div className="lg:col-span-6 flex flex-col justify-center relative z-20">
+          {/* LEFT COLUMN: Master Editorial Typography & Action CTAs */}
+          <div className="lg:col-span-7 flex flex-col justify-center relative z-20">
             
             {/* Eyebrow */}
             <motion.div
               initial="hidden"
               animate="visible"
-              variants={fadeUp(450)}
-              className="flex items-center gap-3 mb-5"
+              variants={fadeUp(350)}
+              className="flex items-center gap-3 mb-6"
             >
-              <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D4AF37]">
-                01
-              </span>
-              <span className="h-[1px] w-8 bg-[#D4AF37]/50" />
-              <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.24em] text-[#D4AF37] uppercase">
-                DIGITAL EXPERIENCES.
+              <span className="h-[1px] w-8 bg-[#D4AF37]/60" />
+              <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.26em] text-[#D4AF37] uppercase">
+                DIGITAL ARCHITECTURE STUDIO
               </span>
             </motion.div>
 
-            {/* Rebalanced Headline (~10% scale reduction for perfect breathing room) */}
+            {/* Master Headline */}
             <div className="mb-6">
               <motion.h1
                 initial="hidden"
                 animate="visible"
-                variants={fadeUp(580)}
-                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[1.04] tracking-tight text-[#F3EFE4]"
+                variants={fadeUp(500)}
+                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[1.02] tracking-tight text-[#F3EFE4]"
               >
-                WE BUILD
+                WE BUILD BRANDS
               </motion.h1>
+
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={fadeUp(620)}
+                className="font-serif text-lg sm:text-2xl lg:text-2xl text-[#E5C378] tracking-[0.25em] uppercase my-1 font-sans font-medium"
+              >
+                THAT
+              </motion.div>
 
               <motion.h1
                 initial="hidden"
                 animate="visible"
-                variants={fadeUp(680)}
-                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[1.04] tracking-tight text-[#F3EFE4]"
+                variants={fadeUp(700)}
+                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[1.02] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E5C378] via-[#D4AF37] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(212,175,55,0.22)]"
               >
-                BRANDS.
-              </motion.h1>
-
-              <motion.h1
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp(780)}
-                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[1.04] tracking-tight text-[#E5C378] italic drop-shadow-[0_4px_24px_rgba(212,175,55,0.18)]"
-              >
-                THAT DOMINATE.
+                DOMINATE.
               </motion.h1>
             </div>
 
@@ -193,96 +329,56 @@ export default function Hero() {
             <motion.div
               initial="hidden"
               animate="visible"
-              variants={fadeUp(880)}
-              className="mb-8 max-w-md"
+              variants={fadeUp(850)}
+              className="mb-10 max-w-lg"
             >
-              <p className="font-sans text-base sm:text-lg text-[#F3EFE4]/90 font-medium tracking-wide leading-relaxed">
-                Strategy. Design. Technology.
-              </p>
-              <p className="font-sans text-sm sm:text-base text-[#CFC9BB]/80 font-light leading-relaxed mt-1">
-                Everything you need to grow online.
+              <p className="font-sans text-base sm:text-lg text-[#CFC9BB]/90 font-light leading-relaxed">
+                Digital architecture studio for ambitious businesses ready to lead their industry.
               </p>
             </motion.div>
 
-            {/* Action CTAs */}
+            {/* Master Action CTAs (Pill-Shaped Buttons) */}
             <motion.div
               initial="hidden"
               animate="visible"
-              variants={fadeUp(980)}
+              variants={fadeUp(950)}
               className="flex flex-wrap items-center gap-5"
             >
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 shadow-xl shadow-[#D4AF37]/15 hover:shadow-[#D4AF37]/30 hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D4AF37]/15 hover:shadow-[#D4AF37]/30 hover:-translate-y-0.5 active:translate-y-0"
               >
-                <span>START A PROJECT</span>
+                <span>BOOK STRATEGY SESSION</span>
                 <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
               </a>
 
               <a
                 href="#work"
-                className="inline-flex items-center gap-2 px-6 py-3.5 border-b border-[#D4AF37]/40 text-[#F3EFE4] hover:text-[#D4AF37] text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 group"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-[#F3EFE4]/25 hover:border-[#D4AF37]/60 text-[#F3EFE4] hover:text-[#D4AF37] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#080B0A]/40 backdrop-blur-sm"
               >
-                <span>VIEW OUR WORK</span>
-                <ArrowRight className="w-4 h-4 text-[#D4AF37] group-hover:translate-x-1.5 transition-transform" />
+                <span>EXPLORE OUR WORK</span>
+                <ArrowRight className="w-4 h-4 text-[#D4AF37] group-hover:translate-x-1 transition-transform" />
               </a>
-            </motion.div>
-          </div>
-
-          {/* RIGHT COLUMN: PERFECTED 100% ISOLATED 3D PORTAL OBJECT */}
-          <div className="lg:col-span-6 relative mt-10 lg:mt-0 flex justify-center lg:justify-end items-center">
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={scaleFade(1050)}
-              className="relative w-full max-w-xl lg:max-w-2xl xl:max-w-3xl flex justify-center items-center"
-            >
-              
-              {/* LAYER 5: Sparse Gold Glints (Occasional Light Refraction Points) */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, delay: 1.6 }}
-                style={{
-                  ...getParallaxStyle(14),
-                  maskImage: 'radial-gradient(circle at 50% 50%, black 15%, transparent 50%)',
-                  WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 15%, transparent 50%)',
-                }}
-                className="absolute right-[5%] top-[5%] w-[350px] h-[350px] pointer-events-none z-[5] overflow-hidden"
-              >
-                <img
-                  src="/images/Gemini_Generated_Image_19sjf619sjf619sj.png"
-                  alt="Gold Glints Highlights"
-                  className="w-full h-full object-cover mix-blend-screen opacity-30 animate-glint"
-                />
-              </motion.div>
-
-              {/* Grounding Soft Ambient Shadow */}
-              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-black/95 blur-2xl rounded-full z-[6] pointer-events-none" />
-
-              {/* LAYER 6: ISOLATED 3D PORTAL OBJECT (Zero Dark Box, Zero Edge Crop) */}
-              <div style={getParallaxStyle(5)} className="relative z-[7] w-full flex justify-center">
-                <div className="relative animate-portal-float w-full max-w-[560px] sm:max-w-[640px] lg:max-w-[700px] flex justify-center items-center">
-                  
-                  {/* Black Point Crushing & Double Radial Feather Falloff — Completely Crushes Near-Black Charcoal PNG Background */}
-                  <img
-                    src="/images/Gemini_Generated_Image_i6e37zi6e37zi6e3.png"
-                    alt="Siyara 3D Digital Portal Display"
-                    className="w-full h-auto object-contain pointer-events-none mix-blend-screen contrast-[1.28] brightness-[0.96] drop-shadow-[0_20px_50px_rgba(0,0,0,0.95)] transform transition-transform duration-700 hover:scale-[1.02]"
-                    style={{
-                      maskImage: 'radial-gradient(ellipse 58% 58% at 50% 50%, black 40%, transparent 68%)',
-                      WebkitMaskImage: 'radial-gradient(ellipse 58% 58% at 50% 50%, black 40%, transparent 68%)',
-                    }}
-                  />
-
-                </div>
-              </div>
-
             </motion.div>
           </div>
 
         </div>
       </div>
+
+      {/* BOTTOM LEFT: Scroll Indicator Line */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.6 }}
+        className="absolute bottom-8 left-8 sm:left-12 z-20 flex flex-col items-center gap-3 hidden sm:flex"
+      >
+        <div className="w-[1px] h-10 bg-gradient-to-b from-[#D4AF37] to-transparent relative">
+          <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full absolute top-0 -left-[2.5px] animate-ping" />
+        </div>
+        <span className="text-[9px] font-mono tracking-[0.24em] text-[#CFC9BB]/60 uppercase">
+          SCROLL
+        </span>
+      </motion.div>
     </section>
   );
 }

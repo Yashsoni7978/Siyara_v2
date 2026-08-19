@@ -76,11 +76,6 @@
   50% { opacity: 0.7; transform: scale(1.05); }
 }
 
-@keyframes lineDraw {
-  0% { stroke-dashoffset: 1000; }
-  100% { stroke-dashoffset: 0; }
-}
-
 @keyframes atmosphereBreath {
   0%, 100% { opacity: 0.65; transform: scale(1); }
   50% { opacity: 0.85; transform: scale(1.03); }
@@ -101,9 +96,9 @@
   50% { opacity: 0.85; transform: scale(1.1); }
 }
 
-@keyframes portalFloat {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+@keyframes crystalFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1.5deg); }
 }
 
 .animate-float {
@@ -128,10 +123,6 @@
 
 .animate-glint {
   animation: glintShimmer 4s ease-in-out infinite;
-}
-
-.animate-portal-float {
-  animation: portalFloat 7s ease-in-out infinite;
 }
 
 .radial-mask-center {
