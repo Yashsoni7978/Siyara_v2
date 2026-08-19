@@ -2,35 +2,6 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
 
-// Star Glint Component with Randomized Four-Point Star Flare Timing
-function StarGlint({ top = '20%', left = '60%', delay = 0, size = 'sm' }) {
-  const [active, setActive] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActive(true);
-      setTimeout(() => setActive(false), 1400);
-    }, 4000 + Math.random() * 6000 + delay * 1000);
-
-    return () => clearInterval(interval);
-  }, [delay]);
-
-  const scaleSize = size === 'lg' ? 'text-lg sm:text-xl' : size === 'md' ? 'text-sm sm:text-base' : 'text-xs';
-
-  return (
-    <div
-      style={{ top, left }}
-      className={`absolute pointer-events-none transition-all duration-700 ${
-        active ? 'opacity-100 scale-125' : 'opacity-20 scale-90'
-      } ${scaleSize}`}
-    >
-      <span className="text-[#E5C378] drop-shadow-[0_0_12px_rgba(229,195,120,0.9)] select-none">
-        ✦
-      </span>
-    </div>
-  );
-}
-
 export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
   
@@ -38,6 +9,7 @@ export default function Hero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isMobile, setIsMobile] = useState(false);
   const heroRef = useRef(null);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -46,6 +18,15 @@ export default function Hero() {
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Ensure autoplay starts reliably
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch((err) => {
+        console.warn('Autoplay prevented or interrupted:', err);
+      });
+    }
   }, []);
 
   const handleMouseMove = (e) => {
@@ -57,6 +38,7 @@ export default function Hero() {
     const normX = (e.clientX - centerX) / (rect.width / 2);
     const normY = (e.clientY - centerY) / (rect.height / 2);
     
+    // Very subtle 1-2px shift
     setMousePos({
       x: Math.max(-1, Math.min(1, normX)),
       y: Math.max(-1, Math.min(1, normY)),
@@ -82,7 +64,7 @@ export default function Hero() {
     if (isMobile || shouldReduceMotion) return {};
     return {
       transform: `translate3d(${mousePos.x * multiplier}px, ${mousePos.y * multiplier}px, 0)`,
-      transition: 'transform 0.25s ease-out',
+      transition: 'transform 0.3s ease-out',
     };
   };
 
@@ -96,77 +78,36 @@ export default function Hero() {
       {/* LAYER 01: Obsidian Black Canvas Base */}
       <div className="absolute inset-0 bg-[#080B0A] z-0" />
 
-      {/* LAYER 02: Deep Emerald Atmosphere Backdrop (Parallax: 2.5px) */}
+      {/* LAYER 02: Fine Emerald Ambient Glow Sphere Behind Video */}
+      <div className="absolute right-[8%] top-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#063C2D]/55 via-[#19A878]/18 to-transparent blur-3xl rounded-full pointer-events-none z-[1]" />
+
+      {/* LAYER 03: Atmospheric Bridge (Headline -> Video Transition Haze) */}
+      <div className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] bg-gradient-to-r from-transparent via-[#063C2D]/25 to-[#19A878]/12 blur-3xl pointer-events-none z-[2]" />
+
+      {/* LAYER 04: MASTER HERO CINEMATIC VIDEO (Integrated Seamlessly — Zero Player Box) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.6, delay: 0.15 }}
+        transition={{ duration: 1.2, delay: 0.3, ease: easeCustom }}
         style={{
-          ...getParallaxStyle(2.5),
-          maskImage: 'radial-gradient(ellipse 90% 90% at 65% 50%, black 25%, transparent 85%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 90% 90% at 65% 50%, black 25%, transparent 85%)',
+          ...getParallaxStyle(2),
+          maskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
         }}
-        className="absolute inset-0 pointer-events-none z-[1] overflow-hidden"
+        className="absolute -right-[4%] -bottom-[4%] top-1/2 -translate-y-1/2 w-full lg:w-[66%] xl:w-[70%] h-[98%] pointer-events-none z-[3] flex items-center justify-end overflow-hidden"
       >
-        <img
-          src="/images/Gemini_Generated_Image_v8ldi5v8ldi5v8ld.png"
-          alt="Siyara Emerald Atmosphere"
-          className="w-full h-full object-cover object-right mix-blend-screen opacity-28 scale-105"
+        <video
+          ref={videoRef}
+          src="/images/siyara_hero_video.mp4"
+          poster="/images/siyara_hero_artwork.png"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-105"
         />
       </motion.div>
-
-      {/* LAYER 03: Fine Emerald Ambient Glow (Sphere Glow behind artwork) */}
-      <div className="absolute right-[6%] top-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#063C2D]/60 via-[#19A878]/20 to-transparent blur-3xl rounded-full pointer-events-none z-[2]" />
-
-      {/* LAYER 04: Atmospheric Bridge (Seamless Haze Transition: Headline -> Artwork) */}
-      <div className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] bg-gradient-to-r from-transparent via-[#063C2D]/28 to-[#19A878]/14 blur-3xl pointer-events-none z-[3]" />
-
-      {/* LAYER 05: THE MASTER HERO ARTWORK (Photorealistic Integrated Emerald Silk & Crystals — Zero Box) */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.98 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.4, delay: 0.5, ease: easeCustom }}
-        style={{
-          ...getParallaxStyle(6),
-          maskImage: 'radial-gradient(ellipse 88% 92% at 72% 50%, black 40%, transparent 95%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 88% 92% at 72% 50%, black 40%, transparent 95%)',
-        }}
-        className="absolute -right-[4%] -bottom-[4%] top-1/2 -translate-y-1/2 w-full lg:w-[68%] xl:w-[72%] h-[98%] pointer-events-none z-[4] flex items-center justify-end overflow-hidden"
-      >
-        <img
-          src="/images/siyara_hero_artwork.png"
-          alt="Siyara Master Artwork — Luminous Emerald Silk & Crystals"
-          className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-110"
-        />
-      </motion.div>
-
-      {/* LAYER 06: Fine Gold Stardust Particles Overlay (Parallax: 12px) */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.2, delay: 1.2 }}
-        style={{
-          ...getParallaxStyle(12),
-          maskImage: 'radial-gradient(circle at 60% 50%, black 20%, transparent 70%)',
-          WebkitMaskImage: 'radial-gradient(circle at 60% 50%, black 20%, transparent 70%)',
-        }}
-        className="absolute right-[4%] top-[4%] w-[520px] h-[520px] pointer-events-none z-[5] overflow-hidden"
-      >
-        <img
-          src="/images/Gemini_Generated_Image_19sjf619sjf619sj.png"
-          alt="Fine Gold Stardust"
-          className="w-full h-full object-cover mix-blend-screen opacity-35"
-        />
-      </motion.div>
-
-      {/* LAYER 07: Gold Star Glints (Randomized Timed Sparkle Flares - Parallax: 16px) */}
-      <div style={getParallaxStyle(16)} className="absolute inset-0 pointer-events-none z-[6]">
-        <StarGlint top="18%" left="62%" delay={0} size="lg" />
-        <StarGlint top="32%" left="78%" delay={1.5} size="md" />
-        <StarGlint top="58%" left="84%" delay={3.0} size="lg" />
-        <StarGlint top="75%" left="68%" delay={2.0} size="sm" />
-        <StarGlint top="25%" left="88%" delay={4.2} size="sm" />
-      </div>
 
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
