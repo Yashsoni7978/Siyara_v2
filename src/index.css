@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 @layer base {
   :root {
@@ -16,6 +16,7 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: var(--color-obsidian);
     color: var(--color-ivory);
+    overflow-x: hidden;
   }
 
   h1, h2, h3, .font-serif, .font-display {
@@ -80,10 +81,65 @@
   100% { stroke-dashoffset: 0; }
 }
 
+@keyframes atmosphereBreath {
+  0%, 100% { opacity: 0.65; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.03); }
+}
+
+@keyframes energyDrift {
+  0%, 100% { transform: translate(0px, 0px) rotate(0deg); opacity: 0.6; }
+  50% { transform: translate(14px, -10px) rotate(1deg); opacity: 0.8; }
+}
+
+@keyframes goldEnergyFlow {
+  0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.5; }
+  50% { transform: translate(-12px, 8px) scale(1.03); opacity: 0.75; }
+}
+
+@keyframes glintShimmer {
+  0%, 100% { opacity: 0.2; transform: scale(0.95); }
+  50% { opacity: 0.85; transform: scale(1.1); }
+}
+
+@keyframes portalFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
 
 .animate-pulse-glow {
   animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-atmosphere {
+  animation: atmosphereBreath 12s ease-in-out infinite;
+}
+
+.animate-energy-drift {
+  animation: energyDrift 14s ease-in-out infinite;
+}
+
+.animate-gold-flow {
+  animation: goldEnergyFlow 16s ease-in-out infinite;
+}
+
+.animate-glint {
+  animation: glintShimmer 4s ease-in-out infinite;
+}
+
+.animate-portal-float {
+  animation: portalFloat 7s ease-in-out infinite;
+}
+
+.radial-mask-center {
+  mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
+}
+
+.radial-mask-soft {
+  mask-image: radial-gradient(ellipse at center, black 50%, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 50%, transparent 90%);
 }

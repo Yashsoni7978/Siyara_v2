@@ -1,64 +1,138 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+﻿import React, { useState, useEffect, useRef } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
 
 export default function Hero() {
-  // Animation variants
+  const shouldReduceMotion = useReducedMotion();
+  
+  // Mouse position state for subtle desktop parallax
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const handleMouseMove = (e) => {
+    if (isMobile || shouldReduceMotion || !heroRef.current) return;
+    const rect = heroRef.current.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    // Normalized values from -1 to 1
+    const normX = (e.clientX - centerX) / (rect.width / 2);
+    const normY = (e.clientY - centerY) / (rect.height / 2);
+    
+    setMousePos({
+      x: Math.max(-1, Math.min(1, normX)),
+      y: Math.max(-1, Math.min(1, normY)),
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setMousePos({ x: 0, y: 0 });
+  };
+
+  // Custom motion ease curve
   const easeCustom = [0.16, 1, 0.3, 1];
 
-  const fadeUp = (delay) => ({
-    hidden: { opacity: 0, y: 24 },
+  const fadeUp = (delayMs) => ({
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 24 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, delay: delay / 1000, ease: easeCustom },
+      transition: { duration: 0.8, delay: delayMs / 1000, ease: easeCustom },
     },
   });
 
-  return (
-    <section className="relative min-h-screen pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#080B0A] overflow-hidden flex items-center">
-      {/* Background Atmospheric Layers */}
-      <div className="absolute inset-0 bg-emerald-atmosphere opacity-90 pointer-events-none" />
-      
-      {/* Organic Flowing SVG Background Lines */}
-      <svg
-        className="absolute inset-0 w-full h-full opacity-25 pointer-events-none stroke-[#D4AF37]/30 fill-none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M -100 200 C 300 50, 700 450, 1500 100 S 1800 600, 2200 400"
-          strokeWidth="1.2"
-          strokeDasharray="4 8"
-        />
-        <path
-          d="M -50 400 C 400 600, 900 100, 1600 500"
-          strokeWidth="0.8"
-          strokeLinecap="round"
-        />
-        <circle cx="15%" cy="35%" r="1" fill="#D4AF37" className="animate-ping" style={{ animationDuration: '3s' }} />
-        <circle cx="85%" cy="65%" r="1.5" fill="#19A878" />
-        <circle cx="45%" cy="75%" r="1" fill="#D4AF37" />
-      </svg>
+  const scaleFade = (delayMs) => ({
+    hidden: { opacity: 0, scale: shouldReduceMotion ? 1 : 0.95, y: shouldReduceMotion ? 0 : 30 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { duration: 1.0, delay: delayMs / 1000, ease: easeCustom },
+    },
+  });
 
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          {/* LEFT COLUMN: Editorial Copy & CTAs */}
-          <div className="lg:col-span-6 flex flex-col justify-center">
+  // Parallax offsets calculation
+  const getParallaxStyle = (multiplier) => {
+    if (isMobile || shouldReduceMotion) return {};
+    return {
+      transform: `translate3d(${mousePos.x * multiplier}px, ${mousePos.y * multiplier}px, 0)`,
+      transition: 'transform 0.2s ease-out',
+    };
+  };
+
+  return (
+    <section
+      ref={heroRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="relative min-h-[92vh] pt-32 pb-20 lg:pt-36 lg:pb-28 bg-[#080B0A] overflow-hidden flex items-center"
+    >
+      {/* LAYER 0: Obsidian Base Dark Layer */}
+      <div className="absolute inset-0 bg-[#080B0A] z-0" />
+
+      {/* LAYER 1: Emerald Atmosphere Smoke (Background framing) */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.4, delay: 0.15 }}
+        style={getParallaxStyle(4)}
+        className="absolute inset-0 pointer-events-none z-[1] overflow-hidden"
+      >
+        <img
+          src="/images/Gemini_Generated_Image_v8ldi5v8ldi5v8ld.png"
+          alt="Siyara Emerald Atmosphere"
+          className="w-full h-full object-cover object-center mix-blend-screen opacity-70 animate-atmosphere radial-mask-soft scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080B0A] via-transparent to-[#080B0A]/80" />
+      </motion.div>
+
+      {/* LAYER 2: Emerald Flowing Energy Wisps */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.4, delay: 1.2 }}
+        style={getParallaxStyle(8)}
+        className="absolute inset-0 pointer-events-none z-[2] overflow-hidden"
+      >
+        <img
+          src="/images/Gemini_Generated_Image_aid1xoaid1xoaid1.png"
+          alt="Emerald Energy Wisps"
+          className="w-full h-full object-cover object-right-center mix-blend-screen opacity-65 animate-energy-drift scale-110"
+        />
+      </motion.div>
+
+      {/* LAYER 3: Soft Ambient Radial Glow Behind Portal */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-emerald-glow opacity-60 blur-3xl pointer-events-none z-[3]" />
+
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-6 items-center">
+
+          {/* LEFT COLUMN: Editorial Typography & Action CTAs */}
+          <div className="lg:col-span-6 flex flex-col justify-center relative z-20">
             
             {/* Eyebrow */}
             <motion.div
               initial="hidden"
               animate="visible"
-              variants={fadeUp(250)}
+              variants={fadeUp(450)}
               className="flex items-center gap-3 mb-6"
             >
               <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D4AF37]">
                 01
               </span>
               <span className="h-[1px] w-8 bg-[#D4AF37]/50" />
-              <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D4AF37] uppercase">
-                Digital Experiences That Drive Real Results
+              <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.24em] text-[#D4AF37] uppercase">
+                DIGITAL EXPERIENCES.
               </span>
             </motion.div>
 
@@ -67,7 +141,7 @@ export default function Hero() {
               <motion.h1
                 initial="hidden"
                 animate="visible"
-                variants={fadeUp(400)}
+                variants={fadeUp(600)}
                 className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[1.02] tracking-tight text-[#F3EFE4]"
               >
                 WE BUILD
@@ -76,7 +150,7 @@ export default function Hero() {
               <motion.h1
                 initial="hidden"
                 animate="visible"
-                variants={fadeUp(500)}
+                variants={fadeUp(700)}
                 className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[1.02] tracking-tight text-[#F3EFE4]"
               >
                 BRANDS.
@@ -85,8 +159,8 @@ export default function Hero() {
               <motion.h1
                 initial="hidden"
                 animate="visible"
-                variants={fadeUp(650)}
-                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[1.02] tracking-tight text-[#E5C378] italic"
+                variants={fadeUp(800)}
+                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[1.02] tracking-tight text-[#E5C378] italic drop-shadow-[0_4px_24px_rgba(212,175,55,0.15)]"
               >
                 THAT DOMINATE.
               </motion.h1>
@@ -96,13 +170,13 @@ export default function Hero() {
             <motion.div
               initial="hidden"
               animate="visible"
-              variants={fadeUp(800)}
+              variants={fadeUp(900)}
               className="mb-10 max-w-lg"
             >
-              <p className="font-sans text-base sm:text-lg text-[#CFC9BB] leading-relaxed font-light">
+              <p className="font-sans text-base sm:text-lg text-[#F3EFE4]/90 font-medium tracking-wide leading-relaxed">
                 Strategy. Design. Technology.
               </p>
-              <p className="font-sans text-base sm:text-lg text-[#CFC9BB] leading-relaxed font-light">
+              <p className="font-sans text-sm sm:text-base text-[#CFC9BB]/80 font-light leading-relaxed mt-1">
                 Everything you need to grow online.
               </p>
             </motion.div>
@@ -111,20 +185,20 @@ export default function Hero() {
             <motion.div
               initial="hidden"
               animate="visible"
-              variants={fadeUp(950)}
+              variants={fadeUp(1000)}
               className="flex flex-wrap items-center gap-5"
             >
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2.5 px-7 py-4 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 shadow-xl shadow-[#D4AF37]/10 hover:shadow-[#D4AF37]/25 hover:translate-y-[-2px]"
+                className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 shadow-xl shadow-[#D4AF37]/15 hover:shadow-[#D4AF37]/30 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>START A PROJECT</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
               </a>
 
               <a
                 href="#work"
-                className="inline-flex items-center gap-2 px-6 py-4 border-b border-[#D4AF37]/40 text-[#F3EFE4] hover:text-[#D4AF37] text-xs font-medium tracking-[0.18em] uppercase transition-all duration-300 group"
+                className="inline-flex items-center gap-2 px-6 py-4 border-b border-[#D4AF37]/40 text-[#F3EFE4] hover:text-[#D4AF37] text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 group"
               >
                 <span>VIEW OUR WORK</span>
                 <ArrowRight className="w-4 h-4 text-[#D4AF37] group-hover:translate-x-1.5 transition-transform" />
@@ -132,114 +206,69 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* RIGHT COLUMN: Realistic Premium Web Mockup (Matching Reference Image 1) */}
-          <div className="lg:col-span-6 relative mt-6 lg:mt-0">
+          {/* RIGHT COLUMN: Siyara Digital Portal Visual Centerpiece */}
+          <div className="lg:col-span-6 relative mt-12 lg:mt-0 flex justify-center lg:justify-end">
             <motion.div
-              initial={{ opacity: 0, scale: 0.96, y: 30 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 1.0, delay: 1.0, ease: easeCustom }}
-              className="relative mx-auto max-w-2xl lg:max-w-none"
+              initial="hidden"
+              animate="visible"
+              variants={scaleFade(1100)}
+              className="relative w-full max-w-lg lg:max-w-xl xl:max-w-2xl"
             >
-              {/* Laptop Shell Outer Shadow & Atmosphere Glow */}
-              <div className="absolute -inset-4 bg-gradient-to-tr from-[#063C2D]/40 via-[#19A878]/10 to-transparent blur-2xl opacity-60 rounded-3xl" />
-
-              {/* Laptop Computer Display */}
-              <div className="relative rounded-t-2xl bg-[#121615] border border-[#D4AF37]/30 p-2 sm:p-3 shadow-2xl overflow-hidden">
-                {/* Laptop Camera / Bezel Top */}
-                <div className="flex items-center justify-between px-3 py-1.5 bg-[#0A0D0C] rounded-t-xl border-b border-white/5 mb-1">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]/80" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]/80" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F]/80" />
-                  </div>
-                  <div className="text-[10px] font-mono text-[#CFC9BB]/50 tracking-wider">
-                    luxe-habitat.siyara.dev
-                  </div>
-                  <div className="w-8" />
-                </div>
-
-                {/* Laptop Web Presentation Content (Live Agency Client Mockup) */}
-                <div className="relative bg-[#0A0D0C] rounded-lg overflow-hidden border border-white/5 aspect-[16/10] sm:aspect-[16/9.5]">
-                  {/* Background Mockup Image with Dark Luxury Architecture & Emerald Glow */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#080B0A] via-[#080B0A]/80 to-transparent z-10" />
-                  <img
-                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80"
-                    alt="Luxe Habitat Portfolio Presentation"
-                    className="absolute inset-0 w-full h-full object-cover object-center opacity-40 mix-blend-luminosity"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#080B0A] via-transparent to-[#080B0A]/60 z-10" />
-
-                  {/* Mockup Website Header Bar */}
-                  <div className="relative z-20 flex items-center justify-between px-5 py-4 border-b border-white/10">
-                    <span className="text-[10px] font-sans font-bold tracking-[0.25em] text-[#F3EFE4]">
-                      LUXE HABITAT
-                    </span>
-                    <div className="hidden sm:flex items-center gap-4 text-[8px] font-medium tracking-[0.16em] text-[#CFC9BB]">
-                      <span>HOME</span>
-                      <span>PROJECTS</span>
-                      <span>ABOUT</span>
-                      <span>CONTACT</span>
-                    </div>
-                  </div>
-
-                  {/* Mockup Hero Web Screen Content */}
-                  <div className="relative z-20 p-6 sm:p-8 flex flex-col justify-center h-[calc(100%-45px)] max-w-sm">
-                    <span className="text-[9px] font-sans tracking-[0.2em] text-[#D4AF37] uppercase mb-2">
-                      Architecture & Interiors
-                    </span>
-                    <h3 className="font-serif text-2xl sm:text-3xl text-[#F3EFE4] leading-tight mb-3">
-                      Luxury <br />
-                      Web Experiences <br />
-                      <span className="text-[#E5C378] italic">That Convert.</span>
-                    </h3>
-                    <p className="text-[10px] text-[#CFC9BB]/80 font-light leading-relaxed mb-4">
-                      Premium websites that elevate brands and drive results.
-                    </p>
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#D4AF37]/20 border border-[#D4AF37]/40 text-[#D4AF37] text-[8px] font-semibold tracking-widest uppercase w-fit">
-                      VIEW PROJECT
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Laptop Stand / Base */}
-              <div className="h-3 sm:h-4 bg-gradient-to-b from-[#202523] to-[#0A0D0C] rounded-b-xl border-x border-b border-white/10 shadow-2xl relative">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 sm:w-24 h-1 bg-[#121615] rounded-b-md" />
-              </div>
-
-              {/* Overlay Mobile Device Screen (Right Edge Floating Mockup) */}
+              
+              {/* LAYER 4: Champagne Gold Energy Accent Layer */}
               <motion.div
-                animate={{ y: [0, -6, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -right-3 sm:-right-6 -bottom-6 w-32 sm:w-44 bg-[#0A0D0C] border border-[#D4AF37]/40 rounded-2xl p-1.5 shadow-2xl z-30"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.4, delay: 1.4 }}
+                style={getParallaxStyle(12)}
+                className="absolute -inset-10 pointer-events-none z-[4] overflow-hidden"
               >
-                <div className="relative bg-[#080B0A] rounded-xl overflow-hidden aspect-[9/16] border border-white/10 p-3 flex flex-col justify-between">
-                  <img
-                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
-                    alt="Mobile Mockup"
-                    className="absolute inset-0 w-full h-full object-cover opacity-30"
-                  />
-                  <div className="relative z-10 flex justify-between items-center border-b border-white/10 pb-2">
-                    <span className="text-[7px] font-bold tracking-widest text-[#F3EFE4]">LUXE HABITAT</span>
-                    <span className="text-[8px] text-[#D4AF37]">≡</span>
-                  </div>
-                  <div className="relative z-10 my-auto">
-                    <h4 className="font-serif text-xs text-[#F3EFE4] leading-tight mb-1">
-                      Luxury Web <br />
-                      Experiences <br />
-                      <span className="text-[#E5C378]">That Convert.</span>
-                    </h4>
-                    <p className="text-[7px] text-[#CFC9BB]/70 line-clamp-2">
-                      Premium websites that elevate brands.
-                    </p>
-                  </div>
-                  <div className="relative z-10 pt-2">
-                    <div className="px-2 py-1 bg-[#D4AF37] text-[#080B0A] text-[6px] font-bold text-center tracking-widest uppercase">
-                      VIEW PROJECT
-                    </div>
+                <img
+                  src="/images/Gemini_Generated_Image_p03y7gp03y7gp03y.png"
+                  alt="Champagne Gold Energy Ribbons"
+                  className="w-full h-full object-contain mix-blend-screen opacity-65 animate-gold-flow"
+                />
+              </motion.div>
+
+              {/* LAYER 5: Gold Glints / Particle Highlights */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.4, delay: 1.6 }}
+                style={getParallaxStyle(16)}
+                className="absolute -inset-12 pointer-events-none z-[5] overflow-hidden"
+              >
+                <img
+                  src="/images/Gemini_Generated_Image_19sjf619sjf619sj.png"
+                  alt="Gold Light Glints"
+                  className="w-full h-full object-cover mix-blend-screen opacity-45 animate-glint radial-mask-center"
+                />
+              </motion.div>
+
+              {/* Grounding Portal Soft Shadow */}
+              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-4/5 h-16 bg-black/80 blur-2xl rounded-full z-[6] pointer-events-none" />
+
+              {/* LAYER 6: Primary Siyara 3D Digital Portal Display */}
+              <div style={getParallaxStyle(6)} className="relative z-[7]">
+                <div className="relative animate-portal-float">
+                  
+                  {/* Subtle Emerald & Gold Accent Ambient Halo */}
+                  <div className="absolute -inset-4 bg-gradient-to-tr from-[#063C2D]/50 via-[#19A878]/20 to-[#D4AF37]/20 blur-xl opacity-75 rounded-3xl pointer-events-none" />
+
+                  {/* Siyara Portal 3D Frame Image */}
+                  <div className="relative rounded-2xl overflow-hidden border border-[#D4AF37]/35 shadow-[0_20px_60px_rgba(0,0,0,0.8)] backdrop-blur-sm bg-[#080B0A]/40">
+                    <img
+                      src="/images/Gemini_Generated_Image_i6e37zi6e37zi6e3.png"
+                      alt="Siyara 3D Digital Portal Display"
+                      className="w-full h-auto object-cover object-center transform transition-transform duration-700 hover:scale-[1.02]"
+                    />
+
+                    {/* Subtle Overlay Reflection Gradient for Depth */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.04] to-transparent pointer-events-none" />
                   </div>
                 </div>
-              </motion.div>
+              </div>
+
             </motion.div>
           </div>
 
