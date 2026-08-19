@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-obsidian: #080B0A;
+    --color-deep-emerald: #063C2D;
+    --color-rich-emerald: #0B5A43;
+    --color-emerald-highlight: #19A878;
+    --color-champagne-gold: #D4AF37;
+    --color-warm-gold: #E5C378;
+    --color-ivory: #F3EFE4;
+    --color-muted-ivory: #CFC9BB;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-obsidian);
+    color: var(--color-ivory);
+  }
+
+  h1, h2, h3, .font-serif, .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom Utilities */
+.font-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.text-gold {
+  color: #D4AF37;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #E5C378 0%, #D4AF37 50%, #B38F26 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-emerald-atmosphere {
+  background: radial-gradient(circle at 50% 30%, rgba(6, 60, 45, 0.35) 0%, rgba(8, 11, 10, 0.95) 70%, #080B0A 100%);
+}
+
+.bg-emerald-glow {
+  background: radial-gradient(circle at center, rgba(25, 168, 120, 0.15) 0%, rgba(6, 60, 45, 0.05) 50%, transparent 70%);
+}
+
+.border-gold-subtle {
+  border-color: rgba(212, 175, 55, 0.22);
+}
+
+.border-emerald-subtle {
+  border-color: rgba(25, 168, 120, 0.24);
+}
+
+.glass-nav {
+  background: rgba(8, 11, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Keyframe animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+@keyframes lineDraw {
+  0% { stroke-dashoffset: 1000; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
