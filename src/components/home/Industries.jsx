@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -9,30 +9,30 @@ export default function Industries() {
     {
       id: '01',
       name: 'REAL ESTATE',
-      description: 'High-end architectural portfolios, luxury property showcases, and lead acquisition platforms.',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80',
-      tag: 'Architectural & Luxury Property',
+      description: 'Architectural web platforms, high-conversion property showcases, and automated lead acquisition.',
+      image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80',
+      tag: 'Luxury Properties & Developers',
     },
     {
       id: '02',
       name: 'HEALTHCARE',
-      description: 'Patient acquisition funnels, clinical booking systems, and specialized medical search visibility.',
-      image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80',
-      tag: 'Clinical & Aesthetic Dermatology',
+      description: 'HIPAA-conscious clinical portals, patient trust funnels, and high-ranking local GEO search optimization.',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80',
+      tag: 'Clinics & Medical Groups',
     },
     {
       id: '03',
       name: 'JEWELLERY & LUXURY',
-      description: 'Heritage brand identity, digital boutique experiences, and high-trust storytelling.',
+      description: 'High-end e-commerce experiences, virtual consultations, and brand storytelling that commands premium value.',
       image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=80',
-      tag: 'Craftsmanship & Fine Goods',
+      tag: 'Heritage & Fine Jewellery',
     },
     {
       id: '04',
       name: 'HOSPITALITY',
-      description: 'Bespoke resort booking platforms, culinary storytelling, and immersive visitor experiences.',
+      description: 'Bespoke hotel booking engines, immersive venue showcases, and direct reservation growth systems.',
       image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80',
-      tag: 'Resorts & Fine Dining',
+      tag: 'Luxury Hotels & Dining',
     },
     {
       id: '05',
@@ -57,7 +57,7 @@ export default function Industries() {
       {/* Background Atmosphere */}
       <div className="absolute inset-0 bg-emerald-atmosphere opacity-80 pointer-events-none" />
 
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <motion.div
@@ -184,7 +184,7 @@ export default function Industries() {
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 1.02 }}
                       transition={{ duration: 0.5 }}
-                      className="w-full h-full object-cover opacity-60 mix-blend-luminosity"
+                      className="w-full h-full object-cover opacity-60 mix-blend-luminosity hover:scale-105 transition-transform duration-700"
                     />
                   </AnimatePresence>
 

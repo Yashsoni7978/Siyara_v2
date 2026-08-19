@@ -74,7 +74,7 @@ export default function Navbar({ currentPage = 'home', onNavigate }) {
           : 'bg-transparent py-6'
       }`}
     >
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
         {/* Brand Logo */}
         <a
           href="/"

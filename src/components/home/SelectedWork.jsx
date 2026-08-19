@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -8,69 +8,71 @@ export default function SelectedWork() {
   const projects = [
     {
       id: '01',
-      title: 'Rishabh Jewellers',
-      tagline: 'Crafting Trust. Delivering Value.',
-      description: 'A refined digital experience that reflects elegance and drives growth for a premier heritage jewellery brand.',
-      services: ['BRANDING', 'WEBSITE', 'SEO'],
+      title: 'RISHABH JEWELLERS',
+      tagline: 'Fine Jewellery & Heritage E-Commerce',
+      description: 'Architectural brand positioning, bespoke digital showcase, and automated high-conversion growth system.',
+      services: ['BRANDING', 'WEB DEVELOPMENT', 'CRO & GROWTH'],
       image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80',
-      heroHeadline: 'Timeless Elegance. Crafted to Perfection.',
-      heroSubline: 'Discover our finest collection of handcrafted jewellery.',
-      ctaText: 'EXPLORE COLLECTION',
-      brandLogo: 'RJ',
-      accentColor: '#D4AF37',
+      brandLogo: 'RISHABH',
+      heroHeadline: 'HERITAGE CRAFTSMANSHIP & FINE JEWELLERY',
+      heroSubline: 'Timeless elegance meets modern digital architecture.',
+      ctaText: 'DISCOVER COLLECTION',
     },
     {
       id: '02',
-      title: 'Beyond Spaces',
-      tagline: 'Architecture & Modern Spatial Design.',
-      description: 'An editorial portfolio website built to showcase high-end architectural concepts and structural luxury.',
-      services: ['WEB DESIGN', '3D EXPERIENCE', 'GEO'],
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-      heroHeadline: 'Structuring Modern Architectural Luxury.',
-      heroSubline: 'Award-winning spatial designs & contemporary environments.',
-      ctaText: 'VIEW PORTFOLIO',
-      brandLogo: 'BS',
-      accentColor: '#19A878',
+      title: 'BEYOND SPACES',
+      tagline: 'Luxury Real Estate & Villa Architecture',
+      description: 'Immersive villa booking portal, high-intent client lead funnels, and global brand authority platform.',
+      services: ['LUXURY REAL ESTATE', 'WEB SYSTEM', 'LEAD ACQUISITION'],
+      image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+      brandLogo: 'BEYOND SPACES',
+      heroHeadline: 'ARCHITECTURAL RESIDENCES & PRIVATE VILLAS',
+      heroSubline: 'Curated living spaces engineered for discerning clientele.',
+      ctaText: 'EXPLORE RESIDENCES',
     },
     {
       id: '03',
-      title: 'Dr. Neha Sharma',
-      tagline: 'Precision Dermatology & Clinical Excellence.',
-      description: 'A seamless patient acquisition platform with online consultation booking and specialized healthcare search visibility.',
-      services: ['WEB PLATFORM', 'PATIENT FUNNEL', 'SEO'],
-      image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80',
-      heroHeadline: 'Advanced Aesthetic & Clinical Dermatology.',
-      heroSubline: 'Evidence-based skincare treatments and digital booking.',
+      title: 'DR. NEHA SHARMA',
+      tagline: 'Aesthetic Dermatology & Clinical Authority',
+      description: 'High-trust clinical web portal, patient enrolment architecture, and local GEO search domination.',
+      services: ['HEALTHCARE BRANDING', 'PATIENT FUNNEL', 'SEO & GEO'],
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
+      brandLogo: 'DR. NEHA SHARMA',
+      heroHeadline: 'ADVANCED AESTHETIC DERMATOLOGY & CARE',
+      heroSubline: 'Science-backed skincare and aesthetic clinical excellence.',
       ctaText: 'BOOK CONSULTATION',
-      brandLogo: 'NS',
-      accentColor: '#E5C378',
     },
     {
       id: '04',
-      title: 'The Brew Chapter',
-      tagline: 'Artisanal Coffee & Direct-to-Consumer Growth.',
-      description: 'An immersive e-commerce experience designed for high-conversion subscription flows and brand storytelling.',
-      services: ['E-COMMERCE', 'BRAND IDENTITY', 'GROWTH'],
+      title: 'THE BREW CHAPTER',
+      tagline: 'Specialty Coffee & Hospitality Brand',
+      description: 'Direct-to-consumer e-commerce, hospitality brand storytelling, and automated subscription backend.',
+      services: ['D2C E-COMMERCE', 'BRAND STORYTELLING', 'AUTO SUBSCRIPTIONS'],
       image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80',
-      heroHeadline: 'Fresh Roasted Specialty Coffee Beans.',
-      heroSubline: 'Sourced responsibly from sustainable single-origin estates.',
-      ctaText: 'SHOP BEANS',
-      brandLogo: 'BC',
-      accentColor: '#D4AF37',
+      brandLogo: 'BREW CHAPTER',
+      heroHeadline: 'SINGLE ORIGIN CRAFT COFFEE ROASTERS',
+      heroSubline: 'Artisanal roasts delivered directly to your doorstep.',
+      ctaText: 'SHOP ROASTS',
     },
   ];
 
   const currentProject = projects[activeIndex];
 
   return (
-    <section id="work" className="relative py-24 sm:py-32 bg-[#063C2D]/30 border-t border-[#D4AF37]/15 overflow-hidden">
-      {/* Background Atmosphere */}
+    <section id="work" className="relative py-28 sm:py-36 bg-[#080B0A] border-t border-[#D4AF37]/15 overflow-hidden">
+      {/* Background Emerald Atmosphere */}
       <div className="absolute inset-0 bg-emerald-atmosphere opacity-70 pointer-events-none" />
 
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="flex items-center gap-3 mb-12 sm:mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.6 }}
+          className="flex items-center gap-3 mb-10"
+        >
           <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D4AF37]">
             02
           </span>
@@ -78,10 +80,10 @@ export default function SelectedWork() {
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D4AF37] uppercase">
             Selected Work
           </span>
-        </div>
+        </motion.div>
 
-        {/* Selected Work Layout: 3-column asymmetric layout (Info | Mockup | Index) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        {/* Section Layout Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* Left Column: Project Metadata & Copy */}
           <div className="lg:col-span-4 flex flex-col justify-center">
@@ -205,7 +207,7 @@ export default function SelectedWork() {
             </AnimatePresence>
           </div>
 
-          {/* Right Column: Editorial Numerical Project Index (01–04) */}
+          {/* Right Column: Editorial Numerical Project Index (01 — 04) */}
           <div className="lg:col-span-3 flex flex-col justify-center">
             <div className="flex flex-col gap-5 border-l border-[#D4AF37]/20 pl-6">
               {projects.map((project, idx) => {

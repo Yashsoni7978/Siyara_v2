@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Target, Users, ShieldCheck, TrendingUp } from 'lucide-react';
 
@@ -37,7 +37,7 @@ export default function WhySiyara() {
       {/* Background Atmosphere */}
       <div className="absolute inset-0 bg-emerald-atmosphere opacity-70 pointer-events-none" />
 
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <motion.div
@@ -104,7 +104,7 @@ export default function WhySiyara() {
                     onMouseLeave={() => setHoveredIdx(null)}
                     className={`flex flex-col justify-between py-4 lg:px-6 relative transition-all duration-300 ${
                       idx !== 0 ? 'lg:border-l lg:border-[#D4AF37]/20' : ''
-                    }`}
+                    } ${isHovered ? 'translate-y-[-3px]' : ''}`}
                   >
                     <div>
                       {/* Principle Icon Container */}

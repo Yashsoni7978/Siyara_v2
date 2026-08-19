@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Calendar } from 'lucide-react';
 
@@ -19,7 +19,7 @@ export default function FinalCTA() {
         <circle cx="50%" cy="50%" r="200" stroke="#D4AF37" strokeWidth="0.5" strokeDasharray="2 4" />
       </svg>
 
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center">
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center">
         
         {/* Section Numbering */}
         <motion.div

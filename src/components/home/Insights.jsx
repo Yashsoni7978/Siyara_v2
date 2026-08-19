@@ -1,4 +1,5 @@
-import React from 'react';
+﻿import React from 'react';
+import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
 export default function Insights({ onNavigate }) {
@@ -6,12 +7,13 @@ export default function Insights({ onNavigate }) {
     e.preventDefault();
     if (onNavigate) onNavigate('blog');
     window.history.pushState({}, '', '/blog');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const articles = [
     {
       id: '01',
-      category: 'SEO & GEO SEARCH',
+      category: 'AI & SEARCH VISIBILITY',
       title: 'AI Search Engines & Generative Visibility Architecture',
       excerpt: 'How generative AI search engines are transforming brand discoverability, and why structured data and GEO strategy are replacing traditional keyword SEO.',
       image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80',
@@ -43,7 +45,7 @@ export default function Insights({ onNavigate }) {
       {/* Background Atmosphere */}
       <div className="absolute inset-0 bg-emerald-atmosphere opacity-80 pointer-events-none" />
 
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-10">
