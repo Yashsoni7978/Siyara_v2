@@ -20,9 +20,12 @@ export default function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Ensure autoplay starts reliably
+  // Ensure video is 100% MUTED with zero volume and no audio output
   useEffect(() => {
     if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.defaultMuted = true;
+      videoRef.current.volume = 0;
       videoRef.current.play().catch((err) => {
         console.warn('Autoplay prevented or interrupted:', err);
       });
@@ -38,7 +41,6 @@ export default function Hero() {
     const normX = (e.clientX - centerX) / (rect.width / 2);
     const normY = (e.clientY - centerY) / (rect.height / 2);
     
-    // Very subtle 1-2px shift
     setMousePos({
       x: Math.max(-1, Math.min(1, normX)),
       y: Math.max(-1, Math.min(1, normY)),
@@ -84,7 +86,7 @@ export default function Hero() {
       {/* LAYER 03: Atmospheric Bridge (Headline -> Video Transition Haze) */}
       <div className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] bg-gradient-to-r from-transparent via-[#063C2D]/25 to-[#19A878]/12 blur-3xl pointer-events-none z-[2]" />
 
-      {/* LAYER 04: MASTER HERO CINEMATIC VIDEO (Integrated Seamlessly — Zero Player Box) */}
+      {/* LAYER 04: MASTER HERO CINEMATIC VIDEO (Strictly Muted & Silent — Zero Audio Track) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -103,9 +105,11 @@ export default function Hero() {
           autoPlay
           loop
           muted
+          defaultMuted
           playsInline
           preload="auto"
-          className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-105"
+          aria-hidden="true"
+          className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-105 pointer-events-none"
         />
       </motion.div>
 
