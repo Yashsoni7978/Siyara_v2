@@ -67,7 +67,7 @@ export default function Hero() {
       {/* LAYER 01: Obsidian Black Base Canvas */}
       <div className="absolute inset-0 bg-[#080B0A] z-0" />
 
-      {/* LAYER 02: Deep Emerald Atmosphere Backdrop */}
+      {/* LAYER 02: Deep Emerald Atmosphere Backdrop (Static Ambient) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -82,15 +82,15 @@ export default function Hero() {
         <img
           src="/images/Gemini_Generated_Image_v8ldi5v8ldi5v8ld.png"
           alt="Siyara Emerald Atmosphere"
-          className="w-full h-full object-cover object-right mix-blend-screen opacity-30 animate-atmosphere scale-105"
+          className="w-full h-full object-cover object-right mix-blend-screen opacity-30 scale-105"
         />
       </motion.div>
 
-      {/* LAYER 03: THE MASTER HERO ARTWORK (Photorealistic Emerald Silk & Crystals Artwork) */}
+      {/* LAYER 03: THE MASTER HERO ARTWORK (Static & Sharp Photorealistic Master Artwork - NO FADING) */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.97 }}
+        initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.6, delay: 0.7, ease: easeCustom }}
+        transition={{ duration: 1.4, delay: 0.5, ease: easeCustom }}
         style={{
           ...getParallaxStyle(8),
           maskImage: 'radial-gradient(ellipse 85% 90% at 65% 50%, black 55%, transparent 95%)',
@@ -101,17 +101,17 @@ export default function Hero() {
         <img
           src="/images/siyara_hero_artwork.png"
           alt="Siyara Master Artwork — Luminous Emerald Silk & Crystals"
-          className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] animate-atmosphere scale-105"
+          className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100"
         />
       </motion.div>
 
-      {/* LAYER 04: Fine Gold Glints Overlay */}
+      {/* LAYER 04: Fine Gold Glints Overlay (Static Subtle Sparkles) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.5, delay: 1.4 }}
+        transition={{ duration: 1.2, delay: 1.0 }}
         style={{
-          ...getParallaxStyle(16),
+          ...getParallaxStyle(14),
           maskImage: 'radial-gradient(circle at 60% 50%, black 20%, transparent 70%)',
           WebkitMaskImage: 'radial-gradient(circle at 60% 50%, black 20%, transparent 70%)',
         }}
@@ -120,7 +120,7 @@ export default function Hero() {
         <img
           src="/images/Gemini_Generated_Image_19sjf619sjf619sj.png"
           alt="Fine Gold Glints"
-          className="w-full h-full object-cover mix-blend-screen opacity-35 animate-glint"
+          className="w-full h-full object-cover mix-blend-screen opacity-35"
         />
       </motion.div>
 
