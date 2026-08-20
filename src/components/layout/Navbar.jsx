@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 export default function Navbar({ currentPage = 'home', onNavigate }) {
@@ -82,15 +82,15 @@ export default function Navbar({ currentPage = 'home', onNavigate }) {
           className="flex flex-col group focus:outline-none"
         >
           <div className="flex items-center gap-1.5">
-            <span className="font-sans text-xl sm:text-2xl font-bold tracking-[0.2em] text-[#F3EFE4] group-hover:text-[#D4AF37] transition-colors">
+            <span className="font-serif text-xl sm:text-2xl font-bold tracking-[0.2em] text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors">
               SIYARA
             </span>
-            <span className="text-[#D4AF37] text-xs font-bold group-hover:rotate-45 transition-transform duration-300">
+            <span className="text-[#D9B45F] text-xs font-bold group-hover:rotate-45 transition-transform duration-300">
               ✦
             </span>
           </div>
-          <span className="text-[9px] sm:text-[10px] tracking-[0.28em] text-[#CFC9BB]/70 font-medium -mt-1 uppercase">
-            Digital Agency
+          <span className="text-[9px] sm:text-[10px] tracking-[0.28em] text-[#9D9B91] font-medium -mt-1 uppercase">
+            Digital Architecture Studio
           </span>
         </a>
 
@@ -104,15 +104,15 @@ export default function Navbar({ currentPage = 'home', onNavigate }) {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link)}
-                className={`relative text-[11px] lg:text-[12px] font-medium tracking-[0.2em] transition-colors duration-200 py-1 ${
+                className={`relative text-[11px] lg:text-[12px] font-sans font-medium tracking-[0.2em] uppercase transition-colors duration-200 py-1 ${
                   isActive
-                    ? 'text-[#F3EFE4] font-semibold'
-                    : 'text-[#CFC9BB] hover:text-[#D4AF37]'
+                    ? 'text-[#F3EFE3] font-semibold'
+                    : 'text-[#9D9B91] hover:text-[#D9B45F]'
                 }`}
               >
                 {link.name}
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#19A878] shadow-[0_0_8px_#19A878]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#18A982] shadow-[0_0_8px_#18A982]" />
                 )}
               </a>
             );
@@ -124,7 +124,7 @@ export default function Navbar({ currentPage = 'home', onNavigate }) {
           <a
             href="#contact"
             onClick={(e) => handleLinkClick(e, { href: '#contact' })}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#D4AF37]/50 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-[11px] font-bold tracking-[0.16em] uppercase transition-all duration-300 group shadow-lg shadow-[#D4AF37]/15 hover:shadow-[#D4AF37]/30 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#D9B45F] bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-[11px] font-sans font-bold tracking-[0.16em] uppercase transition-all duration-300 group shadow-lg shadow-[#D9B45F]/15 hover:-translate-y-0.5"
           >
             <span>BOOK STRATEGY SESSION</span>
             <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

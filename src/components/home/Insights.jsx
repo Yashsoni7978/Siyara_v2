@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -41,19 +41,20 @@ export default function Insights({ onNavigate }) {
   const secondaryArticles = articles.slice(1);
 
   return (
-    <section id="insights" className="relative py-28 sm:py-36 bg-[#063C2D]/20 border-t border-[#D4AF37]/15 overflow-hidden">
-      {/* Background Atmosphere */}
-      <div className="absolute inset-0 bg-emerald-atmosphere opacity-80 pointer-events-none" />
+    <section id="insights" className="relative py-28 sm:py-36 bg-[#F3EFE3] overflow-hidden">
+      {/* Editorial Ivory Atmosphere */}
+      <div className="absolute inset-0 ivory-texture pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-70 pointer-events-none" />
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-10">
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D4AF37]">
+          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
             10
           </span>
-          <span className="h-[1px] w-8 bg-[#D4AF37]/50" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D4AF37] uppercase">
+          <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
+          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
             Agency Insights & Perspectives
           </span>
         </div>
@@ -61,19 +62,19 @@ export default function Insights({ onNavigate }) {
         {/* Editorial Headline */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16 sm:mb-20">
           <div className="lg:col-span-8">
-            <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE4] font-normal leading-[1.04] tracking-tight">
+            <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#101613] font-normal leading-[0.98] tracking-tight">
               THINKING BEYOND <br />
-              THE <span className="text-[#E5C378] italic">WEBSITE.</span>
+              THE <span className="text-[#0B5E49] italic font-normal">WEBSITE.</span>
             </h2>
           </div>
           <div className="lg:col-span-4 flex lg:justify-end flex-col items-start lg:items-end">
-            <p className="font-sans text-xs sm:text-sm text-[#CFC9BB]/80 font-light leading-relaxed max-w-sm mb-4">
+            <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-sm mb-4">
               Strategic insights on digital growth, brand positioning, search intelligence, and conversion engineering.
             </p>
             <a
               href="/blog"
               onClick={handleArticleClick}
-              className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] text-[#D4AF37] hover:text-[#E5C378] transition-colors uppercase"
+              className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] text-[#0B5E49] hover:text-[#B9923F] transition-colors uppercase"
             >
               <span>VIEW ALL INSIGHTS</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -88,42 +89,42 @@ export default function Insights({ onNavigate }) {
           <a
             href="/blog"
             onClick={handleArticleClick}
-            className="lg:col-span-7 group flex flex-col justify-between p-8 sm:p-12 border border-[#D4AF37]/25 bg-[#080B0A]/80 hover:border-[#D4AF37] transition-all duration-500 relative overflow-hidden"
+            className="lg:col-span-7 group flex flex-col justify-between p-8 sm:p-12 border border-[#B9923F]/30 bg-[#ECE7D8] hover:border-[#0B5E49] transition-all duration-500 relative overflow-hidden shadow-xl"
           >
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-[10px] font-mono tracking-[0.2em] text-[#D4AF37] uppercase">
+                <span className="text-[10px] font-mono tracking-[0.2em] text-[#0B5E49] uppercase font-bold">
                   {leadArticle.category}
                 </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#19A878]" />
-                <span className="text-xs font-sans text-[#CFC9BB]/60">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0B5E49]" />
+                <span className="text-xs font-sans text-[#101613]/60 font-semibold">
                   FEATURED READ
                 </span>
               </div>
 
-              <h3 className="font-serif text-2xl sm:text-4xl text-[#F3EFE4] font-normal leading-tight mb-4 group-hover:text-[#E5C378] transition-colors">
+              <h3 className="font-serif text-2xl sm:text-4xl text-[#101613] font-normal leading-tight mb-4 group-hover:text-[#0B5E49] transition-colors">
                 {leadArticle.title}
               </h3>
 
-              <p className="font-sans text-xs sm:text-sm text-[#CFC9BB]/80 font-light leading-relaxed max-w-xl mb-8">
+              <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-xl mb-8">
                 {leadArticle.excerpt}
               </p>
             </div>
 
-            <div className="relative h-64 sm:h-72 my-6 overflow-hidden border border-[#D4AF37]/15">
+            <div className="relative h-64 sm:h-72 my-6 overflow-hidden border border-[#B9923F]/20">
               <img
                 src={leadArticle.image}
                 alt={leadArticle.title}
-                className="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-85 transition-all duration-700"
+                className="w-full h-full object-cover opacity-75 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-95 transition-all duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#080B0A] via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#ECE7D8] via-transparent to-transparent" />
             </div>
 
-            <div className="pt-6 border-t border-[#D4AF37]/15 flex items-center justify-between relative z-10">
-              <span className="text-xs font-sans font-semibold tracking-[0.18em] text-[#F3EFE4] group-hover:text-[#D4AF37] transition-colors uppercase">
+            <div className="pt-6 border-t border-[#B9923F]/20 flex items-center justify-between relative z-10">
+              <span className="text-xs font-sans font-semibold tracking-[0.18em] text-[#101613] group-hover:text-[#0B5E49] transition-colors uppercase">
                 READ FEATURED INSIGHT
               </span>
-              <ArrowUpRight className="w-4 h-4 text-[#D4AF37] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <ArrowUpRight className="w-4 h-4 text-[#0B5E49] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </div>
           </a>
 
@@ -134,36 +135,36 @@ export default function Insights({ onNavigate }) {
                 key={article.id}
                 href="/blog"
                 onClick={handleArticleClick}
-                className="group flex flex-col justify-between p-7 border border-[#D4AF37]/20 bg-[#080B0A]/80 hover:border-[#D4AF37] transition-all duration-500 flex-1"
+                className="group flex flex-col justify-between p-7 border border-[#B9923F]/30 bg-[#ECE7D8] hover:border-[#0B5E49] transition-all duration-500 flex-1 shadow-lg"
               >
                 <div>
-                  <div className="relative h-36 mb-5 overflow-hidden border border-[#D4AF37]/15">
+                  <div className="relative h-36 mb-5 overflow-hidden border border-[#B9923F]/20">
                     <img
                       src={article.image}
                       alt={article.title}
-                      className="w-full h-full object-cover opacity-50 mix-blend-luminosity group-hover:scale-[1.02] transition-transform duration-700"
+                      className="w-full h-full object-cover opacity-65 mix-blend-luminosity group-hover:scale-[1.02] transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#080B0A] via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#ECE7D8] via-transparent to-transparent" />
                   </div>
 
-                  <span className="text-[9px] font-mono tracking-[0.2em] text-[#D4AF37] uppercase mb-2 block group-hover:text-[#E5C378] transition-colors">
+                  <span className="text-[9px] font-mono tracking-[0.2em] text-[#0B5E49] uppercase mb-2 block group-hover:text-[#B9923F] transition-colors font-bold">
                     {article.category}
                   </span>
 
-                  <h4 className="font-serif text-xl sm:text-2xl text-[#F3EFE4] font-normal leading-snug mb-3 group-hover:text-[#E5C378] transition-colors">
+                  <h4 className="font-serif text-xl sm:text-2xl text-[#101613] font-normal leading-snug mb-3 group-hover:text-[#0B5E49] transition-colors">
                     {article.title}
                   </h4>
 
-                  <p className="font-sans text-xs text-[#CFC9BB]/70 font-light leading-relaxed mb-4 line-clamp-2">
+                  <p className="font-sans text-xs text-[#101613]/70 font-light leading-relaxed mb-4 line-clamp-2">
                     {article.excerpt}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#D4AF37]/15 flex items-center justify-between">
-                  <span className="text-[10px] font-sans font-semibold tracking-[0.16em] text-[#F3EFE4] group-hover:text-[#D4AF37] transition-colors uppercase">
+                <div className="pt-4 border-t border-[#B9923F]/20 flex items-center justify-between">
+                  <span className="text-[10px] font-sans font-semibold tracking-[0.16em] text-[#101613] group-hover:text-[#0B5E49] transition-colors uppercase">
                     READ ARTICLE
                   </span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  <ArrowUpRight className="w-3.5 h-3.5 text-[#0B5E49] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </div>
               </a>
             ))}

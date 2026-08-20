@@ -1,93 +1,85 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Calendar } from 'lucide-react';
 
 export default function FinalCTA() {
-  const easeCustom = [0.16, 1, 0.3, 1];
-
   return (
-    <section id="cta" className="relative py-32 sm:py-44 bg-[#080B0A] border-t border-[#D4AF37]/15 overflow-hidden">
-      {/* Background Emerald Atmosphere */}
-      <div className="absolute inset-0 bg-emerald-atmosphere opacity-90 pointer-events-none" />
+    <section id="contact" className="relative py-32 sm:py-44 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
+      {/* Background Deep Emerald Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#071E18]/60 via-[#070A09] to-[#070A09] opacity-90 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#071E18]/40 blur-3xl rounded-full pointer-events-none" />
 
-      {/* Restrained Architectural Linework SVG */}
-      <svg
-        className="absolute inset-0 w-full h-full opacity-20 pointer-events-none stroke-[#D4AF37]/30 fill-none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M -100 300 C 400 100, 1000 500, 1800 200" strokeWidth="1" strokeDasharray="4 8" />
-        <circle cx="50%" cy="50%" r="200" stroke="#D4AF37" strokeWidth="0.5" strokeDasharray="2 4" />
-      </svg>
+      {/* Extremely Subtle Orbital Circle Behind Typography */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full border border-[#D9B45F]/15 pointer-events-none animate-pulse-glow hidden sm:block z-0" />
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center">
         
-        {/* Section Numbering */}
+        {/* Eyebrow Label */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: easeCustom }}
-          className="flex items-center justify-center gap-3 mb-8"
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.6 }}
+          className="inline-flex items-center gap-3 mb-8"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D4AF37]">
+          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
             11
           </span>
-          <span className="h-[1px] w-8 bg-[#D4AF37]/50" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D4AF37] uppercase">
-            Start A Conversation
+          <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
+          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
+            Let's Collaborate
           </span>
         </motion.div>
 
-        {/* Large Editorial Headline */}
+        {/* Large Centered Editorial Headline */}
         <motion.h2
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
-          className="font-serif text-5xl sm:text-7xl lg:text-8xl text-[#F3EFE4] font-normal leading-[1.02] tracking-tight mb-8 max-w-4xl mx-auto"
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.8 }}
+          className="font-serif text-4xl sm:text-6xl lg:text-8xl text-[#F3EFE3] font-normal leading-[0.96] tracking-tight mb-8 max-w-4xl mx-auto"
         >
           READY TO BUILD <br />
-          <span className="text-[#E5C378] italic">SOMETHING BETTER?</span>
+          SOMETHING <span className="text-[#D9B45F] italic font-normal">BETTER?</span>
         </motion.h2>
 
-        {/* Supporting Copy */}
+        {/* Subcopy */}
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2, ease: easeCustom }}
-          className="font-sans text-base sm:text-xl text-[#CFC9BB] font-light max-w-xl mx-auto leading-relaxed mb-12"
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="font-sans text-sm sm:text-base text-[#9D9B91] font-light max-w-xl mx-auto mb-12 leading-relaxed"
         >
-          Let's create a digital experience that drives real growth.
+          Partner with Siyara Innovations to build digital experiences, strategy, and systems engineered for industry leadership.
         </motion.p>
 
-        {/* Action Buttons */}
+        {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3, ease: easeCustom }}
-          className="flex flex-wrap items-center justify-center gap-5 sm:gap-6"
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex flex-wrap items-center justify-center gap-5"
         >
           <a
             href="#contact"
-            className="inline-flex items-center gap-3 px-8 py-4.5 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase transition-all duration-300 shadow-2xl shadow-[#D4AF37]/20 hover:shadow-[#D4AF37]/35 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2.5 px-9 py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>START A PROJECT</span>
-            <ArrowUpRight className="w-4 h-4" />
+            <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
           </a>
 
           <a
-            href="#contact"
-            className="inline-flex items-center gap-2.5 px-7 py-4.5 border border-[#D4AF37]/50 bg-[#063C2D]/30 hover:bg-[#063C2D]/70 text-[#F3EFE4] hover:text-[#E5C378] text-xs sm:text-sm font-medium tracking-[0.18em] uppercase transition-all duration-300 shadow-lg"
+            href="https://calendly.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-9 py-4 border border-[#D9B45F]/40 hover:border-[#D9B45F] bg-[#071E18]/60 hover:bg-[#071E18] text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-lg"
           >
-            <Calendar className="w-4 h-4 text-[#D4AF37]" />
+            <Calendar className="w-4 h-4 text-[#D9B45F]" />
             <span>SCHEDULE A CALL</span>
           </a>
         </motion.div>
-
-        {/* Restrained Center Gold Line */}
-        <div className="mt-20 max-w-xs mx-auto h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent" />
 
       </div>
     </section>

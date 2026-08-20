@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Edit3, Code, Search, Megaphone, Sparkles, TrendingUp } from 'lucide-react';
 
@@ -64,11 +64,12 @@ export default function WhatWeDo() {
   };
 
   return (
-    <section id="services" className="relative py-28 sm:py-36 bg-[#080B0A] border-t border-[#D4AF37]/15 overflow-hidden">
-      {/* Background Emerald Atmosphere Glow */}
-      <div className="absolute inset-0 bg-emerald-atmosphere opacity-80 pointer-events-none" />
+    <section id="services" className="relative py-28 sm:py-36 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
+      {/* Background Emerald-Black Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#071E18]/60 via-[#070A09] to-[#070A09] opacity-80 pointer-events-none" />
+      <div className="absolute top-1/3 left-10 w-[500px] h-[500px] bg-[#0C6B52]/15 blur-3xl rounded-full pointer-events-none" />
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <motion.div
@@ -76,13 +77,13 @@ export default function WhatWeDo() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="flex items-center gap-3 mb-8"
+          className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D4AF37]">
+          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
             03
           </span>
-          <span className="h-[1px] w-8 bg-[#D4AF37]/50" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D4AF37] uppercase">
+          <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
+          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
             What We Do
           </span>
         </motion.div>
@@ -93,12 +94,12 @@ export default function WhatWeDo() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="mb-20 max-w-2xl"
+          className="mb-20 max-w-3xl"
         >
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE4] font-normal leading-[1.1]">
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98]">
             End-to-end digital <br />
             solutions that <br />
-            drive <span className="text-[#E5C378] italic">real growth.</span>
+            drive <span className="text-[#D9B45F] italic font-normal">real growth.</span>
           </h2>
         </motion.div>
 
@@ -107,17 +108,17 @@ export default function WhatWeDo() {
           
           {/* Continuous Glowing SVG Line (Desktop) */}
           <div className="hidden lg:block absolute top-[52px] left-0 right-0 h-[2px] z-0">
-            <div className="w-full h-full bg-gradient-to-r from-[#063C2D]/40 via-[#D4AF37]/40 to-[#063C2D]/40" />
+            <div className="w-full h-full bg-gradient-to-r from-[#0C6B52]/20 via-[#D9B45F]/40 to-[#0C6B52]/20" />
             <svg className="absolute -top-[5px] left-0 w-full h-[12px]" xmlns="http://www.w3.org/2000/svg">
               <line
                 x1="0"
                 y1="6"
                 x2="100%"
                 y2="6"
-                stroke="#D4AF37"
+                stroke="#D9B45F"
                 strokeWidth="1.5"
                 strokeDasharray="6 6"
-                className="opacity-60"
+                className="opacity-50"
               />
             </svg>
           </div>
@@ -146,7 +147,7 @@ export default function WhatWeDo() {
                   <div className="relative mb-6">
                     {/* Glowing Halo on Hover */}
                     <div
-                      className={`absolute -inset-3 rounded-full bg-[#19A878]/20 blur-md transition-opacity duration-300 ${
+                      className={`absolute -inset-3 rounded-full bg-[#18A982]/20 blur-md transition-opacity duration-300 ${
                         isHovered ? 'opacity-100' : 'opacity-0'
                       }`}
                     />
@@ -155,17 +156,17 @@ export default function WhatWeDo() {
                     <div
                       className={`relative w-14 h-14 rounded-full flex items-center justify-center border transition-all duration-300 ${
                         isHovered
-                          ? 'border-[#D4AF37] bg-[#063C2D] text-[#D4AF37] scale-110 shadow-[0_0_20px_rgba(212,175,55,0.3)]'
-                          : 'border-[#D4AF37]/30 bg-[#080B0A] text-[#CFC9BB] group-hover:border-[#D4AF37]/60'
+                          ? 'border-[#D9B45F] bg-[#071E18] text-[#D9B45F] scale-110 shadow-[0_0_20px_rgba(217,180,95,0.3)]'
+                          : 'border-[#D9B45F]/30 bg-[#070A09] text-[#D9B45F] group-hover:border-[#D9B45F]'
                       }`}
                     >
-                      <Icon className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+                      <Icon className="w-5 h-5 stroke-[1.75] transition-transform duration-300 group-hover:scale-110" />
                     </div>
 
                     {/* Subtle Node Indicator Dot */}
                     <div
                       className={`absolute -bottom-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full transition-colors duration-300 ${
-                        isHovered ? 'bg-[#D4AF37]' : 'bg-[#D4AF37]/40'
+                        isHovered ? 'bg-[#D9B45F]' : 'bg-[#D9B45F]/30'
                       }`}
                     />
                   </div>
@@ -173,14 +174,14 @@ export default function WhatWeDo() {
                   {/* Service Title */}
                   <h3
                     className={`font-sans text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase mb-2 transition-all duration-300 ${
-                      isHovered ? 'text-[#E5C378] -translate-y-0.5' : 'text-[#F3EFE4]'
+                      isHovered ? 'text-[#D9B45F] -translate-y-0.5' : 'text-[#F3EFE3]'
                     }`}
                   >
                     {service.title}
                   </h3>
 
                   {/* Service Description */}
-                  <p className="font-sans text-[11px] text-[#CFC9BB]/70 font-light leading-relaxed max-w-[160px]">
+                  <p className="font-sans text-[11px] text-[#9D9B91] font-light leading-relaxed max-w-[160px]">
                     {service.subtitle}
                   </p>
                 </motion.div>

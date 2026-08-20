@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Target, Users, ShieldCheck, TrendingUp } from 'lucide-react';
 
@@ -33,11 +33,12 @@ export default function WhySiyara() {
   ];
 
   return (
-    <section id="about" className="relative py-28 sm:py-36 bg-[#080B0A] border-t border-[#D4AF37]/15 overflow-hidden">
-      {/* Background Atmosphere */}
-      <div className="absolute inset-0 bg-emerald-atmosphere opacity-70 pointer-events-none" />
+    <section id="about" className="relative py-28 sm:py-36 bg-[#F3EFE3] overflow-hidden">
+      {/* Ivory editorial texture */}
+      <div className="absolute inset-0 ivory-texture pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-60 pointer-events-none" />
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <motion.div
@@ -47,11 +48,11 @@ export default function WhySiyara() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-12"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D4AF37]">
+          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
             04
           </span>
-          <span className="h-[1px] w-8 bg-[#D4AF37]/50" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D4AF37] uppercase">
+          <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
+          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
             Why Siyara
           </span>
         </motion.div>
@@ -67,12 +68,12 @@ export default function WhySiyara() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-5 pr-0 lg:pr-6"
           >
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE4] font-normal leading-[1.08] mb-6">
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[0.98] mb-6">
               We're more than <br />
               an agency. <br />
-              We're your <span className="text-[#E5C378] italic">growth partner.</span>
+              We're your <span className="text-[#0C6B52] italic font-normal">growth partner.</span>
             </h2>
-            <p className="font-sans text-sm sm:text-base text-[#CFC9BB] font-light leading-relaxed max-w-md">
+            <p className="font-sans text-sm sm:text-base text-[#9D9B91] font-light leading-relaxed max-w-md">
               We combine deep brand strategy with engineering excellence to create digital experiences that drive market dominance.
             </p>
           </motion.div>
@@ -103,7 +104,7 @@ export default function WhySiyara() {
                     onMouseEnter={() => setHoveredIdx(idx)}
                     onMouseLeave={() => setHoveredIdx(null)}
                     className={`flex flex-col justify-between py-4 lg:px-6 relative transition-all duration-300 ${
-                      idx !== 0 ? 'lg:border-l lg:border-[#D4AF37]/20' : ''
+                      idx !== 0 ? 'lg:border-l lg:border-[#101613]/12' : ''
                     } ${isHovered ? 'translate-y-[-3px]' : ''}`}
                   >
                     <div>
@@ -111,24 +112,24 @@ export default function WhySiyara() {
                       <div
                         className={`w-12 h-12 rounded-full flex items-center justify-center border mb-6 transition-all duration-300 ${
                           isHovered
-                            ? 'border-[#D4AF37] bg-[#063C2D] text-[#D4AF37] scale-105 shadow-[0_0_15px_rgba(212,175,55,0.25)]'
-                            : 'border-[#D4AF37]/30 bg-[#080B0A] text-[#D4AF37]'
+                            ? 'border-[#D9B45F] bg-[#071E18] text-[#D9B45F] scale-105 shadow-[0_0_15px_rgba(7,30,24,0.2)]'
+                            : 'border-[#0C6B52]/20 bg-[#F3EFE3] text-[#0C6B52]'
                         }`}
                       >
-                        <Icon className="w-5 h-5" />
+                        <Icon className="w-5 h-5 stroke-[1.75]" />
                       </div>
 
                       {/* Title */}
                       <h3
                         className={`font-sans text-xs font-semibold tracking-[0.18em] uppercase mb-3 transition-colors duration-300 ${
-                          isHovered ? 'text-[#E5C378]' : 'text-[#F3EFE4]'
+                          isHovered ? 'text-[#0C6B52]' : 'text-[#101613]'
                         }`}
                       >
                         {item.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="font-sans text-xs text-[#CFC9BB]/80 font-light leading-relaxed">
+                      <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed">
                         {item.description}
                       </p>
                     </div>

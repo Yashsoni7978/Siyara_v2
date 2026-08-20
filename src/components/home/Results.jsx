@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Cpu, Search, Target, ShieldCheck, TrendingUp } from 'lucide-react';
 
@@ -50,11 +50,12 @@ export default function Results() {
   ];
 
   return (
-    <section id="results" className="relative py-28 sm:py-36 bg-[#080B0A] border-t border-[#D4AF37]/15 overflow-hidden">
-      {/* Background Emerald Atmosphere */}
-      <div className="absolute inset-0 bg-emerald-atmosphere opacity-70 pointer-events-none" />
+    <section id="results" className="relative py-28 sm:py-36 bg-[#F3EFE3] overflow-hidden">
+      {/* Editorial Ivory Atmosphere */}
+      <div className="absolute inset-0 ivory-texture pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-70 pointer-events-none" />
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <motion.div
@@ -64,11 +65,11 @@ export default function Results() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D4AF37]">
+          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
             08
           </span>
-          <span className="h-[1px] w-8 bg-[#D4AF37]/50" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D4AF37] uppercase">
+          <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
+          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
             Proof & Deliverables
           </span>
         </motion.div>
@@ -82,19 +83,19 @@ export default function Results() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-4"
           >
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE4] font-normal leading-[1.08] mb-4">
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[0.98] mb-4">
               Real outcomes. <br />
-              Measurable <span className="text-[#E5C378] italic">impact.</span>
+              Measurable <span className="text-[#0B5E49] italic font-normal">impact.</span>
             </h2>
-            <p className="font-sans text-sm text-[#CFC9BB] font-light leading-relaxed mb-6">
+            <p className="font-sans text-sm text-[#101613]/70 font-light leading-relaxed mb-6">
               We design and engineer scalable digital systems engineered to elevate brands, increase visibility, and drive long-term business value.
             </p>
             <a
               href="#work"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 border border-[#D4AF37]/40 bg-[#063C2D]/40 hover:bg-[#D4AF37] text-[#F3EFE4] hover:text-[#080B0A] text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 shadow-lg group"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 shadow-lg group"
             >
               <span>EXPLORE SELECTED WORK</span>
-              <ArrowUpRight className="w-4 h-4 text-[#D4AF37] group-hover:text-[#080B0A] transition-colors" />
+              <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </motion.div>
 
@@ -119,26 +120,26 @@ export default function Results() {
                       hidden: { opacity: 0, y: 20 },
                       visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
                     }}
-                    className="p-5 sm:p-6 bg-[#063C2D]/20 border border-[#D4AF37]/20 hover:border-[#D4AF37]/60 rounded-none transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-lg"
+                    className="p-5 sm:p-6 bg-[#ECE7D8] border border-[#B9923F]/30 hover:border-[#0B5E49]/60 rounded-none transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-md"
                   >
                     {/* Icon */}
-                    <div className="w-10 h-10 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#19A878] group-hover:text-[#D4AF37] group-hover:border-[#D4AF37] mb-6 transition-colors">
-                      <Icon className="w-4 h-4" />
+                    <div className="w-10 h-10 rounded-full border border-[#0B5E49]/30 bg-[#F3EFE3] flex items-center justify-center text-[#0B5E49] group-hover:bg-[#0B5E49] group-hover:text-[#F3EFE3] group-hover:border-[#0B5E49] mb-6 transition-colors">
+                      <Icon className="w-4 h-4 stroke-[1.75]" />
                     </div>
 
                     {/* Pillar Title */}
-                    <div className="font-sans text-xs font-bold text-[#E5C378] tracking-[0.12em] uppercase mb-2">
+                    <div className="font-sans text-xs font-bold text-[#0B5E49] tracking-[0.12em] uppercase mb-2">
                       {item.title}
                     </div>
 
                     {/* Label */}
-                    <p className="font-sans text-[11px] text-[#CFC9BB]/90 font-light leading-snug mb-4">
+                    <p className="font-sans text-[11px] text-[#101613]/70 font-light leading-snug mb-4">
                       {item.label}
                     </p>
 
                     {/* Divider & Category */}
-                    <div className="pt-3 border-t border-[#D4AF37]/15">
-                      <span className="text-[9px] font-sans tracking-[0.16em] text-[#D4AF37]/70 uppercase font-mono">
+                    <div className="pt-3 border-t border-[#B9923F]/20">
+                      <span className="text-[9px] font-sans tracking-[0.16em] text-[#B9923F] uppercase font-mono font-semibold">
                         {item.category}
                       </span>
                     </div>
@@ -155,9 +156,9 @@ export default function Results() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="pt-12 border-t border-[#D4AF37]/15 flex flex-col sm:flex-row items-center justify-between gap-6"
+          className="pt-12 border-t border-[#101613]/10 flex flex-col sm:flex-row items-center justify-between gap-6"
         >
-          <div className="flex items-center gap-2 text-xs font-sans tracking-[0.16em] text-[#D4AF37] uppercase">
+          <div className="flex items-center gap-2 text-xs font-sans tracking-[0.16em] text-[#0B5E49] uppercase font-semibold">
             <span className="text-sm">✦</span>
             <span>Featured Agency Client Projects & Digital Systems</span>
           </div>
@@ -166,7 +167,7 @@ export default function Results() {
             {confirmedProjects.map((brand) => (
               <span
                 key={brand}
-                className="font-serif text-xs sm:text-sm tracking-[0.2em] text-[#CFC9BB] hover:text-[#E5C378] transition-colors uppercase font-medium cursor-default"
+                className="font-serif text-xs sm:text-sm tracking-[0.2em] text-[#101613]/60 hover:text-[#0B5E49] transition-colors uppercase font-medium cursor-default"
               >
                 {brand}
               </span>

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/layout/Navbar.jsx';
 import CursorSpotlight from './components/common/CursorSpotlight.jsx';
+import SectionConnector from './components/common/SectionConnector.jsx';
 import Hero from './components/home/Hero.jsx';
+import Marquee from './components/home/Marquee.jsx';
 import SelectedWork from './components/home/SelectedWork.jsx';
 import WhatWeDo from './components/home/WhatWeDo.jsx';
 import WhySiyara from './components/home/WhySiyara.jsx';
@@ -66,7 +68,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#080B0A] text-[#F3EFE4] selection:bg-[#063C2D] selection:text-[#E5C378]">
+    <div className="min-h-screen bg-[#070A09] text-[#F3EFE3] selection:bg-[#071E18] selection:text-[#D9B45F]">
       {/* Interactive Cursor Glow */}
       <CursorSpotlight />
 
@@ -83,46 +85,76 @@ export default function App() {
         <Blog onNavigate={handleNavigate} />
       ) : (
         <main>
-          {/* 01 HERO */}
+          {/* 01 HERO — DARK */}
           <Hero />
 
-          {/* 02 SELECTED WORK */}
+          {/* MARQUEE — DARK (Hero Sequence) */}
+          <Marquee />
+
+          {/* Connector 01: DARK → IVORY */}
+          <SectionConnector fromDark={true} />
+
+          {/* 02 SELECTED WORK — IVORY */}
           <SelectedWork />
 
-          {/* 03 WHAT WE DO */}
+          {/* Connector 02: IVORY → DARK */}
+          <SectionConnector fromDark={false} />
+
+          {/* 03 WHAT WE DO — DARK */}
           <WhatWeDo />
 
-          {/* 04 WHY SIYARA */}
+          {/* Connector 03: DARK → IVORY */}
+          <SectionConnector fromDark={true} />
+
+          {/* 04 WHY SIYARA — IVORY */}
           <WhySiyara />
 
-          {/* 05 OUR PHILOSOPHY */}
+          {/* Connector 04: IVORY → DARK */}
+          <SectionConnector fromDark={false} />
+
+          {/* 05 OUR PHILOSOPHY — DARK */}
           <Philosophy />
 
-          {/* 06 THE PROBLEM */}
+          {/* Connector 05: DARK → IVORY */}
+          <SectionConnector fromDark={true} />
+
+          {/* 06 THE PROBLEM — IVORY */}
           <Problem />
 
-          {/* 07 HOW WE WORK */}
+          {/* Connector 06: IVORY → DARK */}
+          <SectionConnector fromDark={false} />
+
+          {/* 07 HOW WE WORK — DARK */}
           <Process />
 
-          {/* 08 RESULTS / PROOF */}
+          {/* Connector 07: DARK → IVORY */}
+          <SectionConnector fromDark={true} />
+
+          {/* 08 PROOF & DELIVERABLES — IVORY */}
           <Results />
 
-          {/* 09 INDUSTRIES */}
+          {/* Connector 08: IVORY → DARK */}
+          <SectionConnector fromDark={false} />
+
+          {/* 09 INDUSTRIES — DARK */}
           <Industries />
 
-          {/* 10 INSIGHTS */}
+          {/* Connector 09: DARK → IVORY */}
+          <SectionConnector fromDark={true} />
+
+          {/* 10 INSIGHTS — IVORY */}
           <Insights onNavigate={handleNavigate} />
 
-          {/* 11 FINAL CTA */}
+          {/* Connector 10: IVORY → DARK */}
+          <SectionConnector fromDark={false} />
+
+          {/* 11 FINAL CTA — DARK */}
           <FinalCTA />
         </main>
       )}
 
-      {/* 12 FOOTER */}
+      {/* FOOTER — DARK */}
       <Footer onNavigate={handleNavigate} />
     </div>
   );
 }
-
-
-

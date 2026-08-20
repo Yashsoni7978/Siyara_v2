@@ -1,21 +1,23 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 @layer base {
   :root {
-    --color-obsidian: #080B0A;
-    --color-deep-emerald: #063C2D;
-    --color-rich-emerald: #0B5A43;
-    --color-emerald-highlight: #19A878;
-    --color-champagne-gold: #D4AF37;
-    --color-warm-gold: #E5C378;
-    --color-ivory: #F3EFE4;
-    --color-muted-ivory: #CFC9BB;
+    --siyara-obsidian: #070A09;
+    --siyara-deep-emerald: #071E18;
+    --siyara-emerald-accent: #0C6B52;
+    --siyara-bright-emerald: #18A982;
+    --siyara-champagne-gold: #D9B45F;
+    --siyara-light-gold: #E8C979;
+    --siyara-ivory: #F3EFE3;
+    --siyara-warm-ivory: #ECE7D8;
+    --siyara-dark-text: #101613;
+    --siyara-muted-text: #9D9B91;
   }
 
   body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background-color: var(--color-obsidian);
-    color: var(--color-ivory);
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    background-color: var(--siyara-obsidian);
+    color: var(--siyara-ivory);
     overflow-x: hidden;
   }
 
@@ -30,39 +32,39 @@
 }
 
 .font-sans {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
 }
 
 .text-gold {
-  color: #D4AF37;
+  color: #D9B45F;
 }
 
 .text-gold-gradient {
-  background: linear-gradient(135deg, #E5C378 0%, #D4AF37 50%, #B38F26 100%);
+  background: linear-gradient(135deg, #E8C979 0%, #D9B45F 50%, #B38F26 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-emerald-atmosphere {
-  background: radial-gradient(circle at 50% 30%, rgba(6, 60, 45, 0.35) 0%, rgba(8, 11, 10, 0.95) 70%, #080B0A 100%);
+  background: radial-gradient(circle at 50% 30%, rgba(7, 30, 24, 0.45) 0%, rgba(7, 10, 9, 0.95) 70%, #070A09 100%);
 }
 
 .bg-emerald-glow {
-  background: radial-gradient(circle at center, rgba(25, 168, 120, 0.15) 0%, rgba(6, 60, 45, 0.05) 50%, transparent 70%);
+  background: radial-gradient(circle at center, rgba(24, 169, 130, 0.15) 0%, rgba(7, 30, 24, 0.05) 50%, transparent 70%);
 }
 
 .border-gold-subtle {
-  border-color: rgba(212, 175, 55, 0.22);
+  border-color: rgba(217, 180, 95, 0.22);
 }
 
 .border-emerald-subtle {
-  border-color: rgba(25, 168, 120, 0.24);
+  border-color: rgba(12, 107, 82, 0.24);
 }
 
 .glass-nav {
-  background: rgba(8, 11, 10, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(7, 10, 9, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 /* Keyframe animations */
@@ -101,6 +103,15 @@
   50% { transform: translateY(-12px) rotate(1.5deg); }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 38s linear infinite;
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -134,3 +145,46 @@
   mask-image: radial-gradient(ellipse at center, black 50%, transparent 90%);
   -webkit-mask-image: radial-gradient(ellipse at center, black 50%, transparent 90%);
 }
+
+/* ── Ivory section editorial texture overlay ────────────────────── */
+.ivory-texture {
+  background-image:
+    radial-gradient(ellipse at 80% 20%, rgba(11,94,73,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(181,145,63,0.04) 0%, transparent 60%);
+}
+
+/* ── Section connector architectural lines ──────────────────────── */
+.connector-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, rgba(217,180,95,0.30) 40%, rgba(217,180,95,0.30) 60%, transparent 100%);
+}
+
+/* ── Slow marquee pause on hover ─────────────────────────────────── */
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ── Premium button shared style ─────────────────────────────────── */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1rem 2.25rem;
+  background: #D9B45F;
+  color: #101613;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-gold:hover {
+  background: #E8C979;
+  transform: translateY(-2px);
+}
+
+/* ── Ivory section warm tint ─────────────────────────────────────── */
+.bg-ivory { background-color: #F3EFE3; }
+.bg-warm-ivory { background-color: #ECE7D8; }

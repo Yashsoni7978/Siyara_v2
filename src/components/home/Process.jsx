@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Compass, Edit3, Code, Rocket, TrendingUp, ArrowUpRight } from 'lucide-react';
 
@@ -45,11 +45,11 @@ export default function Process() {
   ];
 
   return (
-    <section id="process" className="relative py-28 sm:py-36 bg-[#063C2D]/20 border-t border-[#D4AF37]/15 overflow-hidden">
-      {/* Background Atmosphere */}
-      <div className="absolute inset-0 bg-emerald-atmosphere opacity-80 pointer-events-none" />
+    <section id="process" className="relative py-28 sm:py-36 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
+      {/* Background Deep Emerald Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#071E18]/50 via-[#070A09] to-[#070A09] opacity-80 pointer-events-none" />
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <motion.div
@@ -59,11 +59,11 @@ export default function Process() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D4AF37]">
+          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
             07
           </span>
-          <span className="h-[1px] w-8 bg-[#D4AF37]/50" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D4AF37] uppercase">
+          <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
+          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
             How We Work
           </span>
         </motion.div>
@@ -77,11 +77,11 @@ export default function Process() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-7"
           >
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE4] font-normal leading-[1.08] mb-4">
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98] mb-4">
               Our proven 6-step <br />
-              process to <span className="text-[#E5C378] italic">success.</span>
+              process to <span className="text-[#D9B45F] italic font-normal">success.</span>
             </h2>
-            <p className="font-sans text-sm sm:text-base text-[#CFC9BB] font-light max-w-lg leading-relaxed">
+            <p className="font-sans text-sm sm:text-base text-[#9D9B91] font-light max-w-lg leading-relaxed">
               A structured approach that ensures clarity, quality and measurable results at every step.
             </p>
           </motion.div>
@@ -95,10 +95,10 @@ export default function Process() {
           >
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3.5 border border-[#D4AF37]/40 bg-[#080B0A] hover:bg-[#D4AF37] text-[#F3EFE4] hover:text-[#080B0A] text-xs font-semibold tracking-[0.16em] uppercase transition-all duration-300 shadow-lg group"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-[#D9B45F] bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase transition-all duration-300 shadow-lg group"
             >
               <span>VIEW DETAILED PROCESS</span>
-              <ArrowUpRight className="w-4 h-4 text-[#D4AF37] group-hover:text-[#080B0A] transition-colors" />
+              <ArrowUpRight className="w-4 h-4 text-[#101613] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </motion.div>
         </div>
@@ -108,9 +108,9 @@ export default function Process() {
           
           {/* Connecting Line (Desktop) */}
           <div className="hidden lg:block absolute top-[48px] left-0 right-0 h-[2px] z-0">
-            <div className="w-full h-full bg-[#D4AF37]/25" />
+            <div className="w-full h-full bg-[#071E18]" />
             <motion.div
-              className="h-full bg-[#D4AF37] shadow-[0_0_10px_#D4AF37]"
+              className="h-full bg-[#D9B45F] shadow-[0_0_10px_#D9B45F]"
               animate={{ width: `${((activeStep + 1) / steps.length) * 100}%` }}
               transition={{ duration: 0.4, ease: 'easeOut' }}
             />
@@ -150,30 +150,30 @@ export default function Process() {
                     <div
                       className={`w-14 h-14 rounded-full flex items-center justify-center border transition-all duration-300 ${
                         isActive
-                          ? 'border-[#D4AF37] bg-[#063C2D] text-[#D4AF37] scale-110 shadow-[0_0_20px_rgba(212,175,55,0.4)]'
-                          : 'border-[#D4AF37]/30 bg-[#080B0A] text-[#CFC9BB]/70 group-hover:border-[#D4AF37]/60'
+                          ? 'border-[#D9B45F] bg-[#071E18] text-[#D9B45F] scale-110 shadow-[0_0_20px_rgba(24,169,130,0.4)]'
+                          : 'border-[#D9B45F]/30 bg-[#070A09] text-[#9D9B91] group-hover:border-[#D9B45F]/60'
                       }`}
                     >
-                      <Icon className="w-5 h-5" />
+                      <Icon className="w-5 h-5 stroke-[1.75]" />
                     </div>
                   </div>
 
                   {/* Step Number */}
-                  <span className="text-xs font-mono text-[#D4AF37] font-medium tracking-widest mb-1">
+                  <span className="text-xs font-mono text-[#D9B45F] font-medium tracking-widest mb-1">
                     {step.id}
                   </span>
 
                   {/* Title */}
                   <h3
                     className={`font-sans text-xs font-semibold tracking-[0.18em] uppercase mb-2 transition-colors duration-300 ${
-                      isActive ? 'text-[#E5C378]' : 'text-[#F3EFE4]'
+                      isActive ? 'text-[#D9B45F]' : 'text-[#F3EFE3]'
                     }`}
                   >
                     {step.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="font-sans text-[11px] text-[#CFC9BB]/70 font-light leading-relaxed max-w-[160px]">
+                  <p className="font-sans text-[11px] text-[#9D9B91] font-light leading-relaxed max-w-[160px]">
                     {step.description}
                   </p>
                 </motion.div>

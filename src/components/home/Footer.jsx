@@ -49,45 +49,45 @@ export default function Footer({ onNavigate }) {
   ];
 
   return (
-    <footer id="contact" className="relative bg-[#080B0A] border-t border-[#D4AF37]/20 pt-20 pb-12 overflow-hidden">
-      {/* Subtle Background Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-64 bg-radial from-[#063C2D]/30 via-transparent to-transparent pointer-events-none opacity-40" />
+    <footer className="relative bg-[#070A09] pt-20 pb-12 border-t border-[#D9B45F]/15 text-[#F3EFE3] overflow-hidden">
+      {/* Background Atmosphere */}
+      <div className="absolute inset-0 bg-emerald-atmosphere opacity-70 pointer-events-none" />
 
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-16 border-b border-[#D4AF37]/15">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-16 border-b border-[#D9B45F]/15">
           
           {/* Brand & Positioning Column (Left 4 Cols) */}
           <div className="lg:col-span-4 flex flex-col justify-between pr-0 lg:pr-6">
             <div>
               {/* Brand Lockup */}
               <a href="#" className="inline-flex items-center gap-1.5 mb-4 group focus:outline-none">
-                <span className="font-sans text-2xl font-bold tracking-[0.2em] text-[#F3EFE4] group-hover:text-[#D4AF37] transition-colors">
+                <span className="font-serif text-2xl font-bold tracking-[0.2em] text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors">
                   SIYARA
                 </span>
-                <span className="text-[#D4AF37] text-base group-hover:rotate-45 transition-transform duration-300">
+                <span className="text-[#D9B45F] text-base group-hover:rotate-45 transition-transform duration-300">
                   ✦
                 </span>
               </a>
 
-              <p className="font-sans text-xs sm:text-sm text-[#CFC9BB]/80 font-light leading-relaxed mb-6 max-w-sm">
+              <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-6 max-w-sm">
                 We build digital experiences that drive growth, build brands and create lasting impact.
               </p>
             </div>
 
             {/* Direct Enquiry Box */}
-            <div className="p-4 border border-[#D4AF37]/25 bg-[#063C2D]/20">
-              <div className="text-[10px] font-mono text-[#D4AF37] tracking-widest uppercase mb-1">
+            <div className="p-4 border border-[#D9B45F]/30 bg-[#071E18]/40">
+              <div className="text-[10px] font-mono text-[#D9B45F] tracking-widest uppercase mb-1 font-semibold">
                 Start a New Project
               </div>
               <a
                 href="mailto:hello@siyara.dev"
-                className="font-sans text-xs font-semibold text-[#F3EFE4] hover:text-[#E5C378] transition-colors flex items-center gap-2"
+                className="font-sans text-xs font-semibold text-[#F3EFE3] hover:text-[#D9B45F] transition-colors flex items-center gap-2"
               >
-                <Mail className="w-3.5 h-3.5 text-[#D4AF37]" />
+                <Mail className="w-3.5 h-3.5 text-[#D9B45F]" />
                 <span>hello@siyara.dev</span>
-                <ArrowUpRight className="w-3 h-3 text-[#D4AF37] ml-auto" />
+                <ArrowUpRight className="w-3 h-3 text-[#D9B45F] ml-auto" />
               </a>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function Footer({ onNavigate }) {
             
             {/* SERVICES */}
             <div>
-              <h4 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D4AF37] uppercase mb-5">
+              <h4 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
                 SERVICES
               </h4>
               <ul className="flex flex-col gap-3">
@@ -106,7 +106,7 @@ export default function Footer({ onNavigate }) {
                     <a
                       href={link.href}
                       onClick={(e) => handleFooterLinkClick(e, link.href)}
-                      className="font-sans text-xs text-[#CFC9BB]/70 hover:text-[#F3EFE4] transition-colors"
+                      className="font-sans text-xs text-[#9D9B91] hover:text-[#F3EFE3] transition-colors"
                     >
                       {link.name}
                     </a>
@@ -117,7 +117,7 @@ export default function Footer({ onNavigate }) {
 
             {/* COMPANY */}
             <div>
-              <h4 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D4AF37] uppercase mb-5">
+              <h4 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
                 COMPANY
               </h4>
               <ul className="flex flex-col gap-3">
@@ -126,7 +126,7 @@ export default function Footer({ onNavigate }) {
                     <a
                       href={link.href}
                       onClick={(e) => handleFooterLinkClick(e, link.href)}
-                      className="font-sans text-xs text-[#CFC9BB]/70 hover:text-[#F3EFE4] transition-colors"
+                      className="font-sans text-xs text-[#9D9B91] hover:text-[#F3EFE3] transition-colors"
                     >
                       {link.name}
                     </a>
@@ -137,7 +137,7 @@ export default function Footer({ onNavigate }) {
 
             {/* RESOURCES & CONTACT */}
             <div>
-              <h4 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D4AF37] uppercase mb-5">
+              <h4 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
                 RESOURCES
               </h4>
               <ul className="flex flex-col gap-3 mb-8">
@@ -146,7 +146,7 @@ export default function Footer({ onNavigate }) {
                     <a
                       href={link.href}
                       onClick={(e) => handleFooterLinkClick(e, link.href)}
-                      className="font-sans text-xs text-[#CFC9BB]/70 hover:text-[#F3EFE4] transition-colors"
+                      className="font-sans text-xs text-[#9D9B91] hover:text-[#F3EFE3] transition-colors"
                     >
                       {link.name}
                     </a>
@@ -154,11 +154,11 @@ export default function Footer({ onNavigate }) {
                 ))}
               </ul>
 
-              <h4 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D4AF37] uppercase mb-3">
+              <h4 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-3">
                 LOCATION
               </h4>
-              <div className="flex items-center gap-2 text-xs font-sans text-[#CFC9BB]/70">
-                <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" />
+              <div className="flex items-center gap-2 text-xs font-sans text-[#9D9B91]">
+                <MapPin className="w-3.5 h-3.5 text-[#D9B45F]" />
                 <span>Digital Agency · Global Operations</span>
               </div>
             </div>
@@ -168,16 +168,16 @@ export default function Footer({ onNavigate }) {
         </div>
 
         {/* Footer Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-[#CFC9BB]/60">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-[#9D9B91]">
           <div className="flex items-center gap-2">
-            <span className="font-bold tracking-[0.2em] text-[#F3EFE4]">SIYARA✦</span>
+            <span className="font-serif font-bold tracking-[0.2em] text-[#F3EFE3]">SIYARA✦</span>
             <span>© 2026 SIYARA INNOVATIONS. All rights reserved.</span>
           </div>
 
-          <div className="flex items-center gap-6 text-[11px] tracking-wider text-[#CFC9BB]/70">
-            <a href="#" className="hover:text-[#D4AF37] transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-[#D4AF37] transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-[#D4AF37] transition-colors">Sitemap</a>
+          <div className="flex items-center gap-6 text-[11px] tracking-wider text-[#9D9B91]">
+            <a href="#" className="hover:text-[#D9B45F] transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-[#D9B45F] transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-[#D9B45F] transition-colors">Sitemap</a>
           </div>
         </div>
 

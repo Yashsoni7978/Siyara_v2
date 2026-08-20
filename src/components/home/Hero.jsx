@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
 
@@ -75,16 +75,16 @@ export default function Hero() {
       ref={heroRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative min-h-[100svh] pt-32 pb-20 lg:pt-36 lg:pb-24 bg-[#080B0A] overflow-hidden flex items-center"
+      className="relative min-h-[100svh] pt-32 pb-20 lg:pt-36 lg:pb-24 bg-[#070A09] overflow-hidden flex items-center"
     >
       {/* LAYER 01: Obsidian Black Canvas Base */}
-      <div className="absolute inset-0 bg-[#080B0A] z-0" />
+      <div className="absolute inset-0 bg-[#070A09] z-0" />
 
       {/* LAYER 02: Fine Emerald Ambient Glow Sphere Behind Video */}
-      <div className="absolute right-[8%] top-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#063C2D]/55 via-[#19A878]/18 to-transparent blur-3xl rounded-full pointer-events-none z-[1]" />
+      <div className="absolute right-[8%] top-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#071E18]/60 via-[#18A982]/18 to-transparent blur-3xl rounded-full pointer-events-none z-[1]" />
 
       {/* LAYER 03: Atmospheric Bridge (Headline -> Video Transition Haze) */}
-      <div className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] bg-gradient-to-r from-transparent via-[#063C2D]/25 to-[#19A878]/12 blur-3xl pointer-events-none z-[2]" />
+      <div className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] bg-gradient-to-r from-transparent via-[#071E18]/30 to-[#18A982]/12 blur-3xl pointer-events-none z-[2]" />
 
       {/* LAYER 04: MASTER HERO CINEMATIC VIDEO (Strictly Muted & Silent — Zero Audio Track) */}
       <motion.div
@@ -125,8 +125,8 @@ export default function Hero() {
               variants={fadeUp(350)}
               className="flex items-center gap-3 mb-6"
             >
-              <span className="h-[1px] w-8 bg-[#D4AF37]/60" />
-              <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.26em] text-[#D4AF37] uppercase">
+              <span className="h-[1px] w-8 bg-[#D9B45F]/60" />
+              <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.26em] text-[#D9B45F] uppercase">
                 DIGITAL ARCHITECTURE STUDIO
               </span>
             </motion.div>
@@ -137,7 +137,7 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(500)}
-                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[1.02] tracking-tight text-[#F3EFE4]"
+                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-[#F3EFE3]"
               >
                 WE BUILD BRANDS
               </motion.h1>
@@ -146,7 +146,7 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(620)}
-                className="font-serif text-lg sm:text-2xl lg:text-2xl text-[#E5C378] tracking-[0.25em] uppercase my-1 font-sans font-medium"
+                className="text-lg sm:text-2xl lg:text-2xl text-[#E8C979] tracking-[0.25em] uppercase my-2 font-sans font-medium"
               >
                 THAT
               </motion.div>
@@ -155,7 +155,7 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(700)}
-                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[1.02] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E5C378] via-[#D4AF37] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(212,175,55,0.22)]"
+                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
               >
                 DOMINATE.
               </motion.h1>
@@ -168,7 +168,7 @@ export default function Hero() {
               variants={fadeUp(850)}
               className="mb-10 max-w-lg"
             >
-              <p className="font-sans text-base sm:text-lg text-[#CFC9BB]/90 font-light leading-relaxed">
+              <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
                 Digital architecture studio for ambitious businesses ready to lead their industry.
               </p>
             </motion.div>
@@ -182,7 +182,7 @@ export default function Hero() {
             >
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D4AF37]/15 hover:shadow-[#D4AF37]/30 hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>BOOK STRATEGY SESSION</span>
                 <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
@@ -190,10 +190,10 @@ export default function Hero() {
 
               <a
                 href="#work"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-[#F3EFE4]/25 hover:border-[#D4AF37]/60 text-[#F3EFE4] hover:text-[#D4AF37] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#080B0A]/40 backdrop-blur-sm"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-[#F3EFE3]/25 hover:border-[#D9B45F]/60 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#070A09]/40 backdrop-blur-sm"
               >
                 <span>EXPLORE OUR WORK</span>
-                <ArrowRight className="w-4 h-4 text-[#D4AF37] group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-1 transition-transform" />
               </a>
             </motion.div>
           </div>
@@ -208,10 +208,10 @@ export default function Hero() {
         transition={{ delay: 1.6 }}
         className="absolute bottom-8 left-8 sm:left-12 z-20 flex flex-col items-center gap-3 hidden sm:flex"
       >
-        <div className="w-[1px] h-10 bg-gradient-to-b from-[#D4AF37] to-transparent relative">
-          <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full absolute top-0 -left-[2.5px] animate-ping" />
+        <div className="w-[1px] h-10 bg-gradient-to-b from-[#D9B45F] to-transparent relative">
+          <div className="w-1.5 h-1.5 bg-[#D9B45F] rounded-full absolute top-0 -left-[2.5px] animate-ping" />
         </div>
-        <span className="text-[9px] font-mono tracking-[0.24em] text-[#CFC9BB]/60 uppercase">
+        <span className="text-[9px] font-mono tracking-[0.24em] text-[#9D9B91]/60 uppercase">
           SCROLL
         </span>
       </motion.div>

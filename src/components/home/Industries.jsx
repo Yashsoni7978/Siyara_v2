@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -53,11 +53,12 @@ export default function Industries() {
   const activeIndustry = industries[hoveredIndex] || industries[0];
 
   return (
-    <section id="industries" className="relative py-28 sm:py-36 bg-[#080B0A] border-t border-[#D4AF37]/15 overflow-hidden">
-      {/* Background Atmosphere */}
-      <div className="absolute inset-0 bg-emerald-atmosphere opacity-80 pointer-events-none" />
+    <section id="industries" className="relative py-28 sm:py-36 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
+      {/* Background Emerald-Black Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#071E18]/60 via-[#070A09] to-[#070A09] opacity-80 pointer-events-none" />
+      <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-[#0C6B52]/15 blur-3xl rounded-full pointer-events-none" />
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <motion.div
@@ -67,11 +68,11 @@ export default function Industries() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D4AF37]">
+          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
             09
           </span>
-          <span className="h-[1px] w-8 bg-[#D4AF37]/50" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D4AF37] uppercase">
+          <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
+          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
             Industries We Elevate
           </span>
         </motion.div>
@@ -84,9 +85,9 @@ export default function Industries() {
           transition={{ duration: 0.7 }}
           className="mb-16 sm:mb-20 max-w-3xl"
         >
-          <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE4] font-normal leading-[1.04] tracking-tight">
+          <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight">
             BUILT FOR <br />
-            AMBITIOUS <span className="text-[#E5C378] italic">INDUSTRIES.</span>
+            AMBITIOUS <span className="text-[#D9B45F] italic font-normal">INDUSTRIES.</span>
           </h2>
         </motion.div>
 
@@ -102,7 +103,7 @@ export default function Industries() {
               hidden: { opacity: 0 },
               visible: { opacity: 1, transition: { staggerChildren: 0.08 } },
             }}
-            className="lg:col-span-7 flex flex-col divide-y divide-[#D4AF37]/15"
+            className="lg:col-span-7 flex flex-col divide-y divide-[#D9B45F]/15"
           >
             {industries.map((item, idx) => {
               const isHovered = hoveredIndex === idx;
@@ -121,7 +122,7 @@ export default function Industries() {
                     <div className="flex items-baseline gap-4 sm:gap-6">
                       <span
                         className={`text-xs font-mono font-medium transition-colors duration-300 ${
-                          isHovered ? 'text-[#D4AF37]' : 'text-[#CFC9BB]/40'
+                          isHovered ? 'text-[#D9B45F]' : 'text-[#9D9B91]/50'
                         }`}
                       >
                         {item.id}
@@ -130,8 +131,8 @@ export default function Industries() {
                       <h3
                         className={`font-serif text-2xl sm:text-4xl lg:text-5xl tracking-wide font-normal transition-all duration-300 ${
                           isHovered
-                            ? 'text-[#E5C378] translate-x-2'
-                            : 'text-[#F3EFE4] group-hover:text-[#E5C378]/80'
+                            ? 'text-[#D9B45F] translate-x-2'
+                            : 'text-[#F3EFE3] group-hover:text-[#D9B45F]'
                         }`}
                       >
                         {item.name}
@@ -141,8 +142,8 @@ export default function Industries() {
                     <ArrowUpRight
                       className={`w-5 h-5 sm:w-6 sm:h-6 transition-all duration-300 ${
                         isHovered
-                          ? 'text-[#D4AF37] translate-x-1 -translate-y-1 opacity-100'
-                          : 'text-[#CFC9BB]/30 opacity-0 group-hover:opacity-60'
+                          ? 'text-[#D9B45F] translate-x-1 -translate-y-1 opacity-100'
+                          : 'text-[#F3EFE3]/30 opacity-0 group-hover:opacity-60'
                       }`}
                     />
                   </div>
@@ -150,7 +151,7 @@ export default function Industries() {
                   {/* Fine Gold Underline Draw on Hover */}
                   <div className="relative mt-4 h-[1px] w-full bg-white/5 overflow-hidden">
                     <div
-                      className={`absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#E5C378] to-transparent transition-transform duration-500 origin-left ${
+                      className={`absolute inset-0 bg-gradient-to-r from-[#D9B45F] via-[#0C6B52] to-transparent transition-transform duration-500 origin-left ${
                         isHovered ? 'scale-x-100' : 'scale-x-0'
                       }`}
                     />
@@ -170,11 +171,11 @@ export default function Industries() {
           >
             <div className="relative mx-auto max-w-md">
               {/* Outer Atmosphere Glow */}
-              <div className="absolute -inset-4 bg-gradient-to-tr from-[#063C2D] via-[#19A878]/20 to-transparent blur-2xl opacity-60 rounded-3xl" />
+              <div className="absolute -inset-4 bg-gradient-to-tr from-[#071E18] via-[#18A982]/20 to-transparent blur-2xl opacity-60 rounded-3xl" />
 
               {/* Image Frame with Architectural Curved Edge */}
-              <div className="relative rounded-tl-[60px] rounded-br-[60px] rounded-tr-2xl rounded-bl-2xl overflow-hidden border border-[#D4AF37]/30 shadow-2xl p-2 bg-[#080B0A]">
-                <div className="relative aspect-[4/5] rounded-tl-[52px] rounded-br-[52px] overflow-hidden bg-[#0A0D0C]">
+              <div className="relative rounded-tl-[60px] rounded-br-[60px] rounded-tr-2xl rounded-bl-2xl overflow-hidden border border-[#D9B45F]/30 shadow-2xl p-2 bg-[#070A09]">
+                <div className="relative aspect-[4/5] rounded-tl-[52px] rounded-br-[52px] overflow-hidden bg-[#071E18]">
                   <AnimatePresence mode="wait">
                     <motion.img
                       key={activeIndustry.id}
@@ -189,17 +190,17 @@ export default function Industries() {
                   </AnimatePresence>
 
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#080B0A] via-[#080B0A]/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#070A09] via-[#070A09]/40 to-transparent" />
 
                   {/* Overlay Info Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                    <span className="text-[10px] font-mono tracking-[0.2em] text-[#D4AF37] uppercase mb-2 block">
+                    <span className="text-[10px] font-mono tracking-[0.2em] text-[#D9B45F] uppercase mb-2 block font-bold">
                       {activeIndustry.tag}
                     </span>
-                    <h4 className="font-serif text-2xl text-[#F3EFE4] mb-2 font-normal">
+                    <h4 className="font-serif text-2xl text-[#F3EFE3] mb-2 font-normal">
                       {activeIndustry.name}
                     </h4>
-                    <p className="font-sans text-xs text-[#CFC9BB]/80 font-light leading-relaxed">
+                    <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed">
                       {activeIndustry.description}
                     </p>
                   </div>
