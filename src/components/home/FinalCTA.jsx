@@ -51,7 +51,7 @@ export default function FinalCTA() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-sans text-sm sm:text-base text-[#9D9B91] font-light max-w-xl mx-auto mb-12 leading-relaxed"
         >
-          Partner with Siyara Innovations to build digital experiences, strategy, and systems engineered for industry leadership.
+          Partner with Siyara to build the connected system your business runs on.
         </motion.p>
 
         {/* CTAs */}

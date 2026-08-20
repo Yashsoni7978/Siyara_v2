@@ -72,7 +72,7 @@ export default function Footer({ onNavigate }) {
               </a>
 
               <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-6 max-w-sm">
-                We build digital experiences that drive growth, build brands and create lasting impact.
+                A digital architecture studio building connected systems for ambitious businesses.
               </p>
             </div>
 
@@ -98,7 +98,7 @@ export default function Footer({ onNavigate }) {
             {/* SERVICES */}
             <div>
               <h4 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
-                SERVICES
+                CAPABILITIES
               </h4>
               <ul className="flex flex-col gap-3">
                 {servicesLinks.map((link) => (
@@ -159,7 +159,7 @@ export default function Footer({ onNavigate }) {
               </h4>
               <div className="flex items-center gap-2 text-xs font-sans text-[#9D9B91]">
                 <MapPin className="w-3.5 h-3.5 text-[#D9B45F]" />
-                <span>Digital Agency · Global Operations</span>
+                <span>Jaipur, Rajasthan · India</span>
               </div>
             </div>
 
@@ -171,7 +171,7 @@ export default function Footer({ onNavigate }) {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-[#9D9B91]">
           <div className="flex items-center gap-2">
             <span className="font-serif font-bold tracking-[0.2em] text-[#F3EFE3]">SIYARA✦</span>
-            <span>© 2026 SIYARA INNOVATIONS. All rights reserved.</span>
+            <span>© 2026 Siyara. All rights reserved.</span>
           </div>
 
           <div className="flex items-center gap-6 text-[11px] tracking-wider text-[#9D9B91]">

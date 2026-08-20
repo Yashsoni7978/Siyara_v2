@@ -55,7 +55,7 @@ export default function Insights({ onNavigate }) {
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
-            Agency Insights & Perspectives
+            Studio Insights & Perspectives
           </span>
         </div>
 

@@ -38,18 +38,18 @@ export default function Philosophy() {
             className="lg:col-span-6 flex flex-col justify-center"
           >
             <h2 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight mb-8">
-              WE DON'T JUST <br />
-              BUILD WEBSITES. <br />
+              WE DON'T BUILD <br />
+              WEBSITES. <br />
               WE BUILD <br />
-              <span className="text-[#D9B45F] italic font-normal">DIGITAL GROWTH.</span>
+              <span className="text-[#D9B45F] italic font-normal">DIGITAL SYSTEMS.</span>
             </h2>
 
             <div className="max-w-md mb-8">
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed mb-1">
-                Beautiful design is just the beginning.
+                Beautiful design is where it starts.
               </p>
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Real growth is the result.
+                A working system is what it becomes.
               </p>
             </div>
 

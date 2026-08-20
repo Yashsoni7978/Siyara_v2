@@ -69,12 +69,11 @@ export default function WhySiyara() {
             className="lg:col-span-5 pr-0 lg:pr-6"
           >
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[0.98] mb-6">
-              We're more than <br />
-              an agency. <br />
-              We're your <span className="text-[#0C6B52] italic font-normal">growth partner.</span>
+              We think in systems, <br />
+              not <span className="text-[#0C6B52] italic font-normal">services.</span>
             </h2>
             <p className="font-sans text-sm sm:text-base text-[#9D9B91] font-light leading-relaxed max-w-md">
-              We combine deep brand strategy with engineering excellence to create digital experiences that drive market dominance.
+              Strategy, design and engineering work as one connected system here, not three vendors stitched together after the fact.
             </p>
           </motion.div>
 

@@ -97,9 +97,9 @@ export default function WhatWeDo() {
           className="mb-20 max-w-3xl"
         >
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98]">
-            End-to-end digital <br />
-            solutions that <br />
-            drive <span className="text-[#D9B45F] italic font-normal">real growth.</span>
+            One connected system, <br />
+            eight disciplines <br />
+            working <span className="text-[#D9B45F] italic font-normal">together.</span>
           </h2>
         </motion.div>
 
@@ -189,6 +189,17 @@ export default function WhatWeDo() {
             })}
           </motion.div>
 
+        </div>
+
+        {/* See full system link */}
+        <div className="mt-12 flex items-center gap-3">
+          <span className="h-[1px] w-8 bg-[#D9B45F]/40" />
+          <a
+            href="/services"
+            className="font-sans text-xs font-semibold tracking-[0.18em] text-[#9D9B91] hover:text-[#D9B45F] transition-colors uppercase"
+          >
+            See the full system on the Services page
+          </a>
         </div>
       </div>
     </section>

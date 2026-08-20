@@ -139,17 +139,17 @@ export default function Hero() {
                 variants={fadeUp(500)}
                 className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-[#F3EFE3]"
               >
-                WE BUILD BRANDS
+                WE ARCHITECT
               </motion.h1>
 
-              <motion.div
+              <motion.h1
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(620)}
-                className="text-lg sm:text-2xl lg:text-2xl text-[#E8C979] tracking-[0.25em] uppercase my-2 font-sans font-medium"
+                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-[#F3EFE3]"
               >
-                THAT
-              </motion.div>
+                BRANDS THAT
+              </motion.h1>
 
               <motion.h1
                 initial="hidden"
@@ -157,7 +157,7 @@ export default function Hero() {
                 variants={fadeUp(700)}
                 className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
               >
-                DOMINATE.
+                LEAD.
               </motion.h1>
             </div>
 
@@ -169,7 +169,7 @@ export default function Hero() {
               className="mb-10 max-w-lg"
             >
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Digital architecture studio for ambitious businesses ready to lead their industry.
+                A digital architecture studio for ambitious businesses building connected systems, not isolated campaigns.
               </p>
             </motion.div>
 
