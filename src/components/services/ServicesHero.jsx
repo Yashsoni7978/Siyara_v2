@@ -91,7 +91,7 @@ export default function ServicesHero() {
       {/* LAYER 01: Obsidian Black Canvas Base */}
       <div className="absolute inset-0 bg-[#070A09] z-0" />
 
-      {/* LAYER 02: APPROVED SERVICES HERO CINEMATIC VIDEO (Full Hero Screen Cover) */}
+      {/* LAYER 02: APPROVED SERVICES HERO CINEMATIC VIDEO (Pure Full Hero Video - Zero Addons/Vignettes) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -108,13 +108,9 @@ export default function ServicesHero() {
           playsInline
           preload="auto"
           aria-hidden="true"
-          className="w-full h-full object-cover object-[62%_50%] opacity-85 sm:opacity-90 scale-105 pointer-events-none"
+          className="w-full h-full object-cover object-center opacity-100 pointer-events-none"
         />
       </motion.div>
-
-      {/* LAYER 03: Atmospheric Left Contrast Gradient (High Typography Legibility) */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#070A09] via-[#070A09]/85 via-45% to-transparent pointer-events-none z-[2]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#070A09]/60 via-transparent to-[#070A09]/80 pointer-events-none z-[2]" />
 
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
