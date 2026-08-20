@@ -98,7 +98,7 @@ export default function ServicesHero() {
       >
         <video
           ref={videoRef}
-          src="/images/siyara_hero_video.mp4"
+          src="/images/siyara_services_hero.mp4"
           poster="/images/siyara_hero_artwork.png"
           autoPlay
           loop
