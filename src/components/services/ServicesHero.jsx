@@ -97,17 +97,17 @@ export default function ServicesHero() {
       {/* LAYER 03: Atmospheric Bridge (Headline -> Video Transition Haze) */}
       <div className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] bg-gradient-to-r from-transparent via-[#071E18]/30 to-[#0C6B52]/12 blur-3xl pointer-events-none z-[2]" />
 
-      {/* LAYER 04: APPROVED SERVICES HERO CINEMATIC VIDEO (Soft Masked Transition) */}
+      {/* LAYER 04: APPROVED SERVICES HERO CINEMATIC VIDEO (55-60% Width, Soft Masked Transition) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.3, ease: easeCustom }}
         style={{
           ...getParallaxStyle(2),
-          maskImage: 'radial-gradient(ellipse 82% 88% at 70% 50%, black 45%, transparent 92%), linear-gradient(to right, transparent 0%, black 22%, black 100%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 82% 88% at 70% 50%, black 45%, transparent 92%), linear-gradient(to right, transparent 0%, black 22%, black 100%)',
+          maskImage: 'radial-gradient(ellipse 88% 92% at 65% 50%, black 50%, transparent 96%), linear-gradient(to right, transparent 0%, black 15%, black 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 88% 92% at 65% 50%, black 50%, transparent 96%), linear-gradient(to right, transparent 0%, black 15%, black 100%)',
         }}
-        className="absolute right-2 sm:right-6 lg:right-10 top-1/2 -translate-y-1/2 w-full lg:w-[52%] xl:w-[54%] h-[92%] pointer-events-none z-[3] flex items-center justify-end overflow-hidden"
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[56%] xl:w-[60%] h-[94%] pointer-events-none z-[3] flex items-center justify-end overflow-hidden"
       >
         <video
           ref={videoRef}
@@ -118,15 +118,15 @@ export default function ServicesHero() {
           playsInline
           preload="auto"
           aria-hidden="true"
-          className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-100 pointer-events-none"
+          className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-105 pointer-events-none"
         />
       </motion.div>
 
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
-          {/* LEFT COLUMN: Clean Editorial Typography & Action CTAs */}
-          <div className="lg:col-span-7 flex flex-col justify-center relative z-20">
+          {/* LEFT COLUMN: 42-45% Width Clean Editorial Messaging */}
+          <div className="lg:col-span-6 flex flex-col justify-center relative z-20">
             
             {/* Eyebrow */}
             <motion.div
@@ -141,7 +141,7 @@ export default function ServicesHero() {
               </span>
             </motion.div>
 
-            {/* Headline (Reduced 10-15% for spacious editorial elegance) */}
+            {/* Headline */}
             <div className="mb-6">
               <motion.h1
                 initial="hidden"
@@ -167,7 +167,7 @@ export default function ServicesHero() {
               initial="hidden"
               animate="visible"
               variants={fadeUp(850)}
-              className="mb-10 max-w-xl"
+              className="mb-10 max-w-lg"
             >
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
                 From strategy and brand to technology, visibility and growth — every capability works as part of one connected digital system.

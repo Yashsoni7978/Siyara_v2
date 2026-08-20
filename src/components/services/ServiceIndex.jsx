@@ -14,28 +14,30 @@ import {
 } from 'lucide-react';
 
 export default function ServiceIndex({ onNavigate }) {
-  const [activePillarIndex, setActivePillarIndex] = useState(0);
+  const [activeDisciplineIdx, setActiveDisciplineIdx] = useState(0);
   const easeCustom = [0.16, 1, 0.3, 1];
 
-  const pillars = [
+  const disciplines = [
     {
       id: '01',
       name: 'STRATEGY',
-      description: 'Data-driven positioning, market intelligence, and growth roadmaps.',
+      tagline: 'Brand positioning, market research, business strategy and digital direction.',
+      description: 'We construct data-driven growth architecture, competitive intelligence, and market position roadmaps.',
       icon: Compass,
       slug: '/services/brand-strategy',
       subServices: [
-        'Digital Strategy',
+        'Brand Strategy',
         'Market Research',
-        'Competitor Intelligence',
-        'Digital Roadmaps',
+        'Positioning',
         'Growth Strategy',
+        'Digital Roadmaps',
       ],
     },
     {
       id: '02',
       name: 'BRAND',
-      description: 'Architectural brand positioning, visual systems, and identity design.',
+      tagline: 'Identity systems, messaging, visual language and brand architecture.',
+      description: 'Architectural visual identity, luxury brand positioning systems, and high-trust editorial design.',
       icon: Sparkles,
       slug: '/services/content-creative',
       subServices: [
@@ -49,7 +51,8 @@ export default function ServiceIndex({ onNavigate }) {
     {
       id: '03',
       name: 'EXPERIENCE',
-      description: 'Bespoke UI/UX design, web applications, and conversion portals.',
+      tagline: 'UI/UX, web design, digital products and customer experience.',
+      description: 'Bespoke web applications, high-conversion UI/UX digital portals, and fast engineering.',
       icon: Code,
       slug: '/services/web-design-development',
       subServices: [
@@ -63,7 +66,8 @@ export default function ServiceIndex({ onNavigate }) {
     {
       id: '04',
       name: 'VISIBILITY',
-      description: 'Organic search domination, GEO AI search, and technical SEO.',
+      tagline: 'SEO, GEO, content discoverability and search visibility.',
+      description: 'Organic search domination, generative AI search visibility, and technical SEO infrastructure.',
       icon: Search,
       slug: '/services/seo-geo',
       subServices: [
@@ -77,7 +81,8 @@ export default function ServiceIndex({ onNavigate }) {
     {
       id: '05',
       name: 'CONVERSION',
-      description: 'CRO, high-intent funnel architecture, and lead acquisition.',
+      tagline: 'CRO, landing experiences, funnels and conversion architecture.',
+      description: 'High-intent lead capture funnels, CRO testing, and frictionless client conversion pathways.',
       icon: Filter,
       slug: '/services/crm-lead-systems',
       subServices: [
@@ -91,7 +96,8 @@ export default function ServiceIndex({ onNavigate }) {
     {
       id: '06',
       name: 'AUTOMATION',
-      description: 'Intelligent AI workflows, CRM automation, and system integration.',
+      tagline: 'AI workflows, integrations and intelligent business systems.',
+      description: 'Intelligent AI business workflows, automated CRM lead nurture, and operations optimization.',
       icon: Bot,
       slug: '/services/ai-automation',
       subServices: [
@@ -105,7 +111,8 @@ export default function ServiceIndex({ onNavigate }) {
     {
       id: '07',
       name: 'ANALYTICS',
-      description: 'Performance measurement, custom dashboards, and data intelligence.',
+      tagline: 'Measurement, dashboards, attribution and performance intelligence.',
+      description: 'Comprehensive analytics dashboards, attribution tracking, and real-time business data insights.',
       icon: BarChart3,
       slug: '/services/growth-optimization',
       subServices: [
@@ -119,7 +126,8 @@ export default function ServiceIndex({ onNavigate }) {
     {
       id: '08',
       name: 'GROWTH',
-      description: 'Performance marketing, social media systems, and continuous scale.',
+      tagline: 'Optimization, experimentation and scalable growth systems.',
+      description: 'Data-backed performance media, continuous CRO experimentation, and multi-channel scale.',
       icon: TrendingUp,
       slug: '/services/performance-marketing',
       subServices: [
@@ -132,7 +140,7 @@ export default function ServiceIndex({ onNavigate }) {
     },
   ];
 
-  const currentPillar = pillars[activePillarIndex];
+  const currentDiscipline = disciplines[activeDisciplineIdx];
 
   return (
     <section id="services-capabilities" className="relative py-28 sm:py-36 bg-[#F3EFE3] overflow-hidden">
@@ -179,91 +187,107 @@ export default function ServiceIndex({ onNavigate }) {
             className="lg:col-span-4 flex lg:justify-end"
           >
             <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-sm">
-              Siyara's eight primary disciplines do not operate as isolated services. Every capability is connected and engineered to generate compounding business growth.
+              Every discipline plays a role. Together, they build momentum. Together, they drive growth.
             </p>
           </motion.div>
         </div>
 
-        {/* 8 PRIMARY PILLARS SELECTOR STRIP (Interactive Orbital Ecosystem Buttons) */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4 mb-12 relative z-20">
-          {pillars.map((pillar, idx) => {
-            const Icon = pillar.icon;
-            const isActive = idx === activePillarIndex;
+        {/* 8 CIRCULAR DISCIPLINES ORBITAL CONSTELLATION STRIP */}
+        <div className="relative mb-16 pt-4 pb-8">
+          
+          {/* Orbital SVG Path & Energy Trace */}
+          <svg
+            className="absolute inset-0 w-full h-full pointer-events-none opacity-30 stroke-[#B9923F]"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line x1="5%" y1="50%" x2="95%" y2="50%" strokeWidth="1" strokeDasharray="6 8" />
+            <circle cx="50%" cy="50%" r="4" fill="#0B5E49" className="animate-pulse" />
+          </svg>
 
-            return (
-              <button
-                key={pillar.id}
-                onClick={() => setActivePillarIndex(idx)}
-                onMouseEnter={() => setActivePillarIndex(idx)}
-                className={`relative flex flex-col items-center justify-center p-4 sm:p-5 transition-all duration-300 text-center cursor-pointer border ${
-                  isActive
-                    ? 'bg-[#0B5E49] border-[#0B5E49] text-[#F3EFE3] shadow-lg shadow-[#0B5E49]/20 -translate-y-1'
-                    : 'bg-[#ECE7D8] hover:bg-[#F3EFE3] border-[#B9923F]/30 hover:border-[#0B5E49]/60 text-[#101613]'
-                }`}
-              >
-                {/* Number Badge */}
-                <span
-                  className={`text-[10px] font-mono tracking-widest uppercase mb-2 ${
-                    isActive ? 'text-[#D9B45F]' : 'text-[#B9923F]'
+          {/* 8 Circular Nodes Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 sm:gap-6 relative z-10">
+            {disciplines.map((item, idx) => {
+              const Icon = item.icon;
+              const isActive = idx === activeDisciplineIdx;
+
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => setActiveDisciplineIdx(idx)}
+                  onMouseEnter={() => setActiveDisciplineIdx(idx)}
+                  className={`group flex flex-col items-center text-center p-4 transition-all duration-300 cursor-pointer ${
+                    isActive ? 'scale-105' : 'opacity-80 hover:opacity-100'
                   }`}
                 >
-                  {pillar.id}
-                </span>
+                  {/* Circular Node */}
+                  <div
+                    className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full border flex items-center justify-center mb-3 transition-all duration-300 ${
+                      isActive
+                        ? 'border-[#0B5E49] bg-[#0B5E49] text-[#F3EFE3] shadow-[0_0_25px_rgba(11,94,73,0.35)]'
+                        : 'border-[#B9923F]/40 bg-[#ECE7D8] text-[#0B5E49] group-hover:border-[#0B5E49]'
+                    }`}
+                  >
+                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.75]" />
+                  </div>
 
-                {/* Icon */}
-                <div className="mb-2">
-                  <Icon className={`w-5 h-5 stroke-[1.75] ${isActive ? 'text-[#F3EFE3]' : 'text-[#0B5E49]'}`} />
-                </div>
+                  {/* Number */}
+                  <span
+                    className={`text-[10px] font-mono tracking-widest uppercase mb-1 font-bold ${
+                      isActive ? 'text-[#0B5E49]' : 'text-[#B9923F]'
+                    }`}
+                  >
+                    {item.id}
+                  </span>
 
-                {/* Name */}
-                <span className="font-sans text-xs font-bold tracking-[0.16em] uppercase">
-                  {pillar.name}
-                </span>
-
-                {/* Active Indicator Bar */}
-                {isActive && (
-                  <motion.div
-                    layoutId="activePillarIndicator"
-                    className="absolute -bottom-1 left-4 right-4 h-1 bg-[#D9B45F] rounded-full"
-                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                  />
-                )}
-              </button>
-            );
-          })}
+                  {/* Name */}
+                  <span
+                    className={`font-sans text-xs font-bold tracking-[0.14em] uppercase transition-colors ${
+                      isActive ? 'text-[#0B5E49]' : 'text-[#101613]'
+                    }`}
+                  >
+                    {item.name}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
         </div>
 
-        {/* ACTIVE PRIMARY PILLAR SHOWCASE & SUB-SERVICES BREAKDOWN */}
+        {/* ACTIVE DISCIPLINE DETAILS & SUB-SERVICES REVEAL PANEL */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentPillar.id}
+            key={currentDiscipline.id}
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.4, ease: easeCustom }}
             className="p-8 sm:p-12 bg-[#ECE7D8] border border-[#B9923F]/40 shadow-xl relative overflow-hidden"
           >
-            {/* Fine Decorative Linework Background */}
+            {/* Fine Glow Atmosphere */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#0B5E49]/10 to-transparent blur-3xl pointer-events-none" />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
               
-              {/* Left Column: Primary Pillar Detail */}
+              {/* Left Column: Discipline Detail & Tagline */}
               <div className="lg:col-span-5 flex flex-col justify-between h-full">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <span className="text-xs font-mono font-bold tracking-widest text-[#B9923F]">
-                      PRIMARY PILLAR {currentPillar.id} / 08
+                      DISCIPLINE {currentDiscipline.id} / 08
                     </span>
                     <span className="h-[1px] w-6 bg-[#0B5E49]/40" />
                   </div>
 
-                  <h3 className="font-serif text-3xl sm:text-4xl text-[#101613] font-normal leading-tight mb-4">
-                    {currentPillar.name} <span className="text-[#0B5E49] italic">CAPABILITY.</span>
+                  <h3 className="font-serif text-3xl sm:text-4xl text-[#101613] font-normal leading-tight mb-3">
+                    {currentDiscipline.name} <span className="text-[#0B5E49] italic">CAPABILITY.</span>
                   </h3>
 
-                  <p className="font-sans text-xs sm:text-sm text-[#101613]/80 font-light leading-relaxed mb-8">
-                    {currentPillar.description}
+                  <p className="font-sans text-xs sm:text-sm text-[#0B5E49] font-medium leading-relaxed mb-4">
+                    {currentDiscipline.tagline}
+                  </p>
+
+                  <p className="font-sans text-xs text-[#101613]/70 font-light leading-relaxed mb-8">
+                    {currentDiscipline.description}
                   </p>
                 </div>
 
@@ -271,22 +295,22 @@ export default function ServiceIndex({ onNavigate }) {
                   href="#contact"
                   className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#0B5E49] hover:bg-[#084838] text-[#F3EFE3] text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 w-fit group shadow-md"
                 >
-                  <span>REQUEST {currentPillar.name} AUDIT</span>
+                  <span>REQUEST {currentDiscipline.name} AUDIT</span>
                   <ArrowUpRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
 
-              {/* Right Column: 5 Sub-Services Hierarchy Grid */}
+              {/* Right Column: 5 Sub-Services Hierarchy List */}
               <div className="lg:col-span-7">
                 <div className="flex items-center gap-2 mb-6">
                   <span className="text-[11px] font-sans font-semibold tracking-[0.2em] text-[#0B5E49] uppercase">
-                    SPECIALIZED SUB-SERVICES ({currentPillar.subServices.length})
+                    SPECIALIZED SUB-SERVICES ({currentDiscipline.subServices.length})
                   </span>
                   <span className="h-[1px] flex-grow bg-[#B9923F]/30" />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {currentPillar.subServices.map((sub, sIdx) => (
+                  {currentDiscipline.subServices.map((sub, sIdx) => (
                     <motion.div
                       key={sub}
                       initial={{ opacity: 0, x: 10 }}
@@ -316,5 +340,6 @@ export default function ServiceIndex({ onNavigate }) {
     </section>
   );
 }
+
 
 
