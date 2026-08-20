@@ -91,23 +91,13 @@ export default function ServicesHero() {
       {/* LAYER 01: Obsidian Black Canvas Base */}
       <div className="absolute inset-0 bg-[#070A09] z-0" />
 
-      {/* LAYER 02: Fine Emerald Ambient Glow Sphere Behind Video */}
-      <div className="absolute right-[8%] top-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#071E18]/60 via-[#0C6B52]/18 to-transparent blur-3xl rounded-full pointer-events-none z-[1]" />
-
-      {/* LAYER 03: Atmospheric Bridge (Headline -> Video Transition Haze) */}
-      <div className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] bg-gradient-to-r from-transparent via-[#071E18]/30 to-[#0C6B52]/12 blur-3xl pointer-events-none z-[2]" />
-
-      {/* LAYER 04: APPROVED SERVICES HERO CINEMATIC VIDEO (Centered at 68-70% Viewport Width) */}
+      {/* LAYER 02: APPROVED SERVICES HERO CINEMATIC VIDEO (Full Hero Screen Cover) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.2, delay: 0.3, ease: easeCustom }}
-        style={{
-          ...getParallaxStyle(2),
-          maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 12%, black 28%, black 90%, transparent 100%)',
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 12%, black 28%, black 90%, transparent 100%)',
-        }}
-        className="absolute left-1/2 sm:left-[60%] lg:left-[66%] xl:left-[68%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92vw] sm:w-[78vw] lg:w-[62vw] xl:w-[58vw] max-w-[1180px] h-[95%] pointer-events-none z-[3] flex items-center justify-center"
+        transition={{ duration: 1.2, delay: 0.2, ease: easeCustom }}
+        style={getParallaxStyle(2)}
+        className="absolute inset-0 w-full h-full pointer-events-none z-[1] overflow-hidden"
       >
         <video
           ref={videoRef}
@@ -118,9 +108,13 @@ export default function ServicesHero() {
           playsInline
           preload="auto"
           aria-hidden="true"
-          className="w-full h-full object-contain object-center drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-120 pointer-events-none"
+          className="w-full h-full object-cover object-[62%_50%] opacity-85 sm:opacity-90 scale-105 pointer-events-none"
         />
       </motion.div>
+
+      {/* LAYER 03: Atmospheric Left Contrast Gradient (High Typography Legibility) */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#070A09] via-[#070A09]/85 via-45% to-transparent pointer-events-none z-[2]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#070A09]/60 via-transparent to-[#070A09]/80 pointer-events-none z-[2]" />
 
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
