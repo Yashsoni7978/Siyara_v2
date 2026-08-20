@@ -41,7 +41,7 @@ export default function ServicesIndustries() {
           </span>
         </motion.div>
 
-        {/* Section Headline */}
+        {/* Section 06 Headline */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,33 +50,44 @@ export default function ServicesIndustries() {
           className="mb-16 sm:mb-20 max-w-3xl"
         >
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98]">
-            SIX DISCIPLINE <br />
+            EIGHT DISCIPLINE <br />
             <span className="text-[#0B5E49] italic font-normal">SPECIALIST SYSTEM.</span>
           </h2>
         </motion.div>
 
-        {/* Horizontal Industry Strip matching reference image */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 items-center">
-          {industryItems.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.5, delay: idx * 0.05, ease: easeCustom }}
-                className="flex flex-col items-center justify-center text-center p-5 rounded-none border border-[#B9923F]/30 bg-[#ECE7D8] hover:border-[#0B5E49] hover:bg-[#F3EFE3] transition-all duration-300 group cursor-pointer shadow-md"
-              >
-                <div className="w-10 h-10 rounded-full border border-[#0B5E49]/30 bg-[#F3EFE3] flex items-center justify-center text-[#0B5E49] group-hover:bg-[#0B5E49] group-hover:text-[#F3EFE3] group-hover:border-[#0B5E49] mb-3 transition-colors">
-                  <Icon className="w-4 h-4 stroke-[1.75]" />
-                </div>
-                <span className="font-sans text-xs font-semibold text-[#101613] group-hover:text-[#0B5E49] transition-colors leading-tight">
-                  {item.name}
+        {/* 8 DISCIPLINE SPECIALIST CAPABILITY GROUPS GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
+          {[
+            { id: '01', name: 'STRATEGY', tags: 'Brand / Market / Business / Growth' },
+            { id: '02', name: 'BRAND', tags: 'Identity / Positioning / Messaging' },
+            { id: '03', name: 'EXPERIENCE', tags: 'UX / UI / Web / Product' },
+            { id: '04', name: 'VISIBILITY', tags: 'SEO / Content / Social / Performance' },
+            { id: '05', name: 'CONVERSION', tags: 'CRO / Funnels / Lead Generation' },
+            { id: '06', name: 'AUTOMATION', tags: 'AI / CRM / Workflows / Integrations' },
+            { id: '07', name: 'ANALYTICS', tags: 'Data / BI / Dashboards / Intelligence' },
+            { id: '08', name: 'GROWTH', tags: 'Optimization / Scaling / Performance' },
+          ].map((item, idx) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.5, delay: idx * 0.04, ease: easeCustom }}
+              className="p-6 bg-[#ECE7D8] border border-[#B9923F]/30 hover:border-[#0B5E49] transition-all duration-300 group shadow-sm flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[10px] font-mono font-bold text-[#B9923F] tracking-widest block mb-2">
+                  {item.id} / 08
                 </span>
-              </motion.div>
-            );
-          })}
+                <h3 className="font-sans text-sm font-bold tracking-[0.16em] uppercase text-[#101613] group-hover:text-[#0B5E49] transition-colors mb-2">
+                  {item.name}
+                </h3>
+                <p className="font-sans text-xs text-[#101613]/70 font-light leading-relaxed">
+                  {item.tags}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
       </div>

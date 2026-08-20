@@ -6,6 +6,7 @@ import Ecosystem from '../components/services/Ecosystem.jsx';
 import ServicesProcess from '../components/services/ServicesProcess.jsx';
 import WhySiyara from '../components/services/WhySiyara.jsx';
 import ServicesIndustries from '../components/services/ServicesIndustries.jsx';
+import ServicesApplications from '../components/services/ServicesApplications.jsx';
 import ServicesCTA from '../components/services/ServicesCTA.jsx';
 
 export default function Services({ onNavigate }) {
@@ -17,19 +18,19 @@ export default function Services({ onNavigate }) {
       {/* CONNECTOR 01: DARK → IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 02 — WHAT WE BUILD (IVORY) */}
+      {/* 02 — THE SIYARA SYSTEM & EIGHT DISCIPLINES (IVORY) */}
       <ServiceIndex onNavigate={onNavigate} />
 
       {/* CONNECTOR 02: IVORY → DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 03 — THE SYSTEM (DARK) */}
+      {/* 03 — ALL THE PIECES. ONE POWERFUL SYSTEM. (DARK) */}
       <Ecosystem />
 
       {/* CONNECTOR 03: DARK → IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 04 — HOW WE EXECUTE (IVORY) */}
+      {/* 04 — FROM STRATEGY TO EXECUTION (IVORY) */}
       <ServicesProcess />
 
       {/* CONNECTOR 04: IVORY → DARK */}
@@ -41,13 +42,19 @@ export default function Services({ onNavigate }) {
       {/* CONNECTOR 05: DARK → IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 06 — SPECIALIST SYSTEM & INDUSTRIES (IVORY) */}
+      {/* 06 — EIGHT DISCIPLINE SPECIALIST SYSTEM (IVORY) */}
       <ServicesIndustries />
 
       {/* CONNECTOR 06: IVORY → DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 07 — FINAL CTA (DARK) */}
+      {/* 07 — SPECIALIST APPLICATIONS & INDUSTRIES (DARK) */}
+      <ServicesApplications />
+
+      {/* CONNECTOR 07: DARK → DARK */}
+      <SectionConnector fromDark={true} />
+
+      {/* 08 — FINAL CTA (DARK) */}
       <ServicesCTA />
     </div>
   );

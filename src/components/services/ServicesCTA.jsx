@@ -25,7 +25,7 @@ export default function ServicesCTA() {
           className="inline-flex items-center gap-3 mb-8"
         >
           <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
-            07
+            08
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
@@ -53,7 +53,7 @@ export default function ServicesCTA() {
           transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
           className="font-sans text-sm sm:text-base text-[#9D9B91] font-light max-w-xl mx-auto mb-12 leading-relaxed"
         >
-          Let's create a digital system that gives your brand the clarity, performance and growth it deserves.
+          Let's turn your next opportunity into a digital system built to grow.
         </motion.p>
 
         {/* CTAs */}
@@ -73,13 +73,11 @@ export default function ServicesCTA() {
           </a>
 
           <a
-            href="https://calendly.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
             className="inline-flex items-center gap-2 px-9 py-4 border border-[#D9B45F]/40 hover:border-[#D9B45F] bg-[#071E18]/60 hover:bg-[#071E18] text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-lg"
           >
             <Calendar className="w-4 h-4 text-[#D9B45F]" />
-            <span>SCHEDULE A CALL</span>
+            <span>BOOK A STRATEGY SESSION</span>
           </a>
         </motion.div>
 
