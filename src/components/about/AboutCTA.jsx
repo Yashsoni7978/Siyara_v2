@@ -1,62 +1,69 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ArrowRight } from 'lucide-react';
 
 export default function AboutCTA() {
   const easeCustom = [0.16, 1, 0.3, 1];
 
   return (
-    <section id="contact" className="relative py-32 sm:py-44 bg-[#080B0A] border-t border-[#D4AF37]/15 overflow-hidden">
-      {/* Background Atmosphere */}
-      <div className="absolute inset-0 bg-emerald-atmosphere opacity-90 pointer-events-none" />
+    <section id="contact-cta" className="relative py-32 sm:py-40 bg-[#070A09] text-[#F3EFE3] overflow-hidden">
+      {/* Background Deep Emerald Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#070A09] via-[#071E18]/40 to-[#070A09] opacity-90 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#071E18]/40 blur-3xl rounded-full pointer-events-none" />
 
-      {/* Vector Pattern */}
-      <svg
-        className="absolute inset-0 w-full h-full opacity-20 pointer-events-none stroke-[#D4AF37]/30 fill-none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M -100 200 C 400 400, 1000 100, 1800 300" strokeWidth="1" strokeDasharray="3 6" />
+      {/* Quiet Orbital Vector Pattern */}
+      <svg className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[540px] h-[540px] pointer-events-none opacity-20" viewBox="0 0 540 540">
+        <circle cx="270" cy="270" r="260" fill="none" stroke="#D9B45F" strokeWidth="0.75" strokeDasharray="4 10" />
+        <circle cx="270" cy="270" r="180" fill="none" stroke="#0C6B52" strokeWidth="0.75" />
       </svg>
 
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center">
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center">
         
-        {/* Headline */}
+        {/* Section Headline */}
         <motion.h2
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: easeCustom }}
-          className="font-serif text-5xl sm:text-7xl lg:text-8xl text-[#F3EFE4] font-normal leading-[1.02] tracking-tight mb-8 max-w-4xl mx-auto"
+          className="font-serif text-4xl sm:text-6xl lg:text-8xl text-[#F3EFE3] font-normal leading-[0.96] tracking-tight mb-6 max-w-4xl mx-auto"
         >
-          Let's build something <br />
-          <span className="text-[#E5C378] italic">extraordinary</span> together.
+          LET'S BUILD SOMETHING <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] italic font-normal">EXTRAORDINARY</span> TOGETHER.
         </motion.h2>
 
-        {/* Supporting */}
+        {/* Supporting Copy */}
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
-          className="font-sans text-base sm:text-xl text-[#CFC9BB] font-light max-w-lg mx-auto leading-relaxed mb-12"
+          className="font-sans text-base sm:text-lg text-[#9D9B91] font-light max-w-lg mx-auto mb-12 leading-relaxed"
         >
-          Have a project in mind? Let's create something amazing.
+          Turn your next opportunity into a digital system built to grow.
         </motion.p>
 
-        {/* Action Button */}
+        {/* Action Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2, ease: easeCustom }}
-          className="flex justify-center"
+          className="flex flex-wrap items-center justify-center gap-5"
         >
           <a
-            href="mailto:hello@siyara.dev"
-            className="inline-flex items-center gap-3 px-9 py-4.5 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase transition-all duration-300 shadow-2xl shadow-[#D4AF37]/20 hover:shadow-[#D4AF37]/35 hover:-translate-y-0.5"
+            href="/contact#intake"
+            className="inline-flex items-center gap-2.5 px-9 py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>START A PROJECT</span>
-            <ArrowUpRight className="w-4 h-4" />
+            <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+          </a>
+
+          <a
+            href="/contact#contact-direct"
+            className="inline-flex items-center gap-2 px-9 py-4 border border-[#F3EFE3]/25 hover:border-[#D9B45F]/60 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#070A09]/40 backdrop-blur-sm"
+          >
+            <span>BOOK A STRATEGY SESSION</span>
+            <ArrowRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-1 transition-transform" />
           </a>
         </motion.div>
 
