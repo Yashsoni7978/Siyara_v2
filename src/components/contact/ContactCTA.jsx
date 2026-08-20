@@ -1,96 +1,72 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Calendar } from 'lucide-react';
+import { ArrowUpRight, ArrowRight } from 'lucide-react';
 
 export default function ContactCTA() {
   const easeCustom = [0.16, 1, 0.3, 1];
 
   return (
-    <section className="relative py-32 sm:py-44 bg-[#080B0A] border-t border-[#D4AF37]/15 overflow-hidden">
-      {/* Deep Emerald Background Atmosphere */}
-      <div className="absolute inset-0 bg-emerald-atmosphere opacity-90 pointer-events-none" />
+    <section className="relative py-32 sm:py-40 bg-[#070A09] text-[#F3EFE3] overflow-hidden">
+      {/* Background Deep Emerald Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#070A09] via-[#071E18]/40 to-[#070A09] opacity-90 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#071E18]/40 blur-3xl rounded-full pointer-events-none" />
 
-      {/* Vector Gold Light Trails */}
-      <svg
-        className="absolute inset-0 w-full h-full opacity-25 pointer-events-none stroke-[#D4AF37]/40 fill-none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M -100 350 C 400 100, 1000 550, 1800 250" strokeWidth="1.2" strokeDasharray="4 8" />
+      {/* Quiet Orbital Vector Pattern */}
+      <svg className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[540px] h-[540px] pointer-events-none opacity-20" viewBox="0 0 540 540">
+        <circle cx="270" cy="270" r="260" fill="none" stroke="#D9B45F" strokeWidth="0.75" strokeDasharray="4 10" />
+        <circle cx="270" cy="270" r="180" fill="none" stroke="#0C6B52" strokeWidth="0.75" />
       </svg>
 
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          {/* Left Column: Headline & Buttons */}
-          <div className="lg:col-span-8">
-            <motion.h2
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: easeCustom }}
-              className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE4] font-normal leading-[1.04] tracking-tight mb-8"
-            >
-              Ready to bring your vision <br />
-              to <span className="text-[#19A878] italic">life?</span>
-            </motion.h2>
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center">
+        
+        {/* Section Headline */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: easeCustom }}
+          className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.96] tracking-tight mb-6 max-w-3xl mx-auto"
+        >
+          HAVE AN IDEA? <br />
+          LET'S GIVE IT <span className="text-[#D9B45F] italic font-normal">A SYSTEM.</span>
+        </motion.h2>
 
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
-              className="font-sans text-base sm:text-lg text-[#CFC9BB] font-light max-w-lg leading-relaxed mb-10"
-            >
-              Let's collaborate. Reach out and let's create something extraordinary.
-            </motion.p>
+        {/* Supporting Copy */}
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
+          className="font-sans text-base sm:text-lg text-[#9D9B91] font-light max-w-lg mx-auto mb-12 leading-relaxed"
+        >
+          Let's turn your next opportunity into a digital system built to grow.
+        </motion.p>
 
-            {/* Dual Buttons (Matching Reference Direction) */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2, ease: easeCustom }}
-              className="flex flex-wrap items-center gap-4 sm:gap-5"
-            >
-              <a
-                href="mailto:hello@siyarainnovations.com"
-                className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#D4AF37] hover:bg-[#E5C378] text-[#080B0A] text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 shadow-xl shadow-[#D4AF37]/20 group"
-              >
-                <span>START A PROJECT</span>
-                <ArrowRight className="w-4 h-4 text-[#080B0A] group-hover:translate-x-1 transition-transform" />
-              </a>
+        {/* Action Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2, ease: easeCustom }}
+          className="flex flex-wrap items-center justify-center gap-5"
+        >
+          <a
+            href="#intake"
+            className="inline-flex items-center gap-2.5 px-9 py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
+          >
+            <span>START A PROJECT</span>
+            <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+          </a>
 
-              <a
-                href="mailto:connect@siyarainnovations.com"
-                className="inline-flex items-center gap-2.5 px-7 py-4 border border-[#D4AF37]/40 bg-[#080B0A]/80 hover:bg-[#063C2D]/50 text-[#F3EFE4] hover:text-[#E5C378] text-xs font-medium tracking-[0.18em] uppercase transition-all duration-300 shadow-lg"
-              >
-                <Calendar className="w-4 h-4 text-[#D4AF37]" />
-                <span>SCHEDULE A CALL</span>
-                <ArrowRight className="w-4 h-4 text-[#D4AF37]" />
-              </a>
-            </motion.div>
-          </div>
+          <a
+            href="#contact-direct"
+            className="inline-flex items-center gap-2 px-9 py-4 border border-[#F3EFE3]/25 hover:border-[#D9B45F]/60 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#070A09]/40 backdrop-blur-sm"
+          >
+            <span>BOOK A STRATEGY SESSION</span>
+            <ArrowRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-1 transition-transform" />
+          </a>
+        </motion.div>
 
-          {/* Right Column: Siyara Golden Emblem Lockup */}
-          <div className="lg:col-span-4 relative hidden lg:block">
-            <div className="relative mx-auto max-w-xs">
-              <div className="absolute -inset-4 bg-radial from-[#19A878]/30 via-[#063C2D]/40 to-transparent blur-2xl opacity-70 rounded-full" />
-              
-              <div className="relative rounded-t-[100px] rounded-b-xl bg-gradient-to-b from-[#063C2D]/80 to-[#080B0A] border border-[#D4AF37]/40 p-8 text-center aspect-[4/4.8] flex flex-col items-center justify-center">
-                <div className="w-20 h-20 rounded-full border border-[#D4AF37] bg-[#080B0A] flex items-center justify-center mb-6 shadow-[0_0_25px_rgba(212,175,55,0.3)]">
-                  <span className="text-[#D4AF37] text-3xl font-serif">✦</span>
-                </div>
-                <span className="text-[10px] font-mono tracking-[0.24em] text-[#D4AF37] uppercase">
-                  SIYARA INNOVATIONS
-                </span>
-                <span className="text-[9px] font-sans text-[#CFC9BB]/70 tracking-widest uppercase mt-1">
-                  DIGITAL AGENCY
-                </span>
-              </div>
-            </div>
-          </div>
-
-        </div>
       </div>
     </section>
   );

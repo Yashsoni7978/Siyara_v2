@@ -1,31 +1,37 @@
 import React, { useEffect } from 'react';
+import SectionConnector from '../components/common/SectionConnector.jsx';
 import ContactHero from '../components/contact/ContactHero.jsx';
+import ContactIntake from '../components/contact/ContactIntake.jsx';
 import ContactDetails from '../components/contact/ContactDetails.jsx';
-import WhyContact from '../components/contact/WhyContact.jsx';
-import Location from '../components/contact/Location.jsx';
 import ContactCTA from '../components/contact/ContactCTA.jsx';
 
 export default function Contact({ onNavigate }) {
   useEffect(() => {
-    document.title = "Contact Us | Siyara Innovations — Digital Agency";
+    document.title = "Contact | SIYARA Digital Architecture Studio";
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="bg-[#080B0A] text-[#F3EFE4] selection:bg-[#063C2D] selection:text-[#E5C378]">
-      {/* SECTION 01 — HERO */}
+    <div className="bg-[#070A09] text-[#F3EFE3] selection:bg-[#071E18] selection:text-[#D9B45F]">
+      {/* 01 — HERO / INVITATION (DARK) */}
       <ContactHero />
 
-      {/* SECTION 02 — CONTACT DETAILS & INQUIRY FORM */}
+      {/* CONNECTOR 01: DARK → IVORY */}
+      <SectionConnector fromDark={true} />
+
+      {/* 02 — PROJECT INTAKE (IVORY) */}
+      <ContactIntake />
+
+      {/* CONNECTOR 02: IVORY → DARK */}
+      <SectionConnector fromDark={false} />
+
+      {/* 03 — DIRECT PATHWAYS & CONVERSATION (DARK) */}
       <ContactDetails />
 
-      {/* SECTION 03 — WHY WORK WITH SIYARA */}
-      <WhyContact />
+      {/* CONNECTOR 03: DARK → DARK */}
+      <SectionConnector fromDark={true} />
 
-      {/* SECTION 04 — OUR LOCATION */}
-      <Location />
-
-      {/* SECTION 05 — FINAL CTA */}
+      {/* 04 — FINAL CTA (DARK) */}
       <ContactCTA />
     </div>
   );
