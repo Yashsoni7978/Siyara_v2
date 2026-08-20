@@ -18,15 +18,28 @@ export default function ServicesHero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Ensure video is 100% MUTED with zero volume and no audio track
+  // Ensure video is 100% MUTED with zero volume and no audio track, and plays automatically
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.muted = true;
-      videoRef.current.defaultMuted = true;
-      videoRef.current.volume = 0;
-      videoRef.current.play().catch((err) => {
-        console.warn('Services hero video autoplay prevented or interrupted:', err);
-      });
+    const video = videoRef.current;
+    if (video) {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.volume = 0;
+      
+      const playVideo = () => {
+        video.play().catch((err) => {
+          console.warn('Services hero video autoplay prevented:', err);
+        });
+      };
+
+      playVideo();
+      video.addEventListener('canplay', playVideo);
+      video.addEventListener('loadeddata', playVideo);
+
+      return () => {
+        video.removeEventListener('canplay', playVideo);
+        video.removeEventListener('loadeddata', playVideo);
+      };
     }
   }, []);
 
@@ -98,8 +111,6 @@ export default function ServicesHero() {
       >
         <video
           ref={videoRef}
-          src="/images/siyara_services_hero.mp4"
-          poster="/images/siyara_hero_artwork.png"
           autoPlay
           loop
           muted
@@ -107,7 +118,10 @@ export default function ServicesHero() {
           preload="auto"
           aria-hidden="true"
           className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-105 pointer-events-none"
-        />
+        >
+          <source src="/images/siyara_services_hero.mp4" type="video/mp4" />
+          <source src="/images/Siyara services hero.mp4" type="video/mp4" />
+        </video>
       </motion.div>
 
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
