@@ -97,17 +97,17 @@ export default function ServicesHero() {
       {/* LAYER 03: Atmospheric Bridge (Headline -> Video Transition Haze) */}
       <div className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] bg-gradient-to-r from-transparent via-[#071E18]/30 to-[#0C6B52]/12 blur-3xl pointer-events-none z-[2]" />
 
-      {/* LAYER 04: APPROVED SERVICES HERO CINEMATIC VIDEO (60-65% Width, Left Dissolve Mask) */}
+      {/* LAYER 04: APPROVED SERVICES HERO CINEMATIC VIDEO (Centered at 68-70% Viewport Width) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.3, ease: easeCustom }}
         style={{
           ...getParallaxStyle(2),
-          maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 12%, black 28%, black 100%)',
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 12%, black 28%, black 100%)',
+          maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 12%, black 28%, black 90%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 12%, black 28%, black 90%, transparent 100%)',
         }}
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[62%] xl:w-[66%] h-[96%] pointer-events-none z-[3] flex items-center justify-center overflow-hidden"
+        className="absolute left-1/2 sm:left-[60%] lg:left-[66%] xl:left-[68%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92vw] sm:w-[78vw] lg:w-[62vw] xl:w-[58vw] max-w-[1180px] h-[95%] pointer-events-none z-[3] flex items-center justify-center"
       >
         <video
           ref={videoRef}
@@ -118,7 +118,7 @@ export default function ServicesHero() {
           playsInline
           preload="auto"
           aria-hidden="true"
-          className="w-full h-full object-contain object-[58%_50%] drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-125 pointer-events-none"
+          className="w-full h-full object-contain object-center drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-120 pointer-events-none"
         />
       </motion.div>
 
