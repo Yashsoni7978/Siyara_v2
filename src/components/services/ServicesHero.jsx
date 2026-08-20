@@ -104,10 +104,10 @@ export default function ServicesHero() {
         transition={{ duration: 1.2, delay: 0.3, ease: easeCustom }}
         style={{
           ...getParallaxStyle(2),
-          maskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
+          maskImage: 'radial-gradient(ellipse 85% 90% at 70% 50%, black 45%, transparent 95%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 85% 90% at 70% 50%, black 45%, transparent 95%)',
         }}
-        className="absolute -right-[4%] -bottom-[4%] top-1/2 -translate-y-1/2 w-full lg:w-[58%] xl:w-[62%] h-[98%] pointer-events-none z-[3] flex items-center justify-end overflow-hidden"
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[56%] xl:w-[58%] h-[98%] pointer-events-none z-[3] flex items-center justify-end overflow-hidden"
       >
         <video
           ref={videoRef}
