@@ -1,35 +1,55 @@
 import React from 'react';
+import SectionConnector from '../components/common/SectionConnector.jsx';
 import ServicesHero from '../components/services/ServicesHero.jsx';
 import ServiceIndex from '../components/services/ServiceIndex.jsx';
 import Ecosystem from '../components/services/Ecosystem.jsx';
-import ServicesIndustries from '../components/services/ServicesIndustries.jsx';
 import ServicesProcess from '../components/services/ServicesProcess.jsx';
 import WhySiyara from '../components/services/WhySiyara.jsx';
+import ServicesIndustries from '../components/services/ServicesIndustries.jsx';
 import ServicesCTA from '../components/services/ServicesCTA.jsx';
 
 export default function Services({ onNavigate }) {
   return (
-    <div className="bg-[#080B0A] text-[#F3EFE4] selection:bg-[#063C2D] selection:text-[#E5C378]">
-      {/* SECTION 01 — HERO */}
+    <div className="bg-[#070A09] text-[#F3EFE3] selection:bg-[#071E18] selection:text-[#D9B45F]">
+      {/* 01 — HERO (DARK) */}
       <ServicesHero />
 
-      {/* SECTION 02 — WHAT WE DO (2-COLUMN EDITORIAL INDEX) */}
+      {/* CONNECTOR 01: DARK → IVORY */}
+      <SectionConnector fromDark={true} />
+
+      {/* 02 — WHAT WE BUILD (IVORY) */}
       <ServiceIndex onNavigate={onNavigate} />
 
-      {/* SECTION 03 — THE SIYARA ECOSYSTEM */}
+      {/* CONNECTOR 02: IVORY → DARK */}
+      <SectionConnector fromDark={false} />
+
+      {/* 03 — THE SYSTEM (DARK) */}
       <Ecosystem />
 
-      {/* SECTION 04 — INDUSTRIES STRIP */}
-      <ServicesIndustries />
+      {/* CONNECTOR 03: DARK → IVORY */}
+      <SectionConnector fromDark={true} />
 
-      {/* SECTION 05 — OUR PROCESS */}
+      {/* 04 — HOW WE EXECUTE (IVORY) */}
       <ServicesProcess />
 
-      {/* SECTION 06 — WHY SIYARA */}
+      {/* CONNECTOR 04: IVORY → DARK */}
+      <SectionConnector fromDark={false} />
+
+      {/* 05 — OUTCOMES OVER FEATURES (DARK) */}
       <WhySiyara />
 
-      {/* SECTION 07 — FINAL CTA */}
+      {/* CONNECTOR 05: DARK → IVORY */}
+      <SectionConnector fromDark={true} />
+
+      {/* 06 — SPECIALIST SYSTEM & INDUSTRIES (IVORY) */}
+      <ServicesIndustries />
+
+      {/* CONNECTOR 06: IVORY → DARK */}
+      <SectionConnector fromDark={false} />
+
+      {/* 07 — FINAL CTA (DARK) */}
       <ServicesCTA />
     </div>
   );
 }
+

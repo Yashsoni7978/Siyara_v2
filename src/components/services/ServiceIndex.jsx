@@ -11,7 +11,7 @@ import {
   Bot,
   Filter,
   BarChart3,
-  ArrowRight,
+  ArrowUpRight,
 } from 'lucide-react';
 
 export default function ServiceIndex({ onNavigate }) {
@@ -21,73 +21,73 @@ export default function ServiceIndex({ onNavigate }) {
     {
       id: '01',
       title: 'BRAND STRATEGY & IDENTITY',
-      description: 'We craft memorable brands with strategy, positioning and design.',
+      description: 'Architectural brand positioning, visual identity systems, and high-trust messaging.',
       icon: Compass,
       slug: '/services/brand-strategy',
     },
     {
       id: '02',
+      title: 'SOCIAL MEDIA & DIGITAL MARKETING',
+      description: 'Audience growth, brand awareness campaigns, and community engagement systems.',
+      icon: Share2,
+      slug: '/services/social-digital-marketing',
+    },
+    {
+      id: '03',
       title: 'CONTENT & CREATIVE PRODUCTION',
-      description: 'High-impact content that tells your story and drives engagement.',
+      description: 'High-impact editorial content, brand storytelling, and video asset production.',
       icon: Video,
       slug: '/services/content-creative',
     },
     {
-      id: '03',
-      title: 'WEB DESIGN & DEVELOPMENT',
-      description: 'Fast, beautiful and conversion-focused websites that perform.',
-      icon: Code,
-      slug: '/services/web-design-development',
-    },
-    {
       id: '04',
-      title: 'E-COMMERCE & DIGITAL COMMERCE',
-      description: 'Scalable online stores designed to sell, retain and grow.',
-      icon: ShoppingBag,
-      slug: '/services/ecommerce',
+      title: 'PERFORMANCE MARKETING',
+      description: 'Data-driven paid media, customer acquisition campaigns, and ROI optimization.',
+      icon: Target,
+      slug: '/services/performance-marketing',
     },
     {
       id: '05',
-      title: 'SEO & GEO',
-      description: 'Rank higher on Google and get discovered across AI and search.',
-      icon: Search,
-      slug: '/services/seo-geo',
+      title: 'WEB DESIGN & DEVELOPMENT',
+      description: 'Bespoke web applications, high-conversion digital portals, and fast engineering.',
+      icon: Code,
+      slug: '/services/web-design-development',
     },
   ];
 
   const rightServices = [
     {
       id: '06',
-      title: 'SOCIAL MEDIA & DIGITAL MARKETING',
-      description: 'Build your presence, grow your audience and create real impact.',
-      icon: Share2,
-      slug: '/services/social-digital-marketing',
-    },
-    {
-      id: '07',
-      title: 'PERFORMANCE MARKETING',
-      description: 'ROI-driven campaigns that bring in leads, sales and measurable growth.',
-      icon: Target,
-      slug: '/services/performance-marketing',
-    },
-    {
-      id: '08',
       title: 'AI & BUSINESS AUTOMATION',
-      description: 'Automate workflows, save time and make your business smarter.',
+      description: 'Intelligent AI workflows, business operations automation, and custom agents.',
       icon: Bot,
       slug: '/services/ai-automation',
     },
     {
-      id: '09',
+      id: '07',
+      title: 'E-COMMERCE & DIGITAL COMMERCE',
+      description: 'Scalable D2C storefronts, automated subscriptions, and frictionless checkout.',
+      icon: ShoppingBag,
+      slug: '/services/ecommerce',
+    },
+    {
+      id: '08',
       title: 'CRM, LEADS & CONVERSION SYSTEMS',
-      description: 'Capture, nurture and convert leads with smart systems that work for you.',
+      description: 'High-intent lead capture funnels, automated CRM nurture, and CRO architecture.',
       icon: Filter,
       slug: '/services/crm-lead-systems',
     },
     {
+      id: '09',
+      title: 'SEO & GEO OPTIMIZATION',
+      description: 'Organic search domination, AI generative search visibility, and local GEO rankings.',
+      icon: Search,
+      slug: '/services/seo-geo',
+    },
+    {
       id: '10',
       title: 'ANALYTICS, GROWTH & OPTIMIZATION',
-      description: 'Track, analyse and optimize for continuous growth and performance.',
+      description: 'Comprehensive data tracking, performance dashboards, and continuous optimization.',
       icon: BarChart3,
       slug: '/services/growth-optimization',
     },
@@ -105,31 +105,31 @@ export default function ServiceIndex({ onNavigate }) {
         onClick={() => {
           if (onNavigate) onNavigate(item.slug);
         }}
-        className="group relative p-6 sm:p-8 bg-[#080B0A] hover:bg-[#063C2D]/30 border border-[#D4AF37]/15 hover:border-[#19A878]/50 transition-all duration-300 cursor-pointer flex flex-col justify-between"
+        className="group relative p-6 sm:p-8 bg-[#ECE7D8] hover:bg-[#F3EFE3] border border-[#B9923F]/30 hover:border-[#0B5E49] transition-all duration-300 cursor-pointer flex flex-col justify-between shadow-md"
       >
         {/* Glow overlay */}
         <div
-          className={`absolute inset-0 bg-radial from-[#19A878]/15 via-transparent to-transparent pointer-events-none transition-opacity duration-300 ${
+          className={`absolute inset-0 bg-gradient-to-br from-[#0B5E49]/05 via-transparent to-transparent pointer-events-none transition-opacity duration-300 ${
             isHovered ? 'opacity-100' : 'opacity-0'
           }`}
         />
 
-        <div className="relative z-10 flex items-start gap-4 mb-6">
+        <div className="relative z-10 flex items-start justify-between gap-4 mb-6">
           {/* Icon in Circular Container */}
           <div
             className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 ${
               isHovered
-                ? 'border-[#19A878] bg-[#063C2D] text-[#D4AF37] scale-110 shadow-[0_0_15px_rgba(25,168,120,0.4)]'
-                : 'border-[#D4AF37]/30 bg-[#080B0A] text-[#19A878]'
+                ? 'border-[#0B5E49] bg-[#0B5E49] text-[#F3EFE3] scale-105 shadow-[0_0_15px_rgba(11,94,73,0.3)]'
+                : 'border-[#0B5E49]/30 bg-[#F3EFE3] text-[#0B5E49]'
             }`}
           >
-            <Icon className="w-5 h-5" />
+            <Icon className="w-5 h-5 stroke-[1.75]" />
           </div>
 
           {/* Number */}
           <span
-            className={`font-serif text-3xl font-normal leading-none ml-auto transition-colors duration-300 ${
-              isHovered ? 'text-[#D4AF37]' : 'text-[#19A878]'
+            className={`font-serif text-3xl font-normal leading-none transition-colors duration-300 ${
+              isHovered ? 'text-[#0B5E49]' : 'text-[#B9923F]'
             }`}
           >
             {item.id}
@@ -140,24 +140,24 @@ export default function ServiceIndex({ onNavigate }) {
         <div className="relative z-10">
           <h3
             className={`font-serif text-xl sm:text-2xl font-normal leading-tight mb-3 transition-colors duration-300 ${
-              isHovered ? 'text-[#E5C378]' : 'text-[#F3EFE4]'
+              isHovered ? 'text-[#0B5E49]' : 'text-[#101613]'
             }`}
           >
             {item.title}
           </h3>
 
-          <p className="font-sans text-xs text-[#CFC9BB]/75 font-light leading-relaxed mb-6">
+          <p className="font-sans text-xs text-[#101613]/70 font-light leading-relaxed mb-6">
             {item.description}
           </p>
 
           {/* Action Arrow */}
-          <div className="flex items-center justify-between pt-4 border-t border-white/5">
-            <span className="text-[10px] font-mono tracking-[0.2em] text-[#D4AF37] group-hover:text-[#19A878] transition-colors uppercase">
-              LEARN MORE
+          <div className="flex items-center justify-between pt-4 border-t border-[#B9923F]/20">
+            <span className="text-[10px] font-mono tracking-[0.2em] text-[#0B5E49] group-hover:text-[#B9923F] transition-colors uppercase font-bold">
+              EXPLORE CAPABILITY
             </span>
-            <ArrowRight
-              className={`w-4 h-4 text-[#D4AF37] transition-transform duration-300 ${
-                isHovered ? 'translate-x-1.5 text-[#19A878]' : 'opacity-60'
+            <ArrowUpRight
+              className={`w-4 h-4 text-[#0B5E49] transition-transform duration-300 ${
+                isHovered ? 'translate-x-1 -translate-y-1 text-[#B9923F]' : 'opacity-70'
               }`}
             />
           </div>
@@ -167,26 +167,42 @@ export default function ServiceIndex({ onNavigate }) {
   };
 
   return (
-    <section id="services-index" className="relative py-28 sm:py-36 bg-[#080B0A] border-t border-[#D4AF37]/15 overflow-hidden">
-      {/* Atmosphere Glow */}
-      <div className="absolute inset-0 bg-emerald-atmosphere opacity-70 pointer-events-none" />
+    <section id="services-index" className="relative py-28 sm:py-36 bg-[#F3EFE3] overflow-hidden">
+      {/* Editorial Ivory Atmosphere */}
+      <div className="absolute inset-0 ivory-texture pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-70 pointer-events-none" />
 
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="flex items-center gap-3 mb-10">
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#19A878] uppercase">
-            WHAT WE DO
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.6 }}
+          className="flex items-center gap-3 mb-10"
+        >
+          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
+            02
           </span>
-          <span className="h-[1px] w-8 bg-[#19A878]/50" />
-        </div>
+          <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
+          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
+            What We Build
+          </span>
+        </motion.div>
 
-        <div className="mb-16 max-w-3xl">
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE4] font-normal leading-[1.08]">
-            End-to-end capabilities for <br />
-            modern <span className="text-[#19A878] italic">digital brands.</span>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.7 }}
+          className="mb-16 sm:mb-20 max-w-3xl"
+        >
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98]">
+            End-to-end capabilities <br />
+            for <span className="text-[#0B5E49] italic font-normal">ambitious brands.</span>
           </h2>
-        </div>
+        </motion.div>
 
         {/* 2-Column Editorial Service Index Grid (Left 5, Right 5) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
@@ -207,3 +223,4 @@ export default function ServiceIndex({ onNavigate }) {
     </section>
   );
 }
+
