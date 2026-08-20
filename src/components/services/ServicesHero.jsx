@@ -97,17 +97,17 @@ export default function ServicesHero() {
       {/* LAYER 03: Atmospheric Bridge (Headline -> Video Transition Haze) */}
       <div className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] bg-gradient-to-r from-transparent via-[#071E18]/30 to-[#0C6B52]/12 blur-3xl pointer-events-none z-[2]" />
 
-      {/* LAYER 04: APPROVED SERVICES HERO CINEMATIC VIDEO (Seamless Borderless Edge Masking) */}
+      {/* LAYER 04: APPROVED SERVICES HERO CINEMATIC VIDEO (60-65% Width, Left Dissolve Mask) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.3, ease: easeCustom }}
         style={{
           ...getParallaxStyle(2),
-          maskImage: 'radial-gradient(ellipse 85% 90% at 65% 50%, black 45%, transparent 96%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 85% 90% at 65% 50%, black 45%, transparent 96%)',
+          maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 12%, black 28%, black 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 12%, black 28%, black 100%)',
         }}
-        className="absolute -right-[2%] top-1/2 -translate-y-1/2 w-full lg:w-[62%] xl:w-[66%] h-[98%] pointer-events-none z-[3] flex items-center justify-end overflow-hidden"
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[62%] xl:w-[66%] h-[96%] pointer-events-none z-[3] flex items-center justify-center overflow-hidden"
       >
         <video
           ref={videoRef}
@@ -118,15 +118,15 @@ export default function ServicesHero() {
           playsInline
           preload="auto"
           aria-hidden="true"
-          className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-110 pointer-events-none"
+          className="w-full h-full object-contain object-[58%_50%] drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-125 pointer-events-none"
         />
       </motion.div>
 
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
-          {/* LEFT COLUMN: 42-45% Width Clean Editorial Messaging */}
-          <div className="lg:col-span-6 flex flex-col justify-center relative z-20">
+          {/* LEFT COLUMN: ~40% Width Editorial Typography */}
+          <div className="lg:col-span-5 flex flex-col justify-center relative z-20">
             
             {/* Eyebrow */}
             <motion.div
