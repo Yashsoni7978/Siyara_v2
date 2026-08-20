@@ -97,7 +97,7 @@ export default function ServicesHero() {
       {/* LAYER 03: Atmospheric Bridge (Headline -> Video Transition Haze) */}
       <div className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] bg-gradient-to-r from-transparent via-[#071E18]/30 to-[#0C6B52]/12 blur-3xl pointer-events-none z-[2]" />
 
-      {/* LAYER 04: APPROVED SERVICES HERO CINEMATIC VIDEO (50-55% Width, Muted & Masked) */}
+      {/* LAYER 04: APPROVED SERVICES HERO CINEMATIC VIDEO (Muted & Masked) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -107,10 +107,11 @@ export default function ServicesHero() {
           maskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
           WebkitMaskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
         }}
-        className="absolute -right-[4%] -bottom-[4%] top-1/2 -translate-y-1/2 w-full lg:w-[54%] xl:w-[56%] h-[98%] pointer-events-none z-[3] flex items-center justify-end overflow-hidden"
+        className="absolute -right-[4%] -bottom-[4%] top-1/2 -translate-y-1/2 w-full lg:w-[58%] xl:w-[62%] h-[98%] pointer-events-none z-[3] flex items-center justify-end overflow-hidden"
       >
         <video
           ref={videoRef}
+          src="/images/siyara_services_hero.mp4"
           autoPlay
           loop
           muted
@@ -118,10 +119,7 @@ export default function ServicesHero() {
           preload="auto"
           aria-hidden="true"
           className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-105 pointer-events-none"
-        >
-          <source src="/images/siyara_services_hero.mp4" type="video/mp4" />
-          <source src="/images/Siyara services hero.mp4" type="video/mp4" />
-        </video>
+        />
       </motion.div>
 
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
