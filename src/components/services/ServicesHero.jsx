@@ -1,150 +1,211 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowUpRight, Compass } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { ArrowUpRight, ArrowRight } from 'lucide-react';
 
 export default function ServicesHero() {
+  const shouldReduceMotion = useReducedMotion();
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
+  const heroRef = useRef(null);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Ensure video is 100% MUTED with zero volume and no audio track
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.defaultMuted = true;
+      videoRef.current.volume = 0;
+      videoRef.current.play().catch((err) => {
+        console.warn('Services hero video autoplay prevented or interrupted:', err);
+      });
+    }
+  }, []);
+
+  const handleMouseMove = (e) => {
+    if (isMobile || shouldReduceMotion || !heroRef.current) return;
+    const rect = heroRef.current.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    const normX = (e.clientX - centerX) / (rect.width / 2);
+    const normY = (e.clientY - centerY) / (rect.height / 2);
+    
+    setMousePos({
+      x: Math.max(-1, Math.min(1, normX)),
+      y: Math.max(-1, Math.min(1, normY)),
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setMousePos({ x: 0, y: 0 });
+  };
+
   const easeCustom = [0.16, 1, 0.3, 1];
 
+  const fadeUp = (delayMs) => ({
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, delay: delayMs / 1000, ease: easeCustom },
+    },
+  });
+
+  const getParallaxStyle = (multiplier) => {
+    if (isMobile || shouldReduceMotion) return {};
+    return {
+      transform: `translate3d(${mousePos.x * multiplier}px, ${mousePos.y * multiplier}px, 0)`,
+      transition: 'transform 0.3s ease-out',
+    };
+  };
+
   return (
-    <section className="relative min-h-[90vh] pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#070A09] border-b border-[#D9B45F]/15 overflow-hidden flex items-center">
-      {/* Background Deep Emerald Atmosphere */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#071E18]/60 via-[#070A09] to-[#070A09] opacity-90 pointer-events-none" />
-      <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-[#0C6B52]/15 blur-3xl rounded-full pointer-events-none" />
+    <section
+      ref={heroRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="relative min-h-[100svh] pt-32 pb-20 lg:pt-36 lg:pb-24 bg-[#070A09] overflow-hidden flex items-center"
+    >
+      {/* LAYER 01: Obsidian Black Canvas Base */}
+      <div className="absolute inset-0 bg-[#070A09] z-0" />
 
-      {/* Abstract Gold & Emerald Linework SVG */}
-      <svg
-        className="absolute inset-0 w-full h-full opacity-30 pointer-events-none stroke-[#D9B45F]/20 fill-none"
-        xmlns="http://www.w3.org/2000/svg"
+      {/* LAYER 02: Fine Emerald Ambient Glow Sphere Behind Video */}
+      <div className="absolute right-[8%] top-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#071E18]/60 via-[#0C6B52]/18 to-transparent blur-3xl rounded-full pointer-events-none z-[1]" />
+
+      {/* LAYER 03: Atmospheric Bridge (Headline -> Video Transition Haze) */}
+      <div className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] bg-gradient-to-r from-transparent via-[#071E18]/30 to-[#0C6B52]/12 blur-3xl pointer-events-none z-[2]" />
+
+      {/* LAYER 04: APPROVED SERVICES HERO CINEMATIC VIDEO (50-55% Width, Muted & Masked) */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2, delay: 0.3, ease: easeCustom }}
+        style={{
+          ...getParallaxStyle(2),
+          maskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
+        }}
+        className="absolute -right-[4%] -bottom-[4%] top-1/2 -translate-y-1/2 w-full lg:w-[54%] xl:w-[56%] h-[98%] pointer-events-none z-[3] flex items-center justify-end overflow-hidden"
       >
-        <path d="M -100 200 C 300 50, 700 450, 1500 100 S 1800 600, 2200 400" strokeWidth="1" strokeDasharray="4 8" />
-        <circle cx="25%" cy="35%" r="2" fill="#0C6B52" className="animate-pulse" />
-        <circle cx="75%" cy="65%" r="2" fill="#D9B45F" />
-      </svg>
+        <video
+          ref={videoRef}
+          src="/images/siyara_hero_video.mp4"
+          poster="/images/siyara_hero_artwork.png"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+          className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-105 pointer-events-none"
+        />
+      </motion.div>
 
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          {/* LEFT COLUMN: Editorial Copy & CTAs */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
+
+          {/* LEFT COLUMN: Clean Editorial Typography & Action CTAs */}
+          <div className="lg:col-span-7 flex flex-col justify-center relative z-20">
             
             {/* Eyebrow */}
             <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: easeCustom }}
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp(350)}
               className="flex items-center gap-3 mb-6"
             >
-              <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
-                01
-              </span>
-              <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
-              <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
-                Digital Architecture / Services
+              <span className="h-[1px] w-8 bg-[#D9B45F]/60" />
+              <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.26em] text-[#D9B45F] uppercase">
+                SIYARA SERVICES
               </span>
             </motion.div>
 
-            {/* Main Headline */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
-              className="mb-8"
-            >
-              <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl xl:text-8xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight">
-                WE BUILD THE <br />
-                SYSTEMS BEHIND <br />
-                <span className="text-[#D9B45F] italic font-normal">DIGITAL GROWTH.</span>
-              </h1>
-            </motion.div>
+            {/* Headline */}
+            <div className="mb-6">
+              <motion.h1
+                initial="hidden"
+                animate="visible"
+                variants={fadeUp(500)}
+                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-[#F3EFE3]"
+              >
+                OUR DIGITAL
+              </motion.h1>
+
+              <motion.h1
+                initial="hidden"
+                animate="visible"
+                variants={fadeUp(700)}
+                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
+              >
+                CAPABILITIES.
+              </motion.h1>
+            </div>
 
             {/* Supporting Copy */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: easeCustom }}
-              className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed mb-10 max-w-xl"
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp(850)}
+              className="mb-10 max-w-xl"
             >
-              Siyara combines strategy, brand positioning, web engineering, organic search, marketing, and business automation into one interconnected digital growth system.
-            </motion.p>
+              <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
+                From strategy and brand to technology, visibility and growth — every capability works as part of one connected digital system.
+              </p>
+            </motion.div>
 
             {/* Action CTAs */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: easeCustom }}
-              className="flex flex-wrap items-center gap-4 sm:gap-5"
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp(950)}
+              className="flex flex-wrap items-center gap-5"
             >
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 group"
+                className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>START A PROJECT</span>
-                <ArrowUpRight className="w-4 h-4 stroke-[2.5] text-[#101613] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
               </a>
 
               <a
-                href="#services-index"
-                className="inline-flex items-center gap-2.5 px-7 py-4 border border-[#D9B45F]/40 hover:border-[#D9B45F] bg-[#071E18]/60 hover:bg-[#071E18] text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 shadow-lg"
+                href="#services-capabilities"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-[#F3EFE3]/25 hover:border-[#D9B45F]/60 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#070A09]/40 backdrop-blur-sm"
               >
-                <Compass className="w-4 h-4 text-[#D9B45F]" />
-                <span>EXPLORE OUR CAPABILITIES</span>
+                <span>EXPLORE OUR SYSTEM</span>
+                <ArrowRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-1 transition-transform" />
               </a>
-            </motion.div>
-
-          </div>
-
-          {/* RIGHT COLUMN: Refined Architectural Geometry System */}
-          <div className="lg:col-span-5 relative mt-12 lg:mt-0">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 25 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.2, ease: easeCustom }}
-              className="relative mx-auto max-w-md lg:max-w-none"
-            >
-              {/* Outer Emerald Glow Layer */}
-              <div className="absolute -inset-4 bg-gradient-to-tr from-[#071E18] via-[#0C6B52]/20 to-transparent blur-2xl opacity-60 rounded-3xl" />
-
-              {/* Portal Architectural Frame */}
-              <div className="relative rounded-t-[140px] rounded-b-2xl bg-gradient-to-b from-[#071E18]/80 via-[#070A09] to-[#070A09] border border-[#D9B45F]/30 p-8 sm:p-10 shadow-2xl overflow-hidden aspect-[4/5] flex flex-col items-center justify-center text-center">
-                
-                {/* Inner Contour Linework */}
-                <div className="absolute inset-4 rounded-t-[124px] rounded-b-xl border border-[#D9B45F]/20 pointer-events-none" />
-
-                {/* Siyara Central Crystalline Node */}
-                <div className="relative z-10 w-24 h-24 sm:w-28 sm:h-28 rounded-full border border-[#D9B45F]/50 bg-[#070A09]/90 backdrop-blur-md flex items-center justify-center mb-8 shadow-[0_0_25px_rgba(217,180,95,0.25)]">
-                  <div className="absolute inset-2 rounded-full border border-[#0C6B52]/40 animate-pulse" />
-                  <span className="text-[#D9B45F] text-4xl sm:text-5xl font-serif">✦</span>
-                </div>
-
-                {/* Digital System Label & Copy */}
-                <div className="relative z-10 max-w-xs">
-                  <span className="text-[10px] font-mono tracking-[0.24em] text-[#D9B45F] uppercase mb-2 block font-bold">
-                    THE CONNECTED SYSTEM
-                  </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[#F3EFE3] leading-tight font-normal mb-3">
-                    Branding, Web, Search & <br />
-                    <span className="text-[#D9B45F] italic font-normal">Growth Engine.</span>
-                  </h3>
-                  <p className="text-[11px] font-sans text-[#9D9B91] font-light leading-relaxed">
-                    Strategy, Design, Code, Visibility, Conversion & Automation combined.
-                  </p>
-                </div>
-
-                {/* Structural Accent Text */}
-                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 text-[9px] font-mono text-[#D9B45F]/70 tracking-widest uppercase">
-                  <span>SIYARA</span>
-                  <span>✦</span>
-                  <span>CAPABILITIES</span>
-                </div>
-
-              </div>
-
             </motion.div>
           </div>
 
         </div>
       </div>
+
+      {/* BOTTOM LEFT: Scroll Indicator Line */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.6 }}
+        className="absolute bottom-8 left-8 sm:left-12 z-20 flex flex-col items-center gap-3 hidden sm:flex"
+      >
+        <div className="w-[1px] h-10 bg-gradient-to-b from-[#D9B45F] to-transparent relative">
+          <div className="w-1.5 h-1.5 bg-[#D9B45F] rounded-full absolute top-0 -left-[2.5px] animate-ping" />
+        </div>
+        <span className="text-[9px] font-mono tracking-[0.24em] text-[#9D9B91]/60 uppercase">
+          SCROLL
+        </span>
+      </motion.div>
     </section>
   );
 }
+
 

@@ -1,173 +1,141 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Compass,
-  Video,
+  Sparkles,
   Code,
-  ShoppingBag,
   Search,
-  Share2,
-  Target,
-  Bot,
   Filter,
+  Bot,
   BarChart3,
+  TrendingUp,
   ArrowUpRight,
+  ChevronRight,
 } from 'lucide-react';
 
 export default function ServiceIndex({ onNavigate }) {
-  const [hoveredIdx, setHoveredIdx] = useState(null);
+  const [activePillarIndex, setActivePillarIndex] = useState(0);
+  const easeCustom = [0.16, 1, 0.3, 1];
 
-  const leftServices = [
+  const pillars = [
     {
       id: '01',
-      title: 'BRAND STRATEGY & IDENTITY',
-      description: 'Architectural brand positioning, visual identity systems, and high-trust messaging.',
+      name: 'STRATEGY',
+      description: 'Data-driven positioning, market intelligence, and growth roadmaps.',
       icon: Compass,
       slug: '/services/brand-strategy',
+      subServices: [
+        'Digital Strategy',
+        'Market Research',
+        'Competitor Intelligence',
+        'Digital Roadmaps',
+        'Growth Strategy',
+      ],
     },
     {
       id: '02',
-      title: 'SOCIAL MEDIA & DIGITAL MARKETING',
-      description: 'Audience growth, brand awareness campaigns, and community engagement systems.',
-      icon: Share2,
-      slug: '/services/social-digital-marketing',
+      name: 'BRAND',
+      description: 'Architectural brand positioning, visual systems, and identity design.',
+      icon: Sparkles,
+      slug: '/services/content-creative',
+      subServices: [
+        'Brand Strategy',
+        'Brand Identity',
+        'Brand Positioning',
+        'Messaging',
+        'Visual Systems',
+      ],
     },
     {
       id: '03',
-      title: 'CONTENT & CREATIVE PRODUCTION',
-      description: 'High-impact editorial content, brand storytelling, and video asset production.',
-      icon: Video,
-      slug: '/services/content-creative',
+      name: 'EXPERIENCE',
+      description: 'Bespoke UI/UX design, web applications, and conversion portals.',
+      icon: Code,
+      slug: '/services/web-design-development',
+      subServices: [
+        'UI/UX Design',
+        'Website Design',
+        'Web Development',
+        'Web Applications',
+        'Conversion Experience',
+      ],
     },
     {
       id: '04',
-      title: 'PERFORMANCE MARKETING',
-      description: 'Data-driven paid media, customer acquisition campaigns, and ROI optimization.',
-      icon: Target,
-      slug: '/services/performance-marketing',
+      name: 'VISIBILITY',
+      description: 'Organic search domination, GEO AI search, and technical SEO.',
+      icon: Search,
+      slug: '/services/seo-geo',
+      subServices: [
+        'SEO',
+        'GEO / AI Search Visibility',
+        'Technical SEO',
+        'Local SEO',
+        'Content Strategy',
+      ],
     },
     {
       id: '05',
-      title: 'WEB DESIGN & DEVELOPMENT',
-      description: 'Bespoke web applications, high-conversion digital portals, and fast engineering.',
-      icon: Code,
-      slug: '/services/web-design-development',
+      name: 'CONVERSION',
+      description: 'CRO, high-intent funnel architecture, and lead acquisition.',
+      icon: Filter,
+      slug: '/services/crm-lead-systems',
+      subServices: [
+        'CRO',
+        'Landing Pages',
+        'Funnel Architecture',
+        'Lead Generation',
+        'Performance Optimization',
+      ],
     },
-  ];
-
-  const rightServices = [
     {
       id: '06',
-      title: 'AI & BUSINESS AUTOMATION',
-      description: 'Intelligent AI workflows, business operations automation, and custom agents.',
+      name: 'AUTOMATION',
+      description: 'Intelligent AI workflows, CRM automation, and system integration.',
       icon: Bot,
       slug: '/services/ai-automation',
+      subServices: [
+        'AI Automation',
+        'Business Automation',
+        'CRM Automation',
+        'Workflow Systems',
+        'AI Integrations',
+      ],
     },
     {
       id: '07',
-      title: 'E-COMMERCE & DIGITAL COMMERCE',
-      description: 'Scalable D2C storefronts, automated subscriptions, and frictionless checkout.',
-      icon: ShoppingBag,
-      slug: '/services/ecommerce',
+      name: 'ANALYTICS',
+      description: 'Performance measurement, custom dashboards, and data intelligence.',
+      icon: BarChart3,
+      slug: '/services/growth-optimization',
+      subServices: [
+        'Analytics',
+        'Tracking & Measurement',
+        'Dashboards',
+        'Performance Intelligence',
+        'Data Insights',
+      ],
     },
     {
       id: '08',
-      title: 'CRM, LEADS & CONVERSION SYSTEMS',
-      description: 'High-intent lead capture funnels, automated CRM nurture, and CRO architecture.',
-      icon: Filter,
-      slug: '/services/crm-lead-systems',
-    },
-    {
-      id: '09',
-      title: 'SEO & GEO OPTIMIZATION',
-      description: 'Organic search domination, AI generative search visibility, and local GEO rankings.',
-      icon: Search,
-      slug: '/services/seo-geo',
-    },
-    {
-      id: '10',
-      title: 'ANALYTICS, GROWTH & OPTIMIZATION',
-      description: 'Comprehensive data tracking, performance dashboards, and continuous optimization.',
-      icon: BarChart3,
-      slug: '/services/growth-optimization',
+      name: 'GROWTH',
+      description: 'Performance marketing, social media systems, and continuous scale.',
+      icon: TrendingUp,
+      slug: '/services/performance-marketing',
+      subServices: [
+        'Digital Marketing',
+        'Performance Marketing',
+        'Social Media',
+        'Growth Systems',
+        'Continuous Optimization',
+      ],
     },
   ];
 
-  const renderServiceCard = (item, globalIdx) => {
-    const Icon = item.icon;
-    const isHovered = hoveredIdx === globalIdx;
-
-    return (
-      <div
-        key={item.id}
-        onMouseEnter={() => setHoveredIdx(globalIdx)}
-        onMouseLeave={() => setHoveredIdx(null)}
-        onClick={() => {
-          if (onNavigate) onNavigate(item.slug);
-        }}
-        className="group relative p-6 sm:p-8 bg-[#ECE7D8] hover:bg-[#F3EFE3] border border-[#B9923F]/30 hover:border-[#0B5E49] transition-all duration-300 cursor-pointer flex flex-col justify-between shadow-md"
-      >
-        {/* Glow overlay */}
-        <div
-          className={`absolute inset-0 bg-gradient-to-br from-[#0B5E49]/05 via-transparent to-transparent pointer-events-none transition-opacity duration-300 ${
-            isHovered ? 'opacity-100' : 'opacity-0'
-          }`}
-        />
-
-        <div className="relative z-10 flex items-start justify-between gap-4 mb-6">
-          {/* Icon in Circular Container */}
-          <div
-            className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 ${
-              isHovered
-                ? 'border-[#0B5E49] bg-[#0B5E49] text-[#F3EFE3] scale-105 shadow-[0_0_15px_rgba(11,94,73,0.3)]'
-                : 'border-[#0B5E49]/30 bg-[#F3EFE3] text-[#0B5E49]'
-            }`}
-          >
-            <Icon className="w-5 h-5 stroke-[1.75]" />
-          </div>
-
-          {/* Number */}
-          <span
-            className={`font-serif text-3xl font-normal leading-none transition-colors duration-300 ${
-              isHovered ? 'text-[#0B5E49]' : 'text-[#B9923F]'
-            }`}
-          >
-            {item.id}
-          </span>
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10">
-          <h3
-            className={`font-serif text-xl sm:text-2xl font-normal leading-tight mb-3 transition-colors duration-300 ${
-              isHovered ? 'text-[#0B5E49]' : 'text-[#101613]'
-            }`}
-          >
-            {item.title}
-          </h3>
-
-          <p className="font-sans text-xs text-[#101613]/70 font-light leading-relaxed mb-6">
-            {item.description}
-          </p>
-
-          {/* Action Arrow */}
-          <div className="flex items-center justify-between pt-4 border-t border-[#B9923F]/20">
-            <span className="text-[10px] font-mono tracking-[0.2em] text-[#0B5E49] group-hover:text-[#B9923F] transition-colors uppercase font-bold">
-              EXPLORE CAPABILITY
-            </span>
-            <ArrowUpRight
-              className={`w-4 h-4 text-[#0B5E49] transition-transform duration-300 ${
-                isHovered ? 'translate-x-1 -translate-y-1 text-[#B9923F]' : 'opacity-70'
-              }`}
-            />
-          </div>
-        </div>
-      </div>
-    );
-  };
+  const currentPillar = pillars[activePillarIndex];
 
   return (
-    <section id="services-index" className="relative py-28 sm:py-36 bg-[#F3EFE3] overflow-hidden">
+    <section id="services-capabilities" className="relative py-28 sm:py-36 bg-[#F3EFE3] overflow-hidden">
       {/* Editorial Ivory Atmosphere */}
       <div className="absolute inset-0 ivory-texture pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-70 pointer-events-none" />
@@ -187,40 +155,168 @@ export default function ServiceIndex({ onNavigate }) {
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
-            What We Build
+            Service Architecture & Pillars
           </span>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.7 }}
-          className="mb-16 sm:mb-20 max-w-3xl"
-        >
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98]">
-            End-to-end capabilities <br />
-            for <span className="text-[#0B5E49] italic font-normal">ambitious brands.</span>
-          </h2>
-        </motion.div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16 sm:mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.7 }}
+            className="lg:col-span-8"
+          >
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98]">
+              THE 8 PRIMARY PILLARS OF <br />
+              <span className="text-[#0B5E49] italic font-normal">CONNECTED GROWTH.</span>
+            </h2>
+          </motion.div>
 
-        {/* 2-Column Editorial Service Index Grid (Left 5, Right 5) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-          
-          {/* Left Column */}
-          <div className="flex flex-col gap-6 lg:gap-8">
-            {leftServices.map((service, idx) => renderServiceCard(service, idx))}
-          </div>
-
-          {/* Right Column */}
-          <div className="flex flex-col gap-6 lg:gap-8">
-            {rightServices.map((service, idx) => renderServiceCard(service, idx + 5))}
-          </div>
-
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="lg:col-span-4 flex lg:justify-end"
+          >
+            <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-sm">
+              Select or hover any capability pillar to inspect its specialized sub-service architecture.
+            </p>
+          </motion.div>
         </div>
+
+        {/* 8 PRIMARY PILLARS SELECTOR STRIP (Interactive Orbital Ecosystem Buttons) */}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4 mb-12 relative z-20">
+          {pillars.map((pillar, idx) => {
+            const Icon = pillar.icon;
+            const isActive = idx === activePillarIndex;
+
+            return (
+              <button
+                key={pillar.id}
+                onClick={() => setActivePillarIndex(idx)}
+                onMouseEnter={() => setActivePillarIndex(idx)}
+                className={`relative flex flex-col items-center justify-center p-4 sm:p-5 transition-all duration-300 text-center cursor-pointer border ${
+                  isActive
+                    ? 'bg-[#0B5E49] border-[#0B5E49] text-[#F3EFE3] shadow-lg shadow-[#0B5E49]/20 -translate-y-1'
+                    : 'bg-[#ECE7D8] hover:bg-[#F3EFE3] border-[#B9923F]/30 hover:border-[#0B5E49]/60 text-[#101613]'
+                }`}
+              >
+                {/* Number Badge */}
+                <span
+                  className={`text-[10px] font-mono tracking-widest uppercase mb-2 ${
+                    isActive ? 'text-[#D9B45F]' : 'text-[#B9923F]'
+                  }`}
+                >
+                  {pillar.id}
+                </span>
+
+                {/* Icon */}
+                <div className="mb-2">
+                  <Icon className={`w-5 h-5 stroke-[1.75] ${isActive ? 'text-[#F3EFE3]' : 'text-[#0B5E49]'}`} />
+                </div>
+
+                {/* Name */}
+                <span className="font-sans text-xs font-bold tracking-[0.16em] uppercase">
+                  {pillar.name}
+                </span>
+
+                {/* Active Indicator Bar */}
+                {isActive && (
+                  <motion.div
+                    layoutId="activePillarIndicator"
+                    className="absolute -bottom-1 left-4 right-4 h-1 bg-[#D9B45F] rounded-full"
+                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                  />
+                )}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* ACTIVE PRIMARY PILLAR SHOWCASE & SUB-SERVICES BREAKDOWN */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentPillar.id}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.4, ease: easeCustom }}
+            className="p-8 sm:p-12 bg-[#ECE7D8] border border-[#B9923F]/40 shadow-xl relative overflow-hidden"
+          >
+            {/* Fine Decorative Linework Background */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#0B5E49]/10 to-transparent blur-3xl pointer-events-none" />
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
+              
+              {/* Left Column: Primary Pillar Detail */}
+              <div className="lg:col-span-5 flex flex-col justify-between h-full">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-xs font-mono font-bold tracking-widest text-[#B9923F]">
+                      PRIMARY PILLAR {currentPillar.id} / 08
+                    </span>
+                    <span className="h-[1px] w-6 bg-[#0B5E49]/40" />
+                  </div>
+
+                  <h3 className="font-serif text-3xl sm:text-4xl text-[#101613] font-normal leading-tight mb-4">
+                    {currentPillar.name} <span className="text-[#0B5E49] italic">CAPABILITY.</span>
+                  </h3>
+
+                  <p className="font-sans text-xs sm:text-sm text-[#101613]/80 font-light leading-relaxed mb-8">
+                    {currentPillar.description}
+                  </p>
+                </div>
+
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#0B5E49] hover:bg-[#084838] text-[#F3EFE3] text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 w-fit group shadow-md"
+                >
+                  <span>REQUEST {currentPillar.name} AUDIT</span>
+                  <ArrowUpRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
+              </div>
+
+              {/* Right Column: 5 Sub-Services Hierarchy Grid */}
+              <div className="lg:col-span-7">
+                <div className="flex items-center gap-2 mb-6">
+                  <span className="text-[11px] font-sans font-semibold tracking-[0.2em] text-[#0B5E49] uppercase">
+                    SPECIALIZED SUB-SERVICES ({currentPillar.subServices.length})
+                  </span>
+                  <span className="h-[1px] flex-grow bg-[#B9923F]/30" />
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {currentPillar.subServices.map((sub, sIdx) => (
+                    <motion.div
+                      key={sub}
+                      initial={{ opacity: 0, x: 10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.3, delay: sIdx * 0.06 }}
+                      className="p-4 bg-[#F3EFE3] border border-[#B9923F]/30 hover:border-[#0B5E49] flex items-center justify-between group transition-all duration-300 hover:shadow-md cursor-pointer"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="text-[10px] font-mono font-bold text-[#B9923F]">
+                          0{sIdx + 1}
+                        </span>
+                        <span className="font-sans text-xs font-semibold text-[#101613] group-hover:text-[#0B5E49] transition-colors">
+                          {sub}
+                        </span>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-[#B9923F] group-hover:text-[#0B5E49] group-hover:translate-x-1 transition-all" />
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          </motion.div>
+        </AnimatePresence>
 
       </div>
     </section>
   );
 }
+
 
