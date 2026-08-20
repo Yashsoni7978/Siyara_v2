@@ -97,17 +97,17 @@ export default function ServicesHero() {
       {/* LAYER 03: Atmospheric Bridge (Headline -> Video Transition Haze) */}
       <div className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] bg-gradient-to-r from-transparent via-[#071E18]/30 to-[#0C6B52]/12 blur-3xl pointer-events-none z-[2]" />
 
-      {/* LAYER 04: APPROVED SERVICES HERO CINEMATIC VIDEO (Muted & Masked) */}
+      {/* LAYER 04: APPROVED SERVICES HERO CINEMATIC VIDEO (Soft Masked Transition) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.3, ease: easeCustom }}
         style={{
           ...getParallaxStyle(2),
-          maskImage: 'radial-gradient(ellipse 85% 90% at 70% 50%, black 45%, transparent 95%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 85% 90% at 70% 50%, black 45%, transparent 95%)',
+          maskImage: 'radial-gradient(ellipse 82% 88% at 70% 50%, black 45%, transparent 92%), linear-gradient(to right, transparent 0%, black 22%, black 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 82% 88% at 70% 50%, black 45%, transparent 92%), linear-gradient(to right, transparent 0%, black 22%, black 100%)',
         }}
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[56%] xl:w-[58%] h-[98%] pointer-events-none z-[3] flex items-center justify-end overflow-hidden"
+        className="absolute right-2 sm:right-6 lg:right-10 top-1/2 -translate-y-1/2 w-full lg:w-[52%] xl:w-[54%] h-[92%] pointer-events-none z-[3] flex items-center justify-end overflow-hidden"
       >
         <video
           ref={videoRef}
@@ -118,7 +118,7 @@ export default function ServicesHero() {
           playsInline
           preload="auto"
           aria-hidden="true"
-          className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-105 pointer-events-none"
+          className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-100 pointer-events-none"
         />
       </motion.div>
 
@@ -141,13 +141,13 @@ export default function ServicesHero() {
               </span>
             </motion.div>
 
-            {/* Headline */}
+            {/* Headline (Reduced 10-15% for spacious editorial elegance) */}
             <div className="mb-6">
               <motion.h1
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(500)}
-                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-[#F3EFE3]"
+                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
               >
                 OUR DIGITAL
               </motion.h1>
@@ -156,7 +156,7 @@ export default function ServicesHero() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(700)}
-                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
+                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
               >
                 CAPABILITIES.
               </motion.h1>
@@ -216,8 +216,14 @@ export default function ServicesHero() {
           SCROLL
         </span>
       </motion.div>
+
+      {/* HERO BOTTOM CONNECTOR: Thin horizontal gold line with ONE central glowing gold point */}
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D9B45F]/35 to-transparent z-20 flex items-center justify-center">
+        <div className="w-1.5 h-1.5 rounded-full bg-[#D9B45F] shadow-[0_0_8px_#D9B45F] -translate-y-[0.5px]" />
+      </div>
     </section>
   );
 }
+
 
 

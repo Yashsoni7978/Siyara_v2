@@ -151,12 +151,9 @@ export default function ServiceIndex({ onNavigate }) {
           className="flex items-center gap-3 mb-10"
         >
           <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
-            02
+            01 — THE SIYARA SYSTEM
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
-            Service Architecture & Pillars
-          </span>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16 sm:mb-20">
@@ -168,8 +165,9 @@ export default function ServiceIndex({ onNavigate }) {
             className="lg:col-span-8"
           >
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98]">
-              THE 8 PRIMARY PILLARS OF <br />
-              <span className="text-[#0B5E49] italic font-normal">CONNECTED GROWTH.</span>
+              ONE SYSTEM. <br />
+              EIGHT DISCIPLINES. <br />
+              ONE DIRECTION: <span className="text-[#0B5E49] italic font-normal">GROWTH.</span>
             </h2>
           </motion.div>
 
@@ -181,7 +179,7 @@ export default function ServiceIndex({ onNavigate }) {
             className="lg:col-span-4 flex lg:justify-end"
           >
             <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-sm">
-              Select or hover any capability pillar to inspect its specialized sub-service architecture.
+              Siyara's eight primary disciplines do not operate as isolated services. Every capability is connected and engineered to generate compounding business growth.
             </p>
           </motion.div>
         </div>
