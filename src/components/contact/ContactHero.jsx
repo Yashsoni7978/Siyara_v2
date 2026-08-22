@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
@@ -69,32 +71,37 @@ export default function ContactHero() {
 
             {/* Master Headline */}
             <div className="mb-6">
-              <motion.h1
+              <h1 className="sr-only">LET'S BUILD SOMETHING WORTH BUILDING.</h1>
+
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(450)}
                 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
+                aria-hidden="true"
               >
                 LET'S BUILD
-              </motion.h1>
+              </motion.div>
 
-              <motion.h1
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(600)}
                 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
+                aria-hidden="true"
               >
                 SOMETHING
-              </motion.h1>
+              </motion.div>
 
-              <motion.h1
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(750)}
                 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26]"
+                aria-hidden="true"
               >
                 WORTH BUILDING.
-              </motion.h1>
+              </motion.div>
             </div>
 
             {/* Supporting Copy */}

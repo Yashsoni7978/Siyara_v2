@@ -34,7 +34,7 @@ export default function Location() {
               </h2>
 
               <p className="font-sans text-sm sm:text-base text-[#CFC9BB]/80 font-light leading-relaxed mb-8 max-w-md">
-                We work with ambitious businesses across India and beyond — combining strategic vision with high-impact digital craftsmanship.
+                We work with ambitious businesses across India and beyond, combining strategic vision with high-impact digital craftsmanship.
               </p>
 
               <a

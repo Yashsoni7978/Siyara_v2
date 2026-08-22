@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Cpu, Search, Target, ShieldCheck, TrendingUp } from 'lucide-react';
@@ -160,7 +162,7 @@ export default function Results() {
         >
           <div className="flex items-center gap-2 text-xs font-sans tracking-[0.16em] text-[#0B5E49] uppercase font-semibold">
             <span className="text-sm">✦</span>
-            <span>Featured Agency Client Projects & Digital Systems</span>
+            <span>Featured Client Projects & Digital Systems</span>
           </div>
 
           <div className="flex flex-wrap items-center gap-6 lg:gap-10 opacity-80">

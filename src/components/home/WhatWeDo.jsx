@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Edit3, Code, Search, Megaphone, Sparkles, TrendingUp } from 'lucide-react';

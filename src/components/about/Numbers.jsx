@@ -27,7 +27,7 @@ export default function Numbers() {
       id: '04',
       number: '1',
       label: 'MISSION',
-      description: 'To help brands scale, dominate and lead.',
+      description: 'To help brands scale, differentiate and lead.',
     },
   ];
 

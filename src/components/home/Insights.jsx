@@ -1,44 +1,14 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
+import { FEATURED_ARTICLE, BLOG_ARTICLES } from '../../data/blogArticles.js';
 
-export default function Insights({ onNavigate }) {
-  const handleArticleClick = (e) => {
-    e.preventDefault();
-    if (onNavigate) onNavigate('blog');
-    window.history.pushState({}, '', '/blog');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const articles = [
-    {
-      id: '01',
-      category: 'AI & SEARCH VISIBILITY',
-      title: 'AI Search Engines & Generative Visibility Architecture',
-      excerpt: 'How generative AI search engines are transforming brand discoverability, and why structured data and GEO strategy are replacing traditional keyword SEO.',
-      image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80',
-      featured: true,
-    },
-    {
-      id: '02',
-      category: 'BRAND POSITIONING',
-      title: 'Architectural Brand Systems for Modern Digital Markets',
-      excerpt: 'Moving beyond simple logos to craft holistic, high-trust digital positioning that commands market dominance.',
-      image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80',
-      featured: false,
-    },
-    {
-      id: '03',
-      category: 'CONVERSION UX',
-      title: 'Turning High-Intent Visitors into Active Agency Clients',
-      excerpt: 'Engineering friction-free digital funnels and micro-interactions that elevate brand perception and increase conversion.',
-      image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80',
-      featured: false,
-    },
-  ];
-
-  const leadArticle = articles[0];
-  const secondaryArticles = articles.slice(1);
+export default function Insights() {
+  const leadArticle = FEATURED_ARTICLE;
+  const secondaryArticles = BLOG_ARTICLES.slice(0, 2);
 
   return (
     <section id="insights" className="relative py-28 sm:py-36 bg-[#F3EFE3] overflow-hidden">
@@ -71,14 +41,13 @@ export default function Insights({ onNavigate }) {
             <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-sm mb-4">
               Strategic insights on digital growth, brand positioning, search intelligence, and conversion engineering.
             </p>
-            <a
+            <Link
               href="/blog"
-              onClick={handleArticleClick}
               className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] text-[#0B5E49] hover:text-[#B9923F] transition-colors uppercase"
             >
               <span>VIEW ALL INSIGHTS</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -86,9 +55,8 @@ export default function Insights({ onNavigate }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           
           {/* Dominant Lead Article (7 cols) */}
-          <a
-            href="/blog"
-            onClick={handleArticleClick}
+          <Link
+            href={`/blog/${leadArticle.slug}`}
             className="lg:col-span-7 group flex flex-col justify-between p-8 sm:p-12 border border-[#B9923F]/30 bg-[#ECE7D8] hover:border-[#0B5E49] transition-all duration-500 relative overflow-hidden shadow-xl"
           >
             <div className="relative z-10">
@@ -126,15 +94,14 @@ export default function Insights({ onNavigate }) {
               </span>
               <ArrowUpRight className="w-4 h-4 text-[#0B5E49] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </div>
-          </a>
+          </Link>
 
           {/* Supporting Articles (5 cols) */}
           <div className="lg:col-span-5 flex flex-col gap-8 justify-between">
             {secondaryArticles.map((article) => (
-              <a
+              <Link
                 key={article.id}
-                href="/blog"
-                onClick={handleArticleClick}
+                href={`/blog/${article.slug}`}
                 className="group flex flex-col justify-between p-7 border border-[#B9923F]/30 bg-[#ECE7D8] hover:border-[#0B5E49] transition-all duration-500 flex-1 shadow-lg"
               >
                 <div>
@@ -166,7 +133,7 @@ export default function Insights({ onNavigate }) {
                   </span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-[#0B5E49] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
 

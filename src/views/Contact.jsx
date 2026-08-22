@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect } from 'react';
 import SectionConnector from '../components/common/SectionConnector.jsx';
 import ContactHero from '../components/contact/ContactHero.jsx';
@@ -7,7 +9,6 @@ import ContactCTA from '../components/contact/ContactCTA.jsx';
 
 export default function Contact({ onNavigate }) {
   useEffect(() => {
-    document.title = "Contact | SIYARA Digital Architecture Studio";
     window.scrollTo(0, 0);
   }, []);
 

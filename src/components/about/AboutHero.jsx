@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { Compass, Layout, Code, TrendingUp, ArrowDown } from 'lucide-react';
@@ -45,50 +47,57 @@ export default function AboutHero() {
 
             {/* Headline */}
             <div className="mb-6">
-              <motion.h1
+              <h1 className="sr-only">We combine creativity, technology and strategy to build digital experiences that drive growth.</h1>
+
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(350)}
                 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
+                aria-hidden="true"
               >
                 We combine
-              </motion.h1>
+              </motion.div>
 
-              <motion.h1
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(450)}
                 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
+                aria-hidden="true"
               >
                 creativity, technology
-              </motion.h1>
+              </motion.div>
 
-              <motion.h1
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(550)}
                 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
+                aria-hidden="true"
               >
                 and strategy to build
-              </motion.h1>
+              </motion.div>
 
-              <motion.h1
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(650)}
                 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
+                aria-hidden="true"
               >
                 digital experiences
-              </motion.h1>
+              </motion.div>
 
-              <motion.h1
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(750)}
                 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] italic font-normal"
+                aria-hidden="true"
               >
                 that drive growth.
-              </motion.h1>
+              </motion.div>
             </div>
 
             {/* Supporting Copy */}
@@ -171,7 +180,7 @@ export default function AboutHero() {
 
               {/* Bottom Footer Note */}
               <div className="pt-3 border-t border-[#D9B45F]/20 flex items-center justify-between text-[9px] font-mono text-[#9D9B91]/60 relative z-10">
-                <span>01 — SYSTEM INTEGRATION</span>
+                <span>01 · SYSTEM INTEGRATION</span>
                 <span className="text-[#D9B45F]">✦ CONNECTED</span>
               </div>
 

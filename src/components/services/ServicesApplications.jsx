@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Home, HeartPulse, Gem, UtensilsCrossed, GraduationCap, ShoppingBag, Briefcase, Cpu, ArrowUpRight } from 'lucide-react';

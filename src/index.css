@@ -15,24 +15,24 @@
   }
 
   body {
-    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-manrope), system-ui, -apple-system, sans-serif;
     background-color: var(--siyara-obsidian);
     color: var(--siyara-ivory);
     overflow-x: hidden;
   }
 
   h1, h2, h3, .font-serif, .font-display {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-cormorant), Georgia, serif;
   }
 }
 
 /* Custom Utilities */
 .font-display {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-cormorant), Georgia, serif;
 }
 
 .font-sans {
-  font-family: 'Manrope', system-ui, sans-serif;
+  font-family: var(--font-manrope), system-ui, sans-serif;
 }
 
 .text-gold {
@@ -172,7 +172,7 @@
   padding: 1rem 2.25rem;
   background: #D9B45F;
   color: #101613;
-  font-family: 'Manrope', sans-serif;
+  font-family: var(--font-manrope), sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.18em;

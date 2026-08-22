@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -159,7 +161,7 @@ export default function ServiceIndex({ onNavigate }) {
           className="flex items-center gap-3 mb-10"
         >
           <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
-            01 — THE SIYARA SYSTEM
+            01 · THE SIYARA SYSTEM
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
         </motion.div>

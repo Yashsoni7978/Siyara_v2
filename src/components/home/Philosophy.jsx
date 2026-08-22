@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -55,7 +57,7 @@ export default function Philosophy() {
 
             {/* Siyara Gold Signature */}
             <div className="font-serif italic text-2xl sm:text-3xl text-[#D9B45F] tracking-wider pl-2 font-normal">
-              — Siyara
+              Siyara
             </div>
           </motion.div>
 

@@ -1,27 +1,8 @@
 import React from 'react';
 import { ArrowUpRight, Mail, MapPin } from 'lucide-react';
+import Link from 'next/link';
 
-export default function Footer({ onNavigate }) {
-  const handleFooterLinkClick = (e, href) => {
-    if (href === '/blog' || href === '#insights') {
-      e.preventDefault();
-      if (onNavigate) onNavigate('blog');
-      window.history.pushState({}, '', '/blog');
-    } else if (href === '/about' || href === '#about') {
-      e.preventDefault();
-      if (onNavigate) onNavigate('about');
-      window.history.pushState({}, '', '/about');
-    } else if (href === '/services' || href === '#services') {
-      e.preventDefault();
-      if (onNavigate) onNavigate('services');
-      window.history.pushState({}, '', '/services');
-    } else if (href === '/contact' || href === '#contact') {
-      e.preventDefault();
-      if (onNavigate) onNavigate('contact');
-      window.history.pushState({}, '', '/contact');
-    }
-  };
-
+export default function Footer() {
   const servicesLinks = [
     { name: 'Web Design & Development', href: '/services' },
     { name: 'Branding & Identity', href: '/services' },
@@ -34,16 +15,16 @@ export default function Footer({ onNavigate }) {
   const companyLinks = [
     { name: 'About Siyara', href: '/about' },
     { name: 'Why Siyara', href: '/about' },
-    { name: 'Our Work', href: '#work' },
-    { name: 'Our Process', href: '#process' },
+    { name: 'Our Work', href: '/#work' },
+    { name: 'Our Process', href: '/#process' },
     { name: 'Blog & Insights', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
   const resourceLinks = [
-    { name: 'Case Studies', href: '#work' },
-    { name: 'Agency Insights', href: '/blog' },
-    { name: 'FAQ', href: '#cta' },
+    { name: 'Case Studies', href: '/#work' },
+    { name: 'Studio Insights', href: '/blog' },
+    { name: 'FAQ', href: '/#contact' },
     { name: 'Privacy Policy', href: '#' },
     { name: 'Terms of Service', href: '#' },
   ];
@@ -62,14 +43,14 @@ export default function Footer({ onNavigate }) {
           <div className="lg:col-span-4 flex flex-col justify-between pr-0 lg:pr-6">
             <div>
               {/* Brand Lockup */}
-              <a href="#" className="inline-flex items-center gap-1.5 mb-4 group focus:outline-none">
+              <Link href="/" className="inline-flex items-center gap-1.5 mb-4 group focus:outline-none">
                 <span className="font-serif text-2xl font-bold tracking-[0.2em] text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors">
                   SIYARA
                 </span>
                 <span className="text-[#D9B45F] text-base group-hover:rotate-45 transition-transform duration-300">
                   ✦
                 </span>
-              </a>
+              </Link>
 
               <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-6 max-w-sm">
                 A digital architecture studio building connected systems for ambitious businesses.
@@ -103,13 +84,12 @@ export default function Footer({ onNavigate }) {
               <ul className="flex flex-col gap-3">
                 {servicesLinks.map((link) => (
                   <li key={link.name}>
-                    <a
+                    <Link
                       href={link.href}
-                      onClick={(e) => handleFooterLinkClick(e, link.href)}
                       className="font-sans text-xs text-[#9D9B91] hover:text-[#F3EFE3] transition-colors"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -123,13 +103,12 @@ export default function Footer({ onNavigate }) {
               <ul className="flex flex-col gap-3">
                 {companyLinks.map((link) => (
                   <li key={link.name}>
-                    <a
+                    <Link
                       href={link.href}
-                      onClick={(e) => handleFooterLinkClick(e, link.href)}
                       className="font-sans text-xs text-[#9D9B91] hover:text-[#F3EFE3] transition-colors"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -143,13 +122,12 @@ export default function Footer({ onNavigate }) {
               <ul className="flex flex-col gap-3 mb-8">
                 {resourceLinks.map((link) => (
                   <li key={link.name}>
-                    <a
+                    <Link
                       href={link.href}
-                      onClick={(e) => handleFooterLinkClick(e, link.href)}
                       className="font-sans text-xs text-[#9D9B91] hover:text-[#F3EFE3] transition-colors"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -175,9 +153,9 @@ export default function Footer({ onNavigate }) {
           </div>
 
           <div className="flex items-center gap-6 text-[11px] tracking-wider text-[#9D9B91]">
-            <a href="#" className="hover:text-[#D9B45F] transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-[#D9B45F] transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-[#D9B45F] transition-colors">Sitemap</a>
+            <Link href="#" className="hover:text-[#D9B45F] transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-[#D9B45F] transition-colors">Terms of Service</Link>
+            <Link href="#" className="hover:text-[#D9B45F] transition-colors">Sitemap</Link>
           </div>
         </div>
 

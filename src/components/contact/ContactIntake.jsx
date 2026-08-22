@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, CheckCircle2, Loader2 } from 'lucide-react';
@@ -41,27 +43,45 @@ export default function ContactIntake() {
     setFormData((prev) => ({ ...prev, selectedCapability: cap }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.details) {
       setStatus({ submitting: false, submitted: false, error: 'Please fill in all required fields.' });
       return;
     }
 
+    if (status.submitting) return; // Prevent duplicate submissions
+
     setStatus({ submitting: true, submitted: false, error: null });
 
-    setTimeout(() => {
-      setStatus({ submitting: false, submitted: true, error: null });
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        selectedCapability: 'Brand',
-        details: '',
-        budget: '',
-        timeline: '',
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-    }, 1200);
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus({ submitting: false, submitted: true, error: null });
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          selectedCapability: 'Brand',
+          details: '',
+          budget: '',
+          timeline: '',
+        });
+      } else {
+        setStatus({ submitting: false, submitted: false, error: result.error || 'Submission failed. Please try again.' });
+      }
+    } catch (err) {
+      setStatus({ submitting: false, submitted: false, error: 'An unexpected error occurred. Please try again later.' });
+    }
   };
 
   return (

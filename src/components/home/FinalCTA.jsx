@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Calendar } from 'lucide-react';
+import Link from 'next/link';
 
 export default function FinalCTA() {
   return (
@@ -62,13 +65,13 @@ export default function FinalCTA() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex flex-wrap items-center justify-center gap-5"
         >
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="inline-flex items-center gap-2.5 px-9 py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>START A PROJECT</span>
             <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
-          </a>
+          </Link>
 
           <a
             href="https://calendly.com"

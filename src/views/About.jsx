@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect } from 'react';
 import SectionConnector from '../components/common/SectionConnector.jsx';
 import AboutHero from '../components/about/AboutHero.jsx';
@@ -10,7 +12,6 @@ import AboutCTA from '../components/about/AboutCTA.jsx';
 
 export default function About() {
   useEffect(() => {
-    document.title = "About | SIYARA Digital Architecture Studio";
     window.scrollTo(0, 0);
   }, []);
 

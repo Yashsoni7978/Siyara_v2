@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin } from 'lucide-react';
@@ -45,7 +47,7 @@ export default function Studio() {
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80"
-                  alt="Siyara Digital Agency Studio Workspace"
+                  alt="Siyara Digital Architecture Studio workspace"
                   className="w-full h-full object-cover opacity-70 mix-blend-luminosity hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#070A09] via-transparent to-transparent" />
@@ -97,7 +99,7 @@ export default function Studio() {
                   </span>
                 </div>
                 <p className="text-xs font-sans text-[#9D9B91] font-light">
-                  Digital Agency Headquarters & Creative Hub
+                  Studio Headquarters & Creative Hub
                 </p>
               </div>
 

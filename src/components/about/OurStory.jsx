@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -75,7 +77,7 @@ export default function OurStory() {
                   <div className="relative aspect-[4/5] overflow-hidden bg-[#071E18]">
                     <img
                       src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
-                      alt="Siyara Digital Agency Workspace"
+                      alt="Siyara Studio workspace"
                       className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#070A09]/90 via-transparent to-transparent" />

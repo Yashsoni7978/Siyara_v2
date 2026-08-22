@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Target, Monitor, BarChart3, Network, Settings } from 'lucide-react';

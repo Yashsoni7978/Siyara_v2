@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Home, HeartPulse, GraduationCap, ShoppingBag, UtensilsCrossed, Gem, Cpu, ArrowUpRight } from 'lucide-react';

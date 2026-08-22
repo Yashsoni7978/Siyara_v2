@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useMemo, useEffect } from 'react';
 import BlogHero from '../components/blog/BlogHero.jsx';
 import FeaturedArticle from '../components/blog/FeaturedArticle.jsx';

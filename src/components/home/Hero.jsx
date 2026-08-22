@@ -1,6 +1,9 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
@@ -133,32 +136,37 @@ export default function Hero() {
 
             {/* Headline */}
             <div className="mb-6">
-              <motion.h1
+              <h1 className="sr-only">WE ARCHITECT BRANDS THAT LEAD.</h1>
+              
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(500)}
                 className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-[#F3EFE3]"
+                aria-hidden="true"
               >
                 WE ARCHITECT
-              </motion.h1>
+              </motion.div>
 
-              <motion.h1
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(620)}
                 className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-[#F3EFE3]"
+                aria-hidden="true"
               >
                 BRANDS THAT
-              </motion.h1>
+              </motion.div>
 
-              <motion.h1
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(700)}
                 className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
+                aria-hidden="true"
               >
                 LEAD.
-              </motion.h1>
+              </motion.div>
             </div>
 
             {/* Supporting Copy */}
@@ -180,21 +188,21 @@ export default function Hero() {
               variants={fadeUp(950)}
               className="flex flex-wrap items-center gap-5"
             >
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>BOOK STRATEGY SESSION</span>
                 <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
-              </a>
+              </Link>
 
-              <a
-                href="#work"
+              <Link
+                href="/#work"
                 className="inline-flex items-center gap-2 px-8 py-4 border border-[#F3EFE3]/25 hover:border-[#D9B45F]/60 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#070A09]/40 backdrop-blur-sm"
               >
                 <span>EXPLORE OUR WORK</span>
                 <ArrowRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </motion.div>
           </div>
 

@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Calendar } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ServicesCTA() {
   const easeCustom = [0.16, 1, 0.3, 1];
@@ -64,21 +67,21 @@ export default function ServicesCTA() {
           transition={{ duration: 0.8, delay: 0.2, ease: easeCustom }}
           className="flex flex-wrap items-center justify-center gap-5"
         >
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="inline-flex items-center gap-2.5 px-9 py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>START A PROJECT</span>
             <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
-          </a>
+          </Link>
 
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="inline-flex items-center gap-2 px-9 py-4 border border-[#D9B45F]/40 hover:border-[#D9B45F] bg-[#071E18]/60 hover:bg-[#071E18] text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-lg"
           >
             <Calendar className="w-4 h-4 text-[#D9B45F]" />
             <span>BOOK A STRATEGY SESSION</span>
-          </a>
+          </Link>
         </motion.div>
 
       </div>

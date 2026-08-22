@@ -1,6 +1,9 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ServicesHero() {
   const shouldReduceMotion = useReducedMotion();
@@ -133,23 +136,27 @@ export default function ServicesHero() {
 
             {/* Headline */}
             <div className="mb-6">
-              <motion.h1
+              <h1 className="sr-only">OUR DIGITAL CAPABILITIES.</h1>
+
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(500)}
                 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
+                aria-hidden="true"
               >
                 OUR DIGITAL
-              </motion.h1>
+              </motion.div>
 
-              <motion.h1
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(700)}
                 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
+                aria-hidden="true"
               >
                 CAPABILITIES.
-              </motion.h1>
+              </motion.div>
             </div>
 
             {/* Supporting Copy */}
@@ -160,7 +167,7 @@ export default function ServicesHero() {
               className="mb-10 max-w-lg"
             >
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                From strategy and brand to technology, visibility and growth — every capability works as part of one connected digital system.
+                From strategy and brand to technology, visibility and growth. Every capability works as part of one connected digital system.
               </p>
             </motion.div>
 
@@ -171,21 +178,21 @@ export default function ServicesHero() {
               variants={fadeUp(950)}
               className="flex flex-wrap items-center gap-5"
             >
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>START A PROJECT</span>
                 <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
-              </a>
+              </Link>
 
-              <a
-                href="#services-capabilities"
+              <Link
+                href="/services#services-capabilities"
                 className="inline-flex items-center gap-2 px-8 py-4 border border-[#F3EFE3]/25 hover:border-[#D9B45F]/60 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#070A09]/40 backdrop-blur-sm"
               >
                 <span>EXPLORE OUR SYSTEM</span>
                 <ArrowRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </motion.div>
           </div>
 

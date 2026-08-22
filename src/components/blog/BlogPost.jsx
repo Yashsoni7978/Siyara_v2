@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -171,7 +173,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
                 {/* Toast Notification */}
                 {copied && (
                   <div className="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#063C2D] border border-[#D4AF37]/40 text-[#F3EFE4] text-[10px] font-mono px-2.5 py-1 shadow-lg">
-                    Link Copied!
+                    Link copied
                   </div>
                 )}
               </button>
@@ -261,11 +263,38 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
                 </h2>
 
                 {/* Section Content Paragraphs */}
-                {section.content && section.content.map((paragraph, pIdx) => (
-                  <p key={pIdx} className="font-sans text-sm sm:text-base text-[#CFC9BB]/90 font-light leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
+                {section.content && section.content.map((paragraph, pIdx) => {
+                  if (typeof paragraph === 'string' && (paragraph.includes('<a ') || paragraph.includes('<strong>') || paragraph.includes('<em>') || paragraph.includes('<ul>') || paragraph.includes('<ol>'))) {
+                    return (
+                      <div 
+                        key={pIdx} 
+                        className="font-sans text-sm sm:text-base text-[#CFC9BB]/90 font-light leading-relaxed [&_a]:text-[#D4AF37] [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-[#F3EFE4] [&_a]:transition-colors [&_strong]:text-[#F3EFE4] [&_strong]:font-medium [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:space-y-2 [&_li]:text-[#CFC9BB]/90 [&_li]:font-light"
+                        dangerouslySetInnerHTML={{ __html: paragraph }}
+                      />
+                    );
+                  }
+                  return (
+                    <p key={pIdx} className="font-sans text-sm sm:text-base text-[#CFC9BB]/90 font-light leading-relaxed">
+                      {paragraph}
+                    </p>
+                  );
+                })}
+
+                {/* Supporting In-Article Visual */}
+                {section.image && (
+                  <figure className="my-8 overflow-hidden border border-[#D4AF37]/25 bg-[#063C2D]/20">
+                    <img 
+                      src={section.image} 
+                      alt={section.imageAlt || section.title || article.title}
+                      className="w-full h-auto object-cover max-h-[480px]"
+                    />
+                    {section.imageCaption && (
+                      <figcaption className="p-3 text-xs font-mono text-[#CFC9BB]/70 border-t border-[#D4AF37]/15 bg-[#080B0A]/90">
+                        {section.imageCaption}
+                      </figcaption>
+                    )}
+                  </figure>
+                )}
 
                 {/* Optional Pull Quote */}
                 {section.quote && (

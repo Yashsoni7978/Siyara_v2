@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Compass, Edit3, Code, Rocket, TrendingUp, ArrowUpRight } from 'lucide-react';
