@@ -81,8 +81,8 @@ export default function WhatWeDo() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
-            03
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
+            01
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
@@ -101,7 +101,7 @@ export default function WhatWeDo() {
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98]">
             One connected system, <br />
             eight disciplines <br />
-            working <span className="text-[#D9B45F] italic font-normal">together.</span>
+            working <span className="text-[#D9B45F] font-normal">together.</span>
           </h2>
         </motion.div>
 

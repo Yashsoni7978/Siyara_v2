@@ -19,8 +19,8 @@ export default function Philosophy() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-12"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
-            05
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
+            03
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
@@ -43,7 +43,7 @@ export default function Philosophy() {
               WE DON'T BUILD <br />
               WEBSITES. <br />
               WE BUILD <br />
-              <span className="text-[#D9B45F] italic font-normal">DIGITAL SYSTEMS.</span>
+              <span className="text-[#D9B45F] font-normal">DIGITAL SYSTEMS.</span>
             </h2>
 
             <div className="max-w-md mb-8">
@@ -56,7 +56,7 @@ export default function Philosophy() {
             </div>
 
             {/* Siyara Gold Signature */}
-            <div className="font-serif italic text-2xl sm:text-3xl text-[#D9B45F] tracking-wider pl-2 font-normal">
+            <div className="font-serif text-2xl sm:text-3xl text-[#D9B45F] tracking-wider pl-2 font-normal">
               Siyara
             </div>
           </motion.div>

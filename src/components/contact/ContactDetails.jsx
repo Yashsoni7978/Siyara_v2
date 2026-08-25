@@ -43,7 +43,7 @@ export default function ContactDetails() {
             transition={{ duration: 0.6, ease: easeCustom }}
             className="flex items-center gap-3 mb-6"
           >
-            <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
+            <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
               03
             </span>
             <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
@@ -61,7 +61,7 @@ export default function ContactDetails() {
           >
             GOOD WORK <br />
             STARTS WITH A <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] italic font-normal">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">
               GOOD CONVERSATION.
             </span>
           </motion.h2>
@@ -89,7 +89,7 @@ export default function ContactDetails() {
               className="p-8 bg-[#071E18]/40 border border-[#D9B45F]/25 hover:border-[#D9B45F]/60 transition-all duration-300 group flex flex-col justify-between"
             >
               <div>
-                <span className="text-xs font-mono font-bold text-[#D9B45F] tracking-widest block mb-4">
+                <span className="text-xs font-sans font-bold text-[#D9B45F] tracking-widest block mb-4">
                   {path.id}
                 </span>
 
@@ -104,7 +104,7 @@ export default function ContactDetails() {
 
               <a
                 href={`mailto:${path.email}`}
-                className="inline-flex items-center gap-2 font-mono text-xs text-[#D9B45F] hover:text-[#E8C979] transition-colors pt-4 border-t border-[#D9B45F]/15"
+                className="inline-flex items-center gap-2 font-sans text-xs text-[#D9B45F] hover:text-[#E8C979] transition-colors pt-4 border-t border-[#D9B45F]/15"
               >
                 <Mail className="w-3.5 h-3.5" />
                 <span>{path.email}</span>
@@ -123,7 +123,7 @@ export default function ContactDetails() {
           <div className="flex items-start gap-3">
             <MapPin className="w-4 h-4 text-[#D9B45F] shrink-0 mt-0.5" />
             <div>
-              <span className="font-mono text-[10px] tracking-widest text-[#D9B45F] uppercase block mb-1">
+              <span className="font-sans text-[10px] tracking-widest text-[#D9B45F] uppercase block mb-1">
                 BASED IN
               </span>
               <p className="text-[#F3EFE3] font-light">
@@ -135,7 +135,7 @@ export default function ContactDetails() {
           <div className="flex items-start gap-3">
             <Globe className="w-4 h-4 text-[#D9B45F] shrink-0 mt-0.5" />
             <div>
-              <span className="font-mono text-[10px] tracking-widest text-[#D9B45F] uppercase block mb-1">
+              <span className="font-sans text-[10px] tracking-widest text-[#D9B45F] uppercase block mb-1">
                 WORKING WITH
               </span>
               <p className="text-[#F3EFE3] font-light">

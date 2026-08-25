@@ -61,7 +61,7 @@ export default function Approach() {
           transition={{ duration: 0.6, ease: easeCustom }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             05
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
@@ -79,7 +79,7 @@ export default function Approach() {
             transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
             className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[1.04]"
           >
-            A disciplined methodology for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] italic font-normal">predictable growth.</span>
+            A disciplined methodology for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">predictable growth.</span>
           </motion.h2>
         </div>
 
@@ -126,7 +126,7 @@ export default function Approach() {
                   </div>
 
                   {/* Step Number */}
-                  <span className="text-xs font-mono text-[#D9B45F] font-bold tracking-widest mb-1">
+                  <span className="text-xs font-sans text-[#D9B45F] font-bold tracking-widest mb-1">
                     {step.id}
                   </span>
 

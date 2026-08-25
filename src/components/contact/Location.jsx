@@ -30,7 +30,7 @@ export default function Location() {
 
               <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE4] font-normal leading-[1.08] mb-4">
                 Jaipur, Rajasthan, <br />
-                <span className="text-[#19A878] italic">India</span>
+                <span className="text-[#19A878] ">India</span>
               </h2>
 
               <p className="font-sans text-sm sm:text-base text-[#CFC9BB]/80 font-light leading-relaxed mb-8 max-w-md">
@@ -90,7 +90,7 @@ export default function Location() {
                   <div className="w-8 h-2 rounded-full bg-[#D4AF37]/40 blur-sm mt-1" />
 
                   {/* Coordinates & Location Badge */}
-                  <div className="mt-4 px-3.5 py-1.5 rounded-full border border-[#D4AF37]/40 bg-[#080B0A]/90 backdrop-blur-md text-[10px] font-mono tracking-widest text-[#E5C378] uppercase shadow-lg">
+                  <div className="mt-4 px-3.5 py-1.5 rounded-full border border-[#D4AF37]/40 bg-[#080B0A]/90 backdrop-blur-md text-[10px] font-sans tracking-widest text-[#E5C378] uppercase shadow-lg">
                     26.9124° N, 75.7873° E · JAIPUR HUB
                   </div>
                 </div>

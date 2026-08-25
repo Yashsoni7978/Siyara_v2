@@ -50,8 +50,8 @@ export default function WhySiyara() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-12"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
-            04
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
+            02
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
@@ -72,7 +72,7 @@ export default function WhySiyara() {
           >
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[0.98] mb-6">
               We think in systems, <br />
-              not <span className="text-[#0C6B52] italic font-normal">services.</span>
+              not <span className="text-[#0C6B52] font-normal">services.</span>
             </h2>
             <p className="font-sans text-sm sm:text-base text-[#9D9B91] font-light leading-relaxed max-w-md">
               Strategy, design and engineering work as one connected system here, not three vendors stitched together after the fact.

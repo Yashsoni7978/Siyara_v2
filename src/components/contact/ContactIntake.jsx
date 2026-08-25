@@ -101,7 +101,7 @@ export default function ContactIntake() {
             transition={{ duration: 0.6, ease: easeCustom }}
             className="flex items-center gap-3 mb-6"
           >
-            <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
+            <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
               02
             </span>
             <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
@@ -118,7 +118,7 @@ export default function ContactIntake() {
             className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98] mb-6"
           >
             START A <br />
-            <span className="text-[#0B5E49] italic font-normal">CONVERSATION.</span>
+            <span className="text-[#0B5E49] font-normal">CONVERSATION.</span>
           </motion.h2>
 
           <motion.p
@@ -165,7 +165,7 @@ export default function ContactIntake() {
 
             {/* Field 1: Name */}
             <div className="group">
-              <label htmlFor="name" className="block text-xs font-mono font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-2">
+              <label htmlFor="name" className="block text-xs font-sans font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-2">
                 YOUR NAME *
               </label>
               <input
@@ -182,7 +182,7 @@ export default function ContactIntake() {
 
             {/* Field 2: Work Email */}
             <div className="group">
-              <label htmlFor="email" className="block text-xs font-mono font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-2">
+              <label htmlFor="email" className="block text-xs font-sans font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-2">
                 WORK EMAIL *
               </label>
               <input
@@ -199,7 +199,7 @@ export default function ContactIntake() {
 
             {/* Field 3: Company / Brand */}
             <div className="group">
-              <label htmlFor="company" className="block text-xs font-mono font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-2">
+              <label htmlFor="company" className="block text-xs font-sans font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-2">
                 COMPANY / BRAND
               </label>
               <input
@@ -215,7 +215,7 @@ export default function ContactIntake() {
 
             {/* Field 4: Segmented Capability Options */}
             <div>
-              <label className="block text-xs font-mono font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-4">
+              <label className="block text-xs font-sans font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-4">
                 WHAT ARE YOU LOOKING TO BUILD?
               </label>
               <div className="flex flex-wrap gap-3">
@@ -241,7 +241,7 @@ export default function ContactIntake() {
 
             {/* Field 5: Project Details */}
             <div className="group">
-              <label htmlFor="details" className="block text-xs font-mono font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-2">
+              <label htmlFor="details" className="block text-xs font-sans font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-2">
                 PROJECT DETAILS *
               </label>
               <textarea

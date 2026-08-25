@@ -57,8 +57,8 @@ export default function Problem() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
-            06
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
+            04
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
@@ -76,7 +76,7 @@ export default function Problem() {
         >
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98] mb-5">
             Your business doesn't <br />
-            need <span className="text-[#0B5E49] italic font-normal">another website.</span>
+            need <span className="text-[#0B5E49] font-normal">another website.</span>
           </h2>
           <p className="font-sans text-xs sm:text-sm font-semibold tracking-[0.22em] text-[#B9923F] uppercase">
             IT NEEDS A DIGITAL SYSTEM THAT PERFORMS.
@@ -125,7 +125,7 @@ export default function Problem() {
                 </div>
 
                 {/* Problem number */}
-                <span className={`text-[10px] font-mono tracking-[0.2em] mb-2 transition-colors duration-300 ${isHovered ? 'text-[#D5B15E]' : 'text-[#B9923F]/70'}`}>
+                <span className={`text-[10px] font-sans tracking-[0.2em] mb-2 transition-colors duration-300 ${isHovered ? 'text-[#D5B15E]' : 'text-[#B9923F]/70'}`}>
                   {problem.id}
                 </span>
 

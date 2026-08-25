@@ -25,8 +25,8 @@ export default function FinalCTA() {
           transition={{ duration: 0.6 }}
           className="inline-flex items-center gap-3 mb-8"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
-            11
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
+            08
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
@@ -43,7 +43,7 @@ export default function FinalCTA() {
           className="font-serif text-4xl sm:text-6xl lg:text-8xl text-[#F3EFE3] font-normal leading-[0.96] tracking-tight mb-8 max-w-4xl mx-auto"
         >
           READY TO BUILD <br />
-          SOMETHING <span className="text-[#D9B45F] italic font-normal">BETTER?</span>
+          SOMETHING <span className="text-[#D9B45F] font-normal">BETTER?</span>
         </motion.h2>
 
         {/* Subcopy */}

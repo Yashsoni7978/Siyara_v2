@@ -209,7 +209,7 @@ export default function ServicesHero() {
         <div className="w-[1px] h-10 bg-gradient-to-b from-[#D9B45F] to-transparent relative">
           <div className="w-1.5 h-1.5 bg-[#D9B45F] rounded-full absolute top-0 -left-[2.5px] animate-ping" />
         </div>
-        <span className="text-[9px] font-mono tracking-[0.24em] text-[#9D9B91]/60 uppercase">
+        <span className="text-[9px] font-sans tracking-[0.24em] text-[#9D9B91]/60 uppercase">
           SCROLL
         </span>
       </motion.div>

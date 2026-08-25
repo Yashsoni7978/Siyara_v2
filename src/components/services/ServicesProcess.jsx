@@ -56,7 +56,7 @@ export default function ServicesProcess() {
           transition={{ duration: 0.6, ease: easeCustom }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
             04
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
@@ -75,7 +75,7 @@ export default function ServicesProcess() {
         >
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98]">
             FROM STRATEGY <br />
-            <span className="text-[#0B5E49] italic font-normal">TO EXECUTION.</span>
+            <span className="text-[#0B5E49] font-normal">TO EXECUTION.</span>
           </h2>
         </motion.div>
 

@@ -30,7 +30,7 @@ export default function BlogPagination({ currentPage = 1, totalPages = 1, onPage
             <button
               key={`page-${p}`}
               onClick={() => onPageChange && onPageChange(p)}
-              className={`w-9 h-9 border flex items-center justify-center font-mono font-medium transition-all duration-300 ${
+              className={`w-9 h-9 border flex items-center justify-center font-sans font-medium transition-all duration-300 ${
                 isActive
                   ? 'border-[#D4AF37] bg-[#063C2D] text-[#F3EFE4] shadow-[0_0_10px_rgba(212,175,55,0.25)]'
                   : 'border-[#D4AF37]/20 text-[#CFC9BB]/70 hover:border-[#D4AF37]/50 hover:text-[#F3EFE4]'

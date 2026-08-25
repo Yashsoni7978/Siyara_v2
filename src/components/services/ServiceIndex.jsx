@@ -160,7 +160,7 @@ export default function ServiceIndex({ onNavigate }) {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
             01 · THE SIYARA SYSTEM
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
@@ -177,7 +177,7 @@ export default function ServiceIndex({ onNavigate }) {
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98]">
               ONE SYSTEM. <br />
               EIGHT DISCIPLINES. <br />
-              ONE DIRECTION: <span className="text-[#0B5E49] italic font-normal">GROWTH.</span>
+              ONE DIRECTION: <span className="text-[#0B5E49] font-normal">GROWTH.</span>
             </h2>
           </motion.div>
 
@@ -234,7 +234,7 @@ export default function ServiceIndex({ onNavigate }) {
 
                   {/* Number */}
                   <span
-                    className={`text-[10px] font-mono tracking-widest uppercase mb-1 font-bold ${
+                    className={`text-[10px] font-sans tracking-widest uppercase mb-1 font-bold ${
                       isActive ? 'text-[#0B5E49]' : 'text-[#B9923F]'
                     }`}
                   >
@@ -274,14 +274,14 @@ export default function ServiceIndex({ onNavigate }) {
               <div className="lg:col-span-5 flex flex-col justify-between h-full">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-xs font-mono font-bold tracking-widest text-[#B9923F]">
+                    <span className="text-xs font-sans font-bold tracking-widest text-[#B9923F]">
                       DISCIPLINE {currentDiscipline.id} / 08
                     </span>
                     <span className="h-[1px] w-6 bg-[#0B5E49]/40" />
                   </div>
 
                   <h3 className="font-serif text-3xl sm:text-4xl text-[#101613] font-normal leading-tight mb-3">
-                    {currentDiscipline.name} <span className="text-[#0B5E49] italic">CAPABILITY.</span>
+                    {currentDiscipline.name} <span className="text-[#0B5E49] ">CAPABILITY.</span>
                   </h3>
 
                   <p className="font-sans text-xs sm:text-sm text-[#0B5E49] font-medium leading-relaxed mb-4">
@@ -295,7 +295,7 @@ export default function ServiceIndex({ onNavigate }) {
 
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#0B5E49] hover:bg-[#084838] text-[#F3EFE3] text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 w-fit group shadow-md"
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#0B5E49] hover:bg-[#084838] text-[#F3EFE3] text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 w-fit group shadow-md rounded-full"
                 >
                   <span>REQUEST {currentDiscipline.name} AUDIT</span>
                   <ArrowUpRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -321,7 +321,7 @@ export default function ServiceIndex({ onNavigate }) {
                       className="p-4 bg-[#F3EFE3] border border-[#B9923F]/30 hover:border-[#0B5E49] flex items-center justify-between group transition-all duration-300 hover:shadow-md cursor-pointer"
                     >
                       <div className="flex items-center gap-3">
-                        <span className="text-[10px] font-mono font-bold text-[#B9923F]">
+                        <span className="text-[10px] font-sans font-bold text-[#B9923F]">
                           0{sIdx + 1}
                         </span>
                         <span className="font-sans text-xs font-semibold text-[#101613] group-hover:text-[#0B5E49] transition-colors">

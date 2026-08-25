@@ -47,7 +47,7 @@ export default function Numbers() {
           transition={{ duration: 0.6, ease: easeCustom }}
           className="flex items-center gap-3 mb-16"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
             04
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />

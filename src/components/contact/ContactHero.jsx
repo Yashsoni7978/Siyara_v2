@@ -177,7 +177,7 @@ export default function ContactHero() {
               {/* Central Core Element: IDEA Node */}
               <div className="relative z-10 w-24 h-24 rounded-full bg-[#070A09] border border-[#D9B45F]/60 shadow-[0_0_30px_rgba(217,180,95,0.2)] flex flex-col items-center justify-center text-center p-2">
                 <div className="w-2 h-2 rounded-full bg-[#D9B45F] shadow-[0_0_10px_#D9B45F] mb-1 animate-pulse" />
-                <span className="text-[9px] font-mono tracking-[0.2em] text-[#D9B45F] uppercase font-bold">
+                <span className="text-[9px] font-sans tracking-[0.2em] text-[#D9B45F] uppercase font-bold">
                   IDEA
                 </span>
                 <span className="text-[8px] font-sans tracking-[0.14em] text-[#9D9B91] uppercase">

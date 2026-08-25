@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useEffect } from 'react';
 import SectionConnector from '../components/common/SectionConnector.jsx';
@@ -14,25 +14,25 @@ export default function Contact({ onNavigate }) {
 
   return (
     <div className="bg-[#070A09] text-[#F3EFE3] selection:bg-[#071E18] selection:text-[#D9B45F]">
-      {/* 01 — HERO / INVITATION (DARK) */}
+      {/* 01 â€” HERO / INVITATION (DARK) */}
       <ContactHero />
 
-      {/* CONNECTOR 01: DARK → IVORY */}
+      {/* CONNECTOR 01: DARK â†’ IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 02 — PROJECT INTAKE (IVORY) */}
+      {/* 02 â€” PROJECT INTAKE (IVORY) */}
       <ContactIntake />
 
-      {/* CONNECTOR 02: IVORY → DARK */}
+      {/* CONNECTOR 02: IVORY â†’ DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 03 — DIRECT PATHWAYS & CONVERSATION (DARK) */}
+      {/* 03 â€” DIRECT PATHWAYS & CONVERSATION (DARK) */}
       <ContactDetails />
 
-      {/* CONNECTOR 03: DARK → DARK */}
+      {/* CONNECTOR 03: DARK â†’ DARK */}
       <SectionConnector fromDark={true} />
 
-      {/* 04 — FINAL CTA (DARK) */}
+      {/* 04 â€” FINAL CTA (DARK) */}
       <ContactCTA />
     </div>
   );

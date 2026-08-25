@@ -59,7 +59,7 @@ export default function Footer() {
 
             {/* Direct Enquiry Box */}
             <div className="p-4 border border-[#D9B45F]/30 bg-[#071E18]/40">
-              <div className="text-[10px] font-mono text-[#D9B45F] tracking-widest uppercase mb-1 font-semibold">
+              <div className="text-[10px] font-sans text-[#D9B45F] tracking-widest uppercase mb-1 font-semibold">
                 Start a New Project
               </div>
               <a

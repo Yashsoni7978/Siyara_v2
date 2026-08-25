@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { Compass, Layout, Code, TrendingUp, ArrowDown } from 'lucide-react';
 
 export default function AboutHero() {
   const shouldReduceMotion = useReducedMotion();
@@ -19,25 +18,29 @@ export default function AboutHero() {
   });
 
   return (
-    <section className="relative min-h-[90svh] pt-32 pb-20 lg:pt-36 lg:pb-24 bg-[#070A09] text-[#F3EFE3] overflow-hidden flex items-center">
+    <section className="relative min-h-[90svh] pt-40 pb-20 lg:pt-48 lg:pb-32 bg-[#070A09] text-[#F3EFE3] overflow-hidden flex items-center">
       {/* Obsidian Base Canvas */}
       <div className="absolute inset-0 bg-[#070A09] z-0" />
 
-      {/* Deep Emerald Ambient Glow */}
-      <div className="absolute right-[12%] top-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-[#071E18]/50 via-[#0C6B52]/12 to-transparent blur-3xl rounded-full pointer-events-none z-[1]" />
+      {/* Atmospheric Background (Existing glow treatment without physical images) */}
+      <div className="absolute right-[5%] lg:right-[15%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] lg:w-[650px] lg:h-[650px] bg-gradient-to-tr from-[#071E18]/40 via-[#0C6B52]/10 to-transparent blur-3xl rounded-full pointer-events-none z-[1]" />
+      
+      {/* Subtle Architectural Grid / Overlays for the right side to let it breathe */}
+      <div className="absolute right-0 top-0 bottom-0 w-1/3 border-l border-[#D9B45F]/5 bg-gradient-to-l from-[#071E18]/10 to-transparent pointer-events-none z-[1] hidden lg:block" />
+      <div className="absolute right-1/4 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-[#D9B45F]/10 to-transparent pointer-events-none z-[1] hidden lg:block" />
 
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* LEFT COLUMN: Editorial Headline & Narrative */}
-          <div className="lg:col-span-7 flex flex-col justify-center relative z-20">
+          {/* LEFT COLUMN: Editorial Hero Content */}
+          <div className="lg:col-span-8 xl:col-span-7 flex flex-col justify-center relative z-20">
             
             {/* Eyebrow */}
             <motion.div
               initial="hidden"
               animate="visible"
               variants={fadeUp(250)}
-              className="flex items-center gap-3 mb-6"
+              className="flex items-center gap-3 mb-8"
             >
               <span className="h-[1px] w-8 bg-[#D9B45F]/60" />
               <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.26em] text-[#D9B45F] uppercase">
@@ -45,145 +48,77 @@ export default function AboutHero() {
               </span>
             </motion.div>
 
-            {/* Headline */}
-            <div className="mb-6">
-              <h1 className="sr-only">We combine creativity, technology and strategy to build digital experiences that drive growth.</h1>
-
-              <motion.div
+            {/* Main Heading */}
+            <div className="mb-8">
+              <motion.h1
                 initial="hidden"
                 animate="visible"
-                variants={fadeUp(350)}
-                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
-                aria-hidden="true"
+                variants={fadeUp(400)}
+                className="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-normal leading-[1.1] tracking-tight text-[#F3EFE3] max-w-[95%]"
               >
-                We combine
-              </motion.div>
-
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp(450)}
-                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
-                aria-hidden="true"
-              >
-                creativity, technology
-              </motion.div>
-
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp(550)}
-                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
-                aria-hidden="true"
-              >
-                and strategy to build
-              </motion.div>
-
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp(650)}
-                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
-                aria-hidden="true"
-              >
-                digital experiences
-              </motion.div>
-
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp(750)}
-                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] italic font-normal"
-                aria-hidden="true"
-              >
-                that drive growth.
-              </motion.div>
+                We combine creativity, technology and strategy to build digital experiences that <span className="text-[#D9B45F]">drive growth.</span>
+              </motion.h1>
             </div>
 
             {/* Supporting Copy */}
             <motion.div
               initial="hidden"
               animate="visible"
-              variants={fadeUp(850)}
-              className="mb-10 max-w-lg"
+              variants={fadeUp(600)}
+              className="mb-10 max-w-lg space-y-4"
             >
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                We are a digital architecture studio helping ambitious businesses build strong brands, powerful websites, improve visibility and scale with smart systems.
+                Siyara Innovations is a digital technology company that brings strategy, design, technology and growth together to solve meaningful business challenges.
+              </p>
+              <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
+                We believe digital solutions work best when every part of the system is connected.
               </p>
             </motion.div>
 
-            {/* Scroll Indicator */}
+            {/* Optional Brand Statement */}
             <motion.div
               initial="hidden"
               animate="visible"
-              variants={fadeUp(950)}
+              variants={fadeUp(750)}
+              className="mb-10 flex items-center gap-4"
+            >
+              <span className="text-[10px] sm:text-[11px] font-sans font-semibold tracking-[0.2em] text-[#9D9B91]/70 uppercase">
+                BASED IN JAIPUR &middot; WORKING BEYOND BOUNDARIES
+              </span>
+            </motion.div>
+
+            {/* CTA */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp(900)}
             >
               <a
                 href="#story"
-                className="inline-flex items-center gap-2.5 text-xs font-sans font-semibold tracking-[0.2em] text-[#F3EFE3] hover:text-[#D9B45F] uppercase transition-colors group"
+                className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-[#D9B45F] text-[#070A09] text-[11px] font-sans font-bold tracking-[0.2em] uppercase hover:bg-[#E8C979] transition-colors"
               >
-                <span>OUR STORY</span>
-                <ArrowDown className="w-3.5 h-3.5 text-[#D9B45F] group-hover:translate-y-1 transition-transform" />
+                OUR STORY &rarr;
               </a>
             </motion.div>
 
           </div>
 
-          {/* RIGHT COLUMN: Architectural Digital System Composition */}
-          <div className="lg:col-span-5 relative mt-8 lg:mt-0 flex justify-center">
+          {/* RIGHT COLUMN: Technology Visualization */}
+          <div className="lg:col-span-4 xl:col-span-5 relative mt-12 lg:mt-0 flex justify-center items-center">
             <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.0, delay: 0.5, ease: easeCustom }}
-              className="relative w-full max-w-[420px] p-6 bg-[#071E18]/40 border border-[#D9B45F]/30 backdrop-blur-md overflow-hidden flex flex-col justify-between aspect-[4/4.5]"
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 1.0, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="relative w-full max-w-[420px] aspect-[3/4] rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(12,107,82,0.5)] border border-[#D9B45F]/20"
             >
-              {/* Background Linework & Glow Arc */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#0C6B52]/20 blur-3xl pointer-events-none" />
-
-              {/* Top Header Label */}
-              <div className="flex items-center justify-between pb-4 border-b border-[#D9B45F]/20 relative z-10">
-                <span className="text-[10px] font-mono font-bold tracking-[0.22em] text-[#D9B45F] uppercase">
-                  SIYARA SYSTEM ARCHITECTURE
-                </span>
-                <span className="text-[9px] font-mono text-[#9D9B91]/60">EST. 2024</span>
-              </div>
-
-              {/* Floating Architectural System Nodes */}
-              <div className="space-y-3 my-6 relative z-10">
-                {[
-                  { icon: Compass, title: 'CREATIVITY', copy: 'Editorial brand expression & art direction.', color: '#D9B45F' },
-                  { icon: Code, title: 'TECHNOLOGY', copy: 'Clean, high-performance web engineering.', color: '#0C6B52' },
-                  { icon: Layout, title: 'STRATEGY', copy: 'Systems-first positioning & growth roadmaps.', color: '#D9B45F' },
-                  { icon: TrendingUp, title: 'GROWTH', copy: 'Conversion optimization & analytics intelligence.', color: '#0C6B52' },
-                ].map((node) => {
-                  const Icon = node.icon;
-                  return (
-                    <div
-                      key={node.title}
-                      className="p-3.5 bg-[#070A09]/80 border border-[#D9B45F]/20 flex items-center gap-3.5 group hover:border-[#D9B45F]/60 transition-colors"
-                    >
-                      <div className="w-8 h-8 rounded-full border border-[#D9B45F]/30 bg-[#071E18]/60 flex items-center justify-center text-[#D9B45F] shrink-0">
-                        <Icon className="w-3.5 h-3.5 stroke-[1.75]" />
-                      </div>
-                      <div>
-                        <span className="text-[10px] font-mono font-bold tracking-[0.16em] text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors block">
-                          {node.title}
-                        </span>
-                        <span className="text-[10px] font-sans text-[#9D9B91] font-light leading-tight block">
-                          {node.copy}
-                        </span>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Bottom Footer Note */}
-              <div className="pt-3 border-t border-[#D9B45F]/20 flex items-center justify-between text-[9px] font-mono text-[#9D9B91]/60 relative z-10">
-                <span>01 · SYSTEM INTEGRATION</span>
-                <span className="text-[#D9B45F]">✦ CONNECTED</span>
-              </div>
-
+              <img
+                src="/images/about-tech-visual.jpg"
+                alt="Digital Technology Architecture"
+                className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-1000 ease-out"
+              />
+              {/* Internal shadow/gradient for blending */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#070A09] via-transparent to-[#071E18]/40 pointer-events-none" />
+              <div className="absolute inset-0 ring-1 ring-inset ring-[#D9B45F]/10 rounded-3xl pointer-events-none" />
             </motion.div>
           </div>
 

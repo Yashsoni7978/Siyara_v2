@@ -87,7 +87,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
             <span>Back to Insights</span>
           </button>
 
-          <div className="hidden sm:flex items-center gap-2 border border-[#D4AF37]/30 bg-[#063C2D]/30 px-3 py-1 text-[10px] font-mono text-[#D4AF37] uppercase tracking-widest">
+          <div className="hidden sm:flex items-center gap-2 border border-[#D4AF37]/30 bg-[#063C2D]/30 px-3 py-1 text-[10px] font-sans text-[#D4AF37] uppercase tracking-widest">
             <Bookmark className="w-3 h-3 text-[#19A878]" />
             <span>{article.category}</span>
           </div>
@@ -96,7 +96,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
         {/* Article Header Lockup */}
         <header className="max-w-4xl mb-12">
           {/* Metadata Badges */}
-          <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-[#CFC9BB]/70 mb-6">
+          <div className="flex flex-wrap items-center gap-4 text-xs font-sans text-[#CFC9BB]/70 mb-6">
             <span className="px-2.5 py-1 border border-[#D4AF37]/40 bg-[#080B0A] text-[#D4AF37] uppercase tracking-widest text-[10px]">
               {article.category}
             </span>
@@ -143,7 +143,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
 
             {/* Share Controls */}
             <div className="flex items-center gap-2">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-[#CFC9BB]/60 mr-2 hidden sm:inline">
+              <span className="text-[10px] font-sans uppercase tracking-widest text-[#CFC9BB]/60 mr-2 hidden sm:inline">
                 Share:
               </span>
               
@@ -172,7 +172,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
                 
                 {/* Toast Notification */}
                 {copied && (
-                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#063C2D] border border-[#D4AF37]/40 text-[#F3EFE4] text-[10px] font-mono px-2.5 py-1 shadow-lg">
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#063C2D] border border-[#D4AF37]/40 text-[#F3EFE4] text-[10px] font-sans px-2.5 py-1 shadow-lg">
                     Link copied
                   </div>
                 )}
@@ -199,11 +199,11 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
             
             <div className="flex items-center gap-2 mb-3">
               <Sparkles className="w-4 h-4 text-[#D4AF37]" />
-              <h3 className="font-mono text-xs font-semibold tracking-widest text-[#D4AF37] uppercase">
+              <h3 className="font-sans text-xs font-semibold tracking-widest text-[#D4AF37] uppercase">
                 Executive Summary
               </h3>
             </div>
-            <p className="font-sans text-sm sm:text-base text-[#F3EFE4]/90 font-normal leading-relaxed italic">
+            <p className="font-sans text-sm sm:text-base text-[#F3EFE4]/90 font-normal leading-relaxed ">
               "{article.executiveSummary}"
             </p>
           </div>
@@ -217,7 +217,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
             {/* Table of Contents */}
             {article.sections && article.sections.length > 0 && (
               <div className="sticky top-28 p-6 border border-[#D4AF37]/20 bg-[#063C2D]/15 backdrop-blur-sm">
-                <h4 className="font-mono text-xs font-semibold uppercase tracking-widest text-[#D4AF37] mb-4 pb-2 border-b border-[#D4AF37]/15">
+                <h4 className="font-sans text-xs font-semibold uppercase tracking-widest text-[#D4AF37] mb-4 pb-2 border-b border-[#D4AF37]/15">
                   Table of Contents
                 </h4>
                 <nav className="space-y-3 font-sans text-xs">
@@ -237,7 +237,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
             {/* Key Takeaways Card */}
             {article.keyTakeaways && article.keyTakeaways.length > 0 && (
               <div className="p-6 border border-[#19A878]/30 bg-[#080B0A] relative">
-                <h4 className="font-mono text-xs font-semibold uppercase tracking-widest text-[#19A878] mb-4 pb-2 border-b border-[#19A878]/20 flex items-center gap-2">
+                <h4 className="font-sans text-xs font-semibold uppercase tracking-widest text-[#19A878] mb-4 pb-2 border-b border-[#19A878]/20 flex items-center gap-2">
                   <Bookmark className="w-3.5 h-3.5 text-[#19A878]" />
                   Key Takeaways
                 </h4>
@@ -289,7 +289,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
                       className="w-full h-auto object-cover max-h-[480px]"
                     />
                     {section.imageCaption && (
-                      <figcaption className="p-3 text-xs font-mono text-[#CFC9BB]/70 border-t border-[#D4AF37]/15 bg-[#080B0A]/90">
+                      <figcaption className="p-3 text-xs font-sans text-[#CFC9BB]/70 border-t border-[#D4AF37]/15 bg-[#080B0A]/90">
                         {section.imageCaption}
                       </figcaption>
                     )}
@@ -298,7 +298,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
 
                 {/* Optional Pull Quote */}
                 {section.quote && (
-                  <blockquote className="my-8 p-6 border-l-2 border-[#D4AF37] bg-[#063C2D]/30 italic font-serif text-lg text-[#F3EFE4] leading-relaxed">
+                  <blockquote className="my-8 p-6 border-l-2 border-[#D4AF37] bg-[#063C2D]/30 font-serif text-lg text-[#F3EFE4] leading-relaxed">
                     "{section.quote}"
                   </blockquote>
                 )}
@@ -308,7 +308,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
             {/* Tags Lockup */}
             {article.tags && (
               <div className="pt-8 border-t border-[#D4AF37]/20 flex flex-wrap items-center gap-2">
-                <span className="text-xs font-mono uppercase text-[#CFC9BB]/60 mr-2">Tags:</span>
+                <span className="text-xs font-sans uppercase text-[#CFC9BB]/60 mr-2">Tags:</span>
                 {article.tags.map((tag, idx) => (
                   <span key={idx} className="px-3 py-1 border border-[#D4AF37]/20 bg-[#080B0A] text-[#CFC9BB]/80 text-xs font-sans">
                     #{tag}
@@ -327,7 +327,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
             className="w-20 h-20 rounded-full border-2 border-[#D4AF37]/40 object-cover shrink-0"
           />
           <div>
-            <div className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] mb-1">
+            <div className="text-xs font-sans uppercase tracking-widest text-[#D4AF37] mb-1">
               Written By
             </div>
             <h3 className="font-serif text-xl text-[#F3EFE4] font-normal mb-1">
@@ -347,7 +347,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
           <section className="mt-28 pt-16 border-t border-[#D4AF37]/20">
             <div className="flex items-center justify-between mb-10">
               <div>
-                <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37]">
+                <span className="text-xs font-sans uppercase tracking-widest text-[#D4AF37]">
                   RECOMMENDED READING
                 </span>
                 <h3 className="font-serif text-2xl sm:text-3xl font-light text-[#F3EFE4] mt-1">

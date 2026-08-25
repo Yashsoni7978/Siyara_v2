@@ -39,7 +39,7 @@ export default function FeaturedArticle({ article, onSelectArticle }) {
             <div className="absolute inset-0 bg-radial from-transparent via-transparent to-[#080B0A]/80" />
             
             {/* Fine Geometric Overlay Line */}
-            <div className="absolute top-6 left-6 border border-[#D4AF37]/30 bg-[#080B0A]/80 backdrop-blur-md px-3 py-1 text-[10px] font-mono tracking-widest text-[#D4AF37] uppercase flex items-center gap-1.5">
+            <div className="absolute top-6 left-6 border border-[#D4AF37]/30 bg-[#080B0A]/80 backdrop-blur-md px-3 py-1 text-[10px] font-sans tracking-widest text-[#D4AF37] uppercase flex items-center gap-1.5">
               <Bookmark className="w-3 h-3 text-[#19A878]" />
               <span>{article.category}</span>
             </div>
@@ -50,7 +50,7 @@ export default function FeaturedArticle({ article, onSelectArticle }) {
             <div>
               {/* Category & Badge */}
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-[11px] font-mono font-semibold tracking-[0.2em] text-[#D4AF37] uppercase">
+                <span className="text-[11px] font-sans font-semibold tracking-[0.2em] text-[#D4AF37] uppercase">
                   FEATURED INSIGHT
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#19A878]" />
@@ -89,7 +89,7 @@ export default function FeaturedArticle({ article, onSelectArticle }) {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-1 text-xs font-mono text-[#D4AF37]">
+                <div className="flex items-center gap-1 text-xs font-sans text-[#D4AF37]">
                   <Clock className="w-3.5 h-3.5" />
                   <span>{article.readTime}</span>
                 </div>

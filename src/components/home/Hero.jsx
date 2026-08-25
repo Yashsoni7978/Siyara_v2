@@ -99,7 +99,7 @@ export default function Hero() {
           maskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
           WebkitMaskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
         }}
-        className="absolute -right-[4%] -bottom-[4%] top-1/2 -translate-y-1/2 w-full lg:w-[66%] xl:w-[70%] h-[98%] pointer-events-none z-[3] flex items-center justify-end overflow-hidden"
+        className="absolute -right-[4%] -bottom-[4%] top-1/2 -translate-y-1/2 w-full lg:w-[66%] xl:w-[70%] h-[98%] pointer-events-none z-[3] hidden lg:flex items-center justify-end overflow-hidden"
       >
         <video
           ref={videoRef}
@@ -136,23 +136,23 @@ export default function Hero() {
 
             {/* Headline */}
             <div className="mb-6">
-              <h1 className="sr-only">WE ARCHITECT BRANDS THAT LEAD.</h1>
+              <h1 className="sr-only">WE BUILD BRANDS THAT DOMINATE.</h1>
               
               <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(500)}
-                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-[#F3EFE3]"
+                className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-[#F3EFE3]"
                 aria-hidden="true"
               >
-                WE ARCHITECT
+                WE BUILD
               </motion.div>
 
               <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(620)}
-                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-[#F3EFE3]"
+                className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-[#F3EFE3]"
                 aria-hidden="true"
               >
                 BRANDS THAT
@@ -162,10 +162,10 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(700)}
-                className="font-serif text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
+                className="font-serif text-[3.25rem] sm:text-7xl lg:text-8xl xl:text-9xl font-normal leading-[0.94] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
                 aria-hidden="true"
               >
-                LEAD.
+                DOMINATE.
               </motion.div>
             </div>
 
@@ -209,17 +209,17 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* BOTTOM LEFT: Scroll Indicator Line */}
+      {/* BOTTOM RIGHT: Scroll Indicator Line */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6 }}
-        className="absolute bottom-8 left-8 sm:left-12 z-20 flex flex-col items-center gap-3 hidden sm:flex"
+        className="absolute bottom-8 right-8 sm:right-12 z-20 flex flex-col items-center gap-3 hidden sm:flex"
       >
         <div className="w-[1px] h-10 bg-gradient-to-b from-[#D9B45F] to-transparent relative">
           <div className="w-1.5 h-1.5 bg-[#D9B45F] rounded-full absolute top-0 -left-[2.5px] animate-ping" />
         </div>
-        <span className="text-[9px] font-mono tracking-[0.24em] text-[#9D9B91]/60 uppercase">
+        <span className="text-[9px] font-sans tracking-[0.24em] text-[#9D9B91]/60 uppercase">
           SCROLL
         </span>
       </motion.div>

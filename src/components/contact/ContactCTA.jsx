@@ -28,7 +28,7 @@ export default function ContactCTA() {
           className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.96] tracking-tight mb-6 max-w-3xl mx-auto"
         >
           HAVE AN IDEA? <br />
-          LET'S GIVE IT <span className="text-[#D9B45F] italic font-normal">A SYSTEM.</span>
+          LET'S GIVE IT <span className="text-[#D9B45F] font-normal">A SYSTEM.</span>
         </motion.h2>
 
         {/* Supporting Copy */}

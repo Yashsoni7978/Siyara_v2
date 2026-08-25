@@ -77,7 +77,7 @@ export default function SelectedWork() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-12"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
             02
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
@@ -99,7 +99,7 @@ export default function SelectedWork() {
                 exit={{ opacity: 0, x: 16 }}
                 transition={{ duration: 0.4 }}
               >
-                <div className="text-xs font-mono text-[#B9923F] font-bold tracking-widest mb-3">
+                <div className="text-xs font-sans text-[#B9923F] font-bold tracking-widest mb-3">
                   {currentProject.id} / 04
                 </div>
 
@@ -159,7 +159,7 @@ export default function SelectedWork() {
                       <span className="w-2 h-2 rounded-full bg-[#FFBD2E]/80" />
                       <span className="w-2 h-2 rounded-full bg-[#27C93F]/80" />
                     </div>
-                    <div className="text-[9px] font-mono text-[#9D9B91]/50">
+                    <div className="text-[9px] font-sans text-[#9D9B91]/50">
                       {currentProject.title.toLowerCase().replace(/\s+/g, '')}.com
                     </div>
                     <div className="w-6" />
@@ -223,7 +223,7 @@ export default function SelectedWork() {
                     className="flex items-center gap-4 text-left group focus:outline-none py-1"
                   >
                     <span
-                      className={`text-xs font-mono font-semibold transition-colors duration-300 ${
+                      className={`text-xs font-sans font-semibold transition-colors duration-300 ${
                         isActive ? 'text-[#B9923F]' : 'text-[#101613]/40 group-hover:text-[#101613]'
                       }`}
                     >

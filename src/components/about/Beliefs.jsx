@@ -51,7 +51,7 @@ export default function Beliefs() {
           transition={{ duration: 0.6, ease: easeCustom }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             03
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
@@ -69,7 +69,7 @@ export default function Beliefs() {
             transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
             className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[1.04] mb-6"
           >
-            We saw great businesses get lost in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] italic font-normal">disconnected digital experiences.</span>
+            We saw great businesses get lost in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">disconnected digital experiences.</span>
           </motion.h2>
 
           <motion.p

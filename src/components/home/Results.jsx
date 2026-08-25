@@ -67,8 +67,8 @@ export default function Results() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
-            08
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
+            06
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
@@ -87,14 +87,14 @@ export default function Results() {
           >
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[0.98] mb-4">
               Real outcomes. <br />
-              Measurable <span className="text-[#0B5E49] italic font-normal">impact.</span>
+              Measurable <span className="text-[#0B5E49] font-normal">impact.</span>
             </h2>
             <p className="font-sans text-sm text-[#101613]/70 font-light leading-relaxed mb-6">
               We design and engineer scalable digital systems engineered to elevate brands, increase visibility, and drive long-term business value.
             </p>
             <a
               href="#work"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 shadow-lg group"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 shadow-lg group rounded-full"
             >
               <span>EXPLORE SELECTED WORK</span>
               <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -141,7 +141,7 @@ export default function Results() {
 
                     {/* Divider & Category */}
                     <div className="pt-3 border-t border-[#B9923F]/20">
-                      <span className="text-[9px] font-sans tracking-[0.16em] text-[#B9923F] uppercase font-mono font-semibold">
+                      <span className="text-[9px] font-sans tracking-[0.16em] text-[#B9923F] uppercase font-sans font-semibold">
                         {item.category}
                       </span>
                     </div>

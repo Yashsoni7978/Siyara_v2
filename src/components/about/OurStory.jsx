@@ -22,7 +22,7 @@ export default function OurStory() {
           transition={{ duration: 0.6, ease: easeCustom }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
             02
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
@@ -42,7 +42,7 @@ export default function OurStory() {
               transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
               className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.08] tracking-tight text-[#101613] mb-8"
             >
-              Siyara Innovations was born out of a simple belief that great businesses deserve a digital presence that <span className="italic font-serif text-[#0B5E49]">truly</span> represents them.
+              Siyara Innovations was born out of a simple belief that great businesses deserve a digital presence that <span className="font-serif text-[#0B5E49]">truly</span> represents them.
             </motion.h2>
 
             <motion.div
@@ -70,30 +70,30 @@ export default function OurStory() {
               transition={{ duration: 0.8, delay: 0.2, ease: easeCustom }}
               className="relative mx-auto max-w-md lg:max-w-none"
             >
-              <div className="relative grid grid-cols-12 gap-4 items-center">
+              <div className="relative grid grid-cols-12 items-center">
                 
-                {/* Main Dark Studio Environment Image (Left 8 Cols) */}
-                <div className="col-span-8 relative z-10 bg-[#070A09] border border-[#B9923F]/30 p-1 shadow-xl">
-                  <div className="relative aspect-[4/5] overflow-hidden bg-[#071E18]">
+                {/* Main Dark Studio Environment Image */}
+                <div className="col-start-1 col-end-10 row-start-1 relative z-10 bg-[#070A09] border border-[#B9923F]/30 p-1 shadow-xl">
+                  <div className="relative aspect-[4/5] sm:aspect-[4/4.5] overflow-hidden bg-[#071E18]">
                     <img
                       src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
                       alt="Siyara Studio workspace"
                       className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#070A09]/90 via-transparent to-transparent" />
-                    <div className="absolute bottom-4 left-4 text-[10px] font-mono text-[#D9B45F] tracking-widest uppercase">
+                    <div className="absolute bottom-4 left-4 text-[10px] font-sans text-[#D9B45F] tracking-widest uppercase">
                       SIYARA WORKSPACE
                     </div>
                   </div>
                 </div>
 
-                {/* Layered Deep Emerald Card with Gold "S" Watermark (Right 6 Cols, overlapping) */}
-                <div className="col-span-6 -ml-12 relative z-20 bg-[#071E18] border border-[#D9B45F]/40 p-8 shadow-2xl flex flex-col justify-between aspect-square">
+                {/* Layered Deep Emerald Card with Gold "S" Watermark (Overlapping) */}
+                <div className="col-start-7 col-end-13 row-start-1 mt-32 relative z-20 bg-[#071E18] border border-[#D9B45F]/40 p-6 sm:p-8 shadow-[0_20px_40px_rgba(7,10,9,0.5)] flex flex-col justify-between aspect-square hover:-translate-y-2 transition-transform duration-500">
                   <div className="font-serif text-6xl text-[#D9B45F] opacity-40 font-bold leading-none">
                     S
                   </div>
                   <div className="text-right">
-                    <div className="text-[10px] font-mono text-[#F3EFE3] tracking-widest uppercase mb-1">
+                    <div className="text-[10px] font-sans text-[#F3EFE3] tracking-widest uppercase mb-1">
                       SIYARA✦
                     </div>
                     <div className="text-[9px] font-sans text-[#D9B45F] tracking-widest uppercase font-semibold">
@@ -105,7 +105,7 @@ export default function OurStory() {
               </div>
 
               {/* Gold Script Callout "Built Different." at bottom right */}
-              <div className="absolute -bottom-6 right-4 z-30 font-serif italic text-4xl sm:text-5xl text-[#B9923F] tracking-wide pointer-events-none">
+              <div className="absolute -bottom-6 right-4 z-30 font-serif text-4xl sm:text-5xl text-[#B9923F] tracking-wide pointer-events-none">
                 Built Different.
               </div>
 

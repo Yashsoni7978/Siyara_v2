@@ -70,8 +70,8 @@ export default function Industries() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
-            09
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
+            07
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
@@ -89,7 +89,7 @@ export default function Industries() {
         >
           <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight">
             BUILT FOR <br />
-            AMBITIOUS <span className="text-[#D9B45F] italic font-normal">INDUSTRIES.</span>
+            AMBITIOUS <span className="text-[#D9B45F] font-normal">INDUSTRIES.</span>
           </h2>
         </motion.div>
 
@@ -123,7 +123,7 @@ export default function Industries() {
                   <div className="flex items-center justify-between gap-4">
                     <div className="flex items-baseline gap-4 sm:gap-6">
                       <span
-                        className={`text-xs font-mono font-medium transition-colors duration-300 ${
+                        className={`text-xs font-sans font-medium transition-colors duration-300 ${
                           isHovered ? 'text-[#D9B45F]' : 'text-[#9D9B91]/50'
                         }`}
                       >
@@ -196,7 +196,7 @@ export default function Industries() {
 
                   {/* Overlay Info Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                    <span className="text-[10px] font-mono tracking-[0.2em] text-[#D9B45F] uppercase mb-2 block font-bold">
+                    <span className="text-[10px] font-sans tracking-[0.2em] text-[#D9B45F] uppercase mb-2 block font-bold">
                       {activeIndustry.tag}
                     </span>
                     <h4 className="font-serif text-2xl text-[#F3EFE3] mb-2 font-normal">

@@ -85,7 +85,7 @@ export default function ServicesApplications() {
           transition={{ duration: 0.6, ease: easeCustom }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             07
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
@@ -104,7 +104,7 @@ export default function ServicesApplications() {
         >
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98]">
             WHERE THE SYSTEM <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] italic font-normal">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">
               IS APPLIED.
             </span>
           </h2>
@@ -131,7 +131,7 @@ export default function ServicesApplications() {
                   }`}
                 >
                   <div className="flex items-center gap-4">
-                    <span className={`text-xs font-mono font-bold ${isActive ? 'text-[#D9B45F]' : 'text-[#9D9B91]/60'}`}>
+                    <span className={`text-xs font-sans font-bold ${isActive ? 'text-[#D9B45F]' : 'text-[#9D9B91]/60'}`}>
                       {cat.id}
                     </span>
                     <Icon className={`w-4 h-4 ${isActive ? 'text-[#D9B45F]' : 'text-[#9D9B91]'}`} />
@@ -161,14 +161,14 @@ export default function ServicesApplications() {
 
                 <div>
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="text-xs font-mono font-bold tracking-widest text-[#D9B45F]">
+                    <span className="text-xs font-sans font-bold tracking-widest text-[#D9B45F]">
                       SECTOR APPLICATION {currentCategory.id} / 08
                     </span>
                     <span className="h-[1px] flex-grow bg-[#D9B45F]/20" />
                   </div>
 
                   <h3 className="font-serif text-3xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight mb-4">
-                    {currentCategory.name} <span className="text-[#D9B45F] italic font-normal">SYSTEM.</span>
+                    {currentCategory.name} <span className="text-[#D9B45F] font-normal">SYSTEM.</span>
                   </h3>
 
                   <p className="font-sans text-sm sm:text-base text-[#D9B45F] font-medium leading-relaxed mb-6">

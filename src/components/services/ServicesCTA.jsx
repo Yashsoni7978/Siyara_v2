@@ -27,7 +27,7 @@ export default function ServicesCTA() {
           transition={{ duration: 0.6, ease: easeCustom }}
           className="inline-flex items-center gap-3 mb-8"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             08
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
@@ -45,7 +45,7 @@ export default function ServicesCTA() {
           className="font-serif text-4xl sm:text-6xl lg:text-8xl text-[#F3EFE3] font-normal leading-[0.96] tracking-tight mb-8 max-w-4xl mx-auto"
         >
           READY TO BUILD <br />
-          SOMETHING <span className="text-[#D9B45F] italic font-normal">BETTER?</span>
+          SOMETHING <span className="text-[#D9B45F] font-normal">BETTER?</span>
         </motion.h2>
 
         {/* Subcopy */}

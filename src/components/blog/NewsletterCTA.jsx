@@ -32,13 +32,13 @@ export default function NewsletterCTA() {
           <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#D4AF37]" />
 
           {/* Eyebrow Icon */}
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-none border border-[#D4AF37]/40 bg-[#080B0A] text-[#D4AF37] mb-6">
-            <Mail className="w-5 h-5 text-[#D4AF37]" />
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-[#D4AF37]/40 bg-[#080B0A] text-[#D4AF37] mb-6">
+            <Mail className="w-5 h-5 stroke-[1.5]" />
           </div>
 
           {/* Main Heading */}
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-[#F3EFE4] mb-4 leading-tight">
-            Stay ahead of the <span className="italic text-gold-gradient">digital curve.</span>
+            Stay ahead of the <span className="text-gold-gradient">digital curve.</span>
           </h2>
 
           {/* Supporting Copy */}
@@ -64,11 +64,11 @@ export default function NewsletterCTA() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full bg-[#080B0A] border border-[#D4AF37]/30 focus:border-[#D4AF37] text-[#F3EFE4] placeholder-[#CFC9BB]/50 text-xs font-sans px-4 py-3.5 outline-none transition-all duration-300 rounded-none"
+                className="w-full bg-[#080B0A] border border-[#D4AF37]/30 focus:border-[#D4AF37] text-[#F3EFE4] placeholder-[#CFC9BB]/50 text-xs font-sans px-4 py-3.5 outline-none transition-all duration-300 rounded-full"
               />
               <button
                 type="submit"
-                className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-[#D4AF37] bg-[#D4AF37] hover:bg-[#E5C378] text-[#080B0A] font-semibold text-xs tracking-[0.16em] uppercase transition-all duration-300 shadow-lg"
+                className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-[#D4AF37] bg-[#D4AF37] hover:bg-[#E5C378] text-[#080B0A] font-semibold text-xs tracking-[0.16em] uppercase transition-all duration-300 shadow-lg rounded-full"
               >
                 <span>SUBSCRIBE</span>
                 <ArrowRight className="w-3.5 h-3.5" />

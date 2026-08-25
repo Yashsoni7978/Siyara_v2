@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useEffect } from 'react';
 import SectionConnector from '../components/common/SectionConnector.jsx';
@@ -17,43 +17,43 @@ export default function About() {
 
   return (
     <div className="bg-[#070A09] text-[#F3EFE3] selection:bg-[#071E18] selection:text-[#D9B45F]">
-      {/* 01 — HERO / WHY SIYARA EXISTS (DARK) */}
+      {/* 01 â€” HERO / WHY SIYARA EXISTS (DARK) */}
       <AboutHero />
 
-      {/* CONNECTOR 01: DARK → IVORY */}
+      {/* CONNECTOR 01: DARK â†’ IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 02 — THE ORIGIN (IVORY) */}
+      {/* 02 â€” THE ORIGIN (IVORY) */}
       <OurStory />
 
-      {/* CONNECTOR 02: IVORY → DARK */}
+      {/* CONNECTOR 02: IVORY â†’ DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 03 — THE BELIEF / PHILOSOPHY (DARK) */}
+      {/* 03 â€” THE BELIEF / PHILOSOPHY (DARK) */}
       <Beliefs />
 
-      {/* CONNECTOR 03: DARK → IVORY */}
+      {/* CONNECTOR 03: DARK â†’ IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 04 — PROOF & METRICS (IVORY) */}
+      {/* 04 â€” PROOF & METRICS (IVORY) */}
       <Numbers />
 
-      {/* CONNECTOR 04: IVORY → DARK */}
+      {/* CONNECTOR 04: IVORY â†’ DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 05 — METHODOLOGY (DARK) */}
+      {/* 05 â€” METHODOLOGY (DARK) */}
       <Approach />
 
-      {/* CONNECTOR 05: DARK → DARK */}
+      {/* CONNECTOR 05: DARK â†’ DARK */}
       <SectionConnector fromDark={true} />
 
-      {/* 06 — ROOTED IN JAIPUR (DARK) */}
+      {/* 06 â€” ROOTED IN JAIPUR (DARK) */}
       <Studio />
 
-      {/* CONNECTOR 06: DARK → DARK */}
+      {/* CONNECTOR 06: DARK â†’ DARK */}
       <SectionConnector fromDark={true} />
 
-      {/* 07 — FINAL PHILOSOPHY & CTA (DARK) */}
+      {/* 07 â€” FINAL PHILOSOPHY & CTA (DARK) */}
       <AboutCTA />
     </div>
   );

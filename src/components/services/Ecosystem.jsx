@@ -63,7 +63,7 @@ export default function Ecosystem() {
           transition={{ duration: 0.6, ease: easeCustom }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             03
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
@@ -83,7 +83,7 @@ export default function Ecosystem() {
           >
             <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight">
               ALL THE PIECES. <br />
-              ONE <span className="text-[#D9B45F] italic font-normal">POWERFUL SYSTEM.</span>
+              ONE <span className="text-[#D9B45F] font-normal">POWERFUL SYSTEM.</span>
             </h2>
           </motion.div>
 

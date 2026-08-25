@@ -32,7 +32,6 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'HOME', href: '/', id: 'home' },
-    { name: 'WORK', href: '/#work', id: 'work' },
     { name: 'SERVICES', href: '/services', id: 'services' },
     { name: 'ABOUT', href: '/about', id: 'about' },
     { name: 'INSIGHTS', href: '/blog', id: 'blog' },
@@ -59,8 +58,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#080B0A]/90 backdrop-blur-md border-b border-[#D4AF37]/15 py-4 shadow-2xl'
-          : 'bg-transparent py-6'
+          ? 'bg-[#080B0A]/90 backdrop-blur-md border-b border-[#D4AF37]/15 py-3 shadow-2xl'
+          : 'bg-transparent py-4'
       }`}
     >
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
@@ -68,19 +67,22 @@ export default function Navbar() {
         <Link
           href="/"
           onClick={(e) => handleLinkClick(e, { id: 'home', href: '/' })}
-          className="flex flex-col group focus:outline-none"
+          className="flex items-center gap-3 group focus:outline-none -ml-2 sm:-ml-6"
         >
-          <div className="flex items-center gap-1.5">
-            <span className="font-serif text-xl sm:text-2xl font-bold tracking-[0.2em] text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors">
-              SIYARA
+          <img 
+            src="/logo.png" 
+            alt="Siyara Innovations Emblem" 
+            className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            style={{ mixBlendMode: 'screen', filter: 'brightness(1.1)' }}
+          />
+          <div className="flex flex-col">
+            <span className="font-serif text-lg sm:text-xl font-normal tracking-[0.15em] text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors uppercase">
+              SIYARA INNOVATIONS
             </span>
-            <span className="text-[#D9B45F] text-xs font-bold group-hover:rotate-45 transition-transform duration-300">
-              ✦
+            <span className="text-[8px] sm:text-[9px] tracking-[0.25em] text-[#9D9B91] font-medium mt-0.5 uppercase">
+              Digital Architecture Studio
             </span>
           </div>
-          <span className="text-[9px] sm:text-[10px] tracking-[0.28em] text-[#9D9B91] font-medium -mt-1 uppercase">
-            Digital Architecture Studio
-          </span>
         </Link>
 
         {/* Desktop Navigation Links */}

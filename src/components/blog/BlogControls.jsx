@@ -39,7 +39,7 @@ export default function BlogControls({
           {/* Right Controls: Search + Results Counter */}
           <div className="flex items-center gap-4 w-full md:w-auto shrink-0">
             {typeof totalResults === 'number' && (
-              <span className="hidden sm:inline-block font-mono text-[11px] uppercase tracking-widest text-[#D4AF37]/80">
+              <span className="hidden sm:inline-block font-sans text-[11px] uppercase tracking-widest text-[#D4AF37]/80">
                 {totalResults} {totalResults === 1 ? 'Insight' : 'Insights'}
               </span>
             )}
@@ -53,7 +53,7 @@ export default function BlogControls({
                   value={searchQuery}
                   onChange={(e) => onSearchChange(e.target.value)}
                   placeholder="Search insights..."
-                  className="w-full bg-[#063C2D]/20 border border-[#D4AF37]/25 focus:border-[#D4AF37] text-[#F3EFE4] placeholder-[#CFC9BB]/50 text-xs font-sans pl-10 pr-9 py-2.5 outline-none transition-all duration-300 rounded-none"
+                  className="w-full bg-[#063C2D]/20 border border-[#D4AF37]/25 focus:border-[#D4AF37] text-[#F3EFE4] placeholder-[#CFC9BB]/50 text-xs font-sans pl-10 pr-9 py-2.5 outline-none transition-all duration-300 rounded-full"
                 />
                 {searchQuery && (
                   <button

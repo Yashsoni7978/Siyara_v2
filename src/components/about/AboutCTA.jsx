@@ -31,7 +31,7 @@ export default function AboutCTA() {
           className="font-serif text-4xl sm:text-6xl lg:text-8xl text-[#F3EFE3] font-normal leading-[0.96] tracking-tight mb-6 max-w-4xl mx-auto"
         >
           LET'S BUILD SOMETHING <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] italic font-normal">EXTRAORDINARY</span> TOGETHER.
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">EXTRAORDINARY</span> TOGETHER.
         </motion.h2>
 
         {/* Supporting Copy */}

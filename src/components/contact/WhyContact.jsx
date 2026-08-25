@@ -68,7 +68,7 @@ export default function WhyContact() {
               className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE4] font-normal leading-[1.04] tracking-tight"
             >
               Your Goals. <br />
-              Our <span className="text-[#19A878] italic">Commitment.</span>
+              Our <span className="text-[#19A878] ">Commitment.</span>
             </motion.h2>
           </div>
 
@@ -121,7 +121,7 @@ export default function WhyContact() {
                     {item.title}
                   </h3>
                   
-                  <span className="text-[10px] font-mono text-[#D4AF37] block mb-3">
+                  <span className="text-[10px] font-sans text-[#D4AF37] block mb-3">
                     {item.subtitle}
                   </span>
 

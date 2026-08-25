@@ -34,7 +34,7 @@ export default function ArticleCard({ article, index = 0, onSelectArticle }) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#080B0A] via-[#080B0A]/20 to-transparent" />
         
         {/* Category Pill Tag */}
-        <div className="absolute top-4 left-4 border border-[#D4AF37]/30 bg-[#080B0A]/85 backdrop-blur-md px-2.5 py-1 text-[9px] font-mono tracking-widest text-[#D4AF37] uppercase">
+        <div className="absolute top-4 left-4 border border-[#D4AF37]/30 bg-[#080B0A]/85 backdrop-blur-md px-2.5 py-1 text-[9px] font-sans tracking-widest text-[#D4AF37] uppercase">
           {article.category}
         </div>
       </div>
@@ -45,7 +45,7 @@ export default function ArticleCard({ article, index = 0, onSelectArticle }) {
           {/* Metadata Row */}
           <div className="flex items-center justify-between gap-2 text-[11px] font-sans text-[#CFC9BB]/60 mb-3">
             <span>{article.date}</span>
-            <div className="flex items-center gap-1 font-mono text-[#D4AF37]">
+            <div className="flex items-center gap-1 font-sans text-[#D4AF37]">
               <Clock className="w-3 h-3" />
               <span>{article.readTime}</span>
             </div>
@@ -75,7 +75,7 @@ export default function ArticleCard({ article, index = 0, onSelectArticle }) {
             </span>
           </div>
 
-          <div className="w-8 h-8 rounded-none border border-[#D4AF37]/30 bg-[#063C2D]/20 group-hover:bg-[#D4AF37] group-hover:text-[#080B0A] text-[#F3EFE4] flex items-center justify-center transition-all duration-300">
+          <div className="w-8 h-8 rounded-full border border-[#D4AF37]/30 bg-[#063C2D]/20 group-hover:bg-[#D4AF37] group-hover:text-[#080B0A] text-[#F3EFE4] flex items-center justify-center transition-all duration-300">
             <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </div>
         </div>

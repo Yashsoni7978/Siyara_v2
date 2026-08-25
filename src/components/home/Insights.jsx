@@ -20,7 +20,7 @@ export default function Insights() {
         
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-10">
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
             10
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
@@ -34,7 +34,7 @@ export default function Insights() {
           <div className="lg:col-span-8">
             <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#101613] font-normal leading-[0.98] tracking-tight">
               THINKING BEYOND <br />
-              THE <span className="text-[#0B5E49] italic font-normal">WEBSITE.</span>
+              THE <span className="text-[#0B5E49] font-normal">WEBSITE.</span>
             </h2>
           </div>
           <div className="lg:col-span-4 flex lg:justify-end flex-col items-start lg:items-end">
@@ -61,7 +61,7 @@ export default function Insights() {
           >
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-[10px] font-mono tracking-[0.2em] text-[#0B5E49] uppercase font-bold">
+                <span className="text-[10px] font-sans tracking-[0.2em] text-[#0B5E49] uppercase font-bold">
                   {leadArticle.category}
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0B5E49]" />
@@ -114,7 +114,7 @@ export default function Insights() {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#ECE7D8] via-transparent to-transparent" />
                   </div>
 
-                  <span className="text-[9px] font-mono tracking-[0.2em] text-[#0B5E49] uppercase mb-2 block group-hover:text-[#B9923F] transition-colors font-bold">
+                  <span className="text-[9px] font-sans tracking-[0.2em] text-[#0B5E49] uppercase mb-2 block group-hover:text-[#B9923F] transition-colors font-bold">
                     {article.category}
                   </span>
 

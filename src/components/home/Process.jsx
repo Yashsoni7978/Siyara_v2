@@ -61,8 +61,8 @@ export default function Process() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
-            07
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
+            05
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
@@ -81,7 +81,7 @@ export default function Process() {
           >
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98] mb-4">
               Our proven 6-step <br />
-              process to <span className="text-[#D9B45F] italic font-normal">success.</span>
+              process to <span className="text-[#D9B45F] font-normal">success.</span>
             </h2>
             <p className="font-sans text-sm sm:text-base text-[#9D9B91] font-light max-w-lg leading-relaxed">
               A structured approach that ensures clarity, quality and measurable results at every step.
@@ -97,7 +97,7 @@ export default function Process() {
           >
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-7 py-4 border border-[#D9B45F] bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase transition-all duration-300 shadow-lg group"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-[#D9B45F] bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase transition-all duration-300 shadow-lg group rounded-full"
             >
               <span>VIEW DETAILED PROCESS</span>
               <ArrowUpRight className="w-4 h-4 text-[#101613] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -161,7 +161,7 @@ export default function Process() {
                   </div>
 
                   {/* Step Number */}
-                  <span className="text-xs font-mono text-[#D9B45F] font-medium tracking-widest mb-1">
+                  <span className="text-xs font-sans text-[#D9B45F] font-medium tracking-widest mb-1">
                     {step.id}
                   </span>
 

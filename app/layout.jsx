@@ -1,6 +1,7 @@
 import '../src/index.css';
 import Navbar from '../src/components/layout/Navbar';
 import Footer from '../src/components/home/Footer';
+import FloatingContact from '../src/components/layout/FloatingContact';
 import CursorSpotlight from '../src/components/common/CursorSpotlight';
 import { Cormorant_Garamond, Manrope } from 'next/font/google';
 
@@ -113,10 +114,13 @@ export default function RootLayout({ children }) {
         {/* Shared Navbar */}
         <Navbar />
 
-        {children}
+        <main className="min-h-screen">
+          {children}
+        </main>
 
         {/* Shared Footer */}
         <Footer />
+        <FloatingContact />
       </body>
     </html>
   );

@@ -34,7 +34,7 @@ export default function ServicesIndustries() {
           transition={{ duration: 0.6, ease: easeCustom }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#B9923F]">
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
             06
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
@@ -53,7 +53,7 @@ export default function ServicesIndustries() {
         >
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98]">
             EIGHT DISCIPLINE <br />
-            <span className="text-[#0B5E49] italic font-normal">SPECIALIST SYSTEM.</span>
+            <span className="text-[#0B5E49] font-normal">SPECIALIST SYSTEM.</span>
           </h2>
         </motion.div>
 
@@ -78,7 +78,7 @@ export default function ServicesIndustries() {
               className="p-6 bg-[#ECE7D8] border border-[#B9923F]/30 hover:border-[#0B5E49] transition-all duration-300 group shadow-sm flex flex-col justify-between"
             >
               <div>
-                <span className="text-[10px] font-mono font-bold text-[#B9923F] tracking-widest block mb-2">
+                <span className="text-[10px] font-sans font-bold text-[#B9923F] tracking-widest block mb-2">
                   {item.id} / 08
                 </span>
                 <h3 className="font-sans text-sm font-bold tracking-[0.16em] uppercase text-[#101613] group-hover:text-[#0B5E49] transition-colors mb-2">

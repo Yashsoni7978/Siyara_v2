@@ -23,7 +23,7 @@ export default function Studio() {
           transition={{ duration: 0.6, ease: easeCustom }}
           className="flex items-center gap-3 mb-12"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             06
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
@@ -51,7 +51,7 @@ export default function Studio() {
                   className="w-full h-full object-cover opacity-70 mix-blend-luminosity hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#070A09] via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 flex items-center gap-2 text-[10px] font-mono text-[#D9B45F] tracking-widest uppercase bg-[#070A09]/80 px-3 py-1.5 border border-[#D9B45F]/30 backdrop-blur-md">
+                <div className="absolute bottom-4 left-4 flex items-center gap-2 text-[10px] font-sans text-[#D9B45F] tracking-widest uppercase bg-[#070A09]/80 px-3 py-1.5 border border-[#D9B45F]/30 backdrop-blur-md">
                   <MapPin className="w-3 h-3 text-[#D9B45F]" />
                   <span>JAIPUR STUDIO HEADQUARTERS</span>
                 </div>
@@ -70,7 +70,7 @@ export default function Studio() {
             >
               Rooted in Jaipur. <br />
               Driven by innovation. <br />
-              Focused on <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] italic font-normal">impact.</span>
+              Focused on <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">impact.</span>
             </motion.h2>
 
             <motion.p
@@ -94,7 +94,7 @@ export default function Studio() {
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <MapPin className="w-4 h-4 text-[#D9B45F]" />
-                  <span className="text-xs font-mono font-bold text-[#D9B45F] tracking-widest uppercase">
+                  <span className="text-xs font-sans font-bold text-[#D9B45F] tracking-widest uppercase">
                     JAIPUR, INDIA
                   </span>
                 </div>

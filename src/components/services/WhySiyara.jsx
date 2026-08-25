@@ -62,7 +62,7 @@ export default function WhySiyara() {
           transition={{ duration: 0.6, ease: easeCustom }}
           className="flex items-center gap-3 mb-10"
         >
-          <span className="text-xs font-mono font-medium tracking-[0.24em] text-[#D9B45F]">
+          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             05
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
@@ -81,7 +81,7 @@ export default function WhySiyara() {
             className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight"
           >
             WE DON'T SELL SERVICES. <br />
-            <span className="text-[#D9B45F] italic font-normal">WE BUILD OUTCOMES.</span>
+            <span className="text-[#D9B45F] font-normal">WE BUILD OUTCOMES.</span>
           </motion.h2>
         </div>
 
@@ -113,7 +113,7 @@ export default function WhySiyara() {
                     <Icon className="w-5 h-5 stroke-[1.75]" />
                   </div>
 
-                  <span className="text-[10px] font-mono tracking-[0.2em] text-[#D9B45F] font-bold block mb-2">
+                  <span className="text-[10px] font-sans tracking-[0.2em] text-[#D9B45F] font-bold block mb-2">
                     {item.id}
                   </span>
 
