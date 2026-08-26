@@ -1,31 +1,11 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
 
 export default function ContactHero() {
   const shouldReduceMotion = useReducedMotion();
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const heroRef = useRef(null);
-
-  const handleMouseMove = (e) => {
-    if (shouldReduceMotion || !heroRef.current) return;
-    const rect = heroRef.current.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    const normX = (e.clientX - centerX) / (rect.width / 2);
-    const normY = (e.clientY - centerY) / (rect.height / 2);
-    setMousePos({
-      x: Math.max(-1, Math.min(1, normX)),
-      y: Math.max(-1, Math.min(1, normY)),
-    });
-  };
-
-  const handleMouseLeave = () => {
-    setMousePos({ x: 0, y: 0 });
-  };
-
   const easeCustom = [0.16, 1, 0.3, 1];
 
   const fadeUp = (delayMs) => ({
@@ -39,22 +19,24 @@ export default function ContactHero() {
 
   return (
     <section
-      ref={heroRef}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
       className="relative min-h-[90svh] pt-32 pb-20 lg:pt-36 lg:pb-24 bg-[#070A09] text-[#F3EFE3] overflow-hidden flex items-center"
     >
-      {/* Obsidian Black Canvas */}
-      <div className="absolute inset-0 bg-[#070A09] z-0" />
-
-      {/* Deep Emerald Ambient Glow Sphere (Quiet & Subdued) */}
-      <div className="absolute right-[12%] top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-[#071E18]/40 via-[#0C6B52]/10 to-transparent blur-3xl rounded-full pointer-events-none z-[1]" />
+      {/* FULL-WIDTH HERO BACKGROUND IMAGE */}
+      <div className="absolute inset-0 z-0 select-none pointer-events-none">
+        <img
+          src="/images/contact_hero.png"
+          alt="Siyara Contact Architecture"
+          className="w-full h-full object-cover object-[75%_center] sm:object-[70%_center] md:object-[68%_center] lg:object-right"
+        />
+        {/* Subtle dark gradient overlay for optimal left-side text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070A09]/90 via-[#070A09]/55 to-transparent lg:via-[#070A09]/30" />
+      </div>
 
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* LEFT COLUMN: Dominant Editorial Messaging */}
-          <div className="lg:col-span-7 flex flex-col justify-center relative z-20">
+          {/* LEFT COLUMN: Dominant Editorial Messaging in Open Negative Space */}
+          <div className="lg:col-span-7 xl:col-span-8 flex flex-col justify-center relative z-20">
             
             {/* Eyebrow */}
             <motion.div
@@ -141,28 +123,8 @@ export default function ContactHero() {
             </motion.div>
           </div>
 
-          {/* RIGHT COLUMN: Contact Hero Visual Image */}
-          <div className="lg:col-span-5 flex justify-center items-center relative">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 1.0, delay: 0.5, ease: easeCustom }}
-              style={{
-                transform: `translate3d(${mousePos.x * 6}px, ${mousePos.y * 6}px, 0)`,
-                transition: 'transform 0.3s ease-out',
-              }}
-              className="relative w-full max-w-[440px] rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(12,107,82,0.45)] border border-[#D9B45F]/30 bg-[#070A09]/60 backdrop-blur-sm group"
-            >
-              <img
-                src="/images/contact_hero.png"
-                alt="Siyara Strategic Collaboration"
-                className="w-full h-auto object-cover opacity-95 group-hover:scale-105 transition-transform duration-1000 ease-out"
-              />
-              {/* Internal ambient blend & subtle gold inner ring */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#070A09]/70 via-transparent to-[#071E18]/25 pointer-events-none" />
-              <div className="absolute inset-0 ring-1 ring-inset ring-[#D9B45F]/20 rounded-3xl pointer-events-none" />
-            </motion.div>
-          </div>
+          {/* RIGHT COLUMN: Open space showcasing the background communication artwork */}
+          <div className="hidden lg:block lg:col-span-5 xl:col-span-4" />
 
         </div>
       </div>
