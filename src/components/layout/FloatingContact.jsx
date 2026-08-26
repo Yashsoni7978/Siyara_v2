@@ -9,7 +9,7 @@ export default function FloatingContact() {
       {/* Email */}
       <a
         href="mailto:hello@siyara.dev"
-        className="flex items-center justify-center w-12 h-12 bg-[#071E18] text-[#D9B45F] rounded-full shadow-[0_4px_20px_rgba(7,10,9,0.5)] border border-[#D9B45F]/30 hover:scale-110 transition-transform"
+        className="flex items-center justify-center w-12 h-12 bg-[#071E18] text-[#D9B45F] rounded-full shadow-[0_4px_20px_rgba(7,10,9,0.5)] border border-[#D9B45F]/30 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(217,180,95,0.25)] transition-all duration-300"
         aria-label="Email Us"
       >
         <Mail className="w-5 h-5" />
@@ -20,7 +20,7 @@ export default function FloatingContact() {
         href="https://wa.me/919999999999"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-12 h-12 bg-[#25D366] text-white rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform"
+        className="flex items-center justify-center w-12 h-12 bg-[#25D366] text-white rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(37,211,102,0.5)] transition-all duration-300"
         aria-label="WhatsApp Us"
       >
         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">

@@ -67,40 +67,40 @@
   -webkit-backdrop-filter: blur(14px);
 }
 
-/* Keyframe animations */
+/* Keyframe animations - Sophisticated, Calm & Slow */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-6px); }
 }
 
 @keyframes pulseGlow {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.05); }
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.03); }
 }
 
 @keyframes atmosphereBreath {
   0%, 100% { opacity: 0.65; transform: scale(1); }
-  50% { opacity: 0.85; transform: scale(1.03); }
+  50% { opacity: 0.85; transform: scale(1.02); }
 }
 
 @keyframes energyDrift {
-  0%, 100% { transform: translate(0px, 0px) rotate(0deg); opacity: 0.6; }
-  50% { transform: translate(14px, -10px) rotate(1deg); opacity: 0.8; }
+  0%, 100% { transform: translate(0px, 0px); opacity: 0.6; }
+  50% { transform: translate(6px, -4px); opacity: 0.8; }
 }
 
 @keyframes goldEnergyFlow {
   0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.5; }
-  50% { transform: translate(-12px, 8px) scale(1.03); opacity: 0.75; }
+  50% { transform: translate(-6px, 4px) scale(1.02); opacity: 0.7; }
 }
 
 @keyframes glintShimmer {
-  0%, 100% { opacity: 0.2; transform: scale(0.95); }
-  50% { opacity: 0.85; transform: scale(1.1); }
+  0%, 100% { opacity: 0.2; transform: scale(0.98); }
+  50% { opacity: 0.75; transform: scale(1.04); }
 }
 
 @keyframes crystalFloat {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(1.5deg); }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes marquee {
@@ -113,27 +113,27 @@
 }
 
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
 }
 
 .animate-pulse-glow {
-  animation: pulseGlow 4s ease-in-out infinite;
+  animation: pulseGlow 6s ease-in-out infinite;
 }
 
 .animate-atmosphere {
-  animation: atmosphereBreath 12s ease-in-out infinite;
+  animation: atmosphereBreath 16s ease-in-out infinite;
 }
 
 .animate-energy-drift {
-  animation: energyDrift 14s ease-in-out infinite;
+  animation: energyDrift 18s ease-in-out infinite;
 }
 
 .animate-gold-flow {
-  animation: goldEnergyFlow 16s ease-in-out infinite;
+  animation: goldEnergyFlow 20s ease-in-out infinite;
 }
 
 .animate-glint {
-  animation: glintShimmer 4s ease-in-out infinite;
+  animation: glintShimmer 6s ease-in-out infinite;
 }
 
 .radial-mask-center {
@@ -178,11 +178,30 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   border-radius: 9999px;
-  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 10px 25px -5px rgba(217, 180, 95, 0.18);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .btn-gold:hover {
   background: #E8C979;
   transform: translateY(-2px);
+  box-shadow: 0 14px 30px -5px rgba(217, 180, 95, 0.3);
+}
+
+/* ── Refined Card Hover Elevation ───────────────────────────────── */
+.card-hover-subtle {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover-subtle:hover {
+  transform: translateY(-5px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ── Ivory section warm tint ─────────────────────────────────────── */

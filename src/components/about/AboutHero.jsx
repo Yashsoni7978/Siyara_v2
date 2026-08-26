@@ -95,7 +95,7 @@ export default function AboutHero() {
             >
               <a
                 href="#story"
-                className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-[#D9B45F] text-[#070A09] text-[11px] font-sans font-bold tracking-[0.2em] uppercase hover:bg-[#E8C979] transition-colors"
+                className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-[#D9B45F] text-[#070A09] text-[11px] font-sans font-bold tracking-[0.2em] uppercase hover:bg-[#E8C979] transition-all duration-300 shadow-lg shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
               >
                 OUR STORY &rarr;
               </a>

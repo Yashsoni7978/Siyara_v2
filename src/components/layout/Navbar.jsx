@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -55,7 +56,10 @@ export default function Navbar() {
   };
 
   return (
-    <header
+    <motion.header
+      initial={{ opacity: 0, y: -8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-[#080B0A]/90 backdrop-blur-md border-b border-[#D4AF37]/15 py-3 shadow-2xl'
@@ -95,7 +99,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link)}
-                className={`relative text-[11px] lg:text-[12px] font-sans font-medium tracking-[0.2em] uppercase transition-colors duration-200 py-1 ${
+                className={`relative text-[11px] lg:text-[12px] font-sans font-medium tracking-[0.2em] uppercase transition-colors duration-250 py-1 ${
                   isActive
                     ? 'text-[#F3EFE3] font-semibold'
                     : 'text-[#9D9B91] hover:text-[#D9B45F]'
@@ -103,7 +107,11 @@ export default function Navbar() {
               >
                 {link.name}
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#18A982] shadow-[0_0_8px_#18A982]" />
+                  <motion.span
+                    layoutId="navbar-active-indicator"
+                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#18A982] shadow-[0_0_8px_#18A982]"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
                 )}
               </Link>
             );
@@ -115,10 +123,10 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={(e) => handleLinkClick(e, { id: 'contact', href: '/contact' })}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#D9B45F] bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-[11px] font-sans font-bold tracking-[0.16em] uppercase transition-all duration-300 group shadow-lg shadow-[#D9B45F]/15 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#D9B45F] bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-[11px] font-sans font-bold tracking-[0.16em] uppercase transition-all duration-300 group shadow-lg shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>BOOK STRATEGY SESSION</span>
-            <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
           </Link>
         </div>
 
@@ -161,6 +169,6 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </header>
+    </motion.header>
   );
 }

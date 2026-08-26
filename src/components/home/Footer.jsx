@@ -86,7 +86,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-sans text-xs text-[#9D9B91] hover:text-[#F3EFE3] transition-colors"
+                      className="font-sans text-xs text-[#9D9B91] hover:text-[#F3EFE3] hover:translate-x-0.5 transition-all duration-200 inline-block"
                     >
                       {link.name}
                     </Link>
@@ -105,7 +105,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-sans text-xs text-[#9D9B91] hover:text-[#F3EFE3] transition-colors"
+                      className="font-sans text-xs text-[#9D9B91] hover:text-[#F3EFE3] hover:translate-x-0.5 transition-all duration-200 inline-block"
                     >
                       {link.name}
                     </Link>
@@ -124,7 +124,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="font-sans text-xs text-[#9D9B91] hover:text-[#F3EFE3] transition-colors"
+                      className="font-sans text-xs text-[#9D9B91] hover:text-[#F3EFE3] hover:translate-x-0.5 transition-all duration-200 inline-block"
                     >
                       {link.name}
                     </Link>

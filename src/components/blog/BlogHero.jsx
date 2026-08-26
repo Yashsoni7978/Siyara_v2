@@ -75,9 +75,9 @@ export default function BlogHero() {
             <span className="tracking-wider">Thought Leadership & Intelligence</span>
           </div>
 
-          <div className="flex items-center gap-2 text-[#CFC9BB]/60 text-[11px] tracking-wider uppercase">
+          <div className="flex items-center gap-2 text-[#CFC9BB]/60 text-[11px] tracking-wider uppercase group cursor-pointer hover:text-[#D9B45F] transition-colors">
             <span>Explore Articles</span>
-            <ArrowDown className="w-3.5 h-3.5 text-[#D4AF37] animate-bounce" />
+            <ArrowDown className="w-3.5 h-3.5 text-[#D9B45F] transition-transform duration-300 group-hover:translate-y-0.5" />
           </div>
         </motion.div>
       </div>

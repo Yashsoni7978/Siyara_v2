@@ -18,7 +18,7 @@ export default function ArticleCard({ article, index = 0, onSelectArticle }) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
       onClick={handleClick}
-      className="group relative flex flex-col h-full bg-[#080B0A] border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 overflow-hidden cursor-pointer"
+      className="group relative flex flex-col h-full bg-[#080B0A] border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#D4AF37]/5"
     >
       {/* Subtle Atmosphere Hover Overlay */}
       <div className="absolute inset-0 bg-radial from-[#19A878]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />

@@ -23,18 +23,13 @@ export default function SectionConnector({ fromDark = true, toDark, variant = 'd
       aria-hidden="true"
     >
       {/* 1. Subtle Emerald Glow Halo */}
-      <motion.div
-        animate={{
-          opacity: [0.25, 0.5, 0.25],
-          scale: [0.9, 1.1, 0.9],
-        }}
-        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute w-24 h-24 rounded-full bg-[#0C6B52]/30 blur-xl pointer-events-none"
+      <div
+        className="absolute w-24 h-24 rounded-full bg-[#0C6B52]/20 blur-xl pointer-events-none opacity-60"
       />
 
       {/* 2. Faint Orbital Arcs (Desktop) */}
       <svg
-        className="hidden sm:block absolute inset-0 w-full h-full pointer-events-none opacity-40"
+        className="hidden sm:block absolute inset-0 w-full h-full pointer-events-none opacity-30"
         viewBox="0 0 1200 72"
         preserveAspectRatio="none"
       >
@@ -66,9 +61,9 @@ export default function SectionConnector({ fromDark = true, toDark, variant = 'd
 
       {/* 3. Horizontal Champagne Gold Line */}
       <motion.div
-        initial={{ scaleX: 0.3, opacity: 0.4 }}
+        initial={{ scaleX: 0.6, opacity: 0 }}
         whileInView={{ scaleX: 1, opacity: 1 }}
-        viewport={{ margin: '-20px' }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="w-full flex items-center justify-center relative z-10 px-4"
       >
@@ -76,7 +71,13 @@ export default function SectionConnector({ fromDark = true, toDark, variant = 'd
         <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent via-[#D9B45F]/35 to-[#D9B45F]/70" />
 
         {/* 4. Central Geometric Diamond / Star Node */}
-        <div className="relative mx-3 flex items-center justify-center">
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="relative mx-3 flex items-center justify-center"
+        >
           {/* Subtle Outer Ring */}
           <div className="w-6 h-6 rounded-full border border-[#D9B45F]/40 bg-[#071E18]/90 backdrop-blur-sm flex items-center justify-center shadow-[0_0_12px_rgba(217,180,95,0.25)]">
             {/* Geometric Diamond Node */}
@@ -87,18 +88,18 @@ export default function SectionConnector({ fromDark = true, toDark, variant = 'd
 
           {/* Vertical Continuation Line entering next section */}
           <div className="absolute top-6 left-1/2 -translate-x-1/2 w-[1px] h-3 bg-gradient-to-b from-[#D9B45F]/60 to-transparent" />
-        </div>
+        </motion.div>
 
         {/* Right Gradient Line */}
         <div className="flex-1 h-[1px] bg-gradient-to-l from-transparent via-[#D9B45F]/35 to-[#D9B45F]/70" />
       </motion.div>
 
-      {/* 5. Tiny Gold Particles Around Transition */}
-      <div className="absolute inset-0 pointer-events-none flex items-center justify-center z-10">
-        <div className="w-1 h-1 rounded-full bg-[#D9B45F]/60 blur-[0.5px] -translate-x-16 -translate-y-2 animate-pulse" />
-        <div className="w-1 h-1 rounded-full bg-[#D9B45F]/50 blur-[0.5px] translate-x-16 translate-y-2 animate-pulse" />
-        <div className="w-1 h-1 rounded-full bg-[#0C6B52]/70 blur-[0.5px] -translate-x-32 translate-y-1" />
-        <div className="w-1 h-1 rounded-full bg-[#0C6B52]/70 blur-[0.5px] translate-x-32 -translate-y-1" />
+      {/* 5. Subtle Transition Accent Points */}
+      <div className="absolute inset-0 pointer-events-none flex items-center justify-center z-10 opacity-70">
+        <div className="w-1 h-1 rounded-full bg-[#D9B45F]/50 blur-[0.5px] -translate-x-16 -translate-y-2" />
+        <div className="w-1 h-1 rounded-full bg-[#D9B45F]/40 blur-[0.5px] translate-x-16 translate-y-2" />
+        <div className="w-1 h-1 rounded-full bg-[#0C6B52]/60 blur-[0.5px] -translate-x-32 translate-y-1" />
+        <div className="w-1 h-1 rounded-full bg-[#0C6B52]/60 blur-[0.5px] translate-x-32 -translate-y-1" />
       </div>
     </div>
   );
