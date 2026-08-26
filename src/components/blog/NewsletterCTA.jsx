@@ -17,7 +17,7 @@ export default function NewsletterCTA() {
   };
 
   return (
-    <section className="relative py-20 md:py-28 bg-[#080B0A] overflow-hidden border-t border-[#D4AF37]/20">
+    <section className="relative py-16 md:py-20 bg-[#080B0A] overflow-hidden border-t border-[#D4AF37]/20">
       {/* Subtle Ambient Glow */}
       <div className="absolute inset-0 bg-radial from-[#063C2D]/40 via-[#080B0A]/95 to-[#080B0A] pointer-events-none" />
       <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-[#19A878]/10 rounded-full blur-[140px] pointer-events-none" />

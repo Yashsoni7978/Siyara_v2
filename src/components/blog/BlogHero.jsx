@@ -6,7 +6,7 @@ import { Sparkles, ArrowDown } from 'lucide-react';
 
 export default function BlogHero() {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-[#080B0A] overflow-hidden">
+    <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 bg-[#080B0A] overflow-hidden">
       {/* Deep Atmospheric Background Effects */}
       <div className="absolute inset-0 bg-radial from-[#063C2D]/40 via-[#080B0A]/90 to-[#080B0A] pointer-events-none" />
       
