@@ -16,7 +16,7 @@ export default function SectionConnector({ fromDark = true, toDark, variant = 'd
 
   return (
     <div
-      className="relative w-full h-14 sm:h-18 overflow-hidden select-none pointer-events-none flex items-center justify-center"
+      className="relative w-full h-14 sm:h-16 overflow-hidden select-none pointer-events-none flex items-center justify-center"
       style={{
         background: `linear-gradient(to bottom, ${topBg} 0%, ${topBg} 50%, ${bottomBg} 50%, ${bottomBg} 100%)`,
       }}

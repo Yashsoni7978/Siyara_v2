@@ -58,7 +58,10 @@ export default function HomePage() {
       {/* 09 INDUSTRIES — DARK */}
       <Industries />
 
-      {/* 11 FINAL CTA — DARK */}
+      {/* CONNECTOR: DARK → IVORY */}
+      <SectionConnector fromDark={true} />
+
+      {/* 11 FINAL CTA — IVORY */}
       <FinalCTA />
     </main>
   );

@@ -88,8 +88,8 @@ export default function Philosophy() {
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#070A09] via-transparent to-[#071E18]/40" />
 
                   {/* Fine Gold Contour Line Arc */}
-                  <svg className="absolute inset-0 w-full h-full pointer-events-none stroke-[#D9B45F]/50 fill-none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M 10 10 L 90% 10 C 95% 10, 98% 30, 98% 50 L 98% 90%" strokeWidth="1" strokeDasharray="3 3" />
+                  <svg className="absolute inset-0 w-full h-full pointer-events-none stroke-[#D9B45F]/50 fill-none" viewBox="0 0 400 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 10 10 L 370 10 C 385 10, 395 30, 395 60 L 395 280" strokeWidth="1" strokeDasharray="3 3" />
                   </svg>
                 </div>
 

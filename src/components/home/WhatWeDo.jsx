@@ -109,7 +109,7 @@ export default function WhatWeDo() {
         <div className="relative pt-8 pb-12">
           
           {/* Continuous Glowing SVG Line (Desktop) */}
-          <div className="hidden lg:block absolute top-[52px] left-0 right-0 h-[2px] z-0">
+          <div className="hidden lg:block absolute top-[60px] left-0 right-0 h-[2px] z-0">
             <div className="w-full h-full bg-gradient-to-r from-[#0C6B52]/20 via-[#D9B45F]/40 to-[#0C6B52]/20" />
             <svg className="absolute -top-[5px] left-0 w-full h-[12px]" xmlns="http://www.w3.org/2000/svg">
               <line

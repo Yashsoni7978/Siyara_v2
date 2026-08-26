@@ -87,7 +87,7 @@ export default function Approach() {
         <div className="relative pt-6 pb-12">
           
           {/* Connecting Line (Desktop) */}
-          <div className="hidden lg:block absolute top-[48px] left-0 right-0 h-[1px] z-0">
+          <div className="hidden lg:block absolute top-[52px] left-0 right-0 h-[1px] z-0">
             <div className="w-full h-full bg-[#D9B45F]/20" />
             <div
               className="h-full bg-[#D9B45F] transition-all duration-500 shadow-[0_0_8px_#D9B45F]"

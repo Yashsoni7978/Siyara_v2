@@ -197,14 +197,10 @@ export default function ServiceIndex({ onNavigate }) {
         {/* 8 CIRCULAR DISCIPLINES ORBITAL CONSTELLATION STRIP */}
         <div className="relative mb-16 pt-4 pb-8">
           
-          {/* Orbital SVG Path & Energy Trace */}
-          <svg
-            className="absolute inset-0 w-full h-full pointer-events-none opacity-30 stroke-[#B9923F]"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line x1="5%" y1="50%" x2="95%" y2="50%" strokeWidth="1" strokeDasharray="6 8" />
-            <circle cx="50%" cy="50%" r="4" fill="#0B5E49" className="animate-pulse" />
-          </svg>
+          {/* Orbital Line — aligns with circle centers (pt-4 outer + p-4 inner + h-14/2 = 60px) */}
+          <div className="hidden lg:block absolute top-[60px] left-[5%] right-[5%] h-[1px] bg-gradient-to-r from-transparent via-[#B9923F]/40 to-transparent pointer-events-none opacity-60 z-0" />
+          {/* Center pulse dot */}
+          <div className="hidden lg:block absolute top-[56px] left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#0B5E49] opacity-50 animate-pulse pointer-events-none z-0" />
 
           {/* 8 Circular Nodes Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 sm:gap-6 relative z-10">
