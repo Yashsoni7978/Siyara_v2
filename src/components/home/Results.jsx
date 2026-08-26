@@ -89,7 +89,7 @@ export default function Results() {
               Real outcomes. <br />
               Measurable <span className="text-[#0B5E49] font-normal">impact.</span>
             </h2>
-            <p className="font-sans text-sm text-[#101613]/70 font-light leading-relaxed mb-6">
+            <p className="font-sans text-sm text-[#101613] font-normal leading-relaxed mb-6">
               We design and engineer scalable digital systems engineered to elevate brands, increase visibility, and drive long-term business value.
             </p>
             <a
@@ -135,7 +135,7 @@ export default function Results() {
                     </div>
 
                     {/* Label */}
-                    <p className="font-sans text-[11px] text-[#101613]/70 font-light leading-snug mb-4">
+                    <p className="font-sans text-[11px] text-[#101613] font-medium leading-snug mb-4">
                       {item.label}
                     </p>
 
@@ -152,27 +152,29 @@ export default function Results() {
           </div>
         </div>
 
-        {/* Client Brand Strip */}
+        {/* Client Brand Strip - Tags Approach */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="pt-12 border-t border-[#101613]/10 flex flex-col sm:flex-row items-center justify-between gap-6"
+          className="pt-12 border-t border-[#101613]/10 flex flex-col items-center justify-center gap-8"
         >
-          <div className="flex items-center gap-2 text-xs font-sans tracking-[0.16em] text-[#0B5E49] uppercase font-semibold">
-            <span className="text-sm">✦</span>
-            <span>Featured Client Projects & Digital Systems</span>
+          <div className="flex items-center gap-2 text-xs font-sans tracking-[0.2em] text-[#0B5E49] uppercase font-bold text-center">
+            <span>Featured Client Projects</span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-6 lg:gap-10 opacity-80">
+          <div className="flex flex-wrap justify-center items-center gap-3 lg:gap-4 max-w-4xl mx-auto">
             {confirmedProjects.map((brand) => (
-              <span
+              <div
                 key={brand}
-                className="font-serif text-xs sm:text-sm tracking-[0.2em] text-[#101613]/60 hover:text-[#0B5E49] transition-colors uppercase font-medium cursor-default"
+                className="px-5 py-2.5 rounded-full border border-[#B9923F]/30 bg-[#ECE7D8] hover:border-[#0B5E49]/60 hover:bg-[#F3EFE3] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3 group cursor-default shadow-sm"
               >
-                {brand}
-              </span>
+                <div className="w-1.5 h-1.5 rounded-full bg-[#B9923F]/60 group-hover:bg-[#0B5E49] transition-colors" />
+                <span className="font-sans text-xs sm:text-[13px] tracking-[0.15em] text-[#101613]/80 group-hover:text-[#101613] transition-colors uppercase font-semibold">
+                  {brand}
+                </span>
+              </div>
             ))}
           </div>
         </motion.div>

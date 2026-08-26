@@ -74,7 +74,7 @@ export default function WhySiyara() {
               We think in systems, <br />
               not <span className="text-[#0C6B52] font-normal">services.</span>
             </h2>
-            <p className="font-sans text-sm sm:text-base text-[#9D9B91] font-light leading-relaxed max-w-md">
+            <p className="font-sans text-sm sm:text-base text-[#101613] font-normal leading-relaxed max-w-md">
               Strategy, design and engineering work as one connected system here, not three vendors stitched together after the fact.
             </p>
           </motion.div>
@@ -121,16 +121,12 @@ export default function WhySiyara() {
                       </div>
 
                       {/* Title */}
-                      <h3
-                        className={`font-sans text-xs font-semibold tracking-[0.18em] uppercase mb-3 transition-colors duration-300 ${
-                          isHovered ? 'text-[#0C6B52]' : 'text-[#101613]'
-                        }`}
-                      >
+                      <h3 className="font-sans text-sm font-bold tracking-[0.18em] uppercase mb-3 text-[#0C6B52] h-12">
                         {item.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed">
+                      <p className="font-sans text-xs text-[#101613] font-normal leading-relaxed">
                         {item.description}
                       </p>
                     </div>

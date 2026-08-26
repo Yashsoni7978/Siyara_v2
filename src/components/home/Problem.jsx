@@ -130,16 +130,12 @@ export default function Problem() {
                 </span>
 
                 {/* Title */}
-                <h3
-                  className={`font-sans text-xs sm:text-sm font-semibold tracking-[0.16em] uppercase mb-3 transition-colors duration-300 ${
-                    isHovered ? 'text-[#0B5E49]' : 'text-[#101613]'
-                  }`}
-                >
+                <h3 className="font-sans text-xs sm:text-sm font-bold tracking-[0.16em] uppercase mb-3 text-[#0B5E49] h-12">
                   {problem.title}
                 </h3>
 
                 {/* Subtitle */}
-                <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed">
+                <p className="font-sans text-xs text-[#101613] font-normal leading-relaxed">
                   {problem.subtitle}
                 </p>
 
