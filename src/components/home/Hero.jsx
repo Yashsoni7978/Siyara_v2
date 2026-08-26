@@ -214,9 +214,9 @@ export default function Hero() {
 
       {/* RIGHT SIDE: Architectural Information Plaque with Integrated Gold Connectors */}
       <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.4, duration: 0.8, ease: easeCustom }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 1.2, ease: easeCustom }}
         style={getParallaxStyle(3)}
         className="absolute right-[-28px] sm:right-[-16px] lg:right-[-8px] xl:right-[-4px] bottom-12 sm:bottom-16 lg:bottom-20 z-20 hidden lg:flex flex-col items-center pointer-events-none select-none"
       >
