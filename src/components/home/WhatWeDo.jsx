@@ -175,7 +175,7 @@ export default function WhatWeDo() {
 
                   {/* Service Title */}
                   <h3
-                    className={`font-sans text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase mb-2 transition-all duration-300 ${
+                    className={`font-sans text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase mb-2 transition-all duration-300 h-10 ${
                       isHovered ? 'text-[#D9B45F] -translate-y-0.5' : 'text-[#F3EFE3]'
                     }`}
                   >
