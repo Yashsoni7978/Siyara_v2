@@ -218,7 +218,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.4, duration: 0.8, ease: easeCustom }}
         style={getParallaxStyle(3)}
-        className="absolute right-2 sm:right-4 lg:right-6 xl:right-8 bottom-12 sm:bottom-16 lg:bottom-20 z-20 hidden lg:flex flex-col items-center pointer-events-none select-none"
+        className="absolute right-[-28px] sm:right-[-16px] lg:right-[-8px] xl:right-[-4px] bottom-12 sm:bottom-16 lg:bottom-20 z-20 hidden lg:flex flex-col items-center pointer-events-none select-none"
       >
         {/* Top Vertical Connector Line */}
         <div className="w-[1px] h-10 lg:h-12 bg-gradient-to-t from-[#D9B45F] to-transparent relative" />
