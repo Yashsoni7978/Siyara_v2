@@ -109,44 +109,44 @@ export default function Results() {
             hidden: { opacity: 0 },
             visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
           }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12"
         >
-              {proofPillars.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <motion.div
-                    key={item.id}
-                    variants={{
-                      hidden: { opacity: 0, y: 20 },
-                      visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-                    }}
-                    className="p-5 sm:p-6 bg-[#ECE7D8] border border-[#B9923F]/30 hover:border-[#0B5E49]/60 rounded-none transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-md"
-                  >
-                    {/* Icon */}
-                    <div className="w-10 h-10 rounded-full border border-[#0B5E49]/30 bg-[#F3EFE3] flex items-center justify-center text-[#0B5E49] group-hover:bg-[#0B5E49] group-hover:text-[#F3EFE3] group-hover:border-[#0B5E49] mb-6 transition-colors">
-                      <Icon className="w-4 h-4 stroke-[1.75]" />
-                    </div>
+          {proofPillars.map((item) => {
+            const Icon = item.icon;
+            return (
+              <motion.div
+                key={item.id}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+                }}
+                className="p-5 sm:p-6 bg-[#ECE7D8] border border-[#B9923F]/30 hover:border-[#0B5E49]/60 rounded-none transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-md"
+              >
+                {/* Icon */}
+                <div className="w-10 h-10 rounded-full border border-[#0B5E49]/30 bg-[#F3EFE3] flex items-center justify-center text-[#0B5E49] group-hover:bg-[#0B5E49] group-hover:text-[#F3EFE3] group-hover:border-[#0B5E49] mb-6 transition-colors">
+                  <Icon className="w-4 h-4 stroke-[1.75]" />
+                </div>
 
-                    {/* Pillar Title */}
-                    <div className="font-sans text-xs font-bold text-[#0B5E49] tracking-[0.12em] uppercase mb-2">
-                      {item.title}
-                    </div>
+                {/* Pillar Title */}
+                <div className="font-sans text-xs font-bold text-[#0B5E49] tracking-[0.12em] uppercase mb-2">
+                  {item.title}
+                </div>
 
-                    {/* Label */}
-                    <p className="font-sans text-[11px] text-[#101613] font-medium leading-snug mb-4">
-                      {item.label}
-                    </p>
+                {/* Label */}
+                <p className="font-sans text-[11px] text-[#101613] font-medium leading-snug mb-4">
+                  {item.label}
+                </p>
 
-                    {/* Divider & Category */}
-                    <div className="pt-3 border-t border-[#B9923F]/20">
-                      <span className="text-[9px] font-sans tracking-[0.16em] text-[#B9923F] uppercase font-sans font-semibold">
-                        {item.category}
-                      </span>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
+                {/* Divider & Category */}
+                <div className="pt-3 border-t border-[#B9923F]/20">
+                  <span className="text-[9px] font-sans tracking-[0.16em] text-[#B9923F] uppercase font-semibold">
+                    {item.category}
+                  </span>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
 
         {/* Client Brand Strip - Tags Approach */}
         <motion.div
