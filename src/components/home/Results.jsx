@@ -85,9 +85,9 @@ export default function Results() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-4"
           >
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[0.98] mb-4">
-              Real outcomes. <br />
-              Measurable <span className="text-[#0B5E49] font-normal">impact.</span>
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-5xl xl:text-6xl text-[#101613] font-normal leading-[0.98] tracking-tight uppercase mb-4">
+              REAL OUTCOMES. <br />
+              MEASURABLE <span className="text-[#0B5E49] font-normal">IMPACT.</span>
             </h2>
             <p className="font-sans text-sm text-[#101613] font-normal leading-relaxed mb-6">
               We design and engineer scalable digital systems engineered to elevate brands, increase visibility, and drive long-term business value.
