@@ -39,11 +39,10 @@ export default function Philosophy() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6 flex flex-col justify-center"
           >
-            <h2 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight mb-8">
-              WE DON'T BUILD <br />
-              WEBSITES. <br />
-              WE BUILD <br />
-              <span className="text-[#D9B45F] font-normal">DIGITAL SYSTEMS.</span>
+            <h2 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight mb-8 uppercase">
+              ELEVATING BRANDS <br />
+              THROUGH <br />
+              <span className="text-[#D9B45F] font-normal">DIGITAL ARCHITECTURE.</span>
             </h2>
 
             <div className="max-w-md mb-8">
@@ -51,7 +50,7 @@ export default function Philosophy() {
                 Beautiful design is where it starts.
               </p>
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                A working system is what it becomes.
+                Enduring architecture is what it becomes.
               </p>
             </div>
 
