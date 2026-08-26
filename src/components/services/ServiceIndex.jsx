@@ -263,10 +263,10 @@ export default function ServiceIndex({ onNavigate }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.4, ease: easeCustom }}
-            className="p-8 sm:p-12 bg-[#ECE7D8] border border-[#B9923F]/40 shadow-xl relative overflow-hidden"
+            className="p-8 sm:p-12 bg-[#070A09] border border-[#D9B45F]/30 shadow-2xl relative overflow-hidden"
           >
             {/* Fine Glow Atmosphere */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#0B5E49]/10 to-transparent blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#0C6B52]/20 to-transparent blur-3xl pointer-events-none" />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
               
@@ -274,41 +274,41 @@ export default function ServiceIndex({ onNavigate }) {
               <div className="lg:col-span-5 flex flex-col justify-between h-full">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-xs font-sans font-bold tracking-widest text-[#B9923F]">
+                    <span className="text-xs font-sans font-bold tracking-widest text-[#D9B45F]">
                       DISCIPLINE {currentDiscipline.id} / 08
                     </span>
-                    <span className="h-[1px] w-6 bg-[#0B5E49]/40" />
+                    <span className="h-[1px] w-6 bg-[#D9B45F]/30" />
                   </div>
 
-                  <h3 className="font-serif text-3xl sm:text-4xl text-[#101613] font-normal leading-tight mb-3">
-                    {currentDiscipline.name} <span className="text-[#0B5E49] ">CAPABILITY.</span>
+                  <h3 className="font-serif text-3xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight mb-3">
+                    {currentDiscipline.name} <span className="text-[#D9B45F]">CAPABILITY.</span>
                   </h3>
 
-                  <p className="font-sans text-xs sm:text-sm text-[#0B5E49] font-medium leading-relaxed mb-4">
+                  <p className="font-sans text-xs sm:text-sm text-[#D9B45F] font-medium leading-relaxed mb-4">
                     {currentDiscipline.tagline}
                   </p>
 
-                  <p className="font-sans text-xs text-[#101613]/70 font-light leading-relaxed mb-8">
+                  <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-8">
                     {currentDiscipline.description}
                   </p>
                 </div>
 
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#0B5E49] hover:bg-[#084838] text-[#F3EFE3] text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 w-fit group shadow-md rounded-full"
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 w-fit group shadow-md rounded-full"
                 >
                   <span>REQUEST {currentDiscipline.name} AUDIT</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <ArrowUpRight className="w-4 h-4 text-[#101613] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
 
               {/* Right Column: 5 Sub-Services Hierarchy List */}
               <div className="lg:col-span-7">
                 <div className="flex items-center gap-2 mb-6">
-                  <span className="text-[11px] font-sans font-semibold tracking-[0.2em] text-[#0B5E49] uppercase">
+                  <span className="text-[11px] font-sans font-semibold tracking-[0.2em] text-[#D9B45F] uppercase">
                     SPECIALIZED SUB-SERVICES ({currentDiscipline.subServices.length})
                   </span>
-                  <span className="h-[1px] flex-grow bg-[#B9923F]/30" />
+                  <span className="h-[1px] flex-grow bg-[#D9B45F]/20" />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -318,17 +318,17 @@ export default function ServiceIndex({ onNavigate }) {
                       initial={{ opacity: 0, x: 10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: sIdx * 0.06 }}
-                      className="p-4 bg-[#F3EFE3] border border-[#B9923F]/30 hover:border-[#0B5E49] flex items-center justify-between group transition-all duration-300 hover:shadow-md cursor-pointer"
+                      className="p-4 bg-[#071E18]/40 border border-[#D9B45F]/20 hover:border-[#D9B45F] flex items-center justify-between group transition-all duration-300 hover:shadow-md cursor-pointer"
                     >
                       <div className="flex items-center gap-3">
-                        <span className="text-[10px] font-sans font-bold text-[#B9923F]">
+                        <span className="text-[10px] font-sans font-bold text-[#D9B45F]">
                           0{sIdx + 1}
                         </span>
-                        <span className="font-sans text-xs font-semibold text-[#101613] group-hover:text-[#0B5E49] transition-colors">
+                        <span className="font-sans text-xs font-semibold text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors">
                           {sub}
                         </span>
                       </div>
-                      <ChevronRight className="w-4 h-4 text-[#B9923F] group-hover:text-[#0B5E49] group-hover:translate-x-1 transition-all" />
+                      <ChevronRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-1 transition-all" />
                     </motion.div>
                   ))}
                 </div>
