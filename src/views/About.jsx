@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useEffect } from 'react';
 import SectionConnector from '../components/common/SectionConnector.jsx';
@@ -44,14 +44,14 @@ export default function About() {
       {/* 05 â€” METHODOLOGY (DARK) */}
       <Approach />
 
-      {/* CONNECTOR 05: DARK â†’ DARK */}
-      <SectionConnector fromDark={true} />
+      {/* CONNECTOR 05: DARK -> DARK */}
+      <SectionConnector fromDark={true} toDark={true} />
 
       {/* 06 â€” ROOTED IN JAIPUR (DARK) */}
       <Studio />
 
-      {/* CONNECTOR 06: DARK â†’ DARK */}
-      <SectionConnector fromDark={true} />
+      {/* CONNECTOR 06: DARK -> DARK */}
+      <SectionConnector fromDark={true} toDark={true} />
 
       {/* 07 â€” FINAL PHILOSOPHY & CTA (DARK) */}
       <AboutCTA />

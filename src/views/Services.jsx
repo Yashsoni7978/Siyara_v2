@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import SectionConnector from '../components/common/SectionConnector.jsx';
 import ServicesHero from '../components/services/ServicesHero.jsx';
 import ServiceIndex from '../components/services/ServiceIndex.jsx';
@@ -51,8 +51,8 @@ export default function Services({ onNavigate }) {
       {/* 07 â€” SPECIALIST APPLICATIONS & INDUSTRIES (DARK) */}
       <ServicesApplications />
 
-      {/* CONNECTOR 07: DARK â†’ DARK */}
-      <SectionConnector fromDark={true} />
+      {/* CONNECTOR 07: DARK -> DARK */}
+      <SectionConnector fromDark={true} toDark={true} />
 
       {/* 08 â€” FINAL CTA (DARK) */}
       <ServicesCTA />
