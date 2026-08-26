@@ -141,49 +141,26 @@ export default function ContactHero() {
             </motion.div>
           </div>
 
-          {/* RIGHT COLUMN: Refined Quiet Miniature Siyara Orbital Constellation Visual (~30-35% width) */}
-          <div className="lg:col-span-5 flex justify-center relative">
+          {/* RIGHT COLUMN: Contact Hero Visual Image */}
+          <div className="lg:col-span-5 flex justify-center items-center relative">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, delay: 0.5, ease: easeCustom }}
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 1.0, delay: 0.5, ease: easeCustom }}
               style={{
                 transform: `translate3d(${mousePos.x * 6}px, ${mousePos.y * 6}px, 0)`,
                 transition: 'transform 0.3s ease-out',
               }}
-              className="relative w-full max-w-[360px] aspect-square flex items-center justify-center p-4"
+              className="relative w-full max-w-[440px] rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(12,107,82,0.45)] border border-[#D9B45F]/30 bg-[#070A09]/60 backdrop-blur-sm group"
             >
-              {/* Outer Subtle Orbital Ring 1 */}
-              <div className="absolute inset-2 rounded-full border border-[#D9B45F]/20 pointer-events-none" />
-
-              {/* Outer Subtle Orbital Ring 2 */}
-              <div className="absolute inset-10 rounded-full border border-[#0C6B52]/30 pointer-events-none" />
-
-              {/* Outer Orbital Ring 3 with dashes */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 360 360">
-                <circle cx="180" cy="180" r="160" fill="none" stroke="#D9B45F" strokeWidth="0.75" strokeDasharray="3 9" opacity="0.35" />
-                <circle cx="180" cy="180" r="120" fill="none" stroke="#0C6B52" strokeWidth="0.75" opacity="0.4" />
-                
-                {/* Emerald energy arc thread */}
-                <path d="M 60 180 A 120 120 0 0 1 300 180" fill="none" stroke="#0C6B52" strokeWidth="1.5" opacity="0.7" />
-                
-                {/* Node Points representing System, Design, Growth */}
-                <circle cx="60" cy="180" r="3.5" fill="#D9B45F" />
-                <circle cx="300" cy="180" r="3.5" fill="#D9B45F" />
-                <circle cx="180" cy="60" r="3" fill="#0C6B52" />
-                <circle cx="180" cy="300" r="3" fill="#D9B45F" />
-              </svg>
-
-              {/* Central Core Element: IDEA Node */}
-              <div className="relative z-10 w-24 h-24 rounded-full bg-[#070A09] border border-[#D9B45F]/60 shadow-[0_0_30px_rgba(217,180,95,0.2)] flex flex-col items-center justify-center text-center p-2">
-                <div className="w-2 h-2 rounded-full bg-[#D9B45F] shadow-[0_0_10px_#D9B45F] mb-1 animate-pulse" />
-                <span className="text-[9px] font-sans tracking-[0.2em] text-[#D9B45F] uppercase font-bold">
-                  IDEA
-                </span>
-                <span className="text-[8px] font-sans tracking-[0.14em] text-[#9D9B91] uppercase">
-                  SYSTEM
-                </span>
-              </div>
+              <img
+                src="/images/contact_hero.png"
+                alt="Siyara Strategic Collaboration"
+                className="w-full h-auto object-cover opacity-95 group-hover:scale-105 transition-transform duration-1000 ease-out"
+              />
+              {/* Internal ambient blend & subtle gold inner ring */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#070A09]/70 via-transparent to-[#071E18]/25 pointer-events-none" />
+              <div className="absolute inset-0 ring-1 ring-inset ring-[#D9B45F]/20 rounded-3xl pointer-events-none" />
             </motion.div>
           </div>
 
