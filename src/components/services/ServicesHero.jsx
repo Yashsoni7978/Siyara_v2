@@ -94,14 +94,8 @@ export default function ServicesHero() {
       {/* LAYER 01: Obsidian Black Canvas Base */}
       <div className="absolute inset-0 bg-[#070A09] z-0" />
 
-      {/* LAYER 02: APPROVED SERVICES HERO CINEMATIC VIDEO (Pure Full Hero Video - Zero Addons/Vignettes) */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.2, delay: 0.2, ease: easeCustom }}
-        style={getParallaxStyle(2)}
-        className="absolute inset-0 w-full h-full pointer-events-none z-[1] overflow-hidden"
-      >
+      {/* LAYER 02: PURE FULL HERO VIDEO BACKGROUND */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-[1] overflow-hidden select-none">
         <video
           ref={videoRef}
           src="/images/siyara_services_hero.mp4"
@@ -113,13 +107,15 @@ export default function ServicesHero() {
           aria-hidden="true"
           className="w-full h-full object-cover object-center opacity-100 pointer-events-none"
         />
-      </motion.div>
+        {/* Subtle left-side gradient veil for optimal typography contrast */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070A09]/85 via-[#070A09]/40 to-transparent lg:via-[#070A09]/20 pointer-events-none" />
+      </div>
 
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
-          {/* LEFT COLUMN: ~40% Width Editorial Typography */}
-          <div className="lg:col-span-5 flex flex-col justify-center relative z-20">
+          {/* LEFT COLUMN: ~45% Width Editorial Typography sitting in open negative space */}
+          <div className="lg:col-span-6 xl:col-span-5 flex flex-col justify-center relative z-20">
             
             {/* Eyebrow */}
             <motion.div
@@ -211,6 +207,21 @@ export default function ServicesHero() {
         </div>
         <span className="text-[9px] font-sans tracking-[0.24em] text-[#9D9B91]/60 uppercase">
           SCROLL
+        </span>
+      </motion.div>
+
+      {/* BOTTOM RIGHT: Connected Capabilities Information Plaque */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 1.2, ease: easeCustom }}
+        className="absolute right-6 sm:right-10 lg:right-14 bottom-10 sm:bottom-12 z-20 hidden md:flex flex-col items-start px-6 py-3.5 rounded-lg border border-[#D9B45F]/40 bg-[#070A09]/85 backdrop-blur-md shadow-[0_0_25px_rgba(7,10,9,0.9)] select-none pointer-events-none"
+      >
+        <span className="font-sans text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] text-[#D9B45F] uppercase whitespace-nowrap">
+          CONNECTED CAPABILITIES
+        </span>
+        <span className="font-sans text-[11px] sm:text-xs font-light tracking-[0.04em] text-[#E5E0D4] mt-0.5 whitespace-nowrap">
+          Strategy. Technology. Growth.
         </span>
       </motion.div>
 
