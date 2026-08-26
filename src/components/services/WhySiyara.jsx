@@ -48,7 +48,7 @@ export default function WhySiyara() {
   ];
 
   return (
-    <section id="outcomes" className="relative py-28 sm:py-36 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
+    <section id="outcomes" className="relative py-16 sm:py-20 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
       {/* Deep Emerald Background Atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#071E18]/60 via-[#070A09] to-[#070A09] opacity-80 pointer-events-none" />
 

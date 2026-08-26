@@ -41,7 +41,7 @@ export default function ServicesProcess() {
   ];
 
   return (
-    <section id="process" className="relative py-28 sm:py-36 bg-[#F3EFE3] overflow-hidden">
+    <section id="process" className="relative py-16 sm:py-20 bg-[#F3EFE3] overflow-hidden">
       {/* Editorial Ivory Atmosphere */}
       <div className="absolute inset-0 ivory-texture pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-70 pointer-events-none" />
