@@ -55,7 +55,7 @@ export default function Industries() {
   const activeIndustry = industries[hoveredIndex] || industries[0];
 
   return (
-    <section id="industries" className="relative py-16 sm:py-20 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
+    <section id="industries" className="relative py-12 sm:py-16 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
       {/* Background Emerald-Black Atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#071E18]/60 via-[#070A09] to-[#070A09] opacity-80 pointer-events-none" />
       <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-[#0C6B52]/15 blur-3xl rounded-full pointer-events-none" />
@@ -68,7 +68,7 @@ export default function Industries() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="flex items-center gap-3 mb-10"
+          className="flex items-center gap-3 mb-8"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             07
@@ -85,16 +85,16 @@ export default function Industries() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="mb-10 sm:mb-12 max-w-3xl"
+          className="mb-8 max-w-3xl"
         >
-          <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight">
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight">
             BUILT FOR <br />
             AMBITIOUS <span className="text-[#D9B45F] font-normal">INDUSTRIES.</span>
           </h2>
         </motion.div>
 
         {/* Open Editorial Typography Layout (List + Interactive Image Preview) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           {/* Left Column: Flowing Editorial Typography List */}
           <motion.div
@@ -118,7 +118,7 @@ export default function Industries() {
                     visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
                   }}
                   onMouseEnter={() => setHoveredIndex(idx)}
-                  className="py-6 sm:py-8 group cursor-pointer transition-all duration-300"
+                  className="py-4 sm:py-5 group cursor-pointer transition-all duration-300"
                 >
                   <div className="flex items-center justify-between gap-4">
                     <div className="flex items-baseline gap-4 sm:gap-6">
@@ -131,7 +131,7 @@ export default function Industries() {
                       </span>
                       
                       <h3
-                        className={`font-serif text-2xl sm:text-4xl lg:text-5xl tracking-wide font-normal transition-all duration-300 ${
+                        className={`font-serif text-2xl sm:text-3xl lg:text-4xl tracking-wide font-normal transition-all duration-300 ${
                           isHovered
                             ? 'text-[#D9B45F] translate-x-2'
                             : 'text-[#F3EFE3] group-hover:text-[#D9B45F]'
