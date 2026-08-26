@@ -135,7 +135,7 @@ export default function Problem() {
                 </h3>
 
                 {/* Subtitle */}
-                <p className="font-sans text-xs text-[#101613] font-normal leading-relaxed">
+                <p className="font-sans text-xs sm:text-[13px] text-[#101613]/90 font-medium leading-relaxed">
                   {problem.subtitle}
                 </p>
 
