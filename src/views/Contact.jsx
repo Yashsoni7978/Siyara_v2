@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useEffect } from 'react';
 import SectionConnector from '../components/common/SectionConnector.jsx';
@@ -29,8 +29,8 @@ export default function Contact({ onNavigate }) {
       {/* 03 â€” DIRECT PATHWAYS & CONVERSATION (DARK) */}
       <ContactDetails />
 
-      {/* CONNECTOR 03: DARK â†’ DARK */}
-      <SectionConnector fromDark={true} />
+      {/* CONNECTOR 03: DARK -> DARK */}
+      <SectionConnector fromDark={true} toDark={true} />
 
       {/* 04 â€” FINAL CTA (DARK) */}
       <ContactCTA />

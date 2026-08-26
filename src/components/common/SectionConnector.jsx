@@ -9,9 +9,10 @@ import { motion } from 'framer-motion';
  * Features champagne-gold line, geometric diamond node, subtle emerald halo,
  * faint orbital arcs, tiny shimmering gold particles, and vertical continuation line.
  */
-export default function SectionConnector({ fromDark = true, variant = 'diamond' }) {
+export default function SectionConnector({ fromDark = true, toDark, variant = 'diamond' }) {
   const topBg = fromDark ? '#070A09' : '#F3EFE3';
-  const bottomBg = fromDark ? '#F3EFE3' : '#070A09';
+  const resolvedToDark = toDark !== undefined ? toDark : !fromDark;
+  const bottomBg = resolvedToDark ? '#070A09' : '#F3EFE3';
 
   return (
     <div
