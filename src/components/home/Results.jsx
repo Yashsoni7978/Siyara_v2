@@ -76,43 +76,41 @@ export default function Results() {
           </span>
         </motion.div>
 
-        {/* Headlines & CTA Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.7 }}
-            className="lg:col-span-4"
+        {/* Header Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.7 }}
+          className="mb-12 max-w-3xl"
+        >
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-5xl xl:text-6xl text-[#101613] font-normal leading-[0.98] tracking-tight uppercase mb-4">
+            REAL OUTCOMES. <br />
+            MEASURABLE <span className="text-[#0B5E49] font-normal">IMPACT.</span>
+          </h2>
+          <p className="font-sans text-sm text-[#101613] font-normal leading-relaxed mb-6 max-w-lg">
+            We design and engineer scalable digital systems engineered to elevate brands, increase visibility, and drive long-term business value.
+          </p>
+          <a
+            href="#work"
+            className="inline-flex items-center gap-2.5 px-6 py-3.5 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 shadow-lg group rounded-full"
           >
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-5xl xl:text-6xl text-[#101613] font-normal leading-[0.98] tracking-tight uppercase mb-4">
-              REAL OUTCOMES. <br />
-              MEASURABLE <span className="text-[#0B5E49] font-normal">IMPACT.</span>
-            </h2>
-            <p className="font-sans text-sm text-[#101613] font-normal leading-relaxed mb-6">
-              We design and engineer scalable digital systems engineered to elevate brands, increase visibility, and drive long-term business value.
-            </p>
-            <a
-              href="#work"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 shadow-lg group rounded-full"
-            >
-              <span>EXPLORE SELECTED WORK</span>
-              <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
-          </motion.div>
+            <span>EXPLORE SELECTED WORK</span>
+            <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </a>
+        </motion.div>
 
-          {/* 5 Proof Pillars Container */}
-          <div className="lg:col-span-8">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: '-50px' }}
-              variants={{
-                hidden: { opacity: 0 },
-                visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
-              }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"
-            >
+        {/* 5 Proof Pillars Container */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+          }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"
+        >
               {proofPillars.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -149,8 +147,6 @@ export default function Results() {
                 );
               })}
             </motion.div>
-          </div>
-        </div>
 
         {/* Client Brand Strip - Tags Approach */}
         <motion.div
