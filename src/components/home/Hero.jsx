@@ -218,7 +218,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.4, duration: 0.8, ease: easeCustom }}
         style={getParallaxStyle(3)}
-        className="absolute right-8 sm:right-12 lg:right-16 xl:right-20 bottom-10 sm:bottom-14 lg:bottom-16 z-20 hidden lg:flex flex-col items-center pointer-events-none select-none"
+        className="absolute right-2 sm:right-4 lg:right-6 xl:right-8 bottom-12 sm:bottom-16 lg:bottom-20 z-20 hidden lg:flex flex-col items-center pointer-events-none select-none"
       >
         {/* Top Vertical Connector Line */}
         <div className="w-[1px] h-10 lg:h-12 bg-gradient-to-t from-[#D9B45F] to-transparent relative" />
@@ -229,7 +229,7 @@ export default function Hero() {
           <div className="absolute -left-2.5 top-1/2 -translate-y-1/2 w-2.5 h-[1px] bg-[#D9B45F]/80" />
 
           {/* Plaque Background & Chamfered Gold Frame */}
-          <div className="relative px-7 py-3 bg-[#070A09]/85 backdrop-blur-md shadow-[0_0_25px_rgba(7,10,9,0.9),0_0_15px_rgba(217,180,95,0.08)]">
+          <div className="relative px-7 py-3 bg-[#070A09]/95 backdrop-blur-md shadow-[0_0_30px_rgba(7,10,9,1),0_0_15px_rgba(217,180,95,0.08)]">
             {/* SVG Chamfered Border */}
             <svg
               className="absolute inset-0 w-full h-full pointer-events-none"
@@ -239,7 +239,7 @@ export default function Hero() {
               <polygon
                 points="3.5,0 96.5,0 100,16 100,84 96.5,100 3.5,100 0,84 0,16"
                 fill="#070A09"
-                fillOpacity="0.85"
+                fillOpacity="0.96"
                 stroke="#D9B45F"
                 strokeWidth="1.2"
                 strokeOpacity="0.8"
