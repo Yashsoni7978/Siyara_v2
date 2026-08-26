@@ -6,7 +6,7 @@ export default function ContactCTA() {
   const easeCustom = [0.16, 1, 0.3, 1];
 
   return (
-    <section className="relative py-32 sm:py-40 bg-[#070A09] text-[#F3EFE3] overflow-hidden">
+    <section className="relative py-20 sm:py-24 bg-[#070A09] text-[#F3EFE3] overflow-hidden">
       {/* Background Deep Emerald Atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#070A09] via-[#071E18]/40 to-[#070A09] opacity-90 pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#071E18]/40 blur-3xl rounded-full pointer-events-none" />

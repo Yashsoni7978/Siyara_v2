@@ -38,7 +38,7 @@ export default function WhyContact() {
   ];
 
   return (
-    <section className="relative py-24 sm:py-36 bg-[#063C2D]/25 border-t border-[#D4AF37]/15 overflow-hidden">
+    <section className="relative py-16 sm:py-20 bg-[#063C2D]/25 border-t border-[#D4AF37]/15 overflow-hidden">
       {/* Atmosphere Glow */}
       <div className="absolute inset-0 bg-emerald-atmosphere opacity-80 pointer-events-none" />
 

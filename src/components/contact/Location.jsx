@@ -6,7 +6,7 @@ export default function Location() {
   const easeCustom = [0.16, 1, 0.3, 1];
 
   return (
-    <section className="relative py-24 sm:py-32 bg-[#080B0A] border-t border-[#D4AF37]/15 overflow-hidden">
+    <section className="relative py-16 sm:py-20 bg-[#080B0A] border-t border-[#D4AF37]/15 overflow-hidden">
       <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Main Card Container (Matching Reference Composition) */}
