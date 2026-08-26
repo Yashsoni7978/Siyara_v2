@@ -41,7 +41,7 @@ export default function Problem() {
   ];
 
   return (
-    <section className="relative py-28 sm:py-36 bg-[#F3EFE3] border-t border-[#101613]/08 overflow-hidden">
+    <section className="relative py-16 sm:py-20 bg-[#F3EFE3] border-t border-[#101613]/08 overflow-hidden">
       {/* Subtle warm ivory atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8] to-[#F3EFE3] opacity-60 pointer-events-none" />
       {/* Ultra-faint emerald radial glow — editorial texture */}
@@ -72,7 +72,7 @@ export default function Problem() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="mb-20 max-w-3xl"
+          className="mb-12 max-w-3xl"
         >
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98] mb-5">
             Your business doesn't <br />

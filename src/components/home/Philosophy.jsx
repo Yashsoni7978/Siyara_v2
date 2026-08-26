@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function Philosophy() {
   return (
-    <section className="relative py-28 sm:py-36 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
+    <section className="relative py-16 sm:py-20 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
       {/* Background Atmosphere */}
       <div className="absolute inset-0 bg-emerald-atmosphere opacity-80 pointer-events-none" />
 

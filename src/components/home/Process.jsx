@@ -47,7 +47,7 @@ export default function Process() {
   ];
 
   return (
-    <section id="process" className="relative py-28 sm:py-36 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
+    <section id="process" className="relative py-16 sm:py-20 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
       {/* Background Deep Emerald Atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#071E18]/50 via-[#070A09] to-[#070A09] opacity-80 pointer-events-none" />
 
@@ -71,7 +71,7 @@ export default function Process() {
         </motion.div>
 
         {/* Section Headline & Copy */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
