@@ -97,7 +97,7 @@ export default function ContactIntake() {
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, ease: easeCustom }}
             className="flex items-center gap-3 mb-6"
           >
@@ -113,7 +113,7 @@ export default function ContactIntake() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7, ease: easeCustom }}
             className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98] mb-6"
           >
@@ -124,7 +124,7 @@ export default function ContactIntake() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1, ease: easeCustom }}
             className="font-sans text-base sm:text-lg text-[#101613]/70 font-light leading-relaxed max-w-xl"
           >

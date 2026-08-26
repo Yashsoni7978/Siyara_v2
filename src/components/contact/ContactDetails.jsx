@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Globe } from 'lucide-react';
@@ -39,7 +41,7 @@ export default function ContactDetails() {
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, ease: easeCustom }}
             className="flex items-center gap-3 mb-6"
           >
@@ -55,7 +57,7 @@ export default function ContactDetails() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7, ease: easeCustom }}
             className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98] mb-6"
           >
@@ -69,7 +71,7 @@ export default function ContactDetails() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1, ease: easeCustom }}
             className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed max-w-xl"
           >
@@ -84,7 +86,7 @@ export default function ContactDetails() {
               key={path.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1, ease: easeCustom }}
               className="p-8 bg-[#071E18]/40 border border-[#D9B45F]/25 hover:border-[#D9B45F]/60 transition-all duration-300 group flex flex-col justify-between"
             >
