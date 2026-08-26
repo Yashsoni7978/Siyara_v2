@@ -44,14 +44,14 @@ export default function About() {
       {/* 05 â€” METHODOLOGY (DARK) */}
       <Approach />
 
-      {/* CONNECTOR 05: DARK -> DARK */}
-      <SectionConnector fromDark={true} toDark={true} />
+      {/* CONNECTOR 05: DARK -> IVORY */}
+      <SectionConnector fromDark={true} />
 
-      {/* 06 â€” ROOTED IN JAIPUR (DARK) */}
+      {/* 06 â€” ROOTED IN JAIPUR (IVORY) */}
       <Studio />
 
-      {/* CONNECTOR 06: DARK -> DARK */}
-      <SectionConnector fromDark={true} toDark={true} />
+      {/* CONNECTOR 06: IVORY -> DARK */}
+      <SectionConnector fromDark={false} />
 
       {/* 07 â€” FINAL PHILOSOPHY & CTA (DARK) */}
       <AboutCTA />
