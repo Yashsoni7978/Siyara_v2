@@ -52,7 +52,7 @@ export default function Results() {
   ];
 
   return (
-    <section id="results" className="relative py-28 sm:py-36 bg-[#F3EFE3] overflow-hidden">
+    <section id="results" className="relative py-16 sm:py-20 bg-[#F3EFE3] overflow-hidden">
       {/* Editorial Ivory Atmosphere */}
       <div className="absolute inset-0 ivory-texture pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-70 pointer-events-none" />
@@ -77,7 +77,7 @@ export default function Results() {
         </motion.div>
 
         {/* Headlines & CTA Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
