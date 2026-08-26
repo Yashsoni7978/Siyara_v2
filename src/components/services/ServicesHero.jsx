@@ -211,19 +211,14 @@ export default function ServicesHero() {
       </motion.div>
 
       {/* BOTTOM RIGHT: Connected Capabilities Information Plaque */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1.2, ease: easeCustom }}
-        className="absolute right-6 sm:right-10 lg:right-14 bottom-10 sm:bottom-12 z-20 hidden md:flex flex-col items-start px-6 py-3.5 rounded-lg border border-[#D9B45F]/40 bg-[#070A09]/85 backdrop-blur-md shadow-[0_0_25px_rgba(7,10,9,0.9)] select-none pointer-events-none"
-      >
+      <div className="absolute right-6 sm:right-10 lg:right-14 bottom-10 sm:bottom-12 z-20 hidden md:flex flex-col items-start px-6 py-3.5 rounded-lg border border-[#D9B45F]/40 bg-[#070A09]/85 backdrop-blur-md shadow-[0_0_25px_rgba(7,10,9,0.9)] select-none pointer-events-none">
         <span className="font-sans text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] text-[#D9B45F] uppercase whitespace-nowrap">
           CONNECTED CAPABILITIES
         </span>
         <span className="font-sans text-[11px] sm:text-xs font-light tracking-[0.04em] text-[#E5E0D4] mt-0.5 whitespace-nowrap">
           Strategy. Technology. Growth.
         </span>
-      </motion.div>
+      </div>
 
       {/* HERO BOTTOM CONNECTOR: Thin horizontal gold line with ONE central glowing gold point */}
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D9B45F]/35 to-transparent z-20 flex items-center justify-center">
