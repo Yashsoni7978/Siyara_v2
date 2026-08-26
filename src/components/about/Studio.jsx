@@ -8,7 +8,7 @@ export default function Studio() {
   const easeCustom = [0.16, 1, 0.3, 1];
 
   return (
-    <section id="studio" className="relative py-28 sm:py-36 bg-[#070A09] text-[#F3EFE3] overflow-hidden">
+    <section id="studio" className="relative py-16 sm:py-20 bg-[#070A09] text-[#F3EFE3] overflow-hidden">
       {/* Deep Emerald Background Haze */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#070A09] via-[#071E18]/40 to-[#070A09] opacity-90 pointer-events-none" />
       <div className="absolute left-[10%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0C6B52]/15 blur-3xl rounded-full pointer-events-none" />
