@@ -143,7 +143,7 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(500)}
-                className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal leading-[1.0] tracking-tight text-[#F3EFE3]"
+                className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-normal leading-[1.0] tracking-tight text-[#F3EFE3]"
                 aria-hidden="true"
               >
                 WE BUILD BRANDS
@@ -165,7 +165,7 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(700)}
-                className="font-serif text-6xl sm:text-8xl lg:text-9xl xl:text-[10rem] font-normal leading-[0.88] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
+                className="font-serif text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-normal leading-[0.88] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
                 aria-hidden="true"
               >
                 DOMINATE.
@@ -212,19 +212,60 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* BOTTOM RIGHT: Scroll Indicator Line */}
+      {/* RIGHT SIDE: Architectural Information Plaque with Integrated Gold Connectors */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.6 }}
-        className="absolute bottom-8 right-8 sm:right-12 z-20 flex flex-col items-center gap-3 hidden sm:flex"
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.4, duration: 0.8, ease: easeCustom }}
+        style={getParallaxStyle(3)}
+        className="absolute right-8 sm:right-12 lg:right-16 xl:right-20 bottom-10 sm:bottom-14 lg:bottom-16 z-20 hidden lg:flex flex-col items-center pointer-events-none select-none"
       >
-        <div className="w-[1px] h-10 bg-gradient-to-b from-[#D9B45F] to-transparent relative">
-          <div className="w-1.5 h-1.5 bg-[#D9B45F] rounded-full absolute top-0 -left-[2.5px] animate-ping" />
+        {/* Top Vertical Connector Line */}
+        <div className="w-[1px] h-10 lg:h-12 bg-gradient-to-t from-[#D9B45F] to-transparent relative" />
+
+        {/* Plaque Plate Container */}
+        <div className="relative flex items-center justify-center">
+          {/* Left Horizontal Connector Tick */}
+          <div className="absolute -left-2.5 top-1/2 -translate-y-1/2 w-2.5 h-[1px] bg-[#D9B45F]/80" />
+
+          {/* Plaque Background & Chamfered Gold Frame */}
+          <div className="relative px-7 py-3 bg-[#070A09]/85 backdrop-blur-md shadow-[0_0_25px_rgba(7,10,9,0.9),0_0_15px_rgba(217,180,95,0.08)]">
+            {/* SVG Chamfered Border */}
+            <svg
+              className="absolute inset-0 w-full h-full pointer-events-none"
+              preserveAspectRatio="none"
+              viewBox="0 0 100 100"
+            >
+              <polygon
+                points="3.5,0 96.5,0 100,16 100,84 96.5,100 3.5,100 0,84 0,16"
+                fill="#070A09"
+                fillOpacity="0.85"
+                stroke="#D9B45F"
+                strokeWidth="1.2"
+                strokeOpacity="0.8"
+                vectorEffect="non-scaling-stroke"
+              />
+            </svg>
+
+            {/* Plaque Typography */}
+            <div className="relative z-10 flex flex-col items-center text-center">
+              <span className="font-sans text-[10px] sm:text-[11px] font-semibold tracking-[0.22em] text-[#D9B45F] uppercase whitespace-nowrap">
+                BUILDING WHAT&apos;S NEXT
+              </span>
+              <span className="font-sans text-[11px] sm:text-xs font-light tracking-[0.04em] text-[#E5E0D4] mt-0.5 whitespace-nowrap">
+                Strategy. Technology. Growth.
+              </span>
+            </div>
+          </div>
+
+          {/* Right Horizontal Connector Tick */}
+          <div className="absolute -right-2.5 top-1/2 -translate-y-1/2 w-2.5 h-[1px] bg-[#D9B45F]/80" />
         </div>
-        <span className="text-[9px] font-sans tracking-[0.24em] text-[#9D9B91]/60 uppercase">
-          SCROLL
-        </span>
+
+        {/* Bottom Vertical Connector Line with Terminal Glow Dot */}
+        <div className="w-[1px] h-10 lg:h-12 bg-gradient-to-b from-[#D9B45F] to-[#D9B45F]/40 relative flex items-center justify-center">
+          <div className="w-1.5 h-1.5 rounded-full bg-[#D9B45F] shadow-[0_0_8px_#D9B45F] absolute bottom-0" />
+        </div>
       </motion.div>
     </section>
   );
