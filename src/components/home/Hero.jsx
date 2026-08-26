@@ -138,31 +138,34 @@ export default function Hero() {
             <div className="mb-6">
               <h1 className="sr-only">WE BUILD BRANDS THAT DOMINATE.</h1>
               
+              {/* Line 1: WE BUILD BRANDS — large */}
               <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(500)}
-                className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-[#F3EFE3]"
+                className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal leading-[1.0] tracking-tight text-[#F3EFE3]"
                 aria-hidden="true"
               >
-                WE BUILD
+                WE BUILD BRANDS
               </motion.div>
 
+              {/* Line 2: THAT — small, gold, spaced like a label */}
               <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(620)}
-                className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-normal leading-[0.94] tracking-tight text-[#F3EFE3]"
+                className="font-sans text-sm sm:text-base lg:text-lg font-semibold tracking-[0.3em] text-[#D9B45F] uppercase my-2"
                 aria-hidden="true"
               >
-                BRANDS THAT
+                THAT
               </motion.div>
 
+              {/* Line 3: DOMINATE. — massive gold */}
               <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp(700)}
-                className="font-serif text-[3.25rem] sm:text-7xl lg:text-8xl xl:text-9xl font-normal leading-[0.94] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
+                className="font-serif text-6xl sm:text-8xl lg:text-9xl xl:text-[10rem] font-normal leading-[0.88] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
                 aria-hidden="true"
               >
                 DOMINATE.
