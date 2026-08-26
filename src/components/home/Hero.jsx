@@ -263,8 +263,8 @@ export default function Hero() {
         </div>
 
         {/* Bottom Vertical Connector Line with Terminal Glow Dot */}
-        <div className="w-[1px] h-20 lg:h-28 xl:h-36 bg-gradient-to-b from-[#D9B45F] via-[#D9B45F]/60 to-[#D9B45F]/20 relative flex items-center justify-center">
-          <div className="w-1.5 h-1.5 rounded-full bg-[#D9B45F] shadow-[0_0_10px_#D9B45F] absolute bottom-0" />
+        <div className="w-[1px] h-10 lg:h-12 bg-gradient-to-b from-[#D9B45F] to-[#D9B45F]/40 relative flex items-center justify-center">
+          <div className="w-1.5 h-1.5 rounded-full bg-[#D9B45F] shadow-[0_0_8px_#D9B45F] absolute bottom-0" />
         </div>
       </motion.div>
     </section>
