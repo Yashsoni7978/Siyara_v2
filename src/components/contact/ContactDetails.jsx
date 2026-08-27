@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe } from 'lucide-react';
 
 export default function ContactDetails() {
   const easeCustom = [0.16, 1, 0.3, 1];
@@ -11,20 +11,26 @@ export default function ContactDetails() {
     {
       id: '01',
       title: 'NEW PROJECTS',
-      description: 'For brands looking to build, redesign or scale.',
-      email: 'hello@siyarainnovations.com',
+      description: 'For brands looking to build, redesign or scale connected digital architecture.',
+      contactText: 'info@siyaradigital.com',
+      href: 'mailto:info@siyaradigital.com',
+      icon: Mail,
     },
     {
       id: '02',
-      title: 'GENERAL ENQUIRIES',
-      description: 'For questions, introductions and everything in between.',
-      email: 'connect@siyarainnovations.com',
+      title: 'DIRECT PHONE',
+      description: 'Speak directly with our studio team for immediate inquiries and strategic scoping.',
+      contactText: '9587269209',
+      href: 'tel:9587269209',
+      icon: Phone,
     },
     {
       id: '03',
-      title: 'PARTNERSHIPS',
-      description: 'For collaborations and strategic partnerships.',
-      email: 'partners@siyarainnovations.com',
+      title: 'GENERAL ENQUIRIES',
+      description: 'For questions, introductions, strategic partnerships, and collaborations.',
+      contactText: 'info@siyaradigital.com',
+      href: 'mailto:info@siyaradigital.com',
+      icon: Mail,
     },
   ];
 
@@ -105,11 +111,11 @@ export default function ContactDetails() {
               </div>
 
               <a
-                href={`mailto:${path.email}`}
+                href={path.href}
                 className="inline-flex items-center gap-2 font-sans text-xs text-[#D9B45F] hover:text-[#E8C979] transition-colors pt-4 border-t border-[#D9B45F]/15"
               >
-                <Mail className="w-3.5 h-3.5" />
-                <span>{path.email}</span>
+                <path.icon className="w-3.5 h-3.5" />
+                <span>{path.contactText}</span>
               </a>
             </motion.div>
           ))}
@@ -120,7 +126,7 @@ export default function ContactDetails() {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="pt-10 border-t border-[#D9B45F]/15 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs font-sans text-[#9D9B91]"
+          className="pt-10 border-t border-[#D9B45F]/15 grid grid-cols-1 sm:grid-cols-3 gap-8 text-xs font-sans text-[#9D9B91]"
         >
           <div className="flex items-start gap-3">
             <MapPin className="w-4 h-4 text-[#D9B45F] shrink-0 mt-0.5" />
@@ -129,8 +135,20 @@ export default function ContactDetails() {
                 BASED IN
               </span>
               <p className="text-[#F3EFE3] font-light">
-                Jaipur, Rajasthan & Global Digital Studio Architecture.
+                Jaipur, Rajasthan & Global Studio.
               </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-3">
+            <Phone className="w-4 h-4 text-[#D9B45F] shrink-0 mt-0.5" />
+            <div>
+              <span className="font-sans text-[10px] tracking-widest text-[#D9B45F] uppercase block mb-1">
+                PHONE
+              </span>
+              <a href="tel:9587269209" className="text-[#F3EFE3] font-light hover:text-[#D9B45F] transition-colors">
+                9587269209
+              </a>
             </div>
           </div>
 

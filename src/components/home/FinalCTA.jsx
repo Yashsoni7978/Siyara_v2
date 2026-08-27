@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Calendar } from 'lucide-react';
+import { ArrowUpRight, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 export default function FinalCTA() {
@@ -74,13 +74,11 @@ export default function FinalCTA() {
           </Link>
 
           <a
-            href="https://calendly.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:9587269209"
             className="inline-flex items-center gap-2 px-9 py-4 border border-[#101613]/20 hover:border-[#0B5E49] bg-transparent hover:bg-[#F3EFE3] text-[#101613] hover:text-[#0B5E49] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300"
           >
-            <Calendar className="w-4 h-4" />
-            <span>SCHEDULE A CALL</span>
+            <Phone className="w-4 h-4 text-[#0B5E49]" />
+            <span>CALL 9587269209</span>
           </a>
         </motion.div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, Mail, MapPin } from 'lucide-react';
+import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -58,16 +58,24 @@ export default function Footer() {
             </div>
 
             {/* Direct Enquiry Box */}
-            <div className="p-4 border border-[#D9B45F]/30 bg-[#071E18]/40">
+            <div className="p-4 border border-[#D9B45F]/30 bg-[#071E18]/40 space-y-2.5">
               <div className="text-[10px] font-sans text-[#D9B45F] tracking-widest uppercase mb-1 font-semibold">
                 Start a New Project
               </div>
               <a
-                href="mailto:hello@siyara.dev"
+                href="mailto:info@siyaradigital.com"
                 className="font-sans text-xs font-semibold text-[#F3EFE3] hover:text-[#D9B45F] transition-colors flex items-center gap-2"
               >
                 <Mail className="w-3.5 h-3.5 text-[#D9B45F]" />
-                <span>hello@siyara.dev</span>
+                <span>info@siyaradigital.com</span>
+                <ArrowUpRight className="w-3 h-3 text-[#D9B45F] ml-auto" />
+              </a>
+              <a
+                href="tel:9587269209"
+                className="font-sans text-xs font-semibold text-[#F3EFE3] hover:text-[#D9B45F] transition-colors flex items-center gap-2"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#D9B45F]" />
+                <span>9587269209</span>
                 <ArrowUpRight className="w-3 h-3 text-[#D9B45F] ml-auto" />
               </a>
             </div>
@@ -133,11 +141,15 @@ export default function Footer() {
               </ul>
 
               <h4 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-3">
-                LOCATION
+                LOCATION & CONTACT
               </h4>
-              <div className="flex items-center gap-2 text-xs font-sans text-[#9D9B91]">
+              <div className="flex items-center gap-2 text-xs font-sans text-[#9D9B91] mb-2">
                 <MapPin className="w-3.5 h-3.5 text-[#D9B45F]" />
                 <span>Jaipur, Rajasthan · India</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs font-sans text-[#9D9B91]">
+                <Phone className="w-3.5 h-3.5 text-[#D9B45F]" />
+                <a href="tel:9587269209" className="hover:text-[#D9B45F] transition-colors">9587269209</a>
               </div>
             </div>
 
@@ -155,7 +167,7 @@ export default function Footer() {
           <div className="flex items-center gap-6 text-[11px] tracking-wider text-[#9D9B91]">
             <Link href="#" className="hover:text-[#D9B45F] transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-[#D9B45F] transition-colors">Terms of Service</Link>
-            <Link href="#" className="hover:text-[#D9B45F] transition-colors">Sitemap</Link>
+            <Link href="/sitemap.xml" className="hover:text-[#D9B45F] transition-colors">Sitemap</Link>
           </div>
         </div>
 

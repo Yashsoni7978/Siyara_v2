@@ -6,3 +6,4 @@ Sitemap: https://siyara.in/sitemap.xml
 
 # Disallow admin/private paths (add as needed)
 Disallow: /api/
+Disallow: /private/

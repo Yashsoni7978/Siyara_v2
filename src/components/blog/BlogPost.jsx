@@ -254,7 +254,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
           </aside>
 
           {/* Main Editorial Body Content */}
-          <main className="lg:col-span-8 space-y-12">
+          <div className="lg:col-span-8 space-y-12">
             {article.sections && article.sections.map((section, idx) => (
               <section id={section.id || `sec-${idx}`} key={idx} className="scroll-mt-32 space-y-6">
                 {/* Section Title */}
@@ -263,19 +263,19 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
                 </h2>
 
                 {/* Section Content Paragraphs */}
-                {section.content && section.content.map((paragraph, pIdx) => {
-                  if (typeof paragraph === 'string' && (paragraph.includes('<a ') || paragraph.includes('<strong>') || paragraph.includes('<em>') || paragraph.includes('<ul>') || paragraph.includes('<ol>'))) {
+                {section.content && section.content.map((p, pIdx) => {
+                  if (typeof p === 'string' && (p.includes('<ul') || p.includes('<ol') || p.includes('<p>') || p.includes('<strong>'))) {
                     return (
                       <div 
                         key={pIdx} 
-                        className="font-sans text-sm sm:text-base text-[#CFC9BB]/90 font-light leading-relaxed [&_a]:text-[#D4AF37] [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-[#F3EFE4] [&_a]:transition-colors [&_strong]:text-[#F3EFE4] [&_strong]:font-medium [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:space-y-2 [&_li]:text-[#CFC9BB]/90 [&_li]:font-light"
-                        dangerouslySetInnerHTML={{ __html: paragraph }}
+                        className="font-sans text-sm sm:text-base text-[#CFC9BB]/90 leading-relaxed font-light article-prose space-y-4"
+                        dangerouslySetInnerHTML={{ __html: p }} 
                       />
                     );
                   }
                   return (
-                    <p key={pIdx} className="font-sans text-sm sm:text-base text-[#CFC9BB]/90 font-light leading-relaxed">
-                      {paragraph}
+                    <p key={pIdx} className="font-sans text-sm sm:text-base text-[#CFC9BB]/90 leading-relaxed font-light">
+                      {p}
                     </p>
                   );
                 })}
@@ -316,7 +316,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
                 ))}
               </div>
             )}
-          </main>
+          </div>
         </div>
 
         {/* Detailed Author Profile Card */}

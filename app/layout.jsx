@@ -83,7 +83,8 @@ export default function RootLayout({ children }) {
                   },
                   'contactPoint': {
                     '@type': 'ContactPoint',
-                    'email': 'hello@siyara.dev',
+                    'telephone': '+91-9587269209',
+                    'email': 'info@siyaradigital.com',
                     'contactType': 'customer service',
                     'availableLanguage': ['English', 'Hindi']
                   },

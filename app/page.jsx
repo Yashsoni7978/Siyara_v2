@@ -12,7 +12,7 @@ import FinalCTA from '../src/components/home/FinalCTA';
 
 export default function HomePage() {
   return (
-    <main>
+    <>
       {/* 01 HERO — DARK */}
       <Hero />
 
@@ -63,6 +63,6 @@ export default function HomePage() {
 
       {/* 11 FINAL CTA — IVORY */}
       <FinalCTA />
-    </main>
+    </>
   );
 }
