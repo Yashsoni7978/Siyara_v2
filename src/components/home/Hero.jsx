@@ -115,7 +115,7 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
+      <div className="max-w-[1500px] mx-auto pl-5 pr-6 sm:pl-6 sm:pr-8 lg:pl-10 lg:pr-12 xl:pl-16 xl:pr-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
 
           {/* LEFT COLUMN: Clean Editorial Typography & Action CTAs */}
@@ -229,7 +229,7 @@ export default function Hero() {
           <div className="absolute -left-2.5 top-1/2 -translate-y-1/2 w-2.5 h-[1px] bg-[#D9B45F]/80" />
 
           {/* Plaque Background & Chamfered Gold Frame */}
-          <div className="relative px-7 py-3 bg-[#070A09]/95 backdrop-blur-md shadow-[0_0_30px_rgba(7,10,9,1),0_0_15px_rgba(217,180,95,0.08)]">
+          <div className="relative px-7 py-6 bg-[#070A09]/95 backdrop-blur-md shadow-[0_0_30px_rgba(7,10,9,1),0_0_15px_rgba(217,180,95,0.08)]">
             {/* SVG Chamfered Border */}
             <svg
               className="absolute inset-0 w-full h-full pointer-events-none"
