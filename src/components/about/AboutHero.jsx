@@ -29,7 +29,7 @@ export default function AboutHero() {
       <div className="absolute right-0 top-0 bottom-0 w-1/3 border-l border-[#D9B45F]/5 bg-gradient-to-l from-[#071E18]/10 to-transparent pointer-events-none z-[1] hidden lg:block" />
       <div className="absolute right-1/4 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-[#D9B45F]/10 to-transparent pointer-events-none z-[1] hidden lg:block" />
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
+      <div className="max-w-[1500px] mx-auto pl-5 pr-6 sm:pl-6 sm:pr-8 lg:pl-10 lg:pr-12 xl:pl-16 xl:pr-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* LEFT COLUMN: Editorial Hero Content */}

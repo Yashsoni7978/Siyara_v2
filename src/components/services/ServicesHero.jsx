@@ -10,7 +10,6 @@ export default function ServicesHero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isMobile, setIsMobile] = useState(false);
   const heroRef = useRef(null);
-  const videoRef = useRef(null);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -19,31 +18,6 @@ export default function ServicesHero() {
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  // Ensure video is 100% MUTED with zero volume and no audio track, and plays automatically
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.muted = true;
-      video.defaultMuted = true;
-      video.volume = 0;
-      
-      const playVideo = () => {
-        video.play().catch((err) => {
-          console.warn('Services hero video autoplay prevented:', err);
-        });
-      };
-
-      playVideo();
-      video.addEventListener('canplay', playVideo);
-      video.addEventListener('loadeddata', playVideo);
-
-      return () => {
-        video.removeEventListener('canplay', playVideo);
-        video.removeEventListener('loadeddata', playVideo);
-      };
-    }
   }, []);
 
   const handleMouseMove = (e) => {
@@ -94,24 +68,18 @@ export default function ServicesHero() {
       {/* LAYER 01: Obsidian Black Canvas Base */}
       <div className="absolute inset-0 bg-[#070A09] z-0" />
 
-      {/* LAYER 02: PURE FULL HERO VIDEO BACKGROUND */}
+      {/* LAYER 02: PURE FULL HERO IMAGE BACKGROUND */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-[1] overflow-hidden select-none">
-        <video
-          ref={videoRef}
-          src="/images/siyara_services_hero.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          aria-hidden="true"
-          className="w-full h-full object-cover object-center opacity-100 pointer-events-none"
+        <img
+          src="/images/services_hero_bg.png"
+          alt="Services Ecosystem"
+          className="w-full h-full object-contain object-right lg:object-right opacity-100 pointer-events-none lg:translate-x-12 xl:translate-x-0"
         />
         {/* Subtle left-side gradient veil for optimal typography contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#070A09]/85 via-[#070A09]/40 to-transparent lg:via-[#070A09]/20 pointer-events-none" />
       </div>
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
+      <div className="max-w-[1500px] mx-auto pl-5 pr-6 sm:pl-6 sm:pr-8 lg:pl-10 lg:pr-12 xl:pl-16 xl:pr-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
           {/* LEFT COLUMN: ~45% Width Editorial Typography sitting in open negative space */}

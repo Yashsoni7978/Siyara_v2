@@ -23,7 +23,7 @@ export default function BlogHero() {
         }}
       />
 
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1500px] mx-auto pl-5 pr-6 sm:pl-6 sm:pr-8 lg:pl-10 lg:pr-12 xl:pl-16 xl:pr-12 relative z-10">
         <div className="max-w-4xl">
           {/* Eyebrow */}
           <motion.div 

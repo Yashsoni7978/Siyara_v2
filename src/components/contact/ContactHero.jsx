@@ -32,7 +32,7 @@ export default function ContactHero() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#070A09]/90 via-[#070A09]/55 to-transparent lg:via-[#070A09]/30" />
       </div>
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
+      <div className="max-w-[1500px] mx-auto pl-5 pr-6 sm:pl-6 sm:pr-8 lg:pl-10 lg:pr-12 xl:pl-16 xl:pr-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* LEFT COLUMN: Dominant Editorial Messaging in Open Negative Space */}
