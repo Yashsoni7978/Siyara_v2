@@ -73,7 +73,10 @@ export default function ServicesHero() {
         <img
           src="/images/services_hero_bg.png"
           alt="Services Ecosystem"
-          className="w-full h-full object-contain object-right lg:object-right opacity-100 pointer-events-none lg:translate-x-12 xl:translate-x-0"
+          fetchPriority="high"
+          loading="eager"
+          decoding="sync"
+          className="w-full h-full object-contain object-right lg:object-right opacity-100 pointer-events-none lg:-translate-x-8 xl:-translate-x-16"
         />
         {/* Subtle left-side gradient veil for optimal typography contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#070A09]/85 via-[#070A09]/40 to-transparent lg:via-[#070A09]/20 pointer-events-none" />
