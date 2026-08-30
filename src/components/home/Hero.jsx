@@ -229,7 +229,7 @@ export default function Hero() {
           <div className="absolute -left-2.5 top-1/2 -translate-y-1/2 w-2.5 h-[1px] bg-[#D9B45F]/80" />
 
           {/* Plaque Background & Chamfered Gold Frame */}
-          <div className="relative px-7 py-6 bg-[#070A09]/95 backdrop-blur-md shadow-[0_0_30px_rgba(7,10,9,1),0_0_15px_rgba(217,180,95,0.08)]">
+          <div className="relative px-7 py-10 bg-[#070A09]/95 backdrop-blur-md shadow-[0_0_30px_rgba(7,10,9,1),0_0_15px_rgba(217,180,95,0.08)]">
             {/* SVG Chamfered Border */}
             <svg
               className="absolute inset-0 w-full h-full pointer-events-none"
@@ -248,11 +248,11 @@ export default function Hero() {
             </svg>
 
             {/* Plaque Typography */}
-            <div className="relative z-10 flex flex-col items-center text-center">
-              <span className="font-sans text-[10px] sm:text-[11px] font-semibold tracking-[0.22em] text-[#D9B45F] uppercase whitespace-nowrap">
+            <div className="relative z-10 flex flex-col items-center text-center gap-1">
+              <span className="font-sans text-xs sm:text-sm font-bold tracking-[0.22em] text-[#D9B45F] uppercase whitespace-nowrap">
                 BUILDING WHAT&apos;S NEXT
               </span>
-              <span className="font-sans text-[11px] sm:text-xs font-light tracking-[0.04em] text-[#E5E0D4] mt-0.5 whitespace-nowrap">
+              <span className="font-sans text-sm sm:text-base font-light tracking-[0.04em] text-[#E5E0D4] whitespace-nowrap">
                 Strategy. Technology. Growth.
               </span>
             </div>
