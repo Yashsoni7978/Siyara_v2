@@ -3,7 +3,7 @@ import { FEATURED_ARTICLE, BLOG_ARTICLES } from '../src/data/blogArticles';
 export const dynamic = "force-static";
 
 export default async function sitemap() {
-  const baseUrl = 'https://siyara.in';
+  const baseUrl = 'https://www.siyaradigitals.com';
 
   // Base routes
   const routes = ['', '/about', '/services', '/contact', '/blog'].map((route) => ({

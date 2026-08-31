@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://siyara.in/sitemap.xml
+Sitemap: https://www.siyaradigitals.com/sitemap.xml
 
 # Disallow admin/private paths (add as needed)
 Disallow: /api/

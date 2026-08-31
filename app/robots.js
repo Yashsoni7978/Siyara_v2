@@ -7,6 +7,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/api/', '/private/'],
     },
-    sitemap: 'https://siyara.in/sitemap.xml',
+    sitemap: 'https://www.siyaradigitals.com/sitemap.xml',
   };
 }

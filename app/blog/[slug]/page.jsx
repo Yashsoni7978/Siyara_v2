@@ -27,17 +27,17 @@ export async function generateMetadata({ params }) {
     title: `${article.title} · Siyara Insights`,
     description: article.excerpt || article.executiveSummary,
     alternates: {
-      canonical: `https://siyara.in/blog/${slug}`,
+      canonical: `https://www.siyaradigitals.com/blog/${slug}`,
     },
     openGraph: {
       type: 'article',
-      url: `https://siyara.in/blog/${slug}`,
+      url: `https://www.siyaradigitals.com/blog/${slug}`,
       title: `${article.title} · Siyara Insights`,
       description: article.excerpt || article.executiveSummary,
       publishedTime: new Date(article.date).toISOString(),
       images: [
         {
-          url: article.image || 'https://siyara.in/images/siyara_og_image.png',
+          url: article.image || 'https://www.siyaradigitals.com/images/siyara_og_image.png',
           alt: article.title,
         },
       ],
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title: `${article.title} · Siyara Insights`,
       description: article.excerpt || article.executiveSummary,
-      images: [article.image || 'https://siyara.in/images/siyara_og_image.png'],
+      images: [article.image || 'https://www.siyaradigitals.com/images/siyara_og_image.png'],
     },
   };
 }
@@ -64,25 +64,25 @@ export default async function BlogPostPage({ params }) {
     '@type': 'BlogPosting',
     'headline': article.title,
     'description': article.excerpt || article.executiveSummary,
-    'image': article.image || 'https://siyara.in/images/siyara_og_image.png',
+    'image': article.image || 'https://www.siyaradigitals.com/images/siyara_og_image.png',
     'datePublished': new Date(article.date).toISOString(),
     'author': {
       '@type': 'Person',
       'name': article.author?.name || 'Siyara Editor',
       'jobTitle': article.author?.role || 'Contributor',
-      'image': article.author?.avatar || 'https://siyara.in/images/siyara_og_image.png',
+      'image': article.author?.avatar || 'https://www.siyaradigitals.com/images/siyara_og_image.png',
     },
     'publisher': {
       '@type': 'Organization',
       'name': 'Siyara',
       'logo': {
         '@type': 'ImageObject',
-        'url': 'https://siyara.in/images/siyara_og_image.png',
+        'url': 'https://www.siyaradigitals.com/images/siyara_og_image.png',
       },
     },
     'mainEntityOfPage': {
       '@type': 'WebPage',
-      '@id': `https://siyara.in/blog/${slug}`,
+      '@id': `https://www.siyaradigitals.com/blog/${slug}`,
     },
   };
 

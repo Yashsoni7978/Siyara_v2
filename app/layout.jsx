@@ -20,22 +20,22 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://siyara.in'),
+  metadataBase: new URL('https://www.siyaradigitals.com'),
   title: 'Siyara | Digital Architecture Studio · Strategy, Brand & Web Systems · Jaipur',
   description: 'Siyara is a digital architecture studio based in Jaipur, Rajasthan. We build connected systems across 8 disciplines: Strategy, Brand, Experience, Visibility, Conversion, Automation, Analytics and Growth, for ambitious businesses.',
   keywords: 'digital architecture studio, brand strategy, web design Jaipur, SEO Jaipur, digital marketing Rajasthan, web development India, AI automation, conversion optimisation, Siyara',
   alternates: {
-    canonical: 'https://siyara.in/',
+    canonical: 'https://www.siyaradigitals.com/',
   },
   openGraph: {
     type: 'website',
-    url: 'https://siyara.in/',
+    url: 'https://www.siyaradigitals.com/',
     siteName: 'Siyara',
     title: 'Siyara | Digital Architecture Studio · Strategy, Brand & Web Systems · Jaipur',
     description: 'A digital architecture studio building connected systems for ambitious businesses. Strategy, Brand, Experience, Visibility, Conversion, Automation, Analytics and Growth.',
     images: [
       {
-        url: 'https://siyara.in/images/siyara_og_image.png',
+        url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
         width: 1200,
         height: 630,
         alt: 'Siyara · Digital Architecture Studio',
@@ -48,7 +48,7 @@ export const metadata = {
     site: '@siyaradigital',
     title: 'Siyara | Digital Architecture Studio · Jaipur',
     description: 'Connected systems across 8 disciplines for ambitious businesses. Strategy, Brand, Experience, Visibility, Conversion, Automation, Analytics and Growth.',
-    images: ['https://siyara.in/images/siyara_og_image.png'],
+    images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };
 
@@ -65,13 +65,13 @@ export default function RootLayout({ children }) {
               '@graph': [
                 {
                   '@type': 'Organization',
-                  '@id': 'https://siyara.in/#organization',
+                  '@id': 'https://www.siyaradigitals.com/#organization',
                   'name': 'Siyara',
                   'alternateName': 'Siyara Digital Architecture Studio',
-                  'url': 'https://siyara.in',
+                  'url': 'https://www.siyaradigitals.com',
                   'logo': {
                     '@type': 'ImageObject',
-                    'url': 'https://siyara.in/images/siyara_og_image.png'
+                    'url': 'https://www.siyaradigitals.com/images/siyara_og_image.png'
                   },
                   'description': 'A digital architecture studio building connected systems across Strategy, Brand, Experience, Visibility, Conversion, Automation, Analytics and Growth.',
                   'foundingDate': '2024',
@@ -97,12 +97,12 @@ export default function RootLayout({ children }) {
                 },
                 {
                   '@type': 'WebSite',
-                  '@id': 'https://siyara.in/#website',
-                  'url': 'https://siyara.in',
+                  '@id': 'https://www.siyaradigitals.com/#website',
+                  'url': 'https://www.siyaradigitals.com',
                   'name': 'Siyara',
                   'description': 'Digital architecture studio building connected systems for ambitious businesses.',
                   'publisher': {
-                    '@id': 'https://siyara.in/#organization'
+                    '@id': 'https://www.siyaradigitals.com/#organization'
                   }
                 }
               ]
