@@ -12,37 +12,37 @@ export default function WhySiyara() {
     {
       id: '01',
       title: 'STRONGER POSITIONING',
-      description: 'Clear brand identity, architectural positioning, and market authority.',
+      description: 'Clear identity and market authority in Jaipur\u2019s market.',
       icon: Target,
     },
     {
       id: '02',
       title: 'BETTER DIGITAL EXPERIENCE',
-      description: 'High-speed, intuitive web applications built to command trust.',
+      description: 'Fast, intuitive web experiences people actually trust.',
       icon: Monitor,
     },
     {
       id: '03',
       title: 'SEARCH VISIBILITY',
-      description: 'Organic search domination, AI generative engine visibility, and GEO ranking.',
+      description: 'Found on Google search and AI answer engines like ChatGPT and Perplexity.',
       icon: Search,
     },
     {
       id: '04',
       title: 'HIGHER CONVERSION',
-      description: 'Friction-free user funnels engineered for high-intent client enrolment.',
+      description: 'Funnels built around how your actual customers decide.',
       icon: Filter,
     },
     {
       id: '05',
       title: 'AUTOMATION',
-      description: 'Streamlined CRM workflows, business operations automation, and saved time.',
+      description: 'Less manual work through CRM and workflow automation.',
       icon: Bot,
     },
     {
       id: '06',
       title: 'MEASURABLE GROWTH',
-      description: 'Continuous analytics tracking, performance tuning, and scalable business ROI.',
+      description: 'Real analytics and reporting, not vanity metrics.',
       icon: TrendingUp,
     },
   ];
@@ -63,7 +63,7 @@ export default function WhySiyara() {
           className="flex items-center gap-3 mb-10"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
-            05
+            03
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">

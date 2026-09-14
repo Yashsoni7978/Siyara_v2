@@ -56,7 +56,7 @@ export default function AboutHero() {
                 variants={fadeUp(400)}
                 className="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-normal leading-[1.1] tracking-tight text-[#F3EFE3] max-w-[95%]"
               >
-                We combine creativity, technology and strategy to build digital experiences that <span className="text-[#D9B45F]">drive growth.</span>
+                We build digital systems for Jaipur businesses — strategy, design, and technology, connected.
               </motion.h1>
             </div>
 
@@ -68,10 +68,10 @@ export default function AboutHero() {
               className="mb-10 max-w-lg space-y-4"
             >
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Siyara Innovations is a digital technology company that brings strategy, design, technology and growth together to solve meaningful business challenges.
+                Siyara Innovations brings strategy, design, technology, and growth together to solve real problems for Jaipur businesses — not abstract “digital experiences.”
               </p>
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                We believe digital solutions work best when every part of the system is connected.
+                We believe every part of a business’s digital presence should work as one system, not six disconnected pieces.
               </p>
             </motion.div>
 
@@ -83,7 +83,7 @@ export default function AboutHero() {
               className="mb-10 flex items-center gap-4"
             >
               <span className="text-[10px] sm:text-[11px] font-sans font-semibold tracking-[0.2em] text-[#9D9B91]/70 uppercase">
-                BASED IN JAIPUR &middot; WORKING BEYOND BOUNDARIES
+               BASED IN JAIPUR &middot; BUILT FOR JAIPUR
               </span>
             </motion.div>
 

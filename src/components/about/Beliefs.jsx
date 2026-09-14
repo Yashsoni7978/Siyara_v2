@@ -12,25 +12,25 @@ export default function Beliefs() {
     {
       id: '01',
       title: 'STRATEGY FIRST',
-      description: 'We ask the right questions before building anything.',
+      description: 'We ask the right questions about your business and your market before we build anything.',
       icon: Target,
     },
     {
       id: '02',
       title: 'CRAFT MATTERS',
-      description: 'Design and development details make the difference.',
+      description: 'Every design and development decision is made deliberately — nothing is left to a template default.',
       icon: Sparkles,
     },
     {
       id: '03',
       title: 'BUILT FOR PERFORMANCE',
-      description: 'Every project is built to deliver measurable results.',
+      description: 'Every project is measured against real outcomes: speed, visibility, and conversion.',
       icon: Cpu,
     },
     {
       id: '04',
       title: 'GROW TOGETHER',
-      description: 'Long-term partnership is at the heart of what we do.',
+      description: 'We stay involved after launch — this is a partnership, not a handoff.',
       icon: Handshake,
     },
   ];
@@ -69,7 +69,7 @@ export default function Beliefs() {
             transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
             className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[1.04] mb-6"
           >
-            We saw great businesses get lost in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">disconnected digital experiences.</span>
+            We saw great Jaipur businesses get lost in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">disconnected digital experiences.</span>
           </motion.h2>
 
           <motion.p
@@ -79,7 +79,7 @@ export default function Beliefs() {
             transition={{ duration: 0.8, delay: 0.2, ease: easeCustom }}
             className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed max-w-2xl"
           >
-            We exist to help ambitious companies transcend visual noise with strategic clarity, high-performance technology, and enduring digital craft.
+             We exist to help Jaipur businesses cut through visual noise with clear strategy, high-performance technology, and work built to last.
           </motion.p>
         </div>
 

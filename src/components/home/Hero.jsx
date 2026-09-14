@@ -134,42 +134,39 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            {/* Headline */}
+            {/* Headline — single H1 with decorative visual split preserved */}
             <div className="mb-6">
-              <h1 className="sr-only">WE BUILD BRANDS THAT DOMINATE.</h1>
-              
-              {/* Line 1: WE BUILD BRANDS — large */}
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp(500)}
-                className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-normal leading-[1.0] tracking-tight text-[#F3EFE3]"
-                aria-hidden="true"
-              >
-                WE BUILD BRANDS
-              </motion.div>
+              <h1 className="font-serif leading-[1.0] tracking-tight">
+                {/* Line 1: WE BUILD BRANDS — large */}
+                <motion.span
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeUp(500)}
+                  className="block text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-normal text-[#F3EFE3]"
+                >
+                  WE BUILD BRANDS
+                </motion.span>
 
-              {/* Line 2: THAT — small, gold, spaced like a label */}
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp(620)}
-                className="font-sans text-sm sm:text-base lg:text-lg font-semibold tracking-[0.3em] text-[#D9B45F] uppercase my-2"
-                aria-hidden="true"
-              >
-                THAT
-              </motion.div>
+                {/* Line 2: THAT — small, gold, spaced like a label */}
+                <motion.span
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeUp(620)}
+                  className="block font-sans text-sm sm:text-base lg:text-lg font-semibold tracking-[0.3em] text-[#D9B45F] uppercase my-2"
+                >
+                  THAT
+                </motion.span>
 
-              {/* Line 3: DOMINATE. — massive gold */}
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp(700)}
-                className="font-serif text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-normal leading-[0.88] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
-                aria-hidden="true"
-              >
-                DOMINATE.
-              </motion.div>
+                {/* Line 3: DOMINATE. — massive gold */}
+                <motion.span
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeUp(700)}
+                  className="block text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-normal leading-[0.88] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
+                >
+                  DOMINATE.
+                </motion.span>
+              </h1>
             </div>
 
             {/* Supporting Copy */}
@@ -180,7 +177,7 @@ export default function Hero() {
               className="mb-10 max-w-lg"
             >
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                A digital architecture studio for ambitious businesses building connected systems, not isolated campaigns.
+                Siyara Innovations is a Jaipur-based digital architecture studio — brand strategy, websites, SEO, and growth systems built as one connected system, not campaigns that compete with each other.
               </p>
             </motion.div>
 

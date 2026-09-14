@@ -9,25 +9,25 @@ export default function Numbers() {
       id: '01',
       number: '100+',
       label: 'PROJECTS DELIVERED',
-      description: 'Across industries and global markets.',
+      description: 'For businesses across Jaipur and beyond.',
     },
     {
       id: '02',
       number: '50+',
       label: 'BUSINESSES GROWN',
-      description: 'Through strategy and digital execution.',
+      description: 'Through strategy, design, and execution that actually connects.',
     },
     {
       id: '03',
       number: '4+',
       label: 'YEARS OF EXPERIENCE',
-      description: 'Delivering digital systems that matter.',
+      description: 'Building digital systems that hold up.',
     },
     {
       id: '04',
       number: '1',
       label: 'MISSION',
-      description: 'To help brands scale, differentiate and lead.',
+      description: 'To help Jaipur businesses show up the way they actually deserve to.',
     },
   ];
 

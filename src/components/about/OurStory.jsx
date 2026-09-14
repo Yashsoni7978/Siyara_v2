@@ -42,7 +42,7 @@ export default function OurStory() {
               transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
               className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.08] tracking-tight text-[#101613] mb-8"
             >
-              Siyara Innovations was born out of a simple belief that great businesses deserve a digital presence that <span className="font-serif text-[#0B5E49]">truly</span> represents them.
+              Siyara Innovations started because Jaipur businesses deserved better than templates and copy-paste strategy.
             </motion.h2>
 
             <motion.div
@@ -53,10 +53,10 @@ export default function OurStory() {
               className="flex flex-col gap-5 max-w-lg text-base font-sans text-[#101613]/70 leading-relaxed font-light"
             >
               <p>
-                We saw brands losing customers to competitors with better websites, better visibility and better strategy. We started Siyara to change that.
+                We saw good businesses — with real quality behind them — lose customers to competitors who simply looked and showed up better online. So we started Siyara to close that gap.
               </p>
               <p>
-                Today, we partner with businesses to build digital experiences that are not just beautiful, but built to perform, convert and grow.
+                Today we partner with Jaipur businesses to build digital systems that aren’t just well-designed, but built to perform, convert, and grow.
               </p>
             </motion.div>
           </div>

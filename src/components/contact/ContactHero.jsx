@@ -94,7 +94,7 @@ export default function ContactHero() {
               className="mb-10 max-w-lg"
             >
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Tell us where you want to go. We'll help architect the digital system to get you there.
+                Tell us where you want to go. We'll help architect the digital system to get you there — built for Jaipur's market.
               </p>
             </motion.div>
 

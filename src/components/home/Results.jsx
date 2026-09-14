@@ -8,36 +8,36 @@ export default function Results() {
   const proofPillars = [
     {
       id: '01',
-      title: 'ENGINEERING & SPEED',
-      label: 'Core Web Vitals & performance optimization',
+      title: 'PERFORMANCE',
+      label: 'Core Web Vitals and load-speed work on every build',
       category: 'Performance',
       icon: Cpu,
     },
     {
       id: '02',
-      title: 'SEARCH & GEO VISIBILITY',
-      label: 'Organic + AI search engine visibility',
+      title: 'VISIBILITY',
+      label: 'Organic search and AI answer-engine visibility (SEO + GEO)',
       category: 'Visibility',
       icon: Search,
     },
     {
       id: '03',
-      title: 'CONVERSION DESIGN',
-      label: 'High-intent user funnels & UX architecture',
+      title: 'CONVERSION',
+      label: 'Funnel and UX architecture built around how people actually decide',
       category: 'Conversion',
       icon: Target,
     },
     {
       id: '04',
-      title: 'METHODOLOGY',
-      label: 'Structured milestone execution & QA',
+      title: 'DELIVERY',
+      label: 'Structured milestones and QA before anything ships',
       category: 'Delivery',
       icon: ShieldCheck,
     },
     {
       id: '05',
-      title: 'GROWTH SYSTEMS',
-      label: 'Continuous performance & CRO iteration',
+      title: 'OPTIMIZATION',
+      label: 'Ongoing CRO and reporting after launch',
       category: 'Optimization',
       icon: TrendingUp,
     },
@@ -85,8 +85,7 @@ export default function Results() {
           className="mb-12 max-w-3xl"
         >
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-5xl xl:text-6xl text-[#101613] font-normal leading-[0.98] tracking-tight uppercase mb-4">
-            REAL OUTCOMES. <br />
-            MEASURABLE <span className="text-[#0B5E49] font-normal">IMPACT.</span>
+            Real Outcomes for <span className="text-[#0B5E49] font-normal">Jaipur Brands</span>
           </h2>
           <p className="font-sans text-sm text-[#101613] font-normal leading-relaxed mb-6 max-w-lg">
             We design and engineer scalable digital systems engineered to elevate brands, increase visibility, and drive long-term business value.
@@ -149,6 +148,7 @@ export default function Results() {
         </motion.div>
 
         {/* Client Brand Strip - Tags Approach */}
+        {/* TODO: link once case study pages exist */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}

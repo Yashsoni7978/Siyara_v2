@@ -2,7 +2,7 @@ import Services from '../../src/views/Services';
 
 export const metadata = {
   title: 'Services | Siyara · 8-Discipline Digital Architecture System · Jaipur',
-  description: 'One connected system across 8 disciplines: Strategy, Brand, Experience, Visibility, Conversion, Automation, Analytics and Growth. Built for ambitious businesses.',
+  description: 'Siyara Innovations offers digital strategy, brand, web design, SEO, and growth services as one connected system for Jaipur businesses — not six disconnected vendors.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/services',
   },
@@ -11,7 +11,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/services',
     siteName: 'Siyara',
     title: 'Services | Siyara · 8-Discipline Digital Architecture System · Jaipur',
-    description: 'One connected system across 8 disciplines: Strategy, Brand, Experience, Visibility, Conversion, Automation, Analytics and Growth. Built for ambitious businesses.',
+    description: 'Siyara Innovations offers digital strategy, brand, web design, SEO, and growth services as one connected system for Jaipur businesses — not six disconnected vendors.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -26,7 +26,7 @@ export const metadata = {
     card: 'summary_large_image',
     site: '@siyaradigital',
     title: 'Services | Siyara · 8-Discipline Digital Architecture System · Jaipur',
-    description: 'One connected system across 8 disciplines: Strategy, Brand, Experience, Visibility, Conversion, Automation, Analytics and Growth. Built for ambitious businesses.',
+    description: 'Siyara Innovations offers digital strategy, brand, web design, SEO, and growth services as one connected system for Jaipur businesses — not six disconnected vendors.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };

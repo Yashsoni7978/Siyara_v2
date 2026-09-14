@@ -21,8 +21,8 @@ const manrope = Manrope({
 
 export const metadata = {
   metadataBase: new URL('https://www.siyaradigitals.com'),
-  title: 'Siyara | Digital Architecture Studio · Strategy, Brand & Web Systems · Jaipur',
-  description: 'Siyara is a digital architecture studio based in Jaipur, Rajasthan. We build connected systems across 8 disciplines: Strategy, Brand, Experience, Visibility, Conversion, Automation, Analytics and Growth, for ambitious businesses.',
+  title: 'Siyara Innovations | Digital Marketing & Web Design Agency in Jaipur',
+  description: 'Siyara Innovations is a Jaipur-based digital agency building brand strategy, websites, SEO/GEO, and automation as one connected system — not six disconnected vendors. Book a strategy session.',
   keywords: 'digital architecture studio, brand strategy, web design Jaipur, SEO Jaipur, digital marketing Rajasthan, web development India, AI automation, conversion optimisation, Siyara',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/',
@@ -30,9 +30,9 @@ export const metadata = {
   openGraph: {
     type: 'website',
     url: 'https://www.siyaradigitals.com/',
-    siteName: 'Siyara',
-    title: 'Siyara | Digital Architecture Studio · Strategy, Brand & Web Systems · Jaipur',
-    description: 'A digital architecture studio building connected systems for ambitious businesses. Strategy, Brand, Experience, Visibility, Conversion, Automation, Analytics and Growth.',
+    siteName: 'Siyara Innovations',
+    title: 'Siyara Innovations | Digital Marketing & Web Design Agency in Jaipur',
+    description: 'Siyara Innovations is a Jaipur-based digital agency building brand strategy, websites, SEO/GEO, and automation as one connected system — not six disconnected vendors. Book a strategy session.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -46,8 +46,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@siyaradigital',
-    title: 'Siyara | Digital Architecture Studio · Jaipur',
-    description: 'Connected systems across 8 disciplines for ambitious businesses. Strategy, Brand, Experience, Visibility, Conversion, Automation, Analytics and Growth.',
+    title: 'Siyara Innovations | Digital Marketing & Web Design Agency in Jaipur',
+    description: 'Siyara Innovations is a Jaipur-based digital agency building brand strategy, websites, SEO/GEO, and automation as one connected system — not six disconnected vendors. Book a strategy session.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };

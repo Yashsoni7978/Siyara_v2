@@ -14,60 +14,66 @@ export default function ServicesApplications() {
       name: 'REAL ESTATE',
       icon: Home,
       tagline: 'High-yield digital architecture for premier developments, luxury brokerages & real estate funds.',
-      details: 'Elevating property portfolios through immersive web portals, 3D interactive floor plans, and high-intent buyer acquisition funnels.',
+      details: 'Digital systems for developers, luxury brokerages, and real estate funds in and around Jaipur — property portals, interactive floor plans, and buyer acquisition funnels that actually convert.',
+      ctaText: 'APPLY SYSTEM TO REAL ESTATE',
     },
     {
       id: '02',
       name: 'HEALTHCARE & WELLNESS',
       icon: HeartPulse,
-      tagline: 'Patient acquisition portals and high-trust medical practice positioning systems.',
-      details: 'Architecting HIPAA-compliant booking engines, patient trust systems, and specialized SEO visibility for medical centers.',
+      tagline: 'Trust-first digital systems for clinics, wellness centers, and healthcare practices across Jaipur.',
+      details: 'Building patient-facing websites, appointment funnels, and local search visibility that turn searches into booked visits — without compromising on trust or compliance.',
+      ctaText: 'APPLY SYSTEM TO HEALTHCARE',
     },
     {
       id: '03',
       name: 'JEWELLERY & LUXURY',
       icon: Gem,
-      tagline: 'Bespoke digital luxury boutiques, high-ticket conversion and VIP client journeys.',
-      details: 'Creating ultra-high-contrast editorial e-commerce, private appointment booking, and brand storytelling.',
+      tagline: "High-craft digital presence for jewellery houses and luxury retailers rooted in Jaipur's heritage market.",
+      details: 'Elevating product storytelling through cinematic visuals, catalog-grade product pages, and search visibility built for high-intent, high-value buyers.',
+      ctaText: 'APPLY SYSTEM TO JEWELLERY & LUXURY',
     },
     {
       id: '04',
       name: 'HOSPITALITY & LEISURE',
       icon: UtensilsCrossed,
-      tagline: 'Direct booking engines and immersive digital experiences for boutique luxury hotels & dining.',
-      details: 'Reducing OTA commission dependency with high-converting direct booking portals and brand positioning.',
+      tagline: 'Booking-ready digital systems for hotels, resorts, and hospitality brands in and around Jaipur.',
+      details: 'Immersive property showcases, direct-booking funnels that reduce OTA dependency, and local search visibility for guests searching right now.',
+      ctaText: 'APPLY SYSTEM TO HOSPITALITY',
     },
     {
       id: '05',
       name: 'EDUCATION & ACADEMIES',
       icon: GraduationCap,
-      tagline: 'Student enrollment funnels and educational brand authority architecture.',
-      details: 'Scaling institutional prestige, international student recruitment, and digital application portals.',
+      tagline: 'Enrollment-focused digital systems for schools, coaching institutes, and academies across Jaipur.',
+      details: 'Clear program pages, admission funnels, and local search visibility built for parents and students actively comparing options.',
+      ctaText: 'APPLY SYSTEM TO EDUCATION',
     },
     {
       id: '06',
       name: 'E-COMMERCE & D2C',
       icon: ShoppingBag,
-      tagline: 'Scalable digital commerce architecture, conversion rate optimization & retention automation.',
-      details: 'Headless storefront engineering, high-ROAS acquisition systems, and automated customer lifetime value tracking.',
+      tagline: 'Conversion-built online stores for D2C and e-commerce brands based in Jaipur.',
+      details: 'Fast, high-converting storefronts, checkout funnels engineered to reduce drop-off, and search + performance marketing that drives repeat customers, not just one-time traffic.',
+      ctaText: 'APPLY SYSTEM TO E-COMMERCE',
     },
     {
       id: '07',
       name: 'PROFESSIONAL SERVICES',
       icon: Briefcase,
-      tagline: 'Authority positioning for law firms, advisory practices & financial consultancies.',
-      details: 'Establishing market leadership, high-value corporate client acquisition, and automated lead qualification.',
+      tagline: 'Authority-building digital systems for law firms, consultancies, and professional practices in Jaipur.',
+      details: 'Credibility-first websites, lead-capture funnels for high-consideration services, and search visibility that positions you as the obvious local choice.',
+      ctaText: 'APPLY SYSTEM TO PROFESSIONAL SERVICES',
     },
     {
       id: '08',
       name: 'STARTUPS & TECHNOLOGY',
       icon: Cpu,
-      tagline: 'Go-to-market launch systems, product UI/UX & investor pitch digital collateral.',
-      details: 'Accelerating product-market fit, SaaS user onboarding funnels, and high-conversion landing systems.',
+      tagline: 'Fast, scalable digital foundations for startups and tech companies building out of Jaipur.',
+      details: 'Product-led websites, investor-ready brand presence, and technical SEO built to scale as you grow — without a rebuild every funding round.',
+      ctaText: 'APPLY SYSTEM TO STARTUPS',
     },
   ];
-
-  const currentCategory = categories[activeIdx];
 
   return (
     <section id="applications" className="relative py-16 sm:py-20 bg-[#070A09] text-[#F3EFE3] overflow-hidden">
@@ -86,7 +92,7 @@ export default function ServicesApplications() {
           className="flex items-center gap-3 mb-10"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
-            07
+            05
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
@@ -146,49 +152,58 @@ export default function ServicesApplications() {
             })}
           </div>
 
-          {/* Right Column: Featured Sector Detail Showcase Card */}
-          <div className="lg:col-span-6">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentCategory.id}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.4, ease: easeCustom }}
-                className="p-8 sm:p-12 bg-[#071E18]/40 border border-[#D9B45F]/30 backdrop-blur-md relative overflow-hidden h-full flex flex-col justify-between"
-              >
-                <div className="absolute top-0 right-0 w-80 h-80 bg-[#0C6B52]/20 blur-3xl pointer-events-none" />
+          {/* Right Column: Featured Sector Detail Showcase Cards (All 8 server-rendered in DOM for SEO crawlability) */}
+          <div className="lg:col-span-6 h-full">
+            {categories.map((cat, idx) => {
+              const isActive = idx === activeIdx;
 
-                <div>
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="text-xs font-sans font-bold tracking-widest text-[#D9B45F]">
-                      SECTOR APPLICATION {currentCategory.id} / 08
-                    </span>
-                    <span className="h-[1px] flex-grow bg-[#D9B45F]/20" />
-                  </div>
-
-                  <h3 className="font-serif text-3xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight mb-4">
-                    {currentCategory.name} <span className="text-[#D9B45F] font-normal">SYSTEM.</span>
-                  </h3>
-
-                  <p className="font-sans text-sm sm:text-base text-[#D9B45F] font-medium leading-relaxed mb-6">
-                    {currentCategory.tagline}
-                  </p>
-
-                  <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-8">
-                    {currentCategory.details}
-                  </p>
-                </div>
-
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 w-fit shadow-lg shadow-[#D9B45F]/15"
+              return (
+                <div
+                  key={cat.id}
+                  className={isActive ? 'block h-full' : 'hidden'}
+                  aria-hidden={!isActive}
                 >
-                  <span>APPLY SYSTEM TO {currentCategory.name}</span>
-                  <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
-                </a>
-              </motion.div>
-            </AnimatePresence>
+                  <motion.div
+                    key={isActive ? `active-${cat.id}` : `inactive-${cat.id}`}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, ease: easeCustom }}
+                    className="p-8 sm:p-12 bg-[#071E18]/40 border border-[#D9B45F]/30 backdrop-blur-md relative overflow-hidden h-full flex flex-col justify-between"
+                  >
+                    <div className="absolute top-0 right-0 w-80 h-80 bg-[#0C6B52]/20 blur-3xl pointer-events-none" />
+
+                    <div>
+                      <div className="flex items-center gap-3 mb-6">
+                        <span className="text-xs font-sans font-bold tracking-widest text-[#D9B45F]">
+                          SECTOR APPLICATION {cat.id} / 08
+                        </span>
+                        <span className="h-[1px] flex-grow bg-[#D9B45F]/20" />
+                      </div>
+
+                      <h3 className="font-serif text-3xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight mb-4">
+                        {cat.name} <span className="text-[#D9B45F] font-normal">SYSTEM.</span>
+                      </h3>
+
+                      <p className="font-sans text-sm sm:text-base text-[#D9B45F] font-medium leading-relaxed mb-6">
+                        {cat.tagline}
+                      </p>
+
+                      <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-8">
+                        {cat.details}
+                      </p>
+                    </div>
+
+                    <a
+                      href="#contact"
+                      className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 w-fit shadow-lg shadow-[#D9B45F]/15"
+                    >
+                      <span>{cat.ctaText}</span>
+                      <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+                    </a>
+                  </motion.div>
+                </div>
+              );
+            })}
           </div>
 
         </div>

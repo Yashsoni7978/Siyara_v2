@@ -35,7 +35,7 @@ export default function ServicesIndustries() {
           className="flex items-center gap-3 mb-10"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
-            06
+            04
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
@@ -43,7 +43,7 @@ export default function ServicesIndustries() {
           </span>
         </motion.div>
 
-        {/* Section 06 Headline */}
+        {/* Section 04 Headline */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -24,7 +24,7 @@ export default function ServiceIndex({ onNavigate }) {
       id: '01',
       name: 'STRATEGY',
       tagline: 'Brand positioning, market research, business strategy and digital direction.',
-      description: 'We construct data-driven growth architecture, competitive intelligence, and market position roadmaps.',
+      description: 'Brand positioning, market research, and a clear growth roadmap for your business in the Jaipur market.',
       icon: Compass,
       slug: '/services/brand-strategy',
       subServices: [
@@ -189,7 +189,7 @@ export default function ServiceIndex({ onNavigate }) {
             className="lg:col-span-4 flex lg:justify-end"
           >
             <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-sm">
-              Every discipline plays a role. Together, they build momentum. Together, they drive growth.
+             Every discipline plays a role for Jaipur businesses — together, they build one system, not eight disconnected services.
             </p>
           </motion.div>
         </div>

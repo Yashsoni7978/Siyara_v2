@@ -28,7 +28,7 @@ export default function ServicesCTA() {
           className="inline-flex items-center gap-3 mb-8"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
-            08
+            06
           </span>
           <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">

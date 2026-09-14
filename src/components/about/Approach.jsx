@@ -10,37 +10,37 @@ export default function Approach() {
     {
       id: '01',
       title: 'DISCOVER',
-      description: 'Understand your brand, the market and your audience.',
+      description: 'We start by understanding your business, your customers, and what’s actually not working today.',
       icon: Search,
     },
     {
       id: '02',
       title: 'STRATEGIZE',
-      description: 'Build the right plan with clear goals and direction.',
+      description: 'We map a plan with clear priorities — not a generic checklist of deliverables.',
       icon: Compass,
     },
     {
       id: '03',
       title: 'DESIGN',
-      description: 'Create meaningful experiences that connect.',
+      description: 'We design around how your customers actually decide, not just how things look.',
       icon: Edit3,
     },
     {
       id: '04',
       title: 'DEVELOP',
-      description: 'Build with clean code, performance and scalability.',
+      description: 'We build on modern, fast, maintainable code — nothing bolted together.',
       icon: Code,
     },
     {
       id: '05',
       title: 'LAUNCH',
-      description: 'Deploy with confidence and a focus on outcomes.',
+      description: 'We launch with a clear rollout plan and QA, not a rushed handoff.',
       icon: Rocket,
     },
     {
       id: '06',
       title: 'GROW',
-      description: 'Optimize, scale and drive continuous growth.',
+      description: 'We keep optimizing after launch based on real data, not assumptions.',
       icon: TrendingUp,
     },
   ];
@@ -79,7 +79,7 @@ export default function Approach() {
             transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
             className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[1.04]"
           >
-            A disciplined methodology for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">predictable growth.</span>
+            A disciplined process, built around how <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">Jaipur businesses actually grow.</span>
           </motion.h2>
         </div>
 

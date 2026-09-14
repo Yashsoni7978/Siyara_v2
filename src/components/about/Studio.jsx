@@ -80,7 +80,7 @@ export default function Studio() {
               transition={{ duration: 0.8, delay: 0.2, ease: easeCustom }}
               className="font-sans text-base sm:text-lg text-[#101613]/70 font-light leading-relaxed mb-10 max-w-lg"
             >
-              We are a team of strategists, designers, developers and growth experts who love building digital experiences that make a difference.
+              We're a Jaipur-based team of strategists, designers, developers, and growth specialists who care about the businesses we build for.
             </motion.p>
 
             {/* Location Map Marker Box */}

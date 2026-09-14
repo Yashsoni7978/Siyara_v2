@@ -11,32 +11,32 @@ export default function ServicesProcess() {
     {
       id: '01',
       title: 'DISCOVER',
-      description: 'Understanding your brand, market positioning, audience, and growth targets.',
+      description: 'We learn your business, your Jaipur market, and your actual growth targets.',
     },
     {
       id: '02',
       title: 'STRATEGIZE',
-      description: 'Data-backed strategy, system architecture, and clear growth direction.',
+      description: 'We build a plan with clear priorities, not a generic deliverables list.',
     },
     {
       id: '03',
       title: 'DESIGN',
-      description: 'Bespoke UI/UX, visual identity systems, and high-trust editorial aesthetics.',
+      description: 'Interfaces built around how your customers decide, not just how they look.',
     },
     {
       id: '04',
       title: 'BUILD',
-      description: 'High-performance web engineering, clean code, and scalable architecture.',
+      description: 'Clean, scalable code — nothing bolted together from templates.',
     },
     {
       id: '05',
       title: 'LAUNCH',
-      description: 'Rigorous QA testing, GEO AI search setup, and flawless deployment.',
+      description: "QA'd, tested, and set up for both Google and AI search visibility.",
     },
     {
       id: '06',
       title: 'OPTIMIZE',
-      description: 'Continuous CRO, analytics tracking, performance tuning, and lead scaling.',
+      description: 'Ongoing CRO and analytics, not a one-time delivery.',
     },
   ];
 
@@ -57,7 +57,7 @@ export default function ServicesProcess() {
           className="flex items-center gap-3 mb-10"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
-            04
+            02
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">

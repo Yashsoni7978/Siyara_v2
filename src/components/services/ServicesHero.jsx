@@ -101,29 +101,36 @@ export default function ServicesHero() {
               </span>
             </motion.div>
 
-            {/* Headline */}
+            {/* Headline — single H1, Jaipur-first */}
             <div className="mb-6">
-              <h1 className="sr-only">OUR DIGITAL CAPABILITIES.</h1>
+              <h1 className="font-serif leading-[0.96] tracking-tight">
+                <motion.span
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeUp(500)}
+                  className="block text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal text-[#F3EFE3]"
+                >
+                  OUR DIGITAL
+                </motion.span>
 
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp(500)}
-                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
-                aria-hidden="true"
-              >
-                OUR DIGITAL
-              </motion.div>
+                <motion.span
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeUp(700)}
+                  className="block text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
+                >
+                  CAPABILITIES,
+                </motion.span>
 
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp(700)}
-                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
-                aria-hidden="true"
-              >
-                CAPABILITIES.
-              </motion.div>
+                <motion.span
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeUp(820)}
+                  className="block text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal text-[#F3EFE3]"
+                >
+                  BUILT FOR JAIPUR BUSINESSES.
+                </motion.span>
+              </h1>
             </div>
 
             {/* Supporting Copy */}
@@ -134,7 +141,7 @@ export default function ServicesHero() {
               className="mb-10 max-w-lg"
             >
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                From strategy and brand to technology, visibility and growth. Every capability works as part of one connected digital system.
+                Strategy, brand, technology, visibility, and growth — built as one connected system for businesses in Jaipur, not generic templates.
               </p>
             </motion.div>
 

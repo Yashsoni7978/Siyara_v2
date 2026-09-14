@@ -11,25 +11,25 @@ export default function WhySiyara() {
     {
       id: '01',
       title: 'STRATEGY FIRST',
-      description: 'Every solution is built on research, insight and a clear strategy.',
+      description: 'Every project starts with research into your market and competitors, not a template.',
       icon: Target,
     },
     {
       id: '02',
       title: 'ONE TEAM',
-      description: 'Designers, developers, marketers and strategists under one roof.',
+      description: 'Strategists, designers, and developers working from the same brief, in Jaipur.',
       icon: Users,
     },
     {
       id: '03',
       title: 'BUILT TO PERFORM',
-      description: 'We build fast, secure and conversion-focused digital experiences.',
+      description: 'Sites built on Next.js for speed, Core Web Vitals, and real SEO — not just visuals.',
       icon: ShieldCheck,
     },
     {
       id: '04',
       title: 'LONG-TERM GROWTH',
-      description: "We don't just launch. We optimize and grow with you.",
+      description: 'We stay on after launch: optimization, reporting, and iteration month over month.',
       icon: TrendingUp,
     },
   ];

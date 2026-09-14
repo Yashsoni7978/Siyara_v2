@@ -10,38 +10,38 @@ export default function WhatWeDo() {
   const services = [
     {
       id: '01',
-      title: 'BRANDING',
-      subtitle: 'Strategy, Identity & Messaging',
+      title: 'BRAND STRATEGY & IDENTITY',
+      subtitle: 'Positioning, naming, visual identity, messaging',
       icon: Edit3,
     },
     {
       id: '02',
-      title: 'WEB DESIGN & DEVELOPMENT',
-      subtitle: 'Websites & Web Applications',
+      title: 'WEBSITE DESIGN & DEVELOPMENT (JAIPUR)',
+      subtitle: 'Websites and web applications built for speed and conversion',
       icon: Code,
     },
     {
       id: '03',
       title: 'SEO & GEO OPTIMIZATION',
-      subtitle: 'Search Visibility That Drives Traffic',
+      subtitle: 'Search visibility across Google and AI answer engines',
       icon: Search,
     },
     {
       id: '04',
       title: 'DIGITAL MARKETING & GROWTH',
-      subtitle: 'Paid Media, Social & Performance Marketing',
+      subtitle: 'Paid media, social, and performance marketing',
       icon: Megaphone,
     },
     {
       id: '05',
-      title: 'AI & AUTOMATION',
-      subtitle: 'Intelligent Workflows & Business Automation',
+      title: 'AI & BUSINESS AUTOMATION',
+      subtitle: 'Intelligent workflows that replace manual ops',
       icon: Sparkles,
     },
     {
       id: '06',
-      title: 'GROWTH SYSTEMS',
-      subtitle: 'Analytics, CRO & Scalable Growth',
+      title: 'GROWTH SYSTEMS & CRO',
+      subtitle: 'Analytics, conversion optimization, scalable growth',
       icon: TrendingUp,
     },
   ];

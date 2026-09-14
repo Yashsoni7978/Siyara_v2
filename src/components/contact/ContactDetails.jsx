@@ -135,7 +135,7 @@ export default function ContactDetails() {
                 BASED IN
               </span>
               <p className="text-[#F3EFE3] font-light">
-                Jaipur, Rajasthan & Global Studio.
+                Jaipur, Rajasthan.
               </p>
             </div>
           </div>
@@ -159,7 +159,7 @@ export default function ContactDetails() {
                 WORKING WITH
               </span>
               <p className="text-[#F3EFE3] font-light">
-                Ambitious businesses worldwide.
+                Jaipur businesses ready to grow.
               </p>
             </div>
           </div>

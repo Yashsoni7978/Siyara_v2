@@ -2,7 +2,7 @@ import About from '../../src/views/About';
 
 export const metadata = {
   title: 'About Siyara | Digital Architecture Studio · Jaipur, Rajasthan',
-  description: 'Siyara is a digital architecture studio based in Jaipur. We combine creativity, technology and strategy to build connected digital systems for ambitious businesses.',
+  description: 'Siyara Innovations is Jaipur’s digital architecture studio — brand strategy, web design, SEO, and growth systems built as one connected system for Jaipur businesses.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/about',
   },
@@ -11,7 +11,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/about',
     siteName: 'Siyara',
     title: 'About Siyara | Digital Architecture Studio · Jaipur, Rajasthan',
-    description: 'Siyara is a digital architecture studio based in Jaipur. We combine creativity, technology and strategy to build connected digital systems for ambitious businesses.',
+    description: 'Siyara Innovations is Jaipur’s digital architecture studio — brand strategy, web design, SEO, and growth systems built as one connected system for Jaipur businesses.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -26,7 +26,7 @@ export const metadata = {
     card: 'summary_large_image',
     site: '@siyaradigital',
     title: 'About Siyara | Digital Architecture Studio · Jaipur, Rajasthan',
-    description: 'Siyara is a digital architecture studio based in Jaipur. We combine creativity, technology and strategy to build connected digital systems for ambitious businesses.',
+    description: 'Siyara Innovations is Jaipur’s digital architecture studio — brand strategy, web design, SEO, and growth systems built as one connected system for Jaipur businesses.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };
