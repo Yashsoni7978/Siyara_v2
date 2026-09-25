@@ -15,15 +15,14 @@ export default function Footer() {
   const companyLinks = [
     { name: 'About Siyara', href: '/about' },
     { name: 'Why Siyara', href: '/about' },
-    { name: 'Our Work', href: '/#work' },
+    { name: 'Our Work', href: '/work' },
     { name: 'Our Process', href: '/#process' },
     { name: 'Blog & Insights', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
   const resourceLinks = [
-    // TODO: build real Case Studies and FAQ destinations — currently point to unrelated homepage anchors
-    { name: 'Case Studies', href: '/#work' },
+    { name: 'Case Studies', href: '/work#featured-case-study' },
     { name: 'Studio Insights', href: '/blog' },
     { name: 'FAQ', href: '/#contact' },
     // TODO: replace with real /privacy and /terms pages — currently dead links

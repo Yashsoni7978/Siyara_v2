@@ -1,4 +1,4 @@
-﻿// Siyara Innovations â€” Editorial Articles Data Source with Detailed Article Content
+// Siyara Innovations â€” Editorial Articles Data Source with Detailed Article Content
 
 export const BLOG_CATEGORIES = [
   'All',
@@ -15,7 +15,9 @@ export const BLOG_CATEGORIES = [
   'Design',
   'SEO & GEO',
   'AI & Automation',
-  'E-commerce'
+  'E-commerce',
+  'SEO',
+  'Web Development'
 ];
 
 export const FEATURED_ARTICLE = {
@@ -1128,5 +1130,257 @@ export const BLOG_ARTICLES = [
       }
     ],
     tags: ['Business Analytics', 'Data Strategy', 'Marketing Analytics', 'Growth Intelligence', 'Digital Architecture']
+  },
+  {
+    id: 'art-local-seo-jaipur',
+    slug: 'local-seo-jaipur-checklist',
+    title: 'Local SEO for Jaipur Businesses: A Practical Checklist',
+    metaTitle: 'Local SEO in Jaipur: A Practical Checklist',
+    metaDescription: 'A practical local SEO checklist for Jaipur businesses: Google Business Profile, reviews, area keywords, speed and tracking, with a four-week plan.',
+    category: 'SEO',
+    excerpt: 'A practical local SEO checklist for Jaipur businesses: Google Business Profile, reviews, area keywords, speed and tracking, with a four-week plan.',
+    date: 'September 19, 2026',
+    readTime: '7 min read',
+    views: null,
+    author: {
+      name: 'Siyara Innovations',
+      role: 'Digital Marketing Agency',
+      avatar: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
+      bio: 'Siyara Innovations is a full-service digital agency working with businesses in Jaipur and across India on web design, SEO, and digital strategy.'
+    },
+    image: '/images/blog/local-seo-jaipur-hero.jpg',
+    executiveSummary: 'Type \u201cdentist near me\u201d on your phone in Vaishali Nagar and Google shows a map with three businesses at the top. Everyone below them is fighting for attention. Those three spots tend to bring most of the calls, direction requests and walk-ins, and they aren\u2019t handed out by luck.\n\nLocal SEO is the work of earning those spots. It\u2019s less mysterious than it\u2019s made to sound. Most of it is careful, repetitive housekeeping that a business owner can start without a big budget. Here is the checklist we use, followed by a four-week plan.',
+    keyTakeaways: [
+      'Google judges local results on relevance, distance and prominence. You can\u2019t change distance, but you can work on the other two.',
+      'Your Google Business Profile is the single most important asset for local search.',
+      'A steady flow of recent reviews beats a burst of fifty followed by months of silence.',
+      'Your website should say where you are and who you serve, in the words your customers use.',
+      'Track calls, direction requests, Search Console queries and where each new enquiry came from.'
+    ],
+    sections: [
+      {
+        id: 'how-google-decides',
+        title: 'How Google decides who appears',
+        content: [
+          'Google says local results are based mainly on three things: relevance, distance and prominence. Relevance is how well your profile matches what the person searched for. Distance is how far you are from the searcher, or from the area they typed in. Prominence is how well known you look, judged from reviews, links, mentions and your overall presence on the web.',
+          'You can\u2019t change distance. You can work on the other two, and that\u2019s what the rest of this checklist does.'
+        ]
+      },
+      {
+        id: 'google-business-profile',
+        title: '1. Get your Google Business Profile right',
+        content: [
+          'This is the single most important asset for local search, and the one most Jaipur businesses leave half finished.',
+          '<ul><li>Claim and verify the profile if you haven\u2019t already.</li><li>Choose your primary category with care. It\u2019s one of the strongest signals you control. Add secondary categories only where they\u2019re true.</li><li>Use your real business name, exactly as it appears on your signboard. Adding \u201cBest Dentist in Jaipur\u201d to the name goes against Google\u2019s guidelines and can get the profile suspended.</li><li>Fill in every section: services, opening hours (update them for festivals), phone, website, and a short description written for people, not for search engines.</li><li>Upload real photos: the shopfront as seen from the road, the interior, your team, your work. Add a few new ones every month.</li><li>If you take bookings, add the appointment link.</li></ul>'
+        ],
+        image: '/images/blog/google-business-profile-checklist.jpg',
+        imageAlt: 'Google Business Profile dashboard with photos, services and opening hours filled in',
+        imageCaption: 'A fully completed Google Business Profile sends strong relevance signals to local search.'
+      },
+      {
+        id: 'nap-consistency',
+        title: '2. Make your name, address and phone identical everywhere',
+        content: [
+          'Your business name, address and phone number, often shortened to NAP, should read the same on your website, Google profile, Facebook, Instagram and any directories you\u2019re listed on, such as JustDial, Sulekha or IndiaMART where they apply.',
+          '\u201cShop 12, Vaishali Nagar\u201d on one site and \u201c12, Vaishali Nagar, Jaipur\u201d on another looks like a small thing, but mismatches make it harder for Google to be sure it\u2019s the same business. Pick one format and copy it exactly. Also hunt down old listings with an outdated phone number or address. Duplicates can split your reviews and confuse customers.'
+        ]
+      },
+      {
+        id: 'earn-reviews',
+        title: '3. Earn reviews the honest way',
+        content: [
+          'Reviews are the fastest-moving part of prominence. A steady flow of recent reviews beats a burst of fifty followed by months of silence.',
+          '<ul><li>Ask every happy customer, at the moment they\u2019re happiest: right after delivery, or right after a good appointment.</li><li>Send the direct review link on WhatsApp, or put it on a QR code at your counter. Fewer taps means more reviews.</li><li>Reply to every review, good or bad, within a couple of days. Keep replies short and human. If a review is negative, stay calm and offer to sort it out offline.</li><li>Don\u2019t buy reviews or offer discounts in exchange for them. Google\u2019s rules prohibit it, and fake reviews get removed.</li></ul>'
+        ],
+        image: '/images/blog/review-qr-code-counter.jpg',
+        imageAlt: 'QR code on a shop counter linking customers to a Google review page',
+        imageCaption: 'A QR code at your counter removes friction and turns happy customers into reviewers.'
+      },
+      {
+        id: 'jaipur-search-writing',
+        title: '4. Write for how Jaipur actually searches',
+        content: [
+          'People here search in a mix. \u201cBest jewellery shop in Johari Bazaar\u201d. \u201cPhysiotherapist Malviya Nagar\u201d. \u201c\u091c\u092f\u092a\u0941\u0930 \u092e\u0947\u0902 \u0935\u0947\u092c\u0938\u093e\u0907\u091f \u092c\u0928\u093e\u0928\u0947 \u0935\u093e\u0932\u0940 \u0915\u0902\u092a\u0928\u0940\u201d. Plain Hinglish. Searches often name an area, not just the city.',
+          'So your website should say where you are and who you serve, in the words your customers use.',
+          '<ul><li>Put the service and the city in your page titles and headings: \u201cInterior Designer in Jaipur\u201d, not just \u201cOur Services\u201d.</li><li>Mention the areas you genuinely serve, such as Vaishali Nagar, Mansarovar, Malviya Nagar, C-Scheme, Jagatpura or Tonk Road, as they apply to you.</li><li>Where it fits naturally, use Hindi phrasing too. Don\u2019t stuff it in.</li><li>Put your full address, phone number and an embedded Google Map on the contact page, and repeat the address in the footer.</li></ul>'
+        ]
+      },
+      {
+        id: 'service-pages',
+        title: '5. Give each real service its own page',
+        content: [
+          'A single page called \u201cServices\u201d that lists eight things can\u2019t rank for eight different searches. A page per service, with its own explanation, examples and FAQs, gives Google something specific to match.',
+          'What you must not do is publish twenty near-identical pages with only the area name swapped. Google treats that as thin content, and customers can tell. If you write an area page, give it something only that area can have: projects done there, travel time, questions customers from that neighbourhood actually ask.'
+        ]
+      },
+      {
+        id: 'speed-mobile',
+        title: '6. Check speed and mobile',
+        content: [
+          'A large share of local searches happen on phones, often on mobile data, often from someone standing in a market. If your site takes five seconds to load, they go back and tap the next result.',
+          'Compress images, avoid autoplay video, and test your site on a mid-range Android phone, not only on your own laptop. Google\u2019s PageSpeed Insights is free and shows you what\u2019s slow.'
+        ]
+      },
+      {
+        id: 'local-mentions',
+        title: '7. Earn a few local mentions',
+        content: [
+          'Links and mentions from local sources tell Google you\u2019re a real part of the city\u2019s business scene. Realistic places to look: your suppliers\u2019 and partners\u2019 websites, local business associations, event pages where you sponsored or spoke, local blogs or news that featured you, and colleges you\u2019ve worked with. A handful of relevant local mentions can be worth more than dozens from random directories.'
+        ]
+      },
+      {
+        id: 'track-numbers',
+        title: '8. Track the numbers that matter',
+        content: [
+          'Skip vanity metrics. Watch these instead:',
+          '<ul><li>Calls, direction requests and website clicks on your Google Business Profile performance page</li><li>Search queries and pages in Google Search Console</li><li>The number of enquiries that actually came from search</li></ul>',
+          'For the last one, ask every new customer how they found you and write the answer down. A simple sheet is enough.'
+        ]
+      },
+      {
+        id: 'suspension-mistakes',
+        title: 'Mistakes that can get a profile suspended',
+        content: [
+          '<ul><li>Keywords added to the business name</li><li>A fake or virtual address, or a co-working desk you never sit at, listed as a shopfront</li><li>Duplicate profiles for the same location</li><li>Bought or incentivised reviews</li><li>Changing name, category or address again and again without a real reason</li></ul>'
+        ]
+      },
+      {
+        id: 'four-week-plan',
+        title: 'A four-week plan',
+        content: [
+          '<ul><li><strong>Week 1:</strong> Claim and complete your Google Business Profile. Fix your name, address and phone everywhere. Remove duplicates.</li><li><strong>Week 2:</strong> Rework page titles, headings and the contact page. Give your top services their own pages.</li><li><strong>Week 3:</strong> Start asking for reviews with a direct link and QR code. Reply to old reviews. Run a speed test and fix the biggest problems.</li><li><strong>Week 4:</strong> Collect three to five local mention opportunities and reach out. Set up Search Console and an enquiry-source sheet.</li></ul>',
+          'After that, repeat every month: new photos, new reviews, one new useful page.'
+        ]
+      },
+      {
+        id: 'where-to-go-from-here-seo',
+        title: 'Where to go from here',
+        content: [
+          'If your website needs work before any of this will pay off, read our guide to <a href="/blog/website-cost-jaipur">what a website costs in Jaipur</a>. And if you\u2019d rather have local SEO handled by a team that works with Jaipur businesses every day, see <a href="/services">what we do at Siyara Innovations</a> or <a href="/contact">get in touch</a>.'
+        ]
+      }
+    ],
+    tags: ['Local SEO', 'Jaipur', 'Google Business Profile', 'SEO Checklist', 'Small Business']
+  },
+  {
+    id: 'art-website-cost-jaipur',
+    slug: 'website-cost-jaipur',
+    title: 'How Much Does a Website Cost in Jaipur? What You\u2019re Really Paying For',
+    metaTitle: 'Website Cost in Jaipur: What You Actually Pay For',
+    metaDescription: 'What drives website cost in Jaipur, what a good quote must include, and how to compare agencies and freelancers on equal terms.',
+    category: 'Web Development',
+    excerpt: 'What drives website cost in Jaipur, what a good quote must include, and how to compare agencies and freelancers on equal terms.',
+    date: 'September 19, 2026',
+    readTime: '7 min read',
+    views: null,
+    author: {
+      name: 'Siyara Innovations',
+      role: 'Digital Marketing Agency',
+      avatar: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
+      bio: 'Siyara Innovations is a full-service digital agency working with businesses in Jaipur and across India on web design, SEO, and digital strategy.'
+    },
+    image: '/images/blog/website-cost-jaipur-hero.jpg',
+    executiveSummary: 'Ask five agencies in Jaipur what a website costs and you\u2019ll get five numbers that seem to have nothing to do with each other. That\u2019s not because someone is lying. \u201cA website\u201d can mean a five-page brochure or a booking platform with online payments, and the price follows the work.\n\nThis guide won\u2019t give you a made-up average. It shows what drives the cost, what a proper quote should list, and how to compare offers so you\u2019re comparing like with like.',
+    keyTakeaways: [
+      'Price follows scope: pages, design approach, functionality, content and SEO groundwork each add to the cost.',
+      'A single-line quote with a single number is not a quote \u2014 ask for a full breakdown in writing.',
+      'Your domain should be registered in your name. Ask before you pay.',
+      'A website isn\u2019t a one-time purchase: plan for domain, hosting, email, backups and ongoing SEO every year.',
+      'Work backwards from what a customer is worth to set a sensible budget.'
+    ],
+    sections: [
+      {
+        id: 'five-things-price',
+        title: 'The five things that set the price',
+        content: [
+          '<ol><li><strong>Pages and structure.</strong> Five pages and forty pages are different projects. So is one page for all your services versus a separate page for each one, which is better for search.</li><li><strong>Design.</strong> A template with your logo dropped in is faster and cheaper, and will look like other sites using the same template. A custom design is planned around your business and takes more time.</li><li><strong>Functionality.</strong> A contact form and a WhatsApp button are simple. Online booking, payments, customer logins, a product catalogue with stock, several languages or an admin panel are where costs climb.</li><li><strong>Content.</strong> Who writes the text? Who takes the photographs? This is often the biggest hidden cost, and the most common cause of delay.</li><li><strong>SEO and performance setup.</strong> Page titles, descriptions, sitemap, redirects, structured data and speed take time to do properly. If a quote says \u201cSEO included\u201d without listing what that means, it\u2019s a slogan, not a deliverable.</li></ol>'
+        ]
+      },
+      {
+        id: 'four-kinds-website',
+        title: 'Four kinds of website',
+        content: [
+          '<ul><li><strong>Presence site (roughly 3 to 8 pages):</strong> For a business that needs to exist online. Who you are, what you do, how to reach you.</li><li><strong>Lead-generation site:</strong> Built to bring in enquiries. Service pages, proof such as projects and testimonials, clear calls to action, speed and SEO groundwork. Most Jaipur service businesses, such as clinics, interior designers, event companies and coaching institutes, belong here.</li><li><strong>Catalogue or e-commerce site:</strong> Products, cart, payments, shipping and inventory.</li><li><strong>Custom web application:</strong> Dashboards, customer accounts, integrations and automation.</li></ul>',
+          'Cost rises as you go down the list, and so does the time needed.'
+        ],
+        image: '/images/blog/website-quote-checklist.jpg',
+        imageAlt: 'Checklist of items a website quote should include',
+        imageCaption: 'A proper quote covers scope, design, content, timeline, SEO groundwork, handover and yearly costs.'
+      },
+      {
+        id: 'proper-quote',
+        title: 'What a proper quote lists',
+        content: [
+          'Before you say yes to anything, look for these in writing:',
+          '<ul><li>The exact page list and the functionality included</li><li>Design approach: custom or template, and how many rounds of revisions</li><li>Who provides content and photos, or what it costs if the agency does</li><li>A timeline with milestones</li><li>SEO groundwork: page titles and descriptions, sitemap, mobile layout, speed, analytics and Search Console setup</li><li>What \u201cdone\u201d means: launch, training and handover</li><li>Post-launch support: how long, what\u2019s covered and what\u2019s billed</li><li>Yearly costs: domain renewal, hosting and any paid tools or plugins</li></ul>',
+          'If a quote is a single line with a single number, ask for a breakdown.'
+        ]
+      },
+      {
+        id: 'ownership',
+        title: 'Ownership: the question people forget',
+        content: [
+          'Your domain should be registered in your name, and you should hold the login. Know who owns the hosting account and the source code, and whether you can move them elsewhere if you part ways. It\u2019s common to discover only after a falling-out that the domain sits in the freelancer\u2019s account. Ask before you pay.'
+        ]
+      },
+      {
+        id: 'technical-questions',
+        title: 'Ask the technical questions too',
+        content: [
+          'Two quick ones separate careful builders from careless ones.',
+          'Will all my important text be in the page itself, or will some appear only after a click? Content that loads only after a click can be invisible to Google. We once worked on a site where the tab content appeared only after a click, and none of it was indexed until we changed how the page was built.',
+          'How fast is it on a phone? Ask them to show you the PageSpeed score of a site they\u2019ve built.'
+        ]
+      },
+      {
+        id: 'agency-freelancer-diy',
+        title: 'Agency, freelancer or do-it-yourself',
+        content: [
+          'DIY builders such as Wix or Squarespace work well for a simple presence site. They\u2019re quick and inexpensive. You\u2019ll do the writing and setup yourself, and on some platforms you get less control over speed and technical SEO.',
+          'A freelancer can be excellent value for a small, well-defined project. The risk is continuity: one person, one phone, and their availability. Ask for live examples and a reference you can call.',
+          'An agency usually costs more and brings a team across design, development, content and SEO, plus continuity. That suits larger or ongoing work. Check that the people you meet are the people who will do the work. We\u2019re an agency, so we\u2019re not neutral, but the right answer really does depend on the size of your project.'
+        ]
+      },
+      {
+        id: 'warning-signs',
+        title: 'Warning signs in a quote',
+        content: [
+          '<ul><li>A price far below every other quote, with \u201cunlimited pages\u201d or \u201cunlimited revisions\u201d</li><li>No timeline</li><li>\u201cSEO included\u201d with no list of what it covers</li><li>A portfolio with no live links you can open on your phone</li><li>The agency keeps the domain or hosting in its own name</li><li>A lightly reskinned template that is priced and described as custom</li><li>Reluctance to put anything in writing</li></ul>'
+        ]
+      },
+      {
+        id: 'costs-after-launch',
+        title: 'The costs after launch',
+        content: [
+          'A website isn\u2019t a one-time purchase. Plan for the yearly domain renewal, hosting or a platform subscription, business email, backups and security updates, content changes, fresh photography, and ongoing SEO if you want the site to bring in traffic. Ask every bidder to list these up front so nothing arrives as a surprise in month thirteen.'
+        ]
+      },
+      {
+        id: 'sensible-budget',
+        title: 'How to set a sensible budget',
+        content: [
+          'Work backwards from what a customer is worth to you. Here is a hypothetical example. Suppose a new customer is worth \u20b920,000 to your business. If your site brings four extra enquiries a month and one in four becomes a customer, that\u2019s one customer a month, or \u20b92,40,000 a year. Against that, the cost of a good website is an investment. A site that brings in nothing is expensive at any price. Use your own numbers, not ours.'
+        ]
+      },
+      {
+        id: 'prepare-before-quotes',
+        title: 'Prepare before you ask for quotes',
+        content: [
+          'Agencies quote more accurately, and faster, when they can see what you already have.',
+          '<ul><li>The pages you think you need</li><li>Three websites you like and three you don\u2019t</li><li>Your logo and brand colours</li><li>Your services, price ranges and the ten questions customers ask most</li><li>Photos and customer testimonials</li></ul>'
+        ]
+      },
+      {
+        id: 'where-to-go-from-here-web',
+        title: 'Where to go from here',
+        content: [
+          'Once your site is live, our <a href="/blog/local-seo-jaipur-checklist">local SEO checklist for Jaipur businesses</a> shows how to get it found. To see how we build for businesses in the city, read <a href="/about">about Siyara Innovations</a> or see <a href="/services">what we do</a>. If you have a project in mind, <a href="/contact">send us a message</a> and tell us what you need.'
+        ],
+        image: '/images/blog/website-project-scope-planning.jpg',
+        imageAlt: 'Planning a website project with page wireframes on paper',
+        imageCaption: 'Bringing a clear brief to your first meeting saves time and gets you a more accurate quote.'
+      }
+    ],
+    tags: ['Website Cost', 'Web Development', 'Jaipur', 'Agency vs Freelancer', 'Website Quote']
   }
 ];

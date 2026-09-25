@@ -23,30 +23,39 @@ export async function generateMetadata({ params }) {
   const article = getArticle(slug);
   if (!article) return {};
 
+  const metaTitle = article.metaTitle || article.title;
+  const metaDesc = article.metaDescription || article.excerpt || article.executiveSummary;
+
   return {
-    title: `${article.title} · Siyara Insights`,
-    description: article.excerpt || article.executiveSummary,
+    title: `${metaTitle} · Siyara Insights`,
+    description: metaDesc,
     alternates: {
       canonical: `https://www.siyaradigitals.com/blog/${slug}`,
     },
     openGraph: {
       type: 'article',
       url: `https://www.siyaradigitals.com/blog/${slug}`,
-      title: `${article.title} · Siyara Insights`,
-      description: article.excerpt || article.executiveSummary,
+      title: `${metaTitle} · Siyara Insights`,
+      description: metaDesc,
       publishedTime: new Date(article.date).toISOString(),
       images: [
         {
-          url: article.image || 'https://www.siyaradigitals.com/images/siyara_og_image.png',
+          url: article.image?.startsWith('http')
+            ? article.image
+            : `https://www.siyaradigitals.com${article.image}`,
           alt: article.title,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${article.title} · Siyara Insights`,
-      description: article.excerpt || article.executiveSummary,
-      images: [article.image || 'https://www.siyaradigitals.com/images/siyara_og_image.png'],
+      title: `${metaTitle} · Siyara Insights`,
+      description: metaDesc,
+      images: [
+        article.image?.startsWith('http')
+          ? article.image
+          : `https://www.siyaradigitals.com${article.image}`,
+      ],
     },
   };
 }
@@ -59,22 +68,34 @@ export default async function BlogPostPage({ params }) {
     notFound();
   }
 
+  const isOrgAuthor = article.author?.name === 'Siyara Innovations';
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     'headline': article.title,
-    'description': article.excerpt || article.executiveSummary,
-    'image': article.image || 'https://www.siyaradigitals.com/images/siyara_og_image.png',
+    'description': article.metaDescription || article.excerpt || article.executiveSummary,
+    'image': article.image?.startsWith('http')
+      ? article.image
+      : article.image
+        ? `https://www.siyaradigitals.com${article.image}`
+        : 'https://www.siyaradigitals.com/images/siyara_og_image.png',
     'datePublished': new Date(article.date).toISOString(),
-    'author': {
-      '@type': 'Person',
-      'name': article.author?.name || 'Siyara Editor',
-      'jobTitle': article.author?.role || 'Contributor',
-      'image': article.author?.avatar || 'https://www.siyaradigitals.com/images/siyara_og_image.png',
-    },
+    'author': isOrgAuthor
+      ? {
+          '@type': 'Organization',
+          'name': 'Siyara Innovations',
+          'url': 'https://www.siyaradigitals.com',
+        }
+      : {
+          '@type': 'Person',
+          'name': article.author?.name || 'Siyara Editor',
+          'jobTitle': article.author?.role || 'Contributor',
+          'image': article.author?.avatar || 'https://www.siyaradigitals.com/images/siyara_og_image.png',
+        },
     'publisher': {
       '@type': 'Organization',
-      'name': 'Siyara',
+      'name': 'Siyara Innovations',
       'logo': {
         '@type': 'ImageObject',
         'url': 'https://www.siyaradigitals.com/images/siyara_og_image.png',

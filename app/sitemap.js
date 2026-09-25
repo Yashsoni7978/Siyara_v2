@@ -6,11 +6,11 @@ export default async function sitemap() {
   const baseUrl = 'https://www.siyaradigitals.com';
 
   // Base routes
-  const routes = ['', '/about', '/services', '/contact', '/blog'].map((route) => ({
+  const routes = ['', '/about', '/services', '/work', '/our-work', '/contact', '/blog'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],
     changeFrequency: 'monthly',
-    priority: route === '' ? 1.0 : 0.8,
+    priority: route === '' ? 1.0 : (route === '/work' || route === '/our-work' ? 0.9 : 0.8),
   }));
 
   // Dynamic blog routes

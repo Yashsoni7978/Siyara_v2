@@ -16,6 +16,7 @@ export default function Navbar() {
   let currentPage = 'home';
   if (pathname === '/about') currentPage = 'about';
   else if (pathname === '/services') currentPage = 'services';
+  else if (pathname === '/work' || pathname.startsWith('/work')) currentPage = 'work';
   else if (pathname === '/contact') currentPage = 'contact';
   else if (pathname.startsWith('/blog')) currentPage = 'blog';
 
@@ -35,6 +36,7 @@ export default function Navbar() {
     { name: 'HOME', href: '/', id: 'home' },
     { name: 'SERVICES', href: '/services', id: 'services' },
     { name: 'ABOUT', href: '/about', id: 'about' },
+    { name: 'OUR WORK', href: '/work', id: 'work' },
     { name: 'INSIGHTS', href: '/blog', id: 'blog' },
     { name: 'CONTACT', href: '/contact', id: 'contact' },
   ];

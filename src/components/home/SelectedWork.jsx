@@ -3,60 +3,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { projectsData } from '../../data/projectsData';
 
 export default function SelectedWork() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const projects = [
-    {
-      id: '01',
-      title: 'RISHABH JEWELLERS',
-      tagline: 'Fine Jewellery & Heritage E-Commerce',
-      description: 'Architectural brand positioning, bespoke digital showcase, and automated high-conversion growth system.',
-      services: ['BRANDING', 'WEB DEVELOPMENT', 'CRO & GROWTH'],
-      image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80',
-      brandLogo: 'RISHABH',
-      heroHeadline: 'HERITAGE CRAFTSMANSHIP & FINE JEWELLERY',
-      heroSubline: 'Timeless elegance meets modern digital architecture.',
-      ctaText: 'DISCOVER COLLECTION',
-    },
-    {
-      id: '02',
-      title: 'BEYOND SPACES',
-      tagline: 'Luxury Real Estate & Villa Architecture',
-      description: 'Immersive villa booking portal, high-intent client lead funnels, and global brand authority platform.',
-      services: ['LUXURY REAL ESTATE', 'WEB SYSTEM', 'LEAD ACQUISITION'],
-      image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
-      brandLogo: 'BEYOND SPACES',
-      heroHeadline: 'ARCHITECTURAL RESIDENCES & PRIVATE VILLAS',
-      heroSubline: 'Curated living spaces engineered for discerning clientele.',
-      ctaText: 'EXPLORE RESIDENCES',
-    },
-    {
-      id: '03',
-      title: 'DR. NEHA SHARMA',
-      tagline: 'Aesthetic Dermatology & Clinical Authority',
-      description: 'High-trust clinical web portal, patient enrolment architecture, and local GEO search domination.',
-      services: ['HEALTHCARE BRANDING', 'PATIENT FUNNEL', 'SEO & GEO'],
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
-      brandLogo: 'DR. NEHA SHARMA',
-      heroHeadline: 'ADVANCED AESTHETIC DERMATOLOGY & CARE',
-      heroSubline: 'Science-backed skincare and aesthetic clinical excellence.',
-      ctaText: 'BOOK CONSULTATION',
-    },
-    {
-      id: '04',
-      title: 'THE BREW CHAPTER',
-      tagline: 'Specialty Coffee & Hospitality Brand',
-      description: 'Direct-to-consumer e-commerce, hospitality brand storytelling, and automated subscription backend.',
-      services: ['D2C E-COMMERCE', 'BRAND STORYTELLING', 'AUTO SUBSCRIPTIONS'],
-      image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80',
-      brandLogo: 'BREW CHAPTER',
-      heroHeadline: 'SINGLE ORIGIN CRAFT COFFEE ROASTERS',
-      heroSubline: 'Artisanal roasts delivered directly to your doorstep.',
-      ctaText: 'SHOP ROASTS',
-    },
-  ];
+  const projects = projectsData.slice(0, 4);
 
   const currentProject = projects[activeIndex];
 
