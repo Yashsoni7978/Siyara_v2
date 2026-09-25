@@ -5,11 +5,11 @@ import { motion } from 'framer-motion';
 
 export default function Philosophy() {
   return (
-    <section className="relative py-16 sm:py-20 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
+    <section className="relative min-h-screen py-12 lg:py-16 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden flex flex-col justify-center">
       {/* Background Atmosphere */}
       <div className="absolute inset-0 bg-emerald-atmosphere opacity-80 pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 w-full">
         
         {/* Section Header */}
         <motion.div
@@ -17,7 +17,7 @@ export default function Philosophy() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="flex items-center gap-3 mb-12"
+          className="flex items-center gap-3 mb-8"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             03
@@ -29,7 +29,7 @@ export default function Philosophy() {
         </motion.div>
 
         {/* Section Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           
           {/* Left Column: Manifesto Headline & Signature */}
           <motion.div
@@ -39,7 +39,7 @@ export default function Philosophy() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6 flex flex-col justify-center"
           >
-            <h2 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight mb-8 uppercase">
+            <h2 className="font-serif text-3xl sm:text-5xl lg:text-5xl xl:text-6xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight mb-6 uppercase">
               ELEVATING BRANDS <br />
               THROUGH <br />
               <span className="text-[#D9B45F] font-normal">DIGITAL ARCHITECTURE.</span>

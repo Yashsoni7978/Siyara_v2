@@ -41,13 +41,13 @@ export default function Problem() {
   ];
 
   return (
-    <section className="relative py-16 sm:py-20 bg-[#F3EFE3] border-t border-[#101613]/08 overflow-hidden">
+    <section className="relative min-h-screen py-10 sm:py-12 bg-[#F3EFE3] border-t border-[#101613]/08 overflow-hidden flex flex-col justify-center">
       {/* Subtle warm ivory atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8] to-[#F3EFE3] opacity-60 pointer-events-none" />
       {/* Ultra-faint emerald radial glow — editorial texture */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0B5E49]/04 blur-3xl rounded-full pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 w-full">
 
         {/* Section Header */}
         <motion.div
@@ -55,7 +55,7 @@ export default function Problem() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="flex items-center gap-3 mb-10"
+          className="flex items-center gap-3 mb-6"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
             04
@@ -72,9 +72,9 @@ export default function Problem() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="mb-12 max-w-3xl"
+          className="mb-8 max-w-3xl"
         >
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98] mb-5">
+          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[0.98] mb-3">
             Your business doesn't <br />
             need <span className="text-[#0B5E49] font-normal">another website.</span>
           </h2>
@@ -92,7 +92,7 @@ export default function Problem() {
             hidden: { opacity: 0 },
             visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
           }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-0 border-t border-b border-[#101613]/10 py-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-0 border-t border-b border-[#101613]/10 py-8 lg:py-10"
         >
           {problems.map((problem, idx) => {
             const Icon = problem.icon;

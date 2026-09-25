@@ -78,7 +78,7 @@ export default function Hero() {
       ref={heroRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative min-h-[100svh] pt-32 pb-20 lg:pt-36 lg:pb-24 bg-[#070A09] overflow-hidden flex items-center"
+      className="relative min-h-screen lg:h-screen pt-28 pb-16 lg:pt-32 lg:pb-20 bg-[#070A09] overflow-hidden flex items-center"
     >
       {/* LAYER 01: Obsidian Black Canvas Base */}
       <div className="absolute inset-0 bg-[#070A09] z-0" />
