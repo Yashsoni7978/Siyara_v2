@@ -47,11 +47,11 @@ export default function Process() {
   ];
 
   return (
-    <section id="process" className="relative min-h-screen py-10 sm:py-12 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden flex flex-col justify-center">
+    <section id="process" className="relative py-16 sm:py-20 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
       {/* Background Deep Emerald Atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#071E18]/50 via-[#070A09] to-[#070A09] opacity-80 pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 w-full">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <motion.div
@@ -59,7 +59,7 @@ export default function Process() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="flex items-center gap-3 mb-6"
+          className="flex items-center gap-3 mb-10"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             05
@@ -71,7 +71,7 @@ export default function Process() {
         </motion.div>
 
         {/* Section Headline & Copy */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ export default function Process() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-7"
           >
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[0.98] mb-3">
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98] mb-4">
               Our proven 6-step <br />
               process to <span className="text-[#D9B45F] font-normal">success.</span>
             </h2>
@@ -97,7 +97,7 @@ export default function Process() {
           >
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-7 py-3.5 border border-[#D9B45F] bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase transition-all duration-300 shadow-lg group rounded-full"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-[#D9B45F] bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase transition-all duration-300 shadow-lg group rounded-full"
             >
               <span>VIEW DETAILED PROCESS</span>
               <ArrowUpRight className="w-4 h-4 text-[#101613] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -106,7 +106,7 @@ export default function Process() {
         </div>
 
         {/* Timeline Node Flow (Horizontal Desktop / Vertical Mobile) */}
-        <div className="relative pt-4 pb-6">
+        <div className="relative pt-6 pb-12">
           
           {/* Connecting Line (Desktop) */}
           <div className="hidden lg:block absolute top-[52px] left-0 right-0 h-[2px] z-0">
