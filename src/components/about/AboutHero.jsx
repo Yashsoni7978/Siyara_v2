@@ -18,7 +18,7 @@ export default function AboutHero() {
   });
 
   return (
-    <section className="relative min-h-[90svh] pt-40 pb-20 lg:pt-48 lg:pb-32 bg-[#070A09] text-[#F3EFE3] overflow-hidden flex items-center">
+    <section className="relative min-h-screen pt-40 pb-20 lg:pt-48 lg:pb-32 bg-[#070A09] text-[#F3EFE3] overflow-hidden flex items-center">
       {/* Obsidian Base Canvas */}
       <div className="absolute inset-0 bg-[#070A09] z-0" />
 

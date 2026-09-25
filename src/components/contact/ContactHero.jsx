@@ -19,7 +19,7 @@ export default function ContactHero() {
 
   return (
     <section
-      className="relative min-h-[90svh] pt-32 pb-20 lg:pt-36 lg:pb-24 bg-[#070A09] text-[#F3EFE3] overflow-hidden flex items-center"
+      className="relative min-h-screen pt-32 pb-20 lg:pt-36 lg:pb-24 bg-[#070A09] text-[#F3EFE3] overflow-hidden flex items-center"
     >
       {/* FULL-WIDTH HERO BACKGROUND IMAGE */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">

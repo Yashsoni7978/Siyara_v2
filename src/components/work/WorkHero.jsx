@@ -12,7 +12,7 @@ export default function WorkHero() {
   const totalIndustries = categories.filter((c) => c.id !== 'ALL').length;
 
   return (
-    <section className="relative w-full min-h-[90vh] lg:min-h-screen bg-[#070A09] text-[#F3EFE3] pt-28 pb-16 lg:pt-32 lg:pb-20 flex flex-col justify-between overflow-hidden border-b border-[#D4AF37]/20">
+    <section className="relative w-full min-h-screen bg-[#070A09] text-[#F3EFE3] pt-28 pb-16 lg:pt-32 lg:pb-20 flex flex-col justify-between overflow-hidden border-b border-[#D4AF37]/20">
       
       {/* FULL-BLEED ARCHITECTURAL BACKGROUND ARTWORK */}
       <div className="absolute inset-0 z-0">
