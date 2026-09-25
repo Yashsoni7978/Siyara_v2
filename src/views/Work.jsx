@@ -7,16 +7,43 @@ import FeaturedWorkGrid from '../components/work/FeaturedWorkGrid';
 import IndustriesSection from '../components/work/IndustriesSection';
 import FeaturedCaseStudy from '../components/work/FeaturedCaseStudy';
 import WorkCTA from '../components/work/WorkCTA';
+import { getIndustryCategories } from '../data/projectsData';
 
 export default function Work() {
   const [selectedIndustry, setSelectedIndustry] = useState('ALL');
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    // Parse query parameter if present (e.g., ?industry=healthcare)
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const indParam = params.get('industry');
+      if (indParam) {
+        const categories = getIndustryCategories();
+        const matchedCat = categories.find(
+          (c) => c.id.toLowerCase().replace(/[^a-z0-9]/g, '') === indParam.toLowerCase().replace(/[^a-z0-9]/g, '')
+        );
+        if (matchedCat) {
+          setSelectedIndustry(matchedCat.id);
+        }
+      }
+    }
   }, []);
 
   const handleSelectIndustry = (industryId) => {
     setSelectedIndustry(industryId);
+    
+    // Update URL query string without reloading page
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      if (industryId === 'ALL') {
+        url.searchParams.delete('industry');
+      } else {
+        url.searchParams.set('industry', industryId.toLowerCase().replace(/\s+&\s+/g, '-').replace(/\s*\/\s*/g, '-').replace(/\s+/g, '-'));
+      }
+      window.history.pushState({}, '', url.toString());
+    }
+
     // Smoothly scroll to the featured work section when an industry filter is chosen
     const gridEl = document.getElementById('featured-work');
     if (gridEl) {
@@ -25,7 +52,7 @@ export default function Work() {
   };
 
   const handleClearFilter = () => {
-    setSelectedIndustry('ALL');
+    handleSelectIndustry('ALL');
   };
 
   return (
