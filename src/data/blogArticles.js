@@ -1382,5 +1382,365 @@ export const BLOG_ARTICLES = [
       }
     ],
     tags: ['Website Cost', 'Web Development', 'Jaipur', 'Agency vs Freelancer', 'Website Quote']
+  },
+  {
+    id: 'art-21',
+    slug: 'why-your-jaipur-business-needs-a-professional-website-in-2026',
+    title: 'Why Your Jaipur Business Needs a Professional Website in 2026',
+    category: 'Web Development',
+    excerpt: 'A strong online presence is no longer optional for businesses in Jaipur. Here is what a professional website actually does for your revenue, credibility, and long-term growth.',
+    date: 'September 20, 2026',
+    readTime: '7 min read',
+    views: '1.2k views',
+    author: {
+      name: 'Yash Soni',
+      role: 'Founder, Siyara Innovations',
+      avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80',
+      bio: 'Yash founded Siyara Innovations to help Jaipur businesses compete on the same digital footing as national brands. He writes about practical web strategy for real business owners.'
+    },
+    image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80',
+    executiveSummary: 'Most Jaipur businesses still rely on word-of-mouth and physical footfall. In 2026, that approach leaves substantial revenue on the table. A professionally built website is the single highest-return investment a growing local business can make — and this article shows exactly why.',
+    keyTakeaways: [
+      'Over 80% of purchase decisions now begin with a search, even for local services in Jaipur.',
+      'A professional website works as a 24-hour salesperson that never takes a day off.',
+      'Businesses without a proper website lose enquiries daily to competitors who have one.'
+    ],
+    sections: [
+      {
+        id: 'the-shifting-buyer-journey',
+        title: '01. How Jaipur Buyers Make Decisions Today',
+        content: [
+          'Walk down MI Road or browse any WhatsApp business group in Jaipur and you will notice one pattern: the first question after a recommendation is always "do they have a website I can check?" Buyers in 2026 validate businesses online before they call, visit, or purchase.',
+          'This holds true whether you run a boutique in Bapu Bazaar, a dental practice in Malviya Nagar, a real estate agency in Jagatpura, or a hospitality property near Amer. Your potential customer is already on Google, Instagram, or WhatsApp — and if your business is not findable with a proper web presence, a competitor takes the enquiry.',
+          'The shift is not just generational. It applies across all age groups. A 50-year-old property buyer in Jaipur now expects to view floor plans and builder credentials online before visiting a showroom. A 35-year-old professional books dental appointments through clinic websites. A 28-year-old bride compares wedding venues through Instagram and websites before calling anyone.'
+        ]
+      },
+      {
+        id: 'what-a-website-actually-does',
+        title: '02. What a Professional Website Actually Does for Your Business',
+        content: [
+          'A professionally built website does far more than put your phone number online. Here is what it works on, every hour of every day:',
+          'Credibility on first impression. Buyers judge businesses by their digital presence before any human interaction occurs. A polished, fast-loading website communicates that your business is established, trustworthy, and serious — before a single word is exchanged.',
+          'Lead capture around the clock. Your website collects enquiry forms, WhatsApp click-throughs, phone call clicks, and booking requests while you are asleep, at family dinner, or on-site with another client. Static social profiles do not do this at scale.',
+          'Search engine placement. A properly built website with local SEO structure appears when people search "best dental clinic in Jaipur" or "real estate developer Vaishali Nagar." That placement is owned visibility — you are not paying for it every month the way you pay for ads.',
+          'Portfolio and proof. Testimonials, project galleries, case studies, team credentials, and certifications all live on your website and answer the buyer\'s unstated question: "Can I trust this business with my money?"'
+        ],
+        quote: 'Your website is the only piece of real estate on the internet that you fully own. Everything else — Instagram, Google Business, WhatsApp — is rented space on someone else\'s platform.'
+      },
+      {
+        id: 'what-losing-out-looks-like',
+        title: '03. What You Are Losing Without One',
+        content: [
+          'This is uncomfortable but worth saying directly: if your business does not have a proper website in 2026, you are actively handing enquiries to competitors who do.',
+          'Consider a small scenario. A couple newly moved to Jaipur searches for "interior designer Jaipur" on Google. Three firms appear. Two have professional websites with project photographs, pricing guidance, client testimonials, and a contact form. One has only an Instagram profile. The couple sends enquiries to the two with websites. The third firm never gets a chance to pitch.',
+          'Multiply that scenario across every day your business operates without a proper site and the cumulative revenue loss becomes significant. We have spoken to business owners in Jaipur who were convinced they did not need a website, only to discover — after finally getting one built — that they were receiving three to four times more weekly enquiries within the first month.',
+          'The question is not whether your business needs a website. The question is how long you can afford to operate without one.'
+        ]
+      },
+      {
+        id: 'what-makes-a-website-professional',
+        title: '04. What Makes a Website Actually Professional',
+        content: [
+          'Not every website delivers these results. A basic template site thrown together in an afternoon will not move the needle. Professional websites share specific characteristics that separate them from digital placeholders.',
+          'Speed. If your website takes more than three seconds to load on a mobile phone, most visitors leave before they see your content. Professional websites are engineered for performance from the ground up.',
+          'Mobile design. Over 75% of web browsing in India happens on mobile phones. A website that works beautifully on a desktop but is difficult to read on a phone is effectively invisible to most of your audience.',
+          'Clear calls to action. Every page should guide visitors toward a specific next step: call now, send a message, view the portfolio, book a consultation. Professional websites are built around conversion goals, not just information display.',
+          'Local search structure. Google reads technical signals in your website\'s code to understand where your business is located and what it does. Without proper local SEO structure, your site will not appear in local searches even if your content is excellent.',
+          'Trust signals. Verified reviews, professional photography, team credentials, GST registration details, and recognisable client logos all reduce buyer anxiety and accelerate decisions.'
+        ]
+      },
+      {
+        id: 'how-to-get-started',
+        title: '05. How to Get Started',
+        content: [
+          'If you are convinced it is time to build a proper digital presence for your Jaipur business, the next step is a conversation. At Siyara Innovations, we work exclusively with businesses that are serious about growth — real estate developers, healthcare practices, hospitality properties, fashion labels, event studios, and professional service firms across Jaipur and Rajasthan.',
+          'We do not build templates. We build bespoke digital systems that are engineered to generate enquiries, establish credibility, and perform on search engines. Every project begins with understanding your business, your customers, and your growth goals — not with picking a theme.',
+          'To start a conversation about your business, visit our contact page or see examples of our work in the portfolio. We are based in Jaipur and understand the local market because we operate inside it.'
+        ]
+      }
+    ],
+    tags: ['Website Development', 'Jaipur Business', 'Digital Presence', 'Local Business', 'Professional Website']
+  },
+  {
+    id: 'art-22',
+    slug: 'how-to-choose-a-web-design-agency-in-jaipur',
+    title: 'How to Choose a Web Design Agency in Jaipur: 8 Questions to Ask Before You Sign',
+    category: 'Web Development',
+    excerpt: 'Not every agency in Jaipur delivers what they promise. These eight practical questions will help you separate studios that build genuine digital assets from those selling pretty pictures.',
+    date: 'September 18, 2026',
+    readTime: '8 min read',
+    views: '980 views',
+    author: {
+      name: 'Yash Soni',
+      role: 'Founder, Siyara Innovations',
+      avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80',
+      bio: 'Yash founded Siyara Innovations to help Jaipur businesses build digital systems that actually generate results, not just websites that look good in a portfolio.'
+    },
+    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80',
+    executiveSummary: 'Choosing the wrong web design agency in Jaipur is expensive in two ways: you pay for the work, and then you pay again when the site fails to generate results. These eight questions cut through agency sales pitches and reveal what a studio actually delivers.',
+    keyTakeaways: [
+      'Ask to see live websites — not just design mockups — built for businesses similar to yours.',
+      'Understand who actually builds your site: the senior team you met, or a junior subcontractor.',
+      'Get post-launch support terms in writing before you agree to anything.'
+    ],
+    sections: [
+      {
+        id: 'why-this-matters',
+        title: '01. Why Choosing Wrong Is Costly',
+        content: [
+          'Jaipur has no shortage of web design agencies. Social media is full of studios promising "stunning websites" and "guaranteed results" at prices ranging from five thousand rupees to five lakh. The variance in quality is just as extreme as the variance in price.',
+          'The risk of choosing poorly is not just a disappointing website. It is the opportunity cost of six months waiting, a budget spent, and still arriving at square one — except now you need to find a new agency and start again while your competitors have moved forward.',
+          'The questions below are not designed to catch agencies out. They are designed to give you honest, useful information so you can make a confident decision. Any agency worth working with will answer them openly.'
+        ]
+      },
+      {
+        id: 'q1-live-examples',
+        title: '02. Question 1: Can I see live websites you have built — not mockups?',
+        content: [
+          'Design mockups are not websites. They are image files that show you what something could look like if it were built correctly. A live website shows you how fast the site loads, how it behaves on a phone, how the interactions feel, and whether it is actually optimised for search engines.',
+          'When you visit a live example, check three things immediately. First, how fast does it load on your mobile phone? If it takes more than three seconds, the agency has a performance problem. Second, does it look as polished on a phone as it does on desktop? Most Indian web traffic is mobile. Third, does it show up in a Google search for any relevant terms? A site nobody can find is a decorative object, not a business tool.',
+          'If an agency cannot show you live URLs of sites they have built, that is an answer in itself.'
+        ]
+      },
+      {
+        id: 'q2-who-builds-it',
+        title: '03. Question 2: Who actually builds my website?',
+        content: [
+          'This question is more important than it sounds. Many agencies in Jaipur have polished offices and senior account managers who handle your relationship — while the actual development work is done by junior interns or passed to cheaper subcontractors outside the city.',
+          'Ask directly: "Which team member will build my website and how long have they been doing this work?" You want to understand whether the person who will write your code and design your pages has built things of similar complexity and quality before.',
+          'A transparent agency will introduce you to the people who will actually work on your project. If the answer involves vague references to "the team" without specifics, press further.'
+        ],
+        quote: 'The account manager you love dealing with is not necessarily the person who builds your website. Always ask to meet the builders.'
+      },
+      {
+        id: 'q3-seo-built-in',
+        title: '04. Question 3: Is search engine optimisation built into the development process, or is it an add-on?',
+        content: [
+          'Many agencies treat SEO as a separate product you purchase after your site is already built. This is backwards. The most important SEO work happens during development: how pages are structured, how fast they load, how images are compressed and labelled, how local business data is coded into the site, and how content headings are organised.',
+          'If an agency cannot explain — in plain language — how they build SEO into their development process from day one, the website they build will struggle to be found regardless of how good it looks. Ask specifically about Core Web Vitals scores, Schema.org markup, meta tag management, and mobile performance. If these terms produce blank stares, factor that into your decision.'
+        ]
+      },
+      {
+        id: 'q4-timeline-reality',
+        title: '05. Question 4: What is a realistic timeline and what causes delays?',
+        content: [
+          'Over-promising on timelines is one of the most common complaints Jaipur business owners have about web agencies. A project scoped for four weeks quietly stretches to four months, with explanations that always trace back to things the client did not provide.',
+          'Ask agencies to give you a realistic timeline broken into specific phases: discovery, design, content, development, review, and launch. Also ask what the most common reasons for delay are on their projects. A studio that has handled this before will give you an honest, specific answer — usually involving content collection and client approval cycles. A studio that has not encountered delays is either very new or not telling you the whole truth.'
+        ]
+      },
+      {
+        id: 'q5-content-responsibility',
+        title: '06. Question 5: Who writes the copy and organises the content?',
+        content: [
+          'Content is where most website projects stall. Photography, service descriptions, team bios, testimonials, and page copy all need to be organised, written, and delivered before development can finish. Many agencies leave this entirely to the client, which is fine — but only if you know it upfront.',
+          'Some agencies include a copywriter in their service. Others provide a content brief and expect you to fill it. Some agencies help gather testimonials and write service descriptions as part of onboarding. Understand exactly what you are responsible for providing and by when, so the project does not get stuck waiting for content that nobody told you was your job to produce.'
+        ]
+      },
+      {
+        id: 'q6-post-launch-support',
+        title: '07. Question 6: What happens after the website launches?',
+        content: [
+          'A website is not a finished product on launch day. It is the beginning of a relationship. Plugins need updating. Content needs changing. New services need adding. Contact forms occasionally break. Images need replacing as your business evolves.',
+          'Ask every agency you speak to: what does post-launch support look like, and what does it cost? Some include a month of free changes, then charge per update. Some offer monthly retainer plans. Some disappear after handover. Understanding this before you sign is essential — not optional.',
+          'Also ask specifically: if my website goes down on a Saturday night, who do I contact and how quickly will it be fixed?'
+        ]
+      },
+      {
+        id: 'q7-ownership',
+        title: '08. Question 7: Who owns the website, the code, and the domain after launch?',
+        content: [
+          'You would be surprised how often this is misunderstood. Some agencies build your website on their hosting accounts, using their licences, in ways that make it difficult or expensive to move later. Ensure you receive absolute clarity on three things: you own your domain name, you own the code of the finished website, and you are not locked into proprietary platforms that require the agency\'s involvement to make basic changes.',
+          'A professional agency will document this clearly in your project agreement and hand over all credentials at launch without hesitation.'
+        ]
+      },
+      {
+        id: 'q8-business-context',
+        title: '09. Question 8: Do you understand my industry and my customers?',
+        content: [
+          'This is the most subjective question on the list, but it may be the most important. A web agency that has built sites for healthcare practices understands that patient trust and credential presentation matter more than flashy animations. An agency that has worked with real estate developers understands that floor plans, video walkthroughs, and enquiry forms need to be prominent. An agency that has worked with event companies understands that visual portfolio and social proof drive enquiries.',
+          'Ask the agency whether they have worked with businesses in your sector and what they learned. If they have, they will have specific opinions and recommendations. If they have not, they may still do excellent work — but they will need more time to understand your customers, and that understanding gap can affect the final product.',
+          'At Siyara Innovations in Jaipur, we work across real estate, healthcare, hospitality, fashion, e-commerce, events, and professional services — and we are happy to walk you through work we have done in your sector before any commitment is made.'
+        ]
+      }
+    ],
+    tags: ['Web Design Agency', 'Jaipur', 'Choosing a Web Agency', 'Website Development', 'Business Website']
+  },
+  {
+    id: 'art-23',
+    slug: 'what-is-brand-identity-and-why-it-matters-for-small-businesses',
+    title: 'What Is Brand Identity and Why It Matters More Than a Logo',
+    category: 'Brand',
+    excerpt: 'Many business owners think brand identity means a logo and some colours. It is actually the full set of signals your business sends before anyone speaks to you — and it determines whether buyers trust you or scroll past.',
+    date: 'September 15, 2026',
+    readTime: '7 min read',
+    views: '1.4k views',
+    author: {
+      name: 'Yash Soni',
+      role: 'Founder, Siyara Innovations',
+      avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80',
+      bio: 'Yash writes about brand strategy, digital design, and business growth for ambitious Indian businesses. He leads Siyara Innovations from Jaipur.'
+    },
+    image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&w=800&q=80',
+    executiveSummary: 'A logo is a mark. Brand identity is the entire system of visual, verbal, and experiential signals that shape how customers perceive and remember your business. When that system is coherent and compelling, it creates trust at scale — before a single conversation happens.',
+    keyTakeaways: [
+      'Brand identity is a system, not an asset. It encompasses typography, colour, tone of voice, photography style, and consistency across every touchpoint.',
+      'Businesses with coherent brand identities are perceived as more credible, command higher prices, and attract better enquiries.',
+      'Inconsistent branding communicates that a business is disorganised — even when it is not.'
+    ],
+    sections: [
+      {
+        id: 'beyond-the-logo',
+        title: '01. Why a Logo Is Just the Beginning',
+        content: [
+          'When a business owner says they need branding done, they usually mean they need a logo. That is understandable — a logo is the most visible piece of brand identity. But it is also the least powerful on its own.',
+          'Consider what actually happens when a potential customer encounters your business. They might see an Instagram post. Then visit your website. Then read a WhatsApp message from your team. Then review your business card at a meeting. Then check your Google Business profile.',
+          'If each of those touchpoints looks and sounds slightly different — different fonts, different colours, different tone of voice, different photography style — the customer\'s subconscious registers inconsistency. Inconsistency reads as disorganisation. Disorganisation erodes trust.',
+          'A professional brand identity system ensures that every touchpoint — digital and physical — feels like it comes from the same coherent, deliberate business.'
+        ]
+      },
+      {
+        id: 'what-brand-identity-includes',
+        title: '02. What Brand Identity Actually Includes',
+        content: [
+          'A complete brand identity system covers more ground than most business owners initially expect. Here is what it typically encompasses:',
+          'Visual Identity: Your logo and its variations, primary and secondary colour palettes, typography (the fonts your brand uses across all communications), photography and illustration style, and the overall visual language of your materials.',
+          'Verbal Identity: The name of your business, your tagline or positioning statement, the tone of voice you use in writing (formal, warm, confident, minimal), the language patterns your brand consistently uses, and how you describe what you do and who you serve.',
+          'Brand Architecture: If you have multiple products, services, or business divisions, how they relate to the parent brand and to each other — and whether they share visual language or operate independently.',
+          'Application Guidelines: How your identity applies across your website, social media, packaging, stationery, signage, uniforms, and vehicle livery. Without documented guidelines, the identity drifts over time as different people apply it differently.'
+        ]
+      },
+      {
+        id: 'what-good-branding-does',
+        title: '03. What a Strong Brand Identity Does for Your Business',
+        content: [
+          'The business case for investing in brand identity is not about aesthetics. It is about economics.',
+          'It allows you to charge more. Customers pay premium prices for brands they perceive as premium. A business with a cohesive, confident brand identity can credibly ask for higher fees than an identical business with inconsistent or generic branding — even when the underlying service or product quality is the same.',
+          'It generates trust before conversation. In markets where buyers have multiple options, the business that looks most established and professional often wins the first conversation. Brand identity is your first salesperson: it operates before any human interaction occurs.',
+          'It attracts better enquiries. Strong, specific brand identities attract buyers who resonate with the brand\'s positioning. A boutique architecture firm with a refined, editorial identity attracts clients who value craftsmanship. A fitness studio with an energetic, bold identity attracts clients who value intensity. The identity self-selects for the right audience.',
+          'It makes marketing more efficient. When your brand has a clear visual and verbal system, producing content — social media posts, presentations, brochures, email campaigns — becomes faster and more consistent. You are not starting from scratch every time. You are applying an established language.'
+        ],
+        quote: 'A brand that communicates nothing distinctive says nothing memorable. A brand with a clear identity tells buyers exactly why it is worth choosing before they ask.'
+      },
+      {
+        id: 'common-branding-mistakes',
+        title: '04. The Most Common Branding Mistakes Indian Businesses Make',
+        content: [
+          'After working with businesses across Jaipur and Rajasthan, we see the same branding mistakes appearing repeatedly.',
+          'Mistaking cheap for affordable. A logo bought for five hundred rupees from a freelance marketplace typically shows. It may look acceptable in isolation, but it usually lacks the versatility, originality, and quality needed to work across different applications — it falls apart when printed large, appears generic next to competitors, and is sometimes discovered to be copied from stock libraries.',
+          'Skipping brand guidelines. Many businesses get a logo designed and never receive — or never ask for — guidelines on how to use it. Over time, team members apply the logo in wrong sizes, wrong colours, and wrong combinations. The brand drifts into incoherence.',
+          'Changing identity too frequently. Brand identity builds recognition through repetition. Businesses that redesign their logo or change their colour palette every eighteen months never accumulate the brand equity that comes from consistent long-term presence.',
+          'Treating brand as decoration. The most damaging mistake is treating brand as something separate from business strategy — a cosmetic exercise rather than a strategic one. The most valuable brand identities are built from a deep understanding of the business\'s positioning, its customers, and its competitive context. Decoration without strategy produces attractive assets that do not generate commercial results.'
+        ]
+      },
+      {
+        id: 'when-to-invest',
+        title: '05. When Should You Invest in Brand Identity?',
+        content: [
+          'There is no single right moment — but there are several clear signals that the time has arrived.',
+          'You are embarrassed to hand out your business card or share your website link. This feeling is your intuition telling you the gap between your actual quality and your presented quality is too wide.',
+          'You are being compared on price when you believe your service warrants premium positioning. When buyers cannot distinguish you from cheaper competitors, the distinguishing factor defaults to price — and you lose.',
+          'You are expanding into new markets, launching a new service, or hiring a team that will represent the business to customers. Growth moments are the right time to ensure your presentation matches your ambitions.',
+          'Your brand identity was built years ago and no longer reflects the business you have become.',
+          'At Siyara Innovations, brand identity work is always connected to business strategy and digital systems. A new identity built simultaneously with a new website creates coherence from day one — the visual language of the site, the photography, the typography, and the tone all pull in the same direction.'
+        ]
+      }
+    ],
+    tags: ['Brand Identity', 'Branding', 'Business Growth', 'Logo Design', 'Visual Identity']
+  },
+  {
+    id: 'art-24',
+    slug: 'how-to-get-more-enquiries-from-your-website',
+    title: 'How to Get More Enquiries From Your Website: A Practical Guide for Indian Businesses',
+    category: 'Conversion',
+    excerpt: 'Most Indian business websites get decent traffic but generate almost no enquiries. The problem is rarely the traffic — it is the website. Here is what to fix.',
+    date: 'September 12, 2026',
+    readTime: '9 min read',
+    views: '1.7k views',
+    author: {
+      name: 'Yash Soni',
+      role: 'Founder, Siyara Innovations',
+      avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80',
+      bio: 'Yash builds conversion-focused digital systems for Indian businesses. He founded Siyara Innovations to close the gap between beautiful websites and websites that actually drive revenue.'
+    },
+    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80',
+    executiveSummary: 'Traffic without conversion is an expensive decoration. The majority of Indian business websites have functional traffic but generate almost no leads because they fail at the fundamental task of guiding visitors toward action. This guide covers the specific, practical changes that fix this.',
+    keyTakeaways: [
+      'Most website traffic is wasted not because visitors are uninterested, but because the site fails to make the next step obvious.',
+      'WhatsApp is the single highest-converting call-to-action for Indian audiences — it should be on every page.',
+      'Trust signals (reviews, credentials, client logos) placed near contact forms dramatically increase submission rates.'
+    ],
+    sections: [
+      {
+        id: 'traffic-vs-leads',
+        title: '01. Why Traffic Is Not the Problem',
+        content: [
+          'When a business owner says their website is not working, the first assumption is usually that they need more traffic — more visitors, more social media followers, more ad spend. In most cases, this is incorrect.',
+          'The real problem is that the visitors who are already arriving are not being converted into enquiries. The website is receiving people who are interested enough to visit, then failing to give them a clear, compelling reason to take the next step.',
+          'Before spending money on advertising to drive more people to a site that cannot convert, fix the site. The economics are simple: doubling your conversion rate produces the same result as doubling your traffic — but costs a fraction as much to achieve.'
+        ]
+      },
+      {
+        id: 'whatsapp-as-primary-cta',
+        title: '02. Put WhatsApp First',
+        content: [
+          'This is the most India-specific recommendation in this guide, and it may be the most impactful.',
+          'In most Western markets, website contact forms are the primary conversion mechanism. In India, WhatsApp has overtaken email, phone calls, and contact forms as the most comfortable, trusted, and convenient way for buyers to initiate contact.',
+          'If your website does not have a WhatsApp click-to-chat button that is immediately visible on every page, you are creating unnecessary friction for the majority of your Indian audience. The button should be present on mobile and desktop, with a pre-filled opening message so the customer does not have to think about what to write.',
+          'For Indian businesses targeting local customers, adding a visible WhatsApp button is consistently the highest-return single change to a website. Businesses that implement this report measurable increases in enquiries within days — not months.'
+        ],
+        quote: 'Every friction point between interest and action costs you an enquiry. WhatsApp removes the biggest friction point Indian buyers face: the formality of a contact form.'
+      },
+      {
+        id: 'clear-calls-to-action',
+        title: '03. Make the Next Step Unmissable',
+        content: [
+          'A call to action is the specific instruction that tells a visitor what to do next. Most Indian business websites either lack clear calls to action entirely, or bury them where visitors have to hunt for them.',
+          'Every page of your website should have one primary call to action that is immediately obvious without scrolling. On a home page, that might be "Send Us a Message on WhatsApp" or "Book a Free Consultation." On a services page, it might be "Get a Quote." On a portfolio page, it might be "Discuss Your Project."',
+          'The wording matters. "Contact Us" is weak because it is generic and passive. "Get a Free Quote Today" or "Start Your Project — Message Us Now" creates urgency and tells the visitor exactly what happens when they click.',
+          'Buttons should also be visually prominent — a contrasting colour that makes them stand out from the rest of the page. A button that blends into the background is not a call to action; it is a missed opportunity.'
+        ]
+      },
+      {
+        id: 'trust-signals',
+        title: '04. Build Trust Before You Ask for the Click',
+        content: [
+          'Visitors who arrive on your website from search or social media have no existing relationship with your business. They need reasons to trust you before they will hand over their contact details or start a conversation.',
+          'The most effective trust signals are specific, not generic. "10 years of experience" is generic. "We have completed 47 residential interior projects in Jaipur since 2016" is specific. Specificity communicates authenticity.',
+          'Client testimonials are powerful when they contain specific details: the customer\'s name, their business or location, and what result they experienced. A testimonial that says "Great service, highly recommended" carries far less weight than one that says "We received 12 genuine enquiries in the first month after our new website went live — Siyara delivered exactly what they promised."',
+          'Logos of recognisable organisations you have worked with, certifications relevant to your profession, press mentions, and Google review ratings — all of these reduce buyer anxiety. Place them on the home page and near your contact forms, where the buying decision is being made.'
+        ]
+      },
+      {
+        id: 'mobile-conversion-basics',
+        title: '05. Fix the Mobile Experience',
+        content: [
+          'More than 75% of website traffic in India arrives on a mobile phone. If your website is difficult to use on a phone, you are losing the majority of your potential enquiries regardless of how compelling your offer is.',
+          'Test your website right now: open it on your own phone without Wi-Fi and observe what happens. Does it load within three seconds? Can you read the text without zooming? Is the call to action button large enough to tap without difficulty? Does the contact form work correctly on a phone keyboard?',
+          'Common mobile problems that kill conversion include text that is too small to read, buttons that are too small to tap accurately, forms that are difficult to fill out on a touch keyboard, and pages that load so slowly that visitors give up before the content appears.',
+          'Fixing these issues does not require a full redesign. In many cases, targeted improvements to button sizes, text scaling, and page speed can dramatically increase mobile conversion rates within days of implementation.'
+        ]
+      },
+      {
+        id: 'speed-and-performance',
+        title: '06. Page Speed Is a Conversion Issue, Not Just a Technical One',
+        content: [
+          'Research consistently shows that websites which take more than three seconds to load lose over half their visitors before those visitors see a single word of content. For Indian audiences on mobile data connections, this threshold is critical.',
+          'Slow websites are usually caused by oversized images that have not been compressed, unnecessary plugins and scripts loading in the background, cheap shared hosting that cannot handle traffic efficiently, and poorly written code that requires the browser to do excessive work.',
+          'A faster website directly converts more visitors into enquiries — not because speed is a psychological trust signal (though it is), but because slow sites simply lose visitors before conversion is even possible. If your website loads slowly, fixing this should be a higher priority than any content or design change.'
+        ]
+      },
+      {
+        id: 'follow-up-systems',
+        title: '07. What Happens After the Enquiry Is Just as Important',
+        content: [
+          'Website conversion does not end when the contact form is submitted or the WhatsApp message is sent. What happens next determines whether that enquiry becomes a client.',
+          'Response time is the single most important factor in converting an online enquiry. A study of Indian service businesses found that enquiries responded to within five minutes converted at dramatically higher rates than those responded to within an hour — and enquiries that waited more than 24 hours for a response were almost always lost to a faster competitor.',
+          'For businesses that cannot respond personally within minutes, automated WhatsApp acknowledgement messages are an effective intermediate step. They confirm that the enquiry was received, set an expectation for when a personal response will follow, and signal that the business is organised and attentive.',
+          'The operational systems behind your website — how quickly you respond, how professionally you follow up, and how well you guide interested visitors toward a committed appointment — are as important to your revenue as the website itself. Build both.'
+        ]
+      }
+    ],
+    tags: ['Conversion Rate Optimization', 'Lead Generation', 'WhatsApp Marketing', 'Website Enquiries', 'Indian Business']
   }
 ];
+
