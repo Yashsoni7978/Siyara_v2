@@ -57,28 +57,28 @@ export default function Work() {
 
   return (
     <div className="bg-[#070A09] text-[#F3EFE3] selection:bg-[#071E18] selection:text-[#D9B45F]">
-      {/* SECTION 01 — HERO (DARK) */}
+      {/* SECTION 01 - HERO (DARK) */}
       <WorkHero />
 
-      {/* SECTION 02 — INDUSTRY INDEX (WARM IVORY) */}
+      {/* SECTION 02 - INDUSTRY INDEX (WARM IVORY) */}
       <IndustryIndex
         selectedIndustry={selectedIndustry}
         onSelectIndustry={handleSelectIndustry}
       />
 
-      {/* SECTION 03 — FEATURED WORK & PROJECT GRID (WARM IVORY CONTINUED) */}
+      {/* SECTION 03 - FEATURED WORK & PROJECT GRID (WARM IVORY CONTINUED) */}
       <FeaturedWorkGrid
         selectedIndustry={selectedIndustry}
         onClearFilter={handleClearFilter}
       />
 
-      {/* SECTION 04 — INDUSTRIES WE WORK WITH (DARK EMERALD) */}
+      {/* SECTION 04 - INDUSTRIES WE WORK WITH (DARK EMERALD) */}
       <IndustriesSection />
 
-      {/* SECTION 05 — FEATURED CASE STUDY (WARM IVORY) */}
+      {/* SECTION 05 - FEATURED CASE STUDY (WARM IVORY) */}
       <FeaturedCaseStudy />
 
-      {/* SECTION 06 — CTA (DARK OBSIDIAN) */}
+      {/* SECTION 06 - CTA (DARK OBSIDIAN) */}
       <WorkCTA />
     </div>
   );

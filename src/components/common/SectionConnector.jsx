@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 /**
- * SectionConnector — Signature Siyara Architectural Connector
+ * SectionConnector - Signature Siyara Architectural Connector
  * Used at boundaries between dark and ivory sections.
  * Features champagne-gold line, geometric diamond node, subtle emerald halo,
  * faint orbital arcs, tiny shimmering gold particles, and vertical continuation line.

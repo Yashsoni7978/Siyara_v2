@@ -18,7 +18,7 @@ export default function Beliefs() {
     {
       id: '02',
       title: 'CRAFT MATTERS',
-      description: 'Every design and development decision is made deliberately — nothing is left to a template default.',
+      description: 'Every design and development decision is made deliberately - nothing is left to a template default.',
       icon: Sparkles,
     },
     {
@@ -30,7 +30,7 @@ export default function Beliefs() {
     {
       id: '04',
       title: 'GROW TOGETHER',
-      description: 'We stay involved after launch — this is a partnership, not a handoff.',
+      description: 'We stay involved after launch - this is a partnership, not a handoff.',
       icon: Handshake,
     },
   ];

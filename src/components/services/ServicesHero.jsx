@@ -102,7 +102,7 @@ export default function ServicesHero() {
               </span>
             </motion.div>
 
-            {/* Headline — single H1, Jaipur-first */}
+            {/* Headline - single H1, Jaipur-first */}
             <div className="mb-6">
               <h1 className="font-serif leading-[0.96] tracking-tight">
                 <motion.span
@@ -142,7 +142,7 @@ export default function ServicesHero() {
               className="mb-10 max-w-lg"
             >
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Strategy, brand, technology, visibility, and growth — built as one connected system for businesses in Jaipur, not generic templates.
+                Strategy, brand, technology, visibility, and growth - built as one connected system for businesses in Jaipur, not generic templates.
               </p>
             </motion.div>
 

@@ -189,7 +189,7 @@ export default function ServiceIndex({ onNavigate }) {
             className="lg:col-span-4 flex lg:justify-end"
           >
             <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-sm">
-             Every discipline plays a role for Jaipur businesses — together, they build one system, not eight disconnected services.
+             Every discipline plays a role for Jaipur businesses - together, they build one system, not eight disconnected services.
             </p>
           </motion.div>
         </div>
@@ -197,7 +197,7 @@ export default function ServiceIndex({ onNavigate }) {
         {/* 8 CIRCULAR DISCIPLINES ORBITAL CONSTELLATION STRIP */}
         <div className="relative mb-16 pt-4 pb-8">
           
-          {/* Orbital Line — aligns with circle centers (pt-4 outer + p-4 inner + h-14/2 = 60px) */}
+          {/* Orbital Line - aligns with circle centers (pt-4 outer + p-4 inner + h-14/2 = 60px) */}
           <div className="hidden lg:block absolute top-[60px] left-[5%] right-[5%] h-[1px] bg-gradient-to-r from-transparent via-[#B9923F]/40 to-transparent pointer-events-none opacity-60 z-0" />
           {/* Center pulse dot */}
           <div className="hidden lg:block absolute top-[56px] left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#0B5E49] opacity-50 animate-pulse pointer-events-none z-0" />

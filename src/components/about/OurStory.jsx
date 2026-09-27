@@ -54,7 +54,7 @@ export default function OurStory() {
               className="flex flex-col gap-5 max-w-lg text-base font-sans text-[#101613]/70 leading-relaxed font-light"
             >
               <p>
-                We saw good businesses — with real quality behind them — lose customers to competitors who simply looked and showed up better online. So we started Siyara to close that gap.
+                We saw good businesses - with real quality behind them - lose customers to competitors who simply looked and showed up better online. So we started Siyara to close that gap.
               </p>
               <p>
                 Today we partner with Jaipur businesses to build digital systems that aren’t just well-designed, but built to perform, convert, and grow.

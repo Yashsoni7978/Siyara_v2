@@ -42,7 +42,7 @@ export default function IndustriesSection() {
     {
       name: 'FASHION',
       label: 'FASHION & COUTURE D2C',
-      tagline: 'Seamless luxury e-commerce & high-converting brand lookbooks',
+      tagline: 'Bespoke luxury e-commerce & high-converting brand lookbooks',
       project: projectsData.find((p) => p.industry === 'Fashion') || projectsData[8]
     },
     {

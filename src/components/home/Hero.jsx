@@ -136,10 +136,10 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            {/* Headline — single H1 with decorative visual split preserved */}
+            {/* Headline - single H1 with decorative visual split preserved */}
             <div className="mb-6">
               <h1 className="font-serif leading-[1.0] tracking-tight">
-                {/* Line 1: WE BUILD BRANDS — large */}
+                {/* Line 1: WE BUILD BRANDS - large */}
                 <motion.span
                   initial="hidden"
                   animate="visible"
@@ -149,7 +149,7 @@ export default function Hero() {
                   WE BUILD BRANDS
                 </motion.span>
 
-                {/* Line 2: THAT — small, gold, spaced like a label */}
+                {/* Line 2: THAT - small, gold, spaced like a label */}
                 <motion.span
                   initial="hidden"
                   animate="visible"
@@ -159,7 +159,7 @@ export default function Hero() {
                   THAT
                 </motion.span>
 
-                {/* Line 3: DOMINATE. — massive gold */}
+                {/* Line 3: DOMINATE. - massive gold */}
                 <motion.span
                   initial="hidden"
                   animate="visible"
@@ -179,7 +179,7 @@ export default function Hero() {
               className="mb-10 max-w-lg"
             >
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Siyara Innovations is a Jaipur-based digital architecture studio — brand strategy, websites, SEO, and growth systems built as one connected system, not campaigns that compete with each other.
+                Siyara Innovations is a Jaipur-based digital architecture studio: brand strategy, websites, SEO, and growth systems built as one connected system, not campaigns that compete with each other.
               </p>
             </motion.div>
 

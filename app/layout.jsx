@@ -22,7 +22,7 @@ const manrope = Manrope({
 export const metadata = {
   metadataBase: new URL('https://www.siyaradigitals.com'),
   title: 'Siyara Innovations | Digital Marketing & Web Design Agency in Jaipur',
-  description: 'Siyara Innovations is a Jaipur-based digital agency building brand strategy, websites, SEO/GEO, and automation as one connected system — not six disconnected vendors. Book a strategy session.',
+  description: 'Siyara Innovations is a Jaipur-based digital agency building brand strategy, websites, SEO/GEO, and automation as one connected system, not six disconnected vendors. Book a strategy session.',
   keywords: 'digital architecture studio, brand strategy, web design Jaipur, SEO Jaipur, digital marketing Rajasthan, web development India, AI automation, conversion optimisation, Siyara',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/',
@@ -32,7 +32,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/',
     siteName: 'Siyara Innovations',
     title: 'Siyara Innovations | Digital Marketing & Web Design Agency in Jaipur',
-    description: 'Siyara Innovations is a Jaipur-based digital agency building brand strategy, websites, SEO/GEO, and automation as one connected system — not six disconnected vendors. Book a strategy session.',
+    description: 'Siyara Innovations is a Jaipur-based digital agency building brand strategy, websites, SEO/GEO, and automation as one connected system, not six disconnected vendors. Book a strategy session.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -47,7 +47,7 @@ export const metadata = {
     card: 'summary_large_image',
     site: '@siyaradigital',
     title: 'Siyara Innovations | Digital Marketing & Web Design Agency in Jaipur',
-    description: 'Siyara Innovations is a Jaipur-based digital agency building brand strategy, websites, SEO/GEO, and automation as one connected system — not six disconnected vendors. Book a strategy session.',
+    description: 'Siyara Innovations is a Jaipur-based digital agency building brand strategy, websites, SEO/GEO, and automation as one connected system, not six disconnected vendors. Book a strategy session.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
   icons: {
@@ -89,12 +89,12 @@ export default function RootLayout({ children }) {
                 {
                   '@type': 'Organization',
                   '@id': 'https://www.siyaradigitals.com/#organization',
-                  'name': 'Siyara',
-                  'alternateName': 'Siyara Digital Architecture Studio',
+                  'name': 'Siyara Innovations',
+                  'alternateName': ['Siyara', 'Siyara Digital Architecture Studio'],
                   'url': 'https://www.siyaradigitals.com',
                   'logo': {
                     '@type': 'ImageObject',
-                    'url': 'https://www.siyaradigitals.com/images/siyara_og_image.png'
+                    'url': 'https://www.siyaradigitals.com/logo.webp'
                   },
                   'description': 'A digital architecture studio building connected systems across Strategy, Brand, Experience, Visibility, Conversion, Automation, Analytics and Growth.',
                   'foundingDate': '2024',

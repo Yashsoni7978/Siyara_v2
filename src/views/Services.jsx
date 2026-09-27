@@ -17,37 +17,37 @@ export default function Services({ onNavigate }) {
       {/* CONNECTOR 01: DARK → IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 01 — THE SIYARA SYSTEM & EIGHT DISCIPLINES (IVORY) */}
+      {/* 01 - THE SIYARA SYSTEM & EIGHT DISCIPLINES (IVORY) */}
       <ServiceIndex onNavigate={onNavigate} />
 
       {/* CONNECTOR 02: IVORY → IVORY */}
       <SectionConnector fromDark={false} toDark={false} />
 
-      {/* 02 — FROM STRATEGY TO EXECUTION (IVORY) */}
+      {/* 02 - FROM STRATEGY TO EXECUTION (IVORY) */}
       <ServicesProcess />
 
       {/* CONNECTOR 03: IVORY → DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 03 — OUTCOMES OVER FEATURES (DARK) */}
+      {/* 03 - OUTCOMES OVER FEATURES (DARK) */}
       <WhySiyara />
 
       {/* CONNECTOR 04: DARK → IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 04 — EIGHT DISCIPLINE SPECIALIST SYSTEM (IVORY) */}
+      {/* 04 - EIGHT DISCIPLINE SPECIALIST SYSTEM (IVORY) */}
       <ServicesIndustries />
 
       {/* CONNECTOR 05: IVORY → DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 05 — SPECIALIST APPLICATIONS & INDUSTRIES (DARK) */}
+      {/* 05 - SPECIALIST APPLICATIONS & INDUSTRIES (DARK) */}
       <ServicesApplications />
 
       {/* CONNECTOR 06: DARK -> DARK */}
       <SectionConnector fromDark={true} toDark={true} />
 
-      {/* 06 — FINAL CTA (DARK) */}
+      {/* 06 - FINAL CTA (DARK) */}
       <ServicesCTA />
     </div>
   );

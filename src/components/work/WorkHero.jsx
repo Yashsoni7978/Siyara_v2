@@ -86,7 +86,7 @@ export default function WorkHero() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="font-sans text-sm sm:text-base text-[#F3EFE3]/85 font-light leading-relaxed max-w-[540px] mb-8"
             >
-              A showcase of {totalProjects}+ projects across industries — turning bold ideas into meaningful digital experiences.
+              A showcase of {totalProjects}+ projects across industries: turning bold ideas into meaningful digital experiences.
             </motion.p>
 
             {/* Primary CTA (Rectangular / Editorial) */}

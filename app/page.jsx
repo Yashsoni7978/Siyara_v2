@@ -13,55 +13,55 @@ import FinalCTA from '../src/components/home/FinalCTA';
 export default function HomePage() {
   return (
     <>
-      {/* 01 HERO — DARK */}
+      {/* 01 HERO - DARK */}
       <Hero />
 
-      {/* MARQUEE — DARK (Hero Sequence) */}
+      {/* MARQUEE - DARK (Hero Sequence) */}
       <Marquee />
 
-      {/* 03 WHAT WE DO — DARK */}
+      {/* 03 WHAT WE DO - DARK */}
       <WhatWeDo />
 
       {/* Connector 03: DARK → IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 04 WHY SIYARA — IVORY */}
+      {/* 04 WHY SIYARA - IVORY */}
       <WhySiyara />
 
       {/* Connector 04: IVORY → DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 05 OUR PHILOSOPHY — DARK */}
+      {/* 05 OUR PHILOSOPHY - DARK */}
       <Philosophy />
 
       {/* Connector 05: DARK → IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 06 THE PROBLEM — IVORY */}
+      {/* 06 THE PROBLEM - IVORY */}
       <Problem />
 
       {/* Connector 06: IVORY → DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 07 HOW WE WORK — DARK */}
+      {/* 07 HOW WE WORK - DARK */}
       <Process />
 
       {/* Connector 07: DARK → IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 08 PROOF & DELIVERABLES — IVORY */}
+      {/* 08 PROOF & DELIVERABLES - IVORY */}
       <Results />
 
       {/* Connector 08: IVORY → DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 09 INDUSTRIES — DARK */}
+      {/* 09 INDUSTRIES - DARK */}
       <Industries />
 
       {/* CONNECTOR: DARK → IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 11 FINAL CTA — IVORY */}
+      {/* 11 FINAL CTA - IVORY */}
       <FinalCTA />
     </>
   );

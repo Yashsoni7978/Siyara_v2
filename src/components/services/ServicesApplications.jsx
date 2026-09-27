@@ -14,7 +14,7 @@ export default function ServicesApplications() {
       name: 'REAL ESTATE',
       icon: Home,
       tagline: 'High-yield digital architecture for premier developments, luxury brokerages & real estate funds.',
-      details: 'Digital systems for developers, luxury brokerages, and real estate funds in and around Jaipur — property portals, interactive floor plans, and buyer acquisition funnels that actually convert.',
+      details: 'Digital systems for developers, luxury brokerages, and real estate funds in and around Jaipur - property portals, interactive floor plans, and buyer acquisition funnels that actually convert.',
       ctaText: 'APPLY SYSTEM TO REAL ESTATE',
     },
     {
@@ -22,7 +22,7 @@ export default function ServicesApplications() {
       name: 'HEALTHCARE & WELLNESS',
       icon: HeartPulse,
       tagline: 'Trust-first digital systems for clinics, wellness centers, and healthcare practices across Jaipur.',
-      details: 'Building patient-facing websites, appointment funnels, and local search visibility that turn searches into booked visits — without compromising on trust or compliance.',
+      details: 'Building patient-facing websites, appointment funnels, and local search visibility that turn searches into booked visits - without compromising on trust or compliance.',
       ctaText: 'APPLY SYSTEM TO HEALTHCARE',
     },
     {
@@ -70,7 +70,7 @@ export default function ServicesApplications() {
       name: 'STARTUPS & TECHNOLOGY',
       icon: Cpu,
       tagline: 'Fast, scalable digital foundations for startups and tech companies building out of Jaipur.',
-      details: 'Product-led websites, investor-ready brand presence, and technical SEO built to scale as you grow — without a rebuild every funding round.',
+      details: 'Product-led websites, investor-ready brand presence, and technical SEO built to scale as you grow - without a rebuild every funding round.',
       ctaText: 'APPLY SYSTEM TO STARTUPS',
     },
   ];

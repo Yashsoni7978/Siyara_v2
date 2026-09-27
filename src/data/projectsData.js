@@ -1,6 +1,6 @@
 export const projectsData = [
   // =========================================================================
-  // 01 — REAL ESTATE (2 LIVE + 6 RESERVED = 8 PROJECTS)
+  // 01 - REAL ESTATE (2 LIVE + 6 RESERVED = 8 PROJECTS)
   // =========================================================================
   {
     id: '01',
@@ -154,7 +154,7 @@ export const projectsData = [
   },
 
   // =========================================================================
-  // 02 — HEALTHCARE (3 LIVE + 5 RESERVED = 8 PROJECTS)
+  // 02 - HEALTHCARE (3 LIVE + 5 RESERVED = 8 PROJECTS)
   // =========================================================================
   {
     id: '09',
@@ -311,7 +311,7 @@ export const projectsData = [
   },
 
   // =========================================================================
-  // 03 — HOSPITALITY (1 LIVE + 7 RESERVED = 8 PROJECTS)
+  // 03 - HOSPITALITY (1 LIVE + 7 RESERVED = 8 PROJECTS)
   // =========================================================================
   {
     id: '17',
@@ -462,7 +462,7 @@ export const projectsData = [
   },
 
   // =========================================================================
-  // 04 — EVENTS (2 LIVE + 6 RESERVED = 8 PROJECTS)
+  // 04 - EVENTS (2 LIVE + 6 RESERVED = 8 PROJECTS)
   // =========================================================================
   {
     id: '25',
@@ -472,7 +472,7 @@ export const projectsData = [
     industry: 'Events',
     projectType: 'Pastel Floral Wedding & Event Design',
     tagline: 'Pastel Floral Wedding & Event Design',
-    description: 'Pastel floral wedding and event design studio — services, destination sanctuaries, and a full case-study portfolio.',
+    description: 'Pastel floral wedding and event design studio, featuring services, destination sanctuaries, and a full case-study portfolio.',
     services: ['EVENT PORTFOLIO', 'DESTINATION WEDDINGS', 'DESIGN STUDIO'],
     status: 'LIVE',
     link: 'https://ember-ivory-events-7ond.vercel.app/',
@@ -493,7 +493,7 @@ export const projectsData = [
     industry: 'Events',
     projectType: 'Bespoke Event Curation & Celebrations',
     tagline: 'Bespoke Event Curation & Celebrations',
-    description: 'A distinct events brand, separate from Bloom — details pending, currently redeploying.',
+    description: 'A distinct events brand, separate from Bloom (details pending, currently redeploying).',
     services: ['EVENT BRANDING', 'CELEBRATIONS', 'LUXURY EXPERIENCES'],
     status: 'LIVE',
     link: 'https://ember-ivory-events.vercel.app/',
@@ -616,7 +616,7 @@ export const projectsData = [
   },
 
   // =========================================================================
-  // 05 — ANCHOR / EMCEE (2 LIVE + 6 RESERVED = 8 PROJECTS)
+  // 05 - ANCHOR / EMCEE (2 LIVE + 6 RESERVED = 8 PROJECTS)
   // =========================================================================
   {
     id: '33',
@@ -624,9 +624,9 @@ export const projectsData = [
     name: 'Anchor Yash Soni',
     title: 'ANCHOR YASH SONI',
     industry: 'Anchor / Emcee',
-    projectType: 'Founder Professional Portfolio — 700+ Shows Hosted',
-    tagline: 'Founder Professional Portfolio — 700+ Shows Hosted',
-    description: 'This is our own founder’s real, live professional site — not a demo. Bilingual (Hindi/English) anchor and emcee, 700+ shows hosted across weddings, corporate events, sangeet functions, and sports commentary.',
+    projectType: 'Founder Professional Portfolio - 700+ Shows Hosted',
+    tagline: 'Founder Professional Portfolio - 700+ Shows Hosted',
+    description: 'This is our own founder’s real, live professional site - not a demo. Bilingual (Hindi/English) anchor and emcee, 700+ shows hosted across weddings, corporate events, sangeet functions, and sports commentary.',
     services: ['FOUNDER BRAND', 'LIVE SITE', 'EVENT ANCHOR'],
     status: 'LIVE',
     link: 'https://yashsoni.in/',
@@ -647,7 +647,7 @@ export const projectsData = [
     industry: 'Anchor / Emcee',
     projectType: 'Bilingual Event Anchor & Emcee Portfolio',
     tagline: 'Bilingual Event Anchor & Emcee Portfolio',
-    description: 'Bilingual (Hindi/English) event anchor and emcee portfolio — weddings, sangeets, corporate galas, and college fests.',
+    description: 'Bilingual (Hindi/English) event anchor and emcee portfolio - weddings, sangeets, corporate galas, and college fests.',
     services: ['PORTFOLIO SITE', 'EVENT HOSTING', 'SHOWCASE'],
     status: 'LIVE',
     link: 'https://anchor-ritika.vercel.app/',
@@ -770,7 +770,7 @@ export const projectsData = [
   },
 
   // =========================================================================
-  // 06 — FASHION (2 LIVE + 6 RESERVED = 8 PROJECTS)
+  // 06 - FASHION (2 LIVE + 6 RESERVED = 8 PROJECTS)
   // =========================================================================
   {
     id: '41',
@@ -924,7 +924,7 @@ export const projectsData = [
   },
 
   // =========================================================================
-  // 07 — E-COMMERCE (1 LIVE + 7 RESERVED = 8 PROJECTS)
+  // 07 - E-COMMERCE (1 LIVE + 7 RESERVED = 8 PROJECTS)
   // =========================================================================
   {
     id: '49',
@@ -1075,7 +1075,7 @@ export const projectsData = [
   },
 
   // =========================================================================
-  // 08 — ARCHITECTURE & INTERIORS (1 LIVE + 7 RESERVED = 8 PROJECTS)
+  // 08 - ARCHITECTURE & INTERIORS (1 LIVE + 7 RESERVED = 8 PROJECTS)
   // =========================================================================
   {
     id: '57',
@@ -1208,7 +1208,7 @@ export const projectsData = [
   },
 
   // =========================================================================
-  // 09 — FOOD & BEVERAGE (1 LIVE + 7 RESERVED = 8 PROJECTS)
+  // 09 - FOOD & BEVERAGE (1 LIVE + 7 RESERVED = 8 PROJECTS)
   // =========================================================================
   {
     id: '64',
@@ -1218,7 +1218,7 @@ export const projectsData = [
     industry: 'Food & Beverage',
     projectType: 'Contemporary Indian Dining Experience',
     tagline: 'Contemporary Indian Dining Experience',
-    description: 'Contemporary Indian dining experience — a Jaipur-based restaurant brand site.',
+    description: 'Contemporary Indian dining experience, a Jaipur-based restaurant brand site.',
     services: ['RESTAURANT BRANDING', 'FOOD & BEVERAGE', 'DINING EXPERIENCE'],
     status: 'LIVE',
     link: 'https://noor-nine-beta.vercel.app/',
@@ -1359,7 +1359,7 @@ export const projectsData = [
   },
 
   // =========================================================================
-  // 10 — AI / AUTOMATION (1 LIVE + 7 RESERVED = 8 PROJECTS)
+  // 10 - AI / AUTOMATION (1 LIVE + 7 RESERVED = 8 PROJECTS)
   // =========================================================================
   {
     id: '72',
@@ -1369,7 +1369,7 @@ export const projectsData = [
     industry: 'AI / Automation',
     projectType: 'Working AI Lead-Qualification Chat Widget',
     tagline: 'Working AI Lead-Qualification Chat Widget',
-    description: 'Working AI lead-qualification chat widget powered by a live Claude API integration — pitchable as an add-on to any client site.',
+    description: 'Working AI lead-qualification chat widget powered by a live Claude API integration - pitchable as an add-on to any client site.',
     services: ['AI INTEGRATION', 'CLAUDE API', 'LEAD QUALIFICATION'],
     status: 'LIVE',
     link: 'https://parvaah-ai.vercel.app/',
@@ -1510,7 +1510,7 @@ export const projectsData = [
   },
 
   // =========================================================================
-  // 11 — FINTECH (1 LIVE + 7 RESERVED = 8 PROJECTS)
+  // 11 - FINTECH (1 LIVE + 7 RESERVED = 8 PROJECTS)
   // =========================================================================
   {
     id: '80',

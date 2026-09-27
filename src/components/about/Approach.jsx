@@ -16,7 +16,7 @@ export default function Approach() {
     {
       id: '02',
       title: 'STRATEGIZE',
-      description: 'We map a plan with clear priorities — not a generic checklist of deliverables.',
+      description: 'We map a plan with clear priorities - not a generic checklist of deliverables.',
       icon: Compass,
     },
     {
@@ -28,7 +28,7 @@ export default function Approach() {
     {
       id: '04',
       title: 'DEVELOP',
-      description: 'We build on modern, fast, maintainable code — nothing bolted together.',
+      description: 'We build on modern, fast, maintainable code - nothing bolted together.',
       icon: Code,
     },
     {

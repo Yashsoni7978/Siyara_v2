@@ -25,7 +25,7 @@ export default function Footer() {
     { name: 'Case Studies', href: '/work#featured-case-study' },
     { name: 'Studio Insights', href: '/blog' },
     { name: 'FAQ', href: '/#contact' },
-    // TODO: replace with real /privacy and /terms pages — currently dead links
+    // TODO: replace with real /privacy and /terms pages - currently dead links
     { name: 'Privacy Policy', href: '#' },
     { name: 'Terms of Service', href: '#' },
   ];
@@ -68,7 +68,7 @@ export default function Footer() {
                 className="font-sans text-xs font-semibold text-[#F3EFE3] hover:text-[#D9B45F] transition-colors flex items-center gap-2"
               >
                 <Mail className="w-3.5 h-3.5 text-[#D9B45F]" />
-              {/* TODO: confirm correct domain — currently info@siyaradigital.com, site is siyaradigitals.com (missing "s"). Fix once correct address is confirmed. */}
+              {/* TODO: confirm correct domain - currently info@siyaradigital.com, site is siyaradigitals.com (missing "s"). Fix once correct address is confirmed. */}
                 <span>info@siyaradigital.com</span>
                 <ArrowUpRight className="w-3 h-3 text-[#D9B45F] ml-auto" />
               </a>
@@ -167,7 +167,7 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-6 text-[11px] tracking-wider text-[#9D9B91]">
-            {/* TODO: replace with real /privacy and /terms pages — currently dead links */}
+            {/* TODO: replace with real /privacy and /terms pages - currently dead links */}
             <Link href="#" className="hover:text-[#D9B45F] transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-[#D9B45F] transition-colors">Terms of Service</Link>
             <Link href="/sitemap.xml" className="hover:text-[#D9B45F] transition-colors">Sitemap</Link>

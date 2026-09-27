@@ -88,7 +88,7 @@ export default function Results() {
             Real Outcomes for <span className="text-[#0B5E49] font-normal">Jaipur Brands</span>
           </h2>
           <p className="font-sans text-sm text-[#101613] font-normal leading-relaxed mb-6 max-w-lg">
-            We design and engineer scalable digital systems engineered to elevate brands, increase visibility, and drive long-term business value.
+            We design and engineer digital architectures that expand brand reach, improve visibility, and generate measurable revenue.
           </p>
           <a
             href="#work"

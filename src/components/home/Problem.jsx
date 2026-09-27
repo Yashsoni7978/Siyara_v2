@@ -44,7 +44,7 @@ export default function Problem() {
     <section className="relative py-16 sm:py-20 bg-[#F3EFE3] border-t border-[#101613]/08 overflow-hidden">
       {/* Subtle warm ivory atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8] to-[#F3EFE3] opacity-60 pointer-events-none" />
-      {/* Ultra-faint emerald radial glow — editorial texture */}
+      {/* Ultra-faint emerald radial glow - editorial texture */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0B5E49]/04 blur-3xl rounded-full pointer-events-none" />
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">

@@ -57,7 +57,7 @@ export default function AboutHero() {
                 variants={fadeUp(400)}
                 className="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-normal leading-[1.1] tracking-tight text-[#F3EFE3] max-w-[95%]"
               >
-                We build digital systems for Jaipur businesses — strategy, design, and technology, connected.
+                We build digital systems for Jaipur businesses - strategy, design, and technology, connected.
               </motion.h1>
             </div>
 
@@ -69,7 +69,7 @@ export default function AboutHero() {
               className="mb-10 max-w-lg space-y-4"
             >
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Siyara Innovations brings strategy, design, technology, and growth together to solve real problems for Jaipur businesses — not abstract “digital experiences.”
+                Siyara Innovations brings strategy, design, technology, and growth together to solve real problems for Jaipur businesses - not abstract “digital experiences.”
               </p>
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
                 We believe every part of a business’s digital presence should work as one system, not six disconnected pieces.

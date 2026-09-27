@@ -166,7 +166,7 @@ export default function SelectedWork() {
             </AnimatePresence>
           </div>
 
-          {/* Right Column: Editorial Numerical Project Index (01 — 04) */}
+          {/* Right Column: Editorial Numerical Project Index (01 - 04) */}
           <div className="lg:col-span-3 flex flex-col justify-center">
             <div className="flex flex-col gap-6 border-l border-[#B9923F]/30 pl-6">
               {projects.map((project, idx) => {

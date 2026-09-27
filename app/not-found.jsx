@@ -22,7 +22,7 @@ export default function NotFound() {
         {/* Eyebrow */}
         <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[#D9B45F]/30 bg-[#071E18]/60 text-[#D9B45F] text-xs font-sans font-semibold tracking-[0.2em] uppercase mb-8">
           <Compass className="w-3.5 h-3.5" />
-          <span>404 — PAGE NOT FOUND</span>
+          <span>404: PAGE NOT FOUND</span>
         </div>
 
         {/* Headline */}

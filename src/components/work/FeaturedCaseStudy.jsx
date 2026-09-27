@@ -47,7 +47,7 @@ export default function FeaturedCaseStudy() {
 
           <div className="lg:col-span-4 flex flex-col justify-between h-full pt-2">
             <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed mb-6">
-              Shri Property — A complete digital architectural showcase for a premier real estate developer, establishing luxury brand authority across 5 flagship projects in 4 cities.
+              Shri Property - A complete digital architectural showcase for a premier real estate developer, establishing luxury brand authority across 5 flagship projects in 4 cities.
             </p>
 
             <div className="hidden lg:flex flex-col gap-2 border-l border-[#B9923F]/40 pl-4 text-[10px] font-sans tracking-[0.26em] text-[#0B5E49] uppercase font-bold">

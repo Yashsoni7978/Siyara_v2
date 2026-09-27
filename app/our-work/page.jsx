@@ -1,7 +1,7 @@
 import Work from '../../src/views/Work';
 
 export const metadata = {
-  title: 'Our Work | Siyara Innovations — Digital Architecture Studio',
+  title: 'Our Work | Siyara Innovations | Digital Architecture Studio',
   description: 'Explore Siyara Innovations’ work across 17 projects in real estate, hospitality, healthcare, fashion, e-commerce, and more.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/work',
@@ -10,7 +10,7 @@ export const metadata = {
     type: 'website',
     url: 'https://www.siyaradigitals.com/work',
     siteName: 'Siyara',
-    title: 'Our Work | Siyara Innovations — Digital Architecture Studio',
+    title: 'Our Work | Siyara Innovations | Digital Architecture Studio',
     description: 'Explore Siyara Innovations’ work across 17 projects in real estate, hospitality, healthcare, fashion, e-commerce, and more.',
     images: [
       {
@@ -25,7 +25,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@siyaradigital',
-    title: 'Our Work | Siyara Innovations — Digital Architecture Studio',
+    title: 'Our Work | Siyara Innovations | Digital Architecture Studio',
     description: 'Explore Siyara Innovations’ work across 17 projects in real estate, hospitality, healthcare, fashion, e-commerce, and more.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },

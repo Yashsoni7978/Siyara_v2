@@ -26,7 +26,7 @@ export default function ServicesProcess() {
     {
       id: '04',
       title: 'BUILD',
-      description: 'Clean, scalable code — nothing bolted together from templates.',
+      description: 'Clean, scalable code - nothing bolted together from templates.',
     },
     {
       id: '05',
