@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ServicesHero() {
   const shouldReduceMotion = useReducedMotion();
@@ -70,13 +71,13 @@ export default function ServicesHero() {
 
       {/* LAYER 02: PURE FULL HERO IMAGE BACKGROUND */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-[1] overflow-hidden select-none">
-        <img
-          src="/images/services_hero_bg.png"
+        <Image
+          src="/images/services_hero_bg.webp"
           alt="Services Ecosystem"
-          fetchPriority="high"
-          loading="eager"
-          decoding="sync"
-          className="w-full h-full object-contain object-right lg:object-right opacity-100 pointer-events-none lg:-translate-x-8 xl:-translate-x-16"
+          priority
+          fill
+          sizes="100vw"
+          className="object-contain object-right lg:object-right opacity-100 pointer-events-none lg:-translate-x-8 xl:-translate-x-16"
         />
         {/* Subtle left-side gradient veil for optimal typography contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#070A09]/85 via-[#070A09]/40 to-transparent lg:via-[#070A09]/20 pointer-events-none" />

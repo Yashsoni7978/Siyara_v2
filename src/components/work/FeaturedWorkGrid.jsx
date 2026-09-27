@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, Plus, Sparkles } from 'lucide-react';
+import Image from 'next/image';
 import { projectsData } from '../../data/projectsData';
 import ComingSoonModal from './ComingSoonModal';
 
@@ -119,10 +120,12 @@ export default function FeaturedWorkGrid({ selectedIndustry, onClearFilter }) {
                   } shadow-xl flex flex-col justify-between p-6 sm:p-8 text-[#F3EFE3] cursor-pointer block transition-all duration-300`}
                 >
                   {/* Background Image */}
-                  <img
+                  <Image
                     src={project.image}
                     alt={`${project.name} thumbnail`}
-                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out ${
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className={`object-cover transition-all duration-700 ease-out ${
                       isComingSoon
                         ? 'opacity-35 grayscale contrast-125 group-hover:scale-105 group-hover:opacity-45'
                         : 'opacity-55 group-hover:opacity-70 group-hover:scale-105'

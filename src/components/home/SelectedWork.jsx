@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 import { projectsData } from '../../data/projectsData';
 
 export default function SelectedWork() {
@@ -120,10 +121,12 @@ export default function SelectedWork() {
                   {/* Laptop Screen Content showing selected project UI */}
                   <div className="relative bg-[#070A09] rounded-md overflow-hidden aspect-[16/10] border border-white/5">
                     {/* Project Hero Image */}
-                    <img
+                    <Image
                       src={currentProject.image}
                       alt={currentProject.title}
-                      className="absolute inset-0 w-full h-full object-cover opacity-45 mix-blend-luminosity"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover opacity-45 mix-blend-luminosity"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#070A09] via-[#070A09]/60 to-transparent" />
 

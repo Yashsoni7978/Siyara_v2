@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 import { projectsData, getIndustryCategories } from '../../data/projectsData';
 
 export default function WorkHero() {
@@ -16,10 +17,13 @@ export default function WorkHero() {
       
       {/* FULL-BLEED ARCHITECTURAL BACKGROUND ARTWORK */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/images/hero_work_bg.png"
+        <Image
+          src="/images/hero_work_bg.webp"
           alt="Siyara Innovations Digital Architecture Artwork"
-          className="w-full h-full object-cover object-[60%_center] lg:object-center"
+          priority
+          fill
+          sizes="100vw"
+          className="object-cover object-[60%_center] lg:object-center"
         />
         {/* Subtle, restrained left gradient overlay for text legibility without obscuring artwork */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#070A09]/85 via-[#070A09]/30 to-transparent w-full lg:w-[60%] pointer-events-none" />

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function Navbar() {
@@ -75,9 +76,12 @@ export default function Navbar() {
           onClick={(e) => handleLinkClick(e, { id: 'home', href: '/' })}
           className="flex items-center gap-3 group focus:outline-none -ml-2 sm:-ml-6"
         >
-          <img 
-            src="/logo.png" 
+          <Image 
+            src="/logo.webp" 
             alt="Siyara Innovations Emblem" 
+            width={120}
+            height={48}
+            priority
             className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             style={{ mixBlendMode: 'screen', filter: 'brightness(1.1)' }}
           />

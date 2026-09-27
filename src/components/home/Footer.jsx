@@ -88,9 +88,9 @@ export default function Footer() {
             
             {/* SERVICES */}
             <div>
-              <h4 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
+              <h3 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
                 CAPABILITIES
-              </h4>
+              </h3>
               <ul className="flex flex-col gap-3">
                 {servicesLinks.map((link) => (
                   <li key={link.name}>
@@ -107,9 +107,9 @@ export default function Footer() {
 
             {/* COMPANY */}
             <div>
-              <h4 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
+              <h3 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
                 COMPANY
-              </h4>
+              </h3>
               <ul className="flex flex-col gap-3">
                 {companyLinks.map((link) => (
                   <li key={link.name}>
@@ -126,9 +126,9 @@ export default function Footer() {
 
             {/* RESOURCES & CONTACT */}
             <div>
-              <h4 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
+              <h3 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
                 RESOURCES
-              </h4>
+              </h3>
               <ul className="flex flex-col gap-3 mb-8">
                 {resourceLinks.map((link) => (
                   <li key={link.name}>
@@ -142,9 +142,9 @@ export default function Footer() {
                 ))}
               </ul>
 
-              <h4 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-3">
+              <h3 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-3">
                 LOCATION & CONTACT
-              </h4>
+              </h3>
               <div className="flex items-center gap-2 text-xs font-sans text-[#9D9B91] mb-2">
                 <MapPin className="w-3.5 h-3.5 text-[#D9B45F]" />
                 <span>Jaipur, Rajasthan · India</span>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Philosophy() {
   return (
@@ -78,9 +79,11 @@ export default function Philosophy() {
                 
                 {/* Visual Image */}
                 <div className="relative rounded-br-[92px] rounded-tl-[34px] overflow-hidden aspect-[4/3] sm:aspect-[16/11]">
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80"
                     alt="Luxury Architectural Interior representing Siyara Growth"
+                    width={1200}
+                    height={825}
                     className="w-full h-full object-cover opacity-60 mix-blend-luminosity hover:scale-105 transition-transform duration-700"
                   />
                   

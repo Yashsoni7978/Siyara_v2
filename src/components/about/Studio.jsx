@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Studio() {
   const easeCustom = [0.16, 1, 0.3, 1];
@@ -45,9 +46,11 @@ export default function Studio() {
               className="relative bg-[#ECE7D8] border border-[#0B5E49]/30 p-1 shadow-2xl"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80"
                   alt="Siyara Digital Architecture Studio workspace"
+                  width={1200}
+                  height={750}
                   className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#070A09]/30 via-transparent to-transparent" />

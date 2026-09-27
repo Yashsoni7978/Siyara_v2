@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FEATURED_ARTICLE, BLOG_ARTICLES } from '../../data/blogArticles.js';
 
 export default function Insights() {
@@ -80,10 +81,12 @@ export default function Insights() {
             </div>
 
             <div className="relative h-64 sm:h-72 my-6 overflow-hidden border border-[#B9923F]/20">
-              <img
+              <Image
                 src={leadArticle.image}
                 alt={leadArticle.title}
-                className="w-full h-full object-cover opacity-75 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-95 transition-all duration-700"
+                fill
+                sizes="(max-width: 768px) 100vw, 60vw"
+                className="object-cover opacity-75 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-95 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#ECE7D8] via-transparent to-transparent" />
             </div>
@@ -106,10 +109,12 @@ export default function Insights() {
               >
                 <div>
                   <div className="relative h-36 mb-5 overflow-hidden border border-[#B9923F]/20">
-                    <img
+                    <Image
                       src={article.image}
                       alt={article.title}
-                      className="w-full h-full object-cover opacity-65 mix-blend-luminosity group-hover:scale-[1.02] transition-transform duration-700"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      className="object-cover opacity-65 mix-blend-luminosity group-hover:scale-[1.02] transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#ECE7D8] via-transparent to-transparent" />
                   </div>

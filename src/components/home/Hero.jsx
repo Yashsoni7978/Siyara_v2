@@ -10,22 +10,22 @@ export default function Hero() {
   
   // Single coordinated parallax mouse state
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [isMobile, setIsMobile] = useState(false);
   const heroRef = useRef(null);
   const videoRef = useRef(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+  const isMobile = !isDesktop;
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    const mq = window.matchMedia('(min-width: 1024px)');
+    setIsDesktop(mq.matches);
+    const handler = (e) => setIsDesktop(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
   }, []);
 
   // Ensure video is 100% MUTED with zero volume and no audio output
   useEffect(() => {
-    if (videoRef.current) {
+    if (isDesktop && videoRef.current) {
       videoRef.current.muted = true;
       videoRef.current.defaultMuted = true;
       videoRef.current.volume = 0;
@@ -33,7 +33,7 @@ export default function Hero() {
         console.warn('Autoplay prevented or interrupted:', err);
       });
     }
-  }, []);
+  }, [isDesktop]);
 
   const handleMouseMove = (e) => {
     if (isMobile || shouldReduceMotion || !heroRef.current) return;
@@ -89,31 +89,33 @@ export default function Hero() {
       {/* LAYER 03: Atmospheric Bridge (Headline -> Video Transition Haze) */}
       <div className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] bg-gradient-to-r from-transparent via-[#071E18]/30 to-[#18A982]/12 blur-3xl pointer-events-none z-[2]" />
 
-      {/* LAYER 04: MASTER HERO CINEMATIC VIDEO (Strictly Muted & Silent — Zero Audio Track) */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.2, delay: 0.3, ease: easeCustom }}
-        style={{
-          ...getParallaxStyle(2),
-          maskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
-        }}
-        className="absolute -right-[4%] -bottom-[4%] top-1/2 -translate-y-1/2 w-full lg:w-[66%] xl:w-[70%] h-[98%] pointer-events-none z-[3] hidden lg:flex items-center justify-end overflow-hidden"
-      >
-        <video
-          ref={videoRef}
-          src="/images/siyara_hero_video.mp4"
-          poster="/images/siyara_hero_artwork.png"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          aria-hidden="true"
-          className="w-full h-full object-contain object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 scale-105 pointer-events-none"
-        />
-      </motion.div>
+      {/* LAYER 04: MASTER HERO CINEMATIC VIDEO - Rendered ONLY on Desktop to avoid bandwidth on Mobile */}
+      {isDesktop && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 0.3, ease: easeCustom }}
+          style={{
+            ...getParallaxStyle(2),
+            maskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
+          }}
+          className="absolute right-0 top-0 bottom-0 w-[55%] xl:w-[58%] h-full pointer-events-none z-[3] hidden lg:flex items-center justify-center overflow-hidden"
+        >
+          <video
+            ref={videoRef}
+            src="/images/siyara_hero_video.mp4"
+            poster="/images/siyara_hero_artwork.webp"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+            className="w-full h-auto max-h-[85%] object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 pointer-events-none"
+          />
+        </motion.div>
+      )}
 
       <div className="max-w-[1500px] mx-auto pl-5 pr-6 sm:pl-6 sm:pr-8 lg:pl-10 lg:pr-12 xl:pl-16 xl:pr-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import Image from 'next/image';
 import { projectsData } from '../../data/projectsData';
 
 export default function IndustriesSection() {
@@ -204,10 +205,12 @@ export default function IndustriesSection() {
               >
                 {/* Background Image Preview */}
                 <div className="relative aspect-[16/10] overflow-hidden mb-6 border border-white/10">
-                  <img
+                  <Image
                     src={currentIndustry.project.image}
                     alt={currentIndustry.project.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#101613] via-transparent to-black/20" />
                   

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function AboutHero() {
   const shouldReduceMotion = useReducedMotion();
@@ -111,9 +112,12 @@ export default function AboutHero() {
               transition={{ duration: 1.0, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="relative w-full max-w-[420px] aspect-[3/4] rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(12,107,82,0.5)] border border-[#D9B45F]/20"
             >
-              <img
-                src="/images/about-tech-visual.jpg"
+              <Image
+                src="/images/about-tech-visual.webp"
                 alt="Digital Technology Architecture"
+                priority
+                width={896}
+                height={1200}
                 className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-1000 ease-out"
               />
               {/* Internal shadow/gradient for blending */}

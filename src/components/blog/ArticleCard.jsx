@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Clock } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ArticleCard({ article, index = 0, onSelectArticle }) {
   const handleClick = () => {
@@ -25,11 +26,12 @@ export default function ArticleCard({ article, index = 0, onSelectArticle }) {
 
       {/* Article Image Container */}
       <div className="relative aspect-[16/10] overflow-hidden bg-[#063C2D]/30 border-b border-[#D4AF37]/15">
-        <img 
+        <Image 
           src={article.image} 
           alt={article.title}
-          className="w-full h-full object-cover object-center opacity-85 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 ease-out"
-          loading="lazy"
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover object-center opacity-85 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 ease-out"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#080B0A] via-[#080B0A]/20 to-transparent" />
         
@@ -65,9 +67,11 @@ export default function ArticleCard({ article, index = 0, onSelectArticle }) {
         {/* Footer Author & Action */}
         <div className="pt-4 border-t border-[#D4AF37]/15 flex items-center justify-between gap-3 mt-auto">
           <div className="flex items-center gap-2.5">
-            <img 
+            <Image 
               src={article.author.avatar} 
               alt={article.author.name}
+              width={28}
+              height={28}
               className="w-7 h-7 rounded-full border border-[#D4AF37]/30 object-cover"
             />
             <span className="font-sans text-xs font-medium text-[#CFC9BB]">

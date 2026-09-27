@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { 
   ArrowLeft, 
   Clock, 
@@ -126,9 +127,11 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
           <div className="pt-6 border-t border-[#D4AF37]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
             {/* Author Profile */}
             <div className="flex items-center gap-3.5">
-              <img 
+              <Image 
                 src={article.author.avatar} 
                 alt={article.author.name}
+                width={44}
+                height={44}
                 className="w-11 h-11 rounded-full border border-[#D4AF37]/40 object-cover"
               />
               <div>
@@ -183,10 +186,13 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
 
         {/* Featured Cover Image */}
         <div className="relative aspect-[21/9] min-h-[320px] max-h-[520px] w-full overflow-hidden border border-[#D4AF37]/25 mb-16 bg-[#063C2D]/30">
-          <img 
+          <Image 
             src={article.image} 
             alt={article.title}
-            className="w-full h-full object-cover object-center opacity-90"
+            fill
+            sizes="100vw"
+            priority
+            className="object-cover object-center opacity-90"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#080B0A] via-transparent to-transparent" />
         </div>
@@ -282,14 +288,16 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
 
                 {/* Supporting In-Article Visual */}
                 {section.image && (
-                  <figure className="my-8 overflow-hidden border border-[#D4AF37]/25 bg-[#063C2D]/20">
-                    <img 
+                  <figure className="my-8 relative aspect-[16/9] w-full overflow-hidden border border-[#D4AF37]/25 bg-[#063C2D]/20">
+                    <Image 
                       src={section.image} 
                       alt={section.imageAlt || section.title || article.title}
-                      className="w-full h-auto object-cover max-h-[480px]"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      className="object-cover"
                     />
                     {section.imageCaption && (
-                      <figcaption className="p-3 text-xs font-sans text-[#CFC9BB]/70 border-t border-[#D4AF37]/15 bg-[#080B0A]/90">
+                      <figcaption className="absolute bottom-0 left-0 right-0 p-3 text-xs font-sans text-[#CFC9BB]/70 border-t border-[#D4AF37]/15 bg-[#080B0A]/90 z-10">
                         {section.imageCaption}
                       </figcaption>
                     )}
@@ -321,9 +329,11 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
 
         {/* Detailed Author Profile Card */}
         <div className="max-w-4xl mx-auto mt-20 p-8 sm:p-10 border border-[#D4AF37]/25 bg-[#063C2D]/15 flex flex-col sm:flex-row items-center sm:items-start gap-6">
-          <img 
+          <Image 
             src={article.author.avatar} 
             alt={article.author.name}
+            width={80}
+            height={80}
             className="w-20 h-20 rounded-full border-2 border-[#D4AF37]/40 object-cover shrink-0"
           />
           <div>

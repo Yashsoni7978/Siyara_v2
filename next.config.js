@@ -4,13 +4,15 @@ const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
-    // Let's support loading images from Unsplash or other external domains if next/image is used
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
     ],
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
 };
 

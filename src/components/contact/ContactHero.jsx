@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ContactHero() {
   const shouldReduceMotion = useReducedMotion();
@@ -23,10 +24,13 @@ export default function ContactHero() {
     >
       {/* FULL-WIDTH HERO BACKGROUND IMAGE */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
-        <img
-          src="/images/contact_hero.png"
+        <Image
+          src="/images/contact_hero.webp"
           alt="Siyara Contact Architecture"
-          className="w-full h-full object-cover object-[75%_center] sm:object-[70%_center] md:object-[68%_center] lg:object-right"
+          priority
+          fill
+          sizes="100vw"
+          className="object-cover object-[75%_center] sm:object-[70%_center] md:object-[68%_center] lg:object-right"
         />
         {/* Subtle dark gradient overlay for optimal left-side text contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#070A09]/90 via-[#070A09]/55 to-transparent lg:via-[#070A09]/30" />
@@ -53,37 +57,34 @@ export default function ContactHero() {
 
             {/* Master Headline */}
             <div className="mb-6">
-              <h1 className="sr-only">LET'S BUILD SOMETHING WORTH BUILDING.</h1>
+              <h1 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]">
+                <motion.span
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeUp(450)}
+                  className="block"
+                >
+                  LET'S BUILD
+                </motion.span>
 
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp(450)}
-                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
-                aria-hidden="true"
-              >
-                LET'S BUILD
-              </motion.div>
+                <motion.span
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeUp(600)}
+                  className="block"
+                >
+                  SOMETHING
+                </motion.span>
 
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp(600)}
-                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]"
-                aria-hidden="true"
-              >
-                SOMETHING
-              </motion.div>
-
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp(750)}
-                className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26]"
-                aria-hidden="true"
-              >
-                WORTH BUILDING.
-              </motion.div>
+                <motion.span
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeUp(750)}
+                  className="block text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26]"
+                >
+                  WORTH BUILDING.
+                </motion.span>
+              </h1>
             </div>
 
             {/* Supporting Copy */}

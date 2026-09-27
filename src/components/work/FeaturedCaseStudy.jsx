@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function FeaturedCaseStudy() {
   return (
@@ -138,10 +139,12 @@ export default function FeaturedCaseStudy() {
 
                 {/* Screen Showcase */}
                 <div className="relative bg-[#070A09] rounded-md overflow-hidden aspect-[16/10] border border-white/10">
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=85"
                     alt="Shri Property Showcase"
-                    className="absolute inset-0 w-full h-full object-cover opacity-65 mix-blend-luminosity"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 60vw"
+                    className="object-cover opacity-65 mix-blend-luminosity"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#070A09] via-[#070A09]/60 to-transparent" />
 

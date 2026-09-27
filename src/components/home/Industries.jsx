@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Industries() {
   const [hoveredIndex, setHoveredIndex] = useState(0);
@@ -179,16 +180,22 @@ export default function Industries() {
               <div className="relative rounded-tl-[60px] rounded-br-[60px] rounded-tr-2xl rounded-bl-2xl overflow-hidden border border-[#D9B45F]/30 shadow-2xl p-2 bg-[#070A09]">
                 <div className="relative aspect-[4/5] rounded-tl-[52px] rounded-br-[52px] overflow-hidden bg-[#071E18]">
                   <AnimatePresence mode="wait">
-                    <motion.img
+                    <motion.div
                       key={activeIndustry.id}
-                      src={activeIndustry.image}
-                      alt={activeIndustry.name}
                       initial={{ opacity: 0, scale: 1.05 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 1.02 }}
                       transition={{ duration: 0.5 }}
-                      className="w-full h-full object-cover opacity-60 mix-blend-luminosity hover:scale-105 transition-transform duration-700"
-                    />
+                      className="absolute inset-0 w-full h-full"
+                    >
+                      <Image
+                        src={activeIndustry.image}
+                        alt={activeIndustry.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 40vw"
+                        className="object-cover opacity-60 mix-blend-luminosity hover:scale-105 transition-transform duration-700"
+                      />
+                    </motion.div>
                   </AnimatePresence>
 
                   {/* Gradient Overlay */}
@@ -199,9 +206,9 @@ export default function Industries() {
                     <span className="text-[10px] font-sans tracking-[0.2em] text-[#D9B45F] uppercase mb-2 block font-bold">
                       {activeIndustry.tag}
                     </span>
-                    <h4 className="font-serif text-2xl text-[#F3EFE3] mb-2 font-normal">
+                    <h3 className="font-serif text-2xl text-[#F3EFE3] mb-2 font-normal">
                       {activeIndustry.name}
-                    </h4>
+                    </h3>
                     <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed">
                       {activeIndustry.description}
                     </p>

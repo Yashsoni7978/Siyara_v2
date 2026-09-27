@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function OurStory() {
   const easeCustom = [0.16, 1, 0.3, 1];
@@ -75,9 +76,11 @@ export default function OurStory() {
                 {/* Main Dark Studio Environment Image */}
                 <div className="col-start-1 col-end-10 row-start-1 relative z-10 bg-[#070A09] border border-[#B9923F]/30 p-1 shadow-xl">
                   <div className="relative aspect-[4/5] sm:aspect-[4/4.5] overflow-hidden bg-[#071E18]">
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
                       alt="Siyara Studio workspace"
+                      width={800}
+                      height={1000}
                       className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#070A09]/90 via-transparent to-transparent" />
