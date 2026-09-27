@@ -100,7 +100,7 @@ export default function Hero() {
             maskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
             WebkitMaskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
           }}
-          className="absolute right-0 top-0 bottom-0 w-[55%] xl:w-[58%] h-full pointer-events-none z-[3] hidden lg:flex items-center justify-center overflow-hidden"
+          className="absolute right-0 top-0 bottom-0 w-full lg:w-[66%] xl:w-[70%] h-full pointer-events-none z-[3] hidden lg:flex items-center justify-end overflow-hidden"
         >
           <video
             ref={videoRef}
@@ -112,7 +112,7 @@ export default function Hero() {
             playsInline
             preload="metadata"
             aria-hidden="true"
-            className="w-full h-auto max-h-[85%] object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 pointer-events-none"
+            className="w-full h-full object-cover object-right drop-shadow-[0_20px_60px_rgba(0,0,0,0.95)] opacity-100 pointer-events-none"
           />
         </motion.div>
       )}
