@@ -211,59 +211,82 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* RIGHT SIDE: Architectural Information Plaque with Integrated Gold Connectors */}
+      {/* RIGHT SIDE: Refined Architectural Studio Callout Annotation */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 1.2, ease: easeCustom }}
         style={getParallaxStyle(3)}
-        className="absolute right-[-28px] sm:right-[-16px] lg:right-[-8px] xl:right-[-4px] bottom-12 sm:bottom-16 lg:bottom-20 z-20 hidden lg:flex flex-col items-center pointer-events-none select-none"
+        className="absolute right-4 sm:right-8 lg:right-12 xl:right-16 bottom-6 sm:bottom-10 lg:bottom-14 z-20 flex flex-col items-center pointer-events-none select-none origin-bottom-right scale-75 sm:scale-85 md:scale-95 lg:scale-100 max-w-[calc(100vw-2rem)]"
       >
-        {/* Top Vertical Connector Line */}
-        <div className="w-[1px] h-10 lg:h-12 bg-gradient-to-t from-[#D9B45F] to-transparent relative" />
+        {/* Subtle Top Architectural Connector Line */}
+        <div className="w-[1px] h-6 sm:h-8 lg:h-10 bg-gradient-to-t from-[#D4AF37]/90 via-[#D4AF37]/40 to-transparent relative" />
 
         {/* Plaque Plate Container */}
         <div className="relative flex items-center justify-center">
-          {/* Left Horizontal Connector Tick */}
-          <div className="absolute -left-2.5 top-1/2 -translate-y-1/2 w-2.5 h-[1px] bg-[#D9B45F]/80" />
+          {/* Left Architectural Marker Tick */}
+          <div className="absolute -left-2 top-1/2 -translate-y-1/2 w-2 h-[1px] bg-gradient-to-r from-[#19A878] to-[#D4AF37]" />
 
-          {/* Plaque Background & Chamfered Gold Frame */}
-          <div className="relative px-7 py-10 bg-[#070A09]/95 backdrop-blur-md shadow-[0_0_30px_rgba(7,10,9,1),0_0_15px_rgba(217,180,95,0.08)]">
-            {/* SVG Chamfered Border */}
+          {/* Architectural Obsidian & Emerald Plaque Plate */}
+          <div className="relative px-6 py-4 sm:px-7 sm:py-5 lg:px-8 lg:py-6 bg-[#080B0A]/95 backdrop-blur-md shadow-[0_16px_40px_rgba(0,0,0,0.9),0_0_20px_rgba(212,175,55,0.06),0_0_12px_rgba(6,60,45,0.25)]">
+            {/* SVG Chamfered & Asymmetric Architectural Border */}
             <svg
-              className="absolute inset-0 w-full h-full pointer-events-none"
+              className="absolute inset-0 w-full h-full pointer-events-none overflow-visible"
               preserveAspectRatio="none"
               viewBox="0 0 100 100"
             >
+              <defs>
+                <linearGradient id="siyara-gold-border" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#D4AF37" stopOpacity="0.95" />
+                  <stop offset="45%" stopColor="#E5C378" stopOpacity="0.8" />
+                  <stop offset="70%" stopColor="#063C2D" stopOpacity="0.9" />
+                  <stop offset="100%" stopColor="#D4AF37" stopOpacity="0.9" />
+                </linearGradient>
+                <radialGradient id="siyara-plaque-bg" cx="15%" cy="15%" r="85%">
+                  <stop offset="0%" stopColor="#063C2D" stopOpacity="0.22" />
+                  <stop offset="50%" stopColor="#080B0A" stopOpacity="0.96" />
+                  <stop offset="100%" stopColor="#080B0A" stopOpacity="0.98" />
+                </radialGradient>
+              </defs>
+
+              {/* Architectural Polygon: Clipped Upper/Lower Corners + Asymmetric Side Notch */}
               <polygon
-                points="3.5,0 96.5,0 100,16 100,84 96.5,100 3.5,100 0,84 0,16"
-                fill="#070A09"
-                fillOpacity="0.96"
-                stroke="#D9B45F"
+                points="6,0 94,0 100,8 100,54 97,58 100,62 100,92 94,100 6,100 0,92 0,62 3,58 0,54 0,8"
+                fill="url(#siyara-plaque-bg)"
+                stroke="url(#siyara-gold-border)"
                 strokeWidth="1.2"
-                strokeOpacity="0.8"
                 vectorEffect="non-scaling-stroke"
               />
+
+              {/* Asymmetric Restrained Architectural Details */}
+              <line x1="6" y1="0" x2="18" y2="0" stroke="#19A878" strokeWidth="1.5" vectorEffect="non-scaling-stroke" strokeOpacity="0.9" />
+              <line x1="100" y1="8" x2="100" y2="18" stroke="#D4AF37" strokeWidth="1.2" vectorEffect="non-scaling-stroke" strokeOpacity="0.8" />
+
+              {/* Micro Corner Framing Marks */}
+              <path d="M 3,12 L 3,3 L 12,3" fill="none" stroke="#E5C378" strokeWidth="0.8" strokeOpacity="0.5" vectorEffect="non-scaling-stroke" />
+              <path d="M 97,88 L 97,97 L 88,97" fill="none" stroke="#E5C378" strokeWidth="0.8" strokeOpacity="0.5" vectorEffect="non-scaling-stroke" />
             </svg>
 
-            {/* Plaque Typography */}
+            {/* Studio Annotation Typography */}
             <div className="relative z-10 flex flex-col items-center text-center gap-1">
-              <span className="font-sans text-xs sm:text-sm font-bold tracking-[0.22em] text-[#D9B45F] uppercase whitespace-nowrap">
+              <span className="font-sans text-[10px] sm:text-[11px] lg:text-xs font-bold tracking-[0.24em] text-[#D4AF37] uppercase whitespace-nowrap drop-shadow-[0_1px_4px_rgba(212,175,55,0.2)]">
                 BUILDING WHAT&apos;S NEXT
               </span>
-              <span className="font-sans text-sm sm:text-base font-light tracking-[0.04em] text-[#E5E0D4] whitespace-nowrap">
+              <span className="font-sans text-[11px] sm:text-xs font-light tracking-[0.05em] text-[#E5E0D4]/90 whitespace-nowrap">
                 Strategy. Technology. Growth.
               </span>
             </div>
           </div>
 
-          {/* Right Horizontal Connector Tick */}
-          <div className="absolute -right-2.5 top-1/2 -translate-y-1/2 w-2.5 h-[1px] bg-[#D9B45F]/80" />
+          {/* Right Architectural Marker Tick */}
+          <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-2 h-[1px] bg-gradient-to-l from-[#19A878] to-[#D4AF37]" />
         </div>
 
-        {/* Bottom Vertical Connector Line with Terminal Glow Dot */}
-        <div className="w-[1px] h-10 lg:h-12 bg-gradient-to-b from-[#D9B45F] to-[#D9B45F]/40 relative flex items-center justify-center">
-          <div className="w-1.5 h-1.5 rounded-full bg-[#D9B45F] shadow-[0_0_8px_#D9B45F] absolute bottom-0" />
+        {/* Bottom Vertical Gold Marker Line with Terminal Dot Structure */}
+        <div className="w-[1px] h-7 sm:h-9 lg:h-11 bg-gradient-to-b from-[#D4AF37] via-[#D4AF37]/60 to-[#19A878]/40 relative flex items-center justify-center">
+          <div className="w-2 h-2 rounded-full bg-[#080B0A] border border-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,0.7)] absolute bottom-0 flex items-center justify-center">
+            <div className="w-1 h-1 rounded-full bg-[#D4AF37]" />
+          </div>
         </div>
       </motion.div>
     </section>
