@@ -34,10 +34,10 @@ export const BUSINESS_CONFIG = {
     instagram: 'https://www.instagram.com/siyarainnovations/',
   },
   services: [
-    { name: 'Web Development', slug: 'web-development', href: '/services/web-development' },
-    { name: 'Search Engine Optimization', slug: 'seo', href: '/services/seo' },
-    { name: 'Social Media Marketing', slug: 'social-media', href: '/services/social-media' },
-    { name: 'Branding & Identity', slug: 'branding', href: '/services/branding' },
+    { name: 'Web Development', slug: 'web-development', href: '/services' },
+    { name: 'Search Engine Optimization', slug: 'seo', href: '/services' },
+    { name: 'Social Media Marketing', slug: 'social-media', href: '/services' },
+    { name: 'Branding & Identity', slug: 'branding', href: '/services' },
   ],
   niches: [
     { name: 'Healthcare & Clinics', slug: 'healthcare', href: '/industries/healthcare' },

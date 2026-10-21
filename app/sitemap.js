@@ -13,19 +13,6 @@ export default async function sitemap() {
     priority: route === '' ? 1.0 : (route === '/work' ? 0.9 : 0.8),
   }));
 
-  // Service sub-routes
-  const serviceRoutes = [
-    '/services/web-development',
-    '/services/seo',
-    '/services/social-media',
-    '/services/branding',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date().toISOString().split('T')[0],
-    changeFrequency: 'monthly',
-    priority: 0.85,
-  }));
-
   // Legal and Resource routes
   const legalRoutes = ['/faq', '/privacy', '/terms'].map((route) => ({
     url: `${baseUrl}${route}`,
@@ -56,5 +43,5 @@ export default async function sitemap() {
     priority: 0.6,
   }));
 
-  return [...routes, ...serviceRoutes, ...industryRoutes, ...legalRoutes, ...blogRoutes];
+  return [...routes, ...industryRoutes, ...legalRoutes, ...blogRoutes];
 }
