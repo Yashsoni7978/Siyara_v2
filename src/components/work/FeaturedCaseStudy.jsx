@@ -47,7 +47,7 @@ export default function FeaturedCaseStudy() {
 
           <div className="lg:col-span-4 flex flex-col justify-between h-full pt-2">
             <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed mb-6">
-              Shri Property - A complete digital architectural showcase for a premier real estate developer, establishing luxury brand authority across 5 flagship projects in 4 cities.
+              A complete digital architectural demonstration engineered for luxury real estate developers, establishing high brand authority across multi-project residential portfolios.
             </p>
 
             <div className="hidden lg:flex flex-col gap-2 border-l border-[#B9923F]/40 pl-4 text-[10px] font-sans tracking-[0.26em] text-[#0B5E49] uppercase font-bold">
@@ -73,15 +73,15 @@ export default function FeaturedCaseStudy() {
               className="space-y-6"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ECE7D8] border border-[#B9923F]/40 text-[10px] font-sans tracking-[0.2em] text-[#0B5E49] uppercase font-bold">
-                REAL ESTATE & LUXURY SPACES
+                REAL ESTATE ARCHITECTURAL DEMONSTRATION
               </div>
 
               <h3 className="font-serif text-3xl sm:text-4xl text-[#101613] leading-tight font-normal">
-                Shri Property
+                Luxury Real Estate Platform
               </h3>
 
               <p className="font-sans text-xs sm:text-sm text-[#101613]/80 font-light leading-relaxed">
-                Positioned as a luxury property developer showcase spanning 5 flagship developments across 4 cities, we engineered Shri Property’s digital web presence with interactive tour walkthroughs, high-intent lead funnel architecture, and Schema.org SEO structure.
+                Engineered as a comprehensive luxury property developer demonstration, this system models interactive tour walkthroughs, high-intent lead funnel architecture, and Schema.org SEO structure for competitive builders.
               </p>
 
               <div className="space-y-3 pt-2 border-t border-[#0B5E49]/15">
@@ -106,7 +106,7 @@ export default function FeaturedCaseStudy() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-sans font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-xl group"
                 >
-                  <span>LAUNCH LIVE SITE</span>
+                  <span>EXPLORE DEMONSTRATION</span>
                   <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>

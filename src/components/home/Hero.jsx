@@ -138,30 +138,33 @@ export default function Hero() {
 
             {/* Headline - single H1 with decorative visual split preserved */}
             <div className="mb-6">
-              <h1 className="font-serif leading-[1.0] tracking-tight">
+              <h1
+                aria-label="Web Design Company and Digital Marketing Agency in Jaipur — Siyara Innovations"
+                className="font-serif leading-[1.0] tracking-tight"
+              >
                 {/* Line 1: WE BUILD BRANDS - large */}
                 <motion.span
-                  initial="hidden"
+                  initial={false}
                   animate="visible"
                   variants={fadeUp(500)}
                   className="block text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-normal text-[#F3EFE3]"
                 >
-                  WE BUILD BRANDS
+                  WE BUILD BRANDS{' '}
                 </motion.span>
 
                 {/* Line 2: THAT - small, gold, spaced like a label */}
                 <motion.span
-                  initial="hidden"
+                  initial={false}
                   animate="visible"
                   variants={fadeUp(620)}
                   className="block font-sans text-sm sm:text-base lg:text-lg font-semibold tracking-[0.3em] text-[#D9B45F] uppercase my-2"
                 >
-                  THAT
+                  THAT{' '}
                 </motion.span>
 
                 {/* Line 3: DOMINATE. - massive gold */}
                 <motion.span
-                  initial="hidden"
+                  initial={false}
                   animate="visible"
                   variants={fadeUp(700)}
                   className="block text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-normal leading-[0.88] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"

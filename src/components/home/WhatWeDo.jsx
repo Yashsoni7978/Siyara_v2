@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Edit3, Code, Search, Megaphone, Sparkles, TrendingUp } from 'lucide-react';
+import Link from 'next/link';
 
 export default function WhatWeDo() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -138,55 +139,60 @@ export default function WhatWeDo() {
               const isHovered = hoveredIndex === index;
 
               return (
-                <motion.div
+                <Link
                   key={service.id}
-                  variants={itemVariants}
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                  className="flex flex-col items-center text-center group cursor-pointer"
+                  href="/services"
+                  className="block group"
                 >
-                  {/* Node Circle Container */}
-                  <div className="relative mb-6">
-                    {/* Glowing Halo on Hover */}
-                    <div
-                      className={`absolute -inset-3 rounded-full bg-[#18A982]/20 blur-md transition-opacity duration-300 ${
-                        isHovered ? 'opacity-100' : 'opacity-0'
-                      }`}
-                    />
+                  <motion.div
+                    variants={itemVariants}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                    className="flex flex-col items-center text-center cursor-pointer"
+                  >
+                    {/* Node Circle Container */}
+                    <div className="relative mb-6">
+                      {/* Glowing Halo on Hover */}
+                      <div
+                        className={`absolute -inset-3 rounded-full bg-[#18A982]/20 blur-md transition-opacity duration-300 ${
+                          isHovered ? 'opacity-100' : 'opacity-0'
+                        }`}
+                      />
 
-                    {/* Node Circular Icon Container */}
-                    <div
-                      className={`relative w-14 h-14 rounded-full flex items-center justify-center border transition-all duration-300 ${
-                        isHovered
-                          ? 'border-[#D9B45F] bg-[#071E18] text-[#D9B45F] scale-110 shadow-[0_0_20px_rgba(217,180,95,0.3)]'
-                          : 'border-[#D9B45F]/30 bg-[#070A09] text-[#D9B45F] group-hover:border-[#D9B45F]'
-                      }`}
-                    >
-                      <Icon className="w-5 h-5 stroke-[1.75] transition-transform duration-300 group-hover:scale-110" />
+                      {/* Node Circular Icon Container */}
+                      <div
+                        className={`relative w-14 h-14 rounded-full flex items-center justify-center border transition-all duration-300 ${
+                          isHovered
+                            ? 'border-[#D9B45F] bg-[#071E18] text-[#D9B45F] scale-110 shadow-[0_0_20px_rgba(217,180,95,0.3)]'
+                            : 'border-[#D9B45F]/30 bg-[#070A09] text-[#D9B45F] group-hover:border-[#D9B45F]'
+                        }`}
+                      >
+                        <Icon className="w-5 h-5 stroke-[1.75] transition-transform duration-300 group-hover:scale-110" />
+                      </div>
+
+                      {/* Subtle Node Indicator Dot */}
+                      <div
+                        className={`absolute -bottom-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full transition-colors duration-300 ${
+                          isHovered ? 'bg-[#D9B45F]' : 'bg-[#D9B45F]/30'
+                        }`}
+                      />
                     </div>
 
-                    {/* Subtle Node Indicator Dot */}
-                    <div
-                      className={`absolute -bottom-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full transition-colors duration-300 ${
-                        isHovered ? 'bg-[#D9B45F]' : 'bg-[#D9B45F]/30'
+                    {/* Service Title */}
+                    <h3
+                      className={`font-sans text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase mb-2 transition-all duration-300 h-10 ${
+                        isHovered ? 'text-[#D9B45F] -translate-y-0.5' : 'text-[#F3EFE3]'
                       }`}
-                    />
-                  </div>
+                    >
+                      {service.title}
+                    </h3>
 
-                  {/* Service Title */}
-                  <h3
-                    className={`font-sans text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase mb-2 transition-all duration-300 h-10 ${
-                      isHovered ? 'text-[#D9B45F] -translate-y-0.5' : 'text-[#F3EFE3]'
-                    }`}
-                  >
-                    {service.title}
-                  </h3>
-
-                  {/* Service Description */}
-                  <p className="font-sans text-[11px] text-[#9D9B91] font-light leading-relaxed max-w-[160px]">
-                    {service.subtitle}
-                  </p>
-                </motion.div>
+                    {/* Service Description */}
+                    <p className="font-sans text-[11px] text-[#9D9B91] font-light leading-relaxed max-w-[160px]">
+                      {service.subtitle}
+                    </p>
+                  </motion.div>
+                </Link>
               );
             })}
           </motion.div>
@@ -196,12 +202,12 @@ export default function WhatWeDo() {
         {/* See full system link */}
         <div className="mt-12 flex items-center gap-3">
           <span className="h-[1px] w-8 bg-[#D9B45F]/40" />
-          <a
+          <Link
             href="/services"
             className="font-sans text-xs font-semibold tracking-[0.18em] text-[#9D9B91] hover:text-[#D9B45F] transition-colors uppercase"
           >
             See the full system on the Services page
-          </a>
+          </Link>
         </div>
       </div>
     </section>

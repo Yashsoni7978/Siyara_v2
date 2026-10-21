@@ -43,12 +43,13 @@ export default function Results() {
     },
   ];
 
-  const confirmedProjects = [
-    'RISHABH JEWELLERS',
-    'BEYOND SPACES',
-    'DR. NEHA SHARMA',
-    'THE BREW CHAPTER',
-    'LUXE HABITAT',
+  const coreDeliverables = [
+    'CUSTOM WEB ARCHITECTURE',
+    'LOCAL & TECHNICAL SEO',
+    'EDITORIAL BRAND IDENTITY',
+    'HIGH-CONVERSION UI/UX',
+    'GEO SEARCH VISIBILITY',
+    'NEXT.JS WEB PERFORMANCE',
   ];
 
   return (
@@ -157,18 +158,18 @@ export default function Results() {
           className="pt-12 border-t border-[#101613]/10 flex flex-col items-center justify-center gap-8"
         >
           <div className="flex items-center gap-2 text-xs font-sans tracking-[0.2em] text-[#0B5E49] uppercase font-bold text-center">
-            <span>Featured Client Projects</span>
+            <span>Core Capabilities & Deliverables</span>
           </div>
 
           <div className="flex flex-wrap justify-center items-center gap-3 lg:gap-4 max-w-4xl mx-auto">
-            {confirmedProjects.map((brand) => (
+            {coreDeliverables.map((item) => (
               <div
-                key={brand}
+                key={item}
                 className="px-5 py-2.5 rounded-full border border-[#B9923F]/30 bg-[#ECE7D8] hover:border-[#0B5E49]/60 hover:bg-[#F3EFE3] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3 group cursor-default shadow-sm"
               >
                 <div className="w-1.5 h-1.5 rounded-full bg-[#B9923F]/60 group-hover:bg-[#0B5E49] transition-colors" />
                 <span className="font-sans text-xs sm:text-[13px] tracking-[0.15em] text-[#101613]/80 group-hover:text-[#101613] transition-colors uppercase font-semibold">
-                  {brand}
+                  {item}
                 </span>
               </div>
             ))}

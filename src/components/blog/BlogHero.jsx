@@ -70,7 +70,7 @@ export default function BlogHero() {
           className="mt-14 pt-8 border-t border-[#D4AF37]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-sans text-[#CFC9BB]/70"
         >
           <div className="flex items-center gap-4">
-            <span className="text-[#D4AF37] font-sans uppercase tracking-widest text-[10px]">PUB Â· VOL 04</span>
+            <span className="text-[#D4AF37] font-sans uppercase tracking-widest text-[10px]">PUB · VOL 04</span>
             <span className="w-1 h-1 rounded-full bg-[#19A878]" />
             <span className="tracking-wider">Thought Leadership & Intelligence</span>
           </div>

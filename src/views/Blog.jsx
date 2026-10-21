@@ -81,7 +81,7 @@ export default function Blog({ onNavigate }) {
   // Dynamically update document title based on view state
   useEffect(() => {
     if (selectedArticle) {
-      document.title = `${selectedArticle.title} â€” SIYARA INSIGHTS`;
+      document.title = `${selectedArticle.title} — SIYARA INSIGHTS`;
     } else {
       document.title = 'Siyara Insights | Digital Strategy, Technology, Marketing & Growth';
     }

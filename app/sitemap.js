@@ -6,11 +6,45 @@ export default async function sitemap() {
   const baseUrl = 'https://www.siyaradigitals.com';
 
   // Base routes
-  const routes = ['', '/about', '/services', '/work', '/our-work', '/contact', '/blog'].map((route) => ({
+  const routes = ['', '/about', '/services', '/work', '/contact', '/blog'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],
     changeFrequency: 'monthly',
-    priority: route === '' ? 1.0 : (route === '/work' || route === '/our-work' ? 0.9 : 0.8),
+    priority: route === '' ? 1.0 : (route === '/work' ? 0.9 : 0.8),
+  }));
+
+  // Service sub-routes
+  const serviceRoutes = [
+    '/services/web-development',
+    '/services/seo',
+    '/services/social-media',
+    '/services/branding',
+  ].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.85,
+  }));
+
+  // Legal and Resource routes
+  const legalRoutes = ['/faq', '/privacy', '/terms'].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.5,
+  }));
+
+  // Industry vertical routes
+  const industryRoutes = [
+    '/industries/healthcare',
+    '/industries/real-estate',
+    '/industries/interior-design',
+    '/industries/event-management',
+  ].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.85,
   }));
 
   // Dynamic blog routes
@@ -22,5 +56,5 @@ export default async function sitemap() {
     priority: 0.6,
   }));
 
-  return [...routes, ...blogRoutes];
+  return [...routes, ...serviceRoutes, ...industryRoutes, ...legalRoutes, ...blogRoutes];
 }

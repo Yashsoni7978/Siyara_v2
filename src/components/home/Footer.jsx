@@ -1,33 +1,37 @@
 import React from 'react';
-import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react';
+import { ArrowUpRight, Mail, MapPin, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
+import { siteConfig } from '@/data/siteConfig';
 
 export default function Footer() {
   const servicesLinks = [
     { name: 'Web Design & Development', href: '/services' },
     { name: 'Branding & Identity', href: '/services' },
     { name: 'SEO & GEO Optimization', href: '/services' },
-    { name: 'Digital Marketing', href: '/services' },
-    { name: 'AI & Automation', href: '/services' },
-    { name: 'Growth Systems', href: '/services' },
+    { name: 'Social Media Marketing', href: '/services' },
+    { name: 'Digital Growth Systems', href: '/services' },
+  ];
+
+  const industryLinks = [
+    { name: 'Doctors & Clinics', href: '/industries/healthcare' },
+    { name: 'Real Estate Developers', href: '/industries/real-estate' },
+    { name: 'Interior Designers', href: '/industries/interior-design' },
+    { name: 'Event Management', href: '/industries/event-management' },
   ];
 
   const companyLinks = [
     { name: 'About Siyara', href: '/about' },
     { name: 'Why Siyara', href: '/about' },
     { name: 'Our Work', href: '/work' },
-    { name: 'Our Process', href: '/#process' },
     { name: 'Blog & Insights', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact Studio', href: '/contact' },
   ];
 
   const resourceLinks = [
-    { name: 'Case Studies', href: '/work#featured-case-study' },
-    { name: 'Studio Insights', href: '/blog' },
-    { name: 'FAQ', href: '/#contact' },
-    // TODO: replace with real /privacy and /terms pages - currently dead links
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms of Service', href: '#' },
+    { name: 'Website Cost in India', href: '/blog/website-development-cost-in-india-business-guide' },
+    { name: 'Local SEO Guide Jaipur', href: '/blog/local-seo-guide-jaipur-businesses' },
+    { name: 'High-Performance Websites', href: '/blog/what-makes-a-high-performing-website' },
+    { name: 'Choosing an Agency', href: '/blog/how-to-choose-a-web-design-agency-in-jaipur' },
   ];
 
   return (
@@ -64,35 +68,56 @@ export default function Footer() {
                 Start a New Project
               </div>
               <a
-                href="mailto:info@siyaradigital.com"
+                href={`mailto:${siteConfig.email}`}
                 className="font-sans text-xs font-semibold text-[#F3EFE3] hover:text-[#D9B45F] transition-colors flex items-center gap-2"
               >
                 <Mail className="w-3.5 h-3.5 text-[#D9B45F]" />
-              {/* TODO: confirm correct domain - currently info@siyaradigital.com, site is siyaradigitals.com (missing "s"). Fix once correct address is confirmed. */}
-                <span>info@siyaradigital.com</span>
+                <span>{siteConfig.email}</span>
                 <ArrowUpRight className="w-3 h-3 text-[#D9B45F] ml-auto" />
               </a>
               <a
-                href="tel:9587269209"
+                href={siteConfig.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat on WhatsApp"
                 className="font-sans text-xs font-semibold text-[#F3EFE3] hover:text-[#D9B45F] transition-colors flex items-center gap-2"
               >
-                <Phone className="w-3.5 h-3.5 text-[#D9B45F]" />
-                <span>9587269209</span>
+                <MessageCircle className="w-3.5 h-3.5 text-[#D9B45F]" />
+                <span>WhatsApp Us</span>
                 <ArrowUpRight className="w-3 h-3 text-[#D9B45F] ml-auto" />
               </a>
             </div>
           </div>
 
           {/* Navigation Columns (Right 8 Cols) */}
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-8">
             
-            {/* SERVICES */}
+            {/* CAPABILITIES */}
             <div>
               <h3 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
                 CAPABILITIES
               </h3>
               <ul className="flex flex-col gap-3">
                 {servicesLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="font-sans text-xs text-[#9D9B91] hover:text-[#F3EFE3] hover:translate-x-0.5 transition-all duration-200 inline-block"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* INDUSTRIES */}
+            <div>
+              <h3 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
+                INDUSTRIES
+              </h3>
+              <ul className="flex flex-col gap-3">
+                {industryLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -124,12 +149,12 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* RESOURCES & CONTACT */}
+            {/* GUIDES & CONTACT */}
             <div>
               <h3 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
                 RESOURCES
               </h3>
-              <ul className="flex flex-col gap-3 mb-8">
+              <ul className="flex flex-col gap-3 mb-6">
                 {resourceLinks.map((link) => (
                   <li key={link.name}>
                     <Link
@@ -142,16 +167,23 @@ export default function Footer() {
                 ))}
               </ul>
 
-              <h3 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-3">
-                LOCATION & CONTACT
+              <h3 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-2">
+                LOCATION
               </h3>
               <div className="flex items-center gap-2 text-xs font-sans text-[#9D9B91] mb-2">
                 <MapPin className="w-3.5 h-3.5 text-[#D9B45F]" />
                 <span>Jaipur, Rajasthan · India</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-sans text-[#9D9B91]">
-                <Phone className="w-3.5 h-3.5 text-[#D9B45F]" />
-                <a href="tel:9587269209" className="hover:text-[#D9B45F] transition-colors">9587269209</a>
+                <MessageCircle className="w-3.5 h-3.5 text-[#D9B45F]" />
+                <a
+                  href={siteConfig.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#D9B45F] transition-colors"
+                >
+                  WhatsApp: +91 95872 69209
+                </a>
               </div>
             </div>
 
@@ -167,9 +199,9 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-6 text-[11px] tracking-wider text-[#9D9B91]">
-            {/* TODO: replace with real /privacy and /terms pages - currently dead links */}
-            <Link href="#" className="hover:text-[#D9B45F] transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-[#D9B45F] transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-[#D9B45F] transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#D9B45F] transition-colors">Terms of Service</Link>
+            <Link href="/faq" className="hover:text-[#D9B45F] transition-colors">FAQ</Link>
             <Link href="/sitemap.xml" className="hover:text-[#D9B45F] transition-colors">Sitemap</Link>
           </div>
         </div>

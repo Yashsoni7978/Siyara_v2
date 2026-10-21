@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { Mail, MessageCircle, MapPin, Globe } from 'lucide-react';
+import { siteConfig } from '@/data/siteConfig';
 
 export default function ContactDetails() {
   const easeCustom = [0.16, 1, 0.3, 1];
@@ -12,24 +13,25 @@ export default function ContactDetails() {
       id: '01',
       title: 'NEW PROJECTS',
       description: 'For brands looking to build, redesign or scale connected digital architecture.',
-      contactText: 'info@siyaradigital.com',
-      href: 'mailto:info@siyaradigital.com',
+      contactText: siteConfig.email,
+      href: `mailto:${siteConfig.email}`,
       icon: Mail,
     },
     {
       id: '02',
-      title: 'DIRECT PHONE',
-      description: 'Speak directly with our studio team for immediate inquiries and strategic scoping.',
-      contactText: '9587269209',
-      href: 'tel:9587269209',
-      icon: Phone,
+      title: 'WHATSAPP DIRECT',
+      description: 'Connect directly with our team on WhatsApp for prompt project scoping and questions.',
+      contactText: '+91 95872 69209',
+      href: siteConfig.whatsappUrl,
+      icon: MessageCircle,
+      isExternal: true,
     },
     {
       id: '03',
       title: 'GENERAL ENQUIRIES',
       description: 'For questions, introductions, strategic partnerships, and collaborations.',
-      contactText: 'info@siyaradigital.com',
-      href: 'mailto:info@siyaradigital.com',
+      contactText: siteConfig.email,
+      href: `mailto:${siteConfig.email}`,
       icon: Mail,
     },
   ];
@@ -112,6 +114,7 @@ export default function ContactDetails() {
 
               <a
                 href={path.href}
+                {...(path.isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 className="inline-flex items-center gap-2 font-sans text-xs text-[#D9B45F] hover:text-[#E8C979] transition-colors pt-4 border-t border-[#D9B45F]/15"
               >
                 <path.icon className="w-3.5 h-3.5" />
@@ -141,13 +144,18 @@ export default function ContactDetails() {
           </div>
 
           <div className="flex items-start gap-3">
-            <Phone className="w-4 h-4 text-[#D9B45F] shrink-0 mt-0.5" />
+            <MessageCircle className="w-4 h-4 text-[#D9B45F] shrink-0 mt-0.5" />
             <div>
               <span className="font-sans text-[10px] tracking-widest text-[#D9B45F] uppercase block mb-1">
-                PHONE
+                WHATSAPP
               </span>
-              <a href="tel:9587269209" className="text-[#F3EFE3] font-light hover:text-[#D9B45F] transition-colors">
-                9587269209
+              <a
+                href={siteConfig.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#F3EFE3] font-light hover:text-[#D9B45F] transition-colors"
+              >
+                +91 95872 69209
               </a>
             </div>
           </div>

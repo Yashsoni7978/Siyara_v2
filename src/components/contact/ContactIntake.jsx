@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, CheckCircle2, Loader2 } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, Loader2, MessageCircle } from 'lucide-react';
 
 export default function ContactIntake() {
   const easeCustom = [0.16, 1, 0.3, 1];
@@ -15,6 +15,7 @@ export default function ContactIntake() {
     details: '',
     budget: '',
     timeline: '',
+    b_website: '',
   });
 
   const [status, setStatus] = useState({
@@ -33,6 +34,15 @@ export default function ContactIntake() {
     'Analytics',
     'Something Else',
   ];
+
+  const getWhatsAppFallbackUrl = () => {
+    const intro = `Hello Siyara Innovations, my name is ${formData.name || 'a visitor'}`;
+    const companyInfo = formData.company ? ` from ${formData.company}` : '';
+    const capInfo = formData.selectedCapability ? `\n\nService needed: ${formData.selectedCapability}` : '';
+    const detailsInfo = formData.details ? `\nProject brief: ${formData.details}` : '';
+    const message = `${intro}${companyInfo}.${capInfo}${detailsInfo}`;
+    return `https://wa.me/919587269209?text=${encodeURIComponent(message)}`;
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -158,10 +168,36 @@ export default function ContactIntake() {
         ) : (
           <form onSubmit={handleSubmit} className="space-y-12 max-w-4xl">
             {status.error && (
-              <div className="p-4 border-l-2 border-red-600 bg-red-50 text-xs text-red-800 font-sans">
-                {status.error}
+              <div className="p-5 border-l-4 border-amber-600 bg-amber-50 text-amber-950 font-sans space-y-3">
+                <p className="text-sm font-medium">{status.error}</p>
+                <div className="pt-1">
+                  <a
+                    href={getWhatsAppFallbackUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0B5E49] hover:bg-[#071E18] text-[#F3EFE3] text-xs font-bold tracking-[0.12em] uppercase rounded-full transition-colors shadow-sm"
+                  >
+                    <MessageCircle className="w-4 h-4 text-[#D9B45F]" />
+                    <span>Open &amp; Send Brief on WhatsApp Instead</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
               </div>
             )}
+
+            {/* Anti-spam Honeypot (Hidden from human visitors) */}
+            <div className="hidden" aria-hidden="true" style={{ display: 'none' }}>
+              <label htmlFor="b_website">Leave this field blank</label>
+              <input
+                type="text"
+                id="b_website"
+                name="b_website"
+                tabIndex={-1}
+                autoComplete="off"
+                value={formData.b_website || ''}
+                onChange={handleChange}
+              />
+            </div>
 
             {/* Field 1: Name */}
             <div className="group">

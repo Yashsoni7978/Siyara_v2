@@ -17,43 +17,43 @@ export default function About() {
 
   return (
     <div className="bg-[#070A09] text-[#F3EFE3] selection:bg-[#071E18] selection:text-[#D9B45F]">
-      {/* 01 â€” HERO / WHY SIYARA EXISTS (DARK) */}
+      {/* 01 — HERO / WHY SIYARA EXISTS (DARK) */}
       <AboutHero />
 
-      {/* CONNECTOR 01: DARK â†’ IVORY */}
+      {/* CONNECTOR 01: DARK → IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 02 â€” THE ORIGIN (IVORY) */}
+      {/* 02 — THE ORIGIN (IVORY) */}
       <OurStory />
 
-      {/* CONNECTOR 02: IVORY â†’ DARK */}
+      {/* CONNECTOR 02: IVORY → DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 03 â€” THE BELIEF / PHILOSOPHY (DARK) */}
+      {/* 03 — THE BELIEF / PHILOSOPHY (DARK) */}
       <Beliefs />
 
-      {/* CONNECTOR 03: DARK â†’ IVORY */}
+      {/* CONNECTOR 03: DARK → IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 04 â€” PROOF & METRICS (IVORY) */}
+      {/* 04 — PROOF & METRICS (IVORY) */}
       <Numbers />
 
-      {/* CONNECTOR 04: IVORY â†’ DARK */}
+      {/* CONNECTOR 04: IVORY → DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 05 â€” METHODOLOGY (DARK) */}
+      {/* 05 — METHODOLOGY (DARK) */}
       <Approach />
 
       {/* CONNECTOR 05: DARK -> IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 06 â€” ROOTED IN JAIPUR (IVORY) */}
+      {/* 06 — ROOTED IN JAIPUR (IVORY) */}
       <Studio />
 
       {/* CONNECTOR 06: IVORY -> DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 07 â€” FINAL PHILOSOPHY & CTA (DARK) */}
+      {/* 07 — FINAL PHILOSOPHY & CTA (DARK) */}
       <AboutCTA />
     </div>
   );

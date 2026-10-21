@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Phone } from 'lucide-react';
+import { ArrowUpRight, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
+import { siteConfig } from '@/data/siteConfig';
 
 export default function WorkCTA() {
   return (
@@ -64,11 +65,14 @@ export default function WorkCTA() {
             </Link>
 
             <a
-              href="tel:9587269209"
+              href={siteConfig.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#071E18] hover:bg-[#0C6B52] border border-[#D9B45F]/30 text-[#F3EFE3] text-xs font-sans font-semibold tracking-[0.2em] uppercase transition-all duration-300"
             >
-              <Phone className="w-3.5 h-3.5 text-[#D9B45F]" />
-              <span>TALK TO OUR TEAM</span>
+              <MessageCircle className="w-3.5 h-3.5 text-[#D9B45F]" />
+              <span>WHATSAPP US</span>
             </a>
           </motion.div>
 

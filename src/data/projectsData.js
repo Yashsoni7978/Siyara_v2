@@ -475,7 +475,7 @@ export const projectsData = [
     description: 'Pastel floral wedding and event design studio, featuring services, destination sanctuaries, and a full case-study portfolio.',
     services: ['EVENT PORTFOLIO', 'DESTINATION WEDDINGS', 'DESIGN STUDIO'],
     status: 'LIVE',
-    link: 'https://ember-ivory-events-7ond.vercel.app/',
+    link: 'https://ember-ivory-events.vercel.app/',
     image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80',
     brandLogo: 'BLOOM STUDIO',
     heroHeadline: 'PASTEL FLORAL WEDDING DESIGN',
@@ -1231,24 +1231,7 @@ export const projectsData = [
     gridSize: 'medium',
     isFounder: false
   },
-  {
-    id: '65',
-    slug: 'the-brew-chapter',
-    name: 'The Brew Chapter',
-    title: 'THE BREW CHAPTER',
-    industry: 'Food & Beverage',
-    projectType: 'Specialty Coffee & Roastery',
-    tagline: 'Artisanal Coffee Roastery & Cafe',
-    description: 'Reserved portfolio concept for specialty coffee bars, bean subscriptions, and cafe menus.',
-    services: ['CAFE BRANDING', 'COFFEE ECOM'],
-    status: 'COMING_SOON',
-    link: null,
-    image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80',
-    brandLogo: 'BREW CHAPTER',
-    featured: false,
-    gridSize: 'medium',
-    isFounder: false
-  },
+
   {
     id: '66',
     slug: 'saanj-fb',
