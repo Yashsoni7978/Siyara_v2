@@ -76,13 +76,13 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
       <div className="absolute top-96 right-10 w-[400px] h-[400px] bg-[#D4AF37]/5 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Main Container */}
-      <div className="pt-28 md:pt-36 pb-20 max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="pt-24 sm:pt-28 md:pt-36 pb-16 sm:pb-20 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Back Navigation & Breadcrumb */}
-        <div className="mb-8 flex items-center justify-between">
+        <div className="mb-6 sm:mb-8 flex items-center justify-between">
           <button
             onClick={onBack}
-            className="group inline-flex items-center gap-2 px-4 py-2 border border-[#D4AF37]/30 bg-[#063C2D]/20 text-[#CFC9BB] hover:text-[#F3EFE4] hover:border-[#D4AF37] font-sans text-xs uppercase tracking-widest transition-all duration-300"
+            className="group inline-flex items-center gap-2 px-3.5 py-2 border border-[#D4AF37]/30 bg-[#063C2D]/20 text-[#CFC9BB] hover:text-[#F3EFE4] hover:border-[#D4AF37] font-sans text-xs uppercase tracking-widest transition-all duration-300 min-h-[40px]"
           >
             <ArrowLeft className="w-4 h-4 text-[#D4AF37] group-hover:-translate-x-1 transition-transform" />
             <span>Back to Insights</span>
@@ -95,9 +95,9 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
         </div>
 
         {/* Article Header Lockup */}
-        <header className="max-w-4xl mb-12">
+        <header className="max-w-4xl mb-8 sm:mb-12">
           {/* Metadata Badges */}
-          <div className="flex flex-wrap items-center gap-4 text-xs font-sans text-[#CFC9BB]/70 mb-6">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-sans text-[#CFC9BB]/70 mb-4 sm:mb-6">
             <span className="px-2.5 py-1 border border-[#D4AF37]/40 bg-[#080B0A] text-[#D4AF37] uppercase tracking-widest text-[10px]">
               {article.category}
             </span>
@@ -119,7 +119,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
           </div>
 
           {/* Article Title */}
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-[#F3EFE4] leading-[1.12] tracking-tight mb-8">
+          <h1 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-light text-[#F3EFE4] leading-[1.18] sm:leading-[1.12] tracking-tight mb-6 sm:mb-8 break-words">
             {article.title}
           </h1>
 
@@ -199,39 +199,39 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
 
         {/* Executive Summary Callout Box */}
         {article.executiveSummary && (
-          <div className="max-w-4xl mx-auto mb-14 border border-[#D4AF37]/35 bg-[#063C2D]/20 p-6 sm:p-8 relative backdrop-blur-md">
+          <div className="max-w-4xl mx-auto mb-10 sm:mb-14 border border-[#D4AF37]/35 bg-[#063C2D]/20 p-5 sm:p-8 relative backdrop-blur-md rounded-xl sm:rounded-none">
             <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#D4AF37]" />
             <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#D4AF37]" />
             
-            <div className="flex items-center gap-2 mb-3">
+            <div className="flex items-center gap-2 mb-2 sm:mb-3">
               <Sparkles className="w-4 h-4 text-[#D4AF37]" />
               <h3 className="font-sans text-xs font-semibold tracking-widest text-[#D4AF37] uppercase">
                 Executive Summary
               </h3>
             </div>
-            <p className="font-sans text-sm sm:text-base text-[#F3EFE4]/90 font-normal leading-relaxed ">
+            <p className="font-sans text-sm sm:text-base text-[#F3EFE4]/90 font-normal leading-relaxed">
               "{article.executiveSummary}"
             </p>
           </div>
         )}
 
         {/* Article Body & Sidebar Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 max-w-5xl mx-auto">
           
           {/* Sticky Left Sidebar (Table of Contents & Key Takeaways) */}
-          <aside className="lg:col-span-4 space-y-8">
+          <aside className="lg:col-span-4 space-y-6 sm:space-y-8">
             {/* Table of Contents */}
             {article.sections && article.sections.length > 0 && (
-              <div className="sticky top-28 p-6 border border-[#D4AF37]/20 bg-[#063C2D]/15 backdrop-blur-sm">
-                <h4 className="font-sans text-xs font-semibold uppercase tracking-widest text-[#D4AF37] mb-4 pb-2 border-b border-[#D4AF37]/15">
+              <div className="p-4 sm:p-6 border border-[#D4AF37]/20 bg-[#063C2D]/15 backdrop-blur-sm rounded-xl sm:rounded-none">
+                <h4 className="font-sans text-xs font-semibold uppercase tracking-widest text-[#D4AF37] mb-3 sm:mb-4 pb-2 border-b border-[#D4AF37]/15">
                   Table of Contents
                 </h4>
-                <nav className="space-y-3 font-sans text-xs">
+                <nav className="space-y-2.5 sm:space-y-3 font-sans text-xs">
                   {article.sections.map((sec, idx) => (
                     <a 
                       key={sec.id || idx}
                       href={`#${sec.id || `sec-${idx}`}`}
-                      className="block text-[#CFC9BB]/70 hover:text-[#D4AF37] transition-colors leading-snug"
+                      className="block text-[#CFC9BB]/70 hover:text-[#D4AF37] transition-colors leading-snug py-0.5"
                     >
                       {sec.title}
                     </a>
@@ -242,12 +242,12 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
 
             {/* Key Takeaways Card */}
             {article.keyTakeaways && article.keyTakeaways.length > 0 && (
-              <div className="p-6 border border-[#19A878]/30 bg-[#080B0A] relative">
-                <h4 className="font-sans text-xs font-semibold uppercase tracking-widest text-[#19A878] mb-4 pb-2 border-b border-[#19A878]/20 flex items-center gap-2">
+              <div className="p-4 sm:p-6 border border-[#19A878]/30 bg-[#080B0A] relative rounded-xl sm:rounded-none">
+                <h4 className="font-sans text-xs font-semibold uppercase tracking-widest text-[#19A878] mb-3 sm:mb-4 pb-2 border-b border-[#19A878]/20 flex items-center gap-2">
                   <Bookmark className="w-3.5 h-3.5 text-[#19A878]" />
                   Key Takeaways
                 </h4>
-                <ul className="space-y-3 font-sans text-xs text-[#CFC9BB]/85 leading-relaxed">
+                <ul className="space-y-2.5 sm:space-y-3 font-sans text-xs text-[#CFC9BB]/85 leading-relaxed">
                   {article.keyTakeaways.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <span className="text-[#D4AF37] font-bold">•</span>
@@ -323,6 +323,36 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
                   </span>
                 ))}
               </div>
+            )}
+
+            {/* ============================================ */}
+            {/* Visible FAQ Section — Powers FAQPage Schema */}
+            {/* ============================================ */}
+            {article.faqs && article.faqs.length > 0 && (
+              <section className="mt-14 pt-10 border-t border-[#D4AF37]/20" aria-label="Frequently Asked Questions">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-6 h-[2px] bg-[#D4AF37]" />
+                  <h2 className="font-sans text-xs font-semibold uppercase tracking-widest text-[#D4AF37]">
+                    Frequently Asked Questions
+                  </h2>
+                </div>
+
+                <div className="space-y-4">
+                  {article.faqs.map((faq, idx) => (
+                    <div
+                      key={idx}
+                      className="border border-[#D4AF37]/20 bg-[#063C2D]/10 p-5 hover:border-[#D4AF37]/40 transition-colors duration-200"
+                    >
+                      <h3 className="font-sans text-sm font-semibold text-[#F3EFE4] mb-3 leading-snug">
+                        {faq.q}
+                      </h3>
+                      <p className="font-sans text-xs sm:text-sm text-[#CFC9BB]/85 leading-relaxed font-light">
+                        {faq.a}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </section>
             )}
           </div>
         </div>

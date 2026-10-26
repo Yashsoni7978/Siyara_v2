@@ -10,15 +10,15 @@ export default function Philosophy() {
       {/* Background Atmosphere */}
       <div className="absolute inset-0 bg-emerald-atmosphere opacity-80 pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.6 }}
-          className="flex items-center gap-3 mb-12"
+          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          transition={{ duration: 0.5 }}
+          className="flex items-center gap-3 mb-8 sm:mb-12"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             03
@@ -30,27 +30,27 @@ export default function Philosophy() {
         </motion.div>
 
         {/* Section Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
           {/* Left Column: Manifesto Headline & Signature */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6 flex flex-col justify-center"
           >
-            <h2 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight mb-8 uppercase">
+            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[0.98] tracking-tight mb-6 sm:mb-8 uppercase break-words">
               ELEVATING BRANDS <br />
               THROUGH <br />
               <span className="text-[#D9B45F] font-normal">DIGITAL ARCHITECTURE.</span>
             </h2>
 
-            <div className="max-w-md mb-8">
-              <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed mb-1">
+            <div className="max-w-md mb-6 sm:mb-8">
+              <p className="font-sans text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light leading-relaxed mb-1">
                 Beautiful design is where it starts.
               </p>
-              <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
+              <p className="font-sans text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light leading-relaxed">
                 Enduring architecture is what it becomes.
               </p>
             </div>
@@ -63,10 +63,10 @@ export default function Philosophy() {
 
           {/* Right Column: High-End Architectural Visual with Curved Organic Mask */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 30 }}
+            initial={{ opacity: 0, scale: 0.98, y: 20 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+            transition={{ duration: 0.6, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6 relative"
           >
             <div className="relative mx-auto max-w-lg lg:max-w-none">

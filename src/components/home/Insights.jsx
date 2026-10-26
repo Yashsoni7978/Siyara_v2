@@ -17,10 +17,10 @@ export default function Insights() {
       <div className="absolute inset-0 ivory-texture pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-70 pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="flex items-center gap-3 mb-10">
+        <div className="flex items-center gap-3 mb-6 sm:mb-10">
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
             10
           </span>
@@ -31,9 +31,9 @@ export default function Insights() {
         </div>
 
         {/* Editorial Headline */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-10 sm:mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-end mb-8 sm:mb-12">
           <div className="lg:col-span-8">
-            <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#101613] font-normal leading-[0.98] tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[1.05] sm:leading-[0.98] tracking-tight break-words">
               THINKING BEYOND <br />
               THE <span className="text-[#0B5E49] font-normal">WEBSITE.</span>
             </h2>
@@ -43,8 +43,8 @@ export default function Insights() {
               Strategic insights on digital growth, brand positioning, search intelligence, and conversion engineering.
             </p>
             <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] text-[#0B5E49] hover:text-[#B9923F] transition-colors uppercase"
+              href="/insights"
+              className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] text-[#0B5E49] hover:text-[#B9923F] transition-colors uppercase min-h-[44px]"
             >
               <span>VIEW ALL INSIGHTS</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -53,12 +53,12 @@ export default function Insights() {
         </div>
 
         {/* Editorial Article Layout (1 Dominant Lead + 2 Supporting Articles) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-stretch">
           
           {/* Dominant Lead Article (7 cols) */}
           <Link
-            href={`/blog/${leadArticle.slug}`}
-            className="lg:col-span-7 group flex flex-col justify-between p-8 sm:p-12 border border-[#B9923F]/30 bg-[#ECE7D8] hover:border-[#0B5E49] transition-all duration-500 relative overflow-hidden shadow-xl"
+            href={`/insights/${leadArticle.slug}`}
+            className="lg:col-span-7 group flex flex-col justify-between p-5 sm:p-8 lg:p-12 border border-[#B9923F]/30 bg-[#ECE7D8] hover:border-[#0B5E49] transition-all duration-500 relative overflow-hidden shadow-xl"
           >
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-4">
@@ -71,16 +71,16 @@ export default function Insights() {
                 </span>
               </div>
 
-              <h3 className="font-serif text-2xl sm:text-4xl text-[#101613] font-normal leading-tight mb-4 group-hover:text-[#0B5E49] transition-colors">
+              <h3 className="font-serif text-xl sm:text-3xl lg:text-4xl text-[#101613] font-normal leading-snug sm:leading-tight mb-3 sm:mb-4 group-hover:text-[#0B5E49] transition-colors break-words">
                 {leadArticle.title}
               </h3>
 
-              <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-xl mb-8">
+              <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-xl mb-6 sm:mb-8">
                 {leadArticle.excerpt}
               </p>
             </div>
 
-            <div className="relative h-64 sm:h-72 my-6 overflow-hidden border border-[#B9923F]/20">
+            <div className="relative h-48 sm:h-64 lg:h-72 my-4 sm:my-6 overflow-hidden border border-[#B9923F]/20">
               <Image
                 src={leadArticle.image}
                 alt={leadArticle.title}
@@ -91,8 +91,8 @@ export default function Insights() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#ECE7D8] via-transparent to-transparent" />
             </div>
 
-            <div className="pt-6 border-t border-[#B9923F]/20 flex items-center justify-between relative z-10">
-              <span className="text-xs font-sans font-semibold tracking-[0.18em] text-[#101613] group-hover:text-[#0B5E49] transition-colors uppercase">
+            <div className="pt-4 sm:pt-6 border-t border-[#B9923F]/20 flex items-center justify-between relative z-10 min-h-[44px]">
+              <span className="text-xs font-sans font-semibold tracking-[0.16em] sm:tracking-[0.18em] text-[#101613] group-hover:text-[#0B5E49] transition-colors uppercase">
                 READ FEATURED INSIGHT
               </span>
               <ArrowUpRight className="w-4 h-4 text-[#0B5E49] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -100,12 +100,12 @@ export default function Insights() {
           </Link>
 
           {/* Supporting Articles (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col gap-8 justify-between">
+          <div className="lg:col-span-5 flex flex-col gap-6 sm:gap-8 justify-between">
             {secondaryArticles.map((article) => (
               <Link
                 key={article.id}
-                href={`/blog/${article.slug}`}
-                className="group flex flex-col justify-between p-7 border border-[#B9923F]/30 bg-[#ECE7D8] hover:border-[#0B5E49] transition-all duration-500 flex-1 shadow-lg"
+                href={`/insights/${article.slug}`}
+                className="group flex flex-col justify-between p-4 sm:p-6 lg:p-7 border border-[#B9923F]/30 bg-[#ECE7D8] hover:border-[#0B5E49] transition-all duration-500 flex-1 shadow-lg"
               >
                 <div>
                   <div className="relative h-36 mb-5 overflow-hidden border border-[#B9923F]/20">

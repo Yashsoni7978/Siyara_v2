@@ -68,7 +68,7 @@ export default function IndustryIndex({ selectedIndustry, onSelectIndustry }) {
       <button
         key={cat.id}
         onClick={() => onSelectIndustry(cat.id)}
-        className={`flex-shrink-0 flex items-center gap-3 sm:gap-3.5 px-4 sm:px-5 py-3 sm:py-3.5 border transition-all duration-300 relative text-left group ${
+        className={`flex-shrink-0 min-h-[44px] flex items-center gap-3 sm:gap-3.5 px-4 sm:px-5 py-3 sm:py-3.5 border transition-all duration-300 relative text-left group rounded-sm ${
           isSelected
             ? 'bg-[#101613] text-[#F3EFE3] border-[#101613] shadow-lg scale-[1.02]'
             : 'bg-[#ECE7D8]/70 hover:bg-[#ECE7D8] text-[#101613]/80 border-[#101613]/10 hover:border-[#0B5E49]/30'
@@ -117,15 +117,15 @@ export default function IndustryIndex({ selectedIndustry, onSelectIndustry }) {
   };
 
   return (
-    <section id="explore-industry" className="relative py-12 sm:py-16 bg-[#F3EFE3] text-[#101613] border-b border-[#0B5E49]/10">
-      <div className="max-w-[1500px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+    <section id="explore-industry" className="relative py-10 sm:py-16 bg-[#F3EFE3] text-[#101613] border-b border-[#0B5E49]/10">
+      <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Header Row */}
         <div className="flex items-center justify-between mb-6 sm:mb-8">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
             transition={{ duration: 0.5 }}
             className="flex items-center gap-3"
           >

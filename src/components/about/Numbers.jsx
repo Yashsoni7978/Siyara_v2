@@ -37,15 +37,15 @@ export default function Numbers() {
       <div className="absolute inset-0 ivory-texture pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-80 pointer-events-none" />
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.6, ease: easeCustom }}
-          className="flex items-center gap-3 mb-16"
+          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          transition={{ duration: 0.5, ease: easeCustom }}
+          className="flex items-center gap-3 mb-10 sm:mb-16"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
             04
@@ -57,15 +57,15 @@ export default function Numbers() {
         </motion.div>
 
         {/* 4 Large Editorial Numbers Grid with Thin Dividers */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-0 border-t border-[#B9923F]/30 pt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 border-t border-[#B9923F]/30 pt-8 sm:pt-12">
           {stats.map((stat, idx) => (
             <motion.div
               key={stat.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.8, delay: 0.1 * idx, ease: easeCustom }}
-              className={`flex flex-col justify-between lg:px-8 relative ${
+              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              transition={{ duration: 0.5, delay: 0.04 * idx, ease: easeCustom }}
+              className={`flex flex-col justify-between p-5 sm:p-6 lg:p-0 lg:px-8 rounded-xl lg:rounded-none bg-[#ECE7D8]/60 lg:bg-transparent border border-[#0B5E49]/10 lg:border-none relative ${
                 idx !== 0 ? 'lg:border-l lg:border-[#B9923F]/30' : ''
               }`}
             >

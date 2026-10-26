@@ -22,6 +22,7 @@ This document details verified code evidence, architectural root causes, and zer
 
 ### 2.1 Code Evidence: The Serverless Route
 **File:** `app/api/contact/route.js` (Lines 1–56)
+
 ```javascript
 1: import { NextResponse } from 'next/server';
 2: 

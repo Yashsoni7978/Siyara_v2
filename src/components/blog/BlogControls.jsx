@@ -13,11 +13,11 @@ export default function BlogControls({
 }) {
   return (
     <section className="relative pt-6 pb-10 bg-[#080B0A] border-b border-[#D4AF37]/15">
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           
           {/* Horizontal Category Navigation (Scrollable on Mobile) */}
-          <div className="overflow-x-auto no-scrollbar scroll-smooth py-1 -mx-6 px-6 md:mx-0 md:px-0">
+          <div className="overflow-x-auto no-scrollbar scroll-smooth py-1 -mx-4 px-4 sm:-mx-6 sm:px-6 md:mx-0 md:px-0">
             <div className="flex items-center gap-2 sm:gap-3 min-w-max">
               {categories.map((cat) => {
                 const isActive = activeCategory === cat;
@@ -25,7 +25,7 @@ export default function BlogControls({
                   <button
                     key={cat}
                     onClick={() => onSelectCategory(cat)}
-                    className={`px-4 py-2 text-xs font-sans font-medium tracking-wider uppercase transition-all duration-300 border focus:outline-none whitespace-nowrap ${
+                    className={`min-h-[44px] px-4 py-2 text-xs font-sans font-medium tracking-wider uppercase transition-all duration-300 border focus:outline-none whitespace-nowrap rounded-sm ${
                       isActive
                         ? 'border-[#D4AF37] bg-[#063C2D]/60 text-[#F3EFE4] shadow-[0_0_12px_rgba(212,175,55,0.2)]'
                         : 'border-[#D4AF37]/20 bg-[#080B0A] text-[#CFC9BB]/70 hover:border-[#D4AF37]/50 hover:text-[#F3EFE4]'

@@ -28,6 +28,14 @@ export default function Industries() {
     },
     {
       id: '03',
+      name: 'JEWELLERY & LUXURY',
+      href: '/industries/jewellery-luxury',
+      description: 'Bespoke Next.js flagships, macro gemstone portfolios, and local luxury SEO for heritage jewellery houses.',
+      image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=80',
+      tag: 'Heritage & Fine Jewellery',
+    },
+    {
+      id: '04',
       name: 'INTERIOR DESIGN',
       href: '/industries/interior-design',
       description: 'High-aesthetic spatial portfolios, editorial case studies, and affluent client inquiry acquisition for architects & designers.',
@@ -35,28 +43,28 @@ export default function Industries() {
       tag: 'Interior Designers & Architects',
     },
     {
-      id: '04',
-      name: 'EVENT MANAGEMENT',
-      href: '/industries/event-management',
-      description: 'High-impact visual production galleries, wedding showcase portfolios, and corporate planner inquiries.',
-      image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80',
-      tag: 'Event Planners & Production',
-    },
-    {
       id: '05',
-      name: 'JEWELLERY & LUXURY',
-      href: '/services',
-      description: 'High-end e-commerce experiences, virtual consultations, and brand storytelling that commands premium value.',
-      image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=80',
-      tag: 'Heritage & Fine Jewellery',
+      name: 'HOSPITALITY & RESORTS',
+      href: '/industries/hospitality',
+      description: 'Direct booking engines, destination wedding showcases, and local tourism SEO for boutique heritage hotels.',
+      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80',
+      tag: 'Hotels & Heritage Havelis',
     },
     {
       id: '06',
       name: 'E-COMMERCE & D2C',
-      href: '/services',
-      description: 'D2C subscription platforms, high-conversion storefronts, and automated growth systems.',
+      href: '/industries/ecommerce',
+      description: 'Headless Next.js storefronts, sub-second product pages, and Google Shopping SEO for retail brands.',
       image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=80',
       tag: 'Direct-to-Consumer Brands',
+    },
+    {
+      id: '07',
+      name: 'MANUFACTURING & EXPORT',
+      href: '/industries/manufacturing',
+      description: 'Industrial B2B catalogs, RFQ intake funnels, and international export SEO for manufacturers and mills.',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80',
+      tag: 'Industrial & B2B Exporters',
     },
   ];
 
@@ -68,15 +76,15 @@ export default function Industries() {
       <div className="absolute inset-0 bg-gradient-to-br from-[#071E18]/60 via-[#070A09] to-[#070A09] opacity-80 pointer-events-none" />
       <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-[#0C6B52]/15 blur-3xl rounded-full pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.6 }}
-          className="flex items-center gap-3 mb-8"
+          viewport={{ once: true, amount: 0.05 }}
+          transition={{ duration: 0.4 }}
+          className="flex items-center gap-3 mb-6 sm:mb-8"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             07
@@ -89,29 +97,29 @@ export default function Industries() {
 
         {/* Editorial Headline */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.05 }}
+          transition={{ duration: 0.5 }}
           className="mb-8 max-w-3xl"
         >
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[1.05] sm:leading-[0.98] tracking-tight break-words">
             BUILT FOR <br />
             AMBITIOUS <span className="text-[#D9B45F] font-normal">INDUSTRIES.</span>
           </h2>
         </motion.div>
 
         {/* Open Editorial Typography Layout (List + Interactive Image Preview) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column: Flowing Editorial Typography List */}
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-50px' }}
+            viewport={{ once: true, amount: 0.05 }}
             variants={{
               hidden: { opacity: 0 },
-              visible: { opacity: 1, transition: { staggerChildren: 0.08 } },
+              visible: { opacity: 1, transition: { staggerChildren: 0.04 } },
             }}
             className="lg:col-span-7 flex flex-col divide-y divide-[#D9B45F]/15"
           >
@@ -126,26 +134,26 @@ export default function Industries() {
                 >
                   <motion.div
                     variants={{
-                      hidden: { opacity: 0, x: -16 },
-                      visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
+                      hidden: { opacity: 0, x: -10 },
+                      visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
                     }}
                     onMouseEnter={() => setHoveredIndex(idx)}
-                    className="py-4 sm:py-5 cursor-pointer transition-all duration-300"
+                    className="py-3.5 sm:py-5 cursor-pointer transition-all duration-300"
                   >
-                    <div className="flex items-center justify-between gap-4">
-                      <div className="flex items-baseline gap-4 sm:gap-6">
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="flex items-baseline gap-3 sm:gap-6">
                         <span
                           className={`text-xs font-sans font-medium transition-colors duration-300 ${
-                            isHovered ? 'text-[#D9B45F]' : 'text-[#9D9B91]/50'
+                            isHovered ? 'text-[#D9B45F]' : 'text-[#9D9B91]/60'
                           }`}
                         >
                           {item.id}
                         </span>
                         
                         <h3
-                          className={`font-serif text-2xl sm:text-3xl lg:text-4xl tracking-wide font-normal transition-all duration-300 ${
+                          className={`font-serif text-xl sm:text-3xl lg:text-4xl tracking-wide font-normal transition-all duration-300 leading-snug break-words ${
                             isHovered
-                              ? 'text-[#D9B45F] translate-x-2'
+                              ? 'text-[#D9B45F] translate-x-1 sm:translate-x-2'
                               : 'text-[#F3EFE3] group-hover:text-[#D9B45F]'
                           }`}
                         >
@@ -154,16 +162,16 @@ export default function Industries() {
                       </div>
 
                       <ArrowUpRight
-                        className={`w-5 h-5 sm:w-6 sm:h-6 transition-all duration-300 ${
+                        className={`w-4 h-4 sm:w-6 sm:h-6 transition-all duration-300 shrink-0 ${
                           isHovered
-                            ? 'text-[#D9B45F] translate-x-1 -translate-y-1 opacity-100'
-                            : 'text-[#F3EFE3]/30 opacity-0 group-hover:opacity-60'
+                            ? 'text-[#D9B45F] translate-x-0.5 -translate-y-0.5 opacity-100'
+                            : 'text-[#F3EFE3]/40 opacity-70 sm:opacity-0 group-hover:opacity-100'
                         }`}
                       />
                     </div>
 
                     {/* Fine Gold Underline Draw on Hover */}
-                    <div className="relative mt-4 h-[1px] w-full bg-white/5 overflow-hidden">
+                    <div className="relative mt-3 sm:mt-4 h-[1px] w-full bg-white/5 overflow-hidden">
                       <div
                         className={`absolute inset-0 bg-gradient-to-r from-[#D9B45F] via-[#0C6B52] to-transparent transition-transform duration-500 origin-left ${
                           isHovered ? 'scale-x-100' : 'scale-x-0'

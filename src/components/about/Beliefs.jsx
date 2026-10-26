@@ -41,15 +41,15 @@ export default function Beliefs() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#070A09] via-[#071E18]/40 to-[#070A09] opacity-90 pointer-events-none" />
       <div className="absolute left-[10%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0C6B52]/15 blur-3xl rounded-full pointer-events-none" />
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.6, ease: easeCustom }}
-          className="flex items-center gap-3 mb-10"
+          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          transition={{ duration: 0.5, ease: easeCustom }}
+          className="flex items-center gap-3 mb-8 sm:mb-10"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             03
@@ -61,13 +61,13 @@ export default function Beliefs() {
         </motion.div>
 
         {/* Intro Headline & Purpose Statement */}
-        <div className="mb-20 max-w-3xl">
+        <div className="mb-12 sm:mb-20 max-w-3xl">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
-            className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[1.04] mb-6"
+            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+            transition={{ duration: 0.6, ease: easeCustom }}
+            className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[1.04] mb-4 sm:mb-6 break-words"
           >
             We saw great Jaipur businesses get lost in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">disconnected digital experiences.</span>
           </motion.h2>
@@ -75,16 +75,16 @@ export default function Beliefs() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.8, delay: 0.2, ease: easeCustom }}
-            className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed max-w-2xl"
+            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+            transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
+            className="font-sans text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light leading-relaxed max-w-2xl"
           >
              We exist to help Jaipur businesses cut through visual noise with clear strategy, high-performance technology, and work built to last.
           </motion.p>
         </div>
 
         {/* 4 Belief Pillars in Open Editorial Layout with Thin Vertical Dividers */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 relative border-t border-[#D9B45F]/20 pt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-0 relative border-t border-[#D9B45F]/20 pt-8 sm:pt-12">
           {beliefs.map((belief, idx) => {
             const Icon = belief.icon;
             const isHovered = hoveredIdx === idx;
@@ -94,11 +94,11 @@ export default function Beliefs() {
                 key={belief.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.8, delay: 0.1 * idx, ease: easeCustom }}
+                viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+                transition={{ duration: 0.5, delay: 0.04 * idx, ease: easeCustom }}
                 onMouseEnter={() => setHoveredIdx(idx)}
                 onMouseLeave={() => setHoveredIdx(null)}
-                className={`flex flex-col justify-between py-6 lg:px-8 relative transition-all duration-300 ${
+                className={`flex flex-col justify-between p-5 sm:p-6 lg:p-0 lg:py-6 lg:px-8 rounded-xl lg:rounded-none bg-[#071E18]/20 lg:bg-transparent border border-[#D9B45F]/15 lg:border-none relative transition-all duration-300 ${
                   idx !== 0 ? 'lg:border-l lg:border-[#D9B45F]/20' : ''
                 }`}
               >

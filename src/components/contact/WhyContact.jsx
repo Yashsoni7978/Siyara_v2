@@ -42,16 +42,16 @@ export default function WhyContact() {
       {/* Atmosphere Glow */}
       <div className="absolute inset-0 bg-emerald-atmosphere opacity-80 pointer-events-none" />
 
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Eyebrow & Headline Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12 sm:mb-20">
           <div className="lg:col-span-8">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: easeCustom }}
+              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              transition={{ duration: 0.5, ease: easeCustom }}
               className="flex items-center gap-3 mb-6"
             >
               <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D4AF37] uppercase">
@@ -63,9 +63,9 @@ export default function WhyContact() {
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
-              className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE4] font-normal leading-[1.04] tracking-tight"
+              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
+              className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE4] font-normal leading-[1.08] sm:leading-[1.04] tracking-tight break-words"
             >
               Your Goals. <br />
               Our <span className="text-[#19A878] ">Commitment.</span>
@@ -76,8 +76,8 @@ export default function WhyContact() {
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2, ease: easeCustom }}
+              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
               className="font-sans text-xs sm:text-sm text-[#CFC9BB]/80 font-light leading-relaxed max-w-sm"
             >
               We bring strategy, creativity and technology together to turn your vision into measurable growth.
@@ -86,7 +86,7 @@ export default function WhyContact() {
         </div>
 
         {/* 4 Principles Grid (Matching Reference Composition with Gold Dividers) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-0 relative">
           {principles.map((item, idx) => {
             const Icon = item.icon;
             const isHovered = hoveredIdx === idx;
@@ -96,7 +96,7 @@ export default function WhyContact() {
                 key={item.id}
                 onMouseEnter={() => setHoveredIdx(idx)}
                 onMouseLeave={() => setHoveredIdx(null)}
-                className={`flex flex-col justify-between py-6 lg:px-8 relative transition-all duration-300 ${
+                className={`flex flex-col justify-between p-5 sm:p-6 lg:p-0 lg:py-6 lg:px-8 rounded-xl lg:rounded-none bg-[#063C2D]/30 lg:bg-transparent border border-[#D4AF37]/15 lg:border-none relative transition-all duration-300 ${
                   idx !== 0 ? 'lg:border-l lg:border-[#D4AF37]/20' : ''
                 }`}
               >

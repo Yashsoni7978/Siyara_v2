@@ -5,44 +5,48 @@ import { siteConfig } from '@/data/siteConfig';
 
 export default function Footer() {
   const servicesLinks = [
-    { name: 'Web Design & Development', href: '/services' },
-    { name: 'Branding & Identity', href: '/services' },
-    { name: 'SEO & GEO Optimization', href: '/services' },
-    { name: 'Social Media Marketing', href: '/services' },
-    { name: 'Digital Growth Systems', href: '/services' },
+    { name: 'Web Design & Development', href: '/services/web-design-development' },
+    { name: 'Branding & Identity', href: '/services/brand-strategy' },
+    { name: 'SEO & GEO Optimization', href: '/services/seo-geo' },
+    { name: 'Performance Marketing', href: '/services/performance-marketing' },
+    { name: 'AI & Business Automation', href: '/services/ai-automation' },
+    { name: 'Digital Growth Systems', href: '/services/growth-optimization' },
   ];
 
   const industryLinks = [
     { name: 'Doctors & Clinics', href: '/industries/healthcare' },
     { name: 'Real Estate Developers', href: '/industries/real-estate' },
+    { name: 'Jewellery & Luxury', href: '/industries/jewellery-luxury' },
     { name: 'Interior Designers', href: '/industries/interior-design' },
+    { name: 'Boutique Hotels & Resorts', href: '/industries/hospitality' },
     { name: 'Event Management', href: '/industries/event-management' },
+    { name: 'E-Commerce & Retail', href: '/industries/ecommerce' },
   ];
 
   const companyLinks = [
     { name: 'About Siyara', href: '/about' },
     { name: 'Why Siyara', href: '/about' },
     { name: 'Our Work', href: '/work' },
-    { name: 'Blog & Insights', href: '/blog' },
+    { name: 'Blog & Insights', href: '/insights' },
     { name: 'Contact Studio', href: '/contact' },
   ];
 
   const resourceLinks = [
-    { name: 'Website Cost in India', href: '/blog/website-development-cost-in-india-business-guide' },
-    { name: 'Local SEO Guide Jaipur', href: '/blog/local-seo-guide-jaipur-businesses' },
-    { name: 'High-Performance Websites', href: '/blog/what-makes-a-high-performing-website' },
-    { name: 'Choosing an Agency', href: '/blog/how-to-choose-a-web-design-agency-in-jaipur' },
+    { name: 'Website Cost in India', href: '/insights/website-development-cost-in-india-business-guide' },
+    { name: 'Local SEO Guide Jaipur', href: '/insights/local-seo-guide-jaipur-businesses' },
+    { name: 'High-Performance Websites', href: '/insights/what-makes-a-high-performing-website' },
+    { name: 'Choosing an Agency', href: '/insights/how-to-choose-a-web-design-agency-in-jaipur' },
   ];
 
   return (
-    <footer className="relative bg-[#070A09] pt-20 pb-12 border-t border-[#D9B45F]/15 text-[#F3EFE3] overflow-hidden">
+    <footer className="relative bg-[#070A09] pt-16 sm:pt-20 pb-12 border-t border-[#D9B45F]/15 text-[#F3EFE3] overflow-hidden">
       {/* Background Atmosphere */}
       <div className="absolute inset-0 bg-emerald-atmosphere opacity-70 pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-16 border-b border-[#D9B45F]/15">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 sm:pb-16 border-b border-[#D9B45F]/15">
           
           {/* Brand & Positioning Column (Left 4 Cols) */}
           <div className="lg:col-span-4 flex flex-col justify-between pr-0 lg:pr-6">
@@ -193,16 +197,16 @@ export default function Footer() {
 
         {/* Footer Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-[#9D9B91]">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 text-center sm:text-left">
             <span className="font-serif font-bold tracking-[0.2em] text-[#F3EFE3]">SIYARA✦</span>
             <span>© 2026 Siyara. All rights reserved.</span>
           </div>
 
-          <div className="flex items-center gap-6 text-[11px] tracking-wider text-[#9D9B91]">
-            <Link href="/privacy" className="hover:text-[#D9B45F] transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-[#D9B45F] transition-colors">Terms of Service</Link>
-            <Link href="/faq" className="hover:text-[#D9B45F] transition-colors">FAQ</Link>
-            <Link href="/sitemap.xml" className="hover:text-[#D9B45F] transition-colors">Sitemap</Link>
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-[11px] tracking-wider text-[#9D9B91]">
+            <Link href="/privacy" className="hover:text-[#D9B45F] transition-colors py-1">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#D9B45F] transition-colors py-1">Terms of Service</Link>
+            <Link href="/faq" className="hover:text-[#D9B45F] transition-colors py-1">FAQ</Link>
+            <Link href="/sitemap.xml" className="hover:text-[#D9B45F] transition-colors py-1">Sitemap</Link>
           </div>
         </div>
 

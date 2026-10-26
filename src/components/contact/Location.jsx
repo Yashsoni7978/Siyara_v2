@@ -7,17 +7,17 @@ export default function Location() {
 
   return (
     <section className="relative py-16 sm:py-20 bg-[#080B0A] border-t border-[#D4AF37]/15 overflow-hidden">
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Main Card Container (Matching Reference Composition) */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: easeCustom }}
+          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          transition={{ duration: 0.6, ease: easeCustom }}
           className="rounded-2xl border border-[#D4AF37]/25 bg-[#0A0D0C] overflow-hidden shadow-2xl relative"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 sm:p-12 lg:p-14">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-5 sm:p-10 lg:p-14">
             
             {/* LEFT COLUMN: Editorial Location Description */}
             <div className="lg:col-span-6 z-10">
@@ -28,12 +28,12 @@ export default function Location() {
                 <span className="h-[1px] w-8 bg-[#D4AF37]/50" />
               </div>
 
-              <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE4] font-normal leading-[1.08] mb-4">
+              <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F3EFE4] font-normal leading-[1.08] mb-4 break-words">
                 Jaipur, Rajasthan, <br />
                 <span className="text-[#19A878] ">India</span>
               </h2>
 
-              <p className="font-sans text-sm sm:text-base text-[#CFC9BB]/80 font-light leading-relaxed mb-8 max-w-md">
+              <p className="font-sans text-sm sm:text-base text-[#CFC9BB]/80 font-light leading-relaxed mb-6 sm:mb-8 max-w-md">
                 We work with ambitious businesses across India and beyond, combining strategic vision with high-impact digital craftsmanship.
               </p>
 
@@ -41,7 +41,7 @@ export default function Location() {
                 href="https://maps.google.com/?q=Jaipur+Rajasthan+India"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 border border-[#D4AF37]/40 bg-[#063C2D]/30 hover:bg-[#D4AF37] text-[#F3EFE4] hover:text-[#080B0A] text-xs font-semibold tracking-[0.16em] uppercase transition-all duration-300 group"
+                className="inline-flex items-center justify-center min-h-[44px] gap-2 px-5 py-3 border border-[#D4AF37]/40 bg-[#063C2D]/30 hover:bg-[#D4AF37] text-[#F3EFE4] hover:text-[#080B0A] text-xs font-semibold tracking-[0.16em] uppercase transition-all duration-300 group rounded-sm"
               >
                 <span>VIEW ON GOOGLE MAPS</span>
                 <ArrowUpRight className="w-4 h-4 text-[#D4AF37] group-hover:text-[#080B0A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

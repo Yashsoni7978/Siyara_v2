@@ -20,7 +20,7 @@ export default function ContactHero() {
 
   return (
     <section
-      className="relative min-h-screen pt-32 pb-20 lg:pt-36 lg:pb-24 bg-[#070A09] text-[#F3EFE3] overflow-hidden flex items-center"
+      className="relative min-h-screen pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24 bg-[#070A09] text-[#F3EFE3] overflow-hidden flex items-center"
     >
       {/* FULL-WIDTH HERO BACKGROUND IMAGE */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
@@ -33,82 +33,46 @@ export default function ContactHero() {
           className="object-cover object-[75%_center] sm:object-[70%_center] md:object-[68%_center] lg:object-right"
         />
         {/* Subtle dark gradient overlay for optimal left-side text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070A09]/90 via-[#070A09]/55 to-transparent lg:via-[#070A09]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070A09]/95 via-[#070A09]/75 to-transparent lg:via-[#070A09]/30" />
       </div>
 
-      <div className="max-w-[1500px] mx-auto pl-5 pr-6 sm:pl-6 sm:pr-8 lg:pl-10 lg:pr-12 xl:pl-16 xl:pr-12 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-12 w-full relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* LEFT COLUMN: Dominant Editorial Messaging in Open Negative Space */}
           <div className="lg:col-span-7 xl:col-span-8 flex flex-col justify-center relative z-20">
             
             {/* Eyebrow */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp(300)}
-              className="flex items-center gap-3 mb-6"
-            >
+            <div className="flex items-center gap-3 mb-6">
               <span className="h-[1px] w-8 bg-[#D9B45F]/60" />
               <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.26em] text-[#D9B45F] uppercase">
                 SIYARA INVITATION
               </span>
-            </motion.div>
+            </div>
 
             {/* Master Headline */}
             <div className="mb-6">
-              <h1 className="font-serif text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[0.96] tracking-tight text-[#F3EFE3]">
-                <motion.span
-                  initial="hidden"
-                  animate="visible"
-                  variants={fadeUp(450)}
-                  className="block"
-                >
-                  LET'S BUILD
-                </motion.span>
-
-                <motion.span
-                  initial="hidden"
-                  animate="visible"
-                  variants={fadeUp(600)}
-                  className="block"
-                >
-                  SOMETHING
-                </motion.span>
-
-                <motion.span
-                  initial="hidden"
-                  animate="visible"
-                  variants={fadeUp(750)}
-                  className="block text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26]"
-                >
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal leading-[1.08] sm:leading-[0.96] tracking-tight text-[#F3EFE3] break-words">
+                <span className="block">LET'S BUILD</span>
+                <span className="block">SOMETHING</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26]">
                   WORTH BUILDING.
-                </motion.span>
+                </span>
               </h1>
             </div>
 
             {/* Supporting Copy */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp(900)}
-              className="mb-10 max-w-lg"
-            >
-              <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
+            <div className="mb-8 sm:mb-10 max-w-lg">
+              <p className="font-sans text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light leading-relaxed">
                 Tell us where you want to go. We'll help architect the digital system to get you there - built for Jaipur's market.
               </p>
-            </motion.div>
+            </div>
 
             {/* CTAs */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp(1050)}
-              className="flex flex-wrap items-center gap-5"
-            >
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5">
               <a
                 href="#intake"
-                className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center justify-center min-h-[48px] gap-2.5 px-8 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>START A CONVERSATION</span>
                 <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
@@ -116,12 +80,12 @@ export default function ContactHero() {
 
               <a
                 href="#contact-direct"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-[#F3EFE3]/25 hover:border-[#D9B45F]/60 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#070A09]/40 backdrop-blur-sm"
+                className="inline-flex items-center justify-center min-h-[48px] gap-2 px-8 py-3.5 border border-[#F3EFE3]/25 hover:border-[#D9B45F]/60 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#070A09]/40 backdrop-blur-sm"
               >
                 <span>BOOK A STRATEGY SESSION</span>
                 <ArrowRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-1 transition-transform" />
               </a>
-            </motion.div>
+            </div>
           </div>
 
           {/* RIGHT COLUMN: Open space showcasing the background communication artwork */}

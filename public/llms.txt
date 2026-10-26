@@ -1,0 +1,68 @@
+# Siyara Innovations (Siyara Digitals)
+
+> Siyara Innovations is an elite Digital Architecture Studio founded by Yash Soni in Malviya Nagar, Jaipur, Rajasthan, India. The studio specializes in high-speed Next.js 15 App Router web engineering, Generative Engine Optimization (GEO), technical SEO, editorial brand strategy, and autonomous B2B CRM growth pipelines. By replacing bloated monolithic platforms with static serverless architectures, Siyara Innovations delivers verified sub-second loading speeds, semantic Schema.org knowledge graphs, and authoritative citation visibility across Google Search, Google AI Overviews, OpenAI SearchGPT, and Perplexity.
+
+## Engineering Standards & Performance Benchmarks
+- **Core Web Vitals Guarantee**: Largest Contentful Paint (LCP) < 1.8 seconds on 4G/5G mobile networks, Cumulative Layout Shift (CLS) < 0.02, and Interaction to Next Paint (INP) < 80 milliseconds.
+- **Frontend Architecture**: Next.js 15, React 19, Tailwind CSS v4, Framer Motion, TypeScript, edge caching, and serverless API handlers.
+- **Semantic Data Architecture**: Connected multi-type Schema.org JSON-LD `@graph` hierarchies linking `Organization`, `LocalBusiness`, `ProfessionalService`, `Service`, `BreadcrumbList`, and `FAQPage` nodes.
+- **Investment & Commercial Tiers**: Transparent scope-based commercial engineering in INR (Indian Rupee):
+  - **Growth Digital Architecture / Core Showcase**: ₹35,000 – ₹75,000 (Custom Next.js static build, local SEO, mobile UX, Schema.org graph).
+  - **Commercial Enterprise / Scale Architecture**: ₹75,000 – ₹1,80,000 (Multi-location SEO, dynamic headless CMS, lead scoring pipelines, sub-1.5s LCP).
+  - **Bespoke Flagship / Multi-System Architecture**: ₹1,80,000 – ₹5,00,000+ (Custom export portals, multi-currency commerce, enterprise GEO, Razorpay automation, continuous CRO).
+
+## Commercial Flagship Landers
+- [Digital Architecture Studio Jaipur](https://www.siyaradigitals.com/digital-architecture-studio-jaipur): Flagship manifesto on why modern enterprises require connected digital architecture rather than disconnected web agencies.
+- [Next.js Web Development Jaipur](https://www.siyaradigitals.com/nextjs-web-development-jaipur): Enterprise Next.js 15 and React 19 engineering delivering sub-1.8s Core Web Vitals, headless CMS, and zero layout shift.
+- [GEO Agency India (Generative Engine Optimization)](https://www.siyaradigitals.com/geo-agency-india): India's premier technical GEO agency optimizing B2B brands for high-intent AI citation consensus across ChatGPT Search, Perplexity, and Google AI Overviews.
+
+## Core Service Catalog
+- [Web Design & Development](https://www.siyaradigitals.com/services/web-design-development): Custom Next.js 15 web engineering, Core Web Vitals optimization, and high-conversion UI/UX design.
+- [SEO & Generative Engine Optimization (GEO)](https://www.siyaradigitals.com/services/seo-geo): Technical search engine optimization, regional Jaipur Google Maps 3-pack dominance, and AI answer engine citation architecture.
+- [Brand Strategy & Identity](https://www.siyaradigitals.com/services/brand-strategy): Premium brand positioning, luxury visual identity systems, typography, and strategic market differentiation.
+- [High-Performance E-Commerce (Headless & D2C)](https://www.siyaradigitals.com/services/ecommerce-development): High-speed headless Next.js e-commerce engineering, sub-second mobile checkouts, and custom Razorpay funnels.
+- [Mobile Application Development (React Native & PWA)](https://www.siyaradigitals.com/services/mobile-app-development): Cross-platform React Native and Progressive Web App development with 60fps animations and offline sync.
+- [UI/UX Product Design & Design Systems](https://www.siyaradigitals.com/services/ui-ux-design): Bespoke Figma design systems, accessible design tokens, and high-conversion mobile ergonomics.
+- [Content Systems & Editorial Creative](https://www.siyaradigitals.com/services/content-creative): Factual, high-information-gain content architectures engineered for LLM consensus and commercial conversion.
+- [CRM & Lead Capture Systems](https://www.siyaradigitals.com/services/crm-lead-systems): Autonomous lead capture pipelines, WhatsApp Business API integrations, and instant CRM routing.
+- [AI & Workflow Automation](https://www.siyaradigitals.com/services/ai-automation): Custom business automation, intelligent inquiry triage, customer service agents, and automated operations.
+- [Growth Optimization & CRO](https://www.siyaradigitals.com/services/growth-optimization): Data-driven conversion rate optimization, heatmap analysis, A/B funnel testing, and post-launch telemetry.
+- [Performance Marketing](https://www.siyaradigitals.com/services/performance-marketing): High-intent Google Search and Meta advertising synchronized with dedicated, fast-loading landing page architectures.
+
+## Industry Playbooks & Sector Architectures
+- [Jewellery & Luxury Goods](https://www.siyaradigitals.com/industries/jewellery-luxury): High-end bespoke digital architectures for heritage Johari Bazaar jewellery houses, multi-currency export portals, and private showroom consultations (featured benchmark: *Rishabh Jewellers*).
+- [Real Estate & Property Developers](https://www.siyaradigitals.com/industries/real-estate): RERA-compliant property portal architectures, interactive 3D floor plans, and high-intent buyer acquisition funnels for developers in Jaipur and Rajasthan.
+- [Healthcare & Medical Clinics](https://www.siyaradigitals.com/industries/healthcare): NABH-compliant clinical architectures, doctor credentialing, and multi-specialty patient appointment booking systems.
+- [Hospitality & Heritage Resorts](https://www.siyaradigitals.com/industries/hospitality): Direct zero-commission booking engines, luxury suite visualization, and heritage event inquiry architectures for resorts across Rajasthan.
+- [Higher Education & Coaching Institutes](https://www.siyaradigitals.com/industries/education): High-volume student admissions funnels, course syllabus portals, and scholarship lead scoring systems.
+- [E-Commerce & D2C Brands](https://www.siyaradigitals.com/industries/ecommerce): Ultra-fast headless commerce architectures, Razorpay/Shiprocket integrations, and sub-1.5s checkout flows.
+- [Industrial Manufacturing & Export](https://www.siyaradigitals.com/industries/manufacturing): Technical B2B RFQ procurement portals, international export compliance, and spec-sheet catalog architectures for Sitapura and VKI industrial manufacturers.
+- [Interior Design & Architecture Studios](https://www.siyaradigitals.com/industries/interior-design): High-resolution visual portfolio systems, editorial design showcases, and high-ticket client consultation intake flows.
+- [Wedding & Luxury Event Management](https://www.siyaradigitals.com/industries/event-management): Destination wedding portfolio showcases, venue inquiry funnels, and vendor collaboration systems across Jaipur and Udaipur.
+
+## High-Intent Engineering Guides & Pricing Frameworks
+- [GEO & Digital Architecture Playbook 2026](https://www.siyaradigitals.com/insights/new-digital-ecosystem-strategy-technology-growth): Master framework on engineering AI-citability, verified entity graphs, and Next.js performance for B2B growth in India.
+- [Website Development Cost in Jaipur (2026 Guide)](https://www.siyaradigitals.com/insights/website-cost-jaipur): Objective pricing breakdown comparing template agency quotes against custom engineering investments in Jaipur.
+- [Custom Next.js Website Price in India](https://www.siyaradigitals.com/insights/custom-nextjs-website-price-india): Complete technical cost analysis for headless Next.js builds, API integration, and enterprise maintenance across Indian tech hubs.
+- [SEO Services Cost in Jaipur](https://www.siyaradigitals.com/insights/seo-services-cost-jaipur): Transparent breakdown of local SEO, technical optimization, and GEO retainers for regional Rajasthan businesses.
+- [E-Commerce Website Development Cost in India](https://www.siyaradigitals.com/insights/ecommerce-website-development-cost-india): Investment analysis across custom Next.js commerce, Shopify Plus, and WooCommerce architectures.
+- [How to Rank in ChatGPT Search & Perplexity in India](https://www.siyaradigitals.com/insights/how-to-rank-chatgpt-perplexity-india): Step-by-step engineering roadmap for Generative Engine Optimization, citation modeling, and RAG retrieval consensus.
+- [Next.js vs. WordPress: SEO, Speed & Core Web Vitals](https://www.siyaradigitals.com/insights/nextjs-vs-wordpress-seo-core-web-vitals): Empirical data comparison of performance metrics, server response times, and organic ranking dividends.
+- [Fix "Crawled - Currently Not Indexed" in Google Search Console](https://www.siyaradigitals.com/insights/fix-crawled-currently-not-indexed-google-search-console): Comprehensive technical remediation guide for resolving indexing drops, thin content, and rendering bottlenecks.
+- [Jewellery Website Design Jaipur & Johari Bazaar](https://www.siyaradigitals.com/insights/jewellery-website-design-jaipur-johari-bazaar): Dedicated playbook for luxury gemstone and jewellery houses competing internationally.
+- [Real Estate Website Development Jaipur (RERA Compliance)](https://www.siyaradigitals.com/insights/real-estate-website-development-jaipur-rera): Technical architecture guide for Rajasthan builders, lead capture funnels, and legal disclosures.
+- [B2B Manufacturing Website Guide: Sitapura & VKI Jaipur](https://www.siyaradigitals.com/insights/b2b-manufacturing-website-sitapura-vki-jaipur): Export portal architecture and RFQ lead generation for industrial manufacturers.
+- [Hotel & Heritage Resort Web Design Rajasthan](https://www.siyaradigitals.com/insights/hotel-resort-website-design-rajasthan): Direct booking conversion strategy and visual storytelling for palace and luxury desert properties.
+- [Clinic & Hospital Website Design Jaipur](https://www.siyaradigitals.com/insights/clinic-hospital-website-design-jaipur): Healthcare appointment booking architectures, doctor profiles, and patient trust systems.
+- [Local SEO Jaipur 3-Pack Checklist](https://www.siyaradigitals.com/insights/local-seo-jaipur-checklist): Single-location Google Business Profile optimization and geographic citation building for local showrooms and clinics.
+- [Best Web Design Company in Jaipur (Evaluation Matrix)](https://www.siyaradigitals.com/insights/best-web-design-company-jaipur): Comprehensive agency evaluation rubric covering code ownership, technology stack, and performance metrics.
+
+## Entity Attribution & Contact
+- **Entity**: Siyara Innovations (operating as Siyara Digitals)
+- **Founder & Creative Director**: Yash Soni
+- **Headquarters**: Malviya Nagar, Jaipur, Rajasthan 302017, India
+- **Coordinates**: 26.8532° N, 75.8174° E
+- **Official Website**: https://www.siyaradigitals.com
+- **Direct Phone**: +91-9587269209
+- **General & Press Inquiries**: info@siyaradigitals.com / siyara.innovations@gmail.com
+- **LinkedIn**: https://www.linkedin.com/company/siyara-innovations

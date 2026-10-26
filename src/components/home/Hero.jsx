@@ -35,22 +35,34 @@ export default function Hero() {
     }
   }, [isDesktop]);
 
+  const rafMoveRef = useRef(null);
+
   const handleMouseMove = (e) => {
-    if (isMobile || shouldReduceMotion || !heroRef.current) return;
-    const rect = heroRef.current.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    
-    const normX = (e.clientX - centerX) / (rect.width / 2);
-    const normY = (e.clientY - centerY) / (rect.height / 2);
-    
-    setMousePos({
-      x: Math.max(-1, Math.min(1, normX)),
-      y: Math.max(-1, Math.min(1, normY)),
+    if (isMobile || shouldReduceMotion) return;
+    if (rafMoveRef.current) return;
+
+    const clientX = e.clientX;
+    const clientY = e.clientY;
+
+    rafMoveRef.current = requestAnimationFrame(() => {
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const normX = (clientX - centerX) / centerX;
+      const normY = (clientY - centerY) / centerY;
+
+      setMousePos({
+        x: Math.max(-1, Math.min(1, normX)),
+        y: Math.max(-1, Math.min(1, normY)),
+      });
+      rafMoveRef.current = null;
     });
   };
 
   const handleMouseLeave = () => {
+    if (rafMoveRef.current) {
+      cancelAnimationFrame(rafMoveRef.current);
+      rafMoveRef.current = null;
+    }
     setMousePos({ x: 0, y: 0 });
   };
 
@@ -117,85 +129,55 @@ export default function Hero() {
         </motion.div>
       )}
 
-      <div className="max-w-[1500px] mx-auto pl-5 pr-6 sm:pl-6 sm:pr-8 lg:pl-10 lg:pr-12 xl:pl-16 xl:pr-12 w-full relative z-10">
+      <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
 
           {/* LEFT COLUMN: Clean Editorial Typography & Action CTAs */}
           <div className="lg:col-span-7 flex flex-col justify-center relative z-20">
             
-            {/* Eyebrow */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp(350)}
-              className="flex items-center gap-3 mb-6"
-            >
-              <span className="h-[1px] w-8 bg-[#D9B45F]/60" />
-              <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.26em] text-[#D9B45F] uppercase">
+            {/* Eyebrow - Immediate render */}
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+              <span className="h-[1px] w-6 sm:w-8 bg-[#D9B45F]/60" />
+              <span className="text-[10px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] sm:tracking-[0.26em] text-[#D9B45F] uppercase">
                 DIGITAL ARCHITECTURE STUDIO
               </span>
-            </motion.div>
+            </div>
 
-            {/* Headline - single H1 with decorative visual split preserved */}
-            <div className="mb-6">
+            {/* Headline - Immediate render, responsive mobile sizing */}
+            <div className="mb-5 sm:mb-6">
               <h1
                 aria-label="Web Design Company and Digital Marketing Agency in Jaipur — Siyara Innovations"
-                className="font-serif leading-[1.0] tracking-tight"
+                className="font-serif leading-[1.0] tracking-tight break-words"
               >
-                {/* Line 1: WE BUILD BRANDS - large */}
-                <motion.span
-                  initial={false}
-                  animate="visible"
-                  variants={fadeUp(500)}
-                  className="block text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-normal text-[#F3EFE3]"
-                >
+                {/* Line 1: WE BUILD BRANDS */}
+                <span className="block text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-normal text-[#F3EFE3]">
                   WE BUILD BRANDS{' '}
-                </motion.span>
+                </span>
 
-                {/* Line 2: THAT - small, gold, spaced like a label */}
-                <motion.span
-                  initial={false}
-                  animate="visible"
-                  variants={fadeUp(620)}
-                  className="block font-sans text-sm sm:text-base lg:text-lg font-semibold tracking-[0.3em] text-[#D9B45F] uppercase my-2"
-                >
+                {/* Line 2: THAT */}
+                <span className="block font-sans text-xs sm:text-base lg:text-lg font-semibold tracking-[0.25em] sm:tracking-[0.3em] text-[#D9B45F] uppercase my-1.5 sm:my-2">
                   THAT{' '}
-                </motion.span>
+                </span>
 
-                {/* Line 3: DOMINATE. - massive gold */}
-                <motion.span
-                  initial={false}
-                  animate="visible"
-                  variants={fadeUp(700)}
-                  className="block text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-normal leading-[0.88] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
-                >
+                {/* Line 3: DOMINATE. */}
+                <span className="block text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-normal leading-[0.92] sm:leading-[0.88] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]">
                   DOMINATE.
-                </motion.span>
+                </span>
               </h1>
             </div>
 
-            {/* Supporting Copy */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp(850)}
-              className="mb-10 max-w-lg"
-            >
-              <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
+            {/* Supporting Copy - Immediate render */}
+            <div className="mb-8 sm:mb-10 max-w-lg">
+              <p className="font-sans text-sm sm:text-lg text-[#9D9B91] font-light leading-relaxed">
                 Siyara Innovations is a Jaipur-based digital architecture studio: brand strategy, websites, SEO, and growth systems built as one connected system, not campaigns that compete with each other.
               </p>
-            </motion.div>
+            </div>
 
-            {/* Action CTAs */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp(950)}
-              className="flex flex-wrap items-center gap-5"
-            >
+            {/* Action CTAs - Immediate render with clean mobile wrapping */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-5">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] sm:tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0 min-h-[48px]"
               >
                 <span>BOOK STRATEGY SESSION</span>
                 <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
@@ -203,24 +185,21 @@ export default function Hero() {
 
               <Link
                 href="/#work"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-[#F3EFE3]/25 hover:border-[#D9B45F]/60 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#070A09]/40 backdrop-blur-sm"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 border border-[#F3EFE3]/25 hover:border-[#D9B45F]/60 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.16em] sm:tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#070A09]/40 backdrop-blur-sm min-h-[48px]"
               >
                 <span>EXPLORE OUR WORK</span>
                 <ArrowRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-1 transition-transform" />
               </Link>
-            </motion.div>
+            </div>
           </div>
 
         </div>
       </div>
 
-      {/* RIGHT SIDE: Refined Architectural Studio Callout Annotation */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1.2, ease: easeCustom }}
+      {/* RIGHT SIDE: Refined Architectural Studio Callout Annotation (Hidden on mobile to protect layout) */}
+      <div
         style={getParallaxStyle(3)}
-        className="absolute right-4 sm:right-8 lg:right-12 xl:right-16 bottom-6 sm:bottom-10 lg:bottom-14 z-20 flex flex-col items-center pointer-events-none select-none origin-bottom-right scale-75 sm:scale-85 md:scale-95 lg:scale-100 max-w-[calc(100vw-2rem)]"
+        className="hidden md:flex absolute right-4 sm:right-8 lg:right-12 xl:right-16 bottom-6 sm:bottom-10 lg:bottom-14 z-20 flex-col items-center pointer-events-none select-none origin-bottom-right scale-75 sm:scale-85 md:scale-95 lg:scale-100 max-w-[calc(100vw-2rem)]"
       >
         {/* Subtle Top Architectural Connector Line */}
         <div className="w-[1px] h-6 sm:h-8 lg:h-10 bg-gradient-to-t from-[#D4AF37]/90 via-[#D4AF37]/40 to-transparent relative" />
@@ -291,7 +270,7 @@ export default function Hero() {
             <div className="w-1 h-1 rounded-full bg-[#D4AF37]" />
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

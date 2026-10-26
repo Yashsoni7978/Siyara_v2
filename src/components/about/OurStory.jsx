@@ -13,15 +13,15 @@ export default function OurStory() {
       <div className="absolute inset-0 ivory-texture pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-80 pointer-events-none" />
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Section Eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.6, ease: easeCustom }}
-          className="flex items-center gap-3 mb-10"
+          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          transition={{ duration: 0.5, ease: easeCustom }}
+          className="flex items-center gap-3 mb-8 sm:mb-10"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
             02
@@ -32,16 +32,16 @@ export default function OurStory() {
           </span>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
           {/* LEFT COLUMN: Editorial Story Copy */}
           <div className="lg:col-span-6 flex flex-col justify-center">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
-              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.08] tracking-tight text-[#101613] mb-8"
+              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              transition={{ duration: 0.6, ease: easeCustom }}
+              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.12] sm:leading-[1.08] tracking-tight text-[#101613] mb-6 sm:mb-8 break-words"
             >
               Siyara Innovations started because Jaipur businesses deserved better than templates and copy-paste strategy.
             </motion.h2>
@@ -49,9 +49,9 @@ export default function OurStory() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.8, delay: 0.2, ease: easeCustom }}
-              className="flex flex-col gap-5 max-w-lg text-base font-sans text-[#101613]/70 leading-relaxed font-light"
+              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
+              className="flex flex-col gap-4 sm:gap-5 max-w-lg text-sm sm:text-base font-sans text-[#101613]/70 leading-relaxed font-light"
             >
               <p>
                 We saw good businesses - with real quality behind them - lose customers to competitors who simply looked and showed up better online. So we started Siyara to close that gap.
@@ -65,10 +65,10 @@ export default function OurStory() {
           {/* RIGHT COLUMN: Asymmetric Editorial Composition */}
           <div className="lg:col-span-6 relative">
             <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
+              initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.8, delay: 0.2, ease: easeCustom }}
+              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
               className="relative mx-auto max-w-md lg:max-w-none"
             >
               <div className="relative grid grid-cols-12 items-center">
@@ -91,8 +91,8 @@ export default function OurStory() {
                 </div>
 
                 {/* Layered Deep Emerald Card with Gold "S" Watermark (Overlapping) */}
-                <div className="col-start-7 col-end-13 row-start-1 mt-32 relative z-20 bg-[#071E18] border border-[#D9B45F]/40 p-6 sm:p-8 shadow-[0_20px_40px_rgba(7,10,9,0.5)] flex flex-col justify-between aspect-square hover:-translate-y-2 transition-transform duration-500">
-                  <div className="font-serif text-6xl text-[#D9B45F] opacity-40 font-bold leading-none">
+                <div className="col-start-7 col-end-13 row-start-1 mt-24 sm:mt-32 relative z-20 bg-[#071E18] border border-[#D9B45F]/40 p-4 sm:p-8 shadow-[0_20px_40px_rgba(7,10,9,0.5)] flex flex-col justify-between aspect-square hover:-translate-y-2 transition-transform duration-500">
+                  <div className="font-serif text-4xl sm:text-6xl text-[#D9B45F] opacity-40 font-bold leading-none">
                     S
                   </div>
                   <div className="text-right">
@@ -108,7 +108,7 @@ export default function OurStory() {
               </div>
 
               {/* Gold Script Callout "Built Different." at bottom right */}
-              <div className="absolute -bottom-6 right-4 z-30 font-serif text-4xl sm:text-5xl text-[#B9923F] tracking-wide pointer-events-none">
+              <div className="absolute -bottom-5 sm:-bottom-6 right-2 sm:right-4 z-30 font-serif text-3xl sm:text-5xl text-[#B9923F] tracking-wide pointer-events-none max-w-full truncate">
                 Built Different.
               </div>
 

@@ -4,6 +4,7 @@ import Navbar from '../src/components/layout/Navbar';
 import Footer from '../src/components/home/Footer';
 import FloatingContact from '../src/components/layout/FloatingContact';
 import CursorSpotlight from '../src/components/common/CursorSpotlight';
+import JsonLd, { getRootOrganizationGraph } from '../src/components/common/JsonLd';
 import { Cormorant_Garamond, Manrope } from 'next/font/google';
 
 const cormorant = Cormorant_Garamond({
@@ -22,17 +23,20 @@ const manrope = Manrope({
 
 export const metadata = {
   metadataBase: new URL('https://www.siyaradigitals.com'),
-  title: 'Web Design Company & SEO Services Jaipur | Siyara Innovations',
-  description: 'Siyara Innovations is a Jaipur digital agency building high-speed websites, local SEO, social media marketing, and brand identity for growing businesses.',
+  title: {
+    default: 'Web Design Company & SEO Services Jaipur | Siyara Innovations',
+    template: '%s | Siyara Innovations',
+  },
+  description: 'Siyara Innovations is a Jaipur digital studio engineering high-speed Next.js websites, local SEO, AI search visibility, and brand architecture.',
   alternates: {
-    canonical: 'https://www.siyaradigitals.com/',
+    canonical: 'https://www.siyaradigitals.com',
   },
   openGraph: {
     type: 'website',
-    url: 'https://www.siyaradigitals.com/',
+    url: 'https://www.siyaradigitals.com',
     siteName: 'Siyara Innovations',
     title: 'Web Design Company & SEO Services Jaipur | Siyara Innovations',
-    description: 'Siyara Innovations is a Jaipur digital agency building high-speed websites, local SEO, social media marketing, and brand identity for growing businesses.',
+    description: 'Siyara Innovations is a Jaipur digital studio engineering high-speed Next.js websites, local SEO, AI search visibility, and brand architecture.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -46,7 +50,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design Company & SEO Services Jaipur | Siyara Innovations',
-    description: 'Siyara Innovations is a Jaipur digital agency building high-speed websites, local SEO, social media marketing, and brand identity for growing businesses.',
+    description: 'Siyara Innovations is a Jaipur digital studio engineering high-speed Next.js websites, local SEO, AI search visibility, and brand architecture.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
   icons: {
@@ -86,64 +90,8 @@ export default function RootLayout({ children }) {
           Skip to main content
         </a>
 
-        {/* JSON-LD Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@graph': [
-                {
-                  '@type': 'Organization',
-                  '@id': 'https://www.siyaradigitals.com/#organization',
-                  'name': 'Siyara Innovations',
-                  'alternateName': ['Siyara', 'Siyara Innovations Jaipur'],
-                  'url': 'https://www.siyaradigitals.com',
-                  'logo': {
-                    '@type': 'ImageObject',
-                    '@id': 'https://www.siyaradigitals.com/#logo',
-                    'url': 'https://www.siyaradigitals.com/logo.webp',
-                    'caption': 'Siyara Innovations Logo'
-                  },
-                  'image': 'https://www.siyaradigitals.com/images/siyara_og_image.png',
-                  'description': 'Siyara Innovations is a web development, SEO, social media marketing, and branding agency serving Jaipur, Rajasthan, India.',
-                  'email': 'info@siyaradigitals.com',
-                  'address': {
-                    '@type': 'PostalAddress',
-                    'addressLocality': 'Jaipur',
-                    'addressRegion': 'Rajasthan',
-                    'addressCountry': 'IN'
-                  },
-                  'areaServed': [
-                    { '@type': 'City', 'name': 'Jaipur' },
-                    { '@type': 'State', 'name': 'Rajasthan' },
-                    { '@type': 'Country', 'name': 'India' }
-                  ],
-                  'contactPoint': {
-                    '@type': 'ContactPoint',
-                    'email': 'info@siyaradigitals.com',
-                    'contactType': 'customer service',
-                    'availableLanguage': ['English', 'Hindi']
-                  },
-                  'sameAs': [
-                    'https://www.linkedin.com/company/siyarainnovations/',
-                    'https://www.instagram.com/siyarainnovations/'
-                  ]
-                },
-                {
-                  '@type': 'WebSite',
-                  '@id': 'https://www.siyaradigitals.com/#website',
-                  'url': 'https://www.siyaradigitals.com',
-                  'name': 'Siyara Innovations',
-                  'description': 'Web design, SEO, and digital marketing agency in Jaipur, India.',
-                  'publisher': {
-                    '@id': 'https://www.siyaradigitals.com/#organization'
-                  }
-                }
-              ]
-            })
-          }}
-        />
+        {/* Global Schema.org JSON-LD Graph */}
+        <JsonLd schema={getRootOrganizationGraph()} />
         {/* Interactive Cursor Spotlight */}
         <CursorSpotlight />
         

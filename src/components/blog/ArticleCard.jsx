@@ -14,12 +14,12 @@ export default function ArticleCard({ article, index = 0, onSelectArticle }) {
 
   return (
     <motion.article 
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
+      viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+      transition={{ duration: 0.45, delay: Math.min((index % 3) * 0.03, 0.06) }}
       onClick={handleClick}
-      className="group relative flex flex-col h-full bg-[#080B0A] border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#D4AF37]/5"
+      className="group relative flex flex-col h-full bg-[#080B0A] border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#D4AF37]/5 rounded-xl"
     >
       {/* Subtle Atmosphere Hover Overlay */}
       <div className="absolute inset-0 bg-radial from-[#19A878]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -42,7 +42,7 @@ export default function ArticleCard({ article, index = 0, onSelectArticle }) {
       </div>
 
       {/* Article Body Content */}
-      <div className="p-6 sm:p-7 flex flex-col flex-grow justify-between relative z-10">
+      <div className="p-5 sm:p-7 flex flex-col flex-grow justify-between relative z-10">
         <div>
           {/* Metadata Row */}
           <div className="flex items-center justify-between gap-2 text-[11px] font-sans text-[#CFC9BB]/60 mb-3">

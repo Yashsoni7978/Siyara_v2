@@ -4,8 +4,8 @@ import { ArrowLeft, HelpCircle, ArrowRight, MessageCircle } from 'lucide-react';
 import { BUSINESS_CONFIG } from '../../src/config/business';
 
 export const metadata = {
-  title: 'Frequently Asked Questions (FAQ) | Siyara Innovations Jaipur',
-  description: 'Answers to common questions regarding web development, SEO services, social media marketing, and pricing timelines with Siyara Innovations in Jaipur.',
+  title: 'Web Development & SEO FAQ Jaipur',
+  description: 'Answers to common questions regarding Next.js web development, local SEO timelines, pricing, and project onboarding with Siyara in Jaipur.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/faq',
   },
@@ -13,8 +13,8 @@ export const metadata = {
     type: 'website',
     url: 'https://www.siyaradigitals.com/faq',
     siteName: 'Siyara Innovations',
-    title: 'Frequently Asked Questions (FAQ) | Siyara Innovations Jaipur',
-    description: 'Answers to common questions regarding web development, SEO services, social media marketing, and pricing timelines with Siyara Innovations in Jaipur.',
+    title: 'Web Development & SEO FAQ Jaipur | Siyara Innovations',
+    description: 'Answers to common questions regarding Next.js web development, local SEO timelines, pricing, and project onboarding with Siyara in Jaipur.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -27,8 +27,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Frequently Asked Questions (FAQ) | Siyara Innovations Jaipur',
-    description: 'Answers to common questions regarding web development and SEO in Jaipur.',
+    title: 'Web Development & SEO FAQ Jaipur | Siyara Innovations',
+    description: 'Answers to common questions regarding Next.js web development, local SEO timelines, pricing, and project onboarding with Siyara in Jaipur.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };

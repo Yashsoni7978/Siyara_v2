@@ -14,15 +14,15 @@ export default function Studio() {
       <div className="absolute inset-0 ivory-texture pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-80 pointer-events-none" />
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.6, ease: easeCustom }}
-          className="flex items-center gap-3 mb-12"
+          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          transition={{ duration: 0.5, ease: easeCustom }}
+          className="flex items-center gap-3 mb-8 sm:mb-12"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
             06
@@ -34,15 +34,15 @@ export default function Studio() {
         </motion.div>
 
         {/* Section Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
           {/* Left Column: Ambient Studio / Workspace Photo */}
           <div className="lg:col-span-6 relative">
             <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
+              initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.8, ease: easeCustom }}
+              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              transition={{ duration: 0.6, ease: easeCustom }}
               className="relative bg-[#ECE7D8] border border-[#0B5E49]/30 p-1 shadow-2xl"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
@@ -67,9 +67,9 @@ export default function Studio() {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
-              className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[1.04] mb-6"
+              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
+              className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[1.08] sm:leading-[1.04] mb-6 break-words"
             >
               Rooted in Jaipur. <br />
               Driven by innovation. <br />
@@ -79,9 +79,9 @@ export default function Studio() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.8, delay: 0.2, ease: easeCustom }}
-              className="font-sans text-base sm:text-lg text-[#101613]/70 font-light leading-relaxed mb-10 max-w-lg"
+              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
+              className="font-sans text-sm sm:text-base lg:text-lg text-[#101613]/70 font-light leading-relaxed mb-8 sm:mb-10 max-w-lg"
             >
               We're a Jaipur-based team of strategists, designers, developers, and growth specialists who care about the businesses we build for.
             </motion.p>
@@ -90,9 +90,9 @@ export default function Studio() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.8, delay: 0.3, ease: easeCustom }}
-              className="p-6 bg-[#ECE7D8] border border-[#0B5E49]/20 relative overflow-hidden flex items-center justify-between"
+              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
+              className="p-5 sm:p-6 bg-[#ECE7D8] border border-[#0B5E49]/20 relative overflow-hidden flex items-center justify-between rounded-xl sm:rounded-none"
             >
               <div>
                 <div className="flex items-center gap-2 mb-1">

@@ -10,11 +10,11 @@ export default function BlogPostClient({ article }) {
   const allArticles = [FEATURED_ARTICLE, ...BLOG_ARTICLES];
 
   const handleBack = () => {
-    router.push('/blog');
+    router.push('/insights');
   };
 
   const handleSelectArticle = (selected) => {
-    router.push(`/blog/${selected.slug}`);
+    router.push(`/insights/${selected.slug}`);
   };
 
   return (

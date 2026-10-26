@@ -4,8 +4,8 @@ import { ArrowLeft, Shield, Mail, MessageCircle } from 'lucide-react';
 import { BUSINESS_CONFIG } from '../../src/config/business';
 
 export const metadata = {
-  title: 'Privacy Policy | Siyara Innovations Jaipur',
-  description: 'Privacy Policy for Siyara Innovations. Understand how we collect, use, and protect your information when you contact us or browse our website.',
+  title: 'Privacy Policy · Jaipur Studio',
+  description: 'Privacy Policy for Siyara Innovations. Learn how our Jaipur digital studio protects your data, communications, and project information.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/privacy',
   },
@@ -13,8 +13,8 @@ export const metadata = {
     type: 'website',
     url: 'https://www.siyaradigitals.com/privacy',
     siteName: 'Siyara Innovations',
-    title: 'Privacy Policy | Siyara Innovations Jaipur',
-    description: 'Privacy Policy for Siyara Innovations. Understand how we collect, use, and protect your information when you contact us or browse our website.',
+    title: 'Privacy Policy · Jaipur Studio | Siyara Innovations',
+    description: 'Privacy Policy for Siyara Innovations. Learn how our Jaipur digital studio protects your data, communications, and project information.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -27,8 +27,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Privacy Policy | Siyara Innovations Jaipur',
-    description: 'Privacy Policy for Siyara Innovations. Understand how we collect, use, and protect your information.',
+    title: 'Privacy Policy · Jaipur Studio | Siyara Innovations',
+    description: 'Privacy Policy for Siyara Innovations. Learn how our Jaipur digital studio protects your data, communications, and project information.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };

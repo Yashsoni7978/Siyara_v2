@@ -66,23 +66,27 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/services/ui-ux-design',
-        destination: '/services',
+        source: '/services/app-development',
+        destination: '/services/mobile-app-development',
         permanent: true,
       },
       {
         source: '/services/ai-agents',
-        destination: '/services',
+        destination: '/services/ai-automation',
+        permanent: true,
+      },
+      // ==========================================
+      // /blog → /insights Canonical Unification
+      // Eliminates duplicate content & GSC penalties
+      // ==========================================
+      {
+        source: '/blog',
+        destination: '/insights',
         permanent: true,
       },
       {
-        source: '/blog/what-high-performing-websites-have-in-common',
-        destination: '/blog/what-makes-a-high-performing-website',
-        permanent: true,
-      },
-      {
-        source: '/blog/how-to-choose-web-development-company',
-        destination: '/blog/how-to-choose-a-web-design-agency-in-jaipur',
+        source: '/blog/:slug*',
+        destination: '/insights/:slug*',
         permanent: true,
       },
     ];

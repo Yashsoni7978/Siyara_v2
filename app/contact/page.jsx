@@ -1,8 +1,8 @@
 import Contact from '../../src/views/Contact';
 
 export const metadata = {
-  title: 'Contact Siyara Innovations | Web Design & SEO Studio Jaipur',
-  description: 'Connect with Siyara Innovations via WhatsApp or email. Start your web design, SEO, social media marketing, or branding project in Jaipur.',
+  title: 'Contact Web Design Studio Jaipur',
+  description: 'Connect with Siyara Innovations via WhatsApp or email. Start your web design, local SEO, or brand architecture project with our Jaipur studio.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/contact',
   },
@@ -10,8 +10,8 @@ export const metadata = {
     type: 'website',
     url: 'https://www.siyaradigitals.com/contact',
     siteName: 'Siyara Innovations',
-    title: 'Contact Siyara Innovations | Web Design & SEO Studio Jaipur',
-    description: 'Connect with Siyara Innovations via WhatsApp or email. Start your web design, SEO, social media marketing, or branding project in Jaipur.',
+    title: 'Contact Web Design Studio Jaipur | Siyara Innovations',
+    description: 'Connect with Siyara Innovations via WhatsApp or email. Start your web design, local SEO, or brand architecture project with our Jaipur studio.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -24,8 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Siyara Innovations | Web Design & SEO Studio Jaipur',
-    description: 'Connect with Siyara Innovations via WhatsApp or email. Start your web design, SEO, social media marketing, or branding project in Jaipur.',
+    title: 'Contact Web Design Studio Jaipur | Siyara Innovations',
+    description: 'Connect with Siyara Innovations via WhatsApp or email. Start your web design, local SEO, or brand architecture project with our Jaipur studio.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };

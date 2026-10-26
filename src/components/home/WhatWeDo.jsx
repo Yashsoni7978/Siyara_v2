@@ -13,36 +13,42 @@ export default function WhatWeDo() {
       id: '01',
       title: 'BRAND STRATEGY & IDENTITY',
       subtitle: 'Positioning, naming, visual identity, messaging',
+      href: '/services/brand-strategy',
       icon: Edit3,
     },
     {
       id: '02',
       title: 'WEBSITE DESIGN & DEVELOPMENT (JAIPUR)',
       subtitle: 'Websites and web applications built for speed and conversion',
+      href: '/services/web-design-development',
       icon: Code,
     },
     {
       id: '03',
       title: 'SEO & GEO OPTIMIZATION',
       subtitle: 'Search visibility across Google and AI answer engines',
+      href: '/services/seo-geo',
       icon: Search,
     },
     {
       id: '04',
       title: 'DIGITAL MARKETING & GROWTH',
       subtitle: 'Paid media, social, and performance marketing',
+      href: '/services/performance-marketing',
       icon: Megaphone,
     },
     {
       id: '05',
       title: 'AI & BUSINESS AUTOMATION',
       subtitle: 'Intelligent workflows that replace manual ops',
+      href: '/services/ai-automation',
       icon: Sparkles,
     },
     {
       id: '06',
       title: 'GROWTH SYSTEMS & CRO',
       subtitle: 'Analytics, conversion optimization, scalable growth',
+      href: '/services/crm-lead-systems',
       icon: TrendingUp,
     },
   ];
@@ -52,35 +58,35 @@ export default function WhatWeDo() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.12,
+        staggerChildren: 0.04,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 15 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+      transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
     },
   };
 
   return (
-    <section id="services" className="relative py-16 sm:py-20 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
+    <section id="services" className="relative py-14 sm:py-20 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
       {/* Background Emerald-Black Atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#071E18]/60 via-[#070A09] to-[#070A09] opacity-80 pointer-events-none" />
       <div className="absolute top-1/3 left-10 w-[500px] h-[500px] bg-[#0C6B52]/15 blur-3xl rounded-full pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.6 }}
-          className="flex items-center gap-3 mb-10"
+          viewport={{ once: true, amount: 0.05 }}
+          transition={{ duration: 0.4 }}
+          className="flex items-center gap-3 mb-6 sm:mb-10"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             01
@@ -93,13 +99,13 @@ export default function WhatWeDo() {
 
         {/* Section Title */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="mb-20 max-w-3xl"
+          viewport={{ once: true, amount: 0.05 }}
+          transition={{ duration: 0.5 }}
+          className="mb-12 sm:mb-20 max-w-3xl"
         >
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98]">
+          <h2 className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.05] sm:leading-[0.98] break-words">
             One connected system, <br />
             eight disciplines <br />
             working <span className="text-[#D9B45F] font-normal">together.</span>
@@ -107,7 +113,7 @@ export default function WhatWeDo() {
         </motion.div>
 
         {/* Continuous Flowing Line & Node Flow (Desktop Horizontal / Mobile Responsive) */}
-        <div className="relative pt-8 pb-12">
+        <div className="relative pt-4 sm:pt-8 pb-8 sm:pb-12">
           
           {/* Continuous Glowing SVG Line (Desktop) */}
           <div className="hidden lg:block absolute top-[60px] left-0 right-0 h-[2px] z-0">
@@ -131,8 +137,8 @@ export default function WhatWeDo() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-50px' }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-4 relative z-10"
+            viewport={{ once: true, amount: 0.05 }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-4 relative z-10"
           >
             {services.map((service, index) => {
               const Icon = service.icon;
@@ -141,17 +147,18 @@ export default function WhatWeDo() {
               return (
                 <Link
                   key={service.id}
-                  href="/services"
+                  href={service.href}
+                  aria-label={`Explore ${service.title} services in Jaipur`}
                   className="block group"
                 >
                   <motion.div
                     variants={itemVariants}
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
-                    className="flex flex-col items-center text-center cursor-pointer"
+                    className="flex flex-col items-center text-center cursor-pointer p-4 sm:p-2 rounded-xl bg-[#0B110F]/60 sm:bg-transparent border sm:border-0 border-white/5"
                   >
                     {/* Node Circle Container */}
-                    <div className="relative mb-6">
+                    <div className="relative mb-4 sm:mb-6">
                       {/* Glowing Halo on Hover */}
                       <div
                         className={`absolute -inset-3 rounded-full bg-[#18A982]/20 blur-md transition-opacity duration-300 ${
@@ -180,7 +187,7 @@ export default function WhatWeDo() {
 
                     {/* Service Title */}
                     <h3
-                      className={`font-sans text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase mb-2 transition-all duration-300 h-10 ${
+                      className={`font-sans text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase mb-2 transition-all duration-300 leading-snug ${
                         isHovered ? 'text-[#D9B45F] -translate-y-0.5' : 'text-[#F3EFE3]'
                       }`}
                     >
@@ -188,7 +195,7 @@ export default function WhatWeDo() {
                     </h3>
 
                     {/* Service Description */}
-                    <p className="font-sans text-[11px] text-[#9D9B91] font-light leading-relaxed max-w-[160px]">
+                    <p className="font-sans text-[11px] text-[#9D9B91] font-light leading-relaxed max-w-[200px] sm:max-w-[160px]">
                       {service.subtitle}
                     </p>
                   </motion.div>

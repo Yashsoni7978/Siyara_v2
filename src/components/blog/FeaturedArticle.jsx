@@ -15,21 +15,21 @@ export default function FeaturedArticle({ article, onSelectArticle }) {
   };
 
   return (
-    <section className="relative py-12 md:py-16 bg-[#080B0A]">
-      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12">
+    <section className="relative py-10 md:py-16 bg-[#080B0A]">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12">
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          transition={{ duration: 0.5 }}
           onClick={handleClick}
-          className="group relative border border-[#D4AF37]/25 bg-[#063C2D]/15 hover:border-[#D4AF37]/50 transition-all duration-500 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 cursor-pointer"
+          className="group relative border border-[#D4AF37]/25 bg-[#063C2D]/15 hover:border-[#D4AF37]/50 transition-all duration-500 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 cursor-pointer rounded-xl lg:rounded-none"
         >
           {/* Subtle Ambient Hover Glow */}
           <div className="absolute inset-0 bg-radial from-[#19A878]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
           {/* Left Column: Visual Asset with Art Direction */}
-          <div className="lg:col-span-7 relative min-h-[340px] lg:min-h-[460px] overflow-hidden bg-[#080B0A]">
+          <div className="lg:col-span-7 relative min-h-[260px] sm:min-h-[340px] lg:min-h-[460px] overflow-hidden bg-[#080B0A]">
             <Image 
               src={article.image} 
               alt={article.title}
@@ -43,14 +43,14 @@ export default function FeaturedArticle({ article, onSelectArticle }) {
             <div className="absolute inset-0 bg-radial from-transparent via-transparent to-[#080B0A]/80" />
             
             {/* Fine Geometric Overlay Line */}
-            <div className="absolute top-6 left-6 border border-[#D4AF37]/30 bg-[#080B0A]/80 backdrop-blur-md px-3 py-1 text-[10px] font-sans tracking-widest text-[#D4AF37] uppercase flex items-center gap-1.5 z-10">
+            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 border border-[#D4AF37]/30 bg-[#080B0A]/80 backdrop-blur-md px-3 py-1 text-[10px] font-sans tracking-widest text-[#D4AF37] uppercase flex items-center gap-1.5 z-10">
               <Bookmark className="w-3 h-3 text-[#19A878]" />
               <span>{article.category}</span>
             </div>
           </div>
 
           {/* Right Column: Editorial Details */}
-          <div className="lg:col-span-5 p-8 sm:p-10 lg:p-12 flex flex-col justify-between relative z-10">
+          <div className="lg:col-span-5 p-5 sm:p-10 lg:p-12 flex flex-col justify-between relative z-10">
             <div>
               {/* Category & Badge */}
               <div className="flex items-center gap-3 mb-4">
@@ -64,7 +64,7 @@ export default function FeaturedArticle({ article, onSelectArticle }) {
               </div>
 
               {/* Title */}
-              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE4] group-hover:text-[#E5C378] transition-colors duration-300 leading-tight mb-4">
+              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE4] group-hover:text-[#E5C378] transition-colors duration-300 leading-tight mb-4 break-words">
                 {article.title}
               </h2>
 

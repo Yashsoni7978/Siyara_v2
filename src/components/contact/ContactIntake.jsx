@@ -100,15 +100,15 @@ export default function ContactIntake() {
       <div className="absolute inset-0 ivory-texture pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-80 pointer-events-none" />
 
-      <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="mb-16 sm:mb-20 max-w-3xl">
+        <div className="mb-12 sm:mb-20 max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: easeCustom }}
+            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+            transition={{ duration: 0.5, ease: easeCustom }}
             className="flex items-center gap-3 mb-6"
           >
             <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
@@ -123,9 +123,9 @@ export default function ContactIntake() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: easeCustom }}
-            className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98] mb-6"
+            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+            transition={{ duration: 0.6, ease: easeCustom }}
+            className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[1.08] sm:leading-[0.98] mb-4 sm:mb-6 break-words"
           >
             START A <br />
             <span className="text-[#0B5E49] font-normal">CONVERSATION.</span>
@@ -134,9 +134,9 @@ export default function ContactIntake() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1, ease: easeCustom }}
-            className="font-sans text-base sm:text-lg text-[#101613]/70 font-light leading-relaxed max-w-xl"
+            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+            transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
+            className="font-sans text-sm sm:text-base lg:text-lg text-[#101613]/70 font-light leading-relaxed max-w-xl"
           >
             Every meaningful digital system starts with understanding the problem first.
           </motion.p>
@@ -262,7 +262,7 @@ export default function ContactIntake() {
                       key={cap}
                       type="button"
                       onClick={() => handleSelectCapability(cap)}
-                      className={`px-5 py-2.5 text-xs font-sans font-semibold tracking-[0.14em] uppercase transition-all duration-300 ${
+                      className={`min-h-[44px] px-4 sm:px-5 py-2.5 text-xs font-sans font-semibold tracking-[0.14em] uppercase transition-all duration-300 rounded-sm ${
                         isSelected
                           ? 'bg-[#0B5E49] text-[#F3EFE3] shadow-md'
                           : 'bg-[#ECE7D8] text-[#101613]/80 border border-[#B9923F]/30 hover:border-[#0B5E49] hover:text-[#0B5E49]'
@@ -297,7 +297,7 @@ export default function ContactIntake() {
               <button
                 type="submit"
                 disabled={status.submitting}
-                className="inline-flex items-center gap-2.5 px-9 py-4 bg-[#B9923F] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#B9923F]/20 hover:shadow-[#0B5E49]/30"
+                className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-9 py-4 bg-[#B9923F] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#B9923F]/20 hover:shadow-[#0B5E49]/30"
               >
                 {status.submitting ? (
                   <>

@@ -51,15 +51,15 @@ export default function Approach() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#070A09] via-[#071E18]/40 to-[#070A09] opacity-90 pointer-events-none" />
       <div className="absolute right-[10%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0C6B52]/15 blur-3xl rounded-full pointer-events-none" />
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.6, ease: easeCustom }}
-          className="flex items-center gap-3 mb-10"
+          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          transition={{ duration: 0.5, ease: easeCustom }}
+          className="flex items-center gap-3 mb-8 sm:mb-10"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
             05
@@ -71,13 +71,13 @@ export default function Approach() {
         </motion.div>
 
         {/* Section Headline */}
-        <div className="mb-20 max-w-2xl">
+        <div className="mb-12 sm:mb-20 max-w-2xl">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.8, delay: 0.1, ease: easeCustom }}
-            className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[1.04]"
+            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+            transition={{ duration: 0.6, ease: easeCustom }}
+            className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[1.04] break-words"
           >
             A disciplined process, built around how <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">Jaipur businesses actually grow.</span>
           </motion.h2>
@@ -96,7 +96,7 @@ export default function Approach() {
           </div>
 
           {/* 6 Stages Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-4 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-4 relative z-10">
             {steps.map((step, idx) => {
               const Icon = step.icon;
               const isActive = idx === activeStep;
@@ -106,11 +106,11 @@ export default function Approach() {
                   key={step.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-50px' }}
-                  transition={{ duration: 0.6, delay: 0.08 * idx, ease: easeCustom }}
+                  viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+                  transition={{ duration: 0.5, delay: 0.03 * idx, ease: easeCustom }}
                   onClick={() => setActiveStep(idx)}
                   onMouseEnter={() => setActiveStep(idx)}
-                  className="flex flex-col items-center text-center group cursor-pointer"
+                  className="flex flex-col items-center text-center group cursor-pointer p-4 sm:p-0 rounded-xl sm:rounded-none bg-[#071E18]/20 sm:bg-transparent border border-[#D9B45F]/15 sm:border-none"
                 >
                   {/* Node Circle Container */}
                   <div className="relative mb-6">

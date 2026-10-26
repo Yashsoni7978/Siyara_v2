@@ -23,43 +23,28 @@ export default function BlogHero() {
         }}
       />
 
-      <div className="max-w-[1500px] mx-auto pl-5 pr-6 sm:pl-6 sm:pr-8 lg:pl-10 lg:pr-12 xl:pl-16 xl:pr-12 relative z-10">
+      <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         <div className="max-w-4xl">
           {/* Eyebrow */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#D4AF37]/30 bg-[#063C2D]/30 mb-6 backdrop-blur-sm"
-          >
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#D4AF37]/30 bg-[#063C2D]/30 mb-6 backdrop-blur-sm">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span className="font-sans text-[11px] font-semibold tracking-[0.25em] text-[#D4AF37] uppercase">
               SIYARA INSIGHTS
             </span>
-          </motion.div>
+          </div>
 
           {/* Main Editorial Display Heading */}
-          <motion.h1 
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-serif text-4xl sm:text-6xl md:text-7xl font-light text-[#F3EFE4] leading-[1.08] tracking-tight mb-8"
-          >
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl font-light text-[#F3EFE4] leading-[1.08] tracking-tight mb-6 sm:mb-8 break-words">
             Ideas that shape the{' '}
             <span className="font-normal text-gold-gradient">
               digital future.
             </span>
-          </motion.h1>
+          </h1>
 
           {/* Supporting Perspective Line */}
-          <motion.p 
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="font-sans text-base sm:text-lg md:text-xl text-[#CFC9BB]/90 font-light leading-relaxed max-w-2xl"
-          >
+          <p className="font-sans text-sm sm:text-base md:text-xl text-[#CFC9BB]/90 font-light leading-relaxed max-w-2xl">
             Insights, strategies and perspectives on building brands, technology and growth in a rapidly changing digital world.
-          </motion.p>
+          </p>
         </div>
 
         {/* Fine Editorial Accent Strip */}

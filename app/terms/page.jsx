@@ -4,7 +4,7 @@ import { ArrowLeft, FileText } from 'lucide-react';
 import { BUSINESS_CONFIG } from '../../src/config/business';
 
 export const metadata = {
-  title: 'Terms of Service | Siyara Innovations Jaipur',
+  title: 'Terms of Service · Jaipur Studio',
   description: 'Terms of Service for Siyara Innovations. Guidelines, intellectual property rights, and terms governing our digital agency client engagements.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/terms',
@@ -13,7 +13,7 @@ export const metadata = {
     type: 'website',
     url: 'https://www.siyaradigitals.com/terms',
     siteName: 'Siyara Innovations',
-    title: 'Terms of Service | Siyara Innovations Jaipur',
+    title: 'Terms of Service · Jaipur Studio | Siyara Innovations',
     description: 'Terms of Service for Siyara Innovations. Guidelines, intellectual property rights, and terms governing our digital agency client engagements.',
     images: [
       {
@@ -27,8 +27,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Terms of Service | Siyara Innovations Jaipur',
-    description: 'Terms of Service for Siyara Innovations.',
+    title: 'Terms of Service · Jaipur Studio | Siyara Innovations',
+    description: 'Terms of Service for Siyara Innovations. Guidelines, intellectual property rights, and terms governing our digital agency client engagements.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };

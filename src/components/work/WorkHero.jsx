@@ -30,33 +30,23 @@ export default function WorkHero() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#070A09]/60 via-transparent to-[#070A09]/90 pointer-events-none" />
       </div>
 
-      <div className="max-w-[1550px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10 my-auto">
+      <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-12 w-full relative z-10 my-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           
           {/* Left Column Editorial Side Annotation */}
-          <motion.div
-            initial={{ opacity: 0, x: -15 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="hidden lg:flex lg:col-span-1 flex-col gap-4 border-l border-[#D4AF37]/35 pl-4 text-[9px] font-sans tracking-[0.3em] text-[#F3EFE3]/60 uppercase font-semibold select-none"
-          >
+          <div className="hidden lg:flex lg:col-span-1 flex-col gap-4 border-l border-[#D4AF37]/35 pl-4 text-[9px] font-sans tracking-[0.3em] text-[#F3EFE3]/60 uppercase font-semibold select-none">
             <span>IDEAS</span>
             <span>BRANDS</span>
             <span>DIGITAL</span>
             <span>EXPERIENCES</span>
             <span>GROWTH</span>
-          </motion.div>
+          </div>
 
           {/* Main Hero Content Area (Left 40% of screen over negative space) */}
           <div className="lg:col-span-10 flex flex-col items-start lg:pr-8">
             
             {/* Eyebrow */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex items-center gap-3 mb-6"
-            >
+            <div className="flex items-center gap-3 mb-6">
               <span className="text-xs font-sans font-bold tracking-[0.24em] text-[#D4AF37]">
                 01
               </span>
@@ -64,46 +54,31 @@ export default function WorkHero() {
               <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.26em] text-[#F3EFE3] uppercase">
                 OUR WORK
               </span>
-            </motion.div>
+            </div>
 
             {/* Main Editorial Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.15 }}
-              className="font-serif text-5xl sm:text-7xl lg:text-8xl text-[#F3EFE3] font-normal leading-[0.94] tracking-tight mb-6 max-w-xl"
-            >
+            <h1 className="font-serif text-4xl sm:text-7xl lg:text-8xl text-[#F3EFE3] font-normal leading-[0.96] tracking-tight mb-6 max-w-xl break-words">
               Brands <br />
               <span className="italic font-normal text-[#D4AF37] font-serif">
                 in Action.
               </span>
-            </motion.h1>
+            </h1>
 
             {/* Supporting Copy */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="font-sans text-sm sm:text-base text-[#F3EFE3]/85 font-light leading-relaxed max-w-[540px] mb-8"
-            >
+            <p className="font-sans text-sm sm:text-base text-[#F3EFE3]/85 font-light leading-relaxed max-w-[540px] mb-8">
               A showcase of {totalProjects}+ projects across industries: turning bold ideas into meaningful digital experiences.
-            </motion.p>
+            </p>
 
             {/* Primary CTA (Rectangular / Editorial) */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="mb-10 lg:mb-12"
-            >
+            <div className="mb-10 lg:mb-12">
               <a
                 href="#explore-industry"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-[#D4AF37] hover:bg-[#E5C378] text-[#070A09] text-xs font-sans font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-2xl group border border-[#D4AF37]"
+                className="inline-flex items-center justify-center min-h-[48px] gap-3 px-8 py-3.5 bg-[#D4AF37] hover:bg-[#E5C378] text-[#070A09] text-xs font-sans font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-2xl group border border-[#D4AF37] rounded-sm"
               >
                 <span>EXPLORE OUR WORK</span>
                 <ArrowDown className="w-4 h-4 text-[#070A09] group-hover:translate-y-1 transition-transform" />
               </a>
-            </motion.div>
+            </div>
 
             {/* Project Proof Statistics (Lower-Left) */}
             <motion.div

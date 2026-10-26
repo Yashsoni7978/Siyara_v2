@@ -42,15 +42,15 @@ export default function ContactDetails() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#070A09] via-[#071E18]/40 to-[#070A09] opacity-90 pointer-events-none" />
       <div className="absolute left-[10%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0C6B52]/15 blur-3xl rounded-full pointer-events-none" />
 
-      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="mb-20 max-w-3xl">
+        <div className="mb-12 sm:mb-20 max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: easeCustom }}
+            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+            transition={{ duration: 0.5, ease: easeCustom }}
             className="flex items-center gap-3 mb-6"
           >
             <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
@@ -65,9 +65,9 @@ export default function ContactDetails() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: easeCustom }}
-            className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98] mb-6"
+            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+            transition={{ duration: 0.6, ease: easeCustom }}
+            className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[0.98] mb-4 sm:mb-6 break-words"
           >
             GOOD WORK <br />
             STARTS WITH A <br />
@@ -79,24 +79,24 @@ export default function ContactDetails() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1, ease: easeCustom }}
-            className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed max-w-xl"
+            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+            transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
+            className="font-sans text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light leading-relaxed max-w-xl"
           >
             Not every project needs the same answer. The first step is understanding where you are, where you want to go, and what needs to change.
           </motion.p>
         </div>
 
         {/* 3 Vertical Editorial Contact Pathways */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-20">
           {pathways.map((path, idx) => (
             <motion.div
               key={path.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.1, ease: easeCustom }}
-              className="p-8 bg-[#071E18]/40 border border-[#D9B45F]/25 hover:border-[#D9B45F]/60 transition-all duration-300 group flex flex-col justify-between"
+              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              transition={{ duration: 0.5, delay: idx * 0.04, ease: easeCustom }}
+              className="p-5 sm:p-8 rounded-xl md:rounded-none bg-[#071E18]/40 border border-[#D9B45F]/25 hover:border-[#D9B45F]/60 transition-all duration-300 group flex flex-col justify-between"
             >
               <div>
                 <span className="text-xs font-sans font-bold text-[#D9B45F] tracking-widest block mb-4">
