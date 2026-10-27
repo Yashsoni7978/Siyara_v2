@@ -1,17 +1,78 @@
 @import "tailwindcss";
 
+@theme {
+  --color-obsidian: #080B0A;
+  --color-deep-emerald: #063C2D;
+  --color-rich-emerald: #0B5A43;
+  --color-emerald-highlight: #19A878;
+  --color-muted-sage: #A5B8AA;
+  --color-warm-ivory: #F3EFE4;
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
 @layer base {
   :root {
-    --siyara-obsidian: #070A09;
-    --siyara-deep-emerald: #071E18;
-    --siyara-emerald-accent: #0C6B52;
-    --siyara-bright-emerald: #18A982;
-    --siyara-champagne-gold: #D9B45F;
-    --siyara-light-gold: #E8C979;
-    --siyara-ivory: #F3EFE3;
+    /* ── 1. Approved Brand Colour Tokens ────────────────────────────── */
+    --color-obsidian: #080B0A;
+    --color-deep-emerald: #063C2D;
+    --color-rich-emerald: #0B5A43;
+    --color-emerald-highlight: #19A878;
+    --color-muted-sage: #A5B8AA;
+    --color-warm-ivory: #F3EFE4;
+    --color-white: #FFFFFF;
+
+    /* ── 2. Semantic Surfaces & Backgrounds ─────────────────────────── */
+    --bg-primary: #080B0A;
+    --bg-secondary: #063C2D;
+    --bg-surface: #0B110F;
+    --bg-card: rgba(6, 60, 45, 0.20);
+    --bg-card-hover: rgba(6, 60, 45, 0.35);
+    --bg-light-section: #F3EFE4;
+    --bg-light-surface: #ECE7D8;
+
+    /* ── 3. Semantic Typography & Text ──────────────────────────────── */
+    --text-primary: #F3EFE4;
+    --text-secondary: #A5B8AA;
+    --text-muted: #8E9B91;
+    --text-dark: #101613;
+    --text-dark-muted: rgba(16, 22, 19, 0.72);
+
+    /* ── 4. Accents, Borders & Focus ────────────────────────────────── */
+    --accent-primary: #19A878;
+    --accent-hover: #1EB884;
+    --border-subtle: rgba(25, 168, 120, 0.18);
+    --border-medium: rgba(25, 168, 120, 0.35);
+    --border-strong: rgba(25, 168, 120, 0.55);
+    --border-light-section: rgba(11, 90, 67, 0.18);
+    --focus-ring: #19A878;
+    --selection-bg: #063C2D;
+    --selection-text: #19A878;
+
+    /* ── 5. Component Metrics & Timing ──────────────────────────────── */
+    --max-w-content: 1400px;
+    --max-w-editorial: 1320px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+    --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-base: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* ── 6. Backward Compatibility Aliases (Safe Migration) ─────────── */
+    --font-manrope: var(--font-inter);
+    --siyara-obsidian: #080B0A;
+    --siyara-deep-emerald: #063C2D;
+    --siyara-emerald-accent: #0B5A43;
+    --siyara-bright-emerald: #19A878;
+    --siyara-champagne-gold: #19A878;
+    --siyara-light-gold: #1EB884;
+    --siyara-ivory: #F3EFE4;
     --siyara-warm-ivory: #ECE7D8;
     --siyara-dark-text: #101613;
-    --siyara-muted-text: #9D9B91;
+    --siyara-muted-text: #A5B8AA;
   }
 
   html {
@@ -19,9 +80,9 @@
   }
 
   body {
-    font-family: var(--font-manrope), system-ui, -apple-system, sans-serif;
-    background-color: var(--siyara-obsidian);
-    color: var(--siyara-ivory);
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    background-color: var(--color-obsidian);
+    color: var(--color-warm-ivory);
     overflow-x: hidden;
     position: relative;
     -webkit-font-smoothing: antialiased;
@@ -55,13 +116,13 @@
 .article-prose th,
 .article-prose td {
   padding: 0.75rem 1rem;
-  border: 1px solid rgba(217, 180, 95, 0.2);
+  border: 1px solid rgba(25, 168, 120, 0.2);
   white-space: nowrap;
 }
 
 .article-prose th {
-  background-color: rgba(7, 30, 24, 0.6);
-  color: #D9B45F;
+  background-color: rgba(6, 60, 45, 0.6);
+  color: #19A878;
   font-family: var(--font-cormorant), serif;
   font-size: 1rem;
 }
@@ -89,37 +150,39 @@
 }
 
 .font-sans {
-  font-family: var(--font-manrope), system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
 }
 
-.text-gold {
-  color: #D9B45F;
+.text-gold,
+.text-accent {
+  color: #19A878;
 }
 
-.text-gold-gradient {
-  background: linear-gradient(135deg, #E8C979 0%, #D9B45F 50%, #B38F26 100%);
+.text-gold-gradient,
+.text-emerald-gradient {
+  background: linear-gradient(135deg, #1EB884 0%, #19A878 50%, #0B5A43 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-emerald-atmosphere {
-  background: radial-gradient(circle at 50% 30%, rgba(7, 30, 24, 0.45) 0%, rgba(7, 10, 9, 0.95) 70%, #070A09 100%);
+  background: radial-gradient(circle at 50% 30%, rgba(6, 60, 45, 0.45) 0%, rgba(8, 11, 10, 0.95) 70%, #080B0A 100%);
 }
 
 .bg-emerald-glow {
-  background: radial-gradient(circle at center, rgba(24, 169, 130, 0.15) 0%, rgba(7, 30, 24, 0.05) 50%, transparent 70%);
+  background: radial-gradient(circle at center, rgba(25, 168, 120, 0.15) 0%, rgba(6, 60, 45, 0.05) 50%, transparent 70%);
 }
 
 .border-gold-subtle {
-  border-color: rgba(217, 180, 95, 0.22);
+  border-color: rgba(25, 168, 120, 0.22);
 }
 
 .border-emerald-subtle {
-  border-color: rgba(12, 107, 82, 0.24);
+  border-color: rgba(25, 168, 120, 0.24);
 }
 
 .glass-nav {
-  background: rgba(7, 10, 9, 0.88);
+  background: rgba(8, 11, 10, 0.90);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
@@ -206,14 +269,14 @@
 /* ── Ivory section editorial texture overlay ────────────────────── */
 .ivory-texture {
   background-image:
-    radial-gradient(ellipse at 80% 20%, rgba(11,94,73,0.04) 0%, transparent 60%),
-    radial-gradient(ellipse at 20% 80%, rgba(181,145,63,0.04) 0%, transparent 60%);
+    radial-gradient(ellipse at 80% 20%, rgba(11, 90, 67, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(6, 60, 45, 0.04) 0%, transparent 60%);
 }
 
 /* ── Section connector architectural lines ──────────────────────── */
 .connector-line {
   height: 1px;
-  background: linear-gradient(to right, transparent 0%, rgba(217,180,95,0.30) 40%, rgba(217,180,95,0.30) 60%, transparent 100%);
+  background: linear-gradient(to right, transparent 0%, rgba(25, 168, 120, 0.25) 40%, rgba(25, 168, 120, 0.25) 60%, transparent 100%);
 }
 
 /* ── Slow marquee pause on hover ─────────────────────────────────── */
@@ -221,28 +284,55 @@
   animation-play-state: paused;
 }
 
-/* ── Premium button shared style ─────────────────────────────────── */
+/* ── Standardized button tokens & shared styles ──────────────────── */
+.btn-primary,
 .btn-gold {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.625rem;
-  padding: 1rem 2.25rem;
-  background: #D9B45F;
-  color: #101613;
-  font-family: var(--font-manrope), sans-serif;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  padding: 0.875rem 2rem;
+  background: #19A878;
+  color: #080B0A;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   border-radius: 9999px;
-  box-shadow: 0 10px 25px -5px rgba(217, 180, 95, 0.18);
+  box-shadow: 0 8px 24px -4px rgba(25, 168, 120, 0.28);
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, box-shadow 0.25s ease;
   will-change: transform;
 }
+.btn-primary:hover,
 .btn-gold:hover {
-  background: #E8C979;
+  background: #1EB884;
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px -5px rgba(217, 180, 95, 0.3);
+  box-shadow: 0 12px 28px -4px rgba(25, 168, 120, 0.40);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.875rem 2rem;
+  background: rgba(6, 60, 45, 0.30);
+  color: #F3EFE4;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid rgba(25, 168, 120, 0.28);
+  border-radius: 9999px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease;
+  will-change: transform;
+}
+.btn-secondary:hover {
+  background: rgba(6, 60, 45, 0.55);
+  border-color: rgba(25, 168, 120, 0.50);
+  transform: translateY(-2px);
 }
 
 /* ── Refined Card Hover Elevation ───────────────────────────────── */

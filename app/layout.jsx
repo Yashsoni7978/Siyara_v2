@@ -5,7 +5,7 @@ import Footer from '../src/components/home/Footer';
 import FloatingContact from '../src/components/layout/FloatingContact';
 import CursorSpotlight from '../src/components/common/CursorSpotlight';
 import JsonLd, { getRootOrganizationGraph } from '../src/components/common/JsonLd';
-import { Cormorant_Garamond, Manrope } from 'next/font/google';
+import { Cormorant_Garamond, Inter } from 'next/font/google';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -14,11 +14,11 @@ const cormorant = Cormorant_Garamond({
   variable: '--font-cormorant',
 });
 
-const manrope = Manrope({
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-manrope',
+  variable: '--font-inter',
 });
 
 export const metadata = {
@@ -81,11 +81,11 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={`${manrope.className} ${cormorant.variable} ${manrope.variable} bg-[#070A09] text-[#F3EFE3] antialiased selection:bg-[#071E18] selection:text-[#D9B45F] overflow-x-hidden font-sans`}>
+      <body className={`${inter.className} ${cormorant.variable} ${inter.variable} bg-[#080B0A] text-[#F3EFE4] antialiased selection:bg-[#063C2D] selection:text-[#19A878] overflow-x-hidden font-sans`}>
         {/* Skip to Main Content Link for Keyboard Accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-[#D9B45F] focus:text-[#070A09] focus:font-sans focus:font-semibold focus:text-sm focus:rounded focus:outline-none focus:ring-2 focus:ring-[#F3EFE3]"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-[#19A878] focus:text-[#080B0A] focus:font-sans focus:font-semibold focus:text-sm focus:rounded focus:outline-none focus:ring-2 focus:ring-[#F3EFE4]"
         >
           Skip to main content
         </a>
