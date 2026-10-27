@@ -81,26 +81,27 @@ export default function SelectedWork() {
                   ))}
                 </div>
 
-                {/* CTA Button */}
-                {currentProject.link ? (
-                  <a
-                    href={currentProject.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-4 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.16em] sm:tracking-[0.18em] uppercase transition-all duration-300 shadow-lg group min-h-[44px]"
-                  >
-                    <span>EXPLORE LIVE SHOWCASE</span>
-                    <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </a>
-                ) : (
+                {/* CTA Buttons */}
+                <div className="flex flex-wrap items-center gap-3">
                   <Link
-                    href="/work"
-                    className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-4 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.16em] sm:tracking-[0.18em] uppercase transition-all duration-300 shadow-lg group min-h-[44px]"
+                    href={`/work/${currentProject.slug}`}
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-wider uppercase transition-all duration-300 shadow-md group min-h-[44px]"
                   >
-                    <span>EXPLORE ALL WORK</span>
-                    <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <span>VIEW PROJECT DETAILS</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </Link>
-                )}
+                  {currentProject.link && (
+                    <a
+                      href={currentProject.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-1.5 px-4 py-3 border border-[#B9923F]/40 bg-white/40 hover:bg-white text-[#101613] text-xs font-semibold tracking-wider uppercase transition-all duration-300 min-h-[44px]"
+                    >
+                      <span>LIVE DEMO</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
+                  )}
+                </div>
               </motion.div>
             </AnimatePresence>
           </div>

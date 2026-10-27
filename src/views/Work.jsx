@@ -11,13 +11,16 @@ import { getIndustryCategories } from '../data/projectsData';
 
 export default function Work() {
   const [selectedIndustry, setSelectedIndustry] = useState('ALL');
+  const [selectedClassification, setSelectedClassification] = useState('ALL');
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    // Parse query parameter if present (e.g., ?industry=healthcare)
+    // Parse query parameters if present (e.g., ?industry=healthcare&type=demo)
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       const indParam = params.get('industry');
+      const classParam = params.get('type') || params.get('classification');
+
       if (indParam) {
         const categories = getIndustryCategories();
         const matchedCat = categories.find(
@@ -25,6 +28,13 @@ export default function Work() {
         );
         if (matchedCat) {
           setSelectedIndustry(matchedCat.id);
+        }
+      }
+
+      if (classParam) {
+        const normalized = classParam.toUpperCase().replace(/[^A-Z]/g, '_');
+        if (['DELIVERED_PROJECT', 'LIVE_DEMO', 'CONCEPT'].includes(normalized)) {
+          setSelectedClassification(normalized);
         }
       }
     }
@@ -51,8 +61,23 @@ export default function Work() {
     }
   };
 
+  const handleSelectClassification = (classificationId) => {
+    setSelectedClassification(classificationId);
+
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      if (classificationId === 'ALL') {
+        url.searchParams.delete('type');
+      } else {
+        url.searchParams.set('type', classificationId.toLowerCase().replace(/_/g, '-'));
+      }
+      window.history.pushState({}, '', url.toString());
+    }
+  };
+
   const handleClearFilter = () => {
     handleSelectIndustry('ALL');
+    handleSelectClassification('ALL');
   };
 
   return (
@@ -69,6 +94,8 @@ export default function Work() {
       {/* SECTION 03 - FEATURED WORK & PROJECT GRID (WARM IVORY CONTINUED) */}
       <FeaturedWorkGrid
         selectedIndustry={selectedIndustry}
+        selectedClassification={selectedClassification}
+        onSelectClassification={handleSelectClassification}
         onClearFilter={handleClearFilter}
       />
 

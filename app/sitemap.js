@@ -1,5 +1,6 @@
 import { FEATURED_ARTICLE, BLOG_ARTICLES } from '../src/data/blogArticles';
 import { SERVICES_DATA } from './services/[slug]/page';
+import { projectsData } from '../src/data/projectsData';
 
 export const dynamic = "force-static";
 
@@ -70,7 +71,6 @@ export default async function sitemap() {
   }));
 
   // 6. Dynamic Editorial & Insights Articles (/insights/* ONLY — canonical)
-  // /blog/* is permanently redirected to /insights/* via next.config.js
   const allArticles = [FEATURED_ARTICLE, ...BLOG_ARTICLES];
 
   const insightRoutes = allArticles.map((article) => {
@@ -91,6 +91,14 @@ export default async function sitemap() {
     };
   });
 
+  // 7. Individual Portfolio & Architecture Showcases (/work/*)
+  const projectRoutes = projectsData.map((project) => ({
+    url: `${baseUrl}/work/${project.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly',
+    priority: project.status === 'LIVE' ? 0.8 : 0.65,
+  }));
+
   return [
     ...coreRoutes,
     ...commercialRoutes,
@@ -98,5 +106,6 @@ export default async function sitemap() {
     ...industryRoutes,
     ...legalRoutes,
     ...insightRoutes,
+    ...projectRoutes,
   ];
 }
