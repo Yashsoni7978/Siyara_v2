@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { 
   ArrowLeft, 
   Clock, 
@@ -90,13 +91,13 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
         
         {/* Back Navigation & Breadcrumb */}
         <div className="mb-6 sm:mb-8 flex items-center justify-between">
-          <button
-            onClick={onBack}
+          <Link
+            href="/insights"
             className="group inline-flex items-center gap-2 px-3.5 py-2 border border-[#D4AF37]/30 bg-[#063C2D]/20 text-[#CFC9BB] hover:text-[#F3EFE4] hover:border-[#D4AF37] font-sans text-xs uppercase tracking-widest transition-all duration-300 min-h-[40px]"
           >
             <ArrowLeft className="w-4 h-4 text-[#D4AF37] group-hover:-translate-x-1 transition-transform" />
             <span>Back to Insights</span>
-          </button>
+          </Link>
 
           <div className="hidden sm:flex items-center gap-2 border border-[#D4AF37]/30 bg-[#063C2D]/30 px-3 py-1 text-[10px] font-sans text-[#D4AF37] uppercase tracking-widest">
             <Bookmark className="w-3 h-3 text-[#19A878]" />
@@ -405,22 +406,18 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
                 </h3>
               </div>
 
-              <button
-                onClick={onBack}
+              <Link
+                href="/insights"
                 className="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-[#D4AF37] uppercase tracking-wider hover:text-[#E5C378]"
               >
                 <span>View All Articles</span>
                 <ArrowUpRight className="w-4 h-4" />
-              </button>
+              </Link>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedArticles.map((relArt) => (
-                <div 
-                  key={relArt.id} 
-                  onClick={() => onSelectArticle && onSelectArticle(relArt)}
-                  className="cursor-pointer"
-                >
+                <div key={relArt.id}>
                   <ArticleCard article={relArt} onSelectArticle={onSelectArticle} />
                 </div>
               ))}

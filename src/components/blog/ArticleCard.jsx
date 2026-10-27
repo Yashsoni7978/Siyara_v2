@@ -4,23 +4,29 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Clock } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ArticleCard({ article, index = 0, onSelectArticle }) {
-  const handleClick = () => {
+  const handleClick = (e) => {
     if (onSelectArticle) {
       onSelectArticle(article);
     }
   };
 
   return (
-    <motion.article 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '80px 0px' }}
       transition={{ duration: 0.45, delay: Math.min((index % 3) * 0.03, 0.06) }}
-      onClick={handleClick}
-      className="group relative flex flex-col h-full bg-[#080B0A] border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#D4AF37]/5 rounded-xl"
+      className="h-full"
     >
+      <Link
+        href={`/insights/${article.slug}`}
+        onClick={handleClick}
+        aria-label={`Read article: ${article.title}`}
+        className="group relative flex flex-col h-full bg-[#080B0A] border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-[#D4AF37]/5 rounded-xl block focus:outline-none focus:ring-2 focus:ring-[#19A878]"
+      >
       {/* Subtle Atmosphere Hover Overlay */}
       <div className="absolute inset-0 bg-radial from-[#19A878]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
@@ -84,6 +90,7 @@ export default function ArticleCard({ article, index = 0, onSelectArticle }) {
           </div>
         </div>
       </div>
-    </motion.article>
+      </Link>
+    </motion.div>
   );
 }

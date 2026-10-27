@@ -4,11 +4,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Clock, User, Bookmark } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function FeaturedArticle({ article, onSelectArticle }) {
   if (!article) return null;
 
-  const handleClick = () => {
+  const handleClick = (e) => {
     if (onSelectArticle) {
       onSelectArticle(article);
     }
@@ -22,9 +23,13 @@ export default function FeaturedArticle({ article, onSelectArticle }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.5 }}
-          onClick={handleClick}
-          className="group relative border border-[#D4AF37]/25 bg-[#063C2D]/15 hover:border-[#D4AF37]/50 transition-all duration-500 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 cursor-pointer rounded-xl lg:rounded-none"
         >
+          <Link
+            href={`/insights/${article.slug}`}
+            onClick={handleClick}
+            aria-label={`Read featured insight: ${article.title}`}
+            className="group relative border border-[#D4AF37]/25 bg-[#063C2D]/15 hover:border-[#D4AF37]/50 transition-all duration-500 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 cursor-pointer rounded-xl lg:rounded-none block focus:outline-none focus:ring-2 focus:ring-[#19A878]"
+          >
           {/* Subtle Ambient Hover Glow */}
           <div className="absolute inset-0 bg-radial from-[#19A878]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
@@ -108,6 +113,7 @@ export default function FeaturedArticle({ article, onSelectArticle }) {
               </div>
             </div>
           </div>
+          </Link>
         </motion.div>
       </div>
     </section>
