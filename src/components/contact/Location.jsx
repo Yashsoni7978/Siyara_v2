@@ -13,7 +13,7 @@ export default function Location() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.6, ease: easeCustom }}
           className="rounded-2xl border border-[#D4AF37]/25 bg-[#0A0D0C] overflow-hidden shadow-2xl relative"
         >

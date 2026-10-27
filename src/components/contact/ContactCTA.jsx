@@ -25,7 +25,7 @@ export default function ContactCTA() {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.6, ease: easeCustom }}
           className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[0.96] tracking-tight mb-4 sm:mb-6 max-w-3xl mx-auto break-words"
         >
@@ -37,7 +37,7 @@ export default function ContactCTA() {
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
           className="font-sans text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light max-w-lg mx-auto mb-8 sm:mb-12 leading-relaxed"
         >
@@ -48,7 +48,7 @@ export default function ContactCTA() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5"
         >

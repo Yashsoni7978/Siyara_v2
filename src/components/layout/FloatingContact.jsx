@@ -12,7 +12,7 @@ export default function FloatingContact() {
         href={siteConfig.whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-12 h-12 bg-[#071E18]/95 text-[#D9B45F] rounded-full shadow-[0_4px_20px_rgba(7,10,9,0.7)] border border-[#D9B45F]/40 active:scale-95 transition-all duration-200 backdrop-blur-md"
+        className="flex items-center justify-center w-12 h-12 bg-[#071E18] text-[#D9B45F] rounded-full shadow-[0_4px_20px_rgba(7,10,9,0.7)] border border-[#D9B45F]/40 active:scale-95 transition-transform duration-200"
         aria-label="Chat on WhatsApp"
       >
         <MessageCircle className="w-5 h-5" />

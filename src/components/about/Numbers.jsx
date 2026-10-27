@@ -43,7 +43,7 @@ export default function Numbers() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.5, ease: easeCustom }}
           className="flex items-center gap-3 mb-10 sm:mb-16"
         >
@@ -63,7 +63,7 @@ export default function Numbers() {
               key={stat.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.5, delay: 0.04 * idx, ease: easeCustom }}
               className={`flex flex-col justify-between p-5 sm:p-6 lg:p-0 lg:px-8 rounded-xl lg:rounded-none bg-[#ECE7D8]/60 lg:bg-transparent border border-[#0B5E49]/10 lg:border-none relative ${
                 idx !== 0 ? 'lg:border-l lg:border-[#B9923F]/30' : ''

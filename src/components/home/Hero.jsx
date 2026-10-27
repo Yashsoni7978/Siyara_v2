@@ -8,10 +8,10 @@ import Link from 'next/link';
 export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
   
-  // Single coordinated parallax mouse state
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const heroRef = useRef(null);
   const videoRef = useRef(null);
+  const videoParallaxRef = useRef(null);
+  const plaqueParallaxRef = useRef(null);
   const [isDesktop, setIsDesktop] = useState(false);
   const isMobile = !isDesktop;
 
@@ -47,13 +47,16 @@ export default function Hero() {
     rafMoveRef.current = requestAnimationFrame(() => {
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
-      const normX = (clientX - centerX) / centerX;
-      const normY = (clientY - centerY) / centerY;
+      const normX = Math.max(-1, Math.min(1, (clientX - centerX) / centerX));
+      const normY = Math.max(-1, Math.min(1, (clientY - centerY) / centerY));
 
-      setMousePos({
-        x: Math.max(-1, Math.min(1, normX)),
-        y: Math.max(-1, Math.min(1, normY)),
-      });
+      if (videoParallaxRef.current) {
+        videoParallaxRef.current.style.transform = `translate3d(${(normX * 2).toFixed(1)}px, ${(normY * 2).toFixed(1)}px, 0)`;
+      }
+      if (plaqueParallaxRef.current) {
+        plaqueParallaxRef.current.style.transform = `translate3d(${(normX * 3).toFixed(1)}px, ${(normY * 3).toFixed(1)}px, 0)`;
+      }
+
       rafMoveRef.current = null;
     });
   };
@@ -63,27 +66,15 @@ export default function Hero() {
       cancelAnimationFrame(rafMoveRef.current);
       rafMoveRef.current = null;
     }
-    setMousePos({ x: 0, y: 0 });
+    if (videoParallaxRef.current) {
+      videoParallaxRef.current.style.transform = 'translate3d(0, 0, 0)';
+    }
+    if (plaqueParallaxRef.current) {
+      plaqueParallaxRef.current.style.transform = 'translate3d(0, 0, 0)';
+    }
   };
 
   const easeCustom = [0.16, 1, 0.3, 1];
-
-  const fadeUp = (delayMs) => ({
-    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, delay: delayMs / 1000, ease: easeCustom },
-    },
-  });
-
-  const getParallaxStyle = (multiplier) => {
-    if (isMobile || shouldReduceMotion) return {};
-    return {
-      transform: `translate3d(${mousePos.x * multiplier}px, ${mousePos.y * multiplier}px, 0)`,
-      transition: 'transform 0.3s ease-out',
-    };
-  };
 
   return (
     <section
@@ -95,24 +86,35 @@ export default function Hero() {
       {/* LAYER 01: Obsidian Black Canvas Base */}
       <div className="absolute inset-0 bg-[#070A09] z-0" />
 
-      {/* LAYER 02: Fine Emerald Ambient Glow Sphere Behind Video */}
-      <div className="absolute right-[8%] top-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#071E18]/60 via-[#18A982]/18 to-transparent blur-3xl rounded-full pointer-events-none z-[1]" />
+      {/* LAYER 02: Fine Emerald Ambient Glow Sphere Behind Video (GPU-efficient radial gradient) */}
+      <div 
+        className="absolute right-[8%] top-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none z-[1]" 
+        style={{
+          background: 'radial-gradient(circle at center, rgba(7, 30, 24, 0.65) 0%, rgba(24, 169, 130, 0.16) 40%, transparent 70%)',
+        }}
+      />
 
       {/* LAYER 03: Atmospheric Bridge (Headline -> Video Transition Haze) */}
-      <div className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] bg-gradient-to-r from-transparent via-[#071E18]/30 to-[#18A982]/12 blur-3xl pointer-events-none z-[2]" />
+      <div 
+        className="absolute left-[25%] right-[15%] top-1/2 -translate-y-1/2 h-[520px] pointer-events-none z-[2]" 
+        style={{
+          background: 'radial-gradient(ellipse at center, rgba(7, 30, 24, 0.40) 0%, rgba(24, 169, 130, 0.10) 45%, transparent 75%)',
+        }}
+      />
 
       {/* LAYER 04: MASTER HERO CINEMATIC VIDEO - Rendered ONLY on Desktop to avoid bandwidth on Mobile */}
       {isDesktop && (
         <motion.div
+          ref={videoParallaxRef}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.3, ease: easeCustom }}
           style={{
-            ...getParallaxStyle(2),
+            transition: 'transform 0.3s ease-out',
             maskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
             WebkitMaskImage: 'radial-gradient(ellipse 86% 90% at 72% 50%, black 45%, transparent 95%)',
           }}
-          className="absolute right-0 top-0 bottom-0 w-full lg:w-[66%] xl:w-[70%] h-full pointer-events-none z-[3] hidden lg:flex items-center justify-end overflow-hidden"
+          className="absolute right-0 top-0 bottom-0 w-full lg:w-[66%] xl:w-[70%] h-full pointer-events-none z-[3] hidden lg:flex items-center justify-end overflow-hidden will-change-transform"
         >
           <video
             ref={videoRef}
@@ -198,8 +200,9 @@ export default function Hero() {
 
       {/* RIGHT SIDE: Refined Architectural Studio Callout Annotation (Hidden on mobile to protect layout) */}
       <div
-        style={getParallaxStyle(3)}
-        className="hidden md:flex absolute right-4 sm:right-8 lg:right-12 xl:right-16 bottom-6 sm:bottom-10 lg:bottom-14 z-20 flex-col items-center pointer-events-none select-none origin-bottom-right scale-75 sm:scale-85 md:scale-95 lg:scale-100 max-w-[calc(100vw-2rem)]"
+        ref={plaqueParallaxRef}
+        style={{ transition: 'transform 0.3s ease-out' }}
+        className="hidden md:flex absolute right-4 sm:right-8 lg:right-12 xl:right-16 bottom-6 sm:bottom-10 lg:bottom-14 z-20 flex-col items-center pointer-events-none select-none origin-bottom-right scale-75 sm:scale-85 md:scale-95 lg:scale-100 max-w-[calc(100vw-2rem)] will-change-transform"
       >
         {/* Subtle Top Architectural Connector Line */}
         <div className="w-[1px] h-6 sm:h-8 lg:h-10 bg-gradient-to-t from-[#D4AF37]/90 via-[#D4AF37]/40 to-transparent relative" />

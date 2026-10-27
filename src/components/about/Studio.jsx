@@ -20,7 +20,7 @@ export default function Studio() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.5, ease: easeCustom }}
           className="flex items-center gap-3 mb-8 sm:mb-12"
         >
@@ -41,7 +41,7 @@ export default function Studio() {
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.6, ease: easeCustom }}
               className="relative bg-[#ECE7D8] border border-[#0B5E49]/30 p-1 shadow-2xl"
             >
@@ -67,7 +67,7 @@ export default function Studio() {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
               className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[1.08] sm:leading-[1.04] mb-6 break-words"
             >
@@ -79,7 +79,7 @@ export default function Studio() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
               className="font-sans text-sm sm:text-base lg:text-lg text-[#101613]/70 font-light leading-relaxed mb-8 sm:mb-10 max-w-lg"
             >
@@ -90,7 +90,7 @@ export default function Studio() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
               className="p-5 sm:p-6 bg-[#ECE7D8] border border-[#0B5E49]/20 relative overflow-hidden flex items-center justify-between rounded-xl sm:rounded-none"
             >

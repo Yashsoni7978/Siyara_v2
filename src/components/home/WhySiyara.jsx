@@ -46,8 +46,8 @@ export default function WhySiyara() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: '80px 0px' }}
+          transition={{ duration: 0.4 }}
           className="flex items-center gap-3 mb-8 sm:mb-12"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
@@ -66,8 +66,8 @@ export default function WhySiyara() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: '80px 0px' }}
+            transition={{ duration: 0.5 }}
             className="lg:col-span-5 pr-0 lg:pr-6"
           >
             <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[1.05] sm:leading-[0.98] mb-4 sm:mb-6 break-words">
@@ -84,7 +84,7 @@ export default function WhySiyara() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              viewport={{ once: true, margin: '80px 0px' }}
               variants={{
                 hidden: { opacity: 0 },
                 visible: { opacity: 1, transition: { staggerChildren: 0.04 } },
@@ -99,12 +99,12 @@ export default function WhySiyara() {
                   <motion.div
                     key={item.id}
                     variants={{
-                      hidden: { opacity: 0, y: 20 },
-                      visible: { opacity: 1, y: 0, transition: { duration: 0.45 } },
+                      hidden: { opacity: 0, y: 15 },
+                      visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
                     }}
                     onMouseEnter={() => setHoveredIdx(idx)}
                     onMouseLeave={() => setHoveredIdx(null)}
-                    className={`flex flex-col justify-between p-4 sm:p-5 lg:p-0 lg:py-4 lg:px-6 rounded-xl lg:rounded-none bg-[#ECE7D8]/70 lg:bg-transparent border border-[#0B5E49]/10 lg:border-none relative transition-all duration-300 ${
+                    className={`flex flex-col justify-between p-4 sm:p-5 lg:p-0 lg:py-4 lg:px-6 rounded-xl lg:rounded-none bg-[#ECE7D8]/70 lg:bg-transparent border border-[#0B5E49]/10 lg:border-none relative transition-[transform,border-color,box-shadow,background-color] duration-300 ${
                       idx !== 0 ? 'lg:border-l lg:border-[#101613]/12' : ''
                     } ${isHovered ? 'translate-y-[-3px]' : ''}`}
                   >

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { 
@@ -22,19 +22,28 @@ import NewsletterCTA from './NewsletterCTA.jsx';
 
 export default function BlogPost({ article, allArticles = [], onBack, onSelectArticle }) {
   const [copied, setCopied] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const progressBarRef = useRef(null);
 
   useEffect(() => {
+    let rafId = null;
+
     const handleScroll = () => {
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (totalHeight > 0) {
-        const currentProgress = (window.scrollY / totalHeight) * 100;
-        setScrollProgress(currentProgress);
-      }
+      if (rafId) return;
+      rafId = requestAnimationFrame(() => {
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (totalHeight > 0 && progressBarRef.current) {
+          const ratio = Math.min(1, Math.max(0, window.scrollY / totalHeight));
+          progressBarRef.current.style.transform = `scaleX(${ratio})`;
+        }
+        rafId = null;
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   const handleCopyLink = () => {
@@ -66,8 +75,9 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
       {/* Top Fixed Reading Progress Indicator */}
       <div className="fixed top-0 left-0 right-0 h-1 bg-[#063C2D] z-50">
         <div 
-          className="h-full bg-gradient-to-r from-[#D4AF37] via-[#E5C378] to-[#19A878] transition-all duration-150 ease-out"
-          style={{ width: `${scrollProgress}%` }}
+          ref={progressBarRef}
+          className="h-full bg-gradient-to-r from-[#D4AF37] via-[#E5C378] to-[#19A878] origin-left will-change-transform"
+          style={{ transform: 'scaleX(0)' }}
         />
       </div>
 

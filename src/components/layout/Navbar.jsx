@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -21,15 +21,17 @@ export default function Navbar() {
   else if (pathname === '/contact') currentPage = 'contact';
   else if (pathname.startsWith('/insights') || pathname.startsWith('/blog')) currentPage = 'insights';
 
+  const isScrolledRef = useRef(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      const isPast = window.scrollY > 40;
+      if (isPast !== isScrolledRef.current) {
+        isScrolledRef.current = isPast;
+        setScrolled(isPast);
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -72,10 +74,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 py-3 sm:py-3.5 transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${
         scrolled
-          ? 'bg-[#080B0A]/95 backdrop-blur-md border-b border-[#D4AF37]/15 py-3 shadow-2xl'
-          : 'bg-[#080B0A]/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none py-3.5 sm:py-4'
+          ? 'bg-[#080B0A]/95 backdrop-blur-md border-b border-[#D4AF37]/15 shadow-2xl'
+          : 'bg-[#080B0A]/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none border-b border-transparent'
       }`}
     >
       <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">

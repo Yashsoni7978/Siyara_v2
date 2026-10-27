@@ -74,7 +74,12 @@ export default function Industries() {
     <section id="industries" className="relative py-12 sm:py-16 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
       {/* Background Emerald-Black Atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#071E18]/60 via-[#070A09] to-[#070A09] opacity-80 pointer-events-none" />
-      <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-[#0C6B52]/15 blur-3xl rounded-full pointer-events-none" />
+      <div 
+        className="absolute top-1/3 right-10 w-[500px] h-[500px] rounded-full pointer-events-none" 
+        style={{
+          background: 'radial-gradient(circle at center, rgba(12, 107, 82, 0.22) 0%, transparent 70%)',
+        }}
+      />
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
@@ -82,7 +87,7 @@ export default function Industries() {
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
+          viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.4 }}
           className="flex items-center gap-3 mb-6 sm:mb-8"
         >
@@ -99,7 +104,7 @@ export default function Industries() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
+          viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.5 }}
           className="mb-8 max-w-3xl"
         >
@@ -116,7 +121,7 @@ export default function Industries() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, margin: '80px 0px' }}
             variants={{
               hidden: { opacity: 0 },
               visible: { opacity: 1, transition: { staggerChildren: 0.04 } },
@@ -188,13 +193,18 @@ export default function Industries() {
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: '80px 0px' }}
+            transition={{ duration: 0.6 }}
             className="lg:col-span-5 relative hidden lg:block"
           >
             <div className="relative mx-auto max-w-md">
               {/* Outer Atmosphere Glow */}
-              <div className="absolute -inset-4 bg-gradient-to-tr from-[#071E18] via-[#18A982]/20 to-transparent blur-2xl opacity-60 rounded-3xl" />
+              <div 
+                className="absolute -inset-4 opacity-60 rounded-3xl pointer-events-none" 
+                style={{
+                  background: 'radial-gradient(circle at center, rgba(24, 169, 130, 0.22) 0%, rgba(7, 30, 24, 0.45) 50%, transparent 75%)',
+                }}
+              />
 
               {/* Image Frame with Architectural Curved Edge */}
               <Link href={activeIndustry.href} className="block group">

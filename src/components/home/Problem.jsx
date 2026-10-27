@@ -45,7 +45,12 @@ export default function Problem() {
       {/* Subtle warm ivory atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8] to-[#F3EFE3] opacity-60 pointer-events-none" />
       {/* Ultra-faint emerald radial glow - editorial texture */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0B5E49]/04 blur-3xl rounded-full pointer-events-none" />
+      <div 
+        className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none" 
+        style={{
+          background: 'radial-gradient(circle at center, rgba(11, 94, 73, 0.08) 0%, transparent 70%)',
+        }}
+      />
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
 
@@ -53,8 +58,8 @@ export default function Problem() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: '80px 0px' }}
+          transition={{ duration: 0.4 }}
           className="flex items-center gap-3 mb-8 sm:mb-10"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
@@ -70,8 +75,8 @@ export default function Problem() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: '80px 0px' }}
+          transition={{ duration: 0.5 }}
           className="mb-10 sm:mb-12 max-w-3xl"
         >
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[1.05] sm:leading-[0.98] mb-4 sm:mb-5 break-words">
@@ -87,7 +92,7 @@ export default function Problem() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          viewport={{ once: true, margin: '80px 0px' }}
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1, transition: { staggerChildren: 0.03 } },
@@ -102,12 +107,12 @@ export default function Problem() {
               <motion.div
                 key={problem.id}
                 variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.45 } },
+                  hidden: { opacity: 0, y: 15 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
                 }}
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`flex flex-col p-5 lg:p-0 lg:px-6 rounded-xl lg:rounded-none bg-[#ECE7D8]/60 lg:bg-transparent border border-[#0B5E49]/10 lg:border-none relative transition-all duration-300 ${
+                className={`flex flex-col p-5 lg:p-0 lg:px-6 rounded-xl lg:rounded-none bg-[#ECE7D8]/60 lg:bg-transparent border border-[#0B5E49]/10 lg:border-none relative transition-[border-color,background-color,box-shadow] duration-300 ${
                   idx !== 0 ? 'lg:border-l lg:border-[#101613]/10' : ''
                 } cursor-default`}
               >

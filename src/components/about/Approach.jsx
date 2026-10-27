@@ -57,7 +57,7 @@ export default function Approach() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.5, ease: easeCustom }}
           className="flex items-center gap-3 mb-8 sm:mb-10"
         >
@@ -75,7 +75,7 @@ export default function Approach() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+            viewport={{ once: true, margin: '80px 0px' }}
             transition={{ duration: 0.6, ease: easeCustom }}
             className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[1.04] break-words"
           >
@@ -106,7 +106,7 @@ export default function Approach() {
                   key={step.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+                  viewport={{ once: true, margin: '80px 0px' }}
                   transition={{ duration: 0.5, delay: 0.03 * idx, ease: easeCustom }}
                   onClick={() => setActiveStep(idx)}
                   onMouseEnter={() => setActiveStep(idx)}

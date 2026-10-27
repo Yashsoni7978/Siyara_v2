@@ -50,7 +50,7 @@ export default function WhyContact() {
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.5, ease: easeCustom }}
               className="flex items-center gap-3 mb-6"
             >
@@ -63,7 +63,7 @@ export default function WhyContact() {
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
               className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE4] font-normal leading-[1.08] sm:leading-[1.04] tracking-tight break-words"
             >
@@ -76,7 +76,7 @@ export default function WhyContact() {
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
               className="font-sans text-xs sm:text-sm text-[#CFC9BB]/80 font-light leading-relaxed max-w-sm"
             >

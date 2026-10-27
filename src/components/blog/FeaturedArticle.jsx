@@ -20,7 +20,7 @@ export default function FeaturedArticle({ article, onSelectArticle }) {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.5 }}
           onClick={handleClick}
           className="group relative border border-[#D4AF37]/25 bg-[#063C2D]/15 hover:border-[#D4AF37]/50 transition-all duration-500 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 cursor-pointer rounded-xl lg:rounded-none"

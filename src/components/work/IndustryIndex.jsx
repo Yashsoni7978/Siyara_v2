@@ -125,7 +125,7 @@ export default function IndustryIndex({ selectedIndustry, onSelectIndustry }) {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+            viewport={{ once: true, margin: '80px 0px' }}
             transition={{ duration: 0.5 }}
             className="flex items-center gap-3"
           >

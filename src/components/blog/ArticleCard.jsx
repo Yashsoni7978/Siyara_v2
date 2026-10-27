@@ -16,7 +16,7 @@ export default function ArticleCard({ article, index = 0, onSelectArticle }) {
     <motion.article 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+      viewport={{ once: true, margin: '80px 0px' }}
       transition={{ duration: 0.45, delay: Math.min((index % 3) * 0.03, 0.06) }}
       onClick={handleClick}
       className="group relative flex flex-col h-full bg-[#080B0A] border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#D4AF37]/5 rounded-xl"

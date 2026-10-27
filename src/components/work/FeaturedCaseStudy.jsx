@@ -20,7 +20,7 @@ export default function FeaturedCaseStudy() {
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.5 }}
               className="flex items-center gap-3 mb-4"
             >
@@ -36,7 +36,7 @@ export default function FeaturedCaseStudy() {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.6, delay: 0.05 }}
               className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[1.06] sm:leading-[1.02] break-words"
             >
@@ -68,7 +68,7 @@ export default function FeaturedCaseStudy() {
             <motion.div
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+              viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.5 }}
               className="space-y-6"
             >

@@ -76,7 +76,12 @@ export default function WhatWeDo() {
     <section id="services" className="relative py-14 sm:py-20 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
       {/* Background Emerald-Black Atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#071E18]/60 via-[#070A09] to-[#070A09] opacity-80 pointer-events-none" />
-      <div className="absolute top-1/3 left-10 w-[500px] h-[500px] bg-[#0C6B52]/15 blur-3xl rounded-full pointer-events-none" />
+      <div 
+        className="absolute top-1/3 left-10 w-[500px] h-[500px] rounded-full pointer-events-none" 
+        style={{
+          background: 'radial-gradient(circle at center, rgba(12, 107, 82, 0.22) 0%, transparent 70%)',
+        }}
+      />
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
@@ -84,7 +89,7 @@ export default function WhatWeDo() {
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
+          viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.4 }}
           className="flex items-center gap-3 mb-6 sm:mb-10"
         >
@@ -101,7 +106,7 @@ export default function WhatWeDo() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
+          viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.5 }}
           className="mb-12 sm:mb-20 max-w-3xl"
         >
@@ -137,7 +142,7 @@ export default function WhatWeDo() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.05 }}
+            viewport={{ once: true, margin: '80px 0px' }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-4 relative z-10"
           >
             {services.map((service, index) => {

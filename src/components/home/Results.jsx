@@ -64,8 +64,8 @@ export default function Results() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: '80px 0px' }}
+          transition={{ duration: 0.4 }}
           className="flex items-center gap-3 mb-8 sm:mb-10"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
@@ -81,8 +81,8 @@ export default function Results() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: '80px 0px' }}
+          transition={{ duration: 0.5 }}
           className="mb-10 sm:mb-12 max-w-3xl"
         >
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-5xl xl:text-6xl text-[#101613] font-normal leading-[1.05] sm:leading-[0.98] tracking-tight uppercase mb-4 break-words">
@@ -93,7 +93,7 @@ export default function Results() {
           </p>
           <a
             href="#work"
-            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-6 py-3.5 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 shadow-lg group rounded-full"
+            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-6 py-3.5 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.18em] uppercase transition-[background-color,border-color,box-shadow] duration-300 shadow-lg group rounded-full"
           >
             <span>EXPLORE SELECTED WORK</span>
             <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -104,7 +104,7 @@ export default function Results() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
+          viewport={{ once: true, margin: '80px 0px' }}
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1, transition: { staggerChildren: 0.03 } },
@@ -117,10 +117,10 @@ export default function Results() {
               <motion.div
                 key={item.id}
                 variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+                  hidden: { opacity: 0, y: 15 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
                 }}
-                className="p-5 sm:p-6 bg-[#ECE7D8] border border-[#B9923F]/30 hover:border-[#0B5E49]/60 rounded-none transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-md"
+                className="p-5 sm:p-6 bg-[#ECE7D8] border border-[#B9923F]/30 hover:border-[#0B5E49]/60 rounded-none transition-[border-color,transform,box-shadow] duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-md"
               >
                 {/* Icon */}
                 <div className="w-10 h-10 rounded-full border border-[#0B5E49]/30 bg-[#F3EFE3] flex items-center justify-center text-[#0B5E49] group-hover:bg-[#0B5E49] group-hover:text-[#F3EFE3] group-hover:border-[#0B5E49] mb-6 transition-colors">
@@ -153,8 +153,8 @@ export default function Results() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: '80px 0px' }}
+          transition={{ duration: 0.5 }}
           className="pt-12 border-t border-[#101613]/10 flex flex-col items-center justify-center gap-8"
         >
           <div className="flex items-center gap-2 text-xs font-sans tracking-[0.2em] text-[#0B5E49] uppercase font-bold text-center">

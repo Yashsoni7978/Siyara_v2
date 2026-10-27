@@ -16,8 +16,8 @@ export default function Philosophy() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: '80px 0px' }}
+          transition={{ duration: 0.4 }}
           className="flex items-center gap-3 mb-8 sm:mb-12"
         >
           <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
@@ -36,8 +36,8 @@ export default function Philosophy() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, margin: '80px 0px' }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6 flex flex-col justify-center"
           >
             <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[0.98] tracking-tight mb-6 sm:mb-8 uppercase break-words">
@@ -65,14 +65,19 @@ export default function Philosophy() {
           <motion.div
             initial={{ opacity: 0, scale: 0.98, y: 20 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.05, margin: '0px 0px -40px 0px' }}
-            transition={{ duration: 0.6, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, margin: '80px 0px' }}
+            transition={{ duration: 0.5, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6 relative"
           >
             <div className="relative mx-auto max-w-lg lg:max-w-none">
               
               {/* Outer Emerald Glow Layer */}
-              <div className="absolute -inset-4 bg-gradient-to-tr from-[#071E18] via-[#18A982]/20 to-transparent blur-2xl opacity-50 rounded-3xl" />
+              <div 
+                className="absolute -inset-4 opacity-50 rounded-3xl pointer-events-none" 
+                style={{
+                  background: 'radial-gradient(circle at center, rgba(24, 169, 130, 0.22) 0%, rgba(7, 30, 24, 0.4) 50%, transparent 75%)',
+                }}
+              />
 
               {/* Architectural Visual Container with Organic Arched Clipping Mask */}
               <div className="relative rounded-br-[100px] rounded-tl-[40px] rounded-tr-2xl rounded-bl-2xl overflow-hidden border border-[#D9B45F]/40 shadow-2xl p-2 bg-[#070A09]">

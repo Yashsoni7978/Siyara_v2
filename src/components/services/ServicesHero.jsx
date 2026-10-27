@@ -8,7 +8,6 @@ import Image from 'next/image';
 
 export default function ServicesHero() {
   const shouldReduceMotion = useReducedMotion();
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isMobile, setIsMobile] = useState(false);
   const heroRef = useRef(null);
 
@@ -21,25 +20,6 @@ export default function ServicesHero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const handleMouseMove = (e) => {
-    if (isMobile || shouldReduceMotion || !heroRef.current) return;
-    const rect = heroRef.current.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    
-    const normX = (e.clientX - centerX) / (rect.width / 2);
-    const normY = (e.clientY - centerY) / (rect.height / 2);
-    
-    setMousePos({
-      x: Math.max(-1, Math.min(1, normX)),
-      y: Math.max(-1, Math.min(1, normY)),
-    });
-  };
-
-  const handleMouseLeave = () => {
-    setMousePos({ x: 0, y: 0 });
-  };
-
   const easeCustom = [0.16, 1, 0.3, 1];
 
   const fadeUp = (delayMs) => ({
@@ -51,19 +31,9 @@ export default function ServicesHero() {
     },
   });
 
-  const getParallaxStyle = (multiplier) => {
-    if (isMobile || shouldReduceMotion) return {};
-    return {
-      transform: `translate3d(${mousePos.x * multiplier}px, ${mousePos.y * multiplier}px, 0)`,
-      transition: 'transform 0.3s ease-out',
-    };
-  };
-
   return (
     <section
       ref={heroRef}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
       className="relative min-h-[100svh] pt-32 pb-20 lg:pt-36 lg:pb-24 bg-[#070A09] overflow-hidden flex items-center"
     >
       {/* LAYER 01: Obsidian Black Canvas Base */}
