@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'Siyara Innovations · Digital Architecture Studio Jaipur';
+export const alt = 'Siyara Innovations · Web Systems & Digital Engineering Jaipur';
 export const size = {
   width: 1200,
   height: 630,
@@ -91,7 +91,7 @@ export default async function OpenGraphImage() {
               opacity: 0.85,
             }}
           >
-            DIGITAL ARCHITECTURE STUDIO
+            WEB SYSTEMS &amp; DIGITAL ENGINEERING
           </div>
         </div>
 
@@ -117,7 +117,7 @@ export default async function OpenGraphImage() {
               textAlign: 'center',
             }}
           >
-            Digital Architecture Studio — Next.js Engineering, SEO &amp; AI Search (GEO)
+            High-Performance Web Systems — Next.js Engineering, SEO &amp; AI Search (GEO)
           </div>
           <div
             style={{

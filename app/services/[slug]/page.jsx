@@ -2108,59 +2108,59 @@ export default async function ServiceDetailPage({ params }) {
         </div>
       </section>
 
-      {/* 6. TRANSPARENT INVESTMENT BRACKETS (INR) */}
+      {/* 6. STRUCTURED ENGAGEMENT & DELIVERY MODELS */}
       <section className="px-4 sm:px-8 lg:px-16 max-w-6xl mx-auto mb-16 sm:mb-24">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
           <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
-            COMMERCIAL CLARITY
+            DELIVERY ARCHITECTURE
           </span>
           <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
-            Transparent Investment Tiers (INR)
+            Structured Engagement Models
           </h2>
           <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
-            Clear, scope-governed engineering contracts without hidden software markups or agency shortcuts.
+            Scope-governed engineering models aligned with your business requirements, timeline, and integration scale.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {(service.pricingTiers || [
+          {[
             {
-              tier: 'Foundational Architecture',
-              price: '₹35,000 – ₹75,000',
+              tier: 'Core Showcase Architecture',
+              level: 'Foundation & Speed',
               idealFor: 'Single-location clinics, boutique firms, and local showrooms establishing high-trust digital authority.',
               features: [
                 'Custom Next.js static build',
                 'Mobile-first UX (360px–430px)',
-                'Core Web Vitals guarantee (LCP < 1.8s)',
+                'Performance-optimized Core Web Vitals',
                 'Local SEO & Google Maps setup',
-                'WhatsApp click-to-chat funnel'
+                'WhatsApp direct inquiry funnel'
               ]
             },
             {
-              tier: 'Scale & Commercial Enterprise',
-              price: '₹75,000 – ₹1,80,000',
-              idealFor: 'High-growth B2B manufacturers, real estate developers, and private hospitals scaling regional inquiries.',
+              tier: 'Commercial Growth Platform',
+              level: 'Multi-Page & Scalable',
+              idealFor: 'High-growth B2B manufacturers, real estate developers, and private healthcare centers scaling regional inquiries.',
               features: [
                 'Dynamic multi-page architecture',
                 'Headless CMS content pipeline',
                 'Multi-location SEO & GEO entity graph',
                 'Automated CRM webhook integration',
-                'Sub-1.5s LCP on Indian 4G/5G'
+                'High-performance mobile loading'
               ]
             },
             {
-              tier: 'Bespoke Flagship Platform',
-              price: '₹1,80,000 – ₹5,00,000+',
-              idealFor: 'Multi-crore jewellery exporters, luxury hotel chains, and national enterprises demanding custom software.',
+              tier: 'Bespoke Enterprise System',
+              level: 'Custom Software & Integration',
+              idealFor: 'Export manufacturers, luxury hospitality destinations, and enterprises demanding custom digital systems.',
               features: [
                 'Bespoke full-stack web engineering',
                 'International multi-currency commerce',
-                'Custom AI business automation agents',
+                'Custom workflow automation integrations',
                 'Complete Schema.org knowledge graph',
-                'Ongoing CRO experimentation retainer'
+                'Ongoing conversion optimization support'
               ]
             }
-          ]).map((tier, idx) => (
+          ].map((tier, idx) => (
             <div
               key={idx}
               className={`p-6 sm:p-8 rounded-2xl flex flex-col justify-between transition-all ${
@@ -2178,8 +2178,8 @@ export default async function ServiceDetailPage({ params }) {
                 <span className="text-xs font-mono uppercase text-[#D9B45F] tracking-wider block mb-2">
                   {tier.tier}
                 </span>
-                <div className="text-2xl sm:text-3xl font-serif font-bold text-[#F3EFE3] mb-3">
-                  {tier.price}
+                <div className="text-xl sm:text-2xl font-serif text-[#F3EFE3] mb-3">
+                  {tier.level}
                 </div>
                 <p className="text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
                   {tier.idealFor}
@@ -2204,7 +2204,7 @@ export default async function ServiceDetailPage({ params }) {
                 }`}
               >
                 <MessageCircle className="w-3.5 h-3.5" />
-                <span>SCOPE THIS INVESTMENT</span>
+                <span>SCOPE THIS MODEL</span>
               </a>
             </div>
           ))}

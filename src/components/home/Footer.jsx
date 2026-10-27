@@ -74,7 +74,7 @@ export default function Footer() {
               </Link>
 
               <p className="font-sans text-xs sm:text-sm text-[#A5B8AA] font-light leading-relaxed mb-6 max-w-sm">
-                A digital architecture studio building connected Next.js systems, local SEO, and AI search visibility for growing businesses.
+                Engineering high-performance Next.js systems, local SEO, and search visibility for growing businesses.
               </p>
             </div>
 

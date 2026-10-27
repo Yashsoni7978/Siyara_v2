@@ -34,7 +34,6 @@ export function getRootOrganizationGraph() {
           'Siyara Digitals',
           'Siyara',
           'Siyara Innovations Jaipur',
-          'Siyara Digital Architecture Studio',
         ],
         'url': 'https://www.siyaradigitals.com',
         'logo': {
@@ -47,7 +46,7 @@ export function getRootOrganizationGraph() {
         },
         'image': 'https://www.siyaradigitals.com/images/siyara_og_image.png',
         'description':
-          'Siyara Innovations is a premier digital architecture studio, Next.js web development company, and Generative Engine Optimization (GEO) agency based in Malviya Nagar, Jaipur, Rajasthan, India. Founded by Yash Soni, we serve B2B brands across jewellery, real estate, healthcare, hospitality, and manufacturing sectors.',
+          'Siyara Innovations is a digital engineering agency, Next.js web development company, and search optimization partner based in Jaipur, Rajasthan, India. We engineer web systems for businesses across jewellery, real estate, healthcare, hospitality, and retail sectors.',
         'email': 'info@siyaradigitals.com',
         'telephone': '+91-9587269209',
         'priceRange': '₹₹₹',
@@ -55,7 +54,6 @@ export function getRootOrganizationGraph() {
         'paymentAccepted': 'Bank Transfer, UPI, Credit Card',
         'address': {
           '@type': 'PostalAddress',
-          'streetAddress': 'Malviya Nagar, Jaipur',
           'addressLocality': 'Jaipur',
           'addressRegion': 'Rajasthan',
           'postalCode': '302017',
@@ -85,34 +83,16 @@ export function getRootOrganizationGraph() {
           { '@type': 'City', 'name': 'Jaipur' },
           { '@type': 'State', 'name': 'Rajasthan' },
           { '@type': 'Country', 'name': 'India' },
-          { '@type': 'Place', 'name': 'Malviya Nagar' },
-          { '@type': 'Place', 'name': 'C-Scheme' },
-          { '@type': 'Place', 'name': 'Vaishali Nagar' },
-          { '@type': 'Place', 'name': 'Mansarovar' },
-          { '@type': 'Place', 'name': 'Sitapura Industrial Area' },
-          { '@type': 'Place', 'name': 'Johari Bazaar' },
-          { '@type': 'Place', 'name': 'Raja Park' },
         ],
-        'founder': {
-          '@type': 'Person',
-          '@id': 'https://www.siyaradigitals.com/#founder',
-          'name': 'Yash Soni',
-          'jobTitle': 'Founder & Creative Director',
-          'url': 'https://www.yashsoni.in',
-          'sameAs': [
-            'https://www.yashsoni.in',
-            'https://www.linkedin.com/in/yashsoni/',
-          ],
-        },
         'knowsAbout': [
-          'Digital Architecture',
-          'Next.js Web Development',
+          'Web Development',
+          'Next.js Web Engineering',
           'Generative Engine Optimization (GEO)',
           'Search Engine Optimization (SEO)',
           'Brand Identity Systems',
           'Core Web Vitals Performance Engineering',
           'Conversion Rate Optimization',
-          'B2B Web Design Jaipur',
+          'B2B Web Design',
           'Jewellery Website Design',
           'Real Estate Web Development',
         ],
@@ -126,7 +106,6 @@ export function getRootOrganizationGraph() {
         'sameAs': [
           'https://www.linkedin.com/company/siyarainnovations/',
           'https://www.instagram.com/siyarainnovations/',
-          'https://twitter.com/siyarainnovations',
         ],
       },
       {
@@ -135,7 +114,7 @@ export function getRootOrganizationGraph() {
         'url': 'https://www.siyaradigitals.com',
         'name': 'Siyara Innovations',
         'description':
-          'Digital Architecture Studio — Next.js Web Development, SEO/GEO, Brand Identity, and Performance Engineering in Jaipur, India.',
+          'High-Performance Web Systems — Next.js Development, SEO, and Brand Systems in Jaipur, India.',
         'publisher': {
           '@id': 'https://www.siyaradigitals.com/#organization',
         },
@@ -259,10 +238,10 @@ export function buildBlogPostingSchema({ article, slug }) {
     'datePublished': publishedDate,
     'dateModified': publishedDate,
     'author': {
-      '@type': 'Person',
-      '@id': 'https://www.siyaradigitals.com/#founder',
-      'name': 'Yash Soni',
-      'url': 'https://www.yashsoni.in',
+      '@type': 'Organization',
+      '@id': 'https://www.siyaradigitals.com/#organization',
+      'name': 'Siyara Innovations',
+      'url': 'https://www.siyaradigitals.com',
     },
     'publisher': {
       '@type': 'Organization',

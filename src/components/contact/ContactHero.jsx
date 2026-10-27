@@ -64,7 +64,7 @@ export default function ContactHero() {
             {/* Supporting Copy */}
             <div className="mb-8 sm:mb-10 max-w-lg">
               <p className="font-sans text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Tell us where you want to go. We'll help architect the digital system to get you there - built for Jaipur's market.
+                Tell us where you want to go. We will help engineer the digital system to get you there.
               </p>
             </div>
 

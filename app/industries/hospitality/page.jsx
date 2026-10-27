@@ -150,7 +150,7 @@ export default function HospitalityIndustryPage() {
               DIRECT REVENUE & CITABILITY
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
-              Why Choose a Dedicated Digital Architecture Studio for Hospitality Brands in Jaipur?
+              Why Choose a Dedicated Web Development Partner for Hospitality Brands in Jaipur?
             </h2>
             <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#070A09]/80 border border-[#18A982]/20 mb-6">
               <p className="font-sans text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">

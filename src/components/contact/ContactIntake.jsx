@@ -202,41 +202,45 @@ export default function ContactIntake() {
             {/* Field 1: Name */}
             <div className="group">
               <label htmlFor="name" className="block text-xs font-sans font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-2">
-                YOUR NAME *
+                YOUR NAME <span className="text-[#0B5E49]" aria-hidden="true">*</span>
+                <span className="sr-only">(required)</span>
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 required
+                aria-required="true"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="How should we call you?"
-                className="w-full py-3 bg-transparent border-b border-[#101613]/20 text-base sm:text-lg text-[#101613] placeholder-[#101613]/30 font-sans focus:outline-none focus:border-[#0B5E49] transition-colors"
+                className="w-full py-3 bg-transparent border-b border-[#101613]/20 text-base sm:text-lg text-[#101613] placeholder-[#101613]/30 font-sans focus:outline-none focus:border-[#0B5E49] focus-visible:ring-1 focus-visible:ring-[#0B5E49] transition-colors"
               />
             </div>
 
             {/* Field 2: Work Email */}
             <div className="group">
               <label htmlFor="email" className="block text-xs font-sans font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-2">
-                WORK EMAIL *
+                WORK EMAIL <span className="text-[#0B5E49]" aria-hidden="true">*</span>
+                <span className="sr-only">(required)</span>
               </label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 required
+                aria-required="true"
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="you@company.com"
-                className="w-full py-3 bg-transparent border-b border-[#101613]/20 text-base sm:text-lg text-[#101613] placeholder-[#101613]/30 font-sans focus:outline-none focus:border-[#0B5E49] transition-colors"
+                className="w-full py-3 bg-transparent border-b border-[#101613]/20 text-base sm:text-lg text-[#101613] placeholder-[#101613]/30 font-sans focus:outline-none focus:border-[#0B5E49] focus-visible:ring-1 focus-visible:ring-[#0B5E49] transition-colors"
               />
             </div>
 
             {/* Field 3: Company / Brand */}
             <div className="group">
               <label htmlFor="company" className="block text-xs font-sans font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-2">
-                COMPANY / BRAND
+                COMPANY / BRAND <span className="text-xs font-normal text-[#101613]/50">(Optional)</span>
               </label>
               <input
                 type="text"
@@ -245,7 +249,7 @@ export default function ContactIntake() {
                 value={formData.company}
                 onChange={handleChange}
                 placeholder="Your company or brand"
-                className="w-full py-3 bg-transparent border-b border-[#101613]/20 text-base sm:text-lg text-[#101613] placeholder-[#101613]/30 font-sans focus:outline-none focus:border-[#0B5E49] transition-colors"
+                className="w-full py-3 bg-transparent border-b border-[#101613]/20 text-base sm:text-lg text-[#101613] placeholder-[#101613]/30 font-sans focus:outline-none focus:border-[#0B5E49] focus-visible:ring-1 focus-visible:ring-[#0B5E49] transition-colors"
               />
             </div>
 
@@ -254,15 +258,16 @@ export default function ContactIntake() {
               <label className="block text-xs font-sans font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-4">
                 WHAT ARE YOU LOOKING TO BUILD?
               </label>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3" role="group" aria-label="Select service capability">
                 {capabilityOptions.map((cap) => {
                   const isSelected = formData.selectedCapability === cap;
                   return (
                     <button
                       key={cap}
                       type="button"
+                      aria-pressed={isSelected}
                       onClick={() => handleSelectCapability(cap)}
-                      className={`min-h-[44px] px-4 sm:px-5 py-2.5 text-xs font-sans font-semibold tracking-[0.14em] uppercase transition-all duration-300 rounded-sm ${
+                      className={`min-h-[44px] px-4 sm:px-5 py-2.5 text-xs font-sans font-semibold tracking-[0.14em] uppercase transition-all duration-300 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B5E49] ${
                         isSelected
                           ? 'bg-[#0B5E49] text-[#F3EFE3] shadow-md'
                           : 'bg-[#ECE7D8] text-[#101613]/80 border border-[#B9923F]/30 hover:border-[#0B5E49] hover:text-[#0B5E49]'
@@ -278,17 +283,19 @@ export default function ContactIntake() {
             {/* Field 5: Project Details */}
             <div className="group">
               <label htmlFor="details" className="block text-xs font-sans font-bold tracking-[0.2em] text-[#B9923F] uppercase mb-2">
-                PROJECT DETAILS *
+                PROJECT DETAILS <span className="text-[#0B5E49]" aria-hidden="true">*</span>
+                <span className="sr-only">(required)</span>
               </label>
               <textarea
                 id="details"
                 name="details"
                 rows={5}
                 required
+                aria-required="true"
                 value={formData.details}
                 onChange={handleChange}
                 placeholder="Tell us what you're trying to achieve..."
-                className="w-full py-3 bg-transparent border-b border-[#101613]/20 text-base text-[#101613] placeholder-[#101613]/30 font-sans focus:outline-none focus:border-[#0B5E49] transition-colors resize-none"
+                className="w-full py-3 bg-transparent border-b border-[#101613]/20 text-base text-[#101613] placeholder-[#101613]/30 font-sans focus:outline-none focus:border-[#0B5E49] focus-visible:ring-1 focus-visible:ring-[#0B5E49] transition-colors resize-none"
               />
             </div>
 

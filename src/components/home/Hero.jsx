@@ -141,7 +141,7 @@ export default function Hero() {
             <div className="flex items-center gap-3 mb-4 sm:mb-6">
               <span className="h-[1px] w-6 sm:w-8 bg-[#D9B45F]/60" />
               <span className="text-[10px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] sm:tracking-[0.26em] text-[#D9B45F] uppercase">
-                DIGITAL ARCHITECTURE STUDIO
+                DIGITAL SYSTEMS &amp; WEB ENGINEERING
               </span>
             </div>
 
@@ -171,7 +171,7 @@ export default function Hero() {
             {/* Supporting Copy - Immediate render */}
             <div className="mb-8 sm:mb-10 max-w-lg">
               <p className="font-sans text-sm sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Siyara Innovations is a Jaipur-based digital architecture studio: brand strategy, websites, SEO, and growth systems built as one connected system, not campaigns that compete with each other.
+                Siyara Innovations engineers connected digital systems: brand strategy, high-speed Next.js websites, search visibility, and conversion infrastructure built as one coherent platform.
               </p>
             </div>
 

@@ -1,15 +1,15 @@
 # Siyara Innovations (Siyara Digitals)
 
-> Siyara Innovations is an elite Digital Architecture Studio founded by Yash Soni in Malviya Nagar, Jaipur, Rajasthan, India. The studio specializes in high-speed Next.js 15 App Router web engineering, Generative Engine Optimization (GEO), technical SEO, editorial brand strategy, and autonomous B2B CRM growth pipelines. By replacing bloated monolithic platforms with static serverless architectures, Siyara Innovations delivers verified sub-second loading speeds, semantic Schema.org knowledge graphs, and authoritative citation visibility across Google Search, Google AI Overviews, OpenAI SearchGPT, and Perplexity.
+> Siyara Innovations is a digital engineering agency and web development studio based in Jaipur, Rajasthan, India. The studio specializes in high-speed Next.js web engineering, Generative Engine Optimization (GEO), technical SEO, editorial brand strategy, and autonomous B2B lead pipelines. By replacing bloated monolithic platforms with modern serverless architectures, Siyara Innovations delivers verified fast loading speeds, semantic Schema.org knowledge graphs, and authoritative search visibility across Google Search, Google AI Overviews, OpenAI SearchGPT, and Perplexity.
 
 ## Engineering Standards & Performance Benchmarks
-- **Core Web Vitals Guarantee**: Largest Contentful Paint (LCP) < 1.8 seconds on 4G/5G mobile networks, Cumulative Layout Shift (CLS) < 0.02, and Interaction to Next Paint (INP) < 80 milliseconds.
+- **Core Web Vitals Benchmarks**: Largest Contentful Paint (LCP) targeted under 1.8 seconds on 4G/5G mobile networks, Cumulative Layout Shift (CLS) under 0.02, and Interaction to Next Paint (INP) under 80 milliseconds.
 - **Frontend Architecture**: Next.js 15, React 19, Tailwind CSS v4, Framer Motion, TypeScript, edge caching, and serverless API handlers.
 - **Semantic Data Architecture**: Connected multi-type Schema.org JSON-LD `@graph` hierarchies linking `Organization`, `LocalBusiness`, `ProfessionalService`, `Service`, `BreadcrumbList`, and `FAQPage` nodes.
-- **Investment & Commercial Tiers**: Transparent scope-based commercial engineering in INR (Indian Rupee):
-  - **Growth Digital Architecture / Core Showcase**: ₹35,000 – ₹75,000 (Custom Next.js static build, local SEO, mobile UX, Schema.org graph).
-  - **Commercial Enterprise / Scale Architecture**: ₹75,000 – ₹1,80,000 (Multi-location SEO, dynamic headless CMS, lead scoring pipelines, sub-1.5s LCP).
-  - **Bespoke Flagship / Multi-System Architecture**: ₹1,80,000 – ₹5,00,000+ (Custom export portals, multi-currency commerce, enterprise GEO, Razorpay automation, continuous CRO).
+- **Scope & Engagement Tiers**: Structured, scope-based commercial engineering:
+  - **Core Web Showcase / Foundational Architecture**: Custom Next.js static build, local SEO, mobile UX, Schema.org graph.
+  - **Commercial Enterprise / Scale Architecture**: Multi-location SEO, dynamic headless CMS, lead scoring pipelines, sub-1.5s LCP.
+  - **Flagship Multi-System Architecture**: Custom export portals, multi-currency commerce, enterprise GEO, Razorpay automation, continuous CRO.
 
 ## Commercial Flagship Landers
 - [Digital Architecture Studio Jaipur](https://www.siyaradigitals.com/digital-architecture-studio-jaipur): Flagship manifesto on why modern enterprises require connected digital architecture rather than disconnected web agencies.

@@ -138,19 +138,22 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
           <div className="pt-6 border-t border-[#D4AF37]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
             {/* Author Profile */}
             <div className="flex items-center gap-3.5">
-              <Image 
-                src={article.author.avatar} 
-                alt={article.author.name}
-                width={44}
-                height={44}
-                className="w-11 h-11 rounded-full border border-[#D4AF37]/40 object-cover"
-              />
+              <div className="w-11 h-11 rounded-full border border-[#D4AF37]/40 bg-[#063C2D]/40 flex items-center justify-center p-2 shrink-0">
+                <Image 
+                  src="/logo.webp" 
+                  alt="Siyara Innovations"
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                  style={{ mixBlendMode: 'screen' }}
+                />
+              </div>
               <div>
                 <div className="font-sans text-sm font-semibold text-[#F3EFE4]">
-                  {article.author.name}
+                  Siyara Editorial Team
                 </div>
                 <div className="font-sans text-xs text-[#CFC9BB]/70">
-                  {article.author.role}
+                  Technology &amp; Strategy Desk
                 </div>
               </div>
             </div>
@@ -370,25 +373,28 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
 
         {/* Detailed Author Profile Card */}
         <div className="max-w-4xl mx-auto mt-20 p-8 sm:p-10 border border-[#D4AF37]/25 bg-[#063C2D]/15 flex flex-col sm:flex-row items-center sm:items-start gap-6">
-          <Image 
-            src={article.author.avatar} 
-            alt={article.author.name}
-            width={80}
-            height={80}
-            className="w-20 h-20 rounded-full border-2 border-[#D4AF37]/40 object-cover shrink-0"
-          />
+          <div className="w-20 h-20 rounded-full border-2 border-[#D4AF37]/40 bg-[#063C2D]/40 flex items-center justify-center p-3 shrink-0">
+            <Image 
+              src="/logo.webp" 
+              alt="Siyara Innovations"
+              width={64}
+              height={64}
+              className="object-contain"
+              style={{ mixBlendMode: 'screen' }}
+            />
+          </div>
           <div>
             <div className="text-xs font-sans uppercase tracking-widest text-[#D4AF37] mb-1">
-              Written By
+              Published By
             </div>
             <h3 className="font-serif text-xl text-[#F3EFE4] font-normal mb-1">
-              {article.author.name}
+              Siyara Editorial Team
             </h3>
             <p className="text-xs font-sans text-[#19A878] font-medium mb-3">
-              {article.author.role}
+              Technology &amp; Strategy Desk
             </p>
             <p className="font-sans text-xs text-[#CFC9BB]/80 leading-relaxed font-light">
-              {article.author.bio || 'Author at Siyara Innovations focusing on strategic positioning and enterprise technology.'}
+              The research and editorial desk at Siyara Innovations, analyzing modern web engineering, search engine optimization, and connected digital systems for growing businesses.
             </p>
           </div>
         </div>
