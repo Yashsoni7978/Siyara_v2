@@ -51,13 +51,13 @@ const CAPABILITIES = [
   'Request for Quotation (RFQ) Direct Intake Funnels',
   'International Export Compliance & Certification Displays',
   'Industrial B2B SEO & Global Trade Discoverability',
-  'Sub-Second Edge Infrastructure & Core Web Vitals',
+  'High-Performance Edge Infrastructure & Core Web Vitals',
 ];
 
 const FAQS = [
   {
     q: 'How does a modern Next.js website help manufacturing exporters in Jaipur?',
-    a: 'International B2B buyers and institutional procurement heads evaluate technical credibility and speed. Sub-second load times and clear machinery specifications establish trust and prompt RFQs.',
+    a: 'International B2B buyers and institutional procurement heads evaluate technical credibility and speed. Rapid load times and clear machinery specifications establish trust and prompt RFQs.',
   },
   {
     q: 'Can the website handle large technical PDF spec sheets and CAD catalogs?',

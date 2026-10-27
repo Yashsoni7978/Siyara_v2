@@ -41,6 +41,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/digital-architecture-studio-jaipur',
+        destination: '/services/web-development',
+        permanent: true,
+      },
+      {
         source: '/portfolio',
         destination: '/work',
         permanent: true,

@@ -18,7 +18,7 @@ import JsonLd, { buildBreadcrumbs, buildServiceSchema, buildFaqSchema } from '..
 
 export const metadata = {
   title: 'E-Commerce Website Development Jaipur',
-  description: 'Headless Next.js e-commerce development, sub-second checkout speeds, and organic shopping SEO for retail and D2C brands in Jaipur, Rajasthan.',
+  description: 'Headless Next.js e-commerce development, streamlined checkout speeds, and organic shopping SEO for retail and D2C brands in Jaipur, Rajasthan.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/industries/ecommerce',
   },
@@ -27,7 +27,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/industries/ecommerce',
     siteName: 'Siyara Innovations',
     title: 'E-Commerce Website Development Jaipur | Siyara Innovations',
-    description: 'Headless Next.js e-commerce development, sub-second checkout speeds, and organic shopping SEO for retail and D2C brands in Jaipur, Rajasthan.',
+    description: 'Headless Next.js e-commerce development, streamlined checkout speeds, and organic shopping SEO for retail and D2C brands in Jaipur, Rajasthan.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -48,7 +48,7 @@ export const metadata = {
 
 const CAPABILITIES = [
   'Headless Next.js 15 E-Commerce Architecture',
-  'Instant Sub-Second Product Page Rendering',
+  'High-Performance Product Page Rendering',
   'UPI, Razorpay & International Payment Gateways',
   'Product & AggregateRating Schema Injection',
   'Conversion Rate Optimization (CRO) & Abandonment Funnels',
@@ -116,7 +116,7 @@ export default function EcommerceIndustryPage() {
           </h1>
 
           <p className="font-sans text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light">
-            Headless Next.js online stores, sub-second product catalog speeds, and organic shopping SEO engineered for retail and D2C brands.
+            Headless Next.js online stores, high-speed product catalog speeds, and organic shopping SEO engineered for retail and D2C brands.
           </p>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 sm:gap-4">
@@ -154,7 +154,7 @@ export default function EcommerceIndustryPage() {
             </h2>
             <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#070A09]/80 border border-[#18A982]/20 mb-6">
               <p className="font-sans text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
-                Traditional e-commerce stores running on standard monolithic plugins or unoptimized third-party hosted themes suffer from slow mobile product rendering, cart checkout friction, and poor Google organic ranking. Siyara Innovations delivers high-velocity headless e-commerce architectures powered by Next.js 15, React 19, and serverless payment APIs. By separating front-end presentation from back-end inventory catalogs, our builds load catalog collections and product detail pages with instantaneous sub-second response times. Our engineering stack guarantees Largest Contentful Paint (LCP) under 1.8 seconds, Cumulative Layout Shift (CLS) under 0.02, and Interaction to Next Paint (INP) under 80 milliseconds. Furthermore, we implement complete Product, AggregateRating, and OfferCatalog Schema.org markup alongside localized Indian payment gateways (UPI, Cards, NetBanking). This technical foundation enables Jaipur lifestyle, apparel, handicraft, and D2C brands to rank on Google Shopping, get recommended in generative search engines like SearchGPT, and convert high-intent shoppers with maximum transaction velocity.
+                Traditional e-commerce stores running on standard monolithic plugins or unoptimized third-party hosted themes suffer from slow mobile product rendering, cart checkout friction, and poor Google organic ranking. Siyara Innovations delivers high-velocity headless e-commerce architectures powered by Next.js 15, React 19, and serverless payment APIs. By separating front-end presentation from back-end inventory catalogs, our builds load catalog collections and product detail pages with rapid response times. Our engineering stack guarantees Largest Contentful Paint (LCP) under 1.8 seconds, Cumulative Layout Shift (CLS) under 0.02, and Interaction to Next Paint (INP) under 80 milliseconds. Furthermore, we implement complete Product, AggregateRating, and OfferCatalog Schema.org markup alongside localized Indian payment gateways (UPI, Cards, NetBanking). This technical foundation enables Jaipur lifestyle, apparel, handicraft, and D2C brands to rank on Google Shopping, get recommended in generative search engines like SearchGPT, and convert high-intent shoppers with maximum transaction velocity.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-[#9D9B91]">

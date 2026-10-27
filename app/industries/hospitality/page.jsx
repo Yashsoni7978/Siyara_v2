@@ -51,7 +51,7 @@ const CAPABILITIES = [
   'Cinematic Resort & Heritage Suite Visual Galleries',
   'Destination Wedding & Banquet Venue Showcases',
   'Local Tourism SEO & International Traveler Discovery',
-  'Sub-Second Edge Infrastructure & Core Web Vitals',
+  'High-Performance Edge Infrastructure & Core Web Vitals',
 ];
 
 const FAQS = [

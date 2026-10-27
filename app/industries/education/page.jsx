@@ -50,7 +50,7 @@ const CAPABILITIES = [
   'Student Inquiry & Digital Application Funnels',
   'Interactive Course Curriculum & Faculty Showcases',
   'Local Education SEO & Google Maps Visibility',
-  'Sub-Second Core Web Vitals & Mobile Optimization',
+  'Optimized Core Web Vitals & Mobile Performance',
 ];
 
 const FAQS = [
@@ -153,7 +153,7 @@ export default function EducationIndustryPage() {
             </h2>
             <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#070A09]/80 border border-[#18A982]/20 mb-6">
               <p className="font-sans text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
-                Private universities, competitive coaching institutes, and international schools in Jaipur frequently suffer from legacy CMS platforms that fail to handle massive admission season traffic spikes, resulting in portal crashes and high parent abandonment rates. Siyara Innovations resolves these technical vulnerabilities by engineering robust Next.js and React educational web architectures backed by scalable edge CDN distribution. By prerendering academic curriculum pages, admission prospectuses, and faculty profiles into static HTML while streaming dynamic student registration portals via serverless API routes, our systems maintain sub-second performance under any traffic load. Our engineering benchmarks guarantee Largest Contentful Paint (LCP) under 1.8 seconds, Cumulative Layout Shift (CLS) under 0.02, and Interaction to Next Paint (INP) under 80 milliseconds. Backed by verified EducationalOrganization schema markup and localized SEO targeting across Rajasthan, we ensure parent discovery leads directly to high-converting student enrollments and streamlined digital admission applications.
+                Private universities, competitive coaching institutes, and international schools in Jaipur frequently suffer from legacy CMS platforms that fail to handle massive admission season traffic spikes, resulting in portal crashes and high parent abandonment rates. Siyara Innovations resolves these technical vulnerabilities by engineering robust Next.js and React educational web architectures backed by scalable edge CDN distribution. By prerendering academic curriculum pages, admission prospectuses, and faculty profiles into static HTML while streaming dynamic student registration portals via serverless API routes, our systems maintain high-speed performance under any traffic load. Our engineering benchmarks guarantee Largest Contentful Paint (LCP) under 1.8 seconds, Cumulative Layout Shift (CLS) under 0.02, and Interaction to Next Paint (INP) under 80 milliseconds. Backed by verified EducationalOrganization schema markup and localized SEO targeting across Rajasthan, we ensure parent discovery leads directly to high-converting student enrollments and streamlined digital admission applications.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-[#9D9B91]">

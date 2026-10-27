@@ -12,15 +12,15 @@
   - **Flagship Multi-System Architecture**: Custom export portals, multi-currency commerce, enterprise GEO, Razorpay automation, continuous CRO.
 
 ## Commercial Flagship Landers
-- [Digital Architecture Studio Jaipur](https://www.siyaradigitals.com/digital-architecture-studio-jaipur): Flagship manifesto on why modern enterprises require connected digital architecture rather than disconnected web agencies.
-- [Next.js Web Development Jaipur](https://www.siyaradigitals.com/nextjs-web-development-jaipur): Enterprise Next.js 15 and React 19 engineering delivering sub-1.8s Core Web Vitals, headless CMS, and zero layout shift.
+- [Next.js Web Development Jaipur](https://www.siyaradigitals.com/nextjs-web-development-jaipur): Enterprise Next.js 15 and React 19 engineering delivering high-performance Core Web Vitals, headless CMS, and zero layout shift.
 - [GEO Agency India (Generative Engine Optimization)](https://www.siyaradigitals.com/geo-agency-india): India's premier technical GEO agency optimizing B2B brands for high-intent AI citation consensus across ChatGPT Search, Perplexity, and Google AI Overviews.
+- [Custom Web Development Jaipur](https://www.siyaradigitals.com/services/web-development): Custom Next.js web applications, headless architectures, and enterprise engineering in Jaipur.
 
 ## Core Service Catalog
 - [Web Design & Development](https://www.siyaradigitals.com/services/web-design-development): Custom Next.js 15 web engineering, Core Web Vitals optimization, and high-conversion UI/UX design.
 - [SEO & Generative Engine Optimization (GEO)](https://www.siyaradigitals.com/services/seo-geo): Technical search engine optimization, regional Jaipur Google Maps 3-pack dominance, and AI answer engine citation architecture.
 - [Brand Strategy & Identity](https://www.siyaradigitals.com/services/brand-strategy): Premium brand positioning, luxury visual identity systems, typography, and strategic market differentiation.
-- [High-Performance E-Commerce (Headless & D2C)](https://www.siyaradigitals.com/services/ecommerce-development): High-speed headless Next.js e-commerce engineering, sub-second mobile checkouts, and custom Razorpay funnels.
+- [High-Performance E-Commerce (Headless & D2C)](https://www.siyaradigitals.com/services/ecommerce-development): High-speed headless Next.js e-commerce engineering, streamlined mobile checkouts, and custom Razorpay funnels.
 - [Mobile Application Development (React Native & PWA)](https://www.siyaradigitals.com/services/mobile-app-development): Cross-platform React Native and Progressive Web App development with 60fps animations and offline sync.
 - [UI/UX Product Design & Design Systems](https://www.siyaradigitals.com/services/ui-ux-design): Bespoke Figma design systems, accessible design tokens, and high-conversion mobile ergonomics.
 - [Content Systems & Editorial Creative](https://www.siyaradigitals.com/services/content-creative): Factual, high-information-gain content architectures engineered for LLM consensus and commercial conversion.

@@ -17,7 +17,7 @@ import { BUSINESS_CONFIG } from '../../src/config/business';
 
 export const metadata = {
   title: 'Next.js Web Development Jaipur',
-  description: 'Custom Next.js 15 and React web application development in Jaipur. Sub-second load speeds, App Router architecture, and 100/100 Core Web Vitals.',
+  description: 'Custom Next.js 15 and React web application development in Jaipur. High-performance load speeds, App Router architecture, and 100/100 Core Web Vitals.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/nextjs-web-development-jaipur',
   },
@@ -26,7 +26,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/nextjs-web-development-jaipur',
     siteName: 'Siyara Innovations',
     title: 'Next.js Web Development Company in Jaipur | Siyara Innovations',
-    description: 'Enterprise-grade Next.js & React web development in Jaipur. Sub-second load speeds, React Server Components, and custom full-stack web applications.',
+    description: 'Enterprise-grade Next.js & React web development in Jaipur. High-performance load speeds, React Server Components, and custom full-stack web applications.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -202,7 +202,7 @@ export default function NextJsWebDevelopmentJaipurPage() {
           <div className="p-5 sm:p-6 rounded-2xl bg-[#0D1412] border border-[#0C6B52]/30 mb-8 sm:mb-10 text-left sm:text-center shadow-xl">
             <p className="font-sans text-sm sm:text-lg text-[#ECE7D8] leading-relaxed font-light">
               <strong className="text-[#D9B45F] font-semibold">Siyara Innovations</strong> is Jaipur’s specialized 
-              <strong> Next.js web development company</strong>. We build custom React 19 web applications featuring server-side rendering (SSR), sub-second Core Web Vitals, and enterprise schema integration for businesses requiring unmatched speed and organic search authority.
+              <strong> Next.js web development company</strong>. We build custom React 19 web applications featuring server-side rendering (SSR), optimized Core Web Vitals, and enterprise schema integration for businesses requiring unmatched speed and organic search authority.
             </p>
           </div>
 

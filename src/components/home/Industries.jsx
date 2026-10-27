@@ -54,7 +54,7 @@ export default function Industries() {
       id: '06',
       name: 'E-COMMERCE & D2C',
       href: '/industries/ecommerce',
-      description: 'Headless Next.js storefronts, sub-second product pages, and Google Shopping SEO for retail brands.',
+      description: 'Headless Next.js storefronts, fast-loading product pages, and Google Shopping SEO for retail brands.',
       image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=80',
       tag: 'Direct-to-Consumer Brands',
     },

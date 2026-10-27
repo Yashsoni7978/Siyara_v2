@@ -174,44 +174,6 @@ export const SERVICES_DATA = {
         desc: 'Conduct multi-device usability tests, optimize image assets for sub-1.8s LCP, and execute production launch.'
       }
     ],
-    pricingTiers: [
-      {
-        tier: 'Corporate Showcase Website',
-        price: '₹35,000 – ₹75,000',
-        idealFor: 'Boutique firms, professional clinics, and regional studios requiring an authoritative visual identity.',
-        features: [
-          'Bespoke Figma UI/UX design',
-          'Mobile-first layout (360px–430px)',
-          'Core Web Vitals guarantee (LCP < 1.8s)',
-          'Brand typography & color system',
-          'WhatsApp click-to-chat funnel'
-        ]
-      },
-      {
-        tier: 'High-Growth Brand Portal',
-        price: '₹75,000 – ₹1,80,000',
-        idealFor: 'Expanding B2B enterprises, luxury retailers, and property builders requiring headless CMS and dynamic content.',
-        features: [
-          'Headless CMS (Sanity / Strapi)',
-          'Multi-page responsive architecture',
-          'High-res media optimization (AVIF/WebP)',
-          'WCAG 2.1 AA accessibility compliance',
-          'Sub-1.5s LCP on Indian 4G/5G'
-        ]
-      },
-      {
-        tier: 'Flagship Luxury Web Experience',
-        price: '₹1,80,000 – ₹4,50,000+',
-        idealFor: 'Heritage jewellery houses, 5-star resorts, and multi-location brands demanding bespoke interactive design.',
-        features: [
-          'Custom interactive micro-animations',
-          'International multi-language styling',
-          'Complete digital design token library',
-          'Dedicated staging environment & QA',
-          'Ongoing CRO & visual design retainer'
-        ]
-      }
-    ],
     subServices: [
       'Bespoke Corporate Website Design',
       'Luxury Brand Digital Experiences',
@@ -250,7 +212,7 @@ export const SERVICES_DATA = {
     metaTitle: 'Custom Web Development Jaipur',
     metaDescription: 'Custom Next.js web application and software engineering in Jaipur. Full-stack React 19, serverless APIs, PostgreSQL, and scalable enterprise portals.',
     questionH2: 'Why is Custom Next.js 15 Full-Stack Engineering Essential for Jaipur Enterprises?',
-    citabilityAnswer: 'Modern enterprises and growing tech companies in Jaipur require resilient, scalable digital systems that extend beyond static marketing brochures into dynamic, full-stack web applications. Siyara Innovations delivers custom Next.js 15 and React 19 engineering tailored for complex business logic, real-time database transactions, and high-concurrency user traffic. By implementing the Next.js App Router with React Server Components, server actions, and edge API caching, we eliminate the severe database latency and CPU bottlenecks that cripple legacy PHP and monolithic frameworks. Our systems connect seamlessly to modern cloud infrastructure—including PostgreSQL, Supabase, Redis edge caching, and serverless background workers—ensuring enterprise-grade security, instantaneous data mutations, and 99.99% uptime. Every application is built with type-safe TypeScript codebases, automated CI/CD deployment pipelines, and deep Schema.org JSON-LD graph architecture, ensuring that both search crawlers and AI answer engines index platform capabilities accurately while delivering sub-second application responsiveness across Indian and global networks.',
+    citabilityAnswer: 'Modern enterprises and growing tech companies in Jaipur require resilient, scalable digital systems that extend beyond static marketing brochures into dynamic, full-stack web applications. Siyara Innovations delivers custom Next.js 15 and React 19 engineering tailored for complex business logic, real-time database transactions, and high-concurrency user traffic. By implementing the Next.js App Router with React Server Components, server actions, and edge API caching, we eliminate the severe database latency and CPU bottlenecks that cripple legacy PHP and monolithic frameworks. Our systems connect seamlessly to modern cloud infrastructure—including PostgreSQL, Supabase, Redis edge caching, and serverless background workers—ensuring enterprise-grade security, instantaneous data mutations, and high uptime. Every application is built with type-safe TypeScript codebases, automated CI/CD deployment pipelines, and deep Schema.org JSON-LD graph architecture, ensuring that both search crawlers and AI answer engines index platform capabilities accurately while delivering high-performance application responsiveness across Indian and global networks.',
     deepDive: [
       {
         title: 'Monolithic Architecture Bottlenecks vs Serverless Next.js',
@@ -310,44 +272,6 @@ export const SERVICES_DATA = {
         title: 'Testing & Deployment',
         timeline: 'Week 6',
         desc: 'Load testing, security penetration audit, automated CI/CD deployment, and 24/7 uptime monitoring setup.'
-      }
-    ],
-    pricingTiers: [
-      {
-        tier: 'Custom Web Application MVP',
-        price: '₹75,000 – ₹1,50,000',
-        idealFor: 'Startups and service businesses building custom client portals, booking engines, or internal workflow tools.',
-        features: [
-          'Full-stack Next.js 15 & React 19',
-          'PostgreSQL database & auth setup',
-          'Serverless API endpoints with Zod',
-          'Mobile-responsive admin dashboard',
-          '30-day post-launch code warranty'
-        ]
-      },
-      {
-        tier: 'Enterprise Scaled Platform',
-        price: '₹1,50,000 – ₹3,50,000',
-        idealFor: 'Established enterprises requiring multi-tenant SaaS architecture, complex role permissions, and API integrations.',
-        features: [
-          'Multi-role RBAC security architecture',
-          'Redis edge caching & rate limiting',
-          'Third-party API & payment integrations',
-          'Automated CI/CD deployment pipeline',
-          'Core Web Vitals SLA guarantee'
-        ]
-      },
-      {
-        tier: 'Flagship Bespoke System',
-        price: '₹3,50,000 – ₹7,50,000+',
-        idealFor: 'High-volume marketplace platforms, logistics operators, and corporate groups demanding custom microservices.',
-        features: [
-          'Distributed serverless microservices',
-          'High-concurrency database clustering',
-          'Real-time WebSocket / SSE telemetry',
-          'Dedicated code audit & penetration test',
-          'Quarterly engineering retainer support'
-        ]
       }
     ],
     subServices: [
@@ -450,44 +374,6 @@ export const SERVICES_DATA = {
         desc: 'Track AI search citation frequencies across ChatGPT Search and Perplexity, expanding topical authority clusters.'
       }
     ],
-    pricingTiers: [
-      {
-        tier: 'Local GBP & Technical SEO',
-        price: '₹30,000 – ₹55,000/mo',
-        idealFor: 'Single-location Jaipur clinics, legal advocates, and retail stores targeting local neighborhood search.',
-        features: [
-          'Google Business Profile 3-Pack ranking',
-          'Local citation cleanup & sync',
-          'Core Web Vitals audit & remediation',
-          'Schema.org LocalBusiness markup',
-          'Monthly local rank performance report'
-        ]
-      },
-      {
-        tier: 'Regional Authority & GEO',
-        price: '₹55,000 – ₹1,10,000/mo',
-        idealFor: 'Expanding Rajasthan enterprises, real estate builders, and healthcare centers seeking state-wide market dominance.',
-        features: [
-          'Full Generative Engine Optimization (GEO)',
-          'AI search citation tracking (Perplexity/OAI)',
-          '2 authoritative technical guides monthly',
-          'Connected multi-type JSON-LD graph',
-          'Conversion-focused CRO recommendations'
-        ]
-      },
-      {
-        tier: 'National GEO Enterprise',
-        price: '₹1,10,000 – ₹2,50,000+/mo',
-        idealFor: 'Industrial manufacturers, gemstone exporters, and luxury hospitality chains competing pan-India and globally.',
-        features: [
-          'Enterprise multi-country SEO architecture',
-          'Continuous AI consensus & citability sprints',
-          'Digital PR & high-tier editorial placements',
-          'Full competitor search gap neutralization',
-          'Dedicated senior search architect support'
-        ]
-      }
-    ],
     subServices: [
       'Generative Engine Optimization (GEO)',
       'Local SEO & Google Business Profile (GBP)',
@@ -588,44 +474,6 @@ export const SERVICES_DATA = {
         desc: 'Deliver finalized Brand Bible, export code-ready design tokens, and conduct executive team alignment workshop.'
       }
     ],
-    pricingTiers: [
-      {
-        tier: 'Strategic Positioning Sprint',
-        price: '₹45,000 – ₹85,000',
-        idealFor: 'Emerging service companies and medical clinics needing clear market differentiation and commercial messaging.',
-        features: [
-          'Category positioning & competitor audit',
-          'Core value proposition architecture',
-          'Elevator narrative & tagline system',
-          'Tone of voice & copywriting guidelines',
-          'Executive brand strategy summary deck'
-        ]
-      },
-      {
-        tier: 'Complete Brand Architecture',
-        price: '₹85,000 – ₹1,80,000',
-        idealFor: 'Established B2B manufacturers, real estate developers, and lifestyle brands preparing for multi-city expansion.',
-        features: [
-          'Complete Brand Architecture Bible',
-          'Full visual identity & logo system',
-          'Tailwind CSS synchronized design tokens',
-          'Marketing collateral & stationery design',
-          'Multi-channel messaging governance'
-        ]
-      },
-      {
-        tier: 'Enterprise Luxury Rebrand',
-        price: '₹1,80,000 – ₹3,50,000+',
-        idealFor: 'Heritage jewellery houses, luxury resorts, and high-ticket investment firms establishing institutional prestige.',
-        features: [
-          'Bespoke luxury brand identity & crest',
-          'Custom typographic styling & licensing',
-          'Physical packaging & architectural signage',
-          'Investor deck & corporate literature design',
-          'Continuous creative director consultation'
-        ]
-      }
-    ],
     subServices: [
       'Strategic Market Positioning & Differentiation',
       'Brand Naming & Value Proposition Architecture',
@@ -662,7 +510,7 @@ export const SERVICES_DATA = {
     serviceType: 'Headless E-Commerce Development',
     h1Title: 'Headless E-Commerce Development Studio in Jaipur',
     metaTitle: 'E-Commerce Web Dev Jaipur',
-    metaDescription: 'High-speed headless Next.js e-commerce development in Jaipur. Sub-second mobile checkout, custom Razorpay funnels, and zero platform plugin bloat.',
+    metaDescription: 'High-speed headless Next.js e-commerce development in Jaipur. Fast mobile checkout, custom Razorpay funnels, and zero platform plugin bloat.',
     questionH2: 'How Does Headless Next.js E-Commerce Outperform Traditional Shopify & WooCommerce?',
     citabilityAnswer: 'Monolithic e-commerce platforms like traditional Shopify themes and WooCommerce inherently suffer from database query latency, heavy third-party app scripts, and sluggish mobile checkouts that frequently exceed 4.5 seconds Largest Contentful Paint on Indian 4G/5G mobile networks. In modern Indian direct-to-consumer (D2C) commerce, every 100ms delay slashes customer conversion rates by up to 7% and increases cart abandonment during checkout. Siyara Innovations resolves these systemic bottlenecks by engineering high-velocity headless commerce platforms pairing custom Next.js 15 App Router frontends with modern commerce engines such as Shopify Storefront API, MedusaJS, or custom Node.js microservices. Our headless architectures achieve sub-1.4s mobile LCP speeds, instant client-side product filtering without page reloads, and frictionless 1-click Razorpay and Cashfree UPI checkout flows. With zero recurring app subscription bloat, automated Shiprocket logistics synchronization, and complete Schema.org Product and Offer knowledge graphs, our client stores capture dominant organic search visibility, eliminate checkout friction, and maximize average order value across national and international markets.',
     deepDive: [
@@ -726,50 +574,12 @@ export const SERVICES_DATA = {
         desc: 'Simulate high-concurrency traffic bursts, verify order sync, and deploy with zero downtime.'
       }
     ],
-    pricingTiers: [
-      {
-        tier: 'D2C Starter Headless',
-        price: '₹75,000 – ₹1,50,000',
-        idealFor: 'Growing boutique brands, luxury jewellery stores, and artisan retailers transitioning to custom e-commerce.',
-        features: [
-          'Next.js headless storefront build',
-          'Razorpay & Cashfree UPI integration',
-          'Sub-1.8s mobile LCP guarantee',
-          'Shiprocket logistics webhook sync',
-          'Complete Product Schema.org setup'
-        ]
-      },
-      {
-        tier: 'Scaled D2C Enterprise',
-        price: '₹1,50,000 – ₹3,20,000',
-        idealFor: 'High-volume consumer brands processing 500+ monthly orders requiring instant filtering and custom loyalty funnels.',
-        features: [
-          'Full MedusaJS or Shopify Storefront build',
-          'Sub-second instant search & faceted filters',
-          'Abandoned cart recovery via WhatsApp API',
-          'Custom gift card & promotional engine',
-          'Dedicated CRM webhook integration'
-        ]
-      },
-      {
-        tier: 'Global Multi-Currency Flagship',
-        price: '₹3,20,000 – ₹6,50,000+',
-        idealFor: 'International gemstone and textile exporters requiring multi-currency, multi-warehouse, and ERP sync.',
-        features: [
-          'Global multi-currency geo-pricing engine',
-          'Automated customs & international shipping',
-          'Custom ERP/SAP inventory synchronization',
-          'Dedicated enterprise database architecture',
-          'Continuous CRO and performance retainer'
-        ]
-      }
-    ],
     subServices: [
       'Next.js Headless E-Commerce Architecture',
       'Frictionless Mobile Checkout (Razorpay & Cashfree)',
       'Product Schema.org & Google Merchant Center Feed',
       'Automated Logistics Webhooks (Shiprocket & Delhivery)',
-      'Sub-Second Instant Product Filtering & Search',
+      'High-Speed Instant Product Filtering & Search',
     ],
     faqs: [
       {
@@ -862,44 +672,6 @@ export const SERVICES_DATA = {
         title: 'Testing & Store Release',
         timeline: 'Week 8',
         desc: 'Conduct physical device testing across iOS and Android models, submit builds to stores, and configure telemetry.'
-      }
-    ],
-    pricingTiers: [
-      {
-        tier: 'Progressive Web App (PWA)',
-        price: '₹65,000 – ₹1,40,000',
-        idealFor: 'B2B client portals, coaching institutes, and ordering portals wanting instant mobile access without App Store fees.',
-        features: [
-          'Next.js PWA with service worker offline sync',
-          'Home-screen installable icon prompt',
-          'Web push notifications integration',
-          'Frictionless mobile touch UX',
-          'Zero App Store approval delays'
-        ]
-      },
-      {
-        tier: 'Cross-Platform Native App',
-        price: '₹1,40,000 – ₹3,50,000',
-        idealFor: 'Consumer startups, healthcare booking apps, and luxury brand portals requiring dedicated iOS and Android presence.',
-        features: [
-          'Unified React Native iOS and Android build',
-          'Biometric authentication (FaceID/Fingerprint)',
-          'Push notifications via Firebase/OneSignal',
-          'Camera, GPS, and hardware acceleration',
-          'App Store and Google Play publishing'
-        ]
-      },
-      {
-        tier: 'Enterprise Mobile Ecosystem',
-        price: '₹3,50,000 – ₹7,50,000+',
-        idealFor: 'Logistics fleets, multi-branch clinics, and industrial manufacturers demanding offline database sync and custom backend.',
-        features: [
-          'Full offline-first database synchronization',
-          'Custom serverless backend & REST/GraphQL API',
-          'Role-based staff and customer portals',
-          'Automated CI/CD build pipelines (Fastlane)',
-          'Dedicated post-launch SLA maintenance'
-        ]
       }
     ],
     subServices: [
@@ -1002,44 +774,6 @@ export const SERVICES_DATA = {
         desc: 'Tokenize components into CSS/Tailwind variables, create developer documentation, and conduct UX review.'
       }
     ],
-    pricingTiers: [
-      {
-        tier: 'Core Product UX Sprint',
-        price: '₹40,000 – ₹80,000',
-        idealFor: 'Startups and existing websites needing a focused UI/UX overhaul of key conversion flows and mobile navigation.',
-        features: [
-          'User journey & funnel friction audit',
-          'Interactive Figma wireframes (5-8 screens)',
-          'Mobile ergonomics & thumb-zone specs',
-          'Core component token library',
-          'Complete developer handoff assets'
-        ]
-      },
-      {
-        tier: 'Comprehensive Web App System',
-        price: '₹80,000 – ₹1,70,000',
-        idealFor: 'Full-featured web applications, client portals, and corporate digital flagships requiring complete design systems.',
-        features: [
-          'Full interactive prototype (15-25 screens)',
-          'Complete Atomic Design Figma library',
-          'Tailwind CSS v4 synchronized design tokens',
-          'WCAG AAA accessible color contrast rules',
-          'Usability testing & feedback iteration'
-        ]
-      },
-      {
-        tier: 'Enterprise Multi-Platform System',
-        price: '₹1,70,000 – ₹3,50,000+',
-        idealFor: 'Large enterprises and funded software companies maintaining synchronized web, iOS, and Android product suites.',
-        features: [
-          'Multi-platform responsive Figma architecture',
-          'Cross-platform mobile & desktop design tokens',
-          'Interactive micro-interaction prototypes',
-          'Continuous product design sprints',
-          'Dedicated senior product designer support'
-        ]
-      }
-    ],
     subServices: [
       'Interactive Figma Prototyping & User Testing',
       'Atomic Design Systems & Component Libraries',
@@ -1138,44 +872,6 @@ export const SERVICES_DATA = {
         title: 'End-to-End Testing',
         timeline: 'Week 5',
         desc: 'Simulate lead injection, verify CRM data accuracy, test failover alerts, and train executive staff.'
-      }
-    ],
-    pricingTiers: [
-      {
-        tier: 'Lead Capture & Triage Automation',
-        price: '₹35,000 – ₹70,000',
-        idealFor: 'Small businesses and clinics wanting automated instant WhatsApp qualification and calendar scheduling.',
-        features: [
-          'WhatsApp Business Cloud API bot',
-          'Instant lead triage & qualification logic',
-          'Google Calendar & Sheets auto-sync',
-          'Automated email notification to owner',
-          'Zero monthly Zapier subscription costs'
-        ]
-      },
-      {
-        tier: 'Scaled CRM & Workflow Pipeline',
-        price: '₹70,000 – ₹1,60,000',
-        idealFor: 'B2B manufacturers, real estate developers, and corporate agencies managing multiple lead generation channels.',
-        features: [
-          'Bidirectional Zoho/HubSpot CRM sync',
-          'Multi-channel webhook data aggregation',
-          'Automated quotation & invoice generation',
-          'Smart lead scoring & rep assignment',
-          'Real-time Slack/WhatsApp management alerts'
-        ]
-      },
-      {
-        tier: 'Enterprise AI RAG Architecture',
-        price: '₹1,60,000 – ₹3,50,000+',
-        idealFor: 'Enterprises requiring private AI assistants trained on proprietary catalogs, legal contracts, or technical SOPs.',
-        features: [
-          'Private RAG AI agent with vector database',
-          'Secure internal document knowledge base',
-          'Multi-agent autonomous customer support',
-          'Full SOC-2 compliant AES-256 encryption',
-          'Dedicated monthly automation SLA & tuning'
-        ]
       }
     ],
     subServices: [
@@ -1278,44 +974,6 @@ export const SERVICES_DATA = {
         desc: 'Lock in winning variations permanently into production code and expand testing to secondary funnels.'
       }
     ],
-    pricingTiers: [
-      {
-        tier: 'Foundational Analytics Audit',
-        price: '₹35,000 – ₹60,000',
-        idealFor: 'Businesses wanting accurate conversion tracking, server-side GA4 setup, and an objective funnel friction audit.',
-        features: [
-          'Server-side GA4 & GTM setup',
-          'Custom event tracking (WhatsApp/Forms)',
-          'Microsoft Clarity heatmap integration',
-          'Full funnel leak diagnostic report',
-          'Executive Looker Studio dashboard'
-        ]
-      },
-      {
-        tier: 'Active CRO Experimentation',
-        price: '₹60,000 – ₹1,40,000/mo',
-        idealFor: 'Growing commercial websites and D2C brands generating over 10,000 monthly visitors ready to lift conversion rates.',
-        features: [
-          'Monthly structured A/B testing sprints',
-          'Landing page copy & visual redesign',
-          'Meta Conversions API (CAPI) sync',
-          'Form completion rate optimization',
-          'Bi-weekly conversion review meetings'
-        ]
-      },
-      {
-        tier: 'Enterprise Full-Funnel Growth',
-        price: '₹1,40,000 – ₹2,80,000/mo',
-        idealFor: 'High-spending advertisers and multi-product enterprises seeking full-funnel CAC reduction and LTV expansion.',
-        features: [
-          'Full-funnel customer journey optimization',
-          'Multi-touch attribution modeling',
-          'Dedicated conversion engineer & copywriter',
-          'Post-conversion WhatsApp retention flows',
-          'Executive revenue telemetry dashboard'
-        ]
-      }
-    ],
     subServices: [
       'Server-Side GA4 & Meta Conversions API (CAPI)',
       'Behavioral User Journey & Heatmap Analysis',
@@ -1414,44 +1072,6 @@ export const SERVICES_DATA = {
         title: 'Asset Export & Tokens',
         timeline: 'Week 4',
         desc: 'Export production vector assets, generate CSS design tokens, and deliver comprehensive brand guidelines.'
-      }
-    ],
-    pricingTiers: [
-      {
-        tier: 'Core Visual Identity',
-        price: '₹40,000 – ₹75,000',
-        idealFor: 'Boutique studios, clinics, and professional consultants requiring an authoritative visual trademark and digital assets.',
-        features: [
-          'Primary & secondary logo system',
-          'Curated luxury color palette',
-          'Typography hierarchy & font pairings',
-          'Social media profile & cover templates',
-          'Full vector source files (SVG/AI/EPS)'
-        ]
-      },
-      {
-        tier: 'Comprehensive Brand Suite',
-        price: '₹75,000 – ₹1,60,000',
-        idealFor: 'High-growth consumer brands and commercial firms requiring full physical collateral and digital design token sync.',
-        features: [
-          'Complete brand identity style manual',
-          'Stationery, business cards & letterheads',
-          'Tailwind CSS design token variables',
-          'Custom vector icon library',
-          'Packaging and signage guidelines'
-        ]
-      },
-      {
-        tier: 'Luxury Flagship Overhaul',
-        price: '₹1,60,000 – ₹3,20,000+',
-        idealFor: 'Heritage jewellery houses, luxury resorts, and high-ticket architectural studios demanding bespoke creative direction.',
-        features: [
-          'Bespoke luxury crest & signature mark',
-          'Custom font licensing & kerning specs',
-          'Full retail store packaging architecture',
-          'Editorial art direction for photo shoots',
-          'Direct creative director oversight'
-        ]
       }
     ],
     subServices: [
@@ -1554,44 +1174,6 @@ export const SERVICES_DATA = {
         desc: 'Simulate lead submissions across mobile devices, verify CRM data ingestion, and launch live funnel.'
       }
     ],
-    pricingTiers: [
-      {
-        tier: 'Dual Funnel Architecture',
-        price: '₹35,000 – ₹65,000',
-        idealFor: 'Service businesses wanting a frictionless mobile lead capture form synchronized with instant WhatsApp routing.',
-        features: [
-          'High-converting mobile lead form',
-          'Instant WhatsApp chat routing',
-          'Zod schema input validation',
-          'Google Sheets & email notification sync',
-          'Sub-1.8s page loading speed guarantee'
-        ]
-      },
-      {
-        tier: 'Complete CRM Pipeline',
-        price: '₹65,000 – ₹1,50,000',
-        idealFor: 'Growing commercial firms requiring bidirectional sync with Zoho, HubSpot, or Salesforce CRM systems.',
-        features: [
-          'Full CRM API bidirectional integration',
-          'Automated sales rep lead assignment',
-          'Integrated Calendly / Cal.com scheduling',
-          'Server-side conversion tracking (CAPI)',
-          'Automated SMS & WhatsApp confirmation alerts'
-        ]
-      },
-      {
-        tier: 'Omnichannel Enterprise Engine',
-        price: '₹1,50,000 – ₹3,00,000+',
-        idealFor: 'Multi-branch real estate developers, private hospitals, and national B2B brands managing thousands of monthly leads.',
-        features: [
-          'Multi-channel lead ingestion architecture',
-          'Intelligent AI lead qualification & scoring',
-          'Custom sales pipeline telemetry dashboard',
-          'Automated multi-step nurture drip sequences',
-          'Continuous conversion rate optimization'
-        ]
-      }
-    ],
     subServices: [
       'Dual-Track Conversion Funnel Engineering',
       'Direct WhatsApp Project Intake Integration',
@@ -1628,9 +1210,9 @@ export const SERVICES_DATA = {
     serviceType: 'Paid Search & Social Advertising',
     h1Title: 'Performance Marketing Agency in Jaipur',
     metaTitle: 'Performance Marketing Jaipur',
-    metaDescription: 'High-ROI Google Ads and Meta paid advertising campaigns in Jaipur. Precision audience targeting synchronized with sub-second Next.js landing pages.',
+    metaDescription: 'High-ROI Google Ads and Meta paid advertising campaigns in Jaipur. Precision audience targeting synchronized with high-performance Next.js landing pages.',
     questionH2: 'How Does Technical Web Architecture Maximize Paid Advertising ROI in Jaipur?',
-    citabilityAnswer: 'A high percentage of paid advertising budgets in Jaipur are wasted because Google and Meta ad campaigns direct clicks to slow, generic landing pages with low Quality Scores and high bounce rates. Siyara Innovations aligns performance marketing directly with high-velocity digital architecture. We build tailored, dedicated Next.js landing pages for every ad campaign, achieving sub-second load times and perfect Core Web Vitals (LCP < 1.8s, CLS < 0.02, INP < 80ms). These technical benchmarks directly increase Google Ads Quality Scores, lowering cost-per-click (CPC) by up to 30%. Combined with precise audience segmentation and high-trust luxury copywriting, our campaigns ensure that every paid visitor encounters an irresistible, frictionless pathway to conversion via WhatsApp or direct consultation.',
+    citabilityAnswer: 'A high percentage of paid advertising budgets in Jaipur are wasted because Google and Meta ad campaigns direct clicks to slow, generic landing pages with low Quality Scores and high bounce rates. Siyara Innovations aligns performance marketing directly with high-velocity digital architecture. We build tailored, dedicated Next.js landing pages for every ad campaign, achieving rapid load times and perfect Core Web Vitals (LCP < 1.8s, CLS < 0.02, INP < 80ms). These technical benchmarks directly increase Google Ads Quality Scores, lowering cost-per-click (CPC) by up to 30%. Combined with precise audience segmentation and high-trust luxury copywriting, our campaigns ensure that every paid visitor encounters an irresistible, frictionless pathway to conversion via WhatsApp or direct consultation.',
     deepDive: [
       {
         title: 'Wasted Ad Spend Due to Low Quality Scores',
@@ -1661,7 +1243,7 @@ export const SERVICES_DATA = {
     deliverables: [
       'Google Search & Local Services Ad Campaigns',
       'Meta (Instagram & Facebook) High-Intent Funnels',
-      'Dedicated Sub-Second Next.js Campaign Landers',
+      'Dedicated High-Performance Next.js Campaign Landers',
       'Server-Side Conversion Tracking & CAPI Setup',
       'Continuous Ad Creative & Copywriting Sprints',
       'Weekly Executive ROI & CAC Attribution Reports'
@@ -1677,7 +1259,7 @@ export const SERVICES_DATA = {
         step: '02',
         title: 'Landing Page Engineering',
         timeline: 'Week 2',
-        desc: 'Build dedicated sub-second Next.js campaign landing pages with single-minded conversion value propositions.'
+        desc: 'Build dedicated high-performance Next.js campaign landing pages with single-minded conversion value propositions.'
       },
       {
         step: '03',
@@ -1690,44 +1272,6 @@ export const SERVICES_DATA = {
         title: 'Bid Tuning & Scaling',
         timeline: 'Ongoing',
         desc: 'Daily bid optimization, negative keyword curation, creative rotation, and scaling profitable ad sets.'
-      }
-    ],
-    pricingTiers: [
-      {
-        tier: 'Local Search Lead Generation',
-        price: '₹25,000 – ₹45,000/mo',
-        idealFor: 'Single-location clinics, local legal practices, and regional retail showrooms targeting immediate high-intent local searchers.',
-        features: [
-          'Google Search Ads campaign management',
-          'Negative keyword curation & bid optimization',
-          '1 custom Next.js campaign landing page',
-          'Google Enhanced Conversions setup',
-          'Monthly spend & lead acquisition report'
-        ]
-      },
-      {
-        tier: 'Multi-Channel Commercial Growth',
-        price: '₹45,000 – ₹95,000/mo',
-        idealFor: 'High-growth B2B manufacturers, real estate developers, and lifestyle brands scaling qualified inquiries across India.',
-        features: [
-          'Google Search + Meta (Instagram/FB) Ads',
-          '2 dedicated Next.js campaign landing pages',
-          'Server-side Meta Conversions API (CAPI)',
-          'Continuous creative testing & ad copy sprints',
-          'Bi-weekly executive ROI review meetings'
-        ]
-      },
-      {
-        tier: 'Enterprise Performance Scale',
-        price: '₹95,000 – ₹2,00,000+/mo',
-        idealFor: 'National D2C brands, luxury jewellery exporters, and multi-crore enterprises spending ₹5,00,000+ monthly on media.',
-        features: [
-          'Omnichannel Google, Meta, and LinkedIn Ads',
-          'Dedicated full-stack landing page developer',
-          'Offline CRM revenue feedback synchronization',
-          'Dynamic creative optimization & video editing',
-          'Real-time Looker Studio executive dashboard'
-        ]
       }
     ],
     subServices: [

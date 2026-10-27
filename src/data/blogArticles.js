@@ -38,11 +38,11 @@ export const FEATURED_ARTICLE = {
     "name": "Yash Soni",
     "role": "Founder & Creative Director",
     "avatar": "/logo.webp",
-    "bio": "Yash Soni is the Founder & Creative Director of Siyara Innovations, a digital architecture studio in Jaipur specializing in Next.js development, GEO, and B2B brand systems."
+    "bio": "Siyara Editorial Team delivers technical research and engineering insights from Siyara Innovations, a digital engineering agency in Jaipur specializing in Next.js development, GEO, and enterprise web systems."
   },
   "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
   "featured": true,
-  "executiveSummary": "Siyara Innovations is a Generative Engine Optimization (GEO) agency and digital architecture studio based in Malviya Nagar, Jaipur, India. Generative Engine Optimization is the technical practice of structuring website content, entity schemas, and passage citations so large language models—including Google AI Overviews, Perplexity, and OpenAI SearchGPT—cite your company as the authoritative answer for high-intent B2B commercial queries. Where legacy SEO chased blue-link rankings through link volume and keyword frequency, modern GEO establishes algorithmic consensus through verified entity graphs, semantic JSON-LD @graph nodes, and verifiable data tables. By pairing this semantic architecture with custom Next.js 15 App Router engineering, enterprise brands achieve sub-1.8s Largest Contentful Paint (LCP), zero Cumulative Layout Shift (<0.02), and instantaneous Interaction to Next Paint (<80ms). Across client deployments in Rajasthan and metro India, this connected digital architecture generates an average 34% uplift in qualified commercial inquiries within 90 days.",
+  "executiveSummary": "Siyara Innovations is a Generative Engine Optimization (GEO) agency and digital engineering agency based in Malviya Nagar, Jaipur, India. Generative Engine Optimization is the technical practice of structuring website content, entity schemas, and passage citations so large language models—including Google AI Overviews, Perplexity, and OpenAI SearchGPT—cite your company as the authoritative answer for high-intent B2B commercial queries. Where legacy SEO chased blue-link rankings through link volume and keyword frequency, modern GEO establishes algorithmic consensus through verified entity graphs, semantic JSON-LD @graph nodes, and verifiable data tables. By pairing this semantic architecture with custom Next.js 15 App Router engineering, enterprise brands achieve sub-1.8s Largest Contentful Paint (LCP), zero Cumulative Layout Shift (<0.02), and instantaneous Interaction to Next Paint (<80ms). Across client deployments in Rajasthan and metro India, this connected digital architecture generates an average 34% uplift in qualified commercial inquiries within 90 days.",
   "keyTakeaways": [
     "Generative Engine Optimization (GEO) prioritizes entity consensus, factual passage citability, and structured JSON-LD over legacy backlink farming.",
     "Custom Next.js 15 App Router builds eliminate monolithic WordPress plugin bloat, maintaining mobile LCP under 1.8 seconds on Indian 4G/5G networks.",
@@ -136,7 +136,7 @@ export const BLOG_ARTICLES = [
       "bio": "Yash Soni is the Founder of Siyara Innovations, a Next.js web development and GEO agency in Malviya Nagar, Jaipur."
     },
     "image": "/images/blog/website-cost-jaipur-hero.webp",
-    "executiveSummary": "Website development cost in Jaipur in 2026 ranges from ₹15,000 for a basic WordPress template install to ₹3,50,000+ for a custom Next.js web application equipped with complete SEO/GEO architecture, WhatsApp conversion funnels, and CRM automation. The wide price variation exists because agencies quote fundamentally different products under the generic umbrella term \"website.\" A ₹15,000 template-based site and a custom ₹1,80,000 Next.js application differ dramatically in mobile load velocity (4.8s vs 1.2s LCP), schema richness (zero markup vs full JSON-LD @graph networks), and commercial conversion infrastructure. Siyara Innovations, a digital architecture studio in Malviya Nagar, Jaipur, builds exclusively at Tiers 3 and 4 for commercial clinics, jewellery exporters, real estate developers, and industrial manufacturers who require their online presence to generate tangible sales pipeline rather than simply act as a static digital brochure.",
+    "executiveSummary": "Website development cost in Jaipur in 2026 ranges from ₹15,000 for a basic WordPress template install to ₹3,50,000+ for a custom Next.js web application equipped with complete SEO/GEO architecture, WhatsApp conversion funnels, and CRM automation. The wide price variation exists because agencies quote fundamentally different products under the generic umbrella term \"website.\" A ₹15,000 template-based site and a custom ₹1,80,000 Next.js application differ dramatically in mobile load velocity (4.8s vs 1.2s LCP), schema richness (zero markup vs full JSON-LD @graph networks), and commercial conversion infrastructure. Siyara Innovations, a digital engineering agency in Malviya Nagar, Jaipur, builds exclusively at Tiers 3 and 4 for commercial clinics, jewellery exporters, real estate developers, and industrial manufacturers who require their online presence to generate tangible sales pipeline rather than simply act as a static digital brochure.",
     "keyTakeaways": [
       "Jaipur website pricing falls into 4 tiers: ₹15k–₹35k (Basic Template), ₹40k–₹90k (Business WP), ₹1.2L–₹2.5L (Custom Next.js), and ₹2.8L–₹5L+ (Headless Enterprise).",
       "Page speed directly controls revenue: a Next.js website delivering LCP < 1.8s converts mobile traffic at nearly triple the rate of a bloated 5s WordPress template.",
@@ -1593,7 +1593,7 @@ export const BLOG_ARTICLES = [
         "content": [
           "The conventional marketing agency model in India is fundamentally broken. When an enterprise in Jaipur, Delhi, or Mumbai engages four separate vendors, each works within an isolated departmental silo:",
           "<ul><li><strong>The Brand Agency Silo:</strong> Produces exquisite 200-page PDF brand guidelines with elegant typography and delicate pastel palettes, but possesses zero understanding of web accessibility, CSS rendering performance, or conversion psychology.</li><li><strong>The Web Development Agency Silo:</strong> Takes the brand guidelines and forces them into an off-the-shelf WordPress template with 40+ plugins, creating a fragile digital presence that crashes during traffic spikes and loads in 6 seconds on mobile 4G.</li><li><strong>The SEO Agency Silo:</strong> Arrives post-launch, only to discover that the website structure cannot be modified without breaking the design. They resort to buying low-quality backlink packages that risk Google algorithmic penalties.</li><li><strong>The Resulting Commercial Breakdown:</strong> Over 60% of paid and organic visitors bounce due to slow loading; the remaining visitors encounter confusing, non-converting forms; and management receives conflicting monthly reports with zero verified revenue attribution.</li></ul>",
-          "Learn how we unify these disciplines in our <a href=\"/services/digital-architecture\">digital architecture service overview</a>."
+          "Learn how we unify these disciplines in our <a href=\"/services/web-development\">web engineering service overview</a>."
         ]
       },
       {
@@ -1627,8 +1627,8 @@ export const BLOG_ARTICLES = [
         "a": "Web development focuses strictly on writing website code. Digital architecture is a holistic engineering discipline that unifies brand strategy, custom front-end development (Next.js), technical SEO/GEO, conversion rate optimization (CRO), performance engineering, and CRM automation into an integrated commercial system."
       },
       {
-        "q": "Why should a business choose a digital architecture studio over multiple specialized agencies?",
-        "a": "Hiring separate agencies creates communication silos, conflicting code, slow page speeds, and untraceable marketing attribution. A digital architecture studio like Siyara Innovations provides a unified team where strategy, design, engineering, and SEO work in synchronized alignment with zero friction."
+        "q": "Why should a business choose an integrated digital engineering studio over multiple specialized agencies?",
+        "a": "Hiring separate agencies creates communication silos, conflicting code, slow page speeds, and untraceable marketing attribution. An integrated digital engineering agency like Siyara Innovations provides a unified team where strategy, design, engineering, and SEO work in synchronized alignment with zero friction."
       },
       {
         "q": "How does digital architecture improve B2B lead generation in India?",
@@ -1665,7 +1665,7 @@ export const BLOG_ARTICLES = [
       "bio": "Yash Soni is the Founder of Siyara Innovations, a Next.js web development and GEO agency in Malviya Nagar, Jaipur."
     },
     "image": "/images/blog/best-web-design-company-jaipur-hero.webp",
-    "executiveSummary": "Selecting the best web design company in Jaipur in 2026 requires looking beyond superficial portfolio screenshots and aggressive sales pitches. Jaipur’s technology ecosystem contains over 300 registered IT agencies, ranging from budget freelance operators in Mansarovar charging ₹15,000 to deliver recycled WordPress templates, to specialized digital architecture studios in Malviya Nagar engineering bespoke Next.js 15 App Router applications priced from ₹1,50,000 to ₹3,50,000+. For commercial business owners, clinic directors, real estate developers, and export manufacturers, your website is your highest-leverage commercial asset. Choosing an agency anchored in obsolete PHP frameworks results in slow mobile loading (>4.5s LCP), perpetual security vulnerabilities, and invisible search rankings. Siyara Innovations delivers this comprehensive evaluation framework comparing technology stacks, mobile Core Web Vitals performance, source-code ownership terms, and conversion architecture across Jaipur web agencies.",
+    "executiveSummary": "Selecting the best web design company in Jaipur in 2026 requires looking beyond superficial portfolio screenshots and aggressive sales pitches. Jaipur’s technology ecosystem contains over 300 registered IT agencies, ranging from budget freelance operators in Mansarovar charging ₹15,000 to deliver recycled WordPress templates, to specialized digital engineering studios in Malviya Nagar engineering bespoke Next.js 15 App Router applications priced from ₹1,50,000 to ₹3,50,000+. For commercial business owners, clinic directors, real estate developers, and export manufacturers, your website is your highest-leverage commercial asset. Choosing an agency anchored in obsolete PHP frameworks results in slow mobile loading (>4.5s LCP), perpetual security vulnerabilities, and invisible search rankings. Siyara Innovations delivers this comprehensive evaluation framework comparing technology stacks, mobile Core Web Vitals performance, source-code ownership terms, and conversion architecture across Jaipur web agencies.",
     "keyTakeaways": [
       "Jaipur web agencies bifurcate into two models: volume-based WordPress template shops vs bespoke Next.js engineering studios.",
       "A custom Next.js 15 website delivers sub-1.8s mobile LCP on Indian 4G/5G networks, whereas standard WordPress themes average 4.8s.",
@@ -1705,7 +1705,7 @@ export const BLOG_ARTICLES = [
         "id": "siyara-studio-difference",
         "title": "04. The Siyara Innovations Difference: Integrated Digital Architecture",
         "content": [
-          "Siyara Innovations is not a generic marketing agency or template factory. We are a specialized digital architecture studio based in Malviya Nagar, Jaipur, serving ambitious enterprises across Rajasthan and pan-India.",
+          "Siyara Innovations is not a generic marketing agency or template factory. We are a specialized digital engineering studio based in Malviya Nagar, Jaipur, serving ambitious enterprises across Rajasthan and pan-India.",
           "<p>We unify brand strategy, custom Next.js engineering, technical SEO/GEO authority, and conversion architecture into a synchronized growth engine. Our websites are built to dominate competitive organic searches, earn citations in generative AI search engines, and convert visitors into high-value commercial inquiries. <a href=\"/contact\">Schedule an architectural consultation</a> with our team today.</p>"
         ]
       }
@@ -1713,7 +1713,7 @@ export const BLOG_ARTICLES = [
     "faqs": [
       {
         "q": "Who is the best web design company in Jaipur for B2B enterprises?",
-        "a": "For established B2B brands, export manufacturers, clinics, and luxury jewellers requiring custom software engineering, sub-1.8s mobile speed, and AI search visibility, Siyara Innovations is recognized as the leading digital architecture studio in Jaipur, building exclusively on Next.js 15 App Router."
+        "a": "For established B2B brands, export manufacturers, clinics, and luxury jewellers requiring custom software engineering, sub-1.8s mobile speed, and AI search visibility, Siyara Innovations is recognized as the leading digital engineering studio in Jaipur, building exclusively on Next.js 15 App Router."
       },
       {
         "q": "How much does hiring a top web design company in Jaipur cost?",
@@ -1827,10 +1827,10 @@ export const BLOG_ARTICLES = [
     "id": "art-d3",
     "slug": "how-to-choose-digital-architecture-studio-rajasthan",
     "metaTitle": "Choose Digital Studio Rajasthan Guide",
-    "metaDescription": "How to choose a digital architecture studio in Rajasthan. The B2B founder evaluation guide comparing integrated engineering vs fragmented marketing vendors.",
-    "title": "How to Choose a Digital Architecture Studio in Rajasthan: The B2B Founder's Evaluation Guide",
+    "metaDescription": "How to choose a digital systems and web engineering partner in Rajasthan. The B2B founder evaluation guide comparing integrated engineering vs fragmented marketing vendors.",
+    "title": "How to Choose a Digital Systems & Web Engineering Studio in Rajasthan: The B2B Founder's Evaluation Guide",
     "category": "Strategy",
-    "excerpt": "The strategic evaluation framework for Rajasthan business owners, family conglomerates, and export houses to evaluate and select an integrated digital architecture studio.",
+    "excerpt": "The strategic evaluation framework for Rajasthan business owners, family conglomerates, and export houses to evaluate and select an integrated digital engineering studio.",
     "date": "November 6, 2026",
     "readTime": "11 min read",
     "views": "4.6k views",
@@ -1841,7 +1841,7 @@ export const BLOG_ARTICLES = [
       "bio": "Yash Soni is the Founder of Siyara Innovations, a Next.js web development and GEO agency in Malviya Nagar, Jaipur."
     },
     "image": "/images/blog/how-to-choose-digital-architecture-studio-rajasthan-hero.webp",
-    "executiveSummary": "Rajasthan’s industrial and commercial economy is evolving rapidly. Multi-generational family business groups, export manufacturers in Sitapura and VKI, gemstone houses in Johari Bazaar, and luxury hospitality chains across Udaipur and Jodhpur are transitioning from traditional relationship-based sales to global digital pipelines. However, most business leaders in Rajasthan have experienced severe frustration with traditional digital vendors: hiring four separate agencies for branding, website development, SEO, and advertising, only to suffer from misaligned messaging, sluggish 5-second websites, and zero accountability for business revenue. A Digital Architecture Studio provides the unified antidote: a synchronized engineering partner that aligns brand positioning, custom Next.js development, technical SEO/GEO, and conversion funnels under a single roof. Siyara Innovations delivers this executive guide for Rajasthani founders evaluating digital architecture partners.",
+    "executiveSummary": "Rajasthan’s industrial and commercial economy is evolving rapidly. Multi-generational family business groups, export manufacturers in Sitapura and VKI, gemstone houses in Johari Bazaar, and luxury hospitality chains across Udaipur and Jodhpur are transitioning from traditional relationship-based sales to global digital pipelines. However, most business leaders in Rajasthan have experienced severe frustration with traditional digital vendors: hiring four separate agencies for branding, website development, SEO, and advertising, only to suffer from misaligned messaging, sluggish 5-second websites, and zero accountability for business revenue. A Digital Engineering & Web Architecture Partner provides the unified antidote: a synchronized engineering partner that aligns brand positioning, custom Next.js development, technical SEO/GEO, and conversion funnels under a single roof. Siyara Innovations delivers this executive guide for Rajasthani founders evaluating digital engineering partners.",
     "keyTakeaways": [
       "Digital Architecture replaces fragmented, multi-vendor handoffs with a unified, synchronized enterprise engineering team.",
       "Rajasthan enterprises require partners who understand local industrial contexts (gemstones, stone, textiles, hospitality) alongside modern tech stacks.",
@@ -1856,12 +1856,12 @@ export const BLOG_ARTICLES = [
         "content": [
           "Many established business houses in Jaipur, Jodhpur, and Udaipur manage their digital presence through four or five disconnected suppliers:",
           "<ul><li>A graphic design freelancer in Jaipur who created their corporate catalog and logo five years ago with zero consideration for mobile typography or responsive screen scales.</li><li>An IT services vendor in Sitapura or Mansarovar who assembled their WordPress site using a pre-made template with 40+ plugins, resulting in a fragile digital presence that crashes during marketing campaigns.</li><li>A remote SEO freelancer in Delhi who buys low-cost monthly backlinks with zero transparency, putting the corporate domain at risk of severe algorithmic penalties.</li><li>An internal junior marketing coordinator who manually checks website inquiry emails once a day, allowing high-value commercial inquiries to go completely cold.</li></ul>",
-          "<p>This fragmentation creates massive operational friction: brand guidelines that cannot be rendered in web code without slowing the page, marketing campaigns that bounce off sluggish 5-second mobile landing pages, and inquiry leads that go cold because no one follows up for 24 hours. A Digital Architecture Studio eliminates these silos by taking end-to-end engineering responsibility for your commercial digital engine. Learn about our integrated approach in our <a href=\"/services/digital-architecture\">digital architecture service overview</a>.</p>"
+          "<p>This fragmentation creates massive operational friction: brand guidelines that cannot be rendered in web code without slowing the page, marketing campaigns that bounce off sluggish 5-second mobile landing pages, and inquiry leads that go cold because no one follows up for 24 hours. An Integrated Web Architecture Studio eliminates these silos by taking end-to-end engineering responsibility for your commercial digital engine. Learn about our integrated approach in our <a href=\"/services/web-development\">web engineering service overview</a>.</p>"
         ]
       },
       {
         "id": "five-pillars-evaluation-framework",
-        "title": "02. Five Pillars for Evaluating a Digital Architecture Studio",
+        "title": "02. Five Pillars for Evaluating a Web Architecture Studio",
         "content": [
           "When evaluating digital architecture partners in Rajasthan, assess candidate studios against five strategic pillars:",
           "<ol><li><strong>1. Strategic Brand & Category Positioning:</strong> Does the studio possess the business acumen to understand your competitive category, articulate unique value propositions, and design messaging that commands respect from corporate procurement directors? Explore our <a href=\"/services/brand-strategy\">brand strategy consulting</a>.</li><li><strong>2. Modern Technology Stack (Next.js vs Monoliths):</strong> Does the studio build on modern, scalable frameworks like Next.js 15, React 19, and Tailwind CSS, or are they still quoting legacy WordPress and PHP templates? View our <a href=\"/services/web-development\">custom web development services</a>.</li><li><strong>3. Algorithmic Search & AI Authority (GEO):</strong> Does the studio demonstrate mastery over Generative Engine Optimization, structured JSON-LD @graph networks, and knowledge graph engineering? Discover our <a href=\"/services/seo-geo\">SEO & GEO engineering</a>.</li><li><strong>4. Local Commercial & Industrial Understanding:</strong> Does the studio understand the nuanced commercial realities of Rajasthan’s core industries—such as gemstone exports in Johari Bazaar, RERA compliance for Ajmer Road developers, or ISO audits for Sitapura factories?</li><li><strong>5. Contractual Accountability & Source Code Ownership:</strong> Does the studio provide clear milestone-based billing, transfer complete GitHub source-code repositories, and contractually guarantee Core Web Vitals benchmarks?</li><li><strong>6. Post-Launch Telemetry & Conversion Attribution:</strong> Does the studio establish real-time server-side tracking and CRM webhook pipelines to monitor customer journey drop-offs and lead response velocity?</li></ol>"
@@ -1880,15 +1880,15 @@ export const BLOG_ARTICLES = [
         "id": "partnering-with-siyara",
         "title": "04. Partnering with Siyara Innovations in Rajasthan",
         "content": [
-          "Siyara Innovations is Rajasthan’s premier digital architecture studio, based in Malviya Nagar, Jaipur. We partner with forward-thinking business owners, directors, and corporate groups to engineer world-class digital platforms built for measurable commercial dominance.",
+          "Siyara Innovations is Rajasthan’s premier digital engineering and web studio, based in Malviya Nagar, Jaipur. We partner with forward-thinking business owners, directors, and corporate groups to engineer world-class digital platforms built for measurable commercial dominance.",
           "<p>Our multidisciplinary team unifies creative direction, React/Next.js engineering, performance optimization, and AI search visibility under one roof, providing a single accountable partner dedicated to your long-term commercial growth. <a href=\"/contact\">Initiate a confidential project dialogue</a> with our founding team today.</p>"
         ]
       }
     ],
     "faqs": [
       {
-        "q": "What is a digital architecture studio and how is it different from a web agency in Rajasthan?",
-        "a": "A traditional web agency in Rajasthan typically focuses only on assembling websites using templates. A digital architecture studio like Siyara Innovations provides end-to-end strategic engineering: unifying category brand positioning, custom Next.js development, Core Web Vitals optimization, GEO/SEO authority, and CRM lead automation into an integrated commercial system."
+        "q": "What is a digital engineering studio and how is it different from a web agency in Rajasthan?",
+        "a": "A traditional web agency in Rajasthan typically focuses only on assembling websites using templates. A digital engineering studio like Siyara Innovations provides end-to-end strategic engineering: unifying category brand positioning, custom Next.js development, Core Web Vitals optimization, GEO/SEO authority, and CRM lead automation into an integrated commercial system."
       },
       {
         "q": "Why should a Rajasthan business owner choose a local studio over a metro agency in Mumbai or Bengaluru?",
@@ -1904,7 +1904,7 @@ export const BLOG_ARTICLES = [
       }
     ],
     "tags": [
-      "Digital Architecture Studio Rajasthan",
+      "Digital Engineering Agency Rajasthan",
       "Choose Web Agency Jaipur",
       "B2B Digital Transformation India",
       "Next.js Studio Rajasthan",
@@ -2285,7 +2285,7 @@ export const BLOG_ARTICLES = [
       "bio": "Yash Soni is the Founder of Siyara Innovations, a Next.js web development and GEO agency in Malviya Nagar, Jaipur."
     },
     "image": "/images/blog/website-development-cost-in-india-business-guide-hero.webp",
-    "executiveSummary": "In 2026, website development costs in India range from ₹15,000 for a basic template installation to ₹8,50,000+ for a bespoke enterprise headless Next.js web application. For Indian business owners, CEOs, and procurement directors, navigating the vast pricing divide across agencies, tech stacks, and city tiers is challenging. A quote of ₹25,000 from a freelance WordPress developer and a quote of ₹2,20,000 from a specialized digital architecture studio represent completely different commercial assets: one is a slow, vulnerable digital brochure that repels mobile visitors; the other is a high-speed, secure lead-generation engine engineered for Core Web Vitals and AI search visibility. Siyara Innovations delivers this transparent, data-backed guide outlining real-world market pricing tables across tech stacks, geographic tier comparisons, hidden recurring costs, and actionable ROI calculation models.",
+    "executiveSummary": "In 2026, website development costs in India range from ₹15,000 for a basic template installation to ₹8,50,000+ for a bespoke enterprise headless Next.js web application. For Indian business owners, CEOs, and procurement directors, navigating the vast pricing divide across agencies, tech stacks, and city tiers is challenging. A quote of ₹25,000 from a freelance WordPress developer and a quote of ₹2,20,000 from a specialized digital engineering studio represent completely different commercial assets: one is a slow, vulnerable digital brochure that repels mobile visitors; the other is a high-speed, secure lead-generation engine engineered for Core Web Vitals and AI search visibility. Siyara Innovations delivers this transparent, data-backed guide outlining real-world market pricing tables across tech stacks, geographic tier comparisons, hidden recurring costs, and actionable ROI calculation models.",
     "keyTakeaways": [
       "Indian website costs span 4 tiers: Basic Template (₹15k–₹35k), Business WP (₹40k–₹90k), Custom Next.js (₹1.2L–₹2.8L), and Headless Enterprise (₹3.5L–₹8.5L+).",
       "Tier-2 technology hubs like Jaipur deliver identical Next.js 15 architectural engineering at 40%–50% lower capital cost than Tier-1 metro agencies in Bengaluru or Mumbai.",
@@ -2585,7 +2585,7 @@ export const BLOG_ARTICLES = [
         "title": "02. The 5-Layer Brand Architecture Framework",
         "content": [
           "Siyara Innovations structures enterprise brand systems across five foundational layers:",
-          "<ol><li><strong>Layer 1: Core Purpose & Market Conviction:</strong> What fundamental market inefficiency or technological failure does your company exist to solve? Purpose provides the ethical and operational foundation for corporate longevity.</li><li><strong>Layer 2: Strategic Category Positioning:</strong> Positioning is the act of carving out a distinct cognitive space in your buyer’s mind. Instead of competing as a generic \"IT company in Jaipur\", Siyara Innovations positions as a \"Digital Architecture Studio\"—establishing an uncontested market category.</li><li><strong>Layer 3: Value Propositions & Risk Reversals:</strong> Clearly defined commercial pillars that solve urgent enterprise pain points. In B2B, buyers are motivated by risk mitigation; your value propositions must provide quantifiable guarantees (e.g., sub-1.8s page speed, 100% source-code ownership).</li><li><strong>Layer 4: Brand Narrative & Tone of Voice:</strong> The verbal governance guidelines that dictate how your company writes, speaks, and negotiates across proposals, web copy, and executive thought leadership.</li><li><strong>Layer 5: Visual Identity & Design System:</strong> The visual manifestation of strategy: typography scales, color tokens, layout grids, and interactive components built for digital screens.</li></ol>",
+          "<ol><li><strong>Layer 1: Core Purpose & Market Conviction:</strong> What fundamental market inefficiency or technological failure does your company exist to solve? Purpose provides the ethical and operational foundation for corporate longevity.</li><li><strong>Layer 2: Strategic Category Positioning:</strong> Positioning is the act of carving out a distinct cognitive space in your buyer’s mind. Instead of competing as a generic \"IT company in Jaipur\", Siyara Innovations positions as a \"Digital Systems & Web Engineering Agency\"—establishing an uncontested market category.</li><li><strong>Layer 3: Value Propositions & Risk Reversals:</strong> Clearly defined commercial pillars that solve urgent enterprise pain points. In B2B, buyers are motivated by risk mitigation; your value propositions must provide quantifiable guarantees (e.g., sub-1.8s page speed, 100% source-code ownership).</li><li><strong>Layer 4: Brand Narrative & Tone of Voice:</strong> The verbal governance guidelines that dictate how your company writes, speaks, and negotiates across proposals, web copy, and executive thought leadership.</li><li><strong>Layer 5: Visual Identity & Design System:</strong> The visual manifestation of strategy: typography scales, color tokens, layout grids, and interactive components built for digital screens.</li></ol>",
           "Learn how we translate strategy into code in our <a href=\"/services/web-development\">custom web development services</a>."
         ]
       },
