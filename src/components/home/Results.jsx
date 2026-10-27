@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Cpu, Search, Target, ShieldCheck, TrendingUp } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Results() {
   const proofPillars = [
@@ -91,13 +92,13 @@ export default function Results() {
           <p className="font-sans text-sm text-[#101613] font-normal leading-relaxed mb-6 max-w-lg">
             We design and engineer digital architectures that expand brand reach, improve visibility, and generate measurable revenue.
           </p>
-          <a
-            href="#work"
+          <Link
+            href="/work"
             className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-6 py-3.5 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.18em] uppercase transition-[background-color,border-color,box-shadow] duration-300 shadow-lg group rounded-full"
           >
             <span>EXPLORE SELECTED WORK</span>
             <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </a>
+          </Link>
         </motion.div>
 
         {/* 5 Proof Pillars Container */}

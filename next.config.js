@@ -60,11 +60,7 @@ const nextConfig = {
         destination: '/services',
         permanent: true,
       },
-      {
-        source: '/industries/hospitality',
-        destination: '/services',
-        permanent: true,
-      },
+
       {
         source: '/services/app-development',
         destination: '/services/mobile-app-development',

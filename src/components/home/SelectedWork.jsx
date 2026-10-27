@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { projectsData } from '../../data/projectsData';
 
 export default function SelectedWork() {
@@ -81,13 +82,25 @@ export default function SelectedWork() {
                 </div>
 
                 {/* CTA Button */}
-                <a
-                  href={`#project-${currentProject.id}`}
-                  className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-4 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.16em] sm:tracking-[0.18em] uppercase transition-all duration-300 shadow-lg group min-h-[44px]"
-                >
-                  <span>VIEW CASE STUDY</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </a>
+                {currentProject.link ? (
+                  <a
+                    href={currentProject.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-4 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.16em] sm:tracking-[0.18em] uppercase transition-all duration-300 shadow-lg group min-h-[44px]"
+                  >
+                    <span>EXPLORE LIVE SHOWCASE</span>
+                    <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </a>
+                ) : (
+                  <Link
+                    href="/work"
+                    className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-4 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.16em] sm:tracking-[0.18em] uppercase transition-all duration-300 shadow-lg group min-h-[44px]"
+                  >
+                    <span>EXPLORE ALL WORK</span>
+                    <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </Link>
+                )}
               </motion.div>
             </AnimatePresence>
           </div>

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Compass, Edit3, Code, Rocket, TrendingUp, ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Process() {
   const [activeStep, setActiveStep] = useState(0);
@@ -95,13 +96,13 @@ export default function Process() {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="lg:col-span-5 flex lg:justify-end"
           >
-            <a
-              href="#contact"
+            <Link
+              href="/services#services-process"
               className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2 px-7 py-3.5 border border-[#D9B45F] bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase transition-[background-color,box-shadow,transform] duration-300 shadow-lg group rounded-full"
             >
               <span>VIEW DETAILED PROCESS</span>
               <ArrowUpRight className="w-4 h-4 text-[#101613] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
+            </Link>
           </motion.div>
         </div>
 
