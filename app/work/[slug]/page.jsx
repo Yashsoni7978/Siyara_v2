@@ -39,7 +39,7 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const title = `${project.name || project.title} · ${project.industry} Architecture | Siyara Innovations`;
+  const title = `${project.name || project.title} · ${project.industry} Architecture`;
   const description = `${project.description} Explore this ${project.industry} digital architecture and Next.js web system engineered by Siyara Innovations.`;
 
   return {
