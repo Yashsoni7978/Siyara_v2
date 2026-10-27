@@ -61,6 +61,7 @@ export default function NewsletterCTA() {
               <input 
                 type="email"
                 required
+                aria-label="Email address for insights subscription"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"

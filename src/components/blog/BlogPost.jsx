@@ -166,7 +166,8 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
               
               <button
                 onClick={handleShareTwitter}
-                className="w-9 h-9 border border-[#D4AF37]/20 bg-[#063C2D]/20 hover:border-[#D4AF37] hover:bg-[#063C2D] text-[#CFC9BB] hover:text-[#F3EFE4] flex items-center justify-center transition-all"
+                aria-label="Share on Twitter"
+                className="w-9 h-9 border border-[#D4AF37]/20 bg-[#063C2D]/20 hover:border-[#D4AF37] hover:bg-[#063C2D] text-[#CFC9BB] hover:text-[#F3EFE4] flex items-center justify-center transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D4AF37]"
                 title="Share on Twitter"
               >
                 <Twitter className="w-4 h-4" />
@@ -174,7 +175,8 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
 
               <button
                 onClick={handleShareLinkedin}
-                className="w-9 h-9 border border-[#D4AF37]/20 bg-[#063C2D]/20 hover:border-[#D4AF37] hover:bg-[#063C2D] text-[#CFC9BB] hover:text-[#F3EFE4] flex items-center justify-center transition-all"
+                aria-label="Share on LinkedIn"
+                className="w-9 h-9 border border-[#D4AF37]/20 bg-[#063C2D]/20 hover:border-[#D4AF37] hover:bg-[#063C2D] text-[#CFC9BB] hover:text-[#F3EFE4] flex items-center justify-center transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D4AF37]"
                 title="Share on LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
@@ -182,7 +184,8 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
 
               <button
                 onClick={handleCopyLink}
-                className="relative w-9 h-9 border border-[#D4AF37]/20 bg-[#063C2D]/20 hover:border-[#D4AF37] hover:bg-[#063C2D] text-[#CFC9BB] hover:text-[#F3EFE4] flex items-center justify-center transition-all"
+                aria-label="Copy article link"
+                className="relative w-9 h-9 border border-[#D4AF37]/20 bg-[#063C2D]/20 hover:border-[#D4AF37] hover:bg-[#063C2D] text-[#CFC9BB] hover:text-[#F3EFE4] flex items-center justify-center transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D4AF37]"
                 title="Copy Link"
               >
                 {copied ? <Check className="w-4 h-4 text-[#19A878]" /> : <Copy className="w-4 h-4" />}

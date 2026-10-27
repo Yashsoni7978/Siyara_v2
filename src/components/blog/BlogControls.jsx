@@ -55,11 +55,13 @@ export default function BlogControls({
                   value={searchQuery}
                   onChange={(e) => onSearchChange(e.target.value)}
                   placeholder="Search insights..."
+                  aria-label="Search insights by topic or keyword"
                   className="w-full bg-[#063C2D]/20 border border-[#D4AF37]/25 focus:border-[#D4AF37] text-[#F3EFE4] placeholder-[#CFC9BB]/50 text-xs font-sans pl-10 pr-9 py-2.5 outline-none transition-all duration-300 rounded-full"
                 />
                 {searchQuery && (
                   <button
                     onClick={() => onSearchChange('')}
+                    aria-label="Clear search query"
                     className="absolute right-3 text-[#CFC9BB]/60 hover:text-[#F3EFE4] transition-colors"
                   >
                     <X className="w-3.5 h-3.5" />

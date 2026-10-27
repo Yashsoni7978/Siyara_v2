@@ -15,8 +15,8 @@ import {
 import { BUSINESS_CONFIG } from '../../src/config/business';
 
 export const metadata = {
-  title: 'Digital Architecture Studio Jaipur',
-  description: 'Jaipur premier digital architecture studio engineering unified Next.js web applications, local SEO systems, and brand dominance for enterprises.',
+  title: 'Digital Systems & Web Architecture Jaipur',
+  description: 'Enterprise web systems engineering, high-speed Next.js applications, local SEO, and brand growth systems in Jaipur, Rajasthan.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/digital-architecture-studio-jaipur',
   },
@@ -24,21 +24,21 @@ export const metadata = {
     type: 'website',
     url: 'https://www.siyaradigitals.com/digital-architecture-studio-jaipur',
     siteName: 'Siyara Innovations',
-    title: 'Digital Architecture Studio Jaipur | Siyara Innovations',
-    description: 'Jaipur’s premier digital architecture studio. We engineer unified Next.js web applications, local SEO systems, and brand dominance for high-growth enterprises.',
+    title: 'Digital Systems & Web Architecture Jaipur | Siyara Innovations',
+    description: 'Enterprise web systems engineering, high-speed Next.js applications, local SEO, and brand growth systems in Jaipur, Rajasthan.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
         width: 1200,
         height: 630,
-        alt: 'Siyara Innovations · Digital Architecture Studio Jaipur',
+        alt: 'Siyara Innovations · Digital Systems & Web Architecture Jaipur',
       },
     ],
     locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Digital Architecture Studio Jaipur | Siyara Innovations',
+    title: 'Digital Systems & Web Architecture Jaipur | Siyara Innovations',
     description: 'Unified Next.js web applications, local SEO, and brand architecture in Jaipur, Rajasthan.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
@@ -134,15 +134,15 @@ export default function DigitalArchitectureStudioJaipurPage() {
           {
             '@type': 'ListItem',
             'position': 2,
-            'name': 'Digital Architecture Studio Jaipur',
+            'name': 'Digital Systems & Web Architecture Jaipur',
             'item': 'https://www.siyaradigitals.com/digital-architecture-studio-jaipur',
           },
         ],
       },
       {
         '@type': 'Service',
-        'name': 'Digital Architecture Studio Jaipur',
-        'serviceType': 'Digital Architecture & Enterprise Web Engineering',
+        'name': 'Digital Systems & Web Architecture Jaipur',
+        'serviceType': 'Digital Systems & Enterprise Web Engineering',
         'provider': {
           '@type': 'ProfessionalService',
           '@id': 'https://www.siyaradigitals.com/#organization',
@@ -161,7 +161,7 @@ export default function DigitalArchitectureStudioJaipurPage() {
           { '@type': 'State', 'name': 'Rajasthan' },
           { '@type': 'Country', 'name': 'India' },
         ],
-        'description': 'Premier digital architecture studio in Jaipur delivering unified Next.js web systems, technical SEO, generative engine optimization, and brand identity systems.',
+        'description': 'Premier web systems engineering in Jaipur delivering unified Next.js web applications, technical SEO, generative engine optimization, and brand identity systems.',
       },
       {
         '@type': 'FAQPage',
@@ -198,7 +198,7 @@ export default function DigitalArchitectureStudioJaipurPage() {
           </div>
 
           <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl font-normal tracking-tight text-[#F3EFE3] leading-[1.08] sm:leading-[1.05] mb-6 sm:mb-8 break-words">
-            Digital Architecture Studio <br />
+            Digital Systems &amp; Web Architecture <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26]">
               in Jaipur, India
             </span>
@@ -208,7 +208,7 @@ export default function DigitalArchitectureStudioJaipurPage() {
           <div className="p-5 sm:p-6 rounded-2xl bg-[#0D1412] border border-[#0C6B52]/30 mb-8 sm:mb-10 text-left sm:text-center shadow-xl">
             <p className="font-sans text-sm sm:text-xl text-[#ECE7D8] leading-relaxed font-light">
               <strong className="text-[#D9B45F] font-semibold">Siyara Innovations</strong> is a premier 
-              <strong> Digital Architecture Studio</strong> based in <strong>Jaipur, Rajasthan</strong>. We engineer high-speed Next.js web applications, brand identity systems, and Generative Engine Optimization (GEO) pipelines that unify technology and aesthetics into predictable business growth.
+              <strong> digital engineering agency</strong> based in <strong>Jaipur, Rajasthan</strong>. We engineer high-speed Next.js web applications, brand identity systems, and Generative Engine Optimization (GEO) pipelines that unify technology and aesthetics into predictable business growth.
             </p>
           </div>
 

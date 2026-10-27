@@ -95,7 +95,7 @@ export default function Footer() {
                 href={siteConfig.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Chat on WhatsApp with Siyara Innovations"
+                aria-label="WhatsApp Studio - Chat with Siyara Innovations"
                 className="font-sans text-xs font-semibold text-[#F3EFE4] hover:text-[#19A878] transition-colors flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
               >
                 <MessageCircle className="w-3.5 h-3.5 text-[#19A878] shrink-0" />
