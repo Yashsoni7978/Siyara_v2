@@ -3,7 +3,7 @@ import { projectsData } from '../../src/data/projectsData';
 
 export const metadata = {
   title: 'Web Design & Digital Portfolio Jaipur',
-  description: 'Explore live digital architectures, Next.js web builds, and branding systems engineered for healthcare, real estate, and retail clients in Jaipur.',
+  description: 'Explore live functional web demonstrations, internal brand systems, and architectural concepts engineered across 11 industry verticals by Siyara Innovations.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/work',
   },
@@ -12,13 +12,13 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/work',
     siteName: 'Siyara Innovations',
     title: 'Web Design & Digital Portfolio Jaipur | Siyara Innovations',
-    description: 'Explore live digital architectures, Next.js web builds, and branding systems engineered for healthcare, real estate, and retail clients in Jaipur.',
+    description: 'Explore live functional web demonstrations, internal brand systems, and architectural concepts engineered across 11 industry verticals by Siyara Innovations.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
         width: 1200,
         height: 630,
-        alt: 'Our Work & Client Showcases · Siyara Innovations Jaipur',
+        alt: 'Our Work & Architectural Showcases · Siyara Innovations Jaipur',
       },
     ],
     locale: 'en_IN',
@@ -26,7 +26,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design & Digital Portfolio Jaipur | Siyara Innovations',
-    description: 'Explore live digital architectures, Next.js web builds, and branding systems engineered for healthcare, real estate, and retail clients in Jaipur.',
+    description: 'Explore live functional web demonstrations, internal brand systems, and architectural concepts engineered across 11 industry verticals by Siyara Innovations.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };
@@ -58,8 +58,8 @@ export default function WorkPage() {
         '@type': 'CollectionPage',
         '@id': 'https://www.siyaradigitals.com/work#portfolio',
         'url': 'https://www.siyaradigitals.com/work',
-        'name': 'Siyara Innovations Client Portfolio & Architectural Showcases',
-        'description': 'Live digital architectures, Next.js web applications, and enterprise brand systems engineered for clients in Jaipur and across India.',
+        'name': 'Siyara Innovations Portfolio & Architectural Showcases',
+        'description': 'Live functional web demonstrations, internal brand platforms, and architectural concepts engineered across 11 industry verticals by Siyara Innovations.',
         'mainEntity': {
           '@type': 'ItemList',
           'name': 'Featured Digital Architecture Projects',
@@ -69,7 +69,7 @@ export default function WorkPage() {
             'position': idx + 1,
             'name': project.title || project.name,
             'description': project.description || project.tagline,
-            'url': project.link || `https://www.siyaradigitals.com/work#${project.slug}`,
+            'url': `https://www.siyaradigitals.com/work/${project.slug}`,
           })),
         },
       },

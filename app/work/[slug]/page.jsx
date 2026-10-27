@@ -40,7 +40,12 @@ export async function generateMetadata({ params }) {
   }
 
   const title = `${project.name || project.title} · ${project.industry} Architecture`;
-  const description = `${project.description} Explore this ${project.industry} digital architecture and Next.js web system engineered by Siyara Innovations.`;
+  const systemDescriptor = project.classification === 'INTERNAL_PROJECT'
+    ? 'internal brand platform'
+    : project.classification === 'LIVE_DEMO'
+    ? 'interactive web showcase'
+    : 'digital architecture concept';
+  const description = `${project.description} Explore this ${project.industry} ${systemDescriptor} presented by Siyara Innovations.`;
 
   return {
     title,
@@ -170,6 +175,7 @@ export default async function ProjectDetailPage({ params }) {
             {/* Classification Badge */}
             <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-sans font-bold tracking-[0.14em] uppercase border ${classConfig.badgeClass}`}>
               {classification === 'DELIVERED_PROJECT' && <CheckCircle2 className="w-3 h-3 text-[#19A878]" />}
+              {classification === 'INTERNAL_PROJECT' && <CheckCircle2 className="w-3 h-3 text-[#19A878]" />}
               {classification === 'LIVE_DEMO' && <Sparkles className="w-3 h-3 text-[#D9B45F]" />}
               {classification === 'CONCEPT' && <Compass className="w-3 h-3 text-[#A5B8AA]" />}
               <span>{classConfig.badgeText}</span>
@@ -290,7 +296,18 @@ export default async function ProjectDetailPage({ params }) {
                 {project.description}
               </p>
               <p className="font-sans text-sm sm:text-base text-[#A5B8AA]/90 font-light leading-relaxed">
-                Engineered to demonstrate high-performance web architecture, conversion-focused layout hierarchy, and responsive interface design for the {project.industry} category. Built with modern web standards and structured for speed, crawlability, and fluid cross-device execution.
+                {classification === 'INTERNAL_PROJECT' && (
+                  'An internal digital platform engineered and maintained in-house for stage hosting, media systems, and studio initiatives.'
+                )}
+                {classification === 'LIVE_DEMO' && (
+                  `Engineered as a functional demonstration of digital architecture, layout hierarchy, and responsive interface design for the ${project.industry} category. Prospective clients can test the interactive prototype directly.`
+                )}
+                {classification === 'CONCEPT' && (
+                  `An architectural design prototype and visual exploration created for the ${project.industry} category, exploring brand positioning, layout hierarchy, and user interaction concepts.`
+                )}
+                {classification === 'DELIVERED_PROJECT' && (
+                  'A custom digital platform engineered and deployed in production under an external commercial engagement.'
+                )}
               </p>
             </div>
 
@@ -328,7 +345,10 @@ export default async function ProjectDetailPage({ params }) {
                   </h4>
                   <p className="font-sans text-xs sm:text-sm text-[#A5B8AA] leading-relaxed mb-4">
                     {classification === 'DELIVERED_PROJECT' && (
-                      'This project is a custom production platform engineered and deployed for live production use under the client’s domain.'
+                      'This project is a custom production platform engineered and deployed for live client use under an external commercial engagement.'
+                    )}
+                    {classification === 'INTERNAL_PROJECT' && (
+                      'This project is an internal brand platform engineered and operated in-house for studio leadership initiatives, rather than an external client commercial engagement.'
                     )}
                     {classification === 'LIVE_DEMO' && (
                       `This project is a fully functioning live demonstration engineered by Siyara Innovations to illustrate real-time performance, layout architecture, and user flows for the ${project.industry} vertical. Prospective clients can test and evaluate the interactive system directly.`
@@ -344,7 +364,11 @@ export default async function ProjectDetailPage({ params }) {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs font-sans font-bold tracking-wider text-[#D9B45F] hover:text-[#19A878] transition-colors uppercase"
                     >
-                      <span>Explore Live Demonstration (New Tab)</span>
+                      <span>
+                        {classification === 'INTERNAL_PROJECT'
+                          ? 'Visit Platform (New Tab)'
+                          : 'Explore Live Demonstration (New Tab)'}
+                      </span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </a>
                   )}
@@ -357,35 +381,39 @@ export default async function ProjectDetailPage({ params }) {
           {/* Right Specification Sidebar (4 cols) */}
           <div className="lg:col-span-4 space-y-8">
             
-            {/* Tech Stack Card */}
+            {/* Project Specifications Card (Strictly Verified Data) */}
             <div className="p-6 border border-white/10 bg-[#0B110F] rounded-sm">
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-white/10">
                 <Code2 className="w-4 h-4 text-[#D9B45F]" />
                 <h3 className="font-sans text-xs font-bold tracking-widest text-[#F3EFE4] uppercase">
-                  Technical Foundation
+                  Project Specifications
                 </h3>
               </div>
 
               <ul className="space-y-3 text-xs font-sans text-[#A5B8AA]">
                 <li className="flex items-center justify-between py-1 border-b border-white/5">
-                  <span className="text-[#A5B8AA]/70">Framework</span>
-                  <span className="font-medium text-[#F3EFE4]">Next.js (App Router)</span>
+                  <span className="text-[#A5B8AA]/70">Project ID</span>
+                  <span className="font-medium text-[#F3EFE4]">{project.id}</span>
                 </li>
                 <li className="flex items-center justify-between py-1 border-b border-white/5">
-                  <span className="text-[#A5B8AA]/70">Rendering</span>
-                  <span className="font-medium text-[#F3EFE4]">Static & Edge Optimized</span>
+                  <span className="text-[#A5B8AA]/70">Industry</span>
+                  <span className="font-medium text-[#F3EFE4]">{project.industry}</span>
                 </li>
                 <li className="flex items-center justify-between py-1 border-b border-white/5">
-                  <span className="text-[#A5B8AA]/70">Styling</span>
-                  <span className="font-medium text-[#F3EFE4]">Tailwind CSS</span>
+                  <span className="text-[#A5B8AA]/70">Classification</span>
+                  <span className="font-medium text-[#F3EFE4]">{classConfig.label}</span>
                 </li>
                 <li className="flex items-center justify-between py-1 border-b border-white/5">
-                  <span className="text-[#A5B8AA]/70">Structured Data</span>
-                  <span className="font-medium text-[#F3EFE4]">Schema.org JSON-LD</span>
+                  <span className="text-[#A5B8AA]/70">Deployment Status</span>
+                  <span className="font-medium text-[#F3EFE4]">
+                    {project.status === 'LIVE' ? 'Live Online' : 'Concept Prototype'}
+                  </span>
                 </li>
                 <li className="flex items-center justify-between py-1">
-                  <span className="text-[#A5B8AA]/70">Deployment</span>
-                  <span className="font-medium text-[#F3EFE4]">Global Edge Network</span>
+                  <span className="text-[#A5B8AA]/70">Primary Capability</span>
+                  <span className="font-medium text-[#F3EFE4]">
+                    {Array.isArray(project.services) && project.services.length > 0 ? project.services[0] : 'Digital Architecture'}
+                  </span>
                 </li>
               </ul>
             </div>

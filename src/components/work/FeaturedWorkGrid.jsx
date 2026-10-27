@@ -95,6 +95,7 @@ export default function FeaturedWorkGrid({
                   }`}
                 >
                   {cat.id === 'DELIVERED_PROJECT' && <CheckCircle2 className={`w-3 h-3 ${isActive ? 'text-[#19A878]' : 'text-[#0B5E49]'}`} />}
+                  {cat.id === 'INTERNAL_PROJECT' && <CheckCircle2 className={`w-3 h-3 ${isActive ? 'text-[#19A878]' : 'text-[#0B5E49]'}`} />}
                   {cat.id === 'LIVE_DEMO' && <Sparkles className={`w-3 h-3 ${isActive ? 'text-[#E8C979]' : 'text-[#B9923F]'}`} />}
                   {cat.id === 'CONCEPT' && <Compass className={`w-3 h-3 ${isActive ? 'text-white' : 'text-[#101613]/60'}`} />}
                   <span>{cat.name}</span>
@@ -178,6 +179,7 @@ export default function FeaturedWorkGrid({
                           {/* 3-Tier Classification Badge */}
                           <span className={`font-sans text-[9px] sm:text-[10px] font-bold tracking-[0.16em] uppercase px-2.5 py-1 rounded-full border backdrop-blur-md flex items-center gap-1 ${classConfig.badgeClass}`}>
                             {classification === 'DELIVERED_PROJECT' && <CheckCircle2 className="w-2.5 h-2.5" />}
+                            {classification === 'INTERNAL_PROJECT' && <CheckCircle2 className="w-2.5 h-2.5" />}
                             {classification === 'LIVE_DEMO' && <Sparkles className="w-2.5 h-2.5" />}
                             {classification === 'CONCEPT' && <Compass className="w-2.5 h-2.5" />}
                             <span>{classConfig.shortLabel}</span>

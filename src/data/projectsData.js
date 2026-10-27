@@ -656,21 +656,21 @@ export const projectsData = [
     name: 'Anchor Yash Soni',
     title: 'ANCHOR YASH SONI',
     industry: 'Anchor / Emcee',
-    projectType: 'Founder Professional Portfolio - 700+ Shows Hosted',
-    tagline: 'Founder Professional Portfolio - 700+ Shows Hosted',
-    description: 'This is our own founder’s real, live professional site - not a demo. Bilingual (Hindi/English) anchor and emcee, 700+ shows hosted across weddings, corporate events, sangeet functions, and sports commentary.',
-    services: ['FOUNDER BRAND', 'LIVE SITE', 'EVENT ANCHOR'],
+    projectType: 'Bilingual Event Anchor & Media Platform',
+    tagline: 'Event Host & Media Portfolio Platform',
+    description: 'An internal digital portfolio platform developed for event hosting, stage production showcases, and media inquiries.',
+    services: ['PORTFOLIO PLATFORM', 'MEDIA SYSTEM', 'STAGE SHOWCASE'],
     status: 'LIVE',
-    classification: 'DELIVERED_PROJECT',
+    classification: 'INTERNAL_PROJECT',
     link: 'https://yashsoni.in/',
     image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80',
     brandLogo: 'YASH SONI',
-    heroHeadline: '700+ SHOWS HOSTED ACROSS INDIA & GLOBALLY',
-    heroSubline: 'Bilingual anchor, sports commentary, and high-energy corporate host.',
+    heroHeadline: 'BILINGUAL EVENT ANCHOR & MEDIA PLATFORM',
+    heroSubline: 'Stage hosting, corporate events, and live production platform.',
     ctaText: 'VISIT YASHSONI.IN',
     featured: true,
     gridSize: 'medium',
-    isFounder: true
+    isFounder: false
   },
   {
     id: '34',
@@ -1740,6 +1740,7 @@ export const getIndustryCategories = () => {
 
 export const PROJECT_CLASSIFICATIONS = {
   DELIVERED_PROJECT: 'DELIVERED_PROJECT',
+  INTERNAL_PROJECT: 'INTERNAL_PROJECT',
   LIVE_DEMO: 'LIVE_DEMO',
   CONCEPT: 'CONCEPT',
 };
@@ -1747,10 +1748,18 @@ export const PROJECT_CLASSIFICATIONS = {
 export const CLASSIFICATION_CONFIG = {
   DELIVERED_PROJECT: {
     id: 'DELIVERED_PROJECT',
-    label: 'Delivered Project',
+    label: 'Delivered Client Project',
     shortLabel: 'Delivered',
-    badgeText: 'Delivered Project',
-    description: 'Custom client platform engineered, deployed, and operating in production.',
+    badgeText: 'Delivered Client Project',
+    description: 'Custom client platform engineered, deployed, and operating in production under an external commercial engagement.',
+    badgeClass: 'bg-[#063C2D]/60 text-[#19A878] border-[#19A878]/35',
+  },
+  INTERNAL_PROJECT: {
+    id: 'INTERNAL_PROJECT',
+    label: 'Internal Brand Platform',
+    shortLabel: 'Internal Brand',
+    badgeText: 'Internal Brand Platform',
+    description: 'Internal digital platform engineered and maintained in-house for studio leadership initiatives.',
     badgeClass: 'bg-[#063C2D]/60 text-[#19A878] border-[#19A878]/35',
   },
   LIVE_DEMO: {
@@ -1772,14 +1781,26 @@ export const CLASSIFICATION_CONFIG = {
 };
 
 export const getClassificationCategories = () => {
-  const counts = { ALL: projectsData.length, DELIVERED_PROJECT: 0, LIVE_DEMO: 0, CONCEPT: 0 };
+  const counts = { ALL: projectsData.length, DELIVERED_PROJECT: 0, INTERNAL_PROJECT: 0, LIVE_DEMO: 0, CONCEPT: 0 };
   projectsData.forEach(p => {
     if (counts[p.classification] !== undefined) counts[p.classification]++;
   });
-  return [
+
+  const categories = [
     { id: 'ALL', name: 'All Work', count: counts.ALL },
-    { id: 'DELIVERED_PROJECT', name: 'Delivered Projects', count: counts.DELIVERED_PROJECT },
-    { id: 'LIVE_DEMO', name: 'Live Demos', count: counts.LIVE_DEMO },
-    { id: 'CONCEPT', name: 'Concepts', count: counts.CONCEPT },
   ];
+  if (counts.DELIVERED_PROJECT > 0) {
+    categories.push({ id: 'DELIVERED_PROJECT', name: 'Delivered Projects', count: counts.DELIVERED_PROJECT });
+  }
+  if (counts.LIVE_DEMO > 0) {
+    categories.push({ id: 'LIVE_DEMO', name: 'Live Demos', count: counts.LIVE_DEMO });
+  }
+  if (counts.CONCEPT > 0) {
+    categories.push({ id: 'CONCEPT', name: 'Concepts', count: counts.CONCEPT });
+  }
+  if (counts.INTERNAL_PROJECT > 0) {
+    categories.push({ id: 'INTERNAL_PROJECT', name: 'Internal Brand', count: counts.INTERNAL_PROJECT });
+  }
+
+  return categories;
 };
