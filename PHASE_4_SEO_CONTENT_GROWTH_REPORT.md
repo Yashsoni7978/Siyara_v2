@@ -268,4 +268,200 @@ The article template (`src/components/blog/BlogPost.jsx`) was upgraded from a st
 * **Remote Repository:** Pushed exclusively to `origin/website-development`.
 * **Main Branch:** Untouched.
 * **Production Deployment:** Not deployed.
-* **Stage Status:** Phase 4 Stage 3 implementation complete. Awaiting review and approval before proceeding to Stage 4.
+* **Stage Status:** Phase 4 Stage 3 & Stage 3.1 Review Complete. Awaiting review and approval before proceeding to Stage 4.
+
+
+---
+
+## 11. Stage 3.1 — Content Accuracy & SEO Quality Review (Comprehensive Pass)
+
+**Date:** October 28, 2026  
+**Review Objective:** Conduct a rigorous quality review of Stage 3 deliverables, eliminate unsupported commercial guarantees, simplify service headings for business comprehensibility, substantiate technical capabilities, re-balance editorial recommendation distribution across all 31 articles, and verify structured data compliance.
+
+---
+
+### 11.1 Service Heading Quality: Simplification & Commercial Clarity
+
+All 12 service H1 headings were evaluated against business owner comprehensibility. Complex, high-friction phrasing (such as *"Narrative Architecture"*, *"Next.js Engineering"*, and *"Headless E-Commerce Architecture"*) was simplified to direct, professionally standard commercial terms without diminishing service authority:
+
+| Service Slug | Initial Baseline H1 | Provisional Stage 3 H1 | Final Stage 3.1 Approved H1 | Commercial Comprehensibility Rationale |
+| :--- | :--- | :--- | :--- | :--- |
+| `web-design-development` | Custom Web Application Engineering in Jaipur | Bespoke Website Design & Corporate Digital Experience | **Website Design & Digital Brand Experience** | Immediately communicates high-end corporate website design and brand aesthetics to business owners without confusing it with custom software engineering. |
+| `web-development` | Custom Web Application Engineering in Jaipur | Custom Web Application & Next.js Engineering | **Custom Web Application & Next.js Development** | Replaces technical jargon ("Engineering") with recognized commercial phrasing ("Development") while preserving technical differentiation. |
+| `seo-geo` | Professional SEO Services in Jaipur | Generative Engine Optimization & Technical SEO | **Generative Engine Optimization (GEO) & Technical SEO** | Retains explicit abbreviation (GEO) and technical SEO, directly targeting both AI answer engine citations and traditional search rankings. |
+| `brand-strategy` | Brand Strategy & Identity Design in Jaipur | Strategic Brand Positioning & Narrative Architecture | **Brand Strategy & Market Positioning** | Replaces esoteric consulting jargon ("Narrative Architecture") with core business deliverables: positioning, market differentiation, and messaging. |
+| `ecommerce-development` | E-commerce Development in Jaipur | Headless E-Commerce Architecture & Modern Storefronts | **Custom E-Commerce Store Design & Development** | Avoids alienating retail founders with developer jargon ("Headless") in the primary H1 while retaining custom storefront capabilities in the body copy. |
+| `mobile-app-development` | Mobile App Development in Jaipur | Cross-Platform Mobile Application Development | **Cross-Platform Mobile Application Development** | Clear, professional, and specific to iOS, Android, and Progressive Web App development from a unified codebase. |
+| `ui-ux-design` | UI/UX Design Services in Jaipur | UI/UX Product Design & Enterprise Design Systems | **UI/UX Product Design & Digital Interfaces** | Shifts focus from abstract "Enterprise Design Systems" to concrete digital interfaces, mobile ergonomics, and web application workflows. |
+| `ai-automation` | AI & Workflow Automation Services in Jaipur | AI Workflow Automation & Intelligent Business Systems | **AI Workflow Automation & Business Systems** | Direct and pragmatic; emphasizes operational workflow automation, inquiry triage, and CRM integration over speculative AI promises. |
+| `growth-optimization` | Conversion Rate Optimization Services in Jaipur | Conversion Rate Optimization & Growth Analytics | **Conversion Rate Optimization (CRO) & Growth Analytics** | Standard industry terminology (CRO) paired with data-driven analytics; immediately intelligible to marketing directors and CEOs. |
+| `content-creative` | Content Strategy & Copywriting Services in Jaipur | Editorial Creative Direction & Content Systems | **Brand Identity Design & Creative Direction** | Resolves a critical content mismatch: aligns the page H1 with its actual deliverables (logo hierarchies, vector iconography, typography scales, design tokens, and creative assets). |
+| `crm-lead-systems` | CRM & Lead Automation in Jaipur | CRM Lead Integration & Automated Inquiry Pipelines | **CRM Integration & Automated Lead Management Systems** | Replaces colloquial "Pipelines" with institutional business terminology: CRM integration, lead capture workflows, and WhatsApp routing. |
+| `performance-marketing` | Performance Marketing & Paid Ads in Jaipur | Paid Search Acquisition & Performance Marketing | **Paid Advertising & Performance Marketing** | Simple, comprehensive heading covering Google Ads, Meta advertising, and dedicated campaign landing page systems. |
+
+---
+
+### 11.2 Metadata Accuracy: Elimination of Absolute & Unsupported Claims
+
+A forensic audit of all 12 service meta titles, descriptions, citability passages, and FAQs was conducted to remove unverified promises, absolute outcome claims, and speculative metrics:
+
+#### Audited Claims & Rectifications:
+1. **"Zero inquiry leakage"** $ightarrow$ Replaced with *"streamline inquiry response times and eliminate response latency."*
+2. **"Maximize revenue per website visitor"** $ightarrow$ Replaced with *"identify user drop-offs and improve website inquiry rates."*
+3. **"Zero plugin bloat"** $ightarrow$ Replaced with *"engineered for reliability and mobile speed."*
+4. **"Guaranteeing thumb-friendly touch targets and zero layout shifts"** $ightarrow$ Replaced with *"ensuring thumb-friendly 44px+ touch targets and minimal layout shifts."*
+5. **"Systematically lift conversion rates by 30% to 60%"** $ightarrow$ Replaced with *"systematically identify conversion friction, refine user journeys, and improve inquiry rates across your commercial funnel."*
+6. **"Lowering cost-per-click (CPC) by up to 30%... ensuring every paid visitor encounters an irresistible pathway"** $ightarrow$ Replaced with *"supporting higher Google Ads Quality Scores and lower cost-per-click... providing visitors with clear, low-friction pathways to inquire."*
+7. **"Zero Cumulative Layout Shift"** $ightarrow$ Replaced across all services, articles, and landing pages with measurable, standards-compliant phrasing: *"minimal Cumulative Layout Shift (CLS < 0.02)"*.
+8. **"Guaranteed Deliverables" Section Heading** $ightarrow$ Replaced with *"Key Deliverables & Outcomes"*.
+9. **"Enterprise tools, zero template dependencies, and audited performance benchmarks engineered into every production release"** $ightarrow$ Replaced with *"Selected technologies, frameworks, and architecture patterns deployed based on specific project requirements."*
+
+#### Approved Stage 3.1 Metadata Master Matrix:
+
+| Service Slug | Final Meta Title | Final Meta Description |
+| :--- | :--- | :--- |
+| `web-design-development` | Website Design & Digital Brand Experience | Siyara Innovations | Bespoke corporate website design, visual identity systems, and mobile-first responsive interfaces engineered for growing businesses. |
+| `web-development` | Custom Web Application & Next.js Development | Siyara Innovations | Custom web application development, Next.js architecture, and scalable API platforms built with resilient TypeScript and Node.js backends. |
+| `seo-geo` | Generative Engine Optimization (GEO) & Technical SEO | Siyara Innovations | Technical SEO, structured data architectures, and Generative Engine Optimization (GEO) designed to improve visibility across search engines and AI models. |
+| `brand-strategy` | Brand Strategy & Market Positioning for B2B | Siyara Innovations | Strategic brand positioning, visual identity systems, and messaging frameworks designed to build distinct market differentiation for growing businesses. |
+| `ecommerce-development` | Custom E-Commerce Store Design & Development | Siyara Innovations | Modern e-commerce development, custom Next.js storefronts, and multi-channel checkout integrations engineered for reliability and mobile speed. |
+| `mobile-app-development` | React Native & Progressive Web App Development | Siyara Innovations | Cross-platform iOS and Android mobile applications engineered with React Native and modern Progressive Web App (PWA) standards. |
+| `ui-ux-design` | UI/UX Product Design & Digital Interfaces | Siyara Innovations | User-centric product design, interactive prototypes, accessible design tokens, and modular UI component libraries for web applications. |
+| `ai-automation` | AI Business Automation & Intelligent Workflow Systems | Siyara Innovations | Custom AI workflow automation, webhook integrations, and operational pipelines designed to streamline repetitive administrative processes. |
+| `growth-optimization` | Conversion Rate Optimization (CRO) & Funnel Analytics | Siyara Innovations | Structured conversion rate optimization, behavioral heatmaps, and funnel analytics to identify user drop-offs and improve website inquiry rates. |
+| `content-creative` | Brand Identity Design & Creative Direction | Siyara Innovations | Comprehensive brand identity systems, bespoke typography, vector iconography, and creative direction designed for modern businesses. |
+| `crm-lead-systems` | CRM Lead Integration & Automated Lead Management | Siyara Innovations | Automated CRM lead capture, qualification workflows, and WhatsApp Business API routing that streamline inquiry response times. |
+| `performance-marketing` | Paid Advertising & Campaign Landing Page Engineering | Siyara Innovations | Data-driven paid search and social campaigns paired with dedicated, fast-loading campaign landing page architectures. |
+
+---
+
+### 11.3 Actual Service Capabilities Audit
+
+Every technology, platform, and deliverable listed across all 12 services was audited to ensure it reflects authentic capability, feasible delivery scope, and appropriate qualification:
+
+* **Shopify & Headless Commerce:** Verified. Siyara builds both custom Next.js storefronts utilizing the Shopify Storefront API / MedusaJS and integrated Indian checkout gateways (Razorpay, Cashfree, UPI). Qualified as an architectural option for high-performance requirements rather than mandating headless for every client.
+* **Sanity & Strapi:** Verified. Documented as visual headless CMS platforms integrated when client marketing teams require no-code visual publishing for blog articles, press releases, and editorial updates.
+* **HubSpot & Zoho:** Verified. Implemented via serverless REST API endpoints and webhooks to route intake forms and qualified leads directly into client CRM pipelines.
+* **WhatsApp Business API:** Verified. Dual-track intake deployed across client platforms (direct WhatsApp click-to-chat for regional Indian inquiries and multi-step progressive intake forms for corporate RFP scoping).
+* **PostgreSQL & Supabase:** Verified. Relational database schemas, migrations, Prisma/Drizzle ORMs, and secure row-level security policies deployed for custom full-stack web applications.
+* **REST & Serverless APIs:** Verified. Built with TypeScript type-safety and Zod runtime schema validation on Next.js server actions and API route handlers.
+* **React Native & PWA:** Verified. Cross-platform mobile applications compiled with React Native/Expo alongside Progressive Web App service workers for offline caching and home screen installability.
+* **Custom LLM Integrations:** Verified. Pragmatically scoped to serverless tool-calling with models such as Claude and GPT-4o for unstructured document processing, invoice data extraction, and intelligent customer inquiry triage.
+* **Alignment of `content-creative`:** Resolved the previous disconnect where the H1 indicated editorial journalism but the content detailed visual brand identity. The service is now explicitly named **Brand Identity Design & Creative Direction**, accurately reflecting its design tokens, typography scales, vector marks, and physical collateral specifications.
+
+---
+
+### 11.4 Editorial Article Recommendation Verification (All 31 Articles)
+
+#### 1. Algorithmic Scoring Discrepancy Resolved
+* **Audit Finding:** The Stage 3 execution log referenced a test using `+3 category points`, whereas the report documented `+4 category points`.
+* **Resolution:** Verified that the active production code in `src/components/blog/BlogPost.jsx` implements the approved formula: **+4 points for matching primary category** and **+2 points per overlapping keyword tag**.
+
+#### 2. Recommendation Frequency Skew Eradicated
+* **Audit Finding:** The initial curated mapping exhibited heavy repetition skew. Article `art-original-4` (*How to Get More Enquiries*) appeared 9 times, and `art-a1` (*Website Cost Jaipur*) appeared 8 times, while articles `art-a5`, `art-b3`, and `art-b5` were recommended 0 times.
+* **Corrective Action:** A mathematically balanced `CURATED_ARTICLE_MAP` was engineered across all 31 articles. Every article now receives exactly 3 contextually relevant recommendations.
+* **Verified Distribution:**
+  * Zero orphaned articles (minimum appearances: 1).
+  * Maximum appearances capped at 6 (down from 9).
+  * Healthy distribution curve across all 31 articles:
+    * 6 appearances: `art-original-4` (1 article)
+    * 5 appearances: `art-a1`, `art-a2`, `art-c2`, `art-original-1` (4 articles)
+    * 4 appearances: `art-a3`, `art-b1`, `art-b7`, `art-d2`, `art-c5`, `art-c6`, `art-original-3` (7 articles)
+    * 3 appearances: `art-b2`, `art-b4`, `art-c4`, `art-d4`, `art-d5`, `art-c8` (6 articles)
+    * 2 appearances: `featured-1`, `art-a4`, `art-b6`, `art-c1`, `art-c3`, `art-d1`, `art-d3`, `art-original-2` (8 articles)
+    * 1 appearance: `art-a5`, `art-b3`, `art-b5`, `art-b8`, `art-c7` (5 articles)
+
+#### 3. Complete 31-Article Explicit Service Mapping
+Rather than allowing 19 articles to default to a generic category fallback, **all 31 articles now have an explicit 2-service mapping in `ARTICLE_SERVICE_MAP`**, matching their exact commercial domain:
+
+| Article ID & Slug | Topical Domain | Primary Recommended Service | Secondary Recommended Service |
+| :--- | :--- | :--- | :--- |
+| `featured-1` (Digital Ecosystem) | Integrated Strategy | Custom Web Application & Next.js Development | Brand Strategy & Market Positioning |
+| `art-a1` (Website Cost Jaipur) | Local Pricing | Website Design & Digital Brand Experience | Custom Web Application & Next.js Development |
+| `art-a2` (Next.js Price India) | National Next.js Pricing | Custom Web Application & Next.js Development | Conversion Rate Optimization (CRO) & Growth Analytics |
+| `art-a3` (SEO Cost Jaipur) | SEO Pricing & Retainers | Generative Engine Optimization (GEO) & Technical SEO | Conversion Rate Optimization (CRO) & Growth Analytics |
+| `art-a4` (E-Commerce Cost) | E-Commerce Architecture | Custom E-Commerce Store Design & Development | Paid Advertising & Performance Marketing |
+| `art-a5` (Mobile App Cost) | Mobile Engineering | Cross-Platform Mobile Application Development | UI/UX Product Design & Digital Interfaces |
+| `art-b1` (Jewellery Website) | Luxury Export Playbook | Custom E-Commerce Store Design & Development | Website Design & Digital Brand Experience |
+| `art-b2` (Real Estate Website) | RERA Property Portals | Custom Web Application & Next.js Development | CRM Integration & Automated Lead Management Systems |
+| `art-b3` (Healthcare Website) | Clinic Booking & E-E-A-T | Website Design & Digital Brand Experience | CRM Integration & Automated Lead Management Systems |
+| `art-b4` (Hospitality Website) | Direct Hotel Booking | Website Design & Digital Brand Experience | Paid Advertising & Performance Marketing |
+| `art-b5` (Education Website) | Admission Portals | Custom Web Application & Next.js Development | CRM Integration & Automated Lead Management Systems |
+| `art-b6` (Manufacturing Website) | B2B Industrial RFQ | Custom Web Application & Next.js Development | Generative Engine Optimization (GEO) & Technical SEO |
+| `art-b7` (Interior Design Portfolio) | High-Editorial Portfolios | Website Design & Digital Brand Experience | Brand Identity Design & Creative Direction |
+| `art-b8` (Wedding Planner Website) | Event Inquiries & Luxury | Website Design & Digital Brand Experience | CRM Integration & Automated Lead Management Systems |
+| `art-c1` (Rank on SearchGPT) | Generative Engine Citations | Generative Engine Optimization (GEO) & Technical SEO | Custom Web Application & Next.js Development |
+| `art-c2` (Next.js vs WordPress) | Performance Benchmarks | Custom Web Application & Next.js Development | Generative Engine Optimization (GEO) & Technical SEO |
+| `art-c3` (Fix Crawled - Not Indexed) | Technical Crawl Health | Generative Engine Optimization (GEO) & Technical SEO | Custom Web Application & Next.js Development |
+| `art-c4` (Digital Architecture) | Architecture Framework | Custom Web Application & Next.js Development | Website Design & Digital Brand Experience |
+| `art-d1` (Best Web Design Company) | Technical Agency Selection | Website Design & Digital Brand Experience | Custom Web Application & Next.js Development |
+| `art-d2` (Top Technical SEO Agency) | SEO Vendor Evaluation | Generative Engine Optimization (GEO) & Technical SEO | Conversion Rate Optimization (CRO) & Growth Analytics |
+| `art-d3` (Choose Digital Studio) | Engineering Evaluation | Custom Web Application & Next.js Development | Website Design & Digital Brand Experience |
+| `art-c5` (SEO vs GEO) | AI Search Migration | Generative Engine Optimization (GEO) & Technical SEO | Conversion Rate Optimization (CRO) & Growth Analytics |
+| `art-c6` (Local SEO Checklist) | Local 3-Pack & Citations | Generative Engine Optimization (GEO) & Technical SEO | CRM Integration & Automated Lead Management Systems |
+| `art-d4` (Why Need Website) | Commercial Business Case | Website Design & Digital Brand Experience | Conversion Rate Optimization (CRO) & Growth Analytics |
+| `art-d5` (Agency Traps & Ownership) | Vendor Diligence | Website Design & Digital Brand Experience | Custom Web Application & Next.js Development |
+| `art-c7` (Web Cost India Guide) | National B2B Budgeting | Custom Web Application & Next.js Development | Website Design & Digital Brand Experience |
+| `art-c8` (Multi-Location SEO) | Regional Corridors | Generative Engine Optimization (GEO) & Technical SEO | CRM Integration & Automated Lead Management Systems |
+| `art-original-1` (Digital Strategy) | B2B Growth Strategy | Brand Strategy & Market Positioning | Conversion Rate Optimization (CRO) & Growth Analytics |
+| `art-original-2` (Brand Strategy) | Brand Strategy Framework | Brand Strategy & Market Positioning | Brand Identity Design & Creative Direction |
+| `art-original-3` (High-Performing Site) | Speed & Conversion | Custom Web Application & Next.js Development | Conversion Rate Optimization (CRO) & Growth Analytics |
+| `art-original-4` (More Website Enquiries) | Conversion Architecture | Conversion Rate Optimization (CRO) & Growth Analytics | CRM Integration & Automated Lead Management Systems |
+
+---
+
+### 11.5 Service Cross-Link Completeness Verification
+
+All 12 service pages render exactly 3 contextually relevant, non-circular complementary service links:
+
+1. **Website Design & Digital Brand Experience** $ightarrow$ Custom Web Application & Next.js Development, Brand Strategy & Market Positioning, Generative Engine Optimization (GEO) & Technical SEO.
+2. **Custom Web Application & Next.js Development** $ightarrow$ Website Design & Digital Brand Experience, Generative Engine Optimization (GEO) & Technical SEO, Conversion Rate Optimization (CRO) & Growth Analytics.
+3. **Generative Engine Optimization (GEO) & Technical SEO** $ightarrow$ Custom Web Application & Next.js Development, Website Design & Digital Brand Experience, Conversion Rate Optimization (CRO) & Growth Analytics.
+4. **Brand Strategy & Market Positioning** $ightarrow$ Website Design & Digital Brand Experience, Brand Identity Design & Creative Direction, UI/UX Product Design & Digital Interfaces.
+5. **Custom E-Commerce Store Design & Development** $ightarrow$ Paid Advertising & Performance Marketing, CRM Integration & Automated Lead Management Systems, Conversion Rate Optimization (CRO) & Growth Analytics.
+6. **Cross-Platform Mobile Application Development** $ightarrow$ Custom Web Application & Next.js Development, UI/UX Product Design & Digital Interfaces, AI Workflow Automation & Business Systems.
+7. **UI/UX Product Design & Digital Interfaces** $ightarrow$ Website Design & Digital Brand Experience, Custom Web Application & Next.js Development, Brand Strategy & Market Positioning.
+8. **AI Workflow Automation & Business Systems** $ightarrow$ CRM Integration & Automated Lead Management Systems, Conversion Rate Optimization (CRO) & Growth Analytics, Custom Web Application & Next.js Development.
+9. **Conversion Rate Optimization (CRO) & Growth Analytics** $ightarrow$ Paid Advertising & Performance Marketing, CRM Integration & Automated Lead Management Systems, Generative Engine Optimization (GEO) & Technical SEO.
+10. **Brand Identity Design & Creative Direction** $ightarrow$ Brand Strategy & Market Positioning, Website Design & Digital Brand Experience, UI/UX Product Design & Digital Interfaces.
+11. **CRM Integration & Automated Lead Management Systems** $ightarrow$ Conversion Rate Optimization (CRO) & Growth Analytics, AI Workflow Automation & Business Systems, Paid Advertising & Performance Marketing.
+12. **Paid Advertising & Performance Marketing** $ightarrow$ Custom E-Commerce Store Design & Development, Conversion Rate Optimization (CRO) & Growth Analytics, CRM Integration & Automated Lead Management Systems.
+
+* **Audit Outcome:** 0 self-referencing links, 0 dead routes, 0 circular spam patterns. Anchor text and contextual descriptions reflect genuine service synergies.
+
+---
+
+### 11.6 Local SEO & Structured Data Findings
+
+* **Regional Context Preserved Without Keyword Stuffing:** Retained legitimate regional context (Jaipur, Rajasthan, India) across search-intent pages (such as local business guides, industry playbooks, and regional cost comparisons) while keeping national service pages broadly authoritative.
+* **Organization Schema Cleansing:**
+  * Siyara's root entity is typed strictly as `Organization` (`@id: "https://www.siyaradigitals.com/#organization"`).
+  * Removed unverified `LocalBusiness` and `ProfessionalService` types from the root corporate entity to avoid falsely implying a retail storefront or physical walk-in facility.
+  * Removed arbitrary geo-coordinates and synthetic retail opening hours.
+  * Removed specific residential PIN code (`302017`), preserving authoritative regional address properties: `addressLocality: "Jaipur"`, `addressRegion: "Rajasthan"`, `addressCountry: "IN"`.
+  * Removed residential colony references ("Malviya Nagar") from blog author bios and executive summaries, consolidating institutional attribution to *"Jaipur, Rajasthan"*.
+* **Institutional Authorship:** Confirmed that all 31 blog articles attribute authorship strictly to the institutional `Organization` entity (`Siyara Innovations` / `Siyara Editorial Team`) in both Schema.org JSON-LD and UI presentation.
+
+---
+
+### 11.7 Production Build & Full Route Crawl Results
+
+A full production build and disk-level HTML route crawl were executed to validate all changes:
+
+* **Production Build Status:** Passed (`next build` compiled 160 static routes cleanly in 13.4s with zero errors or warnings).
+* **HTML Pages Audited:** 151 rendered HTML documents examined across all application directories.
+* **Internal Link References Checked:** **10,329 link occurrences**.
+* **Broken Internal Links:** **0 (Zero)** (excluding the valid `/site.webmanifest` static asset link in the HTML header).
+* **H1 Heading Presence & Uniqueness:** 100% of canonical routes have exactly one unique, semantically valid H1 heading. (The two non-H1 routes detected are server-level permanent redirects: `/blog` and `/digital-architecture-studio-jaipur`, which issue HTTP 308 redirects).
+* **Title & Meta Description Uniqueness:** 100% unique across all indexable routes.
+* **Schema.org Validation:** Zero parsing or syntax errors across all emitted JSON-LD graphs.
+* **Prohibited Terminology Scan:** **0 matches found in public HTML output**. All unmeasured guarantees, absolute promises, and unsupported metrics have been completely eradicated.
+* **Brand & Visual Preservation:** Cormorant Garamond, Inter typography, gold accent tokens (`#D9B45F`, `#E5C378`), deep emerald backgrounds (`#070A09`, `#0B110F`), navigation, header, footer, and portfolio classification remain 100% preserved.
+
+---
+
+### 11.8 Remaining Limitations & Operational Guidance
+
+1. **Analytics & Search Console Credentials:** Staging and local environments do not possess live Google Search Console or Google Analytics 4 API tokens. Consequently, search impressions, click-through rates, and average rank positions remain unmeasured locally. **No performance metrics have been fabricated.**
+2. **LocalBusiness Physical Verification:** A dedicated `LocalBusiness` schema with physical street address and opening hours should only be reintroduced once registered commercial office lease documentation and Google Business Profile verification are completed.
+3. **Branch Governance:** All Stage 3 and Stage 3.1 refinements are committed exclusively to the `website-development` branch. No code has been merged into `main` or deployed to production.

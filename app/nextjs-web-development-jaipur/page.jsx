@@ -55,7 +55,7 @@ const TECH_SPECS = [
   {
     icon: Gauge,
     title: '100/100 Core Web Vitals Engineering',
-    desc: 'We engineer front-ends with sub-2.0s Largest Contentful Paint (LCP), zero Cumulative Layout Shift (CLS < 0.02), and instantaneous responsiveness (INP < 80ms).',
+    desc: 'We engineer front-ends with sub-2.0s Largest Contentful Paint (LCP), minimal Cumulative Layout Shift (CLS < 0.02), and instantaneous responsiveness (INP < 80ms).',
     features: ['AVIF & WebP Next-Gen Formats', 'Zero Render-Blocking Scripts', 'Font Subsetting & Swap Preload'],
   },
   {

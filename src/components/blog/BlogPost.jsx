@@ -64,58 +64,236 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
   };
 
-  // Calculate genuinely related articles based on category and shared tag overlap
-  const relatedArticles = allArticles
-    .filter((item) => item.id !== article.id)
-    .map((item) => {
-      let score = 0;
-      if (item.category === article.category) score += 4;
-      if (Array.isArray(item.tags) && Array.isArray(article.tags)) {
-        const overlap = item.tags.filter((t) => article.tags.includes(t));
-        score += overlap.length * 2;
-      }
-      return { item, score };
-    })
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 3)
-    .map((x) => x.item);
+  // Curated highly relevant related articles for all 31 articles (balanced distribution)
+  const CURATED_ARTICLE_MAP = {
+    'featured-1': ['art-original-1', 'art-c4', 'art-c5'],
+    'art-a1': ['art-c7', 'art-a2', 'art-d5'],
+    'art-a2': ['art-c2', 'art-a1', 'art-original-3'],
+    'art-a3': ['art-c5', 'art-d2', 'art-c6'],
+    'art-a4': ['art-b1', 'art-a2', 'art-original-4'],
+    'art-a5': ['art-a2', 'art-c2', 'art-original-3'],
+    'art-b1': ['art-b7', 'art-a4', 'art-b6'],
+    'art-b2': ['art-original-4', 'art-c8', 'art-b6'],
+    'art-b3': ['art-c6', 'art-d4', 'art-original-4'],
+    'art-b4': ['art-b8', 'art-b7', 'art-c8'],
+    'art-b5': ['art-d4', 'art-original-4', 'art-c6'],
+    'art-b6': ['art-b1', 'art-b2', 'art-original-1'],
+    'art-b7': ['art-b4', 'art-original-2', 'art-b1'],
+    'art-b8': ['art-b4', 'art-b7', 'art-original-4'],
+    'art-c1': ['art-c5', 'art-a3', 'art-d2'],
+    'art-c2': ['art-original-3', 'art-a2', 'art-c3'],
+    'art-c3': ['art-c2', 'art-d2', 'art-c5'],
+    'art-c4': ['featured-1', 'art-original-1', 'art-d3'],
+    'art-d1': ['art-d5', 'art-a1', 'art-d4'],
+    'art-d2': ['art-a3', 'art-c1', 'art-c3'],
+    'art-d3': ['art-c4', 'art-original-1', 'art-d5'],
+    'art-c5': ['art-c1', 'art-a3', 'art-d2'],
+    'art-c6': ['art-c8', 'art-b3', 'art-a3'],
+    'art-d4': ['art-d1', 'art-b5', 'art-a1'],
+    'art-d5': ['art-d1', 'art-a1', 'art-d3'],
+    'art-c7': ['art-a1', 'art-a2', 'art-c2'],
+    'art-c8': ['art-c6', 'art-b2', 'art-b4'],
+    'art-original-1': ['art-original-2', 'art-c4', 'featured-1'],
+    'art-original-2': ['art-original-1', 'art-b7', 'art-b1'],
+    'art-original-3': ['art-c2', 'art-a5', 'art-original-4'],
+    'art-original-4': ['art-original-3', 'art-b2', 'art-a4']
+  };
 
-  // Contextual related services matching the article domain
+  // Curated article recommendations with algorithmic similarity fallback
+  let relatedArticles = [];
+  const curatedIds = CURATED_ARTICLE_MAP[article?.id];
+  if (Array.isArray(curatedIds) && curatedIds.length > 0) {
+    relatedArticles = curatedIds
+      .map((id) => allArticles.find((item) => item.id === id))
+      .filter(Boolean);
+  }
+
+  if (relatedArticles.length < 3) {
+    const existingIds = new Set(relatedArticles.map((a) => a.id));
+    const scoredFallbacks = allArticles
+      .filter((item) => item.id !== article?.id && !existingIds.has(item.id))
+      .map((item) => {
+        let score = 0;
+        if (item.category === article?.category) score += 4;
+        if (Array.isArray(item.tags) && Array.isArray(article?.tags)) {
+          const overlap = item.tags.filter((t) => article.tags.includes(t));
+          score += overlap.length * 2;
+        }
+        return { item, score };
+      })
+      .sort((a, b) => b.score - a.score)
+      .map((x) => x.item);
+
+    relatedArticles = [...relatedArticles, ...scoredFallbacks].slice(0, 3);
+  }
+
+  // Precise article-to-service mapping for maximum contextual relevance across all 31 articles
+  const ARTICLE_SERVICE_MAP = {
+    'featured-1': [
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'Scalable Next.js applications engineered for high-concurrency enterprise traffic.' },
+      { title: 'Brand Strategy & Market Positioning', slug: 'brand-strategy', desc: 'Define your market category, core commercial pillars, and distinct pricing power.' }
+    ],
+    'art-a1': [
+      { title: 'Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Modern responsive UX, luxury brand aesthetics, and headless CMS publishing.' },
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'Full-stack Next.js applications, server actions, and PostgreSQL database architectures.' }
+    ],
+    'art-a2': [
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'Scalable Next.js 15 web applications, React Server Components, and custom APIs.' },
+      { title: 'Conversion Rate Optimization (CRO) & Growth Analytics', slug: 'growth-optimization', desc: 'Identify conversion friction and transform organic search visitors into qualified inquiries.' }
+    ],
+    'art-a3': [
+      { title: 'Generative Engine Optimization (GEO) & Technical SEO', slug: 'seo-geo', desc: 'Technical SEO, structured data architectures, and Generative Engine Optimization (GEO).' },
+      { title: 'Conversion Rate Optimization (CRO) & Growth Analytics', slug: 'growth-optimization', desc: 'Transform organic search visitors into qualified commercial inquiries.' }
+    ],
+    'art-a4': [
+      { title: 'Custom E-Commerce Store Design & Development', slug: 'ecommerce-development', desc: 'High-speed Next.js storefronts, custom checkout funnels, and payment gateways.' },
+      { title: 'Paid Advertising & Performance Marketing', slug: 'performance-marketing', desc: 'Data-driven paid search and social campaigns synchronized with fast landing pages.' }
+    ],
+    'art-a5': [
+      { title: 'Cross-Platform Mobile Application Development', slug: 'mobile-app-development', desc: 'Unified React Native iOS and Android applications with offline synchronization.' },
+      { title: 'UI/UX Product Design & Digital Interfaces', slug: 'ui-ux-design', desc: 'Mobile-first ergonomics, intuitive gestures, and platform-native UI patterns.' }
+    ],
+    'art-b1': [
+      { title: 'Custom E-Commerce Store Design & Development', slug: 'ecommerce-development', desc: 'Bespoke Next.js storefronts, international currencies, and catalog architecture.' },
+      { title: 'Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Luxury editorial presentation and high-resolution portfolio layouts.' }
+    ],
+    'art-b2': [
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'Interactive property portals, RERA-compliant inventory filters, and CRM sync.' },
+      { title: 'CRM Integration & Automated Lead Management Systems', slug: 'crm-lead-systems', desc: 'Automated WhatsApp lead capture and direct broker inquiry routing.' }
+    ],
+    'art-b3': [
+      { title: 'Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Patient-centric interfaces, doctor credential showcases, and clean UX.' },
+      { title: 'CRM Integration & Automated Lead Management Systems', slug: 'crm-lead-systems', desc: 'Frictionless clinic appointment scheduling and WhatsApp consultation alerts.' }
+    ],
+    'art-b4': [
+      { title: 'Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Immersive visual storytelling, suite galleries, and heritage aesthetics.' },
+      { title: 'Paid Advertising & Performance Marketing', slug: 'performance-marketing', desc: 'Targeted seasonal traveler acquisition and commission-free direct booking funnels.' }
+    ],
+    'art-b5': [
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'Student enrollment portals, course catalogs, and admission inquiry filters.' },
+      { title: 'CRM Integration & Automated Lead Management Systems', slug: 'crm-lead-systems', desc: 'Automated student lead capture, WhatsApp notifications, and CRM distribution.' }
+    ],
+    'art-b6': [
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'Industrial product specification catalogs, export RFQ forms, and client portals.' },
+      { title: 'Generative Engine Optimization (GEO) & Technical SEO', slug: 'seo-geo', desc: 'B2B export search visibility and entity knowledge graph architecture.' }
+    ],
+    'art-b7': [
+      { title: 'Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Architectural portfolio galleries, bespoke typography, and fast image pipelines.' },
+      { title: 'Brand Identity Design & Creative Direction', slug: 'content-creative', desc: 'Comprehensive brand identity systems, custom typography, and vector iconography.' }
+    ],
+    'art-b8': [
+      { title: 'Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Editorial destination wedding showcases, testimonial carousels, and luxury aesthetics.' },
+      { title: 'CRM Integration & Automated Lead Management Systems', slug: 'crm-lead-systems', desc: 'High-intent event inquiry forms and automated WhatsApp consultations.' }
+    ],
+    'art-c1': [
+      { title: 'Generative Engine Optimization (GEO) & Technical SEO', slug: 'seo-geo', desc: 'Algorithmic consensus across Google Search, SearchGPT, and Perplexity.' },
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'Semantic HTML, SSR edge rendering, and structured JSON-LD architectures.' }
+    ],
+    'art-c2': [
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'High-performance Next.js architectures achieving sub-1.8s LCP and clean INP.' },
+      { title: 'Generative Engine Optimization (GEO) & Technical SEO', slug: 'seo-geo', desc: 'Technical SEO and Schema.org graph modeling for modern search crawlers.' }
+    ],
+    'art-c3': [
+      { title: 'Generative Engine Optimization (GEO) & Technical SEO', slug: 'seo-geo', desc: 'Technical crawl budget optimization, canonical URL enforcement, and sitemap health.' },
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'Clean server-side rendering and edge routing to resolve indexing bottlenecks.' }
+    ],
+    'art-c4': [
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'Resilient web application architecture built with Next.js, Node.js, and TypeScript.' },
+      { title: 'Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Bespoke corporate website design, visual identity systems, and responsive layouts.' }
+    ],
+    'art-d1': [
+      { title: 'Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Modern responsive corporate web design tailored for established enterprises.' },
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'Full-stack engineering for custom portals, client dashboards, and dynamic systems.' }
+    ],
+    'art-d2': [
+      { title: 'Generative Engine Optimization (GEO) & Technical SEO', slug: 'seo-geo', desc: 'Enterprise technical search audits, entity knowledge graphs, and AI search visibility.' },
+      { title: 'Conversion Rate Optimization (CRO) & Growth Analytics', slug: 'growth-optimization', desc: 'Ensure technical search visitors convert into verified commercial inquiries.' }
+    ],
+    'art-d3': [
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'Modern web engineering, robust cloud backends, and full source code ownership.' },
+      { title: 'Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Bespoke corporate websites engineered for brand authority and mobile performance.' }
+    ],
+    'art-c5': [
+      { title: 'Generative Engine Optimization (GEO) & Technical SEO', slug: 'seo-geo', desc: 'Transition from traditional keyword search to AI engine citations and synthesis.' },
+      { title: 'Conversion Rate Optimization (CRO) & Growth Analytics', slug: 'growth-optimization', desc: 'Design conversion funnels for high-intent visitors arriving from AI search.' }
+    ],
+    'art-c6': [
+      { title: 'Generative Engine Optimization (GEO) & Technical SEO', slug: 'seo-geo', desc: 'Google Business Profile local 3-pack optimization and local citation consistency.' },
+      { title: 'CRM Integration & Automated Lead Management Systems', slug: 'crm-lead-systems', desc: 'Instant WhatsApp routing and lead capture for local business inquiries.' }
+    ],
+    'art-d4': [
+      { title: 'Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Professional corporate website design that builds commercial credibility.' },
+      { title: 'Conversion Rate Optimization (CRO) & Growth Analytics', slug: 'growth-optimization', desc: 'Identify conversion friction and turn casual visitors into paying clients.' }
+    ],
+    'art-d5': [
+      { title: 'Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Transparent contract deliverables, design tokens, and responsive mobile UX.' },
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'Complete code ownership, zero proprietary vendor lock-in, and modern frameworks.' }
+    ],
+    'art-c7': [
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'Transparent engineering cost breakdowns for enterprise Next.js applications.' },
+      { title: 'Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Corporate website design pricing, design systems, and headless CMS integrations.' }
+    ],
+    'art-c8': [
+      { title: 'Generative Engine Optimization (GEO) & Technical SEO', slug: 'seo-geo', desc: 'Multi-branch local SEO architectures, store locators, and localized schema graphs.' },
+      { title: 'CRM Integration & Automated Lead Management Systems', slug: 'crm-lead-systems', desc: 'Multi-location inquiry routing to regional sales representatives via WhatsApp.' }
+    ],
+    'art-original-1': [
+      { title: 'Brand Strategy & Market Positioning', slug: 'brand-strategy', desc: 'Establish distinct market positioning, category differentiation, and buyer persona alignment.' },
+      { title: 'Conversion Rate Optimization (CRO) & Growth Analytics', slug: 'growth-optimization', desc: 'Systematically optimize digital conversion funnels to scale commercial inquiry rates.' }
+    ],
+    'art-original-2': [
+      { title: 'Brand Strategy & Market Positioning', slug: 'brand-strategy', desc: 'Strategic brand positioning, messaging frameworks, and category creation.' },
+      { title: 'Brand Identity Design & Creative Direction', slug: 'content-creative', desc: 'Comprehensive brand identity systems, bespoke typography, and vector iconography.' }
+    ],
+    'art-original-3': [
+      { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'High-performance Next.js architecture, edge caching, and resilient database queries.' },
+      { title: 'Conversion Rate Optimization (CRO) & Growth Analytics', slug: 'growth-optimization', desc: 'Server-side GA4 telemetry and behavioral heatmaps to pinpoint user friction.' }
+    ],
+    'art-original-4': [
+      { title: 'Conversion Rate Optimization (CRO) & Growth Analytics', slug: 'growth-optimization', desc: 'Server-side GA4 telemetry, user session testing, and A/B funnel experimentation.' },
+      { title: 'CRM Integration & Automated Lead Management Systems', slug: 'crm-lead-systems', desc: 'Progressive disclosure intake forms and automated WhatsApp routing.' }
+    ]
+  };
+
   const getRelatedServices = () => {
-    const cat = article.category || '';
+    if (ARTICLE_SERVICE_MAP[article?.id]) {
+      return ARTICLE_SERVICE_MAP[article.id];
+    }
+
+    const cat = article?.category || '';
     if (cat === 'Web Development' || cat === 'Technology') {
       return [
         { title: 'Custom Web Application & Next.js Engineering', slug: 'web-development', desc: 'Scalable Next.js applications, server actions, and PostgreSQL database architectures.' },
-        { title: 'Bespoke Corporate Website Design', slug: 'web-design-development', desc: 'Modern responsive UX, luxury brand aesthetics, and headless CMS publishing.' }
+        { title: 'Bespoke Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Modern responsive UX, luxury brand aesthetics, and headless CMS publishing.' }
       ];
     }
     if (cat === 'SEO & GEO' || cat === 'SEO') {
       return [
-        { title: 'Generative Engine Optimization & Technical SEO', slug: 'seo-geo', desc: 'Algorithmic consensus across Google Search, SearchGPT, and Perplexity.' },
-        { title: 'Conversion Rate Optimization & Funnel Analytics', slug: 'growth-optimization', desc: 'Transform organic search visitors into qualified commercial inquiries.' }
+        { title: 'Generative Engine Optimization (GEO) & Technical SEO', slug: 'seo-geo', desc: 'Algorithmic consensus across Google Search, SearchGPT, and Perplexity.' },
+        { title: 'Conversion Rate Optimization & Growth Analytics', slug: 'growth-optimization', desc: 'Identify conversion friction and transform organic search visitors into qualified inquiries.' }
       ];
     }
     if (cat === 'E-commerce') {
       return [
-        { title: 'Headless E-Commerce Development', slug: 'ecommerce-development', desc: 'High-speed Next.js storefronts, Shopify Storefront API, and custom UPI checkouts.' },
-        { title: 'Paid Search Acquisition & Performance Marketing', slug: 'performance-marketing', desc: 'High-ROI Google Ads campaigns synchronized with dedicated landing pages.' }
+        { title: 'Custom E-Commerce Store Design & Development', slug: 'ecommerce-development', desc: 'High-speed Next.js storefronts, Shopify Storefront API, and custom UPI checkouts.' },
+        { title: 'Paid Advertising & Performance Marketing', slug: 'performance-marketing', desc: 'Data-driven paid acquisition campaigns synchronized with dedicated landing pages.' }
       ];
     }
     if (cat === 'Brand' || cat === 'Design') {
       return [
-        { title: 'Strategic Brand Positioning & Narrative Architecture', slug: 'brand-strategy', desc: 'Establish market differentiation, pricing power, and commercial trust.' },
-        { title: 'UI/UX Product Design & Enterprise Design Systems', slug: 'ui-ux-design', desc: 'Bespoke Figma component systems, accessible design tokens, and user journeys.' }
+        { title: 'Strategic Brand Positioning & Identity Design', slug: 'brand-strategy', desc: 'Establish market differentiation, pricing power, and commercial trust.' },
+        { title: 'UI/UX Product Design & Digital Interfaces', slug: 'ui-ux-design', desc: 'Bespoke Figma component systems, accessible design tokens, and user journeys.' }
       ];
     }
     if (cat === 'Conversion' || cat === 'Growth') {
       return [
-        { title: 'Conversion Rate Optimization (CRO)', slug: 'growth-optimization', desc: 'Server-side GA4 telemetry, user session testing, and A/B funnel experimentation.' },
-        { title: 'CRM Lead Integration & WhatsApp Pipelines', slug: 'crm-lead-systems', desc: 'Instant WhatsApp routing and automated inquiry qualification.' }
+        { title: 'Conversion Rate Optimization & Growth Analytics', slug: 'growth-optimization', desc: 'Server-side GA4 telemetry, user session testing, and A/B funnel experimentation.' },
+        { title: 'CRM Integration & Automated Lead Management Systems', slug: 'crm-lead-systems', desc: 'Instant WhatsApp routing and automated inquiry qualification.' }
       ];
     }
     return [
       { title: 'Custom Web Application & Next.js Engineering', slug: 'web-development', desc: 'Scalable Next.js applications engineered for high-concurrency enterprise traffic.' },
-      { title: 'Generative Engine Optimization & Technical SEO', slug: 'seo-geo', desc: 'Technical SEO and generative answer engine citation architecture.' }
+      { title: 'Generative Engine Optimization (GEO) & Technical SEO', slug: 'seo-geo', desc: 'Technical SEO and generative answer engine citation architecture.' }
     ];
   };
 

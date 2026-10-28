@@ -27,7 +27,7 @@ export function getRootOrganizationGraph() {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': ['Organization', 'LocalBusiness', 'ProfessionalService'],
+        '@type': 'Organization',
         '@id': 'https://www.siyaradigitals.com/#organization',
         'name': 'Siyara Innovations',
         'alternateName': [
@@ -48,7 +48,6 @@ export function getRootOrganizationGraph() {
         'description':
           'Siyara Innovations is a digital engineering agency, Next.js web development company, and search optimization partner based in Jaipur, Rajasthan, India. We engineer web systems for businesses across jewellery, real estate, healthcare, hospitality, and retail sectors.',
         'email': 'info@siyaradigitals.com',
-        'telephone': '+91-9587269209',
         'priceRange': '₹₹₹',
         'currenciesAccepted': 'INR, USD',
         'paymentAccepted': 'Bank Transfer, UPI, Credit Card',
@@ -56,29 +55,8 @@ export function getRootOrganizationGraph() {
           '@type': 'PostalAddress',
           'addressLocality': 'Jaipur',
           'addressRegion': 'Rajasthan',
-          'postalCode': '302017',
           'addressCountry': 'IN',
         },
-        'geo': {
-          '@type': 'GeoCoordinates',
-          'latitude': '26.9124',
-          'longitude': '75.7873',
-        },
-        'openingHoursSpecification': [
-          {
-            '@type': 'OpeningHoursSpecification',
-            'dayOfWeek': [
-              'Monday',
-              'Tuesday',
-              'Wednesday',
-              'Thursday',
-              'Friday',
-              'Saturday',
-            ],
-            'opens': '09:30',
-            'closes': '19:30',
-          },
-        ],
         'areaServed': [
           { '@type': 'City', 'name': 'Jaipur' },
           { '@type': 'State', 'name': 'Rajasthan' },
@@ -98,9 +76,9 @@ export function getRootOrganizationGraph() {
         ],
         'contactPoint': {
           '@type': 'ContactPoint',
-          'telephone': '+91-9587269209',
-          'contactType': 'customer service',
+          'contactType': 'customer support',
           'email': 'info@siyaradigitals.com',
+          'url': 'https://wa.me/919587269209',
           'availableLanguage': ['English', 'Hindi'],
         },
         'sameAs': [
