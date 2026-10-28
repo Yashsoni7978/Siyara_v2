@@ -179,7 +179,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
     ],
     'art-b7': [
       { title: 'Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Architectural portfolio galleries, bespoke typography, and fast image pipelines.' },
-      { title: 'Brand Identity Design & Creative Direction', slug: 'content-creative', desc: 'Comprehensive brand identity systems, custom typography, and vector iconography.' }
+      { title: 'Brand Identity, Content Strategy & Creative Direction', slug: 'content-creative', desc: 'Comprehensive brand identity systems, strategic website copywriting, and bespoke typography.' }
     ],
     'art-b8': [
       { title: 'Website Design & Digital Brand Experience', slug: 'web-design-development', desc: 'Editorial destination wedding showcases, testimonial carousels, and luxury aesthetics.' },
@@ -243,7 +243,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
     ],
     'art-original-2': [
       { title: 'Brand Strategy & Market Positioning', slug: 'brand-strategy', desc: 'Strategic brand positioning, messaging frameworks, and category creation.' },
-      { title: 'Brand Identity Design & Creative Direction', slug: 'content-creative', desc: 'Comprehensive brand identity systems, bespoke typography, and vector iconography.' }
+      { title: 'Brand Identity, Content Strategy & Creative Direction', slug: 'content-creative', desc: 'Comprehensive brand identity systems, bespoke typography, and vector iconography.' }
     ],
     'art-original-3': [
       { title: 'Custom Web Application & Next.js Development', slug: 'web-development', desc: 'High-performance Next.js architecture, edge caching, and resilient database queries.' },

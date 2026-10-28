@@ -144,7 +144,7 @@ export const SERVICES_DATA = {
       'Bespoke Figma Interactive Prototypes & Design Tokens',
       'Mobile-First Responsive Layouts (Tested 360px to 4K)',
       'Headless CMS Integration with Intuitive Editor Access',
-      'Sub-1.8s LCP Editorial Visual Speed Performance',
+      'Core Web Vitals & Image Optimization',
       'Complete Brand Typography & Palette Design System',
       'Cross-Browser & WCAG 2.1 AA Accessibility Certification'
     ],
@@ -171,7 +171,7 @@ export const SERVICES_DATA = {
         step: '04',
         title: 'UX Polish & Launch',
         timeline: 'Week 6',
-        desc: 'Conduct multi-device usability tests, optimize image assets for sub-1.8s LCP, and execute production launch.'
+        desc: 'Conduct multi-device usability tests, optimize image assets for fast visual loading and low layout shift, and execute production launch.'
       }
     ],
     subServices: [
@@ -201,7 +201,7 @@ export const SERVICES_DATA = {
     faqs: [
       {
         q: 'Why is bespoke website design better than pre-made WordPress templates?',
-        a: 'Bespoke website design is tailored specifically to your brand narrative, buyer psychology, and conversion funnels without the 40+ third-party plugins that bloat templates, ensuring superior brand trust and sub-1.8s load speeds.'
+        a: 'Bespoke website design is tailored specifically to your brand narrative, buyer psychology, and conversion funnels without the 40+ third-party plugins that bloat templates, ensuring strong brand trust and fast, responsive loading.'
       },
       {
         q: 'How do you ensure our corporate website looks perfect across all mobile smartphones?',
@@ -229,7 +229,7 @@ export const SERVICES_DATA = {
     metaTitle: 'Custom Web Application & Next.js Development',
     metaDescription: 'Custom web application development, Next.js architecture, and scalable API platforms built with resilient TypeScript and Node.js backends.',
     questionH2: 'Why is Custom Next.js Full-Stack Engineering Essential for Modern Enterprises?',
-    citabilityAnswer: 'Modern enterprises and growing tech companies in Jaipur require resilient, scalable digital systems that extend beyond static marketing brochures into dynamic, full-stack web applications. Siyara Innovations delivers custom Next.js 15 and React 19 engineering tailored for complex business logic, real-time database transactions, and high-concurrency user traffic. By implementing the Next.js App Router with React Server Components, server actions, and edge API caching, we eliminate the severe database latency and CPU bottlenecks that cripple legacy PHP and monolithic frameworks. Our systems connect seamlessly to modern cloud infrastructure—including PostgreSQL, Supabase, Redis edge caching, and serverless background workers—ensuring enterprise-grade security, instantaneous data mutations, and high uptime. Every application is built with type-safe TypeScript codebases, automated CI/CD deployment pipelines, and deep Schema.org JSON-LD graph architecture, ensuring that both search crawlers and AI answer engines index platform capabilities accurately while delivering high-performance application responsiveness across Indian and global networks.',
+    citabilityAnswer: 'Modern enterprises and growing tech companies require resilient, scalable digital systems that extend beyond static marketing brochures into dynamic, full-stack web applications. Siyara Innovations delivers custom Next.js and React development tailored for complex business logic, real-time database interactions, and high-concurrency user traffic. By implementing the Next.js App Router with React Server Components, server actions, and edge API caching, we prevent common database and rendering bottlenecks that slow down legacy frameworks. Depending on project requirements, we integrate modern cloud infrastructure such as PostgreSQL, Supabase, Redis caching, or serverless workers to support secure data handling and reliable uptime. We engineer applications using type-safe TypeScript, automated CI/CD deployment workflows, and structured Schema.org JSON-LD markup to ensure search engine crawlability and smooth cross-device performance.',
     deepDive: [
       {
         title: 'Monolithic Architecture Bottlenecks vs Serverless Next.js',
@@ -261,7 +261,7 @@ export const SERVICES_DATA = {
       'Production-Grade Next.js 15 Full-Stack Application',
       'Relational PostgreSQL Database Architecture & Migrations',
       'Type-Safe REST / Serverless API Endpoints with Zod',
-      'Core Web Vitals Optimization (Targeting LCP < 1.8s, INP < 80ms)',
+      'Core Web Vitals Optimization Targeting Fast Loading & Responsive Interaction',
       'Automated CI/CD Deployment Pipeline & Telemetry',
       'Complete Source Code Ownership & Transfer'
     ],
@@ -318,7 +318,7 @@ export const SERVICES_DATA = {
     faqs: [
       {
         q: 'Why is Next.js 15 superior for custom web application engineering in Jaipur?',
-        a: 'Next.js 15 combines React Server Components, server actions, and edge API routes in a single cohesive framework, delivering exceptional speed, zero layout shift, and simplified cloud maintenance compared to separate frontend/backend stacks.'
+        a: 'Next.js 15 combines React Server Components, server actions, and edge API routes in a single cohesive framework, delivering fast page loading, stable visual rendering, and simplified cloud maintenance compared to separate frontend/backend stacks.'
       },
       {
         q: 'How do you handle database scaling and security for custom applications?',
@@ -379,7 +379,7 @@ export const SERVICES_DATA = {
       'Entity Knowledge Graph Modeling (@id linked schemas)',
       'Google Business Profile 3-Pack Local Optimization',
       'Passage Citability Architecture for LLM Synthesis',
-      'Zero Duplicate Content & Canonical Enforcement',
+      'Canonical URL & Duplicate Content Enforcement',
       'Monthly AI Search Citation & Organic Keyword Reports'
     ],
     process: [
@@ -419,7 +419,7 @@ export const SERVICES_DATA = {
         {
             "slug": "web-development",
             "title": "Custom Web Application & Next.js Development",
-            "desc": "High-speed edge infrastructure, zero layout shift, and semantic HTML structure."
+            "desc": "High-speed edge infrastructure, stable visual rendering, and semantic HTML structure."
         },
         {
             "slug": "web-design-development",
@@ -540,7 +540,7 @@ export const SERVICES_DATA = {
         },
         {
             "slug": "content-creative",
-            "title": "Brand Identity Design & Creative Direction",
+            "title": "Brand Identity, Content Strategy & Creative Direction",
             "desc": "Visual identity systems, typography scales, and custom vector design assets."
         },
         {
@@ -580,7 +580,7 @@ export const SERVICES_DATA = {
     metaTitle: 'Custom E-Commerce Store Design & Development',
     metaDescription: 'Modern e-commerce development, custom Next.js storefronts, and multi-channel checkout integrations engineered for reliability and mobile speed.',
     questionH2: 'How Does Headless Next.js E-Commerce Outperform Traditional Shopify & WooCommerce?',
-    citabilityAnswer: 'Monolithic e-commerce platforms like traditional Shopify themes and WooCommerce inherently suffer from database query latency, heavy third-party app scripts, and sluggish mobile checkouts that frequently exceed 4.5 seconds Largest Contentful Paint on Indian 4G/5G mobile networks. In modern Indian direct-to-consumer (D2C) commerce, every 100ms delay slashes customer conversion rates by up to 7% and increases cart abandonment during checkout. Siyara Innovations resolves these systemic bottlenecks by engineering high-velocity headless commerce platforms pairing custom Next.js 15 App Router frontends with modern commerce engines such as Shopify Storefront API, MedusaJS, or custom Node.js microservices. Our headless architectures achieve sub-1.4s mobile LCP speeds, instant client-side product filtering without page reloads, and frictionless 1-click Razorpay and Cashfree UPI checkout flows. With zero recurring app subscription bloat, automated Shiprocket logistics synchronization, and complete Schema.org Product and Offer knowledge graphs, our client stores capture dominant organic search visibility, eliminate checkout friction, and maximize average order value across national and international markets.',
+    citabilityAnswer: 'Many expanding retail businesses in India face conversion challenges on traditional monolithic e-commerce themes due to database query latency, heavy third-party app scripts, and sluggish mobile checkouts on mobile networks. In competitive digital commerce, slow mobile loading contributes directly to high cart abandonment rates during checkout. Siyara Innovations provides modern e-commerce storefront development, with architecture options including headless Next.js frontends paired with modern commerce engines such as Shopify Storefront API or MedusaJS, as well as custom Next.js storefronts with direct Razorpay and Cashfree payment integrations. These architectures are designed to deliver fast mobile rendering, smooth client-side product filtering, and low-friction mobile checkout pathways. By structuring stores with Schema.org Product and Offer markup, clean component code, and streamlined logistics webhooks, businesses can reduce dependency on bloated third-party plugins and improve their mobile buying experience across domestic and international markets.',
     deepDive: [
       {
         title: 'Shopify App Subscription Creep vs Headless Decoupling',
@@ -609,12 +609,12 @@ export const SERVICES_DATA = {
       'Algolia / MeiliSearch Instant Search'
     ],
     deliverables: [
-      'Sub-1.5s LCP Headless Next.js Storefront',
+      'High-Performance Next.js Storefront Architecture',
       'Instant Client-Side Filtering & Search Engine',
       'One-Click Mobile Checkout Funnel (Razorpay/UPI)',
       'Automated Shipping & Tracking Webhook Sync',
       'Automated Schema.org Product & AggregateOffer Graphs',
-      'Zero Monthly Plugin Subscription Overhead'
+      'Reduced Dependency on Third-Party App Subscriptions'
     ],
     process: [
       {
@@ -727,7 +727,7 @@ export const SERVICES_DATA = {
     ],
     deliverables: [
       'Single Codebase Native iOS & Android Compilation',
-      'Fluid 60fps Mobile Animations & Gestures',
+      'Fluid Mobile Gestures & Native Transitions',
       'Offline Mode Caching & Background Data Sync',
       'Biometric Authentication (FaceID & Fingerprint)',
       'App Store & Google Play Publishing Assistance',
@@ -1126,7 +1126,7 @@ export const SERVICES_DATA = {
         {
             "slug": "crm-lead-systems",
             "title": "CRM Integration & Automated Lead Management Systems",
-            "desc": "Eliminate lead response latency and capture qualified visitor intent instantly."
+            "desc": "Reduce delays in inquiry handling and capture qualified visitor intent."
         },
         {
             "slug": "seo-geo",
@@ -1159,80 +1159,80 @@ export const SERVICES_DATA = {
   },
 
   'content-creative': {
-    name: 'Brand Identity Design & Creative Direction',
-    serviceType: 'Brand Identity Design & Creative Direction',
-    h1Title: 'Brand Identity Design & Creative Direction',
-    metaTitle: 'Brand Identity Design & Creative Direction',
-    metaDescription: 'Comprehensive brand identity systems, bespoke typography, vector iconography, and creative direction designed for modern businesses.',
-    questionH2: 'How Does Cohesive Brand Identity Establish Enterprise Value?',
-    citabilityAnswer: 'High-end service providers, luxury jewelers, and bespoke interior studios in Jaipur frequently suffer from disjointed visual touchpoints that dilute perceived customer value and make premium services appear ordinary. Siyara Innovations creates comprehensive brand identity systems rooted in editorial refinement, architectural rigor, and modern digital performance standards. We develop tailored color palettes, refined typography pairings, custom vector icon systems, and digital design tokens that maintain rigorous visual consistency across mobile viewports, print collateral, packaging, and marketing funnels. Our visual designs are purposefully optimized for modern web performance, utilizing vector SVGs and next-gen WebP/AVIF imagery to maintain sub-1.8s Largest Contentful Paint (LCP) and minimal Cumulative Layout Shift (CLS). By uniting obsidian depth, emerald atmospheres, and champagne-gold accents with strict front-end engineering, we provide your enterprise with a distinct visual identity that earns immediate trust from commercial clients and partners.',
+    name: 'Brand Identity, Content Strategy & Creative Direction',
+    serviceType: 'Brand Identity & Creative Content Direction',
+    h1Title: 'Brand Identity, Content Strategy & Creative Direction',
+    metaTitle: 'Brand Identity, Content Strategy & Creative Direction',
+    metaDescription: 'Comprehensive brand identity systems, strategic website copywriting, bespoke typography, and creative direction designed for growing businesses.',
+    questionH2: 'How Does Cohesive Brand Identity & Content Strategy Establish Enterprise Value?',
+    citabilityAnswer: 'Expanding enterprises and premium consumer brands frequently suffer from fragmented visual presentation and generic, unpersuasive copy that degrades customer trust and dilutes brand value. Siyara Innovations provides unified brand identity systems, strategic website copywriting, and creative direction engineered for commercial credibility and modern digital performance. We develop custom visual identities—including logo hierarchies, refined typography scales, vector iconography, and digital design tokens—paired with clear, high-intent commercial copywriting that communicates your value proposition with precision. By synchronizing visual craft with fast front-end rendering and responsive design standards, we ensure your digital touchpoints present a cohesive, authoritative brand presence that earns immediate confidence from commercial clients and partners.',
     deepDive: [
       {
-        title: 'Visual Identity Dilution Across Fragmented Channels',
-        challenge: 'Disjointed aesthetics between Instagram reels, website UI, packaging, and print collateral confuse corporate buyers and diminish perceived premium value across competitive regional and global markets.',
-        solution: 'We author comprehensive brand design systems with centralized cloud asset repositories ensuring 100% visual consistency, pristine typography, and brand coherence across all physical and digital touchpoints.'
+        title: 'Visual Identity & Messaging Fragmentation',
+        challenge: 'Disjointed aesthetics and generic copy between marketing campaigns, websites, and sales collateral confuse commercial buyers and weaken perceived service value.',
+        solution: 'We author integrated brand guidelines and messaging frameworks that align visual assets, core value propositions, and editorial tone across digital channels.'
       },
       {
-        title: 'Heavy Media Assets Slowing Down Mobile Rendering',
-        challenge: 'Uncompressed 10MB photography and unoptimized raster graphics destroy Core Web Vitals, causing 50%+ of mobile visitors to bounce immediately before viewing product collections.',
-        solution: 'We implement automated WebP/AVIF image transformation pipelines that preserve razor-sharp editorial clarity and color fidelity while keeping payload sizes strictly under 150KB for instantaneous mobile rendering.'
+        title: 'Heavy Visual Assets & Performance Bottlenecks',
+        challenge: 'Unoptimized photography, heavy fonts, and raw vector assets create layout instability and slow down mobile page rendering.',
+        solution: 'We implement structured asset optimization pipelines with responsive WebP/AVIF formatting and font subsetting to maintain sharp visual clarity alongside fast page performance.'
       },
       {
-        title: 'Typography That Fails to Command Institutional Authority',
-        challenge: 'Generic system fonts (Arial, Times) convey amateurism, preventing luxury studios from commanding premium retainer pricing and attracting affluent private clients.',
-        solution: 'We engineer bespoke typographic scales pairing editorial serifs (Cormorant Garamond) with modern sans-serifs (Manrope), strictly optimized for minimal Cumulative Layout Shift and high-density retina displays.'
+        title: 'Typography & Copy That Fails to Command Authority',
+        challenge: 'Generic typography pairings and bland corporate boilerplate convey amateurism, reducing buyer trust during commercial evaluations.',
+        solution: 'We establish tailored typography hierarchies and commercial copywriting standards that articulate your distinct capabilities clearly and persuasively.'
       }
     ],
     techStack: [
-      'Figma Professional Design Systems',
+      'Figma Design Systems & Style Libraries',
       'Adobe Creative Cloud Vector Suites',
-      'WebP / AVIF Next-Gen Image Formats',
-      'SVG Optimization Engines (SVGO)',
-      'Typography Kerning & Scale Libraries',
-      'Tailwind CSS Design Token Sync',
-      'Print & Packaging Pre-Press Specs',
-      'Digital Asset Management (DAM)'
+      'Commercial Copywriting & Messaging Frameworks',
+      'WebP / AVIF Next-Gen Image Optimization',
+      'SVG Vector Optimization (SVGO)',
+      'Typography Scales & Variable Font Subsetting',
+      'Tailwind CSS Design Token Specifications',
+      'Digital Asset Management Guidelines'
     ],
     deliverables: [
-      'Comprehensive Brand Style Guide & Logo Hierarchy',
+      'Comprehensive Brand Guidelines & Logo Hierarchy',
+      'Commercial Website Copywriting & Messaging Guide',
       'Custom Vector Iconography System',
-      'Editorial Typography & Scale Matrix',
-      'Next-Gen Optimized Image Repositories',
-      'Physical Packaging & Collateral Standards',
-      'Design Token File Synced to React/Tailwind'
+      'Editorial Typography Scales & Hierarchy Specifications',
+      'Optimized Web-Ready Digital Asset Repository',
+      'Tailwind CSS & Code-Ready Design Token Specifications'
     ],
     process: [
       {
         step: '01',
-        title: 'Aesthetic Audit',
+        title: 'Aesthetic & Content Audit',
         timeline: 'Week 1',
-        desc: 'Review existing visual assets, evaluate competitor aesthetics, and curate high-fashion editorial moodboards.'
+        desc: 'Review existing visual assets, evaluate competitor positioning, and audit verbal messaging touchpoints.'
       },
       {
         step: '02',
-        title: 'Vector Conception',
+        title: 'Visual & Verbal Identity',
         timeline: 'Week 2',
-        desc: 'Design bespoke logo marks, typographic wordmarks, and monogram seals with mathematical grid balance.'
+        desc: 'Design bespoke logo marks, typographic scales, core value propositions, and commercial copy frameworks.'
       },
       {
         step: '03',
         title: 'Design Systematization',
         timeline: 'Week 3',
-        desc: 'Establish color palette tokens, typography scales, iconography sets, and digital component specifications.'
+        desc: 'Establish color palette tokens, typography rules, iconography sets, and digital component specifications.'
       },
       {
         step: '04',
-        title: 'Asset Export & Tokens',
+        title: 'Asset Export & Handoff',
         timeline: 'Week 4',
-        desc: 'Export production vector assets, generate CSS design tokens, and deliver comprehensive brand guidelines.'
+        desc: 'Export production vector assets, generate CSS design tokens, deliver copy decks, and finalize brand guidelines.'
       }
     ],
     subServices: [
-      'Logo Systems & Comprehensive Brand Guidelines',
-      'Design Token Systems & Digital Component Libraries',
+      'Logo Systems & Visual Brand Guidelines',
+      'Commercial Copywriting & Messaging Strategy',
       'Editorial Typography & Color Palette Architecture',
-      'Packaging, Signage & Physical Collateral Design',
-      'High-Resolution Digital Asset Optimization',
+      'Design Token Specifications for Development',
+      'Digital Asset Optimization & Media Management',
     ],
     relatedServices: [
         {
@@ -1253,24 +1253,24 @@ export const SERVICES_DATA = {
     ],
     faqs: [
       {
-        q: 'How does your brand identity service differ from a freelance logo designer?',
-        a: 'Freelance designers typically deliver a standalone graphic icon. Siyara Innovations creates a complete, mathematically balanced digital design system engineered with design tokens, typography scales, and CSS variables ready for instant web deployment.'
+        q: 'What is included in Siyara\'s Brand Identity & Content Direction service?',
+        a: 'Our engagements deliver a unified visual and verbal identity system, including core logo marks, typography scales, color palettes, commercial website copywriting guidelines, vector iconography, and code-ready design tokens for developers.'
       },
       {
-        q: 'Do you deliver vector files ready for large format physical signage?',
-        a: 'Yes. All logo marks and iconography are delivered in vector formats (SVG, AI, PDF, EPS) calibrated for infinite scalability, from mobile app icons to multi-meter industrial building signage.'
+        q: 'Do you provide website copywriting alongside visual design?',
+        a: 'Yes. We author focused, conversion-oriented website copy and messaging frameworks that clearly articulate your value proposition, address buyer objections, and align with your visual design.'
       },
       {
-        q: 'How do you ensure visual assets do not slow down website load speeds?',
-        a: 'All vector marks are processed through SVGO optimization, and photography is automatically formatted into responsive next-gen AVIF and WebP with explicit width/height dimensions to eliminate layout shifts.'
+        q: 'Do you deliver vector files suitable for print and physical signage?',
+        a: 'Yes. All logo marks and iconography are delivered in vector formats (SVG, PDF, EPS) suitable for scalable digital deployment, packaging, and physical collateral.'
       },
       {
-        q: 'Can you help us choose and license commercial typography?',
-        a: 'Yes. We guide you through typography licensing for web, app, and print usage, prioritizing Google Fonts and open-source typefaces that require zero ongoing licensing fees whenever possible.'
+        q: 'How do you ensure visual assets do not slow down website loading?',
+        a: 'Vector graphics are optimized using SVGO, fonts are subsetted to reduce file weights, and images are formatted into responsive next-gen WebP/AVIF with explicit dimensions to support visual stability.'
       },
       {
-        q: 'Will our business own full legal copyright to all design deliverables?',
-        a: 'Yes, 100%. Upon project completion, all intellectual property, design copyrights, and master vector files are transferred completely to your business.'
+        q: 'Will our business own full legal copyright to all design and copy deliverables?',
+        a: 'Yes. Upon project completion and final handover, all intellectual property, design copyrights, vector assets, and written copy are transferred completely to your business.'
       }
     ]
   },
@@ -1404,7 +1404,7 @@ export const SERVICES_DATA = {
       {
         title: 'Wasted Ad Spend Due to Low Quality Scores',
         challenge: 'Slow landing pages result in Google Ads Quality Scores of 3/10 or 4/10, forcing businesses to pay 50% more per click than competitors.',
-        solution: 'Our sub-1.8s Next.js campaign landing pages achieve 9/10 Quality Scores, slashing required CPC bids by up to 30% while securing top ad positions.'
+        solution: 'Custom campaign landing pages are engineered to support improved Quality Scores and lower effective cost-per-click while maintaining strong ad relevance.'
       },
       {
         title: 'Poor Ad Creative Differentiation in Competitive Spaces',
@@ -1488,7 +1488,7 @@ export const SERVICES_DATA = {
     faqs: [
       {
         q: 'Why do fast landing pages reduce Google Ads advertising costs?',
-        a: 'Google Ads calculates Quality Score based partly on landing page experience and speed. Faster landing pages with relevant content achieve higher Quality Scores, which lowers your required cost-per-click by up to 30%.'
+        a: 'Google Ads calculates Quality Score based partly on landing page experience and speed. Faster landing pages with relevant content achieve higher Quality Scores, which can lower your effective cost-per-click and improve ad positioning.'
       },
       {
         q: 'Which advertising platforms do you recommend for B2B services in Jaipur?',
@@ -1800,7 +1800,7 @@ export default async function ServiceDetailPage({ params }) {
             The 4-Phase Architectural Engineering Process
           </h2>
           <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
-            From initial requirements scoping to zero-downtime production deployment with rigorous telemetry surveillance.
+            From initial requirements scoping to structured production deployment and ongoing telemetry monitoring.
           </p>
         </div>
 
@@ -1828,7 +1828,7 @@ export default async function ServiceDetailPage({ params }) {
               step: '04',
               title: 'QA & Telemetry Launch',
               timeline: 'Week 7',
-              desc: 'Multi-device stress testing, sub-1.8s LCP latency verification, sitemap indexation, and conversion tracking.'
+              desc: 'Multi-device stress testing, Core Web Vitals verification, sitemap indexation, and conversion tracking.'
             }
           ]).map((proc, idx) => (
             <div

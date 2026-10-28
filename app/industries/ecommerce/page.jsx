@@ -57,7 +57,7 @@ const CAPABILITIES = [
 const FAQS = [
   {
     q: 'How does headless Next.js e-commerce improve store sales in Jaipur?',
-    a: 'Every 1-second improvement in page load speed increases mobile e-commerce conversions by up to 20%. Next.js eliminates checkout delays and catalog lag.',
+    a: 'Every 1-second improvement in page load speed increases mobile e-commerce conversions by up to 20%. Next.js helps minimize checkout delays and catalog lag.',
   },
   {
     q: 'Which payment gateways are supported for Indian businesses?',
@@ -154,7 +154,7 @@ export default function EcommerceIndustryPage() {
             </h2>
             <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#070A09]/80 border border-[#18A982]/20 mb-6">
               <p className="font-sans text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
-                Traditional e-commerce stores running on standard monolithic plugins or unoptimized third-party hosted themes suffer from slow mobile product rendering, cart checkout friction, and poor Google organic ranking. Siyara Innovations delivers high-velocity headless e-commerce architectures powered by Next.js 15, React 19, and serverless payment APIs. By separating front-end presentation from back-end inventory catalogs, our builds load catalog collections and product detail pages with rapid response times. Our engineering stack guarantees Largest Contentful Paint (LCP) under 1.8 seconds, Cumulative Layout Shift (CLS) under 0.02, and Interaction to Next Paint (INP) under 80 milliseconds. Furthermore, we implement complete Product, AggregateRating, and OfferCatalog Schema.org markup alongside localized Indian payment gateways (UPI, Cards, NetBanking). This technical foundation enables Jaipur lifestyle, apparel, handicraft, and D2C brands to rank on Google Shopping, get recommended in generative search engines like SearchGPT, and convert high-intent shoppers with maximum transaction velocity.
+                Traditional e-commerce stores running on standard monolithic plugins or unoptimized third-party hosted themes suffer from slow mobile product rendering, cart checkout friction, and poor Google organic ranking. Siyara Innovations delivers high-velocity headless e-commerce architectures powered by Next.js 15, React 19, and serverless payment APIs. By separating front-end presentation from back-end inventory catalogs, our builds load catalog collections and product detail pages with rapid response times. Our engineering builds target fast visual load times, stable layouts, and responsive mobile interactions. Furthermore, we implement complete Product, AggregateRating, and OfferCatalog Schema.org markup alongside localized Indian payment gateways (UPI, Cards, NetBanking). This technical foundation enables Jaipur lifestyle, apparel, handicraft, and D2C brands to rank on Google Shopping, get recommended in generative search engines like SearchGPT, and convert high-intent shoppers with maximum transaction velocity.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-[#9D9B91]">

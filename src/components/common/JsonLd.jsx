@@ -46,20 +46,12 @@ export function getRootOrganizationGraph() {
         },
         'image': 'https://www.siyaradigitals.com/images/siyara_og_image.png',
         'description':
-          'Siyara Innovations is a digital engineering agency, Next.js web development company, and search optimization partner based in Jaipur, Rajasthan, India. We engineer web systems for businesses across jewellery, real estate, healthcare, hospitality, and retail sectors.',
+          'Siyara Innovations is a digital agency providing custom Next.js web development, search optimization, and digital brand systems for businesses in India.',
         'email': 'info@siyaradigitals.com',
         'priceRange': '₹₹₹',
         'currenciesAccepted': 'INR, USD',
         'paymentAccepted': 'Bank Transfer, UPI, Credit Card',
-        'address': {
-          '@type': 'PostalAddress',
-          'addressLocality': 'Jaipur',
-          'addressRegion': 'Rajasthan',
-          'addressCountry': 'IN',
-        },
         'areaServed': [
-          { '@type': 'City', 'name': 'Jaipur' },
-          { '@type': 'State', 'name': 'Rajasthan' },
           { '@type': 'Country', 'name': 'India' },
         ],
         'knowsAbout': [
@@ -141,8 +133,6 @@ export function buildServiceSchema({ name, serviceType, description, url, offers
       '@id': 'https://www.siyaradigitals.com/#organization',
     },
     'areaServed': [
-      { '@type': 'City', 'name': 'Jaipur' },
-      { '@type': 'State', 'name': 'Rajasthan' },
       { '@type': 'Country', 'name': 'India' },
     ],
   };

@@ -154,7 +154,7 @@ export default function HospitalityIndustryPage() {
             </h2>
             <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#070A09]/80 border border-[#18A982]/20 mb-6">
               <p className="font-sans text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
-                Heritage havelis, luxury boutique resorts, and fine dining destinations in Jaipur and Rajasthan frequently lose high-margin bookings to online travel agencies (OTAs) charging 18% to 25% commissions, primarily because their direct websites load slowly on mobile viewports and feature confusing reservation funnels. Siyara Innovations solves this direct-revenue leakage by engineering bespoke Next.js and React web architectures designed specifically for luxury hospitality showcases. By combining edge network rendering, automated WebP/AVIF imagery, and frictionless calendar booking integrations, our builds consistently achieve Largest Contentful Paint (LCP) under 1.8 seconds, Cumulative Layout Shift (CLS) under 0.02, and Interaction to Next Paint (INP) under 80 milliseconds. Supported by verified LocalBusiness and Hotel Schema.org markup, our architectures allow luxury travelers, wedding planners, and corporate event organizers to discover and book suites directly. The result is superior profit margins, elevated brand prestige, and predictable high-value guest reservations throughout Jaipur’s tourism season.
+                Heritage havelis, luxury boutique resorts, and fine dining destinations in Jaipur and Rajasthan frequently lose high-margin bookings to online travel agencies (OTAs) charging 18% to 25% commissions, primarily because their direct websites load slowly on mobile viewports and feature confusing reservation funnels. Siyara Innovations solves this direct-revenue leakage by engineering bespoke Next.js and React web architectures designed specifically for luxury hospitality showcases. By combining edge network rendering, automated WebP/AVIF imagery, and frictionless calendar booking integrations, our architectures are engineered for fast visual rendering, minimal layout shifts, and responsive booking interactions on mobile networks. Supported by verified LocalBusiness and Hotel Schema.org markup, our architectures allow luxury travelers, wedding planners, and corporate event organizers to discover and book suites directly. The result is superior profit margins, elevated brand prestige, and predictable high-value guest reservations throughout Jaipur’s tourism season.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-[#9D9B91]">
@@ -220,7 +220,7 @@ export default function HospitalityIndustryPage() {
                 Hotel & Luxury Resort Website Design Rajasthan: Direct Booking Engines & Commission Elimination
               </h3>
               <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
-                Discover how heritage havelis, luxury palace hotels, and desert camps across Jaipur and Rajasthan eliminate 18–25% OTA commissions with high-converting direct booking engines.
+                Discover how heritage havelis, luxury palace hotels, and desert camps across Jaipur and Rajasthan reduce dependency on high-commission OTA bookings through direct reservation pathways.
               </p>
             </div>
             <div className="shrink-0">

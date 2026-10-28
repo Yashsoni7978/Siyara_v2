@@ -465,3 +465,106 @@ A full production build and disk-level HTML route crawl were executed to validat
 1. **Analytics & Search Console Credentials:** Staging and local environments do not possess live Google Search Console or Google Analytics 4 API tokens. Consequently, search impressions, click-through rates, and average rank positions remain unmeasured locally. **No performance metrics have been fabricated.**
 2. **LocalBusiness Physical Verification:** A dedicated `LocalBusiness` schema with physical street address and opening hours should only be reintroduced once registered commercial office lease documentation and Google Business Profile verification are completed.
 3. **Branch Governance:** All Stage 3 and Stage 3.1 refinements are committed exclusively to the `website-development` branch. No code has been merged into `main` or deployed to production.
+
+
+---
+
+## 12. Stage 3.2 — Final Content Accuracy Corrections (Controlled Pass)
+
+**Date:** October 28, 2026  
+**Review Objective:** Execute targeted content accuracy corrections, eliminate remaining absolute promises, substantiate technology claims, remove ambiguous physical address properties from Organization structured data, and comprehensively align the Content & Creative service page.
+
+---
+
+### 12.1 Removal of Remaining Absolute Promises & Numerical Targets
+
+1. **Inquiry Latency Rectification:**
+   * Replaced `"eliminate lead response latency"` across service cross-links and descriptions with realistic, measured phrasing: **`"reduce delays in inquiry handling and capture qualified visitor intent."`**
+2. **Numerical Performance Targets Qualified:**
+   * Removed blanket promises claiming guaranteed numerical benchmarks (e.g., *"guarantees Largest Contentful Paint under 1.8 seconds, Cumulative Layout Shift under 0.02, and Interaction to Next Paint under 80ms"* or *"sub-1.4s mobile LCP"*).
+   * Reframed all performance statements as objective engineering targets or measured benchmarks under specific network profiles (e.g., *"targeting fast visual load times, stable layouts, and responsive mobile interactions"*).
+   * Replaced *"slashing required CPC bids by up to 30%"* with *"engineered to support improved Quality Scores and lower effective cost-per-click."*
+3. **Eradication of Absolute Terminology:**
+   * Cleaned industry pages (`ecommerce`, `education`, `hospitality`, `jewellery-luxury`, `manufacturing`) of unmeasured claims such as *"guarantees"*, *"eliminates checkout delays"*, or *"eliminates 18–25% OTA commissions"*.
+   * Cleaned blog articles of phrases claiming contractual Core Web Vitals "guarantees", replacing them with objective performance benchmarking and SLA criteria.
+
+---
+
+### 12.2 Verification of Technology Claims Against Repository Evidence
+
+All technologies referenced across service pages were reviewed to ensure they distinguish demonstrated implementations in the repository from general technical capabilities:
+
+* **Shopify & MedusaJS (`ecommerce-development`):**
+  * Removed claims implying an established client delivery record of headless MedusaJS deployments.
+  * Rephrased to present headless Next.js storefronts with Shopify Storefront API or MedusaJS as **available technical architecture options** alongside custom Next.js storefronts with Razorpay and Cashfree UPI integrations.
+* **Sanity & Strapi (`web-design-development`):**
+  * Described as available headless content management integration options for clients requiring visual, no-code publishing workflows.
+* **HubSpot & Zoho (`crm-lead-systems`, `ai-automation`):**
+  * Described as available webhook and REST API connectors to route inquiries into client-preferred CRM platforms or spreadsheets.
+* **WhatsApp Business API (`crm-lead-systems`):**
+  * Described accurately as direct click-to-chat intake links and automated inquiry notification routing.
+* **PostgreSQL & Supabase (`web-development`):**
+  * Reframed as available cloud database architecture patterns deployed according to specific project requirements.
+* **React Native, Expo & PWA (`mobile-app-development`):**
+  * Described as available cross-platform mobile application and web-app options from a single TypeScript codebase.
+* **LLM Integrations (`ai-automation`):**
+  * Removed speculative claims of "autonomous AI agents that eliminate operational bottlenecks and scale business capacity without increasing payroll overhead."
+  * Reframed to pragmatic serverless API tool-calling with models such as Claude and OpenAI for structured document data extraction, invoice parsing, and inquiry triage.
+* **Eradication of Invented Client Evidence:**
+  * Removed the unsubstantiated reference to *"Rishabh Jewellers"* in `app/industries/jewellery-luxury/page.jsx`, which did not correspond to any project in the repository. Reframed to general jewellery portfolio architecture capabilities.
+
+---
+
+### 12.3 Organization Schema Location Verification
+
+* **Audit Finding:** Siyara Innovations does not possess verified commercial office lease documentation or a formal registered business street address in Jaipur. Publishing an ambiguous address node (`addressLocality: "Jaipur"`, `addressRegion: "Rajasthan"`, `addressCountry: "IN"`) without a verifiable street address creates ambiguity.
+* **Correction Implemented:**
+  * **Completely removed the `address` property** from the `Organization` schema in `src/components/common/JsonLd.jsx`.
+  * Preserved the valid `Organization` entity (`@id: "https://www.siyaradigitals.com/#organization"`) with name, alternate names, logo, description, contact point, and social profiles.
+  * Retained `areaServed: [{ "@type": "Country", "name": "India" }]` to represent commercial service reach without claiming an unverified physical office.
+  * Strictly prevented any injection of `LocalBusiness` or `ProfessionalService` schemas.
+  * Preserved institutional authorship and contact endpoints (WhatsApp, email).
+
+---
+
+### 12.4 Content & Creative Service Page Alignment
+
+* **Service Heading Updated:** **`Brand Identity, Content Strategy & Creative Direction`**
+* **Service Scope:** Resolves the limitation of the narrow "Brand Identity Design" heading. The page now explicitly unites both core disciplines:
+  1. **Visual Brand Identity:** Logo marks, visual style guides, typography scales, vector iconography, and code-ready design tokens.
+  2. **Content Strategy & Commercial Copywriting:** High-intent website copywriting, value proposition hierarchy, messaging guidelines, and editorial tone of voice.
+* **Deliverables & Sub-Services:**
+  * *Comprehensive Brand Guidelines & Logo Hierarchy*
+  * *Commercial Website Copywriting & Messaging Guide*
+  * *Custom Vector Iconography System*
+  * *Editorial Typography Scales & Hierarchy Specifications*
+  * *Optimized Web-Ready Digital Asset Repository*
+  * *Tailwind CSS & Code-Ready Design Token Specifications*
+* **Metadata & Cross-Links:** Updated meta title, description, and related-service references across the blog and other service pages to reflect the unified service title.
+
+---
+
+### 12.5 Final Production Verification & Spider Crawl Metrics
+
+* **Production Build Status:** Passed (`next build` compiled all 160 static routes in 7.5s with zero errors or warnings).
+* **Rendered HTML Documents Audited:** 151 HTML pages examined on disk.
+* **Internal Link References Checked:** 10,329 link references audited.
+* **Broken Internal Links:** **0 (Zero)**.
+* **H1 Presence & Semantic Health:** 100% of indexable canonical routes have exactly one valid H1 heading.
+* **Metadata Uniqueness:** 100% unique across all indexable routes.
+* **Structured Data:** Validated across all pages. Root entity is strictly `Organization` with no ambiguous address node.
+* **Prohibited & Absolute Terminology Matches:** **0 matches found in public HTML output**.
+* **Design System Integrity:** Gold tokens (`#D9B45F`, `#E5C378`), obsidian backgrounds, typography, and site layouts remain 100% intact.
+
+---
+
+### 12.6 Unresolved Evidence Requirements & Operating Governance
+
+1. **Analytics & Search Console Tokens:** Production Google Analytics 4 and Google Search Console credentials remain unconfigured in the local staging environment. Search impressions and organic traffic metrics cannot be verified locally and have not been estimated or fabricated.
+2. **LocalBusiness Physical Verification:** A dedicated `LocalBusiness` schema with physical street address and business hours must remain excluded until registered commercial office lease documentation and Google Business Profile verification are formally completed.
+3. **Branch & Deployment Governance:**
+   * Branch: `website-development`
+   * Commit: Committed and pushed exclusively to `origin/website-development`.
+   * `main` branch remains untouched.
+   * No deployment has been triggered.
+   * Stage 4 and Phase 5 have not been initiated.
