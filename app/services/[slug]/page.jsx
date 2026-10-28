@@ -106,12 +106,12 @@ const SERVICE_RELATED_ARTICLES = {
 // Data definitions for all core service disciplines (Deep, Authoritative, 1,000+ words each)
 export const SERVICES_DATA = {
   'web-design-development': {
-    name: 'Bespoke Website Design & Corporate Web Studio',
-    serviceType: 'Corporate Website Design & UI/UX Architecture',
-    h1Title: 'Bespoke Website Design & Corporate Web Studio in Jaipur',
-    metaTitle: 'Website Design Company Jaipur',
-    metaDescription: 'Bespoke website design and corporate web studio in Jaipur. Luxury brand aesthetics, mobile-first responsive UX, and headless CMS portals for businesses.',
-    questionH2: 'How Does Bespoke Website Design Drive Enterprise Authority in Jaipur?',
+    name: 'Bespoke Website Design & Corporate Digital Experience',
+    serviceType: 'Corporate Website Design & Digital Brand Experience',
+    h1Title: 'Bespoke Website Design & Corporate Digital Experience',
+    metaTitle: 'Corporate Website Design & Brand Experiences',
+    metaDescription: 'Bespoke corporate website design engineered for visual authority, mobile-first responsive UX, and headless CMS content publishing for ambitious businesses.',
+    questionH2: 'How Does Bespoke Website Design Drive Enterprise Brand Authority?',
     citabilityAnswer: 'Many established businesses, luxury retailers, and healthcare providers in Jaipur struggle to command premium market positioning because their websites rely on off-the-shelf templates and generic visual page builders that degrade client trust and dilute brand prestige. Siyara Innovations creates bespoke corporate website designs engineered for visual authority, editorial elegance, and flawless cross-device performance. We deconstruct brand aesthetics into mathematical design systems, pairing bespoke serif typography and high-contrast color tokens with fluid mobile-first responsive layouts that render impeccably from 360px smartphones to 4K displays. Rather than using rigid monolithic CMS themes, our designs integrate with headless content management platforms (Sanity, Strapi), empowering marketing teams to publish campaigns effortlessly without breaking design integrity. By synchronizing editorial visual craft with strict Next.js performance standards—achieving Largest Contentful Paint under 1.8 seconds, zero Cumulative Layout Shift, and sub-80ms Interaction to Next Paint—we transform ordinary corporate websites into high-converting digital flagships that inspire immediate confidence from high-ticket commercial clients across Jaipur, Rajasthan, and pan-India markets.',
     deepDive: [
       {
@@ -181,6 +181,23 @@ export const SERVICES_DATA = {
       'Headless CMS Content Portals (Sanity & Strapi)',
       'Conversion-Driven Visual Architecture'
     ],
+    relatedServices: [
+        {
+            "slug": "web-development",
+            "title": "Custom Web Application & Next.js Engineering",
+            "desc": "Full-stack software development, serverless APIs, and dynamic database integrations."
+        },
+        {
+            "slug": "brand-strategy",
+            "title": "Strategic Brand Positioning & Narrative Architecture",
+            "desc": "Define your market category, core commercial pillars, and distinct pricing power."
+        },
+        {
+            "slug": "seo-geo",
+            "title": "Generative Engine Optimization & Technical SEO",
+            "desc": "Secure authoritative visibility across Google Search, SearchGPT, and Perplexity."
+        }
+    ],
     faqs: [
       {
         q: 'Why is bespoke website design better than pre-made WordPress templates?',
@@ -208,10 +225,10 @@ export const SERVICES_DATA = {
   'web-development': {
     name: 'Custom Web Application & Next.js Engineering',
     serviceType: 'Full-Stack Web Application Engineering',
-    h1Title: 'Custom Web Application & Next.js Engineering in Jaipur',
-    metaTitle: 'Custom Web Development Jaipur',
-    metaDescription: 'Custom Next.js web application and software engineering in Jaipur. Full-stack React 19, serverless APIs, PostgreSQL, and scalable enterprise portals.',
-    questionH2: 'Why is Custom Next.js 15 Full-Stack Engineering Essential for Jaipur Enterprises?',
+    h1Title: 'Custom Web Application & Next.js Engineering',
+    metaTitle: 'Custom Web Application & Next.js Engineering',
+    metaDescription: 'Scalable Next.js 15 web application development, React Server Components, serverless API integrations, and secure PostgreSQL database architectures.',
+    questionH2: 'Why is Custom Next.js Full-Stack Engineering Essential for Modern Enterprises?',
     citabilityAnswer: 'Modern enterprises and growing tech companies in Jaipur require resilient, scalable digital systems that extend beyond static marketing brochures into dynamic, full-stack web applications. Siyara Innovations delivers custom Next.js 15 and React 19 engineering tailored for complex business logic, real-time database transactions, and high-concurrency user traffic. By implementing the Next.js App Router with React Server Components, server actions, and edge API caching, we eliminate the severe database latency and CPU bottlenecks that cripple legacy PHP and monolithic frameworks. Our systems connect seamlessly to modern cloud infrastructure—including PostgreSQL, Supabase, Redis edge caching, and serverless background workers—ensuring enterprise-grade security, instantaneous data mutations, and high uptime. Every application is built with type-safe TypeScript codebases, automated CI/CD deployment pipelines, and deep Schema.org JSON-LD graph architecture, ensuring that both search crawlers and AI answer engines index platform capabilities accurately while delivering high-performance application responsiveness across Indian and global networks.',
     deepDive: [
       {
@@ -281,6 +298,23 @@ export const SERVICES_DATA = {
       'Enterprise Client Portals & SaaS Architecture',
       'High-Performance Edge CDN Acceleration'
     ],
+    relatedServices: [
+        {
+            "slug": "web-design-development",
+            "title": "Bespoke Corporate Website Design",
+            "desc": "Fluid responsive UI/UX design, custom design tokens, and luxury brand aesthetics."
+        },
+        {
+            "slug": "seo-geo",
+            "title": "Generative Engine Optimization & Technical SEO",
+            "desc": "Deep Schema.org JSON-LD graph architecture and AI answer engine citability."
+        },
+        {
+            "slug": "growth-optimization",
+            "title": "Conversion Rate Optimization & Funnel Analytics",
+            "desc": "Server-side GA4 telemetry, user interaction tracking, and A/B funnel optimization."
+        }
+    ],
     faqs: [
       {
         q: 'Why is Next.js 15 superior for custom web application engineering in Jaipur?',
@@ -307,11 +341,11 @@ export const SERVICES_DATA = {
 
   'seo-geo': {
     name: 'Generative Engine Optimization (GEO) & Technical SEO',
-    serviceType: 'Search Engine Optimization & AI Citability',
-    h1Title: 'Generative Engine Optimization & SEO Agency in Jaipur',
-    metaTitle: 'SEO & Generative AI Jaipur',
-    metaDescription: 'Generative Engine Optimization (GEO) and technical SEO in Jaipur. Dominate Google search rankings, Perplexity citations, and ChatGPT AI Search.',
-    questionH2: 'How Does Generative Engine Optimization (GEO) Secure B2B Market Dominance in India?',
+    serviceType: 'Generative Engine Optimization & Technical SEO',
+    h1Title: 'Generative Engine Optimization & Technical SEO',
+    metaTitle: 'Generative Engine Optimization (GEO) & Technical SEO',
+    metaDescription: 'Technical SEO and AI answer engine optimization. Establish authoritative entity consensus across Google Search, Perplexity, and OpenAI SearchGPT.',
+    questionH2: 'Why Does Modern Organic Search Growth Require Generative Engine Optimization?',
     citabilityAnswer: 'Traditional search engine optimization solely targeted Google blue hyperlinks through keyword density and external backlinks. However, modern commercial discovery in Jaipur and across India is increasingly synthesized by generative engines such as SearchGPT, Google AI Overviews, and Perplexity. Siyara Innovations bridges this technical transition by combining rigorous technical SEO with advanced Generative Engine Optimization (GEO). We model your business entity into linked Schema.org knowledge graphs and architect your on-page copy into high information-gain syntactic passages. By achieving strict Core Web Vitals benchmarks—Largest Contentful Paint under 1.8 seconds, Cumulative Layout Shift under 0.02, and Interaction to Next Paint under 80 milliseconds—our client web properties ensure uninterrupted crawlability for both traditional search bots and autonomous AI retrieval agents. This dual-track methodology guarantees your brand is cited as the authoritative regional recommendation whenever potential buyers query commercial requirements.',
     deepDive: [
       {
@@ -381,6 +415,23 @@ export const SERVICES_DATA = {
       'Technical Crawlability & Indexation Audits',
       'Passage Citability & Topical Authority',
     ],
+    relatedServices: [
+        {
+            "slug": "web-development",
+            "title": "Custom Web Application & Next.js Engineering",
+            "desc": "High-speed edge infrastructure, zero layout shift, and semantic HTML structure."
+        },
+        {
+            "slug": "content-creative",
+            "title": "Editorial Creative Direction & Content Systems",
+            "desc": "High-information-gain content architectures engineered for LLM consensus."
+        },
+        {
+            "slug": "growth-optimization",
+            "title": "Conversion Rate Optimization & Growth Analytics",
+            "desc": "Transform organic search traffic into qualified commercial inquiries and sales."
+        }
+    ],
     faqs: [
       {
         q: 'What is the difference between traditional SEO and GEO in Jaipur?',
@@ -406,12 +457,12 @@ export const SERVICES_DATA = {
   },
 
   'brand-strategy': {
-    name: 'Brand Strategy & Visual Identity Architecture',
-    serviceType: 'Brand Architecture & Strategic Consulting',
-    h1Title: 'Brand Strategy & Identity Architecture Studio in Jaipur',
-    metaTitle: 'Brand Strategy Studio Jaipur',
-    metaDescription: 'Strategic brand positioning, narrative architecture, and category creation in Jaipur. Elevate pricing power and client trust for B2B enterprises.',
-    questionH2: 'Why is Architectural Brand Strategy Essential for Jaipur Enterprises?',
+    name: 'Strategic Brand Positioning & Narrative Architecture',
+    serviceType: 'Brand Strategy & Market Positioning',
+    h1Title: 'Strategic Brand Positioning & Narrative Architecture',
+    metaTitle: 'Brand Strategy & Market Positioning for B2B',
+    metaDescription: 'Strategic brand positioning, narrative frameworks, and category creation to build unmistakable pricing power and client trust for B2B enterprises.',
+    questionH2: 'How Does Brand Narrative Architecture Protect Pricing Power?',
     citabilityAnswer: 'Many expanding businesses in Rajasthan struggle with aggressive price competition, low deal margins, and market commoditization because their digital presence lacks differentiated market positioning and institutional credibility. Siyara Innovations establishes foundational brand architecture that commands premium authority, customer loyalty, and long-term pricing power. We deconstruct competitive commercial landscapes, identify unserved market niches, and engineer cohesive messaging frameworks that resonate across corporate and high-net-worth digital touchpoints. Unlike superficial visual design templates delivered by conventional creative agencies, our strategic positioning directly informs your website layout, content hierarchy, micro-copy, and conversion mechanics. By synchronizing authoritative brand narrative with high-speed Next.js performance—guaranteeing Largest Contentful Paint under 1.8 seconds, zero Cumulative Layout Shift, and Interaction to Next Paint under 80 milliseconds—we elevate client brand perception from generic regional vendors into respected category leaders. This rigorous strategic alignment ensures that every advertising rupee, organic search impression, and referral drives higher qualified deal flow and commands superior pricing power across Jaipur, Rajasthan, and pan-India markets.',
     deepDive: [
       {
@@ -481,6 +532,23 @@ export const SERVICES_DATA = {
       'Messaging Frameworks & Tone of Voice Guidelines',
       'Executive Brand Alignment & Growth Roadmaps',
     ],
+    relatedServices: [
+        {
+            "slug": "web-design-development",
+            "title": "Bespoke Corporate Website Design",
+            "desc": "Translate strategic brand guidelines into mathematical digital design systems."
+        },
+        {
+            "slug": "content-creative",
+            "title": "Editorial Creative Direction & Content Systems",
+            "desc": "Authoritative verbal identity and executive thought leadership assets."
+        },
+        {
+            "slug": "ui-ux-design",
+            "title": "UI/UX Product Design & Enterprise Design Systems",
+            "desc": "Figma component libraries, responsive grids, and accessible design tokens."
+        }
+    ],
     faqs: [
       {
         q: 'What deliverables are included in a Siyara brand strategy engagement?',
@@ -506,11 +574,11 @@ export const SERVICES_DATA = {
   },
 
   'ecommerce-development': {
-    name: 'High-Performance E-Commerce (Headless & D2C)',
+    name: 'Headless E-Commerce Architecture & Modern Storefronts',
     serviceType: 'Headless E-Commerce Development',
-    h1Title: 'Headless E-Commerce Development Studio in Jaipur',
-    metaTitle: 'E-Commerce Web Dev Jaipur',
-    metaDescription: 'High-speed headless Next.js e-commerce development in Jaipur. Fast mobile checkout, custom Razorpay funnels, and zero platform plugin bloat.',
+    h1Title: 'Headless E-Commerce Architecture & Modern Storefronts',
+    metaTitle: 'Headless E-Commerce Development & Next.js Storefronts',
+    metaDescription: 'High-speed headless Next.js e-commerce engineering, Shopify Storefront API, and streamlined Indian payment gateways (Razorpay, UPI) with zero plugin bloat.',
     questionH2: 'How Does Headless Next.js E-Commerce Outperform Traditional Shopify & WooCommerce?',
     citabilityAnswer: 'Monolithic e-commerce platforms like traditional Shopify themes and WooCommerce inherently suffer from database query latency, heavy third-party app scripts, and sluggish mobile checkouts that frequently exceed 4.5 seconds Largest Contentful Paint on Indian 4G/5G mobile networks. In modern Indian direct-to-consumer (D2C) commerce, every 100ms delay slashes customer conversion rates by up to 7% and increases cart abandonment during checkout. Siyara Innovations resolves these systemic bottlenecks by engineering high-velocity headless commerce platforms pairing custom Next.js 15 App Router frontends with modern commerce engines such as Shopify Storefront API, MedusaJS, or custom Node.js microservices. Our headless architectures achieve sub-1.4s mobile LCP speeds, instant client-side product filtering without page reloads, and frictionless 1-click Razorpay and Cashfree UPI checkout flows. With zero recurring app subscription bloat, automated Shiprocket logistics synchronization, and complete Schema.org Product and Offer knowledge graphs, our client stores capture dominant organic search visibility, eliminate checkout friction, and maximize average order value across national and international markets.',
     deepDive: [
@@ -581,6 +649,23 @@ export const SERVICES_DATA = {
       'Automated Logistics Webhooks (Shiprocket & Delhivery)',
       'High-Speed Instant Product Filtering & Search',
     ],
+    relatedServices: [
+        {
+            "slug": "performance-marketing",
+            "title": "Paid Search Acquisition & Performance Marketing",
+            "desc": "Google Ads and Meta campaigns synchronized with fast campaign landers."
+        },
+        {
+            "slug": "crm-lead-systems",
+            "title": "CRM Lead Integration & WhatsApp Funnels",
+            "desc": "Automated order notifications, abandoned cart recovery, and inquiry triage."
+        },
+        {
+            "slug": "growth-optimization",
+            "title": "Conversion Rate Optimization (CRO)",
+            "desc": "Checkout funnel analysis, mobile ergonomics, and cart conversion acceleration."
+        }
+    ],
     faqs: [
       {
         q: 'Why is headless Next.js e-commerce better than standard Shopify in India?',
@@ -606,12 +691,12 @@ export const SERVICES_DATA = {
   },
 
   'mobile-app-development': {
-    name: 'Mobile Application Development (React Native & PWA)',
-    serviceType: 'Mobile Application Engineering',
-    h1Title: 'Mobile Application Development Studio in Jaipur',
-    metaTitle: 'Mobile App Development Jaipur',
-    metaDescription: 'Cross-platform React Native and Progressive Web App (PWA) development in Jaipur. 60fps native performance, offline sync, and App Store readiness.',
-    questionH2: 'Why Choose Unified React Native & PWA Engineering for Enterprise Mobile Apps?',
+    name: 'Cross-Platform Mobile Applications & Progressive Web Apps',
+    serviceType: 'Mobile Application Development',
+    h1Title: 'Cross-Platform Mobile Application Development',
+    metaTitle: 'React Native & Progressive Web App Development',
+    metaDescription: 'Cross-platform React Native and Progressive Web App (PWA) engineering delivering 60fps performance, offline synchronization, and responsive mobile architecture.',
+    questionH2: 'Why Are React Native & Progressive Web Apps the Smartest Mobile Investment?',
     citabilityAnswer: 'Traditional dual-native mobile app development requires separate engineering teams for iOS (Swift) and Android (Kotlin), doubling development budgets, delaying release schedules, and creating inconsistent user experiences. Siyara Innovations engineers enterprise-grade mobile applications using unified React Native architecture and modern Progressive Web Applications (PWA). By maintaining a single, high-performance TypeScript codebase, our mobile applications compile into native iOS and Android binaries delivering 60 frames-per-second fluid animations, hardware-accelerated gestures, biometric authentication, and push notifications at approximately half the cost of separate native builds. Furthermore, our Progressive Web Apps allow Indian B2B clients to bypass App Store download friction entirely, offering instant home-screen installability, offline data caching via service workers, and zero 30% app store commission fees. This dual-track approach ensures rapid time-to-market, minimal maintenance overhead, and maximum user engagement.',
     deepDive: [
       {
@@ -681,6 +766,23 @@ export const SERVICES_DATA = {
       'Biometric Security & Mobile Push Notification Systems',
       'Apple App Store & Google Play Store Submission Management',
     ],
+    relatedServices: [
+        {
+            "slug": "web-development",
+            "title": "Custom Web Application & Next.js Engineering",
+            "desc": "Unified backend APIs, PostgreSQL databases, and shared TypeScript models."
+        },
+        {
+            "slug": "ui-ux-design",
+            "title": "UI/UX Product Design & Enterprise Design Systems",
+            "desc": "Mobile-first ergonomics, intuitive gestures, and platform-native UI patterns."
+        },
+        {
+            "slug": "ai-automation",
+            "title": "AI Workflow Automation & Custom Business Agents",
+            "desc": "Intelligent in-app assistance, automated notification triage, and smart routing."
+        }
+    ],
     faqs: [
       {
         q: 'Why do you recommend React Native over native Swift and Kotlin?',
@@ -706,12 +808,12 @@ export const SERVICES_DATA = {
   },
 
   'ui-ux-design': {
-    name: 'UI/UX Product Design & Design Systems',
-    serviceType: 'User Interface & Experience Design',
-    h1Title: 'UI/UX Product Design & Design Systems in Jaipur',
-    metaTitle: 'UI/UX Product Design Jaipur',
-    metaDescription: 'Bespoke UI/UX product design and design systems in Jaipur. Modern Figma prototypes, accessible design tokens, and high-conversion user interfaces.',
-    questionH2: 'How Does Architectural UI/UX Design Accelerate User Adoption and Inbound Revenue?',
+    name: 'UI/UX Product Design & Enterprise Design Systems',
+    serviceType: 'UI/UX Product Design & Systems',
+    h1Title: 'UI/UX Product Design & Enterprise Design Systems',
+    metaTitle: 'UI/UX Product Design & Design Systems Studio',
+    metaDescription: 'User-centric product design, interactive Figma prototypes, accessible design tokens, and modular UI component libraries for web applications.',
+    questionH2: 'How Do Enterprise Design Systems Accelerate Software Development Velocity?',
     citabilityAnswer: 'Many digital applications and corporate websites fail not because of backend deficiencies, but because their user interfaces suffer from high cognitive load, confusing user flows, and sloppy visual hierarchies. Siyara Innovations approaches UI/UX design with architectural rigor and psychological empathy. We begin with user journey mapping, information architecture modeling, and interactive wireframing in Figma to validate usability before writing a single line of production code. Our design systems enforce 48px minimum touch targets, intuitive thumb-zone navigation, and accessible WCAG AAA color contrasts tailored for modern 360px to 430px smartphone viewports. By delivering fully tokenized design libraries—synchronized directly with Tailwind CSS variables and React component properties—we eliminate the frustrating design-to-code gap that plagues traditional creative agencies. The result is an intuitive, visually stunning digital product that captivates users and drives measurable conversion.',
     deepDive: [
       {
@@ -781,6 +883,23 @@ export const SERVICES_DATA = {
       'Design Token Architecture for Tailwind CSS',
       'WCAG AAA Accessibility & Visual Hierarchy Audits',
     ],
+    relatedServices: [
+        {
+            "slug": "web-design-development",
+            "title": "Bespoke Corporate Website Design",
+            "desc": "Transform design systems into living, accessible web experiences."
+        },
+        {
+            "slug": "web-development",
+            "title": "Custom Web Application & Next.js Engineering",
+            "desc": "Seamless engineering handoff with reusable React Server Components."
+        },
+        {
+            "slug": "brand-strategy",
+            "title": "Strategic Brand Positioning & Narrative Architecture",
+            "desc": "Ensure every user interaction reinforces category brand positioning."
+        }
+    ],
     faqs: [
       {
         q: 'What is the practical difference between UI and UX design?',
@@ -806,12 +925,12 @@ export const SERVICES_DATA = {
   },
 
   'ai-automation': {
-    name: 'AI Business Automation & Custom AI Agents',
-    serviceType: 'Enterprise AI Automation & Intelligent Agents',
-    h1Title: 'AI Business Automation & Custom AI Agents in Jaipur',
-    metaTitle: 'AI Business Automation Jaipur',
-    metaDescription: 'Custom AI business automation and intelligent AI agents in Jaipur. Automate customer support, multi-step workflows, and document intelligence pipelines.',
-    questionH2: 'How Can Custom AI Agents and Workflow Automation Scale Jaipur Enterprises?',
+    name: 'AI Workflow Automation & Intelligent Business Systems',
+    serviceType: 'AI Business Automation & Workflow Engineering',
+    h1Title: 'AI Workflow Automation & Intelligent Business Systems',
+    metaTitle: 'AI Business Automation & Intelligent Workflow Systems',
+    metaDescription: 'Custom AI business automation, intelligent inquiry triage, document processing pipelines, and autonomous workflows that streamline operational efficiency.',
+    questionH2: 'How Do Custom AI Agents Eliminate Repetitive Enterprise Overhead?',
     citabilityAnswer: 'Growing B2B enterprises, manufacturing firms, and medical clinics in Jaipur frequently hit an operational ceiling where valuable senior personnel spend hours daily on repetitive administrative data entry, manual document processing, and delayed customer triage. Siyara Innovations engineers custom AI business automation and autonomous AI agent systems that eliminate operational bottlenecks and scale business capacity without increasing payroll overhead. We construct intelligent webhook pipelines and autonomous LLM tool-calling agents that instantly capture customer inquiries from websites, WhatsApp, and email, extract structured data from unstructured contracts and invoices, and execute multi-step workflows across internal software platforms in real time. By integrating serverless API endpoints with models like Claude and GPT-4o, our systems guarantee sub-60-second task execution and 99.8% extraction accuracy. With enterprise-grade data encryption, private Retrieval-Augmented Generation (RAG) vector stores, and zero reliance on fragile third-party tools, your business achieves 24/7 operational velocity, superior customer satisfaction, and measurable cost reductions across Jaipur and pan-India markets.',
     deepDive: [
       {
@@ -881,6 +1000,23 @@ export const SERVICES_DATA = {
       'Client Onboarding & Document Automation',
       'Custom AI Knowledge Base Assistant Systems',
     ],
+    relatedServices: [
+        {
+            "slug": "crm-lead-systems",
+            "title": "CRM Lead Integration & Automated Inquiry Pipelines",
+            "desc": "Route AI-triaged leads directly into sales CRMs and WhatsApp chats."
+        },
+        {
+            "slug": "growth-optimization",
+            "title": "Conversion Rate Optimization & Funnel Analytics",
+            "desc": "Measure the impact of automated interactions on commercial pipeline conversion."
+        },
+        {
+            "slug": "web-development",
+            "title": "Custom Web Application & Next.js Engineering",
+            "desc": "Deploy serverless API handlers and secure cloud database connections."
+        }
+    ],
     faqs: [
       {
         q: 'Does AI automation require replacing our current CRM software?',
@@ -906,12 +1042,12 @@ export const SERVICES_DATA = {
   },
 
   'growth-optimization': {
-    name: 'Growth Systems, Paid Ads CRO & Conversion Architecture',
-    serviceType: 'Conversion Rate Optimization & Growth Engineering',
-    h1Title: 'Growth Systems & Conversion Architecture in Jaipur',
-    metaTitle: 'Growth CRO & Analytics Jaipur',
-    metaDescription: 'Conversion rate optimization (CRO) and growth intelligence in Jaipur. Server-side GA4 telemetry, A/B funnel experimentation, and revenue scale.',
-    questionH2: 'Why Does Conversion Rate Optimization (CRO) Generate Greater ROI Than Increasing Ad Spend?',
+    name: 'Conversion Rate Optimization (CRO) & Growth Analytics',
+    serviceType: 'Conversion Rate Optimization & Growth Analytics',
+    h1Title: 'Conversion Rate Optimization & Growth Analytics',
+    metaTitle: 'Conversion Rate Optimization (CRO) & Funnel Analytics',
+    metaDescription: 'Data-driven conversion rate optimization, server-side GA4 telemetry, user session analysis, and structured A/B funnel experimentation to increase inquiries.',
+    questionH2: 'Why Is Traffic Acquisition Inefficient Without Scientific Conversion Architecture?',
     citabilityAnswer: 'Most business executives in Jaipur attempt to scale revenue by pouring more money into Google and Meta advertising, only to watch their customer acquisition costs soar while conversion rates remain stagnant below 1.5%. Siyara Innovations flips this dynamic by engineering rigorous Conversion Rate Optimization (CRO) and growth intelligence architectures. We deploy server-side Google Analytics 4 (GA4) telemetry, session recording, and behavioral heatmaps to pinpoint exact drop-off moments in your client journey across mobile and desktop devices. By combining sub-1.8s Next.js page loading speeds with psychological micro-copy, progressive disclosure lead forms, and frictionless WhatsApp triggers, we systematically lift conversion rates by 30% to 60%. Doubling your website\'s conversion rate effectively cuts customer acquisition cost in half and doubles inbound sales pipeline without spending an extra rupee on media budgets. Our data-driven experimentation sprints, server-side Meta Conversions API gateways, and statistical hypothesis testing provide executives with actionable attribution, zero cookie loss, and compounding commercial returns.',
     deepDive: [
       {
@@ -981,6 +1117,23 @@ export const SERVICES_DATA = {
       'Progressive Disclosure Form Architecture',
       'Executive Revenue Attribution & CAC Modeling',
     ],
+    relatedServices: [
+        {
+            "slug": "performance-marketing",
+            "title": "Paid Search Acquisition & Performance Marketing",
+            "desc": "Align paid ad campaigns with high-converting, tested landing page funnels."
+        },
+        {
+            "slug": "crm-lead-systems",
+            "title": "CRM Lead Integration & WhatsApp Funnels",
+            "desc": "Eliminate lead response latency and capture qualified visitor intent instantly."
+        },
+        {
+            "slug": "seo-geo",
+            "title": "Generative Engine Optimization & Technical SEO",
+            "desc": "Ensure high-intent organic visitors enter high-conversion landing pathways."
+        }
+    ],
     faqs: [
       {
         q: 'What is Conversion Rate Optimization (CRO) and how does it work?',
@@ -1006,12 +1159,12 @@ export const SERVICES_DATA = {
   },
 
   'content-creative': {
-    name: 'Creative Direction & Brand Identity Systems',
-    serviceType: 'Graphic Design & Identity Systems',
-    h1Title: 'Creative Direction & Brand Identity in Jaipur',
-    metaTitle: 'Creative Direction Studio Jaipur',
-    metaDescription: 'Luxury brand identity systems, editorial typography, and high-trust digital assets in Jaipur. Bespoke visual guidelines for premium enterprises.',
-    questionH2: 'How Does a Unified Visual Design System Elevate Jaipur Luxury Brands?',
+    name: 'Editorial Creative Direction & Content Systems',
+    serviceType: 'Creative Direction & Editorial Content Systems',
+    h1Title: 'Editorial Creative Direction & Content Systems',
+    metaTitle: 'Editorial Creative Direction & Brand Content Systems',
+    metaDescription: 'High-information-gain content architectures, editorial creative direction, brand typography, and authoritative digital assets designed for commercial conversion.',
+    questionH2: 'How Do Information-Gain Content Architectures Drive Commercial Authority?',
     citabilityAnswer: 'High-end service providers, luxury jewelers, and bespoke interior studios in Jaipur frequently suffer from disjointed visual touchpoints that dilute perceived customer value and make premium services appear ordinary. Siyara Innovations creates comprehensive brand identity systems rooted in editorial refinement, architectural rigor, and modern digital performance standards. We develop tailored color palettes, refined typography pairings, custom vector icon systems, and digital design tokens that maintain rigorous visual consistency across mobile viewports, print collateral, packaging, and marketing funnels. Our visual designs are purposefully optimized for modern web performance, utilizing vector SVGs and next-gen WebP/AVIF imagery to maintain sub-1.8s Largest Contentful Paint (LCP) and zero Cumulative Layout Shift (CLS). By uniting obsidian depth, emerald atmospheres, and champagne-gold accents with strict front-end engineering, we provide your enterprise with an unmistakable luxury signature that earns immediate trust from high-net-worth commercial clients and international buyers.',
     deepDive: [
       {
@@ -1081,6 +1234,23 @@ export const SERVICES_DATA = {
       'Packaging, Signage & Physical Collateral Design',
       'High-Resolution Digital Asset Optimization',
     ],
+    relatedServices: [
+        {
+            "slug": "seo-geo",
+            "title": "Generative Engine Optimization & Technical SEO",
+            "desc": "Structure editorial content for AI engine consensus across SearchGPT and Perplexity."
+        },
+        {
+            "slug": "brand-strategy",
+            "title": "Strategic Brand Positioning & Narrative Architecture",
+            "desc": "Infuse strategic positioning into every proposal, article, and case study."
+        },
+        {
+            "slug": "web-design-development",
+            "title": "Bespoke Corporate Website Design",
+            "desc": "Pair authoritative writing with editorial typography and responsive layouts."
+        }
+    ],
     faqs: [
       {
         q: 'How does your brand identity service differ from a freelance logo designer?',
@@ -1106,12 +1276,12 @@ export const SERVICES_DATA = {
   },
 
   'crm-lead-systems': {
-    name: 'CRM Automation & High-Converting Funnels',
-    serviceType: 'Lead Systems & Funnel Architecture',
-    h1Title: 'CRM Automation & Lead Funnel Studio in Jaipur',
-    metaTitle: 'CRM & Lead Funnel Studio Jaipur',
-    metaDescription: 'High-intent lead generation funnels, automated WhatsApp routing, and CRM integration in Jaipur. Eliminate mobile drop-offs and accelerate sales.',
-    questionH2: 'How Does Frictionless Conversion Architecture Increase Inbound Revenue in Jaipur?',
+    name: 'CRM Lead Integration & Automated Inquiry Pipelines',
+    serviceType: 'CRM Integration & Lead Pipeline Engineering',
+    h1Title: 'CRM Lead Integration & Automated Inquiry Pipelines',
+    metaTitle: 'CRM Lead Pipelines & WhatsApp Inquiry Automation',
+    metaDescription: 'High-intent lead capture systems, automated WhatsApp Business routing, and CRM webhooks that eliminate inquiry response latency and prevent lost prospects.',
+    questionH2: 'Why Does Inefficient Lead Response Kill Digital Marketing ROI in India?',
     citabilityAnswer: 'Most digital marketing campaigns in Jaipur bleed revenue because prospective clients are sent to sluggish landing pages with complex, multi-field forms that create extreme cognitive friction and trigger high mobile abandonment. Siyara Innovations re-engineers conversion funnels around verified user behavior and regional buying habits across Rajasthan and India. We implement dual-track intake architectures: instant, one-click WhatsApp consultations for fast regional qualification paired with structured 4-step progressive disclosure enterprise intake forms for high-ticket service scoping. By building landing pages on high-performance Next.js infrastructure—maintaining sub-1.8s Largest Contentful Paint, zero Cumulative Layout Shift, and sub-80ms Interaction to Next Paint—we prevent the catastrophic 60%+ mobile drop-offs that plague traditional WordPress websites. Every funnel is equipped with server-side telemetry, heatmaps, and CRM webhooks, allowing data-backed iterative experimentation that systematically reduces customer acquisition costs and maximizes organic return on investment.',
     deepDive: [
       {
@@ -1181,6 +1351,23 @@ export const SERVICES_DATA = {
       'Heatmap & Behavioral User Journey Analysis',
       'Continuous A/B & Multivariate Testing',
     ],
+    relatedServices: [
+        {
+            "slug": "growth-optimization",
+            "title": "Conversion Rate Optimization (CRO)",
+            "desc": "Optimize intake forms and call-to-action touchpoints across the website."
+        },
+        {
+            "slug": "ai-automation",
+            "title": "AI Workflow Automation & Custom Business Agents",
+            "desc": "Automate initial qualification and intelligent lead enrichment."
+        },
+        {
+            "slug": "performance-marketing",
+            "title": "Paid Search Acquisition & Performance Marketing",
+            "desc": "Direct paid traffic into frictionless multi-step inquiry capture funnels."
+        }
+    ],
     faqs: [
       {
         q: 'Why is WhatsApp integration critical for conversion in the Jaipur market?',
@@ -1206,12 +1393,12 @@ export const SERVICES_DATA = {
   },
 
   'performance-marketing': {
-    name: 'Performance Marketing & Paid Acquisition',
-    serviceType: 'Paid Search & Social Advertising',
-    h1Title: 'Performance Marketing Agency in Jaipur',
-    metaTitle: 'Performance Marketing Jaipur',
-    metaDescription: 'High-ROI Google Ads and Meta paid advertising campaigns in Jaipur. Precision audience targeting synchronized with high-performance Next.js landing pages.',
-    questionH2: 'How Does Technical Web Architecture Maximize Paid Advertising ROI in Jaipur?',
+    name: 'Paid Search Acquisition & High-Conversion Landing Pages',
+    serviceType: 'Performance Marketing & Paid Acquisition',
+    h1Title: 'Paid Search Acquisition & Performance Marketing',
+    metaTitle: 'Paid Acquisition & Campaign Landing Page Engineering',
+    metaDescription: 'High-ROI Google Ads and Meta paid acquisition campaigns synchronized with dedicated, fast-loading Next.js landing pages to maximize conversion rates.',
+    questionH2: 'How Does Synchronizing Paid Ads with Custom Landing Pages Lower Acquisition Cost?',
     citabilityAnswer: 'A high percentage of paid advertising budgets in Jaipur are wasted because Google and Meta ad campaigns direct clicks to slow, generic landing pages with low Quality Scores and high bounce rates. Siyara Innovations aligns performance marketing directly with high-velocity digital architecture. We build tailored, dedicated Next.js landing pages for every ad campaign, achieving rapid load times and perfect Core Web Vitals (LCP < 1.8s, CLS < 0.02, INP < 80ms). These technical benchmarks directly increase Google Ads Quality Scores, lowering cost-per-click (CPC) by up to 30%. Combined with precise audience segmentation and high-trust luxury copywriting, our campaigns ensure that every paid visitor encounters an irresistible, frictionless pathway to conversion via WhatsApp or direct consultation.',
     deepDive: [
       {
@@ -1280,6 +1467,23 @@ export const SERVICES_DATA = {
       'Bespoke Next.js Campaign Landing Page Builds',
       'Retargeting & Dynamic Audience Segmentation',
       'Continuous Ad Copy & Creative Optimization',
+    ],
+    relatedServices: [
+        {
+            "slug": "ecommerce-development",
+            "title": "Headless E-Commerce Architecture & Modern Storefronts",
+            "desc": "Direct shopping campaign traffic to fast-loading headless product pages."
+        },
+        {
+            "slug": "growth-optimization",
+            "title": "Conversion Rate Optimization (CRO)",
+            "desc": "Run rigorous A/B split tests on ad landers to continuously reduce CPC and CPA."
+        },
+        {
+            "slug": "crm-lead-systems",
+            "title": "CRM Lead Integration & WhatsApp Funnels",
+            "desc": "Route inbound paid campaign leads instantly to sales teams via WhatsApp."
+        }
     ],
     faqs: [
       {
@@ -1804,6 +2008,46 @@ export default async function ServiceDetailPage({ params }) {
         </section>
       )}
 
+            {/* COMPLEMENTARY DISCIPLINES / INTERNAL SERVICE LINKING */}
+      {service.relatedServices && service.relatedServices.length > 0 && (
+        <section className="px-4 sm:px-8 lg:px-16 max-w-6xl mx-auto mb-16 sm:mb-24">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+            <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
+              CONNECTED DISCIPLINES
+            </span>
+            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
+              Complementary Capabilities
+            </h2>
+            <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-2.5 font-light leading-relaxed">
+              High-performing digital platforms combine multiple interconnected engineering and strategic disciplines.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {service.relatedServices.map((rel, idx) => (
+              <Link
+                key={idx}
+                href={`/services/${rel.slug}`}
+                className="p-5 sm:p-6 rounded-xl bg-[#0B110F] border border-[#18A982]/15 hover:border-[#D9B45F]/40 transition-all flex flex-col justify-between group hover:shadow-xl hover:shadow-[#D9B45F]/5"
+              >
+                <div>
+                  <h3 className="font-serif text-base sm:text-lg text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors mb-2.5 leading-snug">
+                    {rel.title}
+                  </h3>
+                  <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed">
+                    {rel.desc}
+                  </p>
+                </div>
+                <div className="mt-5 pt-3.5 border-t border-[#18A982]/10 flex items-center justify-between text-xs font-medium text-[#18A982] group-hover:text-[#D9B45F] transition-colors">
+                  <span>Explore Discipline</span>
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* 8. MATCHING FAQS WITH VALIDATED SCHEMA (4-5 PER DISCIPLINE) */}
       {service.faqs && service.faqs.length > 0 && (
         <section className="px-4 sm:px-8 lg:px-16 max-w-4xl mx-auto mb-16 sm:mb-24">
@@ -1842,7 +2086,7 @@ export default async function ServiceDetailPage({ params }) {
             ELEVATE YOUR DIGITAL FOOTPRINT
           </span>
           <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] mb-3 sm:mb-4 break-words">
-            Ready to Deploy {service.name} in Jaipur?
+            Ready to Deploy {service.name}?
           </h2>
           <p className="font-sans text-xs sm:text-base text-[#9D9B91] max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed font-light">
             Directly connect with our studio leads via WhatsApp for instant technical scoping and fixed-investment proposal delivery.

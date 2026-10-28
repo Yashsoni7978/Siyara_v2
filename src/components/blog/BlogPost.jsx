@@ -64,10 +64,62 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
   };
 
-  // Find related articles based on category or excluding current
+  // Calculate genuinely related articles based on category and shared tag overlap
   const relatedArticles = allArticles
     .filter((item) => item.id !== article.id)
-    .slice(0, 3);
+    .map((item) => {
+      let score = 0;
+      if (item.category === article.category) score += 4;
+      if (Array.isArray(item.tags) && Array.isArray(article.tags)) {
+        const overlap = item.tags.filter((t) => article.tags.includes(t));
+        score += overlap.length * 2;
+      }
+      return { item, score };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+    .map((x) => x.item);
+
+  // Contextual related services matching the article domain
+  const getRelatedServices = () => {
+    const cat = article.category || '';
+    if (cat === 'Web Development' || cat === 'Technology') {
+      return [
+        { title: 'Custom Web Application & Next.js Engineering', slug: 'web-development', desc: 'Scalable Next.js applications, server actions, and PostgreSQL database architectures.' },
+        { title: 'Bespoke Corporate Website Design', slug: 'web-design-development', desc: 'Modern responsive UX, luxury brand aesthetics, and headless CMS publishing.' }
+      ];
+    }
+    if (cat === 'SEO & GEO' || cat === 'SEO') {
+      return [
+        { title: 'Generative Engine Optimization & Technical SEO', slug: 'seo-geo', desc: 'Algorithmic consensus across Google Search, SearchGPT, and Perplexity.' },
+        { title: 'Conversion Rate Optimization & Funnel Analytics', slug: 'growth-optimization', desc: 'Transform organic search visitors into qualified commercial inquiries.' }
+      ];
+    }
+    if (cat === 'E-commerce') {
+      return [
+        { title: 'Headless E-Commerce Development', slug: 'ecommerce-development', desc: 'High-speed Next.js storefronts, Shopify Storefront API, and custom UPI checkouts.' },
+        { title: 'Paid Search Acquisition & Performance Marketing', slug: 'performance-marketing', desc: 'High-ROI Google Ads campaigns synchronized with dedicated landing pages.' }
+      ];
+    }
+    if (cat === 'Brand' || cat === 'Design') {
+      return [
+        { title: 'Strategic Brand Positioning & Narrative Architecture', slug: 'brand-strategy', desc: 'Establish market differentiation, pricing power, and commercial trust.' },
+        { title: 'UI/UX Product Design & Enterprise Design Systems', slug: 'ui-ux-design', desc: 'Bespoke Figma component systems, accessible design tokens, and user journeys.' }
+      ];
+    }
+    if (cat === 'Conversion' || cat === 'Growth') {
+      return [
+        { title: 'Conversion Rate Optimization (CRO)', slug: 'growth-optimization', desc: 'Server-side GA4 telemetry, user session testing, and A/B funnel experimentation.' },
+        { title: 'CRM Lead Integration & WhatsApp Pipelines', slug: 'crm-lead-systems', desc: 'Instant WhatsApp routing and automated inquiry qualification.' }
+      ];
+    }
+    return [
+      { title: 'Custom Web Application & Next.js Engineering', slug: 'web-development', desc: 'Scalable Next.js applications engineered for high-concurrency enterprise traffic.' },
+      { title: 'Generative Engine Optimization & Technical SEO', slug: 'seo-geo', desc: 'Technical SEO and generative answer engine citation architecture.' }
+    ];
+  };
+
+  const relatedServices = getRelatedServices();
 
   if (!article) return null;
 
@@ -402,9 +454,46 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
           </div>
         </div>
 
+        {/* Related Services Pathways */}
+        {relatedServices && relatedServices.length > 0 && (
+          <section className="mt-20 pt-12 border-t border-[#D4AF37]/20">
+            <div className="mb-6">
+              <span className="text-xs font-sans uppercase tracking-widest text-[#19A878] font-semibold">
+                RELATED CAPABILITIES
+              </span>
+              <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#F3EFE4] mt-1">
+                Explore Engineering &amp; Strategic Disciplines
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+              {relatedServices.map((svc, sIdx) => (
+                <Link
+                  key={sIdx}
+                  href={`/services/${svc.slug}`}
+                  className="p-5 rounded-xl bg-[#063C2D]/15 border border-[#D4AF37]/25 hover:border-[#D4AF37]/60 hover:bg-[#063C2D]/30 transition-all group flex flex-col justify-between"
+                >
+                  <div>
+                    <h4 className="font-serif text-base sm:text-lg text-[#F3EFE4] group-hover:text-[#D4AF37] transition-colors mb-2 leading-snug">
+                      {svc.title}
+                    </h4>
+                    <p className="font-sans text-xs text-[#CFC9BB]/75 font-light leading-relaxed">
+                      {svc.desc}
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-[#D4AF37]/10 flex items-center justify-between text-xs font-medium text-[#19A878] group-hover:text-[#D4AF37] transition-colors">
+                    <span>View Service Discipline</span>
+                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Related Recommended Insights */}
         {relatedArticles.length > 0 && (
-          <section className="mt-28 pt-16 border-t border-[#D4AF37]/20">
+          <section className="mt-20 pt-16 border-t border-[#D4AF37]/20">
             <div className="flex items-center justify-between mb-10">
               <div>
                 <span className="text-xs font-sans uppercase tracking-widest text-[#D4AF37]">
