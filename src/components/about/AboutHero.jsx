@@ -47,14 +47,14 @@ export default function AboutHero() {
             {/* Main Heading */}
             <div className="mb-6 sm:mb-8">
               <h1 className="font-serif text-3xl sm:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-normal leading-[1.12] sm:leading-[1.1] tracking-tight text-[#F3EFE3] max-w-full break-words">
-                We build digital systems for Jaipur businesses - strategy, design, and technology, connected.
+                We build digital systems for growing businesses — strategy, design, and technology, connected.
               </h1>
             </div>
 
             {/* Supporting Copy */}
             <div className="mb-8 sm:mb-10 max-w-lg space-y-4">
               <p className="font-sans text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Siyara Innovations brings strategy, design, technology, and growth together to solve real problems for Jaipur businesses - not abstract “digital experiences.”
+                Founded in May 2026, Siyara Innovations unites more than six years of combined professional experience to solve real commercial problems for businesses across India and internationally.
               </p>
               <p className="font-sans text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light leading-relaxed">
                 We believe every part of a business’s digital presence should work as one system, not six disconnected pieces.
@@ -64,7 +64,7 @@ export default function AboutHero() {
             {/* Optional Brand Statement */}
             <div className="mb-8 sm:mb-10 flex items-center gap-4">
               <span className="text-[10px] sm:text-[11px] font-sans font-semibold tracking-[0.2em] text-[#9D9B91]/70 uppercase">
-               BASED IN JAIPUR &middot; BUILT FOR JAIPUR
+               ROOTED IN JAIPUR &middot; SERVING CLIENTS IN INDIA &amp; INTERNATIONALLY
               </span>
             </div>
 

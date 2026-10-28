@@ -66,7 +66,7 @@ export default function WorkHero() {
 
             {/* Supporting Copy */}
             <p className="font-sans text-sm sm:text-base text-[#F3EFE3]/85 font-light leading-relaxed max-w-[540px] mb-8">
-              A showcase of {totalProjects}+ projects across industries: turning bold ideas into meaningful digital experiences.
+              A digital showcase of 85 multi-industry platforms, live demonstrations, and concepts from our 110+ completed business engagements.
             </p>
 
             {/* Primary CTA (Rectangular / Editorial) */}
@@ -89,10 +89,10 @@ export default function WorkHero() {
             >
               <div className="flex flex-col">
                 <span className="font-serif text-2xl sm:text-3xl font-normal text-[#D4AF37]">
-                  {totalProjects}+
+                  110+
                 </span>
                 <span className="text-[9px] font-sans font-semibold tracking-[0.2em] text-[#F3EFE3]/70 uppercase mt-0.5">
-                  PROJECTS
+                  DELIVERED PROJECTS
                 </span>
               </div>
 
@@ -100,7 +100,7 @@ export default function WorkHero() {
 
               <div className="flex flex-col">
                 <span className="font-serif text-2xl sm:text-3xl font-normal text-[#D4AF37]">
-                  {totalIndustries}+
+                  12
                 </span>
                 <span className="text-[9px] font-sans font-semibold tracking-[0.2em] text-[#F3EFE3]/70 uppercase mt-0.5">
                   INDUSTRIES
@@ -111,10 +111,10 @@ export default function WorkHero() {
 
               <div className="flex flex-col">
                 <span className="font-serif text-2xl sm:text-3xl font-normal text-[#D4AF37]">
-                  1
+                  60+
                 </span>
                 <span className="text-[9px] font-sans font-semibold tracking-[0.2em] text-[#F3EFE3]/70 uppercase mt-0.5">
-                  DIGITAL DISCIPLINE
+                  CLIENTS SERVED
                 </span>
               </div>
             </motion.div>

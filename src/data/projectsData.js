@@ -518,7 +518,7 @@ export const projectsData = [
     industry: 'Events',
     projectType: 'Bespoke Event Curation & Celebrations',
     tagline: 'Bespoke Event Curation & Celebrations',
-    description: 'A distinct events brand, separate from Bloom (details pending, currently redeploying).',
+    description: 'Bespoke event curation and luxury celebrations platform showcasing experiential wedding and event production.',
     services: ['EVENT BRANDING', 'CELEBRATIONS', 'LUXURY EXPERIENCES'],
     status: 'LIVE',
     classification: 'LIVE_DEMO',
@@ -815,8 +815,8 @@ export const projectsData = [
   {
     id: '41',
     slug: 'tarini',
-    name: 'Tarini',
-    title: 'TARINI',
+    name: 'Tarini Bridal Studio',
+    title: 'TARINI BRIDAL STUDIO',
     industry: 'Fashion',
     projectType: 'Bridal & Ethnic Couture Storefront',
     tagline: 'Bridal & Ethnic Couture Storefront',
@@ -830,7 +830,7 @@ export const projectsData = [
     heroHeadline: 'BRIDAL & ETHNIC COUTURE STOREFRONT',
     heroSubline: 'Full product pages, wishlist, and conversion shopping flow.',
     ctaText: 'SHOP COUTURE',
-    featured: false,
+    featured: true,
     gridSize: 'medium',
     isFounder: false
   },
@@ -1276,8 +1276,8 @@ export const projectsData = [
   {
     id: '64',
     slug: 'noor',
-    name: 'Noor',
-    title: 'NOOR',
+    name: 'Noor Restaurant',
+    title: 'NOOR RESTAURANT',
     industry: 'Food & Beverage',
     projectType: 'Contemporary Indian Dining Experience',
     tagline: 'Contemporary Indian Dining Experience',
@@ -1291,7 +1291,7 @@ export const projectsData = [
     heroHeadline: 'CONTEMPORARY INDIAN DINING EXPERIENCE',
     heroSubline: 'Jaipur-based restaurant digital brand showcase.',
     ctaText: 'EXPLORE RESTAURANT',
-    featured: false,
+    featured: true,
     gridSize: 'medium',
     isFounder: false
   },

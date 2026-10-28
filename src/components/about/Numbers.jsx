@@ -7,27 +7,27 @@ export default function Numbers() {
   const stats = [
     {
       id: '01',
-      number: '100+',
-      label: 'PROJECTS DELIVERED',
-      description: 'For businesses across Jaipur and beyond.',
+      number: '60+',
+      label: 'CLIENTS SERVED',
+      description: 'Engagements delivered for businesses across India and internationally.',
     },
     {
       id: '02',
-      number: '50+',
-      label: 'BUSINESSES GROWN',
-      description: 'Through strategy, design, and execution that actually connects.',
+      number: '110+',
+      label: 'COMPLETED PROJECTS',
+      description: 'Including 70+ websites launched and 30+ digital applications delivered.',
     },
     {
       id: '03',
-      number: '4+',
-      label: 'YEARS OF EXPERIENCE',
-      description: 'Building digital systems that hold up.',
+      number: '12',
+      label: 'INDUSTRIES SERVED',
+      description: 'Events, hospitality, medical, luxury, e-commerce, technology, real estate, and education.',
     },
     {
       id: '04',
-      number: '1',
-      label: 'MISSION',
-      description: 'To help Jaipur businesses show up the way they actually deserve to.',
+      number: '6+',
+      label: 'YEARS COMBINED EXPERIENCE',
+      description: 'Combined professional engineering and strategy background (Siyara founded May 2026).',
     },
   ];
 

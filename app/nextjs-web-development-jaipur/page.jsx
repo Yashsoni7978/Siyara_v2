@@ -145,7 +145,7 @@ export default function NextJsWebDevelopmentJaipurPage() {
         'name': 'Next.js Web Development Jaipur',
         'serviceType': 'Custom Web Application Development',
         'provider': {
-          '@type': 'ProfessionalService',
+          '@type': 'Organization',
           '@id': 'https://www.siyaradigitals.com/#organization',
           'name': 'Siyara Innovations',
           'url': 'https://www.siyaradigitals.com',

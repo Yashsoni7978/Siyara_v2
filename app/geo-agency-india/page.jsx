@@ -145,17 +145,11 @@ export default function GeoAgencyIndiaPage() {
         'name': 'Generative Engine Optimization (GEO) Agency India',
         'serviceType': 'Generative Engine Optimization & AI Search Authority',
         'provider': {
-          '@type': 'ProfessionalService',
+          '@type': 'Organization',
           '@id': 'https://www.siyaradigitals.com/#organization',
           'name': 'Siyara Innovations',
           'url': 'https://www.siyaradigitals.com',
           'telephone': '+919587269209',
-          'address': {
-            '@type': 'PostalAddress',
-            'addressLocality': 'Jaipur',
-            'addressRegion': 'Rajasthan',
-            'addressCountry': 'IN',
-          },
         },
         'areaServed': [
           { '@type': 'Country', 'name': 'India' },

@@ -2,179 +2,194 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Cpu, Search, Target, ShieldCheck, TrendingUp } from 'lucide-react';
+import { ArrowUpRight, TrendingUp, Search, Target, Users, Clock, Zap } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Results() {
-  const proofPillars = [
+  const easeCustom = [0.16, 1, 0.3, 1];
+
+  const collectiveMetrics = [
     {
       id: '01',
-      title: 'PERFORMANCE',
-      label: 'Core Web Vitals and load-speed work on every build',
-      category: 'Performance',
-      icon: Cpu,
+      metric: '6x+',
+      label: 'AVERAGE TRAFFIC GROWTH',
+      description: 'Reported average traffic growth across multiple client engagements.',
+      category: 'Search & Visibility',
+      icon: TrendingUp,
     },
     {
       id: '02',
-      title: 'VISIBILITY',
-      label: 'Organic search and AI answer-engine visibility (SEO + GEO)',
-      category: 'Visibility',
+      metric: '500+',
+      label: 'ORGANIC CLICKS',
+      description: 'Monthly organic search clicks achieved.',
+      category: 'Organic Growth',
       icon: Search,
     },
     {
       id: '03',
-      title: 'CONVERSION',
-      label: 'Funnel and UX architecture built around how people actually decide',
-      category: 'Conversion',
+      metric: '5–6%',
+      label: 'CONVERSION RATES',
+      description: 'Reported conversion rates across client funnels.',
+      category: 'Conversion Architecture',
       icon: Target,
     },
     {
       id: '04',
-      title: 'DELIVERY',
-      label: 'Structured milestones and QA before anything ships',
-      category: 'Delivery',
-      icon: ShieldCheck,
+      metric: '150+',
+      label: 'CAMPAIGN ENQUIRIES',
+      description: 'Enquiries generated from a ₹20,000 advertising campaign.',
+      category: 'Paid Acquisition',
+      icon: Zap,
     },
     {
       id: '05',
-      title: 'OPTIMIZATION',
-      label: 'Ongoing CRO and reporting after launch',
-      category: 'Optimization',
-      icon: TrendingUp,
+      metric: '200+',
+      label: 'MONTHLY LEADS',
+      description: 'Monthly leads reported across multiple client engagements.',
+      category: 'Lead Generation',
+      icon: Users,
+    },
+    {
+      id: '06',
+      metric: '100s of hrs',
+      label: 'TIME SAVINGS',
+      description: 'Reported time savings through workflow and business automation.',
+      category: 'Operational Systems',
+      icon: Clock,
     },
   ];
 
-  const coreDeliverables = [
-    'CUSTOM WEB ARCHITECTURE',
-    'LOCAL & TECHNICAL SEO',
-    'EDITORIAL BRAND IDENTITY',
-    'HIGH-CONVERSION UI/UX',
-    'GEO SEARCH VISIBILITY',
-    'NEXT.JS WEB PERFORMANCE',
-  ];
-
   return (
-    <section id="work" className="relative py-16 sm:py-20 bg-[#F3EFE3] overflow-hidden">
+    <section id="results" className="relative py-16 sm:py-24 bg-[#F3EFE3] text-[#101613] overflow-hidden">
       {/* Editorial Ivory Atmosphere */}
-      <div className="absolute inset-0 ivory-texture pointer-events-none" />
+      <div className="absolute inset-0 ivory-texture pointer-events-none opacity-80" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-70 pointer-events-none" />
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
-        {/* Section Header */}
+        {/* Section Eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.5, ease: easeCustom }}
           className="flex items-center gap-3 mb-8 sm:mb-10"
         >
-          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
+          <span className="text-xs font-sans font-semibold tracking-[0.24em] text-[#B9923F]">
             06
           </span>
           <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
           <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
-            Proof & Deliverables
+            MEASURABLE PERFORMANCE RESULTS
           </span>
         </motion.div>
 
-        {/* Header Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.5 }}
-          className="mb-10 sm:mb-12 max-w-3xl"
-        >
-          <h2 className="font-serif text-3xl sm:text-5xl lg:text-5xl xl:text-6xl text-[#101613] font-normal leading-[1.05] sm:leading-[0.98] tracking-tight uppercase mb-4 break-words">
-            Real Outcomes for <span className="text-[#0B5E49] font-normal">Jaipur Brands</span>
-          </h2>
-          <p className="font-sans text-sm text-[#101613] font-normal leading-relaxed mb-6 max-w-lg">
-            We design and engineer digital architectures that expand brand reach, improve visibility, and generate measurable revenue.
-          </p>
-          <Link
-            href="/work"
-            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-6 py-3.5 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.18em] uppercase transition-[background-color,border-color,box-shadow] duration-300 shadow-lg group rounded-full"
+        {/* Section Header Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '80px 0px' }}
+            transition={{ duration: 0.6, ease: easeCustom }}
+            className="lg:col-span-8 max-w-3xl"
           >
-            <span>EXPLORE SELECTED WORK</span>
-            <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </Link>
-        </motion.div>
+            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[1.08] sm:leading-[1.02] tracking-tight mb-4 break-words">
+              Reported Outcomes Across <br className="hidden sm:block" />
+              <span className="italic text-[#0B5E49] font-normal">Client Engagements.</span>
+            </h2>
+            <p className="font-sans text-sm sm:text-base text-[#101613]/75 font-light leading-relaxed max-w-2xl">
+              Collective performance results achieved across multi-industry client engagements, search visibility strategies, and digital conversion infrastructure.
+            </p>
+          </motion.div>
 
-        {/* 5 Proof Pillars Container */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '80px 0px' }}
+            transition={{ duration: 0.6, delay: 0.1, ease: easeCustom }}
+            className="lg:col-span-4 flex lg:justify-end"
+          >
+            <Link
+              href="/work"
+              className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-6 py-3.5 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 shadow-md group rounded-full"
+            >
+              <span>EXPLORE PORTFOLIO</span>
+              <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </Link>
+          </motion.div>
+        </div>
+
+        {/* 6 Collective Results Cards Grid */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '80px 0px' }}
           variants={{
             hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { staggerChildren: 0.03 } },
+            visible: { opacity: 1, transition: { staggerChildren: 0.05 } },
           }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 sm:mb-16"
         >
-          {proofPillars.map((item) => {
+          {collectiveMetrics.map((item) => {
             const Icon = item.icon;
             return (
               <motion.div
                 key={item.id}
                 variants={{
-                  hidden: { opacity: 0, y: 15 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: easeCustom } },
                 }}
-                className="p-5 sm:p-6 bg-[#ECE7D8] border border-[#B9923F]/30 hover:border-[#0B5E49]/60 rounded-none transition-[border-color,transform,box-shadow] duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-md"
+                className="p-6 sm:p-8 bg-[#ECE7D8] border border-[#B9923F]/30 hover:border-[#0B5E49]/60 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-md"
               >
-                {/* Icon */}
-                <div className="w-10 h-10 rounded-full border border-[#0B5E49]/30 bg-[#F3EFE3] flex items-center justify-center text-[#0B5E49] group-hover:bg-[#0B5E49] group-hover:text-[#F3EFE3] group-hover:border-[#0B5E49] mb-6 transition-colors">
-                  <Icon className="w-4 h-4 stroke-[1.75]" />
+                <div>
+                  {/* Top Row: Category & Icon */}
+                  <div className="flex items-center justify-between gap-4 mb-6">
+                    <span className="text-[10px] font-sans font-semibold tracking-[0.2em] text-[#0B5E49] uppercase">
+                      {item.category}
+                    </span>
+                    <div className="w-8 h-8 rounded-full border border-[#0B5E49]/20 bg-[#F3EFE3] flex items-center justify-center text-[#0B5E49] group-hover:bg-[#0B5E49] group-hover:text-[#F3EFE3] transition-colors">
+                      <Icon className="w-4 h-4 stroke-[1.75]" />
+                    </div>
+                  </div>
+
+                  {/* Large Metric Display */}
+                  <div className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-none tracking-tight mb-3">
+                    {item.metric}
+                  </div>
+
+                  {/* Metric Label */}
+                  <h3 className="font-sans text-xs font-bold tracking-[0.16em] text-[#0B5E49] uppercase mb-2">
+                    {item.label}
+                  </h3>
+
+                  {/* Metric Description */}
+                  <p className="font-sans text-xs text-[#101613]/70 font-light leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
 
-                {/* Pillar Title */}
-                <div className="font-sans text-xs font-bold text-[#0B5E49] tracking-[0.12em] uppercase mb-2">
-                  {item.title}
-                </div>
-
-                {/* Label */}
-                <p className="font-sans text-[11px] text-[#101613] font-medium leading-snug mb-4">
-                  {item.label}
-                </p>
-
-                {/* Divider & Category */}
-                <div className="pt-3 border-t border-[#B9923F]/20">
-                  <span className="text-[9px] font-sans tracking-[0.16em] text-[#B9923F] uppercase font-semibold">
-                    {item.category}
+                <div className="pt-4 mt-6 border-t border-[#B9923F]/20 flex items-center justify-between">
+                  <span className="text-[9px] font-sans tracking-[0.2em] text-[#B9923F] uppercase font-bold">
+                    COLLECTIVE OUTCOME
                   </span>
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#0B5E49]/40 group-hover:bg-[#0B5E49] transition-colors" />
                 </div>
               </motion.div>
             );
           })}
         </motion.div>
 
-        {/* Client Brand Strip - Tags Approach */}
-        {/* TODO: link once case study pages exist */}
+        {/* Required Mandatory Disclosure */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.5 }}
-          className="pt-12 border-t border-[#101613]/10 flex flex-col items-center justify-center gap-8"
+          transition={{ duration: 0.5, ease: easeCustom }}
+          className="pt-8 border-t border-[#101613]/10 max-w-3xl mx-auto text-center"
         >
-          <div className="flex items-center gap-2 text-xs font-sans tracking-[0.2em] text-[#0B5E49] uppercase font-bold text-center">
-            <span>Core Capabilities & Deliverables</span>
-          </div>
-
-          <div className="flex flex-wrap justify-center items-center gap-3 lg:gap-4 max-w-4xl mx-auto">
-            {coreDeliverables.map((item) => (
-              <div
-                key={item}
-                className="px-5 py-2.5 rounded-full border border-[#B9923F]/30 bg-[#ECE7D8] hover:border-[#0B5E49]/60 hover:bg-[#F3EFE3] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3 group cursor-default shadow-sm"
-              >
-                <div className="w-1.5 h-1.5 rounded-full bg-[#B9923F]/60 group-hover:bg-[#0B5E49] transition-colors" />
-                <span className="font-sans text-xs sm:text-[13px] tracking-[0.15em] text-[#101613]/80 group-hover:text-[#101613] transition-colors uppercase font-semibold">
-                  {item}
-                </span>
-              </div>
-            ))}
-          </div>
+          <p className="text-[11px] sm:text-xs font-sans text-[#101613]/60 font-light leading-relaxed">
+            Results represent reported outcomes across selected client engagements. Individual results vary depending on business, market conditions, strategy and execution.
+          </p>
         </motion.div>
 
       </div>

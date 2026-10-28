@@ -7,6 +7,7 @@ import Philosophy from '../src/components/home/Philosophy';
 import Problem from '../src/components/home/Problem';
 import Process from '../src/components/home/Process';
 import Results from '../src/components/home/Results';
+import SelectedWork from '../src/components/home/SelectedWork';
 import Industries from '../src/components/home/Industries';
 import FinalCTA from '../src/components/home/FinalCTA';
 
@@ -25,7 +26,7 @@ export default function HomePage() {
       {/* Connector 03: DARK → IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 04 WHY SIYARA - IVORY */}
+      {/* 04 WHY SIYARA & BUSINESS CREDIBILITY - IVORY */}
       <WhySiyara />
 
       {/* Connector 04: IVORY → DARK */}
@@ -49,13 +50,16 @@ export default function HomePage() {
       {/* Connector 07: DARK → IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 08 PROOF & DELIVERABLES - IVORY */}
+      {/* 08 MEASURABLE COLLECTIVE RESULTS - IVORY */}
       <Results />
 
       {/* Connector 08: IVORY → DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 09 INDUSTRIES - DARK */}
+      {/* 09 SELECTED PORTFOLIO ENGAGEMENTS - DARK */}
+      <SelectedWork />
+
+      {/* 10 INDUSTRIES WE SERVE - DARK */}
       <Industries />
 
       {/* CONNECTOR: DARK → IVORY */}

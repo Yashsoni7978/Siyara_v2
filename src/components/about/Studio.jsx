@@ -56,7 +56,7 @@ export default function Studio() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#070A09]/30 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 flex items-center gap-2 text-[10px] font-sans text-[#101613] font-bold tracking-widest uppercase bg-[#ECE7D8]/90 px-3 py-1.5 border border-[#0B5E49]/30 backdrop-blur-md">
                   <MapPin className="w-3 h-3 text-[#0B5E49]" />
-                  <span>JAIPUR STUDIO HEADQUARTERS</span>
+                  <span>JAIPUR, RAJASTHAN</span>
                 </div>
               </div>
             </motion.div>
@@ -83,7 +83,7 @@ export default function Studio() {
               transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
               className="font-sans text-sm sm:text-base lg:text-lg text-[#101613]/70 font-light leading-relaxed mb-8 sm:mb-10 max-w-lg"
             >
-              We're a Jaipur-based team of strategists, designers, developers, and growth specialists who care about the businesses we build for.
+              Rooted in Jaipur, Rajasthan, Siyara Innovations brings strategy, design, and engineering together to serve businesses across India and internationally.
             </motion.p>
 
             {/* Location Map Marker Box */}
@@ -102,7 +102,7 @@ export default function Studio() {
                   </span>
                 </div>
                 <p className="text-xs font-sans text-[#101613]/70 font-light">
-                  Studio Headquarters & Creative Hub
+                  Digital Operations & Creative Hub
                 </p>
               </div>
 

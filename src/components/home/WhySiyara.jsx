@@ -60,7 +60,7 @@ export default function WhySiyara() {
         </motion.div>
 
         {/* Section Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-start mb-12 sm:mb-16">
           
           {/* Left Column: Large Editorial Statement */}
           <motion.div
@@ -137,6 +137,66 @@ export default function WhySiyara() {
           </div>
 
         </div>
+
+        {/* Verified Business Credibility Track Record */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '80px 0px' }}
+          transition={{ duration: 0.5, delay: 0.05 }}
+          className="pt-10 sm:pt-12 border-t border-[#B9923F]/30"
+        >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+            <div>
+              <div className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#0B5E49] font-normal leading-none mb-2">
+                60+
+              </div>
+              <h4 className="font-sans text-[11px] sm:text-xs font-bold tracking-[0.16em] text-[#101613] uppercase mb-1">
+                Clients Served
+              </h4>
+              <p className="font-sans text-[11px] text-[#101613]/70 font-light leading-relaxed">
+                Engagements delivered across India and internationally.
+              </p>
+            </div>
+
+            <div>
+              <div className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#0B5E49] font-normal leading-none mb-2">
+                110+
+              </div>
+              <h4 className="font-sans text-[11px] sm:text-xs font-bold tracking-[0.16em] text-[#101613] uppercase mb-1">
+                Completed Projects
+              </h4>
+              <p className="font-sans text-[11px] text-[#101613]/70 font-light leading-relaxed">
+                70+ websites launched and 30+ applications delivered.
+              </p>
+            </div>
+
+            <div>
+              <div className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#0B5E49] font-normal leading-none mb-2">
+                12
+              </div>
+              <h4 className="font-sans text-[11px] sm:text-xs font-bold tracking-[0.16em] text-[#101613] uppercase mb-1">
+                Industries Served
+              </h4>
+              <p className="font-sans text-[11px] text-[#101613]/70 font-light leading-relaxed">
+                Events, luxury, hospitality, healthcare, e-commerce, and education.
+              </p>
+            </div>
+
+            <div>
+              <div className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#0B5E49] font-normal leading-none mb-2">
+                6+ Years
+              </div>
+              <h4 className="font-sans text-[11px] sm:text-xs font-bold tracking-[0.16em] text-[#101613] uppercase mb-1">
+                Combined Experience
+              </h4>
+              <p className="font-sans text-[11px] text-[#101613]/70 font-light leading-relaxed">
+                Combined professional team background (Founded May 2026).
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );

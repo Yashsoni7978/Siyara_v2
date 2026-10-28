@@ -54,10 +54,10 @@ export default function OurStory() {
               className="flex flex-col gap-4 sm:gap-5 max-w-lg text-sm sm:text-base font-sans text-[#101613]/70 leading-relaxed font-light"
             >
               <p>
-                We saw good businesses - with real quality behind them - lose customers to competitors who simply looked and showed up better online. So we started Siyara to close that gap.
+                Founded in May 2026 in Jaipur, Siyara Innovations brings together more than six years of combined professional experience across brand strategy, modern web engineering, and conversion architecture.
               </p>
               <p>
-                Today we partner with Jaipur businesses to build digital systems that aren’t just well-designed, but built to perform, convert, and grow.
+                We partner with clients across 12 industries in India and internationally to engineer digital platforms built to perform, convert, and scale.
               </p>
             </motion.div>
           </div>
