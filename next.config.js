@@ -76,6 +76,31 @@ const nextConfig = {
         destination: '/services/ai-automation',
         permanent: true,
       },
+      {
+        source: '/services/digital-architecture',
+        destination: '/services/web-development',
+        permanent: true,
+      },
+      {
+        source: '/services/conversion-architecture',
+        destination: '/services/growth-optimization',
+        permanent: true,
+      },
+      {
+        source: '/services/performance-engineering',
+        destination: '/services/web-development',
+        permanent: true,
+      },
+      {
+        source: '/services/content-systems',
+        destination: '/services/content-creative',
+        permanent: true,
+      },
+      {
+        source: '/services/analytics-attribution',
+        destination: '/services/growth-optimization',
+        permanent: true,
+      },
       // ==========================================
       // /blog → /insights Canonical Unification
       // Eliminates duplicate content & GSC penalties
