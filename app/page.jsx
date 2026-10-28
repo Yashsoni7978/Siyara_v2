@@ -3,7 +3,7 @@ import Marquee from '../src/components/home/Marquee';
 import SectionConnector from '../src/components/common/SectionConnector';
 import WhatWeDo from '../src/components/home/WhatWeDo';
 import WhySiyara from '../src/components/home/WhySiyara';
-import Philosophy from '../src/components/home/Philosophy';
+import ClientExperiences from '../src/components/home/ClientExperiences';
 import Problem from '../src/components/home/Problem';
 import Process from '../src/components/home/Process';
 import Results from '../src/components/home/Results';
@@ -32,8 +32,8 @@ export default function HomePage() {
       {/* Connector 04: IVORY → DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 05 OUR PHILOSOPHY - DARK */}
-      <Philosophy />
+      {/* 05 CLIENT EXPERIENCES - DARK */}
+      <ClientExperiences />
 
       {/* Connector 05: DARK → IVORY */}
       <SectionConnector fromDark={true} />
