@@ -1,13 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Edit3, Code, Search, Megaphone, Sparkles, TrendingUp } from 'lucide-react';
+import { Edit3, Code2, Search, Megaphone, Sparkles, TrendingUp, ArrowRight, ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function WhatWeDo() {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
   const services = [
     {
       id: '01',
@@ -15,13 +14,19 @@ export default function WhatWeDo() {
       subtitle: 'Positioning, naming, visual identity, messaging',
       href: '/services/brand-strategy',
       icon: Edit3,
+      isDark: true,
+      image: '/images/services/service_brand_identity.webp',
+      imageAlt: 'Premium luxury branding stationery with gold monogram foil',
     },
     {
       id: '02',
       title: 'WEBSITE DESIGN & DEVELOPMENT (JAIPUR)',
       subtitle: 'Websites and web applications built for speed and conversion',
       href: '/services/web-design-development',
-      icon: Code,
+      icon: Code2,
+      isDark: false,
+      image: '/images/services/service_web_dev.webp',
+      imageAlt: 'Modern web design interface on desktop display',
     },
     {
       id: '03',
@@ -29,6 +34,9 @@ export default function WhatWeDo() {
       subtitle: 'Search visibility across Google and AI answer engines',
       href: '/services/seo-geo',
       icon: Search,
+      isDark: true,
+      image: '/images/services/service_seo_geo.webp',
+      imageAlt: 'Search and discovery visual metaphor on dark slate texture',
     },
     {
       id: '04',
@@ -36,6 +44,9 @@ export default function WhatWeDo() {
       subtitle: 'Paid media, social, and performance marketing',
       href: '/services/performance-marketing',
       icon: Megaphone,
+      isDark: false,
+      image: '/images/services/service_digital_marketing.webp',
+      imageAlt: 'Smartphone on creative workspace displaying digital campaign feed',
     },
     {
       id: '05',
@@ -43,6 +54,9 @@ export default function WhatWeDo() {
       subtitle: 'Intelligent workflows that replace manual ops',
       href: '/services/ai-automation',
       icon: Sparkles,
+      isDark: true,
+      image: '/images/services/service_ai_automation.webp',
+      imageAlt: 'Sculptural 3D fluid architectural ribbons representing intelligent automation',
     },
     {
       id: '06',
@@ -50,176 +64,183 @@ export default function WhatWeDo() {
       subtitle: 'Analytics, conversion optimization, scalable growth',
       href: '/services/crm-lead-systems',
       icon: TrendingUp,
+      isDark: false,
+      image: '/images/services/service_growth_cro.webp',
+      imageAlt: '3D bar chart with upward green growth arrow on marble pedestal',
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.04,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 15 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
-    },
-  };
-
   return (
-    <section id="services" className="relative py-14 sm:py-20 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
-      {/* Background Emerald-Black Atmosphere */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#071E18]/60 via-[#070A09] to-[#070A09] opacity-80 pointer-events-none" />
-      <div 
-        className="absolute top-1/3 left-10 w-[500px] h-[500px] rounded-full pointer-events-none" 
+    <section
+      id="services"
+      aria-label="Siyara Innovations Services and Disciplines"
+      className="relative py-20 sm:py-24 lg:py-28 bg-[#070A09] text-[#F3EFE4] overflow-hidden border-t border-[#D9B45F]/15"
+    >
+      {/* Background Emerald Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#06261D]/50 via-[#070A09] to-[#070A09] opacity-90 pointer-events-none" />
+      <div
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full pointer-events-none opacity-40"
         style={{
-          background: 'radial-gradient(circle at center, rgba(12, 107, 82, 0.22) 0%, transparent 70%)',
+          background: 'radial-gradient(circle at center, rgba(25, 168, 120, 0.16) 0%, transparent 70%)',
         }}
       />
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
-        
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.4 }}
-          className="flex items-center gap-3 mb-6 sm:mb-10"
-        >
-          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
-            01
-          </span>
-          <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
-            What We Do
-          </span>
-        </motion.div>
-
-        {/* Section Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.5 }}
-          className="mb-12 sm:mb-20 max-w-3xl"
-        >
-          <h2 className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.05] sm:leading-[0.98] break-words">
-            One connected system, <br />
-            eight disciplines <br />
-            working <span className="text-[#D9B45F] font-normal">together.</span>
-          </h2>
-        </motion.div>
-
-        {/* Continuous Flowing Line & Node Flow (Desktop Horizontal / Mobile Responsive) */}
-        <div className="relative pt-4 sm:pt-8 pb-8 sm:pb-12">
-          
-          {/* Continuous Glowing SVG Line (Desktop) */}
-          <div className="hidden lg:block absolute top-[60px] left-0 right-0 h-[2px] z-0">
-            <div className="w-full h-full bg-gradient-to-r from-[#0C6B52]/20 via-[#D9B45F]/40 to-[#0C6B52]/20" />
-            <svg className="absolute -top-[5px] left-0 w-full h-[12px]" xmlns="http://www.w3.org/2000/svg">
-              <line
-                x1="0"
-                y1="6"
-                x2="100%"
-                y2="6"
-                stroke="#D9B45F"
-                strokeWidth="1.5"
-                strokeDasharray="6 6"
-                className="opacity-50"
-              />
-            </svg>
-          </div>
-
-          {/* 6 Service Nodes Array */}
+        {/* Section Introduction: Editorial Two-Column Header */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end mb-14 sm:mb-18 lg:mb-20">
+          {/* Left Column: Tag and Large Editorial Headline */}
           <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '80px 0px' }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-4 relative z-10"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '60px 0px' }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-7 xl:col-span-7"
           >
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              const isHovered = hoveredIndex === index;
+            {/* Small Label */}
+            <div className="flex items-center gap-3 mb-6 sm:mb-8">
+              <span className="text-[11px] sm:text-xs font-sans font-semibold tracking-[0.24em] text-[#19A878] uppercase">
+                OUR SERVICES
+              </span>
+              <span className="w-10 sm:w-14 h-[1px] bg-[#19A878]/60 inline-block" />
+            </div>
 
-              return (
+            {/* Main Headline */}
+            <h2 className="font-serif text-3xl sm:text-5xl lg:text-[54px] xl:text-[64px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight">
+              One connected system,<br />
+              eight disciplines<br />
+              working <span className="text-[#19A878]">together.</span>
+            </h2>
+          </motion.div>
+
+          {/* Right Column: Supporting Description and Minimal CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '60px 0px' }}
+            transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-5 xl:col-span-5 flex flex-col justify-end lg:items-start space-y-6"
+          >
+            <p className="font-sans text-xs sm:text-sm text-[#A5B8AA] font-light leading-relaxed max-w-md">
+              Siyara Innovations brings strategy, creativity and technology together to help businesses build stronger brands, better digital experiences and measurable growth.
+            </p>
+
+            <div>
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full border border-[#19A878]/45 hover:border-[#19A878] text-[#F3EFE4] hover:bg-[#19A878]/10 text-xs font-sans font-medium tracking-[0.18em] uppercase transition-all duration-200 group"
+              >
+                <span>EXPLORE OUR SERVICES</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#19A878] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Visual Service Grid: 3 Columns x 2 Rows Desktop, Responsive Mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            const isDark = service.isDark;
+
+            return (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '60px 0px' }}
+                transition={{ duration: 0.45, delay: index * 0.06, ease: [0.16, 1, 0.3, 1] }}
+              >
                 <Link
-                  key={service.id}
                   href={service.href}
-                  aria-label={`Explore ${service.title} services in Jaipur`}
-                  className="block group"
+                  aria-label={`Explore ${service.title}`}
+                  className="block group h-full focus:outline-none focus:ring-1 focus:ring-[#19A878] rounded-2xl"
                 >
-                  <motion.div
-                    variants={itemVariants}
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
-                    className="flex flex-col items-center text-center cursor-pointer p-4 sm:p-2 rounded-xl bg-[#0B110F]/60 sm:bg-transparent border sm:border-0 border-white/5"
+                  <div
+                    className={`relative rounded-2xl sm:rounded-[22px] overflow-hidden p-6 sm:p-7 flex flex-col justify-between h-[280px] sm:h-[300px] lg:h-[290px] xl:h-[310px] transition-all duration-300 border ${
+                      isDark
+                        ? 'bg-[#061B14] border-[#19A878]/25 hover:border-[#19A878]/60 shadow-[0_12px_32px_rgba(0,0,0,0.4)]'
+                        : 'bg-[#F3EFE4] border-[#E5E0D2] hover:border-[#063C2D]/50 shadow-[0_12px_32px_rgba(0,0,0,0.15)]'
+                    }`}
                   >
-                    {/* Node Circle Container */}
-                    <div className="relative mb-4 sm:mb-6">
-                      {/* Glowing Halo on Hover */}
-                      <div
-                        className={`absolute -inset-3 rounded-full bg-[#18A982]/20 blur-md transition-opacity duration-300 ${
-                          isHovered ? 'opacity-100' : 'opacity-0'
-                        }`}
+                    {/* Right-Hand Asymmetric Artwork Container */}
+                    <div className="absolute right-0 top-0 bottom-0 w-[46%] sm:w-[48%] overflow-hidden pointer-events-none select-none">
+                      <Image
+                        src={service.image}
+                        alt={service.imageAlt}
+                        fill
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
+                        className="object-cover object-left group-hover:scale-105 transition-transform duration-500 ease-out"
                       />
 
-                      {/* Node Circular Icon Container */}
+                      {/* Smooth Left Gradient Blend */}
                       <div
-                        className={`relative w-14 h-14 rounded-full flex items-center justify-center border transition-all duration-300 ${
-                          isHovered
-                            ? 'border-[#D9B45F] bg-[#071E18] text-[#D9B45F] scale-110 shadow-[0_0_20px_rgba(217,180,95,0.3)]'
-                            : 'border-[#D9B45F]/30 bg-[#070A09] text-[#D9B45F] group-hover:border-[#D9B45F]'
-                        }`}
-                      >
-                        <Icon className="w-5 h-5 stroke-[1.75] transition-transform duration-300 group-hover:scale-110" />
-                      </div>
-
-                      {/* Subtle Node Indicator Dot */}
-                      <div
-                        className={`absolute -bottom-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full transition-colors duration-300 ${
-                          isHovered ? 'bg-[#D9B45F]' : 'bg-[#D9B45F]/30'
+                        className={`absolute inset-0 pointer-events-none ${
+                          isDark
+                            ? 'bg-gradient-to-r from-[#061B14] via-[#061B14]/40 to-transparent'
+                            : 'bg-gradient-to-r from-[#F3EFE4] via-[#F3EFE4]/35 to-transparent'
                         }`}
                       />
                     </div>
 
-                    {/* Service Title */}
-                    <h3
-                      className={`font-sans text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase mb-2 transition-all duration-300 leading-snug ${
-                        isHovered ? 'text-[#D9B45F] -translate-y-0.5' : 'text-[#F3EFE3]'
-                      }`}
-                    >
-                      {service.title}
-                    </h3>
+                    {/* Top Row: Service Number and Circular Icon */}
+                    <div className="relative z-10 flex items-center gap-3">
+                      <span
+                        className={`text-xs font-sans font-medium tracking-[0.24em] ${
+                          isDark ? 'text-[#19A878]' : 'text-[#080B0A]/60'
+                        }`}
+                      >
+                        {service.id}
+                      </span>
 
-                    {/* Service Description */}
-                    <p className="font-sans text-[11px] text-[#9D9B91] font-light leading-relaxed max-w-[200px] sm:max-w-[160px]">
-                      {service.subtitle}
-                    </p>
-                  </motion.div>
+                      <div
+                        className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105 ${
+                          isDark
+                            ? 'border border-[#19A878]/40 bg-[#063C2D]/60 text-[#19A878]'
+                            : 'border border-[#080B0A]/15 bg-[#080B0A] text-[#F3EFE4]'
+                        }`}
+                      >
+                        <Icon className="w-4 h-4 stroke-[1.8]" />
+                      </div>
+                    </div>
+
+                    {/* Middle Content: Service Title and Description */}
+                    <div className="relative z-10 max-w-[62%] sm:max-w-[58%] my-auto pr-2">
+                      <h3
+                        className={`font-serif text-lg sm:text-[19px] lg:text-[18px] xl:text-[20px] font-normal tracking-wide uppercase leading-snug transition-colors duration-200 ${
+                          isDark
+                            ? 'text-[#F3EFE4] group-hover:text-white'
+                            : 'text-[#080B0A] group-hover:text-black'
+                        }`}
+                      >
+                        {service.title}
+                      </h3>
+
+                      <p
+                        className={`font-sans text-[11px] sm:text-xs font-light leading-relaxed mt-2 line-clamp-3 ${
+                          isDark ? 'text-[#A5B8AA]' : 'text-[#101613]/70'
+                        }`}
+                      >
+                        {service.subtitle}
+                      </p>
+                    </div>
+
+                    {/* Bottom Row: Minimal Circular Arrow Control */}
+                    <div className="relative z-10">
+                      <div
+                        className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-200 ${
+                          isDark
+                            ? 'border border-white/20 text-[#F3EFE4] group-hover:border-[#19A878] group-hover:text-[#19A878] group-hover:bg-[#19A878]/10'
+                            : 'border border-[#080B0A]/20 text-[#080B0A] group-hover:border-[#080B0A] group-hover:bg-[#080B0A]/5'
+                        }`}
+                      >
+                        <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                      </div>
+                    </div>
+                  </div>
                 </Link>
-              );
-            })}
-          </motion.div>
-
-        </div>
-
-        {/* See full system link */}
-        <div className="mt-12 flex items-center gap-3">
-          <span className="h-[1px] w-8 bg-[#D9B45F]/40" />
-          <Link
-            href="/services"
-            className="font-sans text-xs font-semibold tracking-[0.18em] text-[#9D9B91] hover:text-[#D9B45F] transition-colors uppercase"
-          >
-            See the full system on the Services page
-          </Link>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
