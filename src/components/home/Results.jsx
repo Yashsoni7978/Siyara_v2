@@ -43,7 +43,7 @@ export default function Results() {
     <section
       id="results"
       aria-label="Measurable Performance Results"
-      className="relative py-20 sm:py-24 lg:py-28 bg-[#F3EFE4] text-[#080B0A] overflow-hidden"
+      className="relative pt-20 sm:pt-24 lg:pt-28 pb-6 sm:pb-8 lg:pb-10 bg-[#F3EFE4] text-[#080B0A] overflow-hidden"
     >
       {/* Background Ivory Editorial Atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE4] via-[#ECE7D8]/50 to-[#F3EFE4] opacity-80 pointer-events-none" />
@@ -121,7 +121,7 @@ export default function Results() {
         </div>
 
         {/* Desktop View: Four Horizontally Aligned Metric Columns with Champagne-Gold Separators */}
-        <div className="hidden md:grid md:grid-cols-4 divide-x divide-[#D4AF37]/35 border-t border-b border-[#D4AF37]/35 py-10 sm:py-14 mb-12 sm:mb-16">
+        <div className="hidden md:grid md:grid-cols-4 divide-x divide-[#D4AF37]/35 border-t border-b border-[#D4AF37]/35 py-8 sm:py-10 mb-4 sm:mb-5">
           {metrics.map((item, idx) => {
             const Icon = item.icon;
 
@@ -163,7 +163,7 @@ export default function Results() {
         </div>
 
         {/* Mobile View: Vertical Sequence with Clean Dividers */}
-        <div className="md:hidden divide-y divide-[#D4AF37]/30 border-t border-b border-[#D4AF37]/30 mb-10">
+        <div className="md:hidden divide-y divide-[#D4AF37]/30 border-t border-b border-[#D4AF37]/30 mb-4">
           {metrics.map((item) => {
             const Icon = item.icon;
 
@@ -197,9 +197,9 @@ export default function Results() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '60px 0px' }}
           transition={{ duration: 0.5, ease: easeCustom }}
-          className="pt-6 sm:pt-8 max-w-3xl mx-auto text-center"
+          className="pt-2 sm:pt-3 max-w-3xl mx-auto text-center"
         >
-          <p className="text-[11px] sm:text-xs font-sans text-[#101613]/60 font-light leading-relaxed">
+          <p className="text-[10px] sm:text-[11px] font-sans text-[#101613]/55 font-light leading-relaxed">
             Results represent reported outcomes across selected client engagements. Individual results vary depending on business, market conditions, strategy and execution.
           </p>
         </motion.div>
