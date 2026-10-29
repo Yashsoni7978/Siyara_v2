@@ -30,6 +30,9 @@ export default function Hero() {
       },
       image: '/images/hero/hero-marketing-performance.webp',
       alt: 'Luxury Marketing Analytics Dashboard',
+      // Preserves the warm gold lighting, analytics cards and smartphone mockup
+      overlayGradient:
+        'linear-gradient(90deg, rgba(8, 11, 10, 0.62) 0%, rgba(8, 11, 10, 0.48) 35%, rgba(6, 24, 18, 0.18) 55%, transparent 75%)',
     },
     {
       id: '02',
@@ -47,6 +50,9 @@ export default function Hero() {
       },
       image: '/images/hero/hero-brand-strategy.webp',
       alt: 'Luxury Forest Green Branding Flatlay',
+      // Preserves the warm ivory paper, forest-green brand book and champagne stationery
+      overlayGradient:
+        'linear-gradient(90deg, rgba(6, 20, 15, 0.65) 0%, rgba(6, 20, 15, 0.50) 35%, rgba(6, 28, 20, 0.20) 55%, transparent 75%)',
     },
     {
       id: '03',
@@ -64,6 +70,9 @@ export default function Hero() {
       },
       image: '/images/hero/hero-web-development.webp',
       alt: 'Aarsika Luxury Web Design Showcase',
+      // Showcases the laptop and Aarsika luxury website with rich natural contrast
+      overlayGradient:
+        'linear-gradient(90deg, rgba(8, 11, 10, 0.52) 0%, rgba(8, 11, 10, 0.40) 35%, rgba(6, 24, 18, 0.15) 55%, transparent 75%)',
     },
     {
       id: '04',
@@ -81,6 +90,9 @@ export default function Hero() {
       },
       image: '/images/hero/hero-crm-lead-management.webp',
       alt: 'Luxury Lead Analytics Dashboard',
+      // Keeps dashboard details, lead metrics, charts and mobile interface clearly visible
+      overlayGradient:
+        'linear-gradient(90deg, rgba(8, 11, 10, 0.58) 0%, rgba(8, 11, 10, 0.45) 35%, rgba(8, 11, 10, 0.18) 55%, transparent 75%)',
     },
     {
       id: '05',
@@ -98,6 +110,9 @@ export default function Hero() {
       },
       image: '/images/hero/hero-social-content.webp',
       alt: 'Luxury Marketing Analytics Dashboard',
+      // Retains the full richness and vibrant creative artwork of the campaign imagery
+      overlayGradient:
+        'linear-gradient(90deg, rgba(8, 11, 10, 0.58) 0%, rgba(8, 11, 10, 0.45) 35%, rgba(6, 24, 18, 0.18) 55%, transparent 75%)',
     },
   ];
 
@@ -159,24 +174,31 @@ export default function Hero() {
               alt={slide.alt}
               fill
               priority={currentSlide === 0}
-              className="object-cover object-center lg:object-right"
+              className="object-cover object-[70%_center] sm:object-center lg:object-right"
               sizes="100vw"
               quality={90}
             />
 
-            {/* Left Vignette Overlay for Crisp Typography Readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#080B0A] via-[#080B0A]/85 sm:via-[#080B0A]/75 to-[#080B0A]/35 lg:to-transparent pointer-events-none" />
-
-            {/* Top & Bottom Vignette for Seamless Navigation & Marquee Transition */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#080B0A]/80 via-transparent to-[#080B0A] pointer-events-none" />
-
-            {/* Subtle Atmospheric Emerald Lighting */}
+            {/* Directional Vignette Overlay Tailored Per Slide: subtle ~50% opacity near text, ~20% in middle, 0% on right */}
             <div
-              className="absolute top-1/3 right-1/4 w-[600px] h-[600px] rounded-full pointer-events-none opacity-20 hidden lg:block"
+              className="absolute inset-0 hidden sm:block pointer-events-none transition-opacity duration-700"
+              style={{ background: slide.overlayGradient }}
+            />
+
+            {/* Mobile Viewport Scrim: gentle top-to-bottom blend ensuring text readability over light areas without dark boxes */}
+            <div
+              className="absolute inset-0 sm:hidden pointer-events-none"
               style={{
-                background: 'radial-gradient(circle at center, rgba(11, 90, 67, 0.45) 0%, transparent 65%)',
+                background:
+                  'linear-gradient(180deg, rgba(8, 11, 10, 0.82) 0%, rgba(8, 11, 10, 0.65) 38%, rgba(6, 20, 15, 0.40) 60%, transparent 82%)',
               }}
             />
+
+            {/* Gentle Top Vignette for Floating Navbar Integration */}
+            <div className="absolute top-0 inset-x-0 h-24 sm:h-28 bg-gradient-to-b from-[#080B0A]/40 to-transparent pointer-events-none" />
+
+            {/* Subtle Bottom Vignette for Slider Controls */}
+            <div className="absolute bottom-0 inset-x-0 h-24 sm:h-28 bg-gradient-to-t from-[#080B0A]/35 to-transparent pointer-events-none" />
           </motion.div>
         </AnimatePresence>
       </div>
@@ -185,7 +207,15 @@ export default function Hero() {
       {/* SLIDE FOREGROUND CONTENT & EDITORIAL TYPOGRAPHY                           */}
       {/* ========================================================================= */}
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 w-full relative z-10">
-        <div className="max-w-2xl xl:max-w-3xl">
+        <div className="max-w-xl lg:max-w-[540px] xl:max-w-[580px] relative">
+          {/* Subtle localized soft scrim directly behind text copy for effortless legibility without dark boxes */}
+          <div
+            className="absolute -inset-4 sm:-inset-8 rounded-3xl pointer-events-none -z-10 opacity-60 blur-2xl hidden sm:block"
+            style={{
+              background: 'radial-gradient(ellipse at 30% 45%, rgba(8, 11, 10, 0.45) 0%, rgba(6, 24, 18, 0.18) 60%, transparent 80%)',
+            }}
+          />
+
           <AnimatePresence mode="wait">
             <motion.div
               key={slide.id}
@@ -199,22 +229,22 @@ export default function Hero() {
             >
               {/* Category Eyebrow */}
               <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D4AF37]">
+                <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D4AF37] drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
                   {slide.id}
                 </span>
                 <span className="w-8 h-[1px] bg-[#D4AF37]/50" />
-                <span className="text-[10.5px] sm:text-xs font-sans font-semibold tracking-[0.24em] text-[#D4AF37] uppercase">
+                <span className="text-[10.5px] sm:text-xs font-sans font-semibold tracking-[0.24em] text-[#D4AF37] uppercase drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
                   {slide.category}
                 </span>
               </div>
 
               {/* Main Headline (h1 for SEO) */}
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-[60px] xl:text-[68px] text-[#F3EFE4] font-normal leading-[1.05] tracking-tight mb-4 sm:mb-6">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-[54px] xl:text-[62px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight mb-4 sm:mb-6 drop-shadow-[0_2px_14px_rgba(0,0,0,0.6)]">
                 {slide.headline}
               </h1>
 
               {/* Service Description */}
-              <p className="font-sans text-xs sm:text-sm lg:text-base text-[#ECE7D8]/85 font-light leading-relaxed max-w-xl mb-8 sm:mb-10">
+              <p className="font-sans text-xs sm:text-sm lg:text-base text-[#ECE7D8]/95 font-light leading-relaxed max-w-xl mb-8 sm:mb-10 drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)]">
                 {slide.description}
               </p>
 
@@ -257,8 +287,8 @@ export default function Hero() {
                   type="button"
                   aria-label={`Go to slide ${idx + 1}`}
                   onClick={() => goToSlide(idx)}
-                  className={`h-1 rounded-full transition-all duration-300 cursor-pointer ${
-                    isActive ? 'w-8 sm:w-10 bg-[#D4AF37]' : 'w-4 sm:w-5 bg-white/25 hover:bg-white/50'
+                  className={`h-1 rounded-full transition-all duration-300 cursor-pointer shadow-sm ${
+                    isActive ? 'w-8 sm:w-10 bg-[#D4AF37]' : 'w-4 sm:w-5 bg-white/35 hover:bg-white/60'
                   }`}
                 />
               );
@@ -268,10 +298,10 @@ export default function Hero() {
           {/* Right: Counter and Prev / Next Navigation Buttons */}
           <div className="flex items-center gap-3 sm:gap-4">
             {/* Slide Counter */}
-            <div className="font-sans text-xs sm:text-[13px] text-[#D4AF37] tracking-[0.2em] font-medium mr-1 sm:mr-2">
+            <div className="font-sans text-xs sm:text-[13px] text-[#D4AF37] tracking-[0.2em] font-medium mr-1 sm:mr-2 drop-shadow-sm">
               <span className="text-[#F3EFE4] font-semibold">{slide.id}</span>
-              <span className="text-white/30 mx-1.5">/</span>
-              <span className="text-white/50">05</span>
+              <span className="text-white/35 mx-1.5">/</span>
+              <span className="text-white/55">05</span>
             </div>
 
             {/* Prev Button */}
@@ -279,7 +309,7 @@ export default function Hero() {
               type="button"
               aria-label="Previous Slide"
               onClick={prevSlide}
-              className="w-10 h-10 rounded-full border border-white/20 hover:border-[#D4AF37] bg-[#080B0A]/70 backdrop-blur-md text-[#F3EFE4] hover:text-[#D4AF37] flex items-center justify-center transition-all cursor-pointer shadow-lg active:scale-95"
+              className="w-10 h-10 rounded-full border border-white/25 hover:border-[#D4AF37] bg-[#080B0A]/60 hover:bg-[#080B0A]/85 backdrop-blur-md text-[#F3EFE4] hover:text-[#D4AF37] flex items-center justify-center transition-all cursor-pointer shadow-lg active:scale-95"
             >
               <ArrowLeft className="w-4 h-4 stroke-[1.75]" />
             </button>
