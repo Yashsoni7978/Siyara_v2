@@ -21,6 +21,7 @@ export default function WhySiyara() {
         'Every project starts with research, business understanding, competitor analysis and a clear strategic direction.',
       image: '/images/why-siyara/strategy.webp',
       link: '/services/brand-strategy-identity-jaipur',
+      isEmerald: false, // Card 01 – Strategy First: Deep Ivory (#F3EFE4)
     },
     {
       id: '02',
@@ -32,6 +33,7 @@ export default function WhySiyara() {
         'Strategists, designers and developers work together from the same brief, ensuring consistency across every stage.',
       image: '/images/why-siyara/team.webp',
       link: '/about',
+      isEmerald: true, // Card 02 – Integrated Team: Deep Emerald (#063C2D)
     },
     {
       id: '03',
@@ -43,6 +45,7 @@ export default function WhySiyara() {
         'We build brands, websites and digital systems with performance, usability, search visibility and business growth in mind.',
       image: '/images/why-siyara/perform.webp',
       link: '/services/website-design-development-jaipur',
+      isEmerald: false, // Card 03 – Built to Perform: Deep Ivory (#F3EFE4)
     },
     {
       id: '04',
@@ -54,6 +57,7 @@ export default function WhySiyara() {
         'We continue supporting optimisation, improvements, reporting and ongoing digital growth.',
       image: '/images/why-siyara/partnership.webp',
       link: '/contact',
+      isEmerald: true, // Card 04 – Long-Term Partnership: Deep Emerald (#063C2D)
     },
   ];
 
@@ -127,6 +131,7 @@ export default function WhySiyara() {
         <div className="hidden md:flex flex-row gap-4 h-[440px] lg:h-[460px] w-full items-stretch">
           {principles.map((principle) => {
             const isExpanded = expandedId === principle.id;
+            const isEmerald = principle.isEmerald;
 
             return (
               <div
@@ -135,8 +140,12 @@ export default function WhySiyara() {
                 aria-label={`${principle.fullTitle} Principle`}
                 className={`relative rounded-[24px] lg:rounded-[28px] overflow-hidden transition-[flex,background-color,border-color,box-shadow] duration-600 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                   isExpanded
-                    ? 'flex-[2.2] lg:flex-[2.3] bg-[#06281E] border border-[#19A878]/30 shadow-[0_16px_40px_rgba(6,40,30,0.22)]'
-                    : 'flex-1 bg-[#F8F6F0] hover:bg-[#F2EFE7] border border-[#080B0A]/8 hover:border-[#D4AF37]/35 cursor-pointer group'
+                    ? isEmerald
+                      ? 'flex-[2.2] lg:flex-[2.3] bg-[#063C2D] border border-[#19A878]/30 shadow-[0_16px_40px_rgba(6,40,30,0.22)]'
+                      : 'flex-[2.2] lg:flex-[2.3] bg-[#F3EFE4] border border-[#D4AF37]/40 shadow-[0_16px_40px_rgba(8,11,10,0.1)]'
+                    : isEmerald
+                    ? 'flex-1 bg-[#063C2D] hover:bg-[#074735] border border-[#19A878]/25 hover:border-[#E5C378]/50 shadow-sm cursor-pointer group'
+                    : 'flex-1 bg-[#F3EFE4] hover:bg-[#ECE7D8] border border-[#080B0A]/10 hover:border-[#D4AF37]/50 shadow-sm cursor-pointer group'
                 }`}
                 onClick={() => {
                   if (!isExpanded) handleToggle(principle.id);
@@ -154,7 +163,11 @@ export default function WhySiyara() {
                         e.stopPropagation();
                         handleToggle(principle.id);
                       }}
-                      className="absolute top-5 right-5 z-30 w-9 h-9 rounded-full border border-white/20 bg-black/40 backdrop-blur-sm text-[#F3EFE4] flex items-center justify-center hover:bg-black/60 hover:border-white/40 transition-colors cursor-pointer"
+                      className={`absolute top-5 right-5 z-30 w-9 h-9 rounded-full backdrop-blur-sm flex items-center justify-center transition-colors cursor-pointer ${
+                        isEmerald
+                          ? 'border border-white/20 bg-black/40 text-[#F3EFE4] hover:bg-black/60 hover:border-[#E5C378]'
+                          : 'border border-[#080B0A]/20 bg-black/5 text-[#080B0A] hover:bg-black/15 hover:border-[#080B0A]/40'
+                      }`}
                     >
                       <Minus className="w-4 h-4 stroke-[1.75]" />
                     </button>
@@ -168,26 +181,46 @@ export default function WhySiyara() {
                     >
                       <div>
                         {/* Number Indicator */}
-                        <div className="font-serif text-2xl lg:text-3xl text-[#D4AF37] font-light leading-none">
+                        <div
+                          className={`font-serif text-2xl lg:text-3xl font-light leading-none ${
+                            isEmerald ? 'text-[#E5C378]' : 'text-[#D4AF37]'
+                          }`}
+                        >
                           {principle.id}
                         </div>
 
                         {/* Gold Divider Line */}
-                        <div className="w-8 h-[1px] bg-[#D4AF37]/50 my-3.5" />
+                        <div
+                          className={`w-8 h-[1px] my-3.5 ${
+                            isEmerald ? 'bg-[#E5C378]/50' : 'bg-[#D4AF37]/50'
+                          }`}
+                        />
 
-                        {/* Heading (Two lines matching reference) */}
-                        <h3 className="font-serif text-2xl lg:text-[28px] text-[#F3EFE4] font-normal leading-[1.12] mb-2">
+                        {/* Heading */}
+                        <h3
+                          className={`font-serif text-2xl lg:text-[28px] font-normal leading-[1.12] mb-2 ${
+                            isEmerald ? 'text-[#F3EFE4]' : 'text-[#080B0A]'
+                          }`}
+                        >
                           {principle.titleLine1}<br />
                           {principle.titleLine2}
                         </h3>
 
                         {/* Lead */}
-                        <p className="font-serif italic text-xs text-[#D4AF37] mb-1.5 leading-snug">
+                        <p
+                          className={`font-serif italic text-xs mb-1.5 leading-snug ${
+                            isEmerald ? 'text-[#E5C378]' : 'text-[#063C2D]'
+                          }`}
+                        >
                           {principle.lead}
                         </p>
 
                         {/* Full Description */}
-                        <p className="font-sans text-xs text-[#A5B8AA] font-light leading-relaxed">
+                        <p
+                          className={`font-sans text-xs font-light leading-relaxed ${
+                            isEmerald ? 'text-[#A5B8AA]' : 'text-[#080B0A]/75'
+                          }`}
+                        >
                           {principle.description}
                         </p>
                       </div>
@@ -197,10 +230,18 @@ export default function WhySiyara() {
                         <Link
                           href={principle.link}
                           onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#D4AF37]/45 text-[#F3EFE4] hover:bg-[#D4AF37]/15 hover:border-[#D4AF37] text-[10.5px] font-sans font-medium tracking-[0.16em] uppercase transition-all duration-200 group"
+                          className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-[10.5px] font-sans font-medium tracking-[0.16em] uppercase transition-all duration-200 group ${
+                            isEmerald
+                              ? 'border border-[#E5C378]/45 text-[#F3EFE4] hover:bg-[#E5C378]/15 hover:border-[#E5C378]'
+                              : 'border border-[#063C2D]/40 text-[#063C2D] hover:bg-[#063C2D] hover:text-[#F3EFE4]'
+                          }`}
                         >
                           <span>LEARN MORE</span>
-                          <ArrowUpRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                          <ArrowUpRight
+                            className={`w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${
+                              isEmerald ? 'text-[#E5C378]' : 'text-[#063C2D] group-hover:text-[#F3EFE4]'
+                            }`}
+                          />
                         </Link>
                       </div>
                     </motion.div>
@@ -219,7 +260,11 @@ export default function WhySiyara() {
                         className="object-cover"
                         sizes="(max-width: 1200px) 230px, 260px"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#06281E]/40 via-transparent to-transparent pointer-events-none" />
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-t via-transparent to-transparent pointer-events-none ${
+                          isEmerald ? 'from-[#063C2D]/40' : 'from-[#F3EFE4]/40'
+                        }`}
+                      />
                     </motion.div>
                   </div>
                 ) : (
@@ -227,18 +272,40 @@ export default function WhySiyara() {
                   <div className="h-full w-full p-6 lg:p-7 flex flex-col justify-between items-start">
                     {/* Top: Gold Number & Title */}
                     <div>
-                      <div className="font-serif text-2xl lg:text-3xl text-[#D4AF37] font-light leading-none group-hover:text-[#B9923F] transition-colors">
+                      <div
+                        className={`font-serif text-2xl lg:text-3xl font-light leading-none transition-colors ${
+                          isEmerald
+                            ? 'text-[#E5C378] group-hover:text-[#D4AF37]'
+                            : 'text-[#D4AF37] group-hover:text-[#B9923F]'
+                        }`}
+                      >
                         {principle.id}
                       </div>
-                      <div className="w-8 h-[1px] bg-[#D4AF37]/40 my-4" />
-                      <h3 className="font-serif text-xl lg:text-2xl text-[#080B0A] font-normal leading-[1.2] group-hover:text-[#063C2D] transition-colors">
+                      <div
+                        className={`w-8 h-[1px] my-4 ${
+                          isEmerald ? 'bg-[#E5C378]/40' : 'bg-[#D4AF37]/40'
+                        }`}
+                      />
+                      <h3
+                        className={`font-serif text-xl lg:text-2xl font-normal leading-[1.2] transition-colors ${
+                          isEmerald
+                            ? 'text-[#F3EFE4] group-hover:text-white'
+                            : 'text-[#080B0A] group-hover:text-[#063C2D]'
+                        }`}
+                      >
                         {principle.titleLine1}<br />
                         {principle.titleLine2}
                       </h3>
                     </div>
 
                     {/* Bottom: Circular Plus Indicator */}
-                    <div className="w-10 h-10 rounded-full border border-[#080B0A]/15 bg-white/70 text-[#080B0A]/60 flex items-center justify-center group-hover:border-[#063C2D] group-hover:bg-[#063C2D] group-hover:text-[#F3EFE4] transition-all duration-200">
+                    <div
+                      className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 ${
+                        isEmerald
+                          ? 'border border-[#E5C378]/40 bg-white/5 text-[#E5C378] group-hover:border-[#E5C378] group-hover:bg-[#E5C378] group-hover:text-[#063C2D]'
+                          : 'border border-[#080B0A]/15 bg-black/5 text-[#080B0A]/60 group-hover:border-[#063C2D] group-hover:bg-[#063C2D] group-hover:text-[#F3EFE4]'
+                      }`}
+                    >
                       <Plus className="w-4 h-4 stroke-[1.75]" />
                     </div>
                   </div>
@@ -254,14 +321,19 @@ export default function WhySiyara() {
         <div className="md:hidden flex flex-col space-y-3">
           {principles.map((principle) => {
             const isExpanded = expandedId === principle.id;
+            const isEmerald = principle.isEmerald;
 
             return (
               <div
                 key={principle.id}
                 className={`rounded-2xl transition-all duration-300 overflow-hidden ${
                   isExpanded
-                    ? 'bg-[#06281E] border border-[#19A878]/30 shadow-md text-[#F3EFE4]'
-                    : 'bg-[#F8F6F0] border border-[#080B0A]/8 text-[#080B0A]'
+                    ? isEmerald
+                      ? 'bg-[#063C2D] border border-[#19A878]/30 shadow-md text-[#F3EFE4]'
+                      : 'bg-[#F3EFE4] border border-[#D4AF37]/40 shadow-md text-[#080B0A]'
+                    : isEmerald
+                    ? 'bg-[#063C2D] border border-[#19A878]/25 text-[#F3EFE4]'
+                    : 'bg-[#F3EFE4] border border-[#080B0A]/10 text-[#080B0A]'
                 }`}
               >
                 {/* Header Row (Always Clickable) */}
@@ -272,12 +344,16 @@ export default function WhySiyara() {
                   className="w-full p-4 sm:p-5 flex items-center justify-between text-left cursor-pointer focus:outline-none"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="font-serif text-base text-[#D4AF37] font-medium">
+                    <span
+                      className={`font-serif text-base font-medium ${
+                        isEmerald ? 'text-[#E5C378]' : 'text-[#D4AF37]'
+                      }`}
+                    >
                       {principle.id}
                     </span>
                     <span
                       className={`font-serif text-lg font-normal ${
-                        isExpanded ? 'text-[#F3EFE4]' : 'text-[#080B0A]'
+                        isEmerald ? 'text-[#F3EFE4]' : 'text-[#080B0A]'
                       }`}
                     >
                       {principle.fullTitle}
@@ -286,11 +362,23 @@ export default function WhySiyara() {
 
                   <div className="shrink-0">
                     {isExpanded ? (
-                      <div className="w-7 h-7 rounded-full border border-white/20 bg-black/35 text-[#F3EFE4] flex items-center justify-center">
+                      <div
+                        className={`w-7 h-7 rounded-full flex items-center justify-center ${
+                          isEmerald
+                            ? 'border border-white/20 bg-black/35 text-[#F3EFE4]'
+                            : 'border border-[#080B0A]/20 bg-black/5 text-[#080B0A]'
+                        }`}
+                      >
                         <Minus className="w-3.5 h-3.5 stroke-[1.75]" />
                       </div>
                     ) : (
-                      <div className="w-7 h-7 rounded-full border border-[#080B0A]/15 bg-white/80 text-[#080B0A]/60 flex items-center justify-center">
+                      <div
+                        className={`w-7 h-7 rounded-full flex items-center justify-center ${
+                          isEmerald
+                            ? 'border border-[#E5C378]/40 bg-white/5 text-[#E5C378]'
+                            : 'border border-[#080B0A]/15 bg-black/5 text-[#080B0A]/60'
+                        }`}
+                      >
                         <Plus className="w-3.5 h-3.5 stroke-[1.75]" />
                       </div>
                     )}
@@ -320,12 +408,20 @@ export default function WhySiyara() {
                         </div>
 
                         {/* Lead */}
-                        <p className="font-serif italic text-xs text-[#D4AF37] mb-1.5 leading-snug">
+                        <p
+                          className={`font-serif italic text-xs mb-1.5 leading-snug ${
+                            isEmerald ? 'text-[#E5C378]' : 'text-[#063C2D]'
+                          }`}
+                        >
                           {principle.lead}
                         </p>
 
                         {/* Description */}
-                        <p className="font-sans text-xs text-[#A5B8AA] font-light leading-relaxed mb-4">
+                        <p
+                          className={`font-sans text-xs font-light leading-relaxed mb-4 ${
+                            isEmerald ? 'text-[#A5B8AA]' : 'text-[#080B0A]/75'
+                          }`}
+                        >
                           {principle.description}
                         </p>
 
@@ -333,10 +429,18 @@ export default function WhySiyara() {
                         <div>
                           <Link
                             href={principle.link}
-                            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#D4AF37]/45 text-[#F3EFE4] text-[11px] font-sans font-medium tracking-[0.14em] uppercase"
+                            className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-[11px] font-sans font-medium tracking-[0.14em] uppercase ${
+                              isEmerald
+                                ? 'border border-[#E5C378]/45 text-[#F3EFE4]'
+                                : 'border border-[#063C2D]/40 text-[#063C2D]'
+                            }`}
                           >
                             <span>LEARN MORE</span>
-                            <ArrowUpRight className="w-3.5 h-3.5 text-[#D4AF37]" />
+                            <ArrowUpRight
+                              className={`w-3.5 h-3.5 ${
+                                isEmerald ? 'text-[#E5C378]' : 'text-[#063C2D]'
+                              }`}
+                            />
                           </Link>
                         </div>
                       </div>
