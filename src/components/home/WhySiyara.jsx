@@ -7,63 +7,57 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function WhySiyara() {
-  const [expandedId, setExpandedId] = useState(null);
+  // Panel 02 (Integrated Team) is expanded by default, matching the approved reference design
+  const [expandedId, setExpandedId] = useState('02');
 
   const principles = [
     {
       id: '01',
-      title: 'Strategy First',
-      summary: 'Every project starts with research, clarity and a clear plan.',
+      titleLine1: 'Strategy',
+      titleLine2: 'First',
+      fullTitle: 'Strategy First',
+      lead: 'Clarity before execution.',
       description:
-        'We audit your competitive landscape, clarify your unique market positioning, and architect a strategic roadmap before writing a single line of code.',
+        'Every project starts with research, business understanding, competitor analysis and a clear strategic direction.',
+      image: '/images/why-siyara/strategy.webp',
+      link: '/services/brand-strategy-identity-jaipur',
     },
     {
       id: '02',
-      title: 'One Connected Team',
-      summary: 'Strategists, designers and developers working as a single team.',
+      titleLine1: 'Integrated',
+      titleLine2: 'Team',
+      fullTitle: 'Integrated Team',
+      lead: 'Different disciplines. One direction.',
       description:
-        'Designers, engineers, and growth strategists work collaboratively under one roof in Jaipur, eliminating handoff silos and ensuring cohesive execution.',
+        'Strategists, designers and developers work together from the same brief, ensuring consistency across every stage.',
+      image: '/images/why-siyara/team.webp',
+      link: '/about',
     },
     {
       id: '03',
-      title: 'Built to Perform',
-      summary: 'Brands, websites and systems designed for speed, growth and real results.',
+      titleLine1: 'Built to',
+      titleLine2: 'Perform',
+      fullTitle: 'Built to Perform',
+      lead: 'Designed for more than appearance.',
       description:
-        'High-performance Next.js engineering with sub-second load speeds, modern Core Web Vitals compliance, and conversion-focused ergonomics that drive measurable pipeline.',
+        'We build brands, websites and digital systems with performance, usability, search visibility and business growth in mind.',
+      image: '/images/why-siyara/perform.webp',
+      link: '/services/website-design-development-jaipur',
     },
     {
       id: '04',
-      title: 'Long-Term Partnership',
-      summary: 'We stay with you after launch, with optimisation and ongoing support.',
+      titleLine1: 'Long-Term',
+      titleLine2: 'Partnership',
+      fullTitle: 'Long-Term Partnership',
+      lead: "The work doesn't end at launch.",
       description:
-        'We remain your technical and growth partner after launch, providing proactive maintenance, performance monitoring, and iterative feature enhancements.',
+        'We continue supporting optimisation, improvements, reporting and ongoing digital growth.',
+      image: '/images/why-siyara/partnership.webp',
+      link: '/contact',
     },
   ];
 
-  const stats = [
-    {
-      metric: '60+',
-      label: 'CLIENTS SERVED',
-      description: 'Across India and internationally.',
-    },
-    {
-      metric: '110+',
-      label: 'PROJECTS DELIVERED',
-      description: 'Websites, brands and digital systems.',
-    },
-    {
-      metric: '12',
-      label: 'INDUSTRIES SERVED',
-      description: 'From real estate to healthcare.',
-    },
-    {
-      metric: '6+ Years',
-      label: 'COMBINED EXPERIENCE',
-      description: 'In strategy, design and development.',
-    },
-  ];
-
-  const togglePrinciple = (id) => {
+  const handleToggle = (id) => {
     setExpandedId((prev) => (prev === id ? null : id));
   };
 
@@ -73,287 +67,319 @@ export default function WhySiyara() {
       aria-label="Why Choose Siyara Innovations"
       className="relative py-20 sm:py-24 lg:py-28 bg-[#F3EFE4] text-[#080B0A] overflow-hidden"
     >
-      {/* Background Ivory Editorial Atmosphere */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE4] via-[#ECE7D8]/60 to-[#F3EFE4] opacity-90 pointer-events-none" />
-      <div
-        className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full pointer-events-none opacity-30"
-        style={{
-          background: 'radial-gradient(circle at center, rgba(11, 94, 73, 0.12) 0%, transparent 70%)',
-        }}
-      />
+      {/* Background Subtle Warm Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE4] via-[#ECE7D8]/45 to-[#F3EFE4] opacity-90 pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
-        {/* Top Three-Column Composition on Desktop, Stacked on Mobile */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center">
-          
-          {/* LEFT COLUMN: Editorial Introduction */}
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '60px 0px' }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-4 xl:col-span-4 flex flex-col justify-between"
-          >
-            <div>
-              {/* Small Section Label */}
-              <div className="flex items-center gap-3 mb-6 sm:mb-8">
-                <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
-                  02
-                </span>
-                <span className="w-8 h-[1px] bg-[#B9923F]/40" />
-                <span className="text-[11px] sm:text-xs font-sans font-semibold tracking-[0.22em] text-[#080B0A] uppercase">
-                  WHY SIYARA
-                </span>
-              </div>
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+        
+        {/* ========================================================================= */}
+        {/* SECTION INTRODUCTION (Two-Column Editorial Layout)                        */}
+        {/* ========================================================================= */}
+        <div className="mb-14 sm:mb-16 lg:mb-20">
+          {/* Small Section Label */}
+          <div className="flex items-center gap-3 mb-6 sm:mb-8">
+            <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
+              02
+            </span>
+            <span className="w-8 h-[1px] bg-[#B9923F]/40" />
+            <span className="text-[11px] sm:text-xs font-sans font-semibold tracking-[0.22em] text-[#080B0A] uppercase">
+              WHY SIYARA
+            </span>
+          </div>
 
-              {/* Main Headline */}
-              <h2 className="font-serif text-3xl sm:text-5xl lg:text-[46px] xl:text-[52px] text-[#080B0A] font-normal leading-[1.08] tracking-tight mb-5 sm:mb-6">
-                More than<br />
-                services.<br />
-                A partner<br />
-                <span className="italic font-serif text-[#063C2D]">for what&apos;s next.</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+            {/* LEFT COLUMN: Editorial Headline */}
+            <div className="lg:col-span-7 xl:col-span-7">
+              <h2 className="font-serif text-4xl sm:text-5xl lg:text-[56px] xl:text-[62px] text-[#080B0A] font-normal leading-[1.05] tracking-tight">
+                More than services.<br />
+                A partner for<br />
+                <span className="italic font-serif text-[#063C2D]">
+                  what&apos;s next
+                  <span className="text-[#D4AF37] font-normal not-italic">.</span>
+                </span>
               </h2>
-
-              {/* Supporting Description */}
-              <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-sm mb-6 sm:mb-8">
-                We bring strategy, design, technology and growth together — so your business doesn&apos;t just look better, it performs better.
-              </p>
             </div>
 
-            {/* Compact CTA */}
-            <div>
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#063C2D] text-[#F3EFE4] hover:bg-[#0B5A43] text-xs font-sans font-medium tracking-[0.16em] uppercase transition-all duration-200 shadow-sm group"
-              >
-                <span>OUR APPROACH</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-[#19A878] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
-            </div>
-          </motion.div>
-
-          {/* CENTRE COLUMN: Signature Brand Element (Desktop Only) */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: '60px 0px' }}
-            transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="hidden lg:flex lg:col-span-3 xl:col-span-3 items-center justify-center relative min-h-[440px]"
-          >
-            {/* Concentric Aura Rings */}
-            <div
-              className="absolute w-56 h-56 rounded-full pointer-events-none opacity-40"
-              style={{
-                background: 'radial-gradient(circle at center, rgba(212, 175, 55, 0.18) 0%, transparent 70%)',
-              }}
-            />
-            <div className="absolute w-52 h-52 rounded-full border border-[#D4AF37]/15 pointer-events-none" />
-            <div className="absolute w-40 h-40 rounded-full border border-[#D4AF37]/25 pointer-events-none" />
-
-            {/* Central Deep Forest Medallion */}
-            <div className="relative z-10 w-28 h-28 xl:w-32 xl:h-32 rounded-full bg-[#06261D] border border-[#D4AF37]/50 shadow-[0_12px_36px_rgba(6,38,29,0.35)] flex items-center justify-center p-5">
-              <div className="relative w-14 h-14 xl:w-16 xl:h-16 flex items-center justify-center">
-                <Image
-                  src="/siyara-emblem.webp"
-                  alt="Siyara Signature Monogram"
-                  width={64}
-                  height={64}
-                  className="w-full h-full object-contain drop-shadow-[0_2px_8px_rgba(212,175,55,0.4)]"
-                  priority
-                />
+            {/* RIGHT COLUMN: Supporting Copy with subtle vertical border + CTA */}
+            <div className="lg:col-span-5 xl:col-span-5 flex flex-col justify-between items-start lg:pl-6 xl:pl-8">
+              <div className="border-l border-[#B9923F]/35 pl-5 sm:pl-6 mb-6 sm:mb-8">
+                <p className="font-sans text-xs sm:text-sm text-[#080B0A]/75 font-light leading-relaxed max-w-md">
+                  We bring strategy, design, technology and growth together — so your business doesn&apos;t just look better, it performs better.
+                </p>
               </div>
-            </div>
 
-            {/* Curved Connector Lines to the 4 Principle Rows on Right */}
-            <svg
-              className="absolute top-0 right-[-10px] w-[130px] h-full pointer-events-none overflow-visible z-0"
-              viewBox="0 0 130 440"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {/* Curve 1 to Row 01 */}
-              <path
-                d="M 0 220 C 50 220, 75 58, 126 58"
-                stroke="#D4AF37"
-                strokeWidth="1.2"
-                strokeOpacity="0.55"
-              />
-              <circle cx="126" cy="58" r="3.5" fill="#063C2D" stroke="#D4AF37" strokeWidth="1.5" />
-
-              {/* Curve 2 to Row 02 */}
-              <path
-                d="M 0 220 C 50 220, 75 166, 126 166"
-                stroke="#D4AF37"
-                strokeWidth="1.2"
-                strokeOpacity="0.55"
-              />
-              <circle cx="126" cy="166" r="3.5" fill="#063C2D" stroke="#D4AF37" strokeWidth="1.5" />
-
-              {/* Curve 3 to Row 03 */}
-              <path
-                d="M 0 220 C 50 220, 75 274, 126 274"
-                stroke="#D4AF37"
-                strokeWidth="1.2"
-                strokeOpacity="0.55"
-              />
-              <circle cx="126" cy="274" r="3.5" fill="#063C2D" stroke="#D4AF37" strokeWidth="1.5" />
-
-              {/* Curve 4 to Row 04 */}
-              <path
-                d="M 0 220 C 50 220, 75 382, 126 382"
-                stroke="#D4AF37"
-                strokeWidth="1.2"
-                strokeOpacity="0.55"
-              />
-              <circle cx="126" cy="382" r="3.5" fill="#063C2D" stroke="#D4AF37" strokeWidth="1.5" />
-            </svg>
-          </motion.div>
-
-          {/* RIGHT COLUMN: Four Interactive Principles */}
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '60px 0px' }}
-            transition={{ duration: 0.5, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 xl:col-span-5 flex flex-col space-y-3 sm:space-y-4"
-          >
-            {principles.map((principle) => {
-              const isExpanded = expandedId === principle.id;
-
-              return (
-                <div
-                  key={principle.id}
-                  className={`rounded-2xl transition-all duration-300 border ${
-                    isExpanded
-                      ? 'bg-[#ECE7D8] border-[#063C2D]/35 shadow-sm'
-                      : 'bg-[#ECE7D8]/55 hover:bg-[#ECE7D8]/85 border-[#080B0A]/5'
-                  }`}
+              <div>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#063C2D] text-[#F3EFE4] hover:bg-[#0B5A43] text-xs font-sans font-medium tracking-[0.16em] uppercase transition-all duration-200 shadow-sm group"
                 >
-                  <button
-                    type="button"
-                    onClick={() => togglePrinciple(principle.id)}
-                    aria-expanded={isExpanded}
-                    aria-controls={`principle-desc-${principle.id}`}
-                    id={`principle-btn-${principle.id}`}
-                    className="w-full p-4 sm:p-5 flex items-start justify-between text-left cursor-pointer focus:outline-none focus:ring-1 focus:ring-[#063C2D] rounded-2xl transition-all"
-                  >
-                    <div className="flex items-start gap-3.5 sm:gap-4 pr-3 min-w-0">
-                      {/* Numbered Marker Badge */}
-                      <span className="w-8 h-8 rounded-full bg-[#F3EFE4] text-[#B9923F] font-serif text-sm font-medium flex items-center justify-center shrink-0 border border-[#B9923F]/20">
-                        {principle.id}
-                      </span>
-
-                      {/* Heading & Short Description */}
-                      <div className="min-w-0">
-                        <h3 className="font-serif text-lg sm:text-xl lg:text-[21px] text-[#080B0A] font-normal leading-snug">
-                          {principle.title}
-                        </h3>
-                        <p className="font-sans text-xs sm:text-[13px] text-[#101613]/70 font-light mt-1 leading-relaxed">
-                          {principle.summary}
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Plus / Minus Action Indicator */}
-                    <div className="shrink-0 pt-1">
-                      {isExpanded ? (
-                        <div className="w-6 h-6 rounded-full bg-[#063C2D] text-[#F3EFE4] flex items-center justify-center shadow-sm">
-                          <Minus className="w-3.5 h-3.5 stroke-[2]" />
-                        </div>
-                      ) : (
-                        <div className="w-6 h-6 rounded-full border border-[#080B0A]/20 text-[#080B0A]/60 flex items-center justify-center group-hover:border-[#063C2D] group-hover:text-[#063C2D] transition-colors">
-                          <Plus className="w-3.5 h-3.5 stroke-[2]" />
-                        </div>
-                      )}
-                    </div>
-                  </button>
-
-                  {/* Expandable Supporting Details */}
-                  <AnimatePresence initial={false}>
-                    {isExpanded && (
-                      <motion.div
-                        id={`principle-desc-${principle.id}`}
-                        role="region"
-                        aria-labelledby={`principle-btn-${principle.id}`}
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                        className="overflow-hidden"
-                      >
-                        <div className="px-4 sm:px-5 pb-5 pt-0">
-                          <div className="pl-11 pr-2 pt-3 border-t border-[#080B0A]/8">
-                            <p className="font-sans text-xs sm:text-[13px] text-[#063C2D] font-normal leading-relaxed">
-                              {principle.description}
-                            </p>
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              );
-            })}
-          </motion.div>
-        </div>
-
-        {/* BOTTOM STATISTICS PANEL: OUR IMPACT */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '60px 0px' }}
-          transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 sm:mt-20 lg:mt-24 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#06261D] via-[#061F18] to-[#041410] border border-[#19A878]/25 p-8 sm:p-10 lg:p-12 text-[#F3EFE4] relative overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.3)]"
-        >
-          {/* Subtle Emerald Atmosphere Accent */}
-          <div
-            className="absolute bottom-0 right-0 w-[400px] h-[300px] pointer-events-none opacity-20"
-            style={{
-              background: 'radial-gradient(circle at bottom right, rgba(25, 168, 120, 0.3) 0%, transparent 70%)',
-            }}
-          />
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
-            {/* Left Header */}
-            <div className="lg:col-span-4 xl:col-span-4">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-[11px] font-sans font-semibold tracking-[0.24em] text-[#19A878] uppercase">
-                  OUR IMPACT
-                </span>
-                <span className="w-8 h-[1px] bg-[#19A878]/50 inline-block" />
-              </div>
-
-              <h3 className="font-serif text-2xl sm:text-3xl lg:text-[34px] xl:text-[38px] text-[#F3EFE4] font-normal leading-[1.14]">
-                Real experience.<br />
-                <span className="italic font-serif text-[#D4AF37]">Measurable progress.</span>
-              </h3>
-            </div>
-
-            {/* Right Metrics Grid: 4 Desktop Columns with Dividers, 2x2 Mobile Grid */}
-            <div className="lg:col-span-8 xl:col-span-8">
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-0 lg:divide-x lg:divide-white/10">
-                {stats.map((stat, idx) => (
-                  <div
-                    key={stat.label}
-                    className={`${idx !== 0 ? 'lg:pl-6 xl:pl-8' : ''} ${
-                      idx !== stats.length - 1 ? 'lg:pr-6 xl:pr-8' : ''
-                    }`}
-                  >
-                    <div className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#D4AF37] font-normal leading-none mb-2">
-                      {stat.metric}
-                    </div>
-                    <div className="font-sans text-[10px] sm:text-[11px] font-bold tracking-[0.2em] text-[#F3EFE4] uppercase mb-1">
-                      {stat.label}
-                    </div>
-                    <p className="font-sans text-[11px] text-[#A5B8AA] font-light leading-relaxed">
-                      {stat.description}
-                    </p>
-                  </div>
-                ))}
+                  <span>OUR APPROACH</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-[#19A878] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </Link>
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
+
+        {/* ========================================================================= */}
+        {/* DESKTOP INTERACTIVE EXPANDABLE HORIZONTAL PANELS (md and above)          */}
+        {/* ========================================================================= */}
+        <div className="hidden md:flex flex-row gap-4 h-[440px] lg:h-[460px] w-full items-stretch">
+          {principles.map((principle) => {
+            const isExpanded = expandedId === principle.id;
+
+            return (
+              <div
+                key={principle.id}
+                role="region"
+                aria-label={`${principle.fullTitle} Principle`}
+                className={`relative rounded-[24px] lg:rounded-[28px] overflow-hidden transition-[flex,background-color,border-color,box-shadow] duration-600 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  isExpanded
+                    ? 'flex-[2.2] lg:flex-[2.3] bg-[#06281E] border border-[#19A878]/30 shadow-[0_16px_40px_rgba(6,40,30,0.22)]'
+                    : 'flex-1 bg-[#F8F6F0] hover:bg-[#F2EFE7] border border-[#080B0A]/8 hover:border-[#D4AF37]/35 cursor-pointer group'
+                }`}
+                onClick={() => {
+                  if (!isExpanded) handleToggle(principle.id);
+                }}
+              >
+                {/* --- EXPANDED STATE (DESKTOP) --- */}
+                {isExpanded ? (
+                  <div className="h-full w-full flex flex-row items-stretch justify-between p-6 lg:p-7 relative">
+                    
+                    {/* Top-Right Circular Minus Toggle */}
+                    <button
+                      type="button"
+                      aria-label={`Collapse ${principle.fullTitle}`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleToggle(principle.id);
+                      }}
+                      className="absolute top-5 right-5 z-30 w-9 h-9 rounded-full border border-white/20 bg-black/40 backdrop-blur-sm text-[#F3EFE4] flex items-center justify-center hover:bg-black/60 hover:border-white/40 transition-colors cursor-pointer"
+                    >
+                      <Minus className="w-4 h-4 stroke-[1.75]" />
+                    </button>
+
+                    {/* Left Column: Typography, Details & CTA */}
+                    <motion.div
+                      initial={{ opacity: 0, x: -8 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.35, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+                      className="flex flex-col justify-between h-full pr-4 z-10 max-w-[240px] lg:max-w-[270px]"
+                    >
+                      <div>
+                        {/* Number Indicator */}
+                        <div className="font-serif text-2xl lg:text-3xl text-[#D4AF37] font-light leading-none">
+                          {principle.id}
+                        </div>
+
+                        {/* Gold Divider Line */}
+                        <div className="w-8 h-[1px] bg-[#D4AF37]/50 my-3.5" />
+
+                        {/* Heading (Two lines matching reference) */}
+                        <h3 className="font-serif text-2xl lg:text-[28px] text-[#F3EFE4] font-normal leading-[1.12] mb-2">
+                          {principle.titleLine1}<br />
+                          {principle.titleLine2}
+                        </h3>
+
+                        {/* Lead */}
+                        <p className="font-serif italic text-xs text-[#D4AF37] mb-1.5 leading-snug">
+                          {principle.lead}
+                        </p>
+
+                        {/* Full Description */}
+                        <p className="font-sans text-xs text-[#A5B8AA] font-light leading-relaxed">
+                          {principle.description}
+                        </p>
+                      </div>
+
+                      {/* Learn More Button */}
+                      <div className="pt-3">
+                        <Link
+                          href={principle.link}
+                          onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#D4AF37]/45 text-[#F3EFE4] hover:bg-[#D4AF37]/15 hover:border-[#D4AF37] text-[10.5px] font-sans font-medium tracking-[0.16em] uppercase transition-all duration-200 group"
+                        >
+                          <span>LEARN MORE</span>
+                          <ArrowUpRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        </Link>
+                      </div>
+                    </motion.div>
+
+                    {/* Right Column: Architectural Visual */}
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.96 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
+                      className="relative h-full w-[190px] lg:w-[230px] xl:w-[260px] shrink-0 rounded-2xl overflow-hidden shadow-inner border border-white/10"
+                    >
+                      <Image
+                        src={principle.image}
+                        alt={`${principle.fullTitle} Visual`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1200px) 230px, 260px"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#06281E]/40 via-transparent to-transparent pointer-events-none" />
+                    </motion.div>
+                  </div>
+                ) : (
+                  /* --- COLLAPSED STATE (DESKTOP) --- */
+                  <div className="h-full w-full p-6 lg:p-7 flex flex-col justify-between items-start">
+                    {/* Top: Gold Number & Title */}
+                    <div>
+                      <div className="font-serif text-2xl lg:text-3xl text-[#D4AF37] font-light leading-none group-hover:text-[#B9923F] transition-colors">
+                        {principle.id}
+                      </div>
+                      <div className="w-8 h-[1px] bg-[#D4AF37]/40 my-4" />
+                      <h3 className="font-serif text-xl lg:text-2xl text-[#080B0A] font-normal leading-[1.2] group-hover:text-[#063C2D] transition-colors">
+                        {principle.titleLine1}<br />
+                        {principle.titleLine2}
+                      </h3>
+                    </div>
+
+                    {/* Bottom: Circular Plus Indicator */}
+                    <div className="w-10 h-10 rounded-full border border-[#080B0A]/15 bg-white/70 text-[#080B0A]/60 flex items-center justify-center group-hover:border-[#063C2D] group-hover:bg-[#063C2D] group-hover:text-[#F3EFE4] transition-all duration-200">
+                      <Plus className="w-4 h-4 stroke-[1.75]" />
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* ========================================================================= */}
+        {/* MOBILE RESPONSIVE ACCORDION (below md)                                     */}
+        {/* ========================================================================= */}
+        <div className="md:hidden flex flex-col space-y-3">
+          {principles.map((principle) => {
+            const isExpanded = expandedId === principle.id;
+
+            return (
+              <div
+                key={principle.id}
+                className={`rounded-2xl transition-all duration-300 overflow-hidden ${
+                  isExpanded
+                    ? 'bg-[#06281E] border border-[#19A878]/30 shadow-md text-[#F3EFE4]'
+                    : 'bg-[#F8F6F0] border border-[#080B0A]/8 text-[#080B0A]'
+                }`}
+              >
+                {/* Header Row (Always Clickable) */}
+                <button
+                  type="button"
+                  onClick={() => handleToggle(principle.id)}
+                  aria-expanded={isExpanded}
+                  className="w-full p-4 sm:p-5 flex items-center justify-between text-left cursor-pointer focus:outline-none"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="font-serif text-base text-[#D4AF37] font-medium">
+                      {principle.id}
+                    </span>
+                    <span
+                      className={`font-serif text-lg font-normal ${
+                        isExpanded ? 'text-[#F3EFE4]' : 'text-[#080B0A]'
+                      }`}
+                    >
+                      {principle.fullTitle}
+                    </span>
+                  </div>
+
+                  <div className="shrink-0">
+                    {isExpanded ? (
+                      <div className="w-7 h-7 rounded-full border border-white/20 bg-black/35 text-[#F3EFE4] flex items-center justify-center">
+                        <Minus className="w-3.5 h-3.5 stroke-[1.75]" />
+                      </div>
+                    ) : (
+                      <div className="w-7 h-7 rounded-full border border-[#080B0A]/15 bg-white/80 text-[#080B0A]/60 flex items-center justify-center">
+                        <Plus className="w-3.5 h-3.5 stroke-[1.75]" />
+                      </div>
+                    )}
+                  </div>
+                </button>
+
+                {/* Expanded Content (Mobile) */}
+                <AnimatePresence initial={false}>
+                  {isExpanded && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-5 pb-5 pt-1">
+                        {/* Architectural Visual */}
+                        <div className="relative w-full h-[160px] sm:h-[180px] rounded-xl overflow-hidden mb-4 border border-white/10">
+                          <Image
+                            src={principle.image}
+                            alt={`${principle.fullTitle} Visual`}
+                            fill
+                            className="object-cover"
+                            sizes="100vw"
+                          />
+                        </div>
+
+                        {/* Lead */}
+                        <p className="font-serif italic text-xs text-[#D4AF37] mb-1.5 leading-snug">
+                          {principle.lead}
+                        </p>
+
+                        {/* Description */}
+                        <p className="font-sans text-xs text-[#A5B8AA] font-light leading-relaxed mb-4">
+                          {principle.description}
+                        </p>
+
+                        {/* Learn More Button */}
+                        <div>
+                          <Link
+                            href={principle.link}
+                            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#D4AF37]/45 text-[#F3EFE4] text-[11px] font-sans font-medium tracking-[0.14em] uppercase"
+                          >
+                            <span>LEARN MORE</span>
+                            <ArrowUpRight className="w-3.5 h-3.5 text-[#D4AF37]" />
+                          </Link>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* ========================================================================= */}
+        {/* BOTTOM PHILOSOPHY STRIP (Matching the Reference Footer Design)           */}
+        {/* ========================================================================= */}
+        <div className="mt-16 sm:mt-20 pt-8 sm:pt-10 border-t border-[#080B0A]/10">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-0 items-center text-center md:text-left">
+            {/* Left Column */}
+            <div className="md:col-span-3">
+              <span className="text-[11px] font-sans font-semibold tracking-[0.22em] text-[#080B0A]/70 uppercase">
+                OUR PHILOSOPHY
+              </span>
+            </div>
+
+            {/* Center Column */}
+            <div className="md:col-span-6 md:text-center md:border-x md:border-[#080B0A]/10 md:px-6">
+              <p className="text-[11px] sm:text-xs font-sans font-medium tracking-[0.16em] text-[#080B0A]/90 uppercase">
+                GOOD BRANDS KEEP UP. GREAT BUSINESSES STAY AHEAD.
+              </p>
+            </div>
+
+            {/* Right Column */}
+            <div className="md:col-span-3 md:text-right">
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center md:justify-end gap-1.5 text-[11px] font-sans font-semibold tracking-[0.16em] text-[#063C2D] hover:text-[#0B5A43] uppercase transition-colors group"
+              >
+                <span>BUILT FOR WHAT&apos;S NEXT.</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#063C2D] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
