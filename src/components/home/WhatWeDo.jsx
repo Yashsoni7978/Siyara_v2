@@ -110,7 +110,7 @@ export default function WhatWeDo() {
     <section
       id="services"
       aria-label="Siyara Innovations Services and Disciplines"
-      className="relative py-20 sm:py-24 lg:py-28 bg-[#070A09] text-[#F3EFE4] overflow-hidden border-t border-[#D9B45F]/15"
+      className="relative py-16 sm:py-20 lg:py-22 bg-[#070A09] text-[#F3EFE4] overflow-hidden border-t border-[#D9B45F]/15"
     >
       {/* Background Emerald Atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#06261D]/50 via-[#070A09] to-[#070A09] opacity-90 pointer-events-none" />
@@ -123,7 +123,7 @@ export default function WhatWeDo() {
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         {/* Section Header: Editorial Two-Column Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end mb-14 sm:mb-18 lg:mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end mb-10 sm:mb-14 lg:mb-14">
           {/* Left Column: Label and Large Editorial Headline */}
           <motion.div
             initial={{ opacity: 0, y: 18 }}
@@ -133,7 +133,7 @@ export default function WhatWeDo() {
             className="lg:col-span-7 xl:col-span-7"
           >
             {/* Small Label */}
-            <div className="flex items-center gap-3 mb-6 sm:mb-8">
+            <div className="flex items-center gap-3 mb-5 sm:mb-6">
               <span className="text-[11px] sm:text-xs font-sans font-semibold tracking-[0.24em] text-[#D4AF37] uppercase">
                 02 — OUR SERVICES
               </span>
@@ -141,7 +141,7 @@ export default function WhatWeDo() {
             </div>
 
             {/* Main Headline */}
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-[54px] xl:text-[62px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-5xl lg:text-[50px] xl:text-[56px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight">
               One connected system,<br />
               six disciplines<br />
               working <span className="text-[#D4AF37] italic font-serif">together.</span>
@@ -154,7 +154,7 @@ export default function WhatWeDo() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '60px 0px' }}
             transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 xl:col-span-5 flex flex-col justify-end lg:items-start space-y-6"
+            className="lg:col-span-5 xl:col-span-5 flex flex-col justify-end lg:items-start space-y-5"
           >
             <p className="font-sans text-xs sm:text-sm text-[#A5B8AA] font-light leading-relaxed max-w-md">
               Siyara Innovations brings strategy, creativity and technology together to help businesses build stronger brands, better digital experiences and measurable growth.
@@ -163,7 +163,7 @@ export default function WhatWeDo() {
             <div>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full border border-[#D4AF37]/45 hover:border-[#D4AF37] text-[#F3EFE4] hover:bg-[#D4AF37]/10 text-xs font-sans font-medium tracking-[0.18em] uppercase transition-all duration-200 group"
+                className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full border border-[#D4AF37]/45 hover:border-[#D4AF37] text-[#F3EFE4] hover:bg-[#D4AF37]/10 text-xs font-sans font-medium tracking-[0.18em] uppercase transition-all duration-200 group"
               >
                 <span>EXPLORE ALL SERVICES</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -173,7 +173,7 @@ export default function WhatWeDo() {
         </div>
 
         {/* 6-Card Grid: Desktop 3x2, Tablet 2 Cols, Mobile 1 Col */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isDark = service.isDark;
@@ -193,10 +193,10 @@ export default function WhatWeDo() {
                 <Link
                   href={service.href}
                   aria-label={`Explore ${service.title}`}
-                  className="block group h-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/70 rounded-[24px]"
+                  className="block group h-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/70 rounded-[22px]"
                 >
                   <div
-                    className={`relative rounded-[24px] sm:rounded-[26px] overflow-hidden p-7 sm:p-8 flex flex-col justify-between min-h-[460px] sm:min-h-[480px] lg:min-h-[490px] xl:min-h-[510px] transition-all duration-350 border ${
+                    className={`relative rounded-[22px] sm:rounded-[24px] overflow-hidden p-5 sm:p-6 flex flex-col justify-between min-h-[390px] sm:min-h-[410px] lg:min-h-[415px] xl:min-h-[435px] transition-all duration-350 border ${
                       isDark
                         ? 'bg-[#061A13] border-[#0B5A43]/30 hover:border-[#D4AF37]/60 shadow-[0_12px_36px_rgba(0,0,0,0.45)] hover:shadow-[0_20px_48px_rgba(6,60,45,0.35)]'
                         : 'bg-[#F3EFE4] border-[#E5E0D2] hover:border-[#063C2D]/60 shadow-[0_12px_36px_rgba(0,0,0,0.18)] hover:shadow-[0_20px_48px_rgba(0,0,0,0.25)]'
@@ -223,7 +223,7 @@ export default function WhatWeDo() {
 
                     {/* Top Control Bar: Number, Circular Icon, and Circular Arrow CTA */}
                     <div className="relative z-10 flex items-center justify-between w-full">
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-2.5">
                         <span
                           className={`text-xs font-sans font-semibold tracking-[0.24em] ${
                             isDark ? 'text-[#D4AF37]' : 'text-[#063C2D]'
@@ -233,7 +233,7 @@ export default function WhatWeDo() {
                         </span>
 
                         <div
-                          className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-transform duration-300 ${
+                          className={`w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full flex items-center justify-center transition-transform duration-300 ${
                             shouldReduceMotion ? '' : 'group-hover:scale-105'
                           } ${
                             isDark
@@ -241,20 +241,20 @@ export default function WhatWeDo() {
                               : 'border border-[#063C2D]/20 bg-[#063C2D] text-[#F3EFE4] shadow-sm'
                           }`}
                         >
-                          <Icon className="w-4 h-4 stroke-[1.8]" />
+                          <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[1.8]" />
                         </div>
                       </div>
 
                       {/* Circular Arrow CTA */}
                       <div
-                        className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+                        className={`w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full flex items-center justify-center transition-all duration-300 ${
                           isDark
                             ? 'border border-white/25 bg-[#06241B]/60 text-[#F3EFE4] backdrop-blur-sm group-hover:border-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#080B0A]'
                             : 'border border-[#080B0A]/20 bg-white/75 text-[#080B0A] backdrop-blur-sm group-hover:border-[#063C2D] group-hover:bg-[#063C2D] group-hover:text-[#F3EFE4]'
                         }`}
                       >
                         <ArrowRight
-                          className={`w-4 h-4 transition-transform duration-300 ${
+                          className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 ${
                             shouldReduceMotion ? '' : 'group-hover:translate-x-1'
                           }`}
                         />
@@ -262,11 +262,11 @@ export default function WhatWeDo() {
                     </div>
 
                     {/* Bottom Editorial Content Panel */}
-                    <div className="relative z-10 mt-auto pt-6">
+                    <div className="relative z-10 mt-auto pt-4">
                       {/* Subtle accent indicator */}
-                      <div className="mb-3">
+                      <div className="mb-2">
                         <span
-                          className={`inline-block w-8 h-[2px] rounded-full ${
+                          className={`inline-block w-7 h-[2px] rounded-full ${
                             isDark ? 'bg-[#D4AF37]/70' : 'bg-[#063C2D]/70'
                           }`}
                         />
@@ -274,7 +274,7 @@ export default function WhatWeDo() {
 
                       {/* Service Heading */}
                       <h3
-                        className={`font-serif text-2xl sm:text-[25px] lg:text-[23px] xl:text-[27px] font-normal leading-[1.18] tracking-tight transition-colors duration-200 ${
+                        className={`font-serif text-xl sm:text-[23px] lg:text-[21px] xl:text-[24px] font-normal leading-[1.18] tracking-tight transition-colors duration-200 ${
                           isDark
                             ? 'text-[#F3EFE4] group-hover:text-white'
                             : 'text-[#080B0A] group-hover:text-[#063C2D]'
@@ -285,7 +285,7 @@ export default function WhatWeDo() {
 
                       {/* Service Description */}
                       <p
-                        className={`font-sans text-xs sm:text-[13px] leading-relaxed mt-2.5 line-clamp-3 ${
+                        className={`font-sans text-xs sm:text-[12.5px] leading-relaxed mt-2 line-clamp-3 ${
                           isDark ? 'text-[#C2D1C7] font-light' : 'text-[#1E2823] font-normal'
                         }`}
                       >
