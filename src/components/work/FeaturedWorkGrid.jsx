@@ -46,14 +46,14 @@ export default function FeaturedWorkGrid({
               </span>
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[1.05]">
+            <h2 className="font-roboto text-3xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[1.05]">
               A closer look <br className="hidden sm:block" />
               <span className="italic text-[#0B5E49]">at our work.</span>
             </h2>
           </div>
 
           <div className="flex flex-col items-start md:items-end gap-3 max-w-md">
-            <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed md:text-right">
+            <p className="font-lora text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed md:text-right">
               Showing {filteredProjects.length} of {projectsData.length} multi-industry systems, live functional demonstrations, and architectural concepts.
             </p>
             {isFiltered && (
@@ -120,8 +120,8 @@ export default function FeaturedWorkGrid({
           >
             {displayedProjects.length === 0 ? (
               <div className="col-span-12 py-16 text-center border border-dashed border-[#0B5E49]/20 p-8 rounded-sm">
-                <p className="font-serif text-2xl text-[#101613] mb-3">No matching projects found</p>
-                <p className="font-sans text-xs text-[#101613]/70 mb-6">
+                <p className="font-roboto text-2xl text-[#101613] mb-3">No matching projects found</p>
+                <p className="font-lora text-xs text-[#101613]/70 mb-6">
                   No projects in the &ldquo;{selectedIndustry}&rdquo; industry match the &ldquo;{selectedClassification}&rdquo; classification.
                 </p>
                 <button
@@ -197,11 +197,11 @@ export default function FeaturedWorkGrid({
                           {project.projectType || project.industry}
                         </span>
 
-                        <h3 className="font-serif text-2xl sm:text-3xl text-[#F3EFE4] font-normal leading-tight group-hover:text-[#D9B45F] transition-colors mb-2">
+                        <h3 className="font-roboto text-2xl sm:text-3xl text-[#F3EFE4] font-normal leading-tight group-hover:text-[#D9B45F] transition-colors mb-2">
                           {project.name || project.title}
                         </h3>
 
-                        <p className="font-sans text-xs sm:text-sm text-[#F3EFE3]/75 font-light leading-relaxed line-clamp-2 mb-4">
+                        <p className="font-lora text-xs sm:text-sm text-[#F3EFE3]/75 font-light leading-relaxed line-clamp-2 mb-4">
                           {project.description}
                         </p>
 
@@ -246,7 +246,7 @@ export default function FeaturedWorkGrid({
               <Plus className="w-4 h-4" />
               <span>Load More Projects ({filteredProjects.length - displayLimit} Remaining)</span>
             </button>
-            <p className="mt-3 text-xs font-sans text-[#101613]/60">
+            <p className="mt-3 text-xs font-lora text-[#101613]/60">
               Showing {displayedProjects.length} of {filteredProjects.length} matching architectural projects
             </p>
           </div>

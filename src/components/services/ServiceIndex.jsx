@@ -174,7 +174,7 @@ export default function ServiceIndex({ onNavigate }) {
             transition={{ duration: 0.5 }}
             className="lg:col-span-8"
           >
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[1.05] sm:leading-[0.98] break-words">
+            <h2 className="font-roboto text-3xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[1.05] sm:leading-[0.98] break-words">
               ONE SYSTEM. <br />
               EIGHT DISCIPLINES. <br />
               ONE DIRECTION: <span className="text-[#0B5E49] font-normal">GROWTH.</span>
@@ -188,7 +188,7 @@ export default function ServiceIndex({ onNavigate }) {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="lg:col-span-4 flex lg:justify-end"
           >
-            <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-sm">
+            <p className="font-lora text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-sm">
              Every discipline plays a role for Jaipur businesses - together, they build one system, not eight disconnected services.
             </p>
           </motion.div>
@@ -275,15 +275,15 @@ export default function ServiceIndex({ onNavigate }) {
                     <span className="h-[1px] w-6 bg-[#D9B45F]/30" />
                   </div>
 
-                  <h3 className="font-serif text-2xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight mb-3 break-words">
+                  <h3 className="font-roboto text-2xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight mb-3 break-words">
                     {currentDiscipline.name} <span className="text-[#D9B45F]">CAPABILITY.</span>
                   </h3>
 
-                  <p className="font-sans text-xs sm:text-sm text-[#D9B45F] font-medium leading-relaxed mb-3 sm:mb-4">
+                  <p className="font-lora text-xs sm:text-sm text-[#D9B45F] font-medium leading-relaxed mb-3 sm:mb-4">
                     {currentDiscipline.tagline}
                   </p>
 
-                  <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-6 sm:mb-8">
+                  <p className="font-lora text-xs text-[#9D9B91] font-light leading-relaxed mb-6 sm:mb-8">
                     {currentDiscipline.description}
                   </p>
                 </div>

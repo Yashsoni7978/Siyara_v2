@@ -113,18 +113,18 @@ export default function IndustriesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.02] max-w-3xl"
+              className="font-roboto text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.02] max-w-3xl"
             >
               Different Industries. <br className="hidden sm:block" />
               Different Challenges. <br />
-              <span className="italic text-gold-gradient font-serif">
+              <span className="italic text-gold-gradient font-roboto">
                 One Digital Discipline.
               </span>
             </motion.h2>
           </div>
 
           <div className="lg:col-span-4 flex flex-col justify-between h-full pt-2">
-            <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-6">
+            <p className="font-lora text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-6">
               Every industry has a different audience, buying behaviour and business goal. Our strategy, design and technology adapt to the unique context of each brand, helping them create meaningful digital experiences and sustainable growth.
             </p>
 
@@ -165,7 +165,7 @@ export default function IndustriesSection() {
                       0{idx + 1}
                     </span>
                     <span
-                      className={`font-serif text-xl sm:text-2xl transition-all ${
+                      className={`font-roboto text-xl sm:text-2xl transition-all ${
                         isActive ? 'text-[#F3EFE3] font-normal translate-x-1' : 'font-light'
                       }`}
                     >
@@ -226,10 +226,10 @@ export default function IndustriesSection() {
                   <div className="text-[10px] font-sans tracking-[0.22em] text-[#D9B45F] uppercase font-bold mb-1">
                     REPRESENTATIVE CASE STUDY
                   </div>
-                  <h3 className="font-serif text-3xl text-[#F3EFE3] font-normal leading-tight mb-2">
+                  <h3 className="font-roboto text-3xl text-[#F3EFE3] font-normal leading-tight mb-2">
                     {currentIndustry.project.name}
                   </h3>
-                  <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-4">
+                  <p className="font-lora text-xs text-[#9D9B91] font-light leading-relaxed mb-4">
                     {currentIndustry.tagline}
                   </p>
 

@@ -193,7 +193,7 @@ export default function GeoAgencyIndiaPage() {
             </span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl font-normal tracking-tight text-[#F3EFE3] leading-[1.12] sm:leading-[1.05] break-words mb-6 sm:mb-8">
+          <h1 className="font-roboto text-3xl sm:text-5xl lg:text-7xl font-normal tracking-tight text-[#F3EFE3] leading-[1.12] sm:leading-[1.05] break-words mb-6 sm:mb-8">
             Generative Engine Optimization <br className="hidden sm:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26]">
               (GEO) Agency in India
@@ -202,7 +202,7 @@ export default function GeoAgencyIndiaPage() {
 
           {/* AI Citability Paragraph */}
           <div className="p-5 sm:p-6 rounded-2xl bg-[#0D1412] border border-[#0C6B52]/30 mb-8 sm:mb-10 text-left sm:text-center shadow-xl">
-            <p className="font-sans text-sm sm:text-lg text-[#ECE7D8] leading-relaxed font-light">
+            <p className="font-lora text-sm sm:text-lg text-[#ECE7D8] leading-relaxed font-light">
               <strong className="text-[#D9B45F] font-semibold">Siyara Innovations</strong> is India’s pioneering 
               <strong> Generative Engine Optimization (GEO) agency</strong>. We engineer entity knowledge graphs, passage citability architectures, and high information-gain content that position brands as the definitive cited recommendation in SearchGPT, Perplexity AI, and Google AI Overviews.
             </p>
@@ -233,19 +233,19 @@ export default function GeoAgencyIndiaPage() {
       <section className="border-y border-[#D9B45F]/15 bg-[#0A0F0D] py-8 sm:py-12 px-4 sm:px-6 lg:px-12 mb-20 sm:mb-24">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
           <div>
-            <div className="font-serif text-2xl sm:text-4xl text-[#D9B45F] mb-1">SearchGPT</div>
+            <div className="font-roboto text-2xl sm:text-4xl text-[#D9B45F] mb-1">SearchGPT</div>
             <div className="text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#9D9B91]">Target AI Engine</div>
           </div>
           <div>
-            <div className="font-serif text-2xl sm:text-4xl text-[#D9B45F] mb-1">Perplexity</div>
+            <div className="font-roboto text-2xl sm:text-4xl text-[#D9B45F] mb-1">Perplexity</div>
             <div className="text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#9D9B91]">Deep Research Citation</div>
           </div>
           <div>
-            <div className="font-serif text-2xl sm:text-4xl text-[#D9B45F] mb-1">AI Overviews</div>
+            <div className="font-roboto text-2xl sm:text-4xl text-[#D9B45F] mb-1">AI Overviews</div>
             <div className="text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#9D9B91]">Google Summary Extraction</div>
           </div>
           <div>
-            <div className="font-serif text-2xl sm:text-4xl text-[#D9B45F] mb-1">Pan-India</div>
+            <div className="font-roboto text-2xl sm:text-4xl text-[#D9B45F] mb-1">Pan-India</div>
             <div className="text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#9D9B91]">Entity Authority Reach</div>
           </div>
         </div>
@@ -257,10 +257,10 @@ export default function GeoAgencyIndiaPage() {
           <span className="text-xs font-semibold tracking-[0.25em] text-[#D9B45F] uppercase block mb-3">
             THE GEO PLAYBOOK
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl lg:text-5xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
             Four Strategic Pillars of Generative Optimization
           </h2>
-          <p className="font-sans text-sm sm:text-base text-[#9D9B91] leading-relaxed">
+          <p className="font-lora text-sm sm:text-base text-[#9D9B91] leading-relaxed">
             Search is transitioning from ranked keywords to synthesized AI answers. Here is how we ensure your enterprise is the answer.
           </p>
         </div>
@@ -276,8 +276,8 @@ export default function GeoAgencyIndiaPage() {
                 <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#071E18] border border-[#0C6B52]/40 flex items-center justify-center text-[#D9B45F] mb-5 sm:mb-6 group-hover:scale-105 transition-transform">
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE3] mb-3 sm:mb-4">{m.title}</h3>
-                <p className="font-sans text-sm sm:text-base text-[#9D9B91] leading-relaxed mb-5 sm:mb-6">
+                <h3 className="font-roboto text-xl sm:text-2xl text-[#F3EFE3] mb-3 sm:mb-4">{m.title}</h3>
+                <p className="font-lora text-sm sm:text-base text-[#9D9B91] leading-relaxed mb-5 sm:mb-6">
                   {m.desc}
                 </p>
                 <div className="space-y-2.5 pt-4 border-t border-[#D9B45F]/10">
@@ -300,10 +300,10 @@ export default function GeoAgencyIndiaPage() {
           <span className="text-xs font-semibold tracking-[0.25em] text-[#D9B45F] uppercase block mb-3">
             PARADIGM SHIFT
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl lg:text-5xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
             Traditional SEO vs. Generative Engine Optimization (GEO)
           </h2>
-          <p className="font-sans text-sm sm:text-base text-[#9D9B91]">
+          <p className="font-lora text-sm sm:text-base text-[#9D9B91]">
             How modern search mechanics demand an entirely different architectural playbook.
           </p>
         </div>
@@ -313,7 +313,7 @@ export default function GeoAgencyIndiaPage() {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="border-b border-[#D9B45F]/20 bg-[#071E18]/50">
-                  <th className="py-4 sm:py-5 px-4 sm:px-6 font-serif text-base sm:text-lg text-[#F3EFE3] w-1/4">Search Dimension</th>
+                  <th className="py-4 sm:py-5 px-4 sm:px-6 font-roboto text-base sm:text-lg text-[#F3EFE3] w-1/4">Search Dimension</th>
                   <th className="py-4 sm:py-5 px-4 sm:px-6 font-sans text-xs tracking-wider uppercase text-[#9D9B91] w-3/8">Traditional Organic SEO</th>
                   <th className="py-4 sm:py-5 px-4 sm:px-6 font-sans text-xs tracking-wider uppercase text-[#D9B45F] w-3/8">Generative Optimization (GEO)</th>
                 </tr>
@@ -338,7 +338,7 @@ export default function GeoAgencyIndiaPage() {
           <span className="text-xs font-semibold tracking-[0.25em] text-[#D9B45F] uppercase block mb-3">
             FREQUENTLY ASKED QUESTIONS
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
             Understanding Generative Engine Optimization
           </h2>
         </div>
@@ -349,11 +349,11 @@ export default function GeoAgencyIndiaPage() {
               key={idx}
               className="p-5 sm:p-8 rounded-xl bg-[#0B110F] border border-[#18A982]/15 hover:border-[#D9B45F]/30 transition-all"
             >
-              <h3 className="font-serif text-lg sm:text-2xl text-[#F3EFE3] mb-3 flex items-start gap-3">
+              <h3 className="font-roboto text-lg sm:text-2xl text-[#F3EFE3] mb-3 flex items-start gap-3">
                 <HelpCircle className="w-5 h-5 text-[#D9B45F] shrink-0 mt-0.5" />
                 <span>{faq.q}</span>
               </h3>
-              <p className="font-sans text-xs sm:text-base text-[#9D9B91] leading-relaxed pl-8">
+              <p className="font-lora text-xs sm:text-base text-[#9D9B91] leading-relaxed pl-8">
                 {faq.a}
               </p>
             </div>
@@ -369,10 +369,10 @@ export default function GeoAgencyIndiaPage() {
           <span className="text-xs font-semibold tracking-[0.26em] text-[#D9B45F] uppercase block mb-3 sm:mb-4">
             CLAIM YOUR AI SEARCH VISIBILITY
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl lg:text-5xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
             Ensure Your Brand is Cited in Every AI Search in India
           </h2>
-          <p className="font-sans text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+          <p className="font-lora text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
             Audit your current presence in SearchGPT and Google AI Overviews with our technical architects.
           </p>
 

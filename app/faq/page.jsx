@@ -121,10 +121,10 @@ export default function FAQPage() {
               CLIENT RESOURCE
             </span>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-[#F3EFE3] mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-roboto font-normal text-[#F3EFE3] mb-4">
             Frequently Asked Questions
           </h1>
-          <p className="text-sm sm:text-base font-sans text-[#9D9B91]">
+          <p className="text-sm sm:text-base font-lora text-[#9D9B91]">
             Clear, transparent answers about working with our digital marketing and web engineering studio in Jaipur.
           </p>
         </div>
@@ -136,10 +136,10 @@ export default function FAQPage() {
               key={idx}
               className="bg-[#0E1513] border border-[#0B5E49]/25 hover:border-[#D9B45F]/40 transition-colors p-6 sm:p-8 rounded-lg"
             >
-              <h2 className="text-lg sm:text-xl font-serif text-[#F3EFE3] font-normal mb-3">
+              <h2 className="text-lg sm:text-xl font-roboto text-[#F3EFE3] font-normal mb-3">
                 {faq.q}
               </h2>
-              <p className="text-sm sm:text-base font-sans text-[#B8B5AB] leading-relaxed">
+              <p className="text-sm sm:text-base font-lora text-[#B8B5AB] leading-relaxed">
                 {faq.a}
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function FAQPage() {
         {/* Bottom CTA Box */}
         <div className="mt-16 bg-gradient-to-br from-[#0B5E49]/20 to-[#071E18]/40 border border-[#0B5E49]/40 p-8 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
-            <h3 className="text-xl font-serif text-[#F3EFE3] mb-2">Have a question not listed here?</h3>
+            <h3 className="text-xl font-roboto text-[#F3EFE3] mb-2">Have a question not listed here?</h3>
             <p className="text-sm text-[#9D9B91]">
               Reach out directly on WhatsApp or submit a brief inquiry. We respond within 24 business hours.
             </p>

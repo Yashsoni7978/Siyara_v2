@@ -125,7 +125,7 @@ export default function ContactIntake() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '80px 0px' }}
             transition={{ duration: 0.6, ease: easeCustom }}
-            className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[1.08] sm:leading-[0.98] mb-4 sm:mb-6 break-words"
+            className="font-roboto text-3xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[1.08] sm:leading-[0.98] mb-4 sm:mb-6 break-words"
           >
             START A <br />
             <span className="text-[#0B5E49] font-normal">CONVERSATION.</span>
@@ -152,10 +152,10 @@ export default function ContactIntake() {
             <div className="w-14 h-14 rounded-full bg-[#0B5E49] text-[#F3EFE3] flex items-center justify-center mx-auto mb-6">
               <CheckCircle2 className="w-7 h-7" />
             </div>
-            <h3 className="font-serif text-3xl text-[#101613] font-normal mb-3">
+            <h3 className="font-roboto text-3xl text-[#101613] font-normal mb-3">
               Brief Received.
             </h3>
-            <p className="font-sans text-sm text-[#101613]/70 leading-relaxed mb-8">
+            <p className="font-lora text-sm text-[#101613]/70 leading-relaxed mb-8">
               We will review your brief and get back to you with the next strategic step.
             </p>
             <button
@@ -319,7 +319,7 @@ export default function ContactIntake() {
                 )}
               </button>
 
-              <p className="font-sans text-xs text-[#101613]/60 font-light leading-relaxed">
+              <p className="font-lora text-xs text-[#101613]/60 font-light leading-relaxed">
                 We'll review your brief and get back to you with the next step.
               </p>
             </div>

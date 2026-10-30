@@ -239,12 +239,12 @@ export default function Hero() {
               </div>
 
               {/* Main Headline (h1 for SEO) */}
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-[54px] xl:text-[62px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight mb-4 sm:mb-6 drop-shadow-[0_2px_14px_rgba(0,0,0,0.6)]">
+              <h1 className="font-roboto text-3xl sm:text-5xl lg:text-[64px] xl:text-[72px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight mb-4 sm:mb-6 drop-shadow-[0_2px_14px_rgba(0,0,0,0.6)]">
                 {slide.headline}
               </h1>
 
               {/* Service Description */}
-              <p className="font-sans text-xs sm:text-sm lg:text-base text-[#ECE7D8]/95 font-light leading-relaxed max-w-xl mb-8 sm:mb-10 drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)]">
+              <p className="font-lora text-sm sm:text-base lg:text-[18px] text-[#ECE7D8]/95 font-normal leading-relaxed max-w-xl mb-8 sm:mb-10 drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)]">
                 {slide.description}
               </p>
 

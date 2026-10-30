@@ -51,7 +51,7 @@ export default function ServicesIndustries() {
           transition={{ duration: 0.7 }}
           className="mb-16 sm:mb-20 max-w-3xl"
         >
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98]">
+          <h2 className="font-roboto text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98]">
             EIGHT DISCIPLINE <br />
             <span className="text-[#0B5E49] font-normal">SPECIALIST SYSTEM.</span>
           </h2>
@@ -84,7 +84,7 @@ export default function ServicesIndustries() {
                 <h3 className="font-sans text-sm font-bold tracking-[0.16em] uppercase text-[#101613] group-hover:text-[#0B5E49] transition-colors mb-2">
                   {item.name}
                 </h3>
-                <p className="font-sans text-xs text-[#101613]/70 font-light leading-relaxed">
+                <p className="font-lora text-xs text-[#101613]/70 font-light leading-relaxed">
                   {item.tags}
                 </p>
               </div>

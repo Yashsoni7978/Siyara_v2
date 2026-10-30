@@ -73,7 +73,7 @@ export default function ServicesProcess() {
           transition={{ duration: 0.7 }}
           className="mb-20 max-w-3xl"
         >
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98]">
+          <h2 className="font-roboto text-4xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[0.98]">
             FROM STRATEGY <br />
             <span className="text-[#0B5E49] font-normal">TO EXECUTION.</span>
           </h2>
@@ -103,7 +103,7 @@ export default function ServicesProcess() {
                   className="flex flex-col group cursor-pointer"
                 >
                   {/* Number */}
-                  <div className="font-serif text-3xl sm:text-4xl text-[#B9923F] font-normal mb-3">
+                  <div className="font-roboto text-3xl sm:text-4xl text-[#B9923F] font-normal mb-3">
                     {step.id}
                   </div>
 
@@ -117,7 +117,7 @@ export default function ServicesProcess() {
                   </h3>
 
                   {/* Description */}
-                  <p className="font-sans text-[11px] text-[#101613]/70 font-light leading-relaxed">
+                  <p className="font-lora text-[11px] text-[#101613]/70 font-light leading-relaxed">
                     {step.description}
                   </p>
                 </div>

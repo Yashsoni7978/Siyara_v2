@@ -122,14 +122,14 @@ export default function InteriorDesignIndustryPage() {
             </span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.12] sm:leading-[1.05] break-words mb-6 sm:mb-8">
+          <h1 className="font-roboto text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.12] sm:leading-[1.05] break-words mb-6 sm:mb-8">
             Website Design for <br className="hidden sm:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26]">
               Interior Designers & Architects.
             </span>
           </h1>
 
-          <p className="font-sans text-sm sm:text-lg text-[#9D9B91] font-light leading-relaxed max-w-2xl mb-8 sm:mb-10">
+          <p className="font-lora text-sm sm:text-lg text-[#9D9B91] font-light leading-relaxed max-w-2xl mb-8 sm:mb-10">
             Interior design is an art of proportion, texture, and light. Your digital portfolio should reflect the same exacting craft. We build editorial, lightning-fast digital portfolios that command premium project fees.
           </p>
 
@@ -162,13 +162,13 @@ export default function InteriorDesignIndustryPage() {
             <span className="text-xs font-sans font-bold tracking-widest text-[#D9B45F] block mb-3 uppercase">
               THE VISUAL COMPROMISE
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight break-words mb-4 sm:mb-6">
+            <h2 className="font-roboto text-2xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight break-words mb-4 sm:mb-6">
               Why Slow Portfolio Websites Damage Designer Credibility.
             </h2>
-            <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed mb-4 sm:mb-6 font-light">
+            <p className="font-lora text-xs sm:text-sm text-[#9D9B91] leading-relaxed mb-4 sm:mb-6 font-light">
               Most design firms upload uncompressed 15MB architectural photographs to template websites. The result is a slow, laggy experience where images take 6+ seconds to load. Affluent homeowners evaluating a ₹50-lakh interior renovation will not wait for a laggy page to render.
             </p>
-            <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed font-light">
+            <p className="font-lora text-xs sm:text-sm text-[#9D9B91] leading-relaxed font-light">
               Siyara Innovations applies custom image optimization pipelines: full-resolution visual clarity, responsive aspect ratios, editorial whitespace, and zero layout shift.
             </p>
           </div>
@@ -179,7 +179,7 @@ export default function InteriorDesignIndustryPage() {
               <h3 className="font-sans text-xs sm:text-sm font-bold uppercase text-[#F3EFE3] mb-2 tracking-wider">
                 Crisp Retina Rendering
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed">
                 Lossless texture preservation for marble, bespoke wood finishes, lighting fixtures, and custom textiles.
               </p>
             </div>
@@ -189,7 +189,7 @@ export default function InteriorDesignIndustryPage() {
               <h3 className="font-sans text-xs sm:text-sm font-bold uppercase text-[#F3EFE3] mb-2 tracking-wider">
                 Style & Room Taxonomies
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed">
                 Effortless curation across living rooms, master suites, commercial cafes, and heritage courtyard restorations.
               </p>
             </div>
@@ -199,7 +199,7 @@ export default function InteriorDesignIndustryPage() {
               <h3 className="font-sans text-xs sm:text-sm font-bold uppercase text-[#F3EFE3] mb-2 tracking-wider">
                 Luxury Editorial Polish
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed">
                 Warm ivory textures, bespoke typography, and subtle micro-interactions that mirror architectural elegance.
               </p>
             </div>
@@ -209,7 +209,7 @@ export default function InteriorDesignIndustryPage() {
               <h3 className="font-sans text-xs sm:text-sm font-bold uppercase text-[#F3EFE3] mb-2 tracking-wider">
                 Brand & Material Palette
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed">
                 Color harmony aligned with your studio’s signature aesthetic—from minimal Scandinavian to rich Rajasthani heritage.
               </p>
             </div>
@@ -223,7 +223,7 @@ export default function InteriorDesignIndustryPage() {
           <span className="text-xs font-sans font-bold tracking-widest text-[#D9B45F] block mb-2 sm:mb-3 uppercase">
             DESIGNER SPECIFICATIONS
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-[#F3EFE3] font-normal leading-tight break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl lg:text-5xl text-[#F3EFE3] font-normal leading-tight break-words">
             What Every Siyara Interior Portfolio Delivers.
           </h2>
         </div>
@@ -240,7 +240,7 @@ export default function InteriorDesignIndustryPage() {
                   {item.title}
                 </h3>
               </div>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed font-light">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed font-light">
                 {item.desc}
               </p>
             </div>
@@ -254,10 +254,10 @@ export default function InteriorDesignIndustryPage() {
           <span className="text-[10px] font-sans font-bold tracking-widest text-[#D9B45F] uppercase block mb-3">
             INTERIOR ARCHITECTURE DEMONSTRATION PROTOTYPE
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl text-[#F3EFE3] mb-4 break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl text-[#F3EFE3] mb-4 break-words">
             Artisanal Spatial Studio Concept
           </h2>
-          <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-6">
+          <p className="font-lora text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-6">
             Interactive prototype demonstrating digital architecture for architectural and interior design studios: earthy editorial typography, high-resolution material curation with Next.js image optimization, and private consultation intake funnels.
           </p>
           <div className="flex items-center gap-4">
@@ -283,10 +283,10 @@ export default function InteriorDesignIndustryPage() {
                 <BookOpen className="w-3.5 h-3.5" />
                 <span>EXECUTIVE INDUSTRY PLAYBOOK</span>
               </div>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
+              <h3 className="font-roboto text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
                 Luxury Interior Designer Portfolio Website Design Jaipur: Visual Storytelling & Client Acquisition
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
+              <p className="font-lora text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
                 Explore our guide on showcasing bespoke residential transformations, architectural project galleries, and private consultation funnels for elite interior studios in Rajasthan.
               </p>
             </div>
@@ -307,10 +307,10 @@ export default function InteriorDesignIndustryPage() {
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-20 text-center">
         <div className="max-w-2xl mx-auto">
           <Palette className="w-9 h-9 sm:w-10 sm:h-10 text-[#D9B45F] mx-auto mb-5 sm:mb-6" />
-          <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-[#F3EFE3] font-normal leading-tight break-words mb-4 sm:mb-6">
+          <h2 className="font-roboto text-2xl sm:text-4xl lg:text-5xl text-[#F3EFE3] font-normal leading-tight break-words mb-4 sm:mb-6">
             Ready to Build a Portfolio Worthy of Your Architecture?
           </h2>
-          <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-8 sm:mb-10">
+          <p className="font-lora text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-8 sm:mb-10">
             Reach out via WhatsApp to discuss your studio's portfolio layout, high-resolution photography curation, and local search visibility in Jaipur.
           </p>
           <a

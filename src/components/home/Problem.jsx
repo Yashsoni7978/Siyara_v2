@@ -92,28 +92,28 @@ export default function Problem() {
             </div>
 
             {/* Main Headline */}
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-[50px] xl:text-[58px] text-[#080B0A] font-normal leading-[1.08] tracking-tight mb-4 sm:mb-6">
+            <h2 className="font-roboto text-3xl sm:text-5xl lg:text-[50px] xl:text-[58px] text-[#080B0A] font-normal leading-[1.08] tracking-tight mb-4 sm:mb-6">
               Your business<br />
               doesn&apos;t need just<br />
-              <span className="italic font-serif text-[#19A878]">a website.</span>
+              <span className="italic font-roboto text-[#19A878]">a website.</span>
             </h2>
 
             {/* Supporting Line */}
-            <p className="font-sans text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-[#080B0A]/75 uppercase mb-6 sm:mb-8">
+            <p className="font-lora text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-[#080B0A]/75 uppercase mb-6 sm:mb-8">
               IT NEEDS A DIGITAL SYSTEM THAT PERFORMS.
             </p>
 
             {/* Context Paragraph */}
-            <p className="font-sans text-xs sm:text-sm text-[#101613]/75 font-light leading-relaxed max-w-md mb-8 sm:mb-10">
+            <p className="font-lora text-xs sm:text-sm text-[#101613]/75 font-light leading-relaxed max-w-md mb-8 sm:mb-10">
               Most businesses already have a website. The real challenge is that it doesn&apos;t bring the right people, doesn&apos;t communicate your brand clearly, and doesn&apos;t work as hard as it should.
             </p>
 
             {/* Concluding Statement Callout */}
             <div className="border-l-2 border-[#19A878] pl-4 sm:pl-5 py-1.5 max-w-md bg-[#ECE7D8]/40 rounded-r-lg">
-              <p className="font-sans text-xs sm:text-sm text-[#080B0A] font-medium leading-relaxed">
+              <p className="font-lora text-xs sm:text-sm text-[#080B0A] font-medium leading-relaxed">
                 This is where the right digital strategy makes the difference.
               </p>
-              <p className="font-sans text-[11px] sm:text-xs text-[#101613]/60 font-light mt-1">
+              <p className="font-lora text-[11px] sm:text-xs text-[#101613]/60 font-light mt-1">
                 Explore the key challenges businesses face and see how we solve them.
               </p>
             </div>
@@ -144,7 +144,7 @@ export default function Problem() {
                     {/* Left: Number, Divider & Title */}
                     <div className="flex items-center gap-3 sm:gap-5 min-w-0 pr-4">
                       {/* Number */}
-                      <span className="font-serif text-2xl sm:text-3xl text-[#B9923F] font-light tabular-nums shrink-0">
+                      <span className="font-roboto text-2xl sm:text-3xl text-[#B9923F] font-light tabular-nums shrink-0">
                         {challenge.id}
                       </span>
 
@@ -153,7 +153,7 @@ export default function Problem() {
 
                       {/* Challenge Title */}
                       <h3
-                        className={`font-serif text-xl sm:text-2xl lg:text-[25px] font-normal tracking-normal transition-colors duration-200 truncate ${
+                        className={`font-roboto text-xl sm:text-2xl lg:text-[25px] font-normal tracking-normal transition-colors duration-200 truncate ${
                           isExpanded
                             ? 'text-[#063C2D] font-medium'
                             : 'text-[#080B0A] group-hover:text-[#19A878]'
@@ -192,7 +192,7 @@ export default function Problem() {
                       >
                         <div className="pt-1 pb-6 sm:pb-7 pl-0 sm:pl-14">
                           <div className="rounded-xl bg-[#ECE7D8]/80 border border-[#080B0A]/5 p-5 sm:p-6 shadow-sm">
-                            <p className="font-sans text-xs sm:text-sm text-[#101613]/85 leading-relaxed font-light">
+                            <p className="font-lora text-xs sm:text-sm text-[#101613]/85 leading-relaxed font-light">
                               {challenge.description}
                             </p>
 

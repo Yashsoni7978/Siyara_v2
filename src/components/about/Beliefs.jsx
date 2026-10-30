@@ -67,7 +67,7 @@ export default function Beliefs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '80px 0px' }}
             transition={{ duration: 0.6, ease: easeCustom }}
-            className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[1.04] mb-4 sm:mb-6 break-words"
+            className="font-roboto text-3xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[1.04] mb-4 sm:mb-6 break-words"
           >
             We saw great Jaipur businesses get lost in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">disconnected digital experiences.</span>
           </motion.h2>
@@ -124,7 +124,7 @@ export default function Beliefs() {
                   </h3>
 
                   {/* Description */}
-                  <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed">
+                  <p className="font-lora text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed">
                     {belief.description}
                   </p>
                 </div>

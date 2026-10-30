@@ -194,11 +194,11 @@ export default async function ProjectDetailPage({ params }) {
               </span>
             </div>
 
-            <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal leading-[1.05] tracking-tight text-[#F3EFE4] mb-6">
+            <h1 className="font-roboto text-4xl sm:text-6xl lg:text-7xl font-normal leading-[1.05] tracking-tight text-[#F3EFE4] mb-6">
               {project.name || project.title}
             </h1>
 
-            <p className="font-sans text-base sm:text-xl text-[#A5B8AA] font-light leading-relaxed mb-8 max-w-3xl">
+            <p className="font-lora text-base sm:text-xl text-[#A5B8AA] font-light leading-relaxed mb-8 max-w-3xl">
               {project.projectType || project.tagline}
             </p>
 
@@ -288,14 +288,14 @@ export default async function ProjectDetailPage({ params }) {
             
             {/* Project Overview */}
             <div>
-              <h2 className="font-serif text-2xl sm:text-3xl text-[#F3EFE4] font-normal mb-4">
+              <h2 className="font-roboto text-2xl sm:text-3xl text-[#F3EFE4] font-normal mb-4">
                 System Overview
               </h2>
               <div className="h-[1px] w-12 bg-[#19A878] mb-6" />
-              <p className="font-sans text-base sm:text-lg text-[#A5B8AA] font-light leading-relaxed mb-6">
+              <p className="font-lora text-base sm:text-lg text-[#A5B8AA] font-light leading-relaxed mb-6">
                 {project.description}
               </p>
-              <p className="font-sans text-sm sm:text-base text-[#A5B8AA]/90 font-light leading-relaxed">
+              <p className="font-lora text-sm sm:text-base text-[#A5B8AA]/90 font-light leading-relaxed">
                 {classification === 'INTERNAL_PROJECT' && (
                   'An internal digital platform engineered and maintained in-house for stage hosting, media systems, and studio initiatives.'
                 )}
@@ -313,7 +313,7 @@ export default async function ProjectDetailPage({ params }) {
 
             {/* System Capabilities */}
             <div>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE4] font-normal mb-4">
+              <h3 className="font-roboto text-xl sm:text-2xl text-[#F3EFE4] font-normal mb-4">
                 Architectural Capabilities
               </h3>
               <div className="h-[1px] w-12 bg-[#D9B45F] mb-6" />
@@ -327,7 +327,7 @@ export default async function ProjectDetailPage({ params }) {
                         {service}
                       </span>
                     </div>
-                    <p className="font-sans text-xs text-[#A5B8AA] font-light leading-relaxed">
+                    <p className="font-lora text-xs text-[#A5B8AA] font-light leading-relaxed">
                       Integrated into the core digital system architecture for performance, clarity, and conversion flow.
                     </p>
                   </div>
@@ -343,7 +343,7 @@ export default async function ProjectDetailPage({ params }) {
                   <h4 className="font-sans text-sm font-bold tracking-wider uppercase text-[#F3EFE4] mb-2">
                     Transparent Scope Disclosure · {classConfig.label}
                   </h4>
-                  <p className="font-sans text-xs sm:text-sm text-[#A5B8AA] leading-relaxed mb-4">
+                  <p className="font-lora text-xs sm:text-sm text-[#A5B8AA] leading-relaxed mb-4">
                     {classification === 'DELIVERED_PROJECT' && (
                       'This project is a custom production platform engineered and deployed for live client use under an external commercial engagement.'
                     )}
@@ -423,7 +423,7 @@ export default async function ProjectDetailPage({ params }) {
               <h3 className="font-sans text-xs font-bold tracking-widest text-[#19A878] uppercase mb-2">
                 Engineer a Similar System
               </h3>
-              <p className="font-sans text-xs text-[#A5B8AA] leading-relaxed mb-6">
+              <p className="font-lora text-xs text-[#A5B8AA] leading-relaxed mb-6">
                 Discuss custom digital architecture, high-speed Next.js web development, or search positioning for your business.
               </p>
 
@@ -462,7 +462,7 @@ export default async function ProjectDetailPage({ params }) {
               <span className="text-xs font-sans font-bold tracking-widest text-[#D9B45F] uppercase block mb-2">
                 Portfolio Continuity
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl text-[#F3EFE4] font-normal">
+              <h2 className="font-roboto text-3xl sm:text-4xl text-[#F3EFE4] font-normal">
                 Related {project.industry} Systems
               </h2>
             </div>
@@ -505,10 +505,10 @@ export default async function ProjectDetailPage({ params }) {
                   <span className="text-[10px] font-sans font-semibold tracking-widest text-[#D9B45F] uppercase block mb-1">
                     {rel.industry}
                   </span>
-                  <h3 className="font-serif text-xl text-[#F3EFE4] font-normal group-hover:text-[#19A878] transition-colors mb-2">
+                  <h3 className="font-roboto text-xl text-[#F3EFE4] font-normal group-hover:text-[#19A878] transition-colors mb-2">
                     {rel.name}
                   </h3>
-                  <p className="font-sans text-xs text-[#A5B8AA] line-clamp-2 leading-relaxed">
+                  <p className="font-lora text-xs text-[#A5B8AA] line-clamp-2 leading-relaxed">
                     {rel.description}
                   </p>
                 </Link>

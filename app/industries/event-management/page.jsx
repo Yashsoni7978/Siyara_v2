@@ -122,14 +122,14 @@ export default function EventManagementIndustryPage() {
             </span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.12] sm:leading-[1.05] break-words mb-6 sm:mb-8">
+          <h1 className="font-roboto text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.12] sm:leading-[1.05] break-words mb-6 sm:mb-8">
             Website Development for <br className="hidden sm:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26]">
               Event Management & Wedding Planners.
             </span>
           </h1>
 
-          <p className="font-sans text-sm sm:text-lg text-[#9D9B91] font-light leading-relaxed max-w-2xl mb-8 sm:mb-10">
+          <p className="font-lora text-sm sm:text-lg text-[#9D9B91] font-light leading-relaxed max-w-2xl mb-8 sm:mb-10">
             Rajasthan is the global capital of destination weddings and grand celebrations. Your website must communicate the sheer scale, visual glamour, and flawless execution of your events. We engineer cinematic digital platforms that book multi-lakh celebrations.
           </p>
 
@@ -162,13 +162,13 @@ export default function EventManagementIndustryPage() {
             <span className="text-xs font-sans font-bold tracking-widest text-[#D9B45F] block mb-3 uppercase">
               THE CELEBRATION CONVERSION GAP
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight break-words mb-4 sm:mb-6">
+            <h2 className="font-roboto text-2xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight break-words mb-4 sm:mb-6">
               Why Instagram Alone Isn't Enough to Win Luxury Weddings.
             </h2>
-            <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed mb-4 sm:mb-6 font-light">
+            <p className="font-lora text-xs sm:text-sm text-[#9D9B91] leading-relaxed mb-4 sm:mb-6 font-light">
               While social media builds initial interest, high-budget corporate clients and NRI destination wedding families demand institutional credibility before signing ₹20L+ event contracts. A broken or non-existent website signals lack of professional infrastructure.
             </p>
-            <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed font-light">
+            <p className="font-lora text-xs sm:text-sm text-[#9D9B91] leading-relaxed font-light">
               Siyara Innovations bridges this gap: cinematic event reels, structured venue guides, transparent vendor coordination outlines, and instant WhatsApp inquiry flows that convert attention into signed bookings.
             </p>
           </div>
@@ -179,7 +179,7 @@ export default function EventManagementIndustryPage() {
               <h3 className="font-sans text-xs sm:text-sm font-bold uppercase text-[#F3EFE3] mb-2 tracking-wider">
                 Luxury Celebration Polish
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed">
                 Opulent design language matching the elegance of heritage palaces and five-star luxury resorts.
               </p>
             </div>
@@ -189,7 +189,7 @@ export default function EventManagementIndustryPage() {
               <h3 className="font-sans text-xs sm:text-sm font-bold uppercase text-[#F3EFE3] mb-2 tracking-wider">
                 Video Storytelling
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed">
                 Smooth video reel backgrounds optimized for responsive streaming without consuming excessive mobile bandwidth.
               </p>
             </div>
@@ -199,7 +199,7 @@ export default function EventManagementIndustryPage() {
               <h3 className="font-sans text-xs sm:text-sm font-bold uppercase text-[#F3EFE3] mb-2 tracking-wider">
                 Date & Season Inquiries
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed">
                 Streamlined intake capturing wedding season dates, guest counts, and venue preferences in seconds.
               </p>
             </div>
@@ -209,7 +209,7 @@ export default function EventManagementIndustryPage() {
               <h3 className="font-sans text-xs sm:text-sm font-bold uppercase text-[#F3EFE3] mb-2 tracking-wider">
                 High-Trust Production Proof
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed">
                 Showcase verified artist lineups, technical stagecraft, celebrity hosts, and hospitality logistics.
               </p>
             </div>
@@ -223,7 +223,7 @@ export default function EventManagementIndustryPage() {
           <span className="text-xs font-sans font-bold tracking-widest text-[#D9B45F] block mb-2 sm:mb-3 uppercase">
             EVENT PLATFORM ARCHITECTURE
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-[#F3EFE3] font-normal leading-tight break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl lg:text-5xl text-[#F3EFE3] font-normal leading-tight break-words">
             What Every Siyara Event Website Includes.
           </h2>
         </div>
@@ -240,7 +240,7 @@ export default function EventManagementIndustryPage() {
                   {item.title}
                 </h3>
               </div>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed font-light">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed font-light">
                 {item.desc}
               </p>
             </div>
@@ -255,7 +255,7 @@ export default function EventManagementIndustryPage() {
             <span className="text-xs font-sans font-bold tracking-widest text-[#D9B45F] block mb-2 uppercase">
               PROVEN DEMONSTRATIONS
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl text-[#F3EFE3] break-words">
+            <h2 className="font-roboto text-2xl sm:text-4xl text-[#F3EFE3] break-words">
               Event & Wedding Web Architecture & Demonstration Prototypes.
             </h2>
           </div>
@@ -274,10 +274,10 @@ export default function EventManagementIndustryPage() {
               <span className="text-[10px] font-sans font-bold tracking-widest text-[#D9B45F] uppercase block mb-2">
                 EVENT DESIGN & CELEBRATIONS
               </span>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE3] mb-3">
+              <h3 className="font-roboto text-xl sm:text-2xl text-[#F3EFE3] mb-3">
                 Bespoke Event & Wedding Management Studio Concept
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
+              <p className="font-lora text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
                 Interactive prototype demonstrating bespoke event and wedding architecture: palace celebration showcases in Rajasthan, spatial scenography, and luxury enquiry intake funnels.
               </p>
             </div>
@@ -297,10 +297,10 @@ export default function EventManagementIndustryPage() {
               <span className="text-[10px] font-sans font-bold tracking-widest text-[#D9B45F] uppercase block mb-2">
                 LUXURY DESTINATION SANCTUARY
               </span>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE3] mb-3">
+              <h3 className="font-roboto text-xl sm:text-2xl text-[#F3EFE3] mb-3">
                 Heritage Destination & Celebration Venue Concept
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
+              <p className="font-lora text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
                 Interactive prototype demonstrating destination retreat and celebration venue architecture: immersive visual storytelling, heritage booking protocols, and experiential luxury presentation.
               </p>
             </div>
@@ -326,10 +326,10 @@ export default function EventManagementIndustryPage() {
                 <BookOpen className="w-3.5 h-3.5" />
                 <span>EXECUTIVE INDUSTRY PLAYBOOK</span>
               </div>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
+              <h3 className="font-roboto text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
                 Wedding & Luxury Event Planner Website Design Jaipur: Destination Event Portals
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
+              <p className="font-lora text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
                 Discover how royal destination wedding planners and luxury event directors in Rajasthan engineer high-ticket inquiry funnels, video portfolio galleries, and RSVP management systems.
               </p>
             </div>
@@ -350,10 +350,10 @@ export default function EventManagementIndustryPage() {
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-20 text-center">
         <div className="max-w-2xl mx-auto">
           <Sparkles className="w-9 h-9 sm:w-10 sm:h-10 text-[#D9B45F] mx-auto mb-5 sm:mb-6" />
-          <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-[#F3EFE3] font-normal leading-tight break-words mb-4 sm:mb-6">
+          <h2 className="font-roboto text-2xl sm:text-4xl lg:text-5xl text-[#F3EFE3] font-normal leading-tight break-words mb-4 sm:mb-6">
             Ready to Build an Event Platform That Books Grand Celebrations?
           </h2>
-          <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-8 sm:mb-10">
+          <p className="font-lora text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-8 sm:mb-10">
             Reach out via WhatsApp to discuss your event company's digital portfolio, visual reel showcase, and destination wedding lead funnels.
           </p>
           <a

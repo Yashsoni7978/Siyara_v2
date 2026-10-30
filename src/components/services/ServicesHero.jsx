@@ -74,7 +74,7 @@ export default function ServicesHero() {
 
             {/* Headline - single H1, Jaipur-first */}
             <div className="mb-6">
-              <h1 className="font-serif leading-[0.96] tracking-tight">
+              <h1 className="font-roboto leading-[0.96] tracking-tight">
                 <motion.span
                   initial="hidden"
                   animate="visible"
@@ -111,7 +111,7 @@ export default function ServicesHero() {
               variants={fadeUp(850)}
               className="mb-10 max-w-lg"
             >
-              <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
+              <p className="font-lora text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
                 Strategy, brand, technology, visibility, and growth - built as one connected system for businesses in Jaipur, not generic templates.
               </p>
             </motion.div>

@@ -60,12 +60,12 @@ export default function ArticleCard({ article, index = 0, onSelectArticle }) {
           </div>
 
           {/* Title */}
-          <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#F3EFE4] group-hover:text-[#E5C378] transition-colors duration-300 leading-snug mb-3">
+          <h3 className="font-roboto text-xl sm:text-2xl font-normal text-[#F3EFE4] group-hover:text-[#E5C378] transition-colors duration-300 leading-snug mb-3">
             {article.title}
           </h3>
 
           {/* Excerpt */}
-          <p className="font-sans text-xs text-[#CFC9BB]/75 font-light leading-relaxed line-clamp-3 mb-6">
+          <p className="font-lora text-xs text-[#CFC9BB]/75 font-light leading-relaxed line-clamp-3 mb-6">
             {article.excerpt}
           </p>
         </div>

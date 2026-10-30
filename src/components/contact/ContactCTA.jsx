@@ -27,7 +27,7 @@ export default function ContactCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.6, ease: easeCustom }}
-          className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[0.96] tracking-tight mb-4 sm:mb-6 max-w-3xl mx-auto break-words"
+          className="font-roboto text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[0.96] tracking-tight mb-4 sm:mb-6 max-w-3xl mx-auto break-words"
         >
           HAVE AN IDEA? <br />
           LET'S GIVE IT <span className="text-[#D9B45F] font-normal">A SYSTEM.</span>

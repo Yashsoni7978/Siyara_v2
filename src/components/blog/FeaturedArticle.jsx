@@ -69,12 +69,12 @@ export default function FeaturedArticle({ article, onSelectArticle }) {
               </div>
 
               {/* Title */}
-              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE4] group-hover:text-[#E5C378] transition-colors duration-300 leading-tight mb-4 break-words">
+              <h2 className="font-roboto text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE4] group-hover:text-[#E5C378] transition-colors duration-300 leading-tight mb-4 break-words">
                 {article.title}
               </h2>
 
               {/* Excerpt */}
-              <p className="font-sans text-xs sm:text-sm text-[#CFC9BB]/80 font-light leading-relaxed mb-6">
+              <p className="font-lora text-xs sm:text-sm text-[#CFC9BB]/80 font-light leading-relaxed mb-6">
                 {article.excerpt}
               </p>
             </div>

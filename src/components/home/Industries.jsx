@@ -106,14 +106,14 @@ export default function Industries() {
           {/* Heading (Left) & Supporting Copy (Right) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end">
             <div className="lg:col-span-7 xl:col-span-7">
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-[46px] xl:text-[50px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight">
+              <h2 className="font-roboto text-3xl sm:text-4xl lg:text-[46px] xl:text-[50px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight">
                 Industries We{' '}
-                <span className="italic font-serif text-[#D4AF37]">Empower.</span>
+                <span className="italic font-roboto text-[#D4AF37]">Empower.</span>
               </h2>
             </div>
 
             <div className="lg:col-span-5 xl:col-span-5 flex lg:justify-end">
-              <p className="font-sans text-xs sm:text-[13px] text-[#A5B8AA]/80 font-light leading-relaxed max-w-xs lg:text-right">
+              <p className="font-lora text-xs sm:text-[13px] text-[#A5B8AA]/80 font-light leading-relaxed max-w-xs lg:text-right">
                 Strategic branding, digital platforms and growth systems for high-potential industries.
               </p>
             </div>

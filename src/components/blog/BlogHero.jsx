@@ -34,7 +34,7 @@ export default function BlogHero() {
           </div>
 
           {/* Main Editorial Display Heading */}
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl font-light text-[#F3EFE4] leading-[1.08] tracking-tight mb-6 sm:mb-8 break-words">
+          <h1 className="font-roboto text-3xl sm:text-5xl md:text-7xl font-light text-[#F3EFE4] leading-[1.08] tracking-tight mb-6 sm:mb-8 break-words">
             Ideas that shape the{' '}
             <span className="font-normal text-gold-gradient">
               digital future.
@@ -42,7 +42,7 @@ export default function BlogHero() {
           </h1>
 
           {/* Supporting Perspective Line */}
-          <p className="font-sans text-sm sm:text-base md:text-xl text-[#CFC9BB]/90 font-light leading-relaxed max-w-2xl">
+          <p className="font-lora text-sm sm:text-base md:text-xl text-[#CFC9BB]/90 font-light leading-relaxed max-w-2xl">
             Insights, strategies and perspectives on building brands, technology and growth in a rapidly changing digital world.
           </p>
         </div>

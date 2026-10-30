@@ -180,15 +180,15 @@ export default function SelectedWork() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
             {/* Left Column: Heading */}
             <div className="lg:col-span-7 xl:col-span-7">
-              <h2 className="font-serif text-3xl sm:text-5xl lg:text-[54px] xl:text-[58px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight">
+              <h2 className="font-roboto text-3xl sm:text-5xl lg:text-[54px] xl:text-[58px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight">
                 Brands, Platforms &amp;<br />
-                <span className="italic font-serif text-[#D4AF37]">Real Impact.</span>
+                <span className="italic font-roboto text-[#D4AF37]">Real Impact.</span>
               </h2>
             </div>
 
             {/* Right Column: Supporting Description + Explore All Link */}
             <div className="lg:col-span-5 xl:col-span-5 flex flex-col justify-between items-start lg:items-end">
-              <p className="font-sans text-xs sm:text-sm text-[#A5B8AA]/80 font-light leading-relaxed max-w-sm mb-3 lg:text-right">
+              <p className="font-lora text-xs sm:text-sm text-[#A5B8AA]/80 font-light leading-relaxed max-w-sm mb-3 lg:text-right">
                 A glimpse of the brands, industries, events and digital platforms we&apos;ve worked with across sectors.
               </p>
 
@@ -272,12 +272,12 @@ export default function SelectedWork() {
                 {/* Card Bottom Content */}
                 <div className="relative z-10 p-5 sm:p-6 flex flex-col justify-end">
                   {/* Title */}
-                  <h3 className="font-serif text-xl sm:text-[22px] text-[#F3EFE4] font-normal leading-snug mb-1.5 line-clamp-2 group-hover:text-[#D4AF37] transition-colors">
+                  <h3 className="font-roboto text-xl sm:text-[22px] text-[#F3EFE4] font-normal leading-snug mb-1.5 line-clamp-2 group-hover:text-[#D4AF37] transition-colors">
                     {project.name}
                   </h3>
 
                   {/* Subtitle / Short Description */}
-                  <p className="font-sans text-xs text-[#A5B8AA]/85 font-light leading-relaxed mb-4 line-clamp-2">
+                  <p className="font-lora text-xs text-[#A5B8AA]/85 font-light leading-relaxed mb-4 line-clamp-2">
                     {project.tagline}
                   </p>
 

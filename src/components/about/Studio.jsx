@@ -69,7 +69,7 @@ export default function Studio() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
-              className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[1.08] sm:leading-[1.04] mb-6 break-words"
+              className="font-roboto text-3xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[1.08] sm:leading-[1.04] mb-6 break-words"
             >
               Rooted in Jaipur. <br />
               Driven by innovation. <br />
@@ -101,7 +101,7 @@ export default function Studio() {
                     JAIPUR, INDIA
                   </span>
                 </div>
-                <p className="text-xs font-sans text-[#101613]/70 font-light">
+                <p className="text-xs font-lora text-[#101613]/70 font-light">
                   Digital Operations & Creative Hub
                 </p>
               </div>

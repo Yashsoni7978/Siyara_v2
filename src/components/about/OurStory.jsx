@@ -41,7 +41,7 @@ export default function OurStory() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.6, ease: easeCustom }}
-              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.12] sm:leading-[1.08] tracking-tight text-[#101613] mb-6 sm:mb-8 break-words"
+              className="font-roboto text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.12] sm:leading-[1.08] tracking-tight text-[#101613] mb-6 sm:mb-8 break-words"
             >
               Siyara Innovations started because Jaipur businesses deserved better than templates and copy-paste strategy.
             </motion.h2>
@@ -92,7 +92,7 @@ export default function OurStory() {
 
                 {/* Layered Deep Emerald Card with Gold "S" Watermark (Overlapping) */}
                 <div className="col-start-7 col-end-13 row-start-1 mt-24 sm:mt-32 relative z-20 bg-[#071E18] border border-[#D9B45F]/40 p-4 sm:p-8 shadow-[0_20px_40px_rgba(7,10,9,0.5)] flex flex-col justify-between aspect-square hover:-translate-y-2 transition-transform duration-500">
-                  <div className="font-serif text-4xl sm:text-6xl text-[#D9B45F] opacity-40 font-bold leading-none">
+                  <div className="font-roboto text-4xl sm:text-6xl text-[#D9B45F] opacity-40 font-bold leading-none">
                     S
                   </div>
                   <div className="text-right">
@@ -108,7 +108,7 @@ export default function OurStory() {
               </div>
 
               {/* Gold Script Callout "Built Different." at bottom right */}
-              <div className="absolute -bottom-5 sm:-bottom-6 right-2 sm:right-4 z-30 font-serif text-3xl sm:text-5xl text-[#B9923F] tracking-wide pointer-events-none max-w-full truncate">
+              <div className="absolute -bottom-5 sm:-bottom-6 right-2 sm:right-4 z-30 font-roboto text-3xl sm:text-5xl text-[#B9923F] tracking-wide pointer-events-none max-w-full truncate">
                 Built Different.
               </div>
 

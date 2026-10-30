@@ -65,7 +65,7 @@ export default function Footer() {
             <div>
               {/* Brand Lockup */}
               <Link href="/" className="inline-flex items-center gap-1.5 mb-4 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878] rounded-sm">
-                <span className="font-serif text-2xl font-bold tracking-[0.2em] text-[#F3EFE4] group-hover:text-[#19A878] transition-colors">
+                <span className="font-roboto text-2xl font-bold tracking-[0.2em] text-[#F3EFE4] group-hover:text-[#19A878] transition-colors">
                   SIYARA
                 </span>
                 <span className="text-[#19A878] text-base group-hover:rotate-45 transition-transform duration-300">
@@ -73,7 +73,7 @@ export default function Footer() {
                 </span>
               </Link>
 
-              <p className="font-sans text-xs sm:text-sm text-[#A5B8AA] font-light leading-relaxed mb-6 max-w-sm">
+              <p className="font-lora text-xs sm:text-sm text-[#A5B8AA] font-light leading-relaxed mb-6 max-w-sm">
                 Engineering high-performance Next.js systems, local SEO, and search visibility for growing businesses.
               </p>
             </div>
@@ -210,7 +210,7 @@ export default function Footer() {
         {/* Footer Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-[#A5B8AA]">
           <div className="flex items-center gap-2 text-center sm:text-left">
-            <span className="font-serif font-bold tracking-[0.2em] text-[#F3EFE4]">SIYARA✦</span>
+            <span className="font-roboto font-bold tracking-[0.2em] text-[#F3EFE4]">SIYARA✦</span>
             <span>© 2026 Siyara Innovations. All rights reserved.</span>
           </div>
 

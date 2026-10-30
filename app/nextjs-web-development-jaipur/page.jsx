@@ -191,7 +191,7 @@ export default function NextJsWebDevelopmentJaipurPage() {
             </span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl font-normal tracking-tight text-[#F3EFE3] leading-[1.12] sm:leading-[1.05] break-words mb-6 sm:mb-8">
+          <h1 className="font-roboto text-3xl sm:text-5xl lg:text-7xl font-normal tracking-tight text-[#F3EFE3] leading-[1.12] sm:leading-[1.05] break-words mb-6 sm:mb-8">
             Next.js Web Development <br className="hidden sm:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26]">
               Company in Jaipur
@@ -200,7 +200,7 @@ export default function NextJsWebDevelopmentJaipurPage() {
 
           {/* AI Citability Paragraph */}
           <div className="p-5 sm:p-6 rounded-2xl bg-[#0D1412] border border-[#0C6B52]/30 mb-8 sm:mb-10 text-left sm:text-center shadow-xl">
-            <p className="font-sans text-sm sm:text-lg text-[#ECE7D8] leading-relaxed font-light">
+            <p className="font-lora text-sm sm:text-lg text-[#ECE7D8] leading-relaxed font-light">
               <strong className="text-[#D9B45F] font-semibold">Siyara Innovations</strong> is Jaipur’s specialized 
               <strong> Next.js web development company</strong>. We build custom React 19 web applications featuring server-side rendering (SSR), optimized Core Web Vitals, and enterprise schema integration for businesses requiring unmatched speed and organic search authority.
             </p>
@@ -231,19 +231,19 @@ export default function NextJsWebDevelopmentJaipurPage() {
       <section className="border-y border-[#D9B45F]/15 bg-[#0A0F0D] py-8 sm:py-12 px-4 sm:px-6 lg:px-12 mb-20 sm:mb-24">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
           <div>
-            <div className="font-serif text-2xl sm:text-4xl text-[#18A982] mb-1">0.4s</div>
+            <div className="font-roboto text-2xl sm:text-4xl text-[#18A982] mb-1">0.4s</div>
             <div className="text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#9D9B91]">Edge Time To First Byte</div>
           </div>
           <div>
-            <div className="font-serif text-2xl sm:text-4xl text-[#18A982] mb-1">98+</div>
+            <div className="font-roboto text-2xl sm:text-4xl text-[#18A982] mb-1">98+</div>
             <div className="text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#9D9B91]">Avg Mobile PageSpeed</div>
           </div>
           <div>
-            <div className="font-serif text-2xl sm:text-4xl text-[#18A982] mb-1">0 Plugins</div>
+            <div className="font-roboto text-2xl sm:text-4xl text-[#18A982] mb-1">0 Plugins</div>
             <div className="text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#9D9B91]">Zero Vulnerability Stack</div>
           </div>
           <div>
-            <div className="font-serif text-2xl sm:text-4xl text-[#18A982] mb-1">Jaipur</div>
+            <div className="font-roboto text-2xl sm:text-4xl text-[#18A982] mb-1">Jaipur</div>
             <div className="text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#9D9B91]">Engineering Hub</div>
           </div>
         </div>
@@ -255,10 +255,10 @@ export default function NextJsWebDevelopmentJaipurPage() {
           <span className="text-xs font-semibold tracking-[0.25em] text-[#D9B45F] uppercase block mb-3">
             MODERN WEB STANDARDS
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl lg:text-5xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
             Engineered with Next.js App Router & Edge Infrastructure
           </h2>
-          <p className="font-sans text-sm sm:text-base text-[#9D9B91] leading-relaxed">
+          <p className="font-lora text-sm sm:text-base text-[#9D9B91] leading-relaxed">
             We don’t use generic templates. Every line of code is structured for enterprise reliability, high-converting interactions, and long-term search dominance.
           </p>
         </div>
@@ -274,8 +274,8 @@ export default function NextJsWebDevelopmentJaipurPage() {
                 <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#071E18] border border-[#0C6B52]/40 flex items-center justify-center text-[#18A982] mb-5 sm:mb-6 group-hover:scale-105 transition-transform">
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE3] mb-3 sm:mb-4">{spec.title}</h3>
-                <p className="font-sans text-sm sm:text-base text-[#9D9B91] leading-relaxed mb-5 sm:mb-6">
+                <h3 className="font-roboto text-xl sm:text-2xl text-[#F3EFE3] mb-3 sm:mb-4">{spec.title}</h3>
+                <p className="font-lora text-sm sm:text-base text-[#9D9B91] leading-relaxed mb-5 sm:mb-6">
                   {spec.desc}
                 </p>
                 <div className="space-y-2.5 pt-4 border-t border-[#D9B45F]/10">
@@ -298,10 +298,10 @@ export default function NextJsWebDevelopmentJaipurPage() {
           <span className="text-xs font-semibold tracking-[0.25em] text-[#D9B45F] uppercase block mb-3">
             PERFORMANCE COMPARISON
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl lg:text-5xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
             Next.js Architecture vs. Legacy WordPress
           </h2>
-          <p className="font-sans text-sm sm:text-base text-[#9D9B91]">
+          <p className="font-lora text-sm sm:text-base text-[#9D9B91]">
             Why modern businesses across Jaipur and India are migrating their mission-critical websites to Next.js.
           </p>
         </div>
@@ -311,7 +311,7 @@ export default function NextJsWebDevelopmentJaipurPage() {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="border-b border-[#D9B45F]/20 bg-[#071E18]/50">
-                  <th className="py-4 sm:py-5 px-4 sm:px-6 font-serif text-base sm:text-lg text-[#F3EFE3] w-1/4">Feature</th>
+                  <th className="py-4 sm:py-5 px-4 sm:px-6 font-roboto text-base sm:text-lg text-[#F3EFE3] w-1/4">Feature</th>
                   <th className="py-4 sm:py-5 px-4 sm:px-6 font-sans text-xs tracking-wider uppercase text-[#9D9B91] w-3/8">Legacy WordPress Sites</th>
                   <th className="py-4 sm:py-5 px-4 sm:px-6 font-sans text-xs tracking-wider uppercase text-[#18A982] w-3/8">Siyara Custom Next.js</th>
                 </tr>
@@ -336,7 +336,7 @@ export default function NextJsWebDevelopmentJaipurPage() {
           <span className="text-xs font-semibold tracking-[0.25em] text-[#D9B45F] uppercase block mb-3">
             TECHNICAL FAQS
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
             Questions on Next.js Engineering
           </h2>
         </div>
@@ -347,11 +347,11 @@ export default function NextJsWebDevelopmentJaipurPage() {
               key={idx}
               className="p-5 sm:p-8 rounded-xl bg-[#0B110F] border border-[#18A982]/15 hover:border-[#D9B45F]/30 transition-all"
             >
-              <h3 className="font-serif text-lg sm:text-2xl text-[#F3EFE3] mb-3 flex items-start gap-3">
+              <h3 className="font-roboto text-lg sm:text-2xl text-[#F3EFE3] mb-3 flex items-start gap-3">
                 <HelpCircle className="w-5 h-5 text-[#D9B45F] shrink-0 mt-0.5" />
                 <span>{faq.q}</span>
               </h3>
-              <p className="font-sans text-xs sm:text-base text-[#9D9B91] leading-relaxed pl-8">
+              <p className="font-lora text-xs sm:text-base text-[#9D9B91] leading-relaxed pl-8">
                 {faq.a}
               </p>
             </div>
@@ -367,10 +367,10 @@ export default function NextJsWebDevelopmentJaipurPage() {
           <span className="text-xs font-semibold tracking-[0.26em] text-[#D9B45F] uppercase block mb-3 sm:mb-4">
             UPGRADE YOUR TECH STACK
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl lg:text-5xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
             Build a High-Velocity Next.js Application in Jaipur
           </h2>
-          <p className="font-sans text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+          <p className="font-lora text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
             Get an interactive code review and architectural estimate directly from our engineering team.
           </p>
 

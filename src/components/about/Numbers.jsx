@@ -71,7 +71,7 @@ export default function Numbers() {
             >
               <div>
                 {/* Large Number */}
-                <div className="font-serif text-6xl sm:text-7xl lg:text-8xl text-[#0B5E49] font-normal leading-none mb-4 tracking-tight">
+                <div className="font-roboto text-6xl sm:text-7xl lg:text-8xl text-[#0B5E49] font-normal leading-none mb-4 tracking-tight">
                   {stat.number}
                 </div>
 
@@ -81,7 +81,7 @@ export default function Numbers() {
                 </h3>
 
                 {/* Description */}
-                <p className="font-sans text-xs text-[#101613]/70 font-light leading-relaxed">
+                <p className="font-lora text-xs text-[#101613]/70 font-light leading-relaxed">
                   {stat.description}
                 </p>
               </div>

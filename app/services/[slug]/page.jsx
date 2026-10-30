@@ -1607,11 +1607,11 @@ export default async function ServiceDetailPage({ params }) {
             </span>
           </div>
 
-          <h1 className="font-serif text-2xl sm:text-4xl lg:text-6xl font-normal tracking-tight text-[#F3EFE3] leading-[1.15] mb-5 sm:mb-6 break-words">
+          <h1 className="font-roboto text-2xl sm:text-4xl lg:text-6xl font-normal tracking-tight text-[#F3EFE3] leading-[1.15] mb-5 sm:mb-6 break-words">
             {service.h1Title}
           </h1>
 
-          <p className="font-sans text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light">
+          <p className="font-lora text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light">
             {service.metaDescription}
           </p>
 
@@ -1645,11 +1645,11 @@ export default async function ServiceDetailPage({ params }) {
             <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.24em] text-[#D9B45F] uppercase block mb-2 sm:mb-3">
               ARCHITECTURAL BRIEF &amp; CITABILITY
             </span>
-            <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
+            <h2 className="font-roboto text-xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
               {service.questionH2}
             </h2>
             <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#070A09]/80 border border-[#18A982]/20 mb-5 sm:mb-6">
-              <p className="font-sans text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
+              <p className="font-lora text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
                 {service.citabilityAnswer}
               </p>
             </div>
@@ -1682,10 +1682,10 @@ export default async function ServiceDetailPage({ params }) {
             <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
               TECHNICAL PROBLEM SOLVING
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
+            <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
               Engineering Deep Dive &amp; Architectural Solutions
             </h2>
-            <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
+            <p className="font-lora text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
               How Siyara Innovations deconstructs critical technological bottlenecks to deliver unmatched speed, authority, and conversion velocity.
             </p>
           </div>
@@ -1700,7 +1700,7 @@ export default async function ServiceDetailPage({ params }) {
                   <span className="text-xs font-mono font-bold text-[#D9B45F] tracking-widest block mb-2">
                     0{idx + 1}. CASE ANALYSIS
                   </span>
-                  <h3 className="font-serif text-lg sm:text-xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug mb-4">
+                  <h3 className="font-roboto text-lg sm:text-xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug mb-4">
                     {item.title}
                   </h3>
                   <div className="mb-4 pb-4 border-b border-[#18A982]/10">
@@ -1732,10 +1732,10 @@ export default async function ServiceDetailPage({ params }) {
           <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
             SPECIFICATIONS &amp; STACK
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
             Core Technology Stack &amp; Deliverables
           </h2>
-          <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
+          <p className="font-lora text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
             Selected technologies, frameworks, and architecture patterns deployed based on specific project requirements.
           </p>
         </div>
@@ -1745,7 +1745,7 @@ export default async function ServiceDetailPage({ params }) {
           <div className="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-[#0B110F] border border-[#18A982]/20">
             <div className="flex items-center gap-2.5 mb-6">
               <Cpu className="w-5 h-5 text-[#D9B45F]" />
-              <h3 className="font-serif text-lg sm:text-xl text-[#F3EFE3]">Engineered With</h3>
+              <h3 className="font-roboto text-lg sm:text-xl text-[#F3EFE3]">Engineered With</h3>
             </div>
             <div className="flex flex-wrap gap-2.5">
               {(service.techStack || [
@@ -1772,7 +1772,7 @@ export default async function ServiceDetailPage({ params }) {
           <div className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-[#0B110F] border border-[#D9B45F]/20">
             <div className="flex items-center gap-2.5 mb-6">
               <ShieldCheck className="w-5 h-5 text-[#D9B45F]" />
-              <h3 className="font-serif text-lg sm:text-xl text-[#F3EFE3]">Key Deliverables &amp; Outcomes</h3>
+              <h3 className="font-roboto text-lg sm:text-xl text-[#F3EFE3]">Key Deliverables &amp; Outcomes</h3>
             </div>
             <div className="space-y-3.5">
               {(service.deliverables || service.subServices).map((deliv, idx) => (
@@ -1796,10 +1796,10 @@ export default async function ServiceDetailPage({ params }) {
           <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
             DELIVERY ROADMAP
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
             The 4-Phase Architectural Engineering Process
           </h2>
-          <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
+          <p className="font-lora text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
             From initial requirements scoping to structured production deployment and ongoing telemetry monitoring.
           </p>
         </div>
@@ -1837,17 +1837,17 @@ export default async function ServiceDetailPage({ params }) {
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl sm:text-2xl font-serif text-[#D9B45F] font-bold">
+                  <span className="text-xl sm:text-2xl font-roboto text-[#D9B45F] font-bold">
                     {proc.step}
                   </span>
                   <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#18A982]/10 text-[#18A982] border border-[#18A982]/20">
                     {proc.timeline}
                   </span>
                 </div>
-                <h3 className="font-serif text-base sm:text-lg text-[#F3EFE3] mb-2 leading-snug">
+                <h3 className="font-roboto text-base sm:text-lg text-[#F3EFE3] mb-2 leading-snug">
                   {proc.title}
                 </h3>
-                <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed">
+                <p className="font-lora text-xs text-[#9D9B91] font-light leading-relaxed">
                   {proc.desc}
                 </p>
               </div>
@@ -1862,10 +1862,10 @@ export default async function ServiceDetailPage({ params }) {
           <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
             DELIVERY ARCHITECTURE
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
             Structured Engagement Models
           </h2>
-          <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
+          <p className="font-lora text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
             Scope-governed engineering models aligned with your business requirements, timeline, and integration scale.
           </p>
         </div>
@@ -1926,7 +1926,7 @@ export default async function ServiceDetailPage({ params }) {
                 <span className="text-xs font-mono uppercase text-[#D9B45F] tracking-wider block mb-2">
                   {tier.tier}
                 </span>
-                <div className="text-xl sm:text-2xl font-serif text-[#F3EFE3] mb-3">
+                <div className="text-xl sm:text-2xl font-roboto text-[#F3EFE3] mb-3">
                   {tier.level}
                 </div>
                 <p className="text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
@@ -1966,10 +1966,10 @@ export default async function ServiceDetailPage({ params }) {
             <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
               TECHNICAL PLAYBOOKS &amp; DEEP DIVES
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
+            <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
               Related Engineering Guides &amp; Cost Breakdowns
             </h2>
-            <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
+            <p className="font-lora text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
               In-depth architectural breakdowns, investment tiers, and technical implementation playbooks authored by our studio architects.
             </p>
           </div>
@@ -1991,10 +1991,10 @@ export default async function ServiceDetailPage({ params }) {
                       {article.readTime}
                     </span>
                   </div>
-                  <h3 className="font-serif text-base sm:text-xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug font-normal line-clamp-2">
+                  <h3 className="font-roboto text-base sm:text-xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug font-normal line-clamp-2">
                     {article.title}
                   </h3>
-                  <p className="font-sans text-xs sm:text-sm text-[#9D9B91] line-clamp-2 mt-2.5 font-light leading-relaxed">
+                  <p className="font-lora text-xs sm:text-sm text-[#9D9B91] line-clamp-2 mt-2.5 font-light leading-relaxed">
                     {article.excerpt}
                   </p>
                 </div>
@@ -2015,10 +2015,10 @@ export default async function ServiceDetailPage({ params }) {
             <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
               CONNECTED DISCIPLINES
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
+            <h2 className="font-roboto text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
               Complementary Capabilities
             </h2>
-            <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-2.5 font-light leading-relaxed">
+            <p className="font-lora text-xs sm:text-sm text-[#9D9B91] mt-2.5 font-light leading-relaxed">
               High-performing digital platforms combine multiple interconnected engineering and strategic disciplines.
             </p>
           </div>
@@ -2031,10 +2031,10 @@ export default async function ServiceDetailPage({ params }) {
                 className="p-5 sm:p-6 rounded-xl bg-[#0B110F] border border-[#18A982]/15 hover:border-[#D9B45F]/40 transition-all flex flex-col justify-between group hover:shadow-xl hover:shadow-[#D9B45F]/5"
               >
                 <div>
-                  <h3 className="font-serif text-base sm:text-lg text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors mb-2.5 leading-snug">
+                  <h3 className="font-roboto text-base sm:text-lg text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors mb-2.5 leading-snug">
                     {rel.title}
                   </h3>
-                  <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed">
+                  <p className="font-lora text-xs text-[#9D9B91] font-light leading-relaxed">
                     {rel.desc}
                   </p>
                 </div>
@@ -2055,7 +2055,7 @@ export default async function ServiceDetailPage({ params }) {
             <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
               KNOWLEDGE BASE
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
+            <h2 className="font-roboto text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
               Frequently Asked Questions
             </h2>
           </div>
@@ -2066,11 +2066,11 @@ export default async function ServiceDetailPage({ params }) {
                 key={idx}
                 className="p-4 sm:p-6 rounded-xl bg-[#0B110F] border border-[#18A982]/15 hover:border-[#D9B45F]/30 transition-all"
               >
-                <h3 className="font-serif text-base sm:text-xl text-[#F3EFE3] mb-2 flex items-start gap-2.5 leading-snug">
+                <h3 className="font-roboto text-base sm:text-xl text-[#F3EFE3] mb-2 flex items-start gap-2.5 leading-snug">
                   <HelpCircle className="w-4 h-4 text-[#D9B45F] shrink-0 mt-1" />
                   <span>{faq.q}</span>
                 </h3>
-                <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed pl-6 font-light">
+                <p className="font-lora text-xs sm:text-sm text-[#9D9B91] leading-relaxed pl-6 font-light">
                   {faq.a}
                 </p>
               </div>
@@ -2085,10 +2085,10 @@ export default async function ServiceDetailPage({ params }) {
           <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.24em] text-[#D9B45F] uppercase block mb-2 sm:mb-3">
             ELEVATE YOUR DIGITAL FOOTPRINT
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] mb-3 sm:mb-4 break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] mb-3 sm:mb-4 break-words">
             Ready to Deploy {service.name}?
           </h2>
-          <p className="font-sans text-xs sm:text-base text-[#9D9B91] max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed font-light">
+          <p className="font-lora text-xs sm:text-base text-[#9D9B91] max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed font-light">
             Directly connect with our studio leads via WhatsApp for instant technical scoping and fixed-investment proposal delivery.
           </p>
 

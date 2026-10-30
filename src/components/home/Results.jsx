@@ -92,12 +92,12 @@ export default function Results() {
             transition={{ duration: 0.5, ease: easeCustom }}
             className="lg:col-span-8 xl:col-span-8"
           >
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] text-[#080B0A] font-normal leading-[1.08] tracking-tight mb-2 sm:mb-2.5">
+            <h2 className="font-roboto text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] text-[#080B0A] font-normal leading-[1.08] tracking-tight mb-2 sm:mb-2.5">
               Reported Outcomes Across<br />
-              <span className="italic font-serif text-[#063C2D]">Client Engagements.</span>
+              <span className="italic font-roboto text-[#063C2D]">Client Engagements.</span>
             </h2>
 
-            <p className="font-sans text-xs sm:text-[13px] text-[#101613]/75 font-light leading-relaxed max-w-xl">
+            <p className="font-lora text-xs sm:text-[13px] text-[#101613]/75 font-light leading-relaxed max-w-xl">
               Collective performance results achieved across multi-industry client engagements, search visibility strategies, and digital conversion infrastructure.
             </p>
           </motion.div>
@@ -143,7 +143,7 @@ export default function Results() {
                   </div>
 
                   {/* Restrained Serif Metric Number */}
-                  <div className="font-serif text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] text-[#080B0A] font-normal leading-none tracking-tight mb-2 sm:mb-2.5">
+                  <div className="font-roboto text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] text-[#080B0A] font-normal leading-none tracking-tight mb-2 sm:mb-2.5">
                     {item.metric}
                   </div>
 
@@ -153,7 +153,7 @@ export default function Results() {
                   </h3>
 
                   {/* Short Supporting Description */}
-                  <p className="font-sans text-[11px] sm:text-xs text-[#101613]/70 font-light leading-relaxed max-w-[210px]">
+                  <p className="font-lora text-[11px] sm:text-xs text-[#101613]/70 font-light leading-relaxed max-w-[210px]">
                     {item.description}
                   </p>
                 </div>
@@ -176,13 +176,13 @@ export default function Results() {
 
                 {/* Content */}
                 <div>
-                  <div className="font-serif text-3xl text-[#080B0A] font-normal leading-none tracking-tight mb-1.5">
+                  <div className="font-roboto text-3xl text-[#080B0A] font-normal leading-none tracking-tight mb-1.5">
                     {item.metric}
                   </div>
                   <h3 className="font-sans text-[11px] font-semibold tracking-[0.16em] text-[#063C2D] uppercase mb-1">
                     {item.label}
                   </h3>
-                  <p className="font-sans text-xs text-[#101613]/70 font-light leading-relaxed">
+                  <p className="font-lora text-xs text-[#101613]/70 font-light leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -199,7 +199,7 @@ export default function Results() {
           transition={{ duration: 0.5, ease: easeCustom }}
           className="pt-2 sm:pt-3 max-w-3xl mx-auto text-center"
         >
-          <p className="text-[10px] sm:text-[11px] font-sans text-[#101613]/55 font-light leading-relaxed">
+          <p className="text-[10px] sm:text-[11px] font-lora text-[#101613]/55 font-light leading-relaxed">
             Results represent reported outcomes across selected client engagements. Individual results vary depending on business, market conditions, strategy and execution.
           </p>
         </motion.div>

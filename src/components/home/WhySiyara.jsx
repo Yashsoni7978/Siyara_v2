@@ -94,10 +94,10 @@ export default function WhySiyara() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
             {/* LEFT COLUMN: Editorial Headline */}
             <div className="lg:col-span-7 xl:col-span-7">
-              <h2 className="font-serif text-4xl sm:text-5xl lg:text-[56px] xl:text-[62px] text-[#080B0A] font-normal leading-[1.05] tracking-tight">
+              <h2 className="font-roboto text-4xl sm:text-5xl lg:text-[56px] xl:text-[62px] text-[#080B0A] font-normal leading-[1.05] tracking-tight">
                 More than services.<br />
                 A partner for<br />
-                <span className="italic font-serif text-[#063C2D]">
+                <span className="italic font-roboto text-[#063C2D]">
                   what&apos;s next
                   <span className="text-[#D4AF37] font-normal not-italic">.</span>
                 </span>
@@ -107,7 +107,7 @@ export default function WhySiyara() {
             {/* RIGHT COLUMN: Supporting Copy with subtle vertical border + CTA */}
             <div className="lg:col-span-5 xl:col-span-5 flex flex-col justify-between items-start lg:pl-6 xl:pl-8">
               <div className="border-l border-[#B9923F]/35 pl-5 sm:pl-6 mb-6 sm:mb-8">
-                <p className="font-sans text-xs sm:text-sm text-[#080B0A]/75 font-light leading-relaxed max-w-md">
+                <p className="font-lora text-xs sm:text-sm text-[#080B0A]/75 font-light leading-relaxed max-w-md">
                   We bring strategy, design, technology and growth together — so your business doesn&apos;t just look better, it performs better.
                 </p>
               </div>
@@ -182,7 +182,7 @@ export default function WhySiyara() {
                       <div>
                         {/* Number Indicator */}
                         <div
-                          className={`font-serif text-2xl lg:text-3xl font-light leading-none ${
+                          className={`font-roboto text-2xl lg:text-3xl font-light leading-none ${
                             isEmerald ? 'text-[#E5C378]' : 'text-[#D4AF37]'
                           }`}
                         >
@@ -198,7 +198,7 @@ export default function WhySiyara() {
 
                         {/* Heading */}
                         <h3
-                          className={`font-serif text-2xl lg:text-[28px] font-normal leading-[1.12] mb-2 ${
+                          className={`font-roboto text-2xl lg:text-[28px] font-normal leading-[1.12] mb-2 ${
                             isEmerald ? 'text-[#F3EFE4]' : 'text-[#080B0A]'
                           }`}
                         >
@@ -208,7 +208,7 @@ export default function WhySiyara() {
 
                         {/* Lead */}
                         <p
-                          className={`font-serif italic text-xs mb-1.5 leading-snug ${
+                          className={`font-roboto italic text-xs mb-1.5 leading-snug ${
                             isEmerald ? 'text-[#E5C378]' : 'text-[#063C2D]'
                           }`}
                         >
@@ -217,7 +217,7 @@ export default function WhySiyara() {
 
                         {/* Full Description */}
                         <p
-                          className={`font-sans text-xs font-light leading-relaxed ${
+                          className={`font-lora text-xs font-light leading-relaxed ${
                             isEmerald ? 'text-[#A5B8AA]' : 'text-[#080B0A]/75'
                           }`}
                         >
@@ -273,7 +273,7 @@ export default function WhySiyara() {
                     {/* Top: Gold Number & Title */}
                     <div>
                       <div
-                        className={`font-serif text-2xl lg:text-3xl font-light leading-none transition-colors ${
+                        className={`font-roboto text-2xl lg:text-3xl font-light leading-none transition-colors ${
                           isEmerald
                             ? 'text-[#E5C378] group-hover:text-[#D4AF37]'
                             : 'text-[#D4AF37] group-hover:text-[#B9923F]'
@@ -287,7 +287,7 @@ export default function WhySiyara() {
                         }`}
                       />
                       <h3
-                        className={`font-serif text-xl lg:text-2xl font-normal leading-[1.2] transition-colors ${
+                        className={`font-roboto text-xl lg:text-2xl font-normal leading-[1.2] transition-colors ${
                           isEmerald
                             ? 'text-[#F3EFE4] group-hover:text-white'
                             : 'text-[#080B0A] group-hover:text-[#063C2D]'
@@ -345,14 +345,14 @@ export default function WhySiyara() {
                 >
                   <div className="flex items-center gap-3">
                     <span
-                      className={`font-serif text-base font-medium ${
+                      className={`font-roboto text-base font-medium ${
                         isEmerald ? 'text-[#E5C378]' : 'text-[#D4AF37]'
                       }`}
                     >
                       {principle.id}
                     </span>
                     <span
-                      className={`font-serif text-lg font-normal ${
+                      className={`font-roboto text-lg font-normal ${
                         isEmerald ? 'text-[#F3EFE4]' : 'text-[#080B0A]'
                       }`}
                     >
@@ -409,7 +409,7 @@ export default function WhySiyara() {
 
                         {/* Lead */}
                         <p
-                          className={`font-serif italic text-xs mb-1.5 leading-snug ${
+                          className={`font-roboto italic text-xs mb-1.5 leading-snug ${
                             isEmerald ? 'text-[#E5C378]' : 'text-[#063C2D]'
                           }`}
                         >
@@ -418,7 +418,7 @@ export default function WhySiyara() {
 
                         {/* Description */}
                         <p
-                          className={`font-sans text-xs font-light leading-relaxed mb-4 ${
+                          className={`font-lora text-xs font-light leading-relaxed mb-4 ${
                             isEmerald ? 'text-[#A5B8AA]' : 'text-[#080B0A]/75'
                           }`}
                         >
@@ -466,7 +466,7 @@ export default function WhySiyara() {
 
             {/* Center Column */}
             <div className="md:col-span-6 md:text-center md:border-x md:border-[#080B0A]/10 md:px-6">
-              <p className="text-[11px] sm:text-xs font-sans font-medium tracking-[0.16em] text-[#080B0A]/90 uppercase">
+              <p className="text-[11px] sm:text-xs font-lora font-medium tracking-[0.16em] text-[#080B0A]/90 uppercase">
                 GOOD BRANDS KEEP UP. GREAT BUSINESSES STAY AHEAD.
               </p>
             </div>

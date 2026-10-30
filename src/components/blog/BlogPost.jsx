@@ -360,7 +360,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
           </div>
 
           {/* Article Title */}
-          <h1 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-light text-[#F3EFE4] leading-[1.18] sm:leading-[1.12] tracking-tight mb-6 sm:mb-8 break-words">
+          <h1 className="font-roboto text-2xl sm:text-4xl lg:text-5xl font-light text-[#F3EFE4] leading-[1.18] sm:leading-[1.12] tracking-tight mb-6 sm:mb-8 break-words">
             {article.title}
           </h1>
 
@@ -456,7 +456,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
                 Executive Summary
               </h3>
             </div>
-            <p className="font-sans text-sm sm:text-base text-[#F3EFE4]/90 font-normal leading-relaxed">
+            <p className="font-lora text-sm sm:text-base text-[#F3EFE4]/90 font-normal leading-relaxed">
               "{article.executiveSummary}"
             </p>
           </div>
@@ -511,7 +511,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
             {article.sections && article.sections.map((section, idx) => (
               <section id={section.id || `sec-${idx}`} key={idx} className="scroll-mt-32 space-y-6">
                 {/* Section Title */}
-                <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#F3EFE4] leading-tight pb-3 border-b border-[#D4AF37]/15">
+                <h2 className="font-roboto text-2xl sm:text-3xl font-normal text-[#F3EFE4] leading-tight pb-3 border-b border-[#D4AF37]/15">
                   {section.title}
                 </h2>
 
@@ -527,7 +527,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
                     );
                   }
                   return (
-                    <p key={pIdx} className="font-sans text-sm sm:text-base text-[#CFC9BB]/90 leading-relaxed font-light">
+                    <p key={pIdx} className="font-lora text-sm sm:text-base text-[#CFC9BB]/90 leading-relaxed font-light">
                       {p}
                     </p>
                   );
@@ -553,7 +553,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
 
                 {/* Optional Pull Quote */}
                 {section.quote && (
-                  <blockquote className="my-8 p-6 border-l-2 border-[#D4AF37] bg-[#063C2D]/30 font-serif text-lg text-[#F3EFE4] leading-relaxed">
+                  <blockquote className="my-8 p-6 border-l-2 border-[#D4AF37] bg-[#063C2D]/30 font-lora text-lg text-[#F3EFE4] leading-relaxed">
                     "{section.quote}"
                   </blockquote>
                 )}
@@ -593,7 +593,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
                       <h3 className="font-sans text-sm font-semibold text-[#F3EFE4] mb-3 leading-snug">
                         {faq.q}
                       </h3>
-                      <p className="font-sans text-xs sm:text-sm text-[#CFC9BB]/85 leading-relaxed font-light">
+                      <p className="font-lora text-xs sm:text-sm text-[#CFC9BB]/85 leading-relaxed font-light">
                         {faq.a}
                       </p>
                     </div>
@@ -620,13 +620,13 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
             <div className="text-xs font-sans uppercase tracking-widest text-[#D4AF37] mb-1">
               Published By
             </div>
-            <h3 className="font-serif text-xl text-[#F3EFE4] font-normal mb-1">
+            <h3 className="font-roboto text-xl text-[#F3EFE4] font-normal mb-1">
               Siyara Editorial Team
             </h3>
-            <p className="text-xs font-sans text-[#19A878] font-medium mb-3">
+            <p className="text-xs font-lora text-[#19A878] font-medium mb-3">
               Technology &amp; Strategy Desk
             </p>
-            <p className="font-sans text-xs text-[#CFC9BB]/80 leading-relaxed font-light">
+            <p className="font-lora text-xs text-[#CFC9BB]/80 leading-relaxed font-light">
               The research and editorial desk at Siyara Innovations, analyzing modern web engineering, search engine optimization, and connected digital systems for growing businesses.
             </p>
           </div>
@@ -639,7 +639,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
               <span className="text-xs font-sans uppercase tracking-widest text-[#19A878] font-semibold">
                 RELATED CAPABILITIES
               </span>
-              <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#F3EFE4] mt-1">
+              <h3 className="font-roboto text-xl sm:text-2xl font-normal text-[#F3EFE4] mt-1">
                 Explore Engineering &amp; Strategic Disciplines
               </h3>
             </div>
@@ -652,10 +652,10 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
                   className="p-5 rounded-xl bg-[#063C2D]/15 border border-[#D4AF37]/25 hover:border-[#D4AF37]/60 hover:bg-[#063C2D]/30 transition-all group flex flex-col justify-between"
                 >
                   <div>
-                    <h4 className="font-serif text-base sm:text-lg text-[#F3EFE4] group-hover:text-[#D4AF37] transition-colors mb-2 leading-snug">
+                    <h4 className="font-roboto text-base sm:text-lg text-[#F3EFE4] group-hover:text-[#D4AF37] transition-colors mb-2 leading-snug">
                       {svc.title}
                     </h4>
-                    <p className="font-sans text-xs text-[#CFC9BB]/75 font-light leading-relaxed">
+                    <p className="font-lora text-xs text-[#CFC9BB]/75 font-light leading-relaxed">
                       {svc.desc}
                     </p>
                   </div>
@@ -677,7 +677,7 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
                 <span className="text-xs font-sans uppercase tracking-widest text-[#D4AF37]">
                   RECOMMENDED READING
                 </span>
-                <h3 className="font-serif text-2xl sm:text-3xl font-light text-[#F3EFE4] mt-1">
+                <h3 className="font-roboto text-2xl sm:text-3xl font-light text-[#F3EFE4] mt-1">
                   More Strategic Insights
                 </h3>
               </div>

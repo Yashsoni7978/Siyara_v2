@@ -65,7 +65,7 @@ export default function WhyContact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
-              className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE4] font-normal leading-[1.08] sm:leading-[1.04] tracking-tight break-words"
+              className="font-roboto text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE4] font-normal leading-[1.08] sm:leading-[1.04] tracking-tight break-words"
             >
               Your Goals. <br />
               Our <span className="text-[#19A878] ">Commitment.</span>
@@ -126,7 +126,7 @@ export default function WhyContact() {
                   </span>
 
                   {/* Description */}
-                  <p className="font-sans text-xs text-[#CFC9BB]/80 font-light leading-relaxed">
+                  <p className="font-lora text-xs text-[#CFC9BB]/80 font-light leading-relaxed">
                     {item.description}
                   </p>
                 </div>

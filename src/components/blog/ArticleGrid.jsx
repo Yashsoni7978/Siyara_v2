@@ -8,8 +8,8 @@ export default function ArticleGrid({ articles, onSelectArticle, totalCount }) {
     return (
       <section className="py-20 bg-[#080B0A] text-center">
         <div className="max-w-md mx-auto px-6">
-          <div className="text-3xl font-serif text-[#D4AF37] mb-3">No Insights Found</div>
-          <p className="font-sans text-xs text-[#CFC9BB]/70 font-light leading-relaxed mb-6">
+          <div className="text-3xl font-roboto text-[#D4AF37] mb-3">No Insights Found</div>
+          <p className="font-lora text-xs text-[#CFC9BB]/70 font-light leading-relaxed mb-6">
             We couldn't find any articles matching your search query or selected category. Try searching for another topic or resetting your category filter.
           </p>
         </div>

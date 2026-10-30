@@ -78,7 +78,7 @@ export default function WhySiyara() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.8, ease: easeCustom }}
-            className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight"
+            className="font-roboto text-4xl sm:text-6xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98] tracking-tight"
           >
             WE DON'T SELL SERVICES. <br />
             <span className="text-[#D9B45F] font-normal">WE BUILD OUTCOMES.</span>
@@ -125,7 +125,7 @@ export default function WhySiyara() {
                     {item.title}
                   </h3>
 
-                  <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed">
+                  <p className="font-lora text-xs text-[#9D9B91] font-light leading-relaxed">
                     {item.description}
                   </p>
                 </div>

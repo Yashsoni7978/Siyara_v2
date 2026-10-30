@@ -141,10 +141,10 @@ export default function WhatWeDo() {
             </div>
 
             {/* Main Headline */}
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-[50px] xl:text-[56px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight">
+            <h2 className="font-roboto text-3xl sm:text-5xl lg:text-[50px] xl:text-[56px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight">
               One connected system,<br />
               six disciplines<br />
-              working <span className="text-[#D4AF37] italic font-serif">together.</span>
+              working <span className="text-[#D4AF37] italic font-roboto">together.</span>
             </h2>
           </motion.div>
 
@@ -156,7 +156,7 @@ export default function WhatWeDo() {
             transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5 xl:col-span-5 flex flex-col justify-end lg:items-start space-y-5"
           >
-            <p className="font-sans text-xs sm:text-sm text-[#A5B8AA] font-light leading-relaxed max-w-md">
+            <p className="font-lora text-xs sm:text-sm text-[#A5B8AA] font-light leading-relaxed max-w-md">
               Siyara Innovations brings strategy, creativity and technology together to help businesses build stronger brands, better digital experiences and measurable growth.
             </p>
 
@@ -274,7 +274,7 @@ export default function WhatWeDo() {
 
                       {/* Service Heading */}
                       <h3
-                        className={`font-serif text-xl sm:text-[23px] lg:text-[21px] xl:text-[24px] font-normal leading-[1.18] tracking-tight transition-colors duration-200 ${
+                        className={`font-roboto text-xl sm:text-[23px] lg:text-[21px] xl:text-[24px] font-normal leading-[1.18] tracking-tight transition-colors duration-200 ${
                           isDark
                             ? 'text-[#F3EFE4] group-hover:text-white'
                             : 'text-[#080B0A] group-hover:text-[#063C2D]'
@@ -285,7 +285,7 @@ export default function WhatWeDo() {
 
                       {/* Service Description */}
                       <p
-                        className={`font-sans text-xs sm:text-[12.5px] leading-relaxed mt-2 line-clamp-3 ${
+                        className={`font-lora text-xs sm:text-[12.5px] leading-relaxed mt-2 line-clamp-3 ${
                           isDark ? 'text-[#C2D1C7] font-light' : 'text-[#1E2823] font-normal'
                         }`}
                       >

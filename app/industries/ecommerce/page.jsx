@@ -111,11 +111,11 @@ export default function EcommerceIndustryPage() {
             </span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F3EFE3] leading-[1.12] sm:leading-[1.1] break-words mb-5 sm:mb-6">
+          <h1 className="font-roboto text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F3EFE3] leading-[1.12] sm:leading-[1.1] break-words mb-5 sm:mb-6">
             E-Commerce Website Development in Jaipur
           </h1>
 
-          <p className="font-sans text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light">
+          <p className="font-lora text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light">
             Headless Next.js online stores, high-speed product catalog speeds, and organic shopping SEO engineered for retail and D2C brands.
           </p>
 
@@ -149,11 +149,11 @@ export default function EcommerceIndustryPage() {
             <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-3">
               RETAIL VELOCITY & CITABILITY
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
+            <h2 className="font-roboto text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
               Why Choose Headless Next.js Architecture for E-Commerce Brands in Jaipur?
             </h2>
             <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#070A09]/80 border border-[#18A982]/20 mb-6">
-              <p className="font-sans text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
+              <p className="font-lora text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
                 Traditional e-commerce stores running on standard monolithic plugins or unoptimized third-party hosted themes suffer from slow mobile product rendering, cart checkout friction, and poor Google organic ranking. Siyara Innovations delivers high-velocity headless e-commerce architectures powered by Next.js 15, React 19, and serverless payment APIs. By separating front-end presentation from back-end inventory catalogs, our builds load catalog collections and product detail pages with rapid response times. Our engineering builds target fast visual load times, stable layouts, and responsive mobile interactions. Furthermore, we implement complete Product, AggregateRating, and OfferCatalog Schema.org markup alongside localized Indian payment gateways (UPI, Cards, NetBanking). This technical foundation enables Jaipur lifestyle, apparel, handicraft, and D2C brands to rank on Google Shopping, get recommended in generative search engines like SearchGPT, and convert high-intent shoppers with maximum transaction velocity.
               </p>
             </div>
@@ -185,7 +185,7 @@ export default function EcommerceIndustryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
             HEADLESS COMMERCE FEATURES
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
             Engineered for Retail Revenue
           </h2>
         </div>
@@ -216,10 +216,10 @@ export default function EcommerceIndustryPage() {
                 <BookOpen className="w-3.5 h-3.5" />
                 <span>EXECUTIVE INDUSTRY PLAYBOOK</span>
               </div>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
+              <h3 className="font-roboto text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
                 E-Commerce Website Development Cost in India (2026 Guide): Shopify vs Custom Next.js
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
+              <p className="font-lora text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
                 A rigorous breakdown comparing Shopify versus bespoke Next.js headless architectures, Core Web Vitals impact on conversion rate, and real cost of ownership.
               </p>
             </div>
@@ -242,7 +242,7 @@ export default function EcommerceIndustryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
             KNOWLEDGE BASE
           </span>
-          <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
             Frequently Asked Questions
           </h2>
         </div>
@@ -253,11 +253,11 @@ export default function EcommerceIndustryPage() {
               key={idx}
               className="p-5 sm:p-6 rounded-xl bg-[#0B110F] border border-[#18A982]/15 hover:border-[#D9B45F]/30 transition-all"
             >
-              <h3 className="font-serif text-base sm:text-xl text-[#F3EFE3] mb-2 flex items-start gap-2.5">
+              <h3 className="font-roboto text-base sm:text-xl text-[#F3EFE3] mb-2 flex items-start gap-2.5">
                 <HelpCircle className="w-4 h-4 text-[#D9B45F] shrink-0 mt-1" />
                 <span>{faq.q}</span>
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed pl-6">
+              <p className="font-lora text-xs sm:text-sm text-[#9D9B91] leading-relaxed pl-6">
                 {faq.a}
               </p>
             </div>
@@ -271,10 +271,10 @@ export default function EcommerceIndustryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-3">
             SCALE YOUR ONLINE RETAIL REVENUE
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] mb-4 break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] mb-4 break-words">
             Build a High-Speed Headless E-Commerce Store in Jaipur
           </h2>
-          <p className="font-sans text-xs sm:text-base text-[#9D9B91] max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed">
+          <p className="font-lora text-xs sm:text-base text-[#9D9B91] max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed">
             Connect directly with our e-commerce architects via WhatsApp to audit your online store speed and checkout funnel.
           </p>
 

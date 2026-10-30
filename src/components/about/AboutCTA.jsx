@@ -28,7 +28,7 @@ export default function AboutCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.6, ease: easeCustom }}
-          className="font-serif text-3xl sm:text-5xl lg:text-7xl xl:text-8xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[0.96] tracking-tight mb-4 sm:mb-6 max-w-4xl mx-auto break-words"
+          className="font-roboto text-3xl sm:text-5xl lg:text-7xl xl:text-8xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[0.96] tracking-tight mb-4 sm:mb-6 max-w-4xl mx-auto break-words"
         >
           LET'S BUILD SOMETHING <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">EXTRAORDINARY</span> TOGETHER.

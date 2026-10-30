@@ -38,7 +38,7 @@ export default function FeaturedCaseStudy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.6, delay: 0.05 }}
-              className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[1.06] sm:leading-[1.02] break-words"
+              className="font-roboto text-3xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[1.06] sm:leading-[1.02] break-words"
             >
               From Vision <br className="hidden sm:block" />
               <span className="italic text-[#0B5E49]">to a Digital Legacy.</span>
@@ -46,7 +46,7 @@ export default function FeaturedCaseStudy() {
           </div>
 
           <div className="lg:col-span-4 flex flex-col justify-between h-full pt-2">
-            <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed mb-6">
+            <p className="font-lora text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed mb-6">
               A complete digital architectural demonstration engineered for luxury real estate developers, establishing high brand authority across multi-project residential portfolios.
             </p>
 
@@ -76,11 +76,11 @@ export default function FeaturedCaseStudy() {
                 REAL ESTATE ARCHITECTURAL DEMONSTRATION
               </div>
 
-              <h3 className="font-serif text-2xl sm:text-4xl text-[#101613] leading-tight font-normal break-words">
+              <h3 className="font-roboto text-2xl sm:text-4xl text-[#101613] leading-tight font-normal break-words">
                 Luxury Real Estate Platform
               </h3>
 
-              <p className="font-sans text-xs sm:text-sm text-[#101613]/80 font-light leading-relaxed">
+              <p className="font-lora text-xs sm:text-sm text-[#101613]/80 font-light leading-relaxed">
                 Engineered as a comprehensive luxury property developer demonstration, this system models interactive tour walkthroughs, high-intent lead funnel architecture, and Schema.org SEO structure for competitive builders.
               </p>
 
@@ -150,7 +150,7 @@ export default function FeaturedCaseStudy() {
 
                   {/* Header Bar inside Mockup */}
                   <div className="relative z-10 flex items-center justify-between p-5 border-b border-white/15">
-                    <span className="font-serif text-base font-bold text-[#D9B45F] tracking-widest">
+                    <span className="font-roboto text-base font-bold text-[#D9B45F] tracking-widest">
                       SHRI PROPERTY
                     </span>
                     <div className="flex items-center gap-4 text-[8px] tracking-[0.2em] text-[#F3EFE3] font-sans uppercase">
@@ -166,7 +166,7 @@ export default function FeaturedCaseStudy() {
                     <span className="text-[9px] font-sans text-[#D9B45F] tracking-[0.24em] uppercase mb-2 font-bold">
                       FLAGSHIP REAL ESTATE
                     </span>
-                    <h4 className="font-serif text-2xl sm:text-4xl text-[#F3EFE3] leading-none mb-3 font-normal">
+                    <h4 className="font-roboto text-2xl sm:text-4xl text-[#F3EFE3] leading-none mb-3 font-normal">
                       Architectural Estates.
                     </h4>
                     <p className="text-[10px] text-[#9D9B91] font-light leading-relaxed mb-6">
@@ -196,11 +196,11 @@ export default function FeaturedCaseStudy() {
                 <Activity className="w-3.5 h-3.5 text-[#B9923F]" />
                 <span>ARCHITECTURAL ENGINEERING STANDARDS</span>
               </div>
-              <h3 className="font-serif text-2xl sm:text-4xl text-[#101613] font-normal break-words">
+              <h3 className="font-roboto text-2xl sm:text-4xl text-[#101613] font-normal break-words">
                 Engineered for Performance &amp; Discovery
               </h3>
             </div>
-            <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light max-w-md leading-relaxed">
+            <p className="font-lora text-xs sm:text-sm text-[#101613]/70 font-light max-w-md leading-relaxed">
               Every prototype and demonstration is built to strict engineering benchmarks, ensuring responsive speed, structural stability, and search indexability.
             </p>
           </div>
@@ -214,7 +214,7 @@ export default function FeaturedCaseStudy() {
                   <span className="text-[#0B5E49] bg-[#0B5E49]/10 px-2 py-0.5 rounded text-[10px] font-bold">EDGE SSR</span>
                 </div>
                 <div className="mb-2">
-                  <span className="text-xl sm:text-2xl font-serif font-bold text-[#101613]">Fast Initial Paint</span>
+                  <span className="text-xl sm:text-2xl font-roboto font-bold text-[#101613]">Fast Initial Paint</span>
                 </div>
                 <p className="text-xs text-[#101613]/70 font-light leading-relaxed">
                   Edge-rendered Next.js architecture designed to eliminate server response latency and deliver responsive visual delivery across mobile networks.
@@ -234,7 +234,7 @@ export default function FeaturedCaseStudy() {
                   <span className="text-[#0B5E49] bg-[#0B5E49]/10 px-2 py-0.5 rounded text-[10px] font-bold">ASSET RESERVED</span>
                 </div>
                 <div className="mb-2">
-                  <span className="text-xl sm:text-2xl font-serif font-bold text-[#101613]">Zero Shift Targets</span>
+                  <span className="text-xl sm:text-2xl font-roboto font-bold text-[#101613]">Zero Shift Targets</span>
                 </div>
                 <p className="text-xs text-[#101613]/70 font-light leading-relaxed">
                   Strict aspect-ratio asset reservation and font preload optimizations designed to eliminate visual jumping during mobile browsing.
@@ -254,7 +254,7 @@ export default function FeaturedCaseStudy() {
                   <span className="text-[#0B5E49] bg-[#0B5E49]/10 px-2 py-0.5 rounded text-[10px] font-bold">REACT 19</span>
                 </div>
                 <div className="mb-2">
-                  <span className="text-xl sm:text-2xl font-serif font-bold text-[#101613]">Lean Client Bundles</span>
+                  <span className="text-xl sm:text-2xl font-roboto font-bold text-[#101613]">Lean Client Bundles</span>
                 </div>
                 <p className="text-xs text-[#101613]/70 font-light leading-relaxed">
                   Interaction to Next Paint engineered by replacing legacy scripts with lean React Server Components for immediate touch response.
@@ -274,7 +274,7 @@ export default function FeaturedCaseStudy() {
                   <span className="text-[#B9923F] bg-[#B9923F]/15 px-2 py-0.5 rounded text-[10px] font-bold">SEO + GEO</span>
                 </div>
                 <div className="mb-2">
-                  <span className="text-xl sm:text-2xl font-serif font-bold text-[#101613]">Structured Schemas</span>
+                  <span className="text-xl sm:text-2xl font-roboto font-bold text-[#101613]">Structured Schemas</span>
                 </div>
                 <p className="text-xs text-[#101613]/70 font-light leading-relaxed">
                   Clean JSON-LD schemas and semantic markup designed for multi-engine indexing across traditional search and AI answer engines.

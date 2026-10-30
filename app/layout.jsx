@@ -5,20 +5,21 @@ import Footer from '../src/components/home/Footer';
 import FloatingContact from '../src/components/layout/FloatingContact';
 import CursorSpotlight from '../src/components/common/CursorSpotlight';
 import JsonLd, { getRootOrganizationGraph } from '../src/components/common/JsonLd';
-import { Cormorant_Garamond, Inter } from 'next/font/google';
+import { Roboto, Lora } from 'next/font/google';
 
-const cormorant = Cormorant_Garamond({
+const roboto = Roboto({
   subsets: ['latin'],
   display: 'swap',
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-cormorant',
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-roboto',
 });
 
-const inter = Inter({
+const lora = Lora({
   subsets: ['latin'],
   display: 'swap',
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-inter',
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-lora',
 });
 
 export const metadata = {
@@ -80,8 +81,11 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${inter.className} ${cormorant.variable} ${inter.variable} bg-[#080B0A] text-[#F3EFE4] antialiased selection:bg-[#063C2D] selection:text-[#19A878] overflow-x-hidden font-sans`}>
+      <body className={`${roboto.variable} ${lora.variable} bg-[#080B0A] text-[#F3EFE4] antialiased selection:bg-[#063C2D] selection:text-[#19A878] overflow-x-hidden font-lora`}>
         {/* Skip to Main Content Link for Keyboard Accessibility */}
         <a
           href="#main-content"

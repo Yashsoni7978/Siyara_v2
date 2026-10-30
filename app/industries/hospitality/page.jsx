@@ -111,11 +111,11 @@ export default function HospitalityIndustryPage() {
             </span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F3EFE3] leading-[1.12] sm:leading-[1.1] break-words mb-5 sm:mb-6">
+          <h1 className="font-roboto text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F3EFE3] leading-[1.12] sm:leading-[1.1] break-words mb-5 sm:mb-6">
             Hospitality & Resort Website Design in Jaipur
           </h1>
 
-          <p className="font-sans text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light">
+          <p className="font-lora text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light">
             Direct booking web applications, heritage storytelling, and local search dominance engineered for boutique luxury hotels and wedding resorts.
           </p>
 
@@ -149,11 +149,11 @@ export default function HospitalityIndustryPage() {
             <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-3">
               DIRECT REVENUE & CITABILITY
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
+            <h2 className="font-roboto text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
               Why Choose a Dedicated Web Development Partner for Hospitality Brands in Jaipur?
             </h2>
             <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#070A09]/80 border border-[#18A982]/20 mb-6">
-              <p className="font-sans text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
+              <p className="font-lora text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
                 Heritage havelis, luxury boutique resorts, and fine dining destinations in Jaipur and Rajasthan frequently lose high-margin bookings to online travel agencies (OTAs) charging 18% to 25% commissions, primarily because their direct websites load slowly on mobile viewports and feature confusing reservation funnels. Siyara Innovations solves this direct-revenue leakage by engineering bespoke Next.js and React web architectures designed specifically for luxury hospitality showcases. By combining edge network rendering, automated WebP/AVIF imagery, and frictionless calendar booking integrations, our architectures are engineered for fast visual rendering, minimal layout shifts, and responsive booking interactions on mobile networks. Supported by verified LocalBusiness and Hotel Schema.org markup, our architectures allow luxury travelers, wedding planners, and corporate event organizers to discover and book suites directly. The result is superior profit margins, elevated brand prestige, and predictable high-value guest reservations throughout Jaipur’s tourism season.
               </p>
             </div>
@@ -185,7 +185,7 @@ export default function HospitalityIndustryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
             HOSPITALITY INFRASTRUCTURE
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
             Engineered for Direct Bookings
           </h2>
         </div>
@@ -216,10 +216,10 @@ export default function HospitalityIndustryPage() {
                 <BookOpen className="w-3.5 h-3.5" />
                 <span>EXECUTIVE INDUSTRY PLAYBOOK</span>
               </div>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
+              <h3 className="font-roboto text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
                 Hotel & Luxury Resort Website Design Rajasthan: Direct Booking Engines & Commission Elimination
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
+              <p className="font-lora text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
                 Discover how heritage havelis, luxury palace hotels, and desert camps across Jaipur and Rajasthan reduce dependency on high-commission OTA bookings through direct reservation pathways.
               </p>
             </div>
@@ -242,7 +242,7 @@ export default function HospitalityIndustryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
             KNOWLEDGE BASE
           </span>
-          <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
             Frequently Asked Questions
           </h2>
         </div>
@@ -253,11 +253,11 @@ export default function HospitalityIndustryPage() {
               key={idx}
               className="p-5 sm:p-6 rounded-xl bg-[#0B110F] border border-[#18A982]/15 hover:border-[#D9B45F]/30 transition-all"
             >
-              <h3 className="font-serif text-base sm:text-xl text-[#F3EFE3] mb-2 flex items-start gap-2.5">
+              <h3 className="font-roboto text-base sm:text-xl text-[#F3EFE3] mb-2 flex items-start gap-2.5">
                 <HelpCircle className="w-4 h-4 text-[#D9B45F] shrink-0 mt-1" />
                 <span>{faq.q}</span>
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed pl-6">
+              <p className="font-lora text-xs sm:text-sm text-[#9D9B91] leading-relaxed pl-6">
                 {faq.a}
               </p>
             </div>
@@ -271,10 +271,10 @@ export default function HospitalityIndustryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-3">
             MAXIMIZE DIRECT HOSPITALITY REVENUE
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] mb-4 break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] mb-4 break-words">
             Build a World-Class Resort Web Architecture in Jaipur
           </h2>
-          <p className="font-sans text-xs sm:text-base text-[#9D9B91] max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed">
+          <p className="font-lora text-xs sm:text-base text-[#9D9B91] max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed">
             Connect directly with our hospitality design leads via WhatsApp to audit your direct booking conversion rates.
           </p>
 

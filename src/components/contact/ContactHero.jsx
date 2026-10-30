@@ -52,7 +52,7 @@ export default function ContactHero() {
 
             {/* Master Headline */}
             <div className="mb-6">
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal leading-[1.08] sm:leading-[0.96] tracking-tight text-[#F3EFE3] break-words">
+              <h1 className="font-roboto text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal leading-[1.08] sm:leading-[0.96] tracking-tight text-[#F3EFE3] break-words">
                 <span className="block">LET'S BUILD</span>
                 <span className="block">SOMETHING</span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26]">
@@ -63,7 +63,7 @@ export default function ContactHero() {
 
             {/* Supporting Copy */}
             <div className="mb-8 sm:mb-10 max-w-lg">
-              <p className="font-sans text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light leading-relaxed">
+              <p className="font-lora text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light leading-relaxed">
                 Tell us where you want to go. We will help engineer the digital system to get you there.
               </p>
             </div>

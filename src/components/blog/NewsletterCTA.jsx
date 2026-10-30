@@ -37,12 +37,12 @@ export default function NewsletterCTA() {
           </div>
 
           {/* Main Heading */}
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-[#F3EFE4] mb-4 leading-tight">
+          <h2 className="font-roboto text-3xl sm:text-4xl lg:text-5xl font-light text-[#F3EFE4] mb-4 leading-tight">
             Stay ahead of the <span className="text-gold-gradient">digital curve.</span>
           </h2>
 
           {/* Supporting Copy */}
-          <p className="font-sans text-xs sm:text-sm text-[#CFC9BB]/80 font-light leading-relaxed max-w-xl mx-auto mb-8">
+          <p className="font-lora text-xs sm:text-sm text-[#CFC9BB]/80 font-light leading-relaxed max-w-xl mx-auto mb-8">
             Get practical insights on strategy, technology, marketing and growth delivered directly to your inbox.
           </p>
 
@@ -77,7 +77,7 @@ export default function NewsletterCTA() {
             </form>
           )}
 
-          <p className="font-sans text-[10px] text-[#CFC9BB]/50 tracking-wider uppercase mt-4">
+          <p className="font-lora text-[10px] text-[#CFC9BB]/50 tracking-wider uppercase mt-4">
             No spam. Unsubscribe at any time.
           </p>
 

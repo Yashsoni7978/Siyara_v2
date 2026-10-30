@@ -115,12 +115,12 @@ export default function ClientExperiences() {
               </div>
 
               {/* Main Headline */}
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] text-[#F3EFE4] font-normal leading-[1.12] tracking-tight">
+              <h2 className="font-roboto text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] text-[#F3EFE4] font-normal leading-[1.12] tracking-tight">
                 Trusted by<br />
                 businesses<br />
                 that choose<br />
                 Siyara,{' '}
-                <span className="italic font-serif text-[#D9B45F] font-normal">
+                <span className="italic font-roboto text-[#D9B45F] font-normal">
                   grow<br />
                   differently.
                 </span>
@@ -128,7 +128,7 @@ export default function ClientExperiences() {
             </div>
 
             {/* Supporting Description */}
-            <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed max-w-sm mt-8 sm:mt-10 lg:mt-12">
+            <p className="font-lora text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed max-w-sm mt-8 sm:mt-10 lg:mt-12">
               Long-term relationships, meaningful collaborations and digital experiences that create real business impact.
             </p>
           </motion.div>
@@ -187,7 +187,7 @@ export default function ClientExperiences() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                    className="font-serif text-lg sm:text-xl lg:text-2xl xl:text-[27px] text-[#F3EFE4] font-normal leading-[1.4] tracking-normal"
+                    className="font-lora text-lg sm:text-xl lg:text-2xl xl:text-[27px] text-[#F3EFE4] font-normal leading-[1.4] tracking-normal"
                   >
                     {current.quoteLead}
                     <span className="text-[#D9B45F] font-normal">

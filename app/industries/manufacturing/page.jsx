@@ -111,11 +111,11 @@ export default function ManufacturingIndustryPage() {
             </span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F3EFE3] leading-[1.12] sm:leading-[1.1] break-words mb-5 sm:mb-6">
+          <h1 className="font-roboto text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F3EFE3] leading-[1.12] sm:leading-[1.1] break-words mb-5 sm:mb-6">
             Manufacturing & Export Website Design in Jaipur
           </h1>
 
-          <p className="font-sans text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light">
+          <p className="font-lora text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light">
             High-performance industrial web applications, B2B procurement catalog systems, and international export SEO for manufacturers.
           </p>
 
@@ -149,11 +149,11 @@ export default function ManufacturingIndustryPage() {
             <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-3">
               INDUSTRIAL B2B CITABILITY
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
+            <h2 className="font-roboto text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
               Why Choose Digital Architecture for Industrial & Manufacturing Exporters in Jaipur?
             </h2>
             <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#070A09]/80 border border-[#18A982]/20 mb-6">
-              <p className="font-sans text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
+              <p className="font-lora text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
                 Industrial manufacturers, stone and marble exporters, textile mills, and engineering fabrication enterprises in Jaipur frequently rely on outdated, non-responsive catalog websites that fail to establish institutional credibility with domestic procurement heads and international B2B buyers. Siyara Innovations bridges this industrial trust gap by engineering high-performance Next.js web architectures built to showcase technical capabilities, manufacturing machinery, and export certifications. By delivering static HTML prerendering backed by edge CDN routing, our industrial platforms are optimized for fast visual rendering and stable mobile performance. Supported by verified Organization, LocalBusiness, and ItemList Schema.org markup, our web architectures ensure international buyers and Indian industrial procurement teams find your factory across Google Search and generative engines like SearchGPT and Perplexity. The result is high-ticket industrial RFQs, verified tender inquiries, and permanent international export visibility.
               </p>
             </div>
@@ -185,7 +185,7 @@ export default function ManufacturingIndustryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
             INDUSTRIAL FEATURES
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
             Engineered for Industrial Procurement
           </h2>
         </div>
@@ -216,10 +216,10 @@ export default function ManufacturingIndustryPage() {
                 <BookOpen className="w-3.5 h-3.5" />
                 <span>EXECUTIVE INDUSTRY PLAYBOOK</span>
               </div>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
+              <h3 className="font-roboto text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
                 B2B Manufacturing & Export Website Design: Sitapura & VKI Jaipur Industrial Playbook
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
+              <p className="font-lora text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
                 Read our in-depth blueprint for industrial manufacturers, stone fabricators, and handicraft exporters in Sitapura & VKI on driving international RFQs with high-speed digital catalogs.
               </p>
             </div>
@@ -242,7 +242,7 @@ export default function ManufacturingIndustryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
             KNOWLEDGE BASE
           </span>
-          <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
             Frequently Asked Questions
           </h2>
         </div>
@@ -253,11 +253,11 @@ export default function ManufacturingIndustryPage() {
               key={idx}
               className="p-5 sm:p-6 rounded-xl bg-[#0B110F] border border-[#18A982]/15 hover:border-[#D9B45F]/30 transition-all"
             >
-              <h3 className="font-serif text-base sm:text-xl text-[#F3EFE3] mb-2 flex items-start gap-2.5">
+              <h3 className="font-roboto text-base sm:text-xl text-[#F3EFE3] mb-2 flex items-start gap-2.5">
                 <HelpCircle className="w-4 h-4 text-[#D9B45F] shrink-0 mt-1" />
                 <span>{faq.q}</span>
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed pl-6">
+              <p className="font-lora text-xs sm:text-sm text-[#9D9B91] leading-relaxed pl-6">
                 {faq.a}
               </p>
             </div>
@@ -271,10 +271,10 @@ export default function ManufacturingIndustryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-3">
             SCALE INDUSTRIAL PROCUREMENT & EXPORTS
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] mb-4 break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] mb-4 break-words">
             Build a World-Class Manufacturing Web Architecture in Jaipur
           </h2>
-          <p className="font-sans text-xs sm:text-base text-[#9D9B91] max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed">
+          <p className="font-lora text-xs sm:text-base text-[#9D9B91] max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed">
             Connect directly with our industrial web architects via WhatsApp to audit your B2B catalog and global export discoverability.
           </p>
 

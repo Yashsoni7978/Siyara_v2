@@ -122,14 +122,14 @@ export default function HealthcareIndustryPage() {
             </span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.12] sm:leading-[1.05] break-words mb-6 sm:mb-8">
+          <h1 className="font-roboto text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.12] sm:leading-[1.05] break-words mb-6 sm:mb-8">
             Website Design & SEO for <br className="hidden sm:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26]">
               Doctors & Clinics in Jaipur.
             </span>
           </h1>
 
-          <p className="font-sans text-sm sm:text-lg text-[#9D9B91] font-light leading-relaxed max-w-2xl mb-8 sm:mb-10">
+          <p className="font-lora text-sm sm:text-lg text-[#9D9B91] font-light leading-relaxed max-w-2xl mb-8 sm:mb-10">
             Patients search with high urgency and need immediate reassurance. We build high-speed clinical portals, doctor credibility profiles, and local Google Maps search visibility that turn online searches into booked appointments.
           </p>
 
@@ -162,13 +162,13 @@ export default function HealthcareIndustryPage() {
             <span className="text-xs font-sans font-bold tracking-widest text-[#D9B45F] block mb-3 uppercase">
               THE PATIENT EXPERIENCE GAP
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight break-words mb-4 sm:mb-6">
+            <h2 className="font-roboto text-2xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight break-words mb-4 sm:mb-6">
               Why Generic Website Templates Fail Medical Practices.
             </h2>
-            <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed mb-4 sm:mb-6 font-light">
+            <p className="font-lora text-xs sm:text-sm text-[#9D9B91] leading-relaxed mb-4 sm:mb-6 font-light">
               Most clinic websites in Jaipur are built on slow WordPress templates crowded with medical clip-art, complex contact forms, and broken mobile menus. When a patient in pain is looking for an emergency dentist or specialized physician, a 4-second loading delay causes them to hit the back button and call the next listing.
             </p>
-            <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed font-light">
+            <p className="font-lora text-xs sm:text-sm text-[#9D9B91] leading-relaxed font-light">
               Siyara Innovations replaces slow bloat with custom Next.js engineering: fast, responsive page loads, clear doctor credentials, transparent treatment overviews, and one-tap WhatsApp appointment booking.
             </p>
           </div>
@@ -179,7 +179,7 @@ export default function HealthcareIndustryPage() {
               <h3 className="font-sans text-xs sm:text-sm font-bold uppercase text-[#F3EFE3] mb-2 tracking-wider">
                 Specialized Medical Credibility
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed">
                 Clear presentation of surgical experience, patient care philosophy, and verified clinical qualifications.
               </p>
             </div>
@@ -189,7 +189,7 @@ export default function HealthcareIndustryPage() {
               <h3 className="font-sans text-xs sm:text-sm font-bold uppercase text-[#F3EFE3] mb-2 tracking-wider">
                 Instant Appointment Routing
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed">
                 Patients book or inquire via WhatsApp in one tap, directly connecting with your clinic reception desk.
               </p>
             </div>
@@ -199,7 +199,7 @@ export default function HealthcareIndustryPage() {
               <h3 className="font-sans text-xs sm:text-sm font-bold uppercase text-[#F3EFE3] mb-2 tracking-wider">
                 Local Search Geo-Relevance
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed">
                 Engineered for Google Maps 3-Pack rankings across your clinic's primary catchment neighborhoods in Jaipur.
               </p>
             </div>
@@ -209,7 +209,7 @@ export default function HealthcareIndustryPage() {
               <h3 className="font-sans text-xs sm:text-sm font-bold uppercase text-[#F3EFE3] mb-2 tracking-wider">
                 Ethical & Compliant Code
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed">
                 Safe, zero-spam architecture adhering strictly to healthcare advertising guidelines in India.
               </p>
             </div>
@@ -223,7 +223,7 @@ export default function HealthcareIndustryPage() {
           <span className="text-xs font-sans font-bold tracking-widest text-[#D9B45F] block mb-2 sm:mb-3 uppercase">
             SPECIFICATION & ARCHITECTURE
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-[#F3EFE3] font-normal leading-tight break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl lg:text-5xl text-[#F3EFE3] font-normal leading-tight break-words">
             What Every Siyara Clinical Website Includes.
           </h2>
         </div>
@@ -240,7 +240,7 @@ export default function HealthcareIndustryPage() {
                   {item.title}
                 </h3>
               </div>
-              <p className="font-sans text-xs text-[#9D9B91] leading-relaxed font-light">
+              <p className="font-lora text-xs text-[#9D9B91] leading-relaxed font-light">
                 {item.desc}
               </p>
             </div>
@@ -255,7 +255,7 @@ export default function HealthcareIndustryPage() {
             <span className="text-xs font-sans font-bold tracking-widest text-[#D9B45F] block mb-2 uppercase">
               PROVEN CRAFT & DEMONSTRATIONS
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl text-[#F3EFE3] break-words">
+            <h2 className="font-roboto text-2xl sm:text-4xl text-[#F3EFE3] break-words">
               Clinical Web Architecture & Demonstration Prototypes.
             </h2>
           </div>
@@ -274,10 +274,10 @@ export default function HealthcareIndustryPage() {
               <span className="text-[10px] font-sans font-bold tracking-widest text-[#D9B45F] uppercase block mb-2">
                 DENTAL SURGERY & ESTHETICS
               </span>
-              <h3 className="font-serif text-xl text-[#F3EFE3] mb-3">
+              <h3 className="font-roboto text-xl text-[#F3EFE3] mb-3">
                 Specialist Dental Portal Concept
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
+              <p className="font-lora text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
                 Interactive prototype demonstrating multi-speciality dental clinic architecture: procedural guides, patient consultation booking flow, and local medical schema.
               </p>
             </div>
@@ -297,10 +297,10 @@ export default function HealthcareIndustryPage() {
               <span className="text-[10px] font-sans font-bold tracking-widest text-[#D9B45F] uppercase block mb-2">
                 CONSULTANT PHYSICIAN
               </span>
-              <h3 className="font-serif text-xl text-[#F3EFE3] mb-3">
+              <h3 className="font-roboto text-xl text-[#F3EFE3] mb-3">
                 Consultant Practice Portal Concept
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
+              <p className="font-lora text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
                 Interactive prototype demonstrating solo physician practice architecture: verified credential trust presentation, OPD schedule displays, and patient orientation.
               </p>
             </div>
@@ -320,10 +320,10 @@ export default function HealthcareIndustryPage() {
               <span className="text-[10px] font-sans font-bold tracking-widest text-[#D9B45F] uppercase block mb-2">
                 MULTI-SPECIALITY HEALTHCARE
               </span>
-              <h3 className="font-serif text-xl text-[#F3EFE3] mb-3">
+              <h3 className="font-roboto text-xl text-[#F3EFE3] mb-3">
                 Multispecialty Hospital Portal Concept
               </h3>
-              <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
+              <p className="font-lora text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
                 Interactive prototype demonstrating large hospital portal architecture: 16-department navigation, specialist consultant directory, and emergency orientation.
               </p>
             </div>
@@ -349,10 +349,10 @@ export default function HealthcareIndustryPage() {
                 <BookOpen className="w-3.5 h-3.5" />
                 <span>EXECUTIVE INDUSTRY PLAYBOOK</span>
               </div>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
+              <h3 className="font-roboto text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
                 Clinic & Hospital Website Design Jaipur: Patient Trust & Online Appointment Systems
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
+              <p className="font-lora text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
                 Learn how private clinics, diagnostic centres, and specialty hospitals in Jaipur build HIPAA/NABH-aligned digital portals, doctor scheduling engines, and local medical SEO.
               </p>
             </div>
@@ -373,10 +373,10 @@ export default function HealthcareIndustryPage() {
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-20 text-center">
         <div className="max-w-2xl mx-auto">
           <HeartPulse className="w-9 h-9 sm:w-10 sm:h-10 text-[#D9B45F] mx-auto mb-5 sm:mb-6" />
-          <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-[#F3EFE3] font-normal leading-tight break-words mb-4 sm:mb-6">
+          <h2 className="font-roboto text-2xl sm:text-4xl lg:text-5xl text-[#F3EFE3] font-normal leading-tight break-words mb-4 sm:mb-6">
             Ready to Build a High-Trust Web Presence for Your Practice?
           </h2>
-          <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-8 sm:mb-10">
+          <p className="font-lora text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-8 sm:mb-10">
             Reach out directly to discuss your clinic's specialty, target patient demographics, and local SEO goals in Jaipur.
           </p>
           <a

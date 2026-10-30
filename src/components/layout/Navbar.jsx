@@ -115,7 +115,7 @@ export default function Navbar() {
 
             {/* Elegant Wordmark */}
             <div className="flex flex-col justify-center">
-              <span className="font-serif text-lg xl:text-[19px] font-normal tracking-[0.18em] text-[#F3EFE4] group-hover:text-[#FFFFFF] transition-colors uppercase leading-none">
+              <span className="font-roboto text-lg xl:text-[19px] font-normal tracking-[0.18em] text-[#F3EFE4] group-hover:text-[#FFFFFF] transition-colors uppercase leading-none">
                 SIYARA
               </span>
               <span className="font-sans text-[7.5px] xl:text-[8px] font-semibold tracking-[0.32em] text-[#A5B8AA] group-hover:text-[#ECE7D8] transition-colors uppercase leading-none mt-1">
@@ -199,7 +199,7 @@ export default function Navbar() {
             </div>
             <span className="h-5 sm:h-6 w-[1px] bg-[#19A878]/30 mx-2.5" />
             <div className="flex flex-col justify-center">
-              <span className="font-serif text-[15px] sm:text-[17px] font-normal tracking-[0.16em] text-[#F3EFE4] uppercase leading-none">
+              <span className="font-roboto text-[15px] sm:text-[17px] font-normal tracking-[0.16em] text-[#F3EFE4] uppercase leading-none">
                 SIYARA
               </span>
               <span className="font-sans text-[7px] sm:text-[7.5px] font-semibold tracking-[0.28em] text-[#A5B8AA] uppercase leading-none mt-0.5">

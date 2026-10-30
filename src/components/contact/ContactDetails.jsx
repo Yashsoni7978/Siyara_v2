@@ -67,7 +67,7 @@ export default function ContactDetails() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '80px 0px' }}
             transition={{ duration: 0.6, ease: easeCustom }}
-            className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[0.98] mb-4 sm:mb-6 break-words"
+            className="font-roboto text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[0.98] mb-4 sm:mb-6 break-words"
           >
             GOOD WORK <br />
             STARTS WITH A <br />
@@ -107,7 +107,7 @@ export default function ContactDetails() {
                   {path.title}
                 </h3>
 
-                <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-8">
+                <p className="font-lora text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-8">
                   {path.description}
                 </p>
               </div>

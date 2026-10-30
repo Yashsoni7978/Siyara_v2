@@ -39,10 +39,10 @@ export default function WorkCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-serif text-4xl sm:text-6xl text-[#F3EFE3] font-normal leading-tight"
+              className="font-roboto text-4xl sm:text-6xl text-[#F3EFE3] font-normal leading-tight"
             >
               Let's Build Your Next <br />
-              <span className="italic text-gold-gradient font-serif">
+              <span className="italic text-gold-gradient font-roboto">
                 Success Story.
               </span>
             </motion.h2>

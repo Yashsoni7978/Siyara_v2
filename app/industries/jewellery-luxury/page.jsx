@@ -111,11 +111,11 @@ export default function JewelleryLuxuryPage() {
             </span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F3EFE3] leading-[1.12] sm:leading-[1.1] break-words mb-5 sm:mb-6">
+          <h1 className="font-roboto text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F3EFE3] leading-[1.12] sm:leading-[1.1] break-words mb-5 sm:mb-6">
             Luxury Jewellery & Gems Website Design in Jaipur
           </h1>
 
-          <p className="font-sans text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light">
+          <p className="font-lora text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light">
             Bespoke digital flagships, macro gemstone portfolios, and local luxury SEO engineered for heritage jewelers and private bridal salons.
           </p>
 
@@ -150,11 +150,11 @@ export default function JewelleryLuxuryPage() {
               <Award className="w-4 h-4 text-[#D9B45F] shrink-0" />
               <span>INDUSTRY ARCHITECTURAL FOCUS: HIGH-PERFORMANCE JEWELLERY PLATFORMS</span>
             </div>
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
+            <h2 className="font-roboto text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
               Why Choose High-Performance Next.js Architecture for Luxury Jewellery Brands in Jaipur?
             </h2>
             <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#070A09]/80 border border-[#18A982]/20 mb-6">
-              <p className="font-sans text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
+              <p className="font-lora text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
                 Luxury jewellery houses, gemstone exporters, and heritage bridal ateliers in Jaipur often struggle with off-the-shelf e-commerce templates that fail to convey royal craftsmanship and suffer from sluggish mobile load times during peak shopping seasons. Siyara Innovations eliminates this bottleneck by engineering bespoke Next.js and React digital architectures specifically tailored for high-ticket jewellery portfolios. Our jewellery digital architectures demonstrate how high-resolution macro gemstone photography and editorial typography can be delivered with fast mobile responsiveness. By leveraging edge caching, responsive image formatting, and modern font subsets, our architectures are engineered for fast visual loading and stable layout rendering. Furthermore, we integrate structured Product and Organization schemas alongside dual-track inquiry funnels connecting directly to private VIP WhatsApp concierges, transforming affluent organic search traffic into qualified private salon appointments.
               </p>
             </div>
@@ -186,7 +186,7 @@ export default function JewelleryLuxuryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
             SPECIALIZED DELIVERABLES
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
             Jewellery Sector Capabilities
           </h2>
         </div>
@@ -217,10 +217,10 @@ export default function JewelleryLuxuryPage() {
                 <BookOpen className="w-3.5 h-3.5" />
                 <span>EXECUTIVE INDUSTRY PLAYBOOK</span>
               </div>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
+              <h3 className="font-roboto text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
                 Jewellery Website Design Jaipur: The Johari Bazaar Luxury Playbook
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
+              <p className="font-lora text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
                 Read our definitive guide on how luxury jewellery flagships and gemstone exporters engineer Next.js architectures, high-speed macro galleries, and private WhatsApp VIP funnels.
               </p>
             </div>
@@ -243,7 +243,7 @@ export default function JewelleryLuxuryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
             KNOWLEDGE BASE
           </span>
-          <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
             Frequently Asked Questions
           </h2>
         </div>
@@ -254,11 +254,11 @@ export default function JewelleryLuxuryPage() {
               key={idx}
               className="p-5 sm:p-6 rounded-xl bg-[#0B110F] border border-[#18A982]/15 hover:border-[#D9B45F]/30 transition-all"
             >
-              <h3 className="font-serif text-base sm:text-xl text-[#F3EFE3] mb-2 flex items-start gap-2.5">
+              <h3 className="font-roboto text-base sm:text-xl text-[#F3EFE3] mb-2 flex items-start gap-2.5">
                 <HelpCircle className="w-4 h-4 text-[#D9B45F] shrink-0 mt-1" />
                 <span>{faq.q}</span>
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed pl-6">
+              <p className="font-lora text-xs sm:text-sm text-[#9D9B91] leading-relaxed pl-6">
                 {faq.a}
               </p>
             </div>
@@ -272,10 +272,10 @@ export default function JewelleryLuxuryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-3">
             HERITAGE MEETS HIGH PERFORMANCE
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] mb-4 break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] mb-4 break-words">
             Build a World-Class Jewellery Digital Flagship in Jaipur
           </h2>
-          <p className="font-sans text-xs sm:text-base text-[#9D9B91] max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed">
+          <p className="font-lora text-xs sm:text-base text-[#9D9B91] max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed">
             Connect directly with our luxury creative directors via WhatsApp for project estimation and portfolio review.
           </p>
 
