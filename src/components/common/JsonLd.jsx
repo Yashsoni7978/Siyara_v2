@@ -19,7 +19,7 @@ export default function JsonLd({ schema }) {
 
 /**
  * Base Organization, LocalBusiness, and ProfessionalService Schema Graph
- * Unified NAP, geo coordinates, verified founder node, and corporate identity.
+ * Accurate corporate identity without individual founder nodes or neighborhood claims.
  * Linked @id nodes allow all page-level schemas to reference the root entity.
  */
 export function getRootOrganizationGraph() {
@@ -27,14 +27,13 @@ export function getRootOrganizationGraph() {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': ['Organization', 'LocalBusiness', 'ProfessionalService'],
+        '@type': ['Organization', 'ProfessionalService'],
         '@id': 'https://www.siyaradigitals.com/#organization',
         'name': 'Siyara Innovations',
         'alternateName': [
           'Siyara Digitals',
           'Siyara',
           'Siyara Innovations Jaipur',
-          'Siyara Digital Architecture Studio',
         ],
         'url': 'https://www.siyaradigitals.com',
         'logo': {
@@ -47,86 +46,16 @@ export function getRootOrganizationGraph() {
         },
         'image': 'https://www.siyaradigitals.com/images/siyara_og_image.png',
         'description':
-          'Siyara Innovations is a premier digital architecture studio, Next.js web development company, and Generative Engine Optimization (GEO) agency based in Malviya Nagar, Jaipur, Rajasthan, India. Founded by Yash Soni, we serve B2B brands across jewellery, real estate, healthcare, hospitality, and manufacturing sectors.',
+          'Siyara Innovations is a website design, development, and SEO agency based in Jaipur, Rajasthan, India, serving small and growing businesses across India.',
         'email': 'info@siyaradigitals.com',
-        'telephone': '+91-9587269209',
-        'priceRange': '₹₹₹',
-        'currenciesAccepted': 'INR, USD',
-        'paymentAccepted': 'Bank Transfer, UPI, Credit Card',
-        'address': {
-          '@type': 'PostalAddress',
-          'streetAddress': 'Malviya Nagar, Jaipur',
-          'addressLocality': 'Jaipur',
-          'addressRegion': 'Rajasthan',
-          'postalCode': '302017',
-          'addressCountry': 'IN',
-        },
-        'geo': {
-          '@type': 'GeoCoordinates',
-          'latitude': '26.9124',
-          'longitude': '75.7873',
-        },
-        'openingHoursSpecification': [
-          {
-            '@type': 'OpeningHoursSpecification',
-            'dayOfWeek': [
-              'Monday',
-              'Tuesday',
-              'Wednesday',
-              'Thursday',
-              'Friday',
-              'Saturday',
-            ],
-            'opens': '09:30',
-            'closes': '19:30',
-          },
-        ],
         'areaServed': [
           { '@type': 'City', 'name': 'Jaipur' },
           { '@type': 'State', 'name': 'Rajasthan' },
           { '@type': 'Country', 'name': 'India' },
-          { '@type': 'Place', 'name': 'Malviya Nagar' },
-          { '@type': 'Place', 'name': 'C-Scheme' },
-          { '@type': 'Place', 'name': 'Vaishali Nagar' },
-          { '@type': 'Place', 'name': 'Mansarovar' },
-          { '@type': 'Place', 'name': 'Sitapura Industrial Area' },
-          { '@type': 'Place', 'name': 'Johari Bazaar' },
-          { '@type': 'Place', 'name': 'Raja Park' },
         ],
-        'founder': {
-          '@type': 'Person',
-          '@id': 'https://www.siyaradigitals.com/#founder',
-          'name': 'Yash Soni',
-          'jobTitle': 'Founder & Creative Director',
-          'url': 'https://www.yashsoni.in',
-          'sameAs': [
-            'https://www.yashsoni.in',
-            'https://www.linkedin.com/in/yashsoni/',
-          ],
-        },
-        'knowsAbout': [
-          'Digital Architecture',
-          'Next.js Web Development',
-          'Generative Engine Optimization (GEO)',
-          'Search Engine Optimization (SEO)',
-          'Brand Identity Systems',
-          'Core Web Vitals Performance Engineering',
-          'Conversion Rate Optimization',
-          'B2B Web Design Jaipur',
-          'Jewellery Website Design',
-          'Real Estate Web Development',
-        ],
-        'contactPoint': {
-          '@type': 'ContactPoint',
-          'telephone': '+91-9587269209',
-          'contactType': 'customer service',
-          'email': 'info@siyaradigitals.com',
-          'availableLanguage': ['English', 'Hindi'],
-        },
         'sameAs': [
           'https://www.linkedin.com/company/siyarainnovations/',
           'https://www.instagram.com/siyarainnovations/',
-          'https://twitter.com/siyarainnovations',
         ],
       },
       {
@@ -135,7 +64,7 @@ export function getRootOrganizationGraph() {
         'url': 'https://www.siyaradigitals.com',
         'name': 'Siyara Innovations',
         'description':
-          'Digital Architecture Studio — Next.js Web Development, SEO/GEO, Brand Identity, and Performance Engineering in Jaipur, India.',
+          'Website design, development, SEO, and branding agency in Jaipur, India.',
         'publisher': {
           '@id': 'https://www.siyaradigitals.com/#organization',
         },
@@ -232,7 +161,7 @@ export function buildFaqSchema(faqs) {
 }
 
 /**
- * BlogPosting Schema Builder with linked Organization and Person @ids
+ * BlogPosting Schema Builder with linked Organization @ids
  * @param {{ article, slug }} params
  */
 export function buildBlogPostingSchema({ article, slug }) {
@@ -259,14 +188,16 @@ export function buildBlogPostingSchema({ article, slug }) {
     'datePublished': publishedDate,
     'dateModified': publishedDate,
     'author': {
-      '@type': 'Person',
-      '@id': 'https://www.siyaradigitals.com/#founder',
-      'name': 'Yash Soni',
-      'url': 'https://www.yashsoni.in',
+      '@type': 'Organization',
+      '@id': 'https://www.siyaradigitals.com/#organization',
+      'name': 'Siyara Innovations',
+      'url': 'https://www.siyaradigitals.com',
     },
     'publisher': {
       '@type': 'Organization',
       '@id': 'https://www.siyaradigitals.com/#organization',
+      'name': 'Siyara Innovations',
+      'url': 'https://www.siyaradigitals.com',
     },
     'mainEntityOfPage': {
       '@type': 'WebPage',

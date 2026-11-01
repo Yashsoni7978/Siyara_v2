@@ -60,7 +60,7 @@ export async function generateMetadata({ params }) {
       title: `${formattedTitle} | Siyara Innovations`,
       description: formattedDesc,
       publishedTime: new Date(article.date).toISOString(),
-      authors: ['https://www.yashsoni.in'],
+      authors: ['https://www.siyaradigitals.com'],
       images: [
         {
           url: imageUrl,

@@ -397,8 +397,8 @@ export const SERVICES_DATA = {
       },
       {
         title: 'Knowledge Graph Disconnect & Entity Ambiguity',
-        challenge: 'When algorithms cannot verify your company founders, physical location, and certifications, AI answer engines omit your brand in commercial recommendations.',
-        solution: 'We build multi-layered Schema.org JSON-LD @graph networks linking Organization, LocalBusiness, ProfessionalService, and founder credentials into Google Knowledge Graph.'
+        challenge: 'When algorithms cannot verify your company leadership, physical location, and certifications, AI answer engines omit your brand in commercial recommendations.',
+        solution: 'We build multi-layered Schema.org JSON-LD @graph networks linking Organization, LocalBusiness, ProfessionalService, and leadership credentials into Google Knowledge Graph.'
       },
       {
         title: 'Local Google Map Pack & Commercial Corridor Dominance',

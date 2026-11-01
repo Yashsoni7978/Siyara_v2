@@ -21,7 +21,6 @@ export const projectsData = [
     ctaText: 'EXPLORE PROJECTS',
     featured: true,
     gridSize: 'large',
-    isFounder: false
   },
   {
     id: '02',
@@ -42,7 +41,6 @@ export const projectsData = [
     ctaText: 'VIEW LISTINGS',
     featured: true,
     gridSize: 'large',
-    isFounder: false
   },
   {
     id: '03',
@@ -60,7 +58,6 @@ export const projectsData = [
     brandLogo: 'AARANYA ESTATES',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '04',
@@ -78,7 +75,6 @@ export const projectsData = [
     brandLogo: 'CASA VERDE',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '05',
@@ -96,7 +92,6 @@ export const projectsData = [
     brandLogo: 'THE COURTYARD',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '06',
@@ -114,7 +109,6 @@ export const projectsData = [
     brandLogo: 'TERRAFORM',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '07',
@@ -132,7 +126,6 @@ export const projectsData = [
     brandLogo: 'VISTARA HOMES',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '08',
@@ -150,7 +143,6 @@ export const projectsData = [
     brandLogo: 'THE ADDRESS',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
 
   // =========================================================================
@@ -175,7 +167,6 @@ export const projectsData = [
     ctaText: 'BOOK CONSULTATION',
     featured: true,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '10',
@@ -196,7 +187,6 @@ export const projectsData = [
     ctaText: 'EXPLORE DEPARTMENTS',
     featured: true,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '11',
@@ -217,7 +207,6 @@ export const projectsData = [
     ctaText: 'BOOK APPOINTMENT',
     featured: true,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '12',
@@ -235,7 +224,6 @@ export const projectsData = [
     brandLogo: 'VARUNA HEALTH',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '13',
@@ -253,7 +241,6 @@ export const projectsData = [
     brandLogo: 'AURORA CLINIC',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '14',
@@ -271,7 +258,6 @@ export const projectsData = [
     brandLogo: 'NOVA ORTHO',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '15',
@@ -289,7 +275,6 @@ export const projectsData = [
     brandLogo: 'CARELINE',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '16',
@@ -307,7 +292,6 @@ export const projectsData = [
     brandLogo: 'VITALIS',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
 
   // =========================================================================
@@ -332,7 +316,6 @@ export const projectsData = [
     ctaText: 'EXPLORE RESORT',
     featured: true,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '18',
@@ -350,7 +333,6 @@ export const projectsData = [
     brandLogo: 'IVORY PALACE',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '19',
@@ -368,7 +350,6 @@ export const projectsData = [
     brandLogo: 'CASA RAJ',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '20',
@@ -386,7 +367,6 @@ export const projectsData = [
     brandLogo: 'SAANJ',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '21',
@@ -404,7 +384,6 @@ export const projectsData = [
     brandLogo: 'COURTYARD JAIPUR',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '22',
@@ -422,7 +401,6 @@ export const projectsData = [
     brandLogo: 'RAAH',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '23',
@@ -440,7 +418,6 @@ export const projectsData = [
     brandLogo: 'MARU',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '24',
@@ -458,7 +435,6 @@ export const projectsData = [
     brandLogo: 'NILA',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
 
   // =========================================================================
@@ -483,7 +459,6 @@ export const projectsData = [
     ctaText: 'VIEW PORTFOLIO',
     featured: true,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '26',
@@ -504,7 +479,6 @@ export const projectsData = [
     ctaText: 'EXPLORE BRAND',
     featured: true,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '27',
@@ -522,7 +496,6 @@ export const projectsData = [
     brandLogo: 'MIRA',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '28',
@@ -540,7 +513,6 @@ export const projectsData = [
     brandLogo: 'VIVAH',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '29',
@@ -558,7 +530,6 @@ export const projectsData = [
     brandLogo: 'SOCIAL TABLE',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '30',
@@ -576,7 +547,6 @@ export const projectsData = [
     brandLogo: 'MARIGOLD',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '31',
@@ -594,7 +564,6 @@ export const projectsData = [
     brandLogo: 'CASA CELEBRATIONS',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '32',
@@ -612,33 +581,11 @@ export const projectsData = [
     brandLogo: 'WEDDING EDIT',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
 
   // =========================================================================
   // 05 - ANCHOR / EMCEE (2 LIVE + 6 RESERVED = 8 PROJECTS)
   // =========================================================================
-  {
-    id: '33',
-    slug: 'anchor-yash-soni',
-    name: 'Anchor Yash Soni',
-    title: 'ANCHOR YASH SONI',
-    industry: 'Anchor / Emcee',
-    projectType: 'Founder Professional Portfolio - 700+ Shows Hosted',
-    tagline: 'Founder Professional Portfolio - 700+ Shows Hosted',
-    description: 'This is our own founder’s real, live professional site - not a demo. Bilingual (Hindi/English) anchor and emcee, 700+ shows hosted across weddings, corporate events, sangeet functions, and sports commentary.',
-    services: ['FOUNDER BRAND', 'LIVE SITE', 'EVENT ANCHOR'],
-    status: 'LIVE',
-    link: 'https://yashsoni.in/',
-    image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80',
-    brandLogo: 'YASH SONI',
-    heroHeadline: '700+ SHOWS HOSTED ACROSS INDIA & GLOBALLY',
-    heroSubline: 'Bilingual anchor, sports commentary, and high-energy corporate host.',
-    ctaText: 'VISIT YASHSONI.IN',
-    featured: true,
-    gridSize: 'medium',
-    isFounder: true
-  },
   {
     id: '34',
     slug: 'anchor-ritvika-solanki',
@@ -658,7 +605,6 @@ export const projectsData = [
     ctaText: 'VIEW PORTFOLIO',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '35',
@@ -676,7 +622,6 @@ export const projectsData = [
     brandLogo: 'STAGE HOUSE',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '36',
@@ -694,7 +639,6 @@ export const projectsData = [
     brandLogo: 'VOICE & VERVE',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '37',
@@ -712,7 +656,6 @@ export const projectsData = [
     brandLogo: 'HOST EDIT',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '38',
@@ -730,7 +673,6 @@ export const projectsData = [
     brandLogo: 'SPOTLIGHT',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '39',
@@ -748,7 +690,6 @@ export const projectsData = [
     brandLogo: 'EMCEE ROOM',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '40',
@@ -766,7 +707,6 @@ export const projectsData = [
     brandLogo: 'STAGECRAFT',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
 
   // =========================================================================
@@ -791,7 +731,6 @@ export const projectsData = [
     ctaText: 'SHOP COUTURE',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '42',
@@ -812,7 +751,6 @@ export const projectsData = [
     ctaText: 'VISIT STOREFRONT',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '43',
@@ -830,7 +768,6 @@ export const projectsData = [
     brandLogo: 'NOORANI',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '44',
@@ -848,7 +785,6 @@ export const projectsData = [
     brandLogo: 'AABHA',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '45',
@@ -866,7 +802,6 @@ export const projectsData = [
     brandLogo: 'ZARAH',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '46',
@@ -884,7 +819,6 @@ export const projectsData = [
     brandLogo: 'RED EDIT',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '47',
@@ -902,7 +836,6 @@ export const projectsData = [
     brandLogo: 'KALIRA',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '48',
@@ -920,7 +853,6 @@ export const projectsData = [
     brandLogo: 'VASANT',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
 
   // =========================================================================
@@ -945,7 +877,6 @@ export const projectsData = [
     ctaText: 'EXPLORE STORE',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '50',
@@ -963,7 +894,6 @@ export const projectsData = [
     brandLogo: 'ROOH AMER',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '51',
@@ -981,7 +911,6 @@ export const projectsData = [
     brandLogo: 'MEHRAAB',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '52',
@@ -999,7 +928,6 @@ export const projectsData = [
     brandLogo: 'KORA LIVING',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '53',
@@ -1017,7 +945,6 @@ export const projectsData = [
     brandLogo: 'VELA',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '54',
@@ -1035,7 +962,6 @@ export const projectsData = [
     brandLogo: 'NIRVA',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '55',
@@ -1053,7 +979,6 @@ export const projectsData = [
     brandLogo: 'HOUSE OF OUD',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '56',
@@ -1071,7 +996,6 @@ export const projectsData = [
     brandLogo: 'AARA',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
 
   // =========================================================================
@@ -1096,7 +1020,6 @@ export const projectsData = [
     ctaText: 'VIEW STUDIO',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '58',
@@ -1114,7 +1037,6 @@ export const projectsData = [
     brandLogo: 'FORM & EARTH',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '59',
@@ -1132,7 +1054,6 @@ export const projectsData = [
     brandLogo: 'ATELIER 27',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '60',
@@ -1150,7 +1071,6 @@ export const projectsData = [
     brandLogo: 'CASA FORM',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '61',
@@ -1168,7 +1088,6 @@ export const projectsData = [
     brandLogo: 'LINEA',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '62',
@@ -1186,7 +1105,6 @@ export const projectsData = [
     brandLogo: 'MONUMENT',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '63',
@@ -1204,7 +1122,6 @@ export const projectsData = [
     brandLogo: 'ELEMENT HOUSE',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
 
   // =========================================================================
@@ -1229,7 +1146,6 @@ export const projectsData = [
     ctaText: 'EXPLORE RESTAURANT',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
 
   {
@@ -1248,7 +1164,6 @@ export const projectsData = [
     brandLogo: 'SAANJ LOUNGE',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '67',
@@ -1266,7 +1181,6 @@ export const projectsData = [
     brandLogo: 'MANGO & MINT',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '68',
@@ -1284,7 +1198,6 @@ export const projectsData = [
     brandLogo: 'THE TABLE',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '69',
@@ -1302,7 +1215,6 @@ export const projectsData = [
     brandLogo: 'ROAST & RYE',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '70',
@@ -1320,7 +1232,6 @@ export const projectsData = [
     brandLogo: 'BAITHAK',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '71',
@@ -1338,7 +1249,6 @@ export const projectsData = [
     brandLogo: 'MONSOON',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
 
   // =========================================================================
@@ -1363,7 +1273,6 @@ export const projectsData = [
     ctaText: 'TEST AI WIDGET',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '73',
@@ -1381,7 +1290,6 @@ export const projectsData = [
     brandLogo: 'NOVA OPS',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '74',
@@ -1399,7 +1307,6 @@ export const projectsData = [
     brandLogo: 'FLOWSTACK',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '75',
@@ -1417,7 +1324,6 @@ export const projectsData = [
     brandLogo: 'ORBIT',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '76',
@@ -1435,7 +1341,6 @@ export const projectsData = [
     brandLogo: 'NEXUS AI',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '77',
@@ -1453,7 +1358,6 @@ export const projectsData = [
     brandLogo: 'PULSE',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '78',
@@ -1471,7 +1375,6 @@ export const projectsData = [
     brandLogo: 'SYNK',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '79',
@@ -1489,7 +1392,6 @@ export const projectsData = [
     brandLogo: 'VECTOR',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
 
   // =========================================================================
@@ -1514,7 +1416,6 @@ export const projectsData = [
     ctaText: 'EXPLORE APP',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '81',
@@ -1532,7 +1433,6 @@ export const projectsData = [
     brandLogo: 'LEDGERA',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '82',
@@ -1550,7 +1450,6 @@ export const projectsData = [
     brandLogo: 'WEALTHLINE',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '83',
@@ -1568,7 +1467,6 @@ export const projectsData = [
     brandLogo: 'NOVA CAPITAL',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '84',
@@ -1586,7 +1484,6 @@ export const projectsData = [
     brandLogo: 'CLEARFIN',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '85',
@@ -1604,7 +1501,6 @@ export const projectsData = [
     brandLogo: 'MONETA',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   },
   {
     id: '86',
@@ -1622,7 +1518,6 @@ export const projectsData = [
     brandLogo: 'VAULT',
     featured: false,
     gridSize: 'medium',
-    isFounder: false
   }
 ];
 

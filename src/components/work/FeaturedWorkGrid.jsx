@@ -142,11 +142,7 @@ export default function FeaturedWorkGrid({ selectedIndustry, onClearFilter }) {
                     </span>
 
                     <div className="flex items-center gap-2">
-                      {project.isFounder && (
-                        <span className="font-sans text-[9px] sm:text-[10px] font-bold tracking-[0.2em] text-[#070A09] uppercase px-2.5 py-1 bg-[#D4AF37] border border-[#D4AF37] shadow-md">
-                          FOUNDER'S BRAND
-                        </span>
-                      )}
+                      
 
                       {isComingSoon ? (
                         <span className="font-sans text-[9px] sm:text-[10px] font-bold tracking-[0.2em] text-[#D4AF37] uppercase px-2.5 py-1 bg-[#D4AF37]/15 border border-[#D4AF37]/40 backdrop-blur-md flex items-center gap-1">

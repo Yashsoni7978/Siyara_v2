@@ -164,7 +164,7 @@ export default function GeoAgencyIndiaPage() {
           { '@type': 'City', 'name': 'Mumbai' },
           { '@type': 'City', 'name': 'Bengaluru' },
         ],
-        'description': 'India’s specialized Generative Engine Optimization (GEO) agency. Optimizing high-growth enterprises and founders for AI Overviews, SearchGPT, and Perplexity citation authority.',
+        'description': 'India’s specialized Generative Engine Optimization (GEO) agency. Optimizing high-growth enterprises and business leaders for AI Overviews, SearchGPT, and Perplexity citation authority.',
       },
       {
         '@type': 'FAQPage',

@@ -36,7 +36,7 @@ export default function IndustriesSection() {
     {
       name: 'ANCHOR / EMCEE',
       label: 'ANCHOR & EMCEE PORTFOLIOS',
-      tagline: 'Bilingual live event hosting, galas, and founder brand platforms',
+      tagline: 'Bilingual live event hosting, galas, and executive brand platforms',
       project: projectsData.find((p) => p.industry === 'Anchor / Emcee') || projectsData[15]
     },
     {
