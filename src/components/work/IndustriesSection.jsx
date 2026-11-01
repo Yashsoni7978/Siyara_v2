@@ -33,18 +33,13 @@ export default function IndustriesSection() {
       tagline: 'High-capacity ticketing platforms & dynamic venue guides',
       project: projectsData.find((p) => p.industry === 'Events') || projectsData[6]
     },
-    {
-      name: 'ANCHOR / EMCEE',
-      label: 'ANCHOR & EMCEE PORTFOLIOS',
-      tagline: 'Bilingual live event hosting, galas, and executive brand platforms',
-      project: projectsData.find((p) => p.industry === 'Anchor / Emcee') || projectsData[15]
-    },
-    {
-      name: 'FASHION',
-      label: 'FASHION & COUTURE D2C',
-      tagline: 'Bespoke luxury e-commerce & high-converting brand lookbooks',
+        {
+      name: 'BRIDAL',
+      label: 'BRIDAL & FASHION STUDIOS',
+      tagline: 'Luxury fashion showcases and high-converting bridal brand lookbooks',
       project: projectsData.find((p) => p.industry === 'Fashion') || projectsData[8]
     },
+    
     {
       name: 'E-COMMERCE',
       label: 'E-COMMERCE & ARTISAN BRANDS',

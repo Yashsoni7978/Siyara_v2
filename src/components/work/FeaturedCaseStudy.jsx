@@ -188,105 +188,51 @@ export default function FeaturedCaseStudy() {
 
         </div>
 
-        {/* QUANTIFIABLE BEFORE VS AFTER ENGINEERING METRICS (E-E-A-T BENCHMARKS) */}
+        {/* CORE WEB VITALS TARGETS */}
         <div className="mt-14 sm:mt-20 pt-10 sm:pt-14 border-t border-[#0B5E49]/15">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-12">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ECE7D8] border border-[#B9923F]/40 text-[10px] font-sans tracking-[0.24em] text-[#0B5E49] uppercase font-bold mb-3">
                 <Activity className="w-3.5 h-3.5 text-[#B9923F]" />
-                <span>AUDITED E-E-A-T PERFORMANCE BENCHMARKS</span>
+                <span>CORE WEB VITALS TARGETS</span>
               </div>
               <h3 className="font-serif text-2xl sm:text-4xl text-[#101613] font-normal break-words">
-                Quantifiable Before vs. After Engineering Proof
+                Performance Standards We Engineer To
               </h3>
             </div>
             <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light max-w-md leading-relaxed">
-              Audited Core Web Vitals telemetry and generative engine citations across flagship client architectures (including <em>Rishabh Jewellers</em> &amp; luxury real estate portals).
+              These are the technical benchmarks we target on every project — verified against Google&apos;s Core Web Vitals thresholds.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {/* Metric 1 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <div className="p-5 sm:p-6 bg-[#ECE7D8]/80 border border-[#0B5E49]/20 rounded-xl flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">
-                  <span>MOBILE LCP</span>
-                  <span className="text-[#0B5E49] bg-[#0B5E49]/10 px-2 py-0.5 rounded text-[10px] font-bold">-71.4% SPEED</span>
-                </div>
-                <div className="flex items-baseline gap-3 mb-2">
-                  <span className="text-sm font-sans line-through text-[#101613]/40">4.9s</span>
-                  <span className="text-2xl sm:text-3xl font-serif font-bold text-[#101613]">1.4s</span>
-                </div>
-                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">
-                  Largest Contentful Paint reduced from 4.9s on shared WordPress to 1.4s on custom Next.js 15 App Router &amp; edge nodes.
-                </p>
+                <div className="text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">MOBILE LCP TARGET</div>
+                <div className="text-2xl sm:text-3xl font-serif font-bold text-[#101613] mb-2">&lt;1.8s</div>
+                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">Largest Contentful Paint target on Next.js 15 with edge delivery — within Google&apos;s Good threshold.</p>
               </div>
               <div className="mt-4 pt-3 border-t border-[#0B5E49]/15 text-[10px] font-sans font-bold text-[#0B5E49] uppercase tracking-widest flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" />
-                <span>Passes Google CWV</span>
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" /><span>Google CWV Good</span>
               </div>
             </div>
-
-            {/* Metric 2 */}
             <div className="p-5 sm:p-6 bg-[#ECE7D8]/80 border border-[#0B5E49]/20 rounded-xl flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">
-                  <span>LAYOUT SHIFT (CLS)</span>
-                  <span className="text-[#0B5E49] bg-[#0B5E49]/10 px-2 py-0.5 rounded text-[10px] font-bold">-94.4% SHIFT</span>
-                </div>
-                <div className="flex items-baseline gap-3 mb-2">
-                  <span className="text-sm font-sans line-through text-[#101613]/40">0.18</span>
-                  <span className="text-2xl sm:text-3xl font-serif font-bold text-[#101613]">0.01</span>
-                </div>
-                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">
-                  Cumulative Layout Shift eliminated via strict aspect-ratio asset reservation, terminating accidental taps during mobile browsing.
-                </p>
+                <div className="text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">LAYOUT SHIFT (CLS)</div>
+                <div className="text-2xl sm:text-3xl font-serif font-bold text-[#101613] mb-2">&lt;0.02</div>
+                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">Cumulative Layout Shift minimised via strict aspect-ratio asset reservation across all screen sizes.</p>
               </div>
               <div className="mt-4 pt-3 border-t border-[#0B5E49]/15 text-[10px] font-sans font-bold text-[#0B5E49] uppercase tracking-widest flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" />
-                <span>Zero Visual Jumping</span>
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" /><span>Stable Layouts</span>
               </div>
             </div>
-
-            {/* Metric 3 */}
             <div className="p-5 sm:p-6 bg-[#ECE7D8]/80 border border-[#0B5E49]/20 rounded-xl flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">
-                  <span>INPUT DELAY (INP)</span>
-                  <span className="text-[#0B5E49] bg-[#0B5E49]/10 px-2 py-0.5 rounded text-[10px] font-bold">-84.7% DELAY</span>
-                </div>
-                <div className="flex items-baseline gap-3 mb-2">
-                  <span className="text-sm font-sans line-through text-[#101613]/40">340ms</span>
-                  <span className="text-2xl sm:text-3xl font-serif font-bold text-[#101613]">52ms</span>
-                </div>
-                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">
-                  Interaction to Next Paint reduced from 340ms to 52ms by shedding jQuery and heavy third-party plugins in favor of React 19 primitives.
-                </p>
+                <div className="text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">INPUT DELAY (INP)</div>
+                <div className="text-2xl sm:text-3xl font-serif font-bold text-[#101613] mb-2">&lt;80ms</div>
+                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">Interaction to Next Paint target with React 19 primitives, removing heavy third-party scripts.</p>
               </div>
               <div className="mt-4 pt-3 border-t border-[#0B5E49]/15 text-[10px] font-sans font-bold text-[#0B5E49] uppercase tracking-widest flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" />
-                <span>Instant Mobile Touch</span>
-              </div>
-            </div>
-
-            {/* Metric 4 */}
-            <div className="p-5 sm:p-6 bg-[#ECE7D8]/80 border border-[#0B5E49]/20 rounded-xl flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">
-                  <span>AI SEARCH (GEO)</span>
-                  <span className="text-[#B9923F] bg-[#B9923F]/15 px-2 py-0.5 rounded text-[10px] font-bold">+340% INQUIRIES</span>
-                </div>
-                <div className="flex items-baseline gap-3 mb-2">
-                  <span className="text-sm font-sans line-through text-[#101613]/40">0 Cites</span>
-                  <span className="text-xl sm:text-2xl font-serif font-bold text-[#101613]">Top Cited</span>
-                </div>
-                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">
-                  <em>Rishabh Jewellers</em> and Sitapura manufacturing clients indexed across Perplexity and SearchGPT for wholesale commercial discovery.
-                </p>
-              </div>
-              <div className="mt-4 pt-3 border-t border-[#0B5E49]/15 text-[10px] font-sans font-bold text-[#0B5E49] uppercase tracking-widest flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" />
-                <span>Johari &amp; Sitapura Dominance</span>
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" /><span>Responsive Interactions</span>
               </div>
             </div>
           </div>

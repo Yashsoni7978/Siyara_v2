@@ -148,14 +148,14 @@ export default function JewelleryLuxuryPage() {
           <div className="relative z-10">
             <div className="flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-[0.18em] sm:tracking-[0.24em] text-[#D9B45F] uppercase mb-3">
               <Award className="w-4 h-4 text-[#D9B45F] shrink-0" />
-              <span>VERIFIED CASE PROOF: RISHABH JEWELLERS ARCHITECTURE</span>
+              <span>WEB DESIGN CASE STUDY: LUXURY JEWELLERY</span>
             </div>
             <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
               Why Choose High-Performance Next.js Architecture for Luxury Jewellery Brands in Jaipur?
             </h2>
             <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#070A09]/80 border border-[#18A982]/20 mb-6">
               <p className="font-sans text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
-                Luxury jewellery houses, gemstone exporters, and heritage bridal ateliers in Jaipur often struggle with off-the-shelf e-commerce templates that fail to convey royal craftsmanship and suffer from sluggish mobile load times during peak shopping seasons. Siyara Innovations eliminates this revenue bottleneck by engineering bespoke Next.js and React digital architectures specifically tailored for high-ticket jewellery portfolios. Our flagship digital showcase for Rishabh Jewellers demonstrates how high-resolution macro gemstone photography and editorial typography can be delivered with sub-second responsiveness. By leveraging edge caching, serverless streaming, and next-gen AVIF image formatting, our builds achieve Largest Contentful Paint (LCP) under 1.8 seconds, Cumulative Layout Shift (CLS) under 0.02, and Interaction to Next Paint (INP) under 80 milliseconds. Furthermore, we integrate verified LocalBusiness and Product schemas alongside dual-track inquiry funnels connecting directly to private VIP WhatsApp concierges, transforming affluent organic search traffic into qualified private salon appointments.
+                Luxury jewellery houses, gemstone exporters, and heritage bridal ateliers in Jaipur often struggle with off-the-shelf e-commerce templates that fail to convey royal craftsmanship and suffer from sluggish mobile load times during peak shopping seasons. Siyara Innovations eliminates this revenue bottleneck by engineering bespoke Next.js and React digital architectures specifically tailored for high-ticket jewellery portfolios. Our digital showcases for luxury jewellery brands demonstrate how high-resolution macro gemstone photography and editorial typography can be delivered with sub-second responsiveness. By leveraging edge caching, serverless streaming, and next-gen AVIF image formatting, our builds achieve Largest Contentful Paint (LCP) under 1.8 seconds, Cumulative Layout Shift (CLS) under 0.02, and Interaction to Next Paint (INP) under 80 milliseconds. Furthermore, we integrate verified LocalBusiness and Product schemas alongside dual-track inquiry funnels connecting directly to private VIP WhatsApp concierges, transforming affluent organic search traffic into qualified private salon appointments.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-[#9D9B91]">
