@@ -27,7 +27,7 @@ export const metadata = {
     default: 'Web Design Company & SEO Services Jaipur | Siyara Innovations',
     template: '%s | Siyara Innovations',
   },
-  description: 'Siyara Innovations is a Jaipur digital studio engineering high-speed Next.js websites, local SEO, AI search visibility, and brand architecture.',
+  description: 'Siyara Innovations is a web design and SEO agency in Jaipur, Rajasthan. We build high-performance websites, manage SEO, and grow brands for businesses across India.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com',
   },
@@ -36,7 +36,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com',
     siteName: 'Siyara Innovations',
     title: 'Web Design Company & SEO Services Jaipur | Siyara Innovations',
-    description: 'Siyara Innovations is a Jaipur digital studio engineering high-speed Next.js websites, local SEO, AI search visibility, and brand architecture.',
+    description: 'Siyara Innovations is a web design and SEO agency in Jaipur, Rajasthan. We build high-performance websites, manage SEO, and grow brands for businesses across India.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -50,7 +50,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design Company & SEO Services Jaipur | Siyara Innovations',
-    description: 'Siyara Innovations is a Jaipur digital studio engineering high-speed Next.js websites, local SEO, AI search visibility, and brand architecture.',
+    description: 'Siyara Innovations is a web design and SEO agency in Jaipur, Rajasthan. We build high-performance websites, manage SEO, and grow brands for businesses across India.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
   icons: {

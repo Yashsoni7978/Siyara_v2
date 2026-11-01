@@ -101,7 +101,7 @@ export default function Navbar() {
               SIYARA INNOVATIONS
             </span>
             <span className="text-[7.5px] sm:text-[9px] tracking-[0.2em] sm:tracking-[0.25em] text-[#9D9B91] font-medium uppercase whitespace-nowrap">
-              Digital Architecture Studio
+              Web Design & SEO Agency
             </span>
           </div>
         </Link>

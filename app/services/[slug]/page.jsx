@@ -255,7 +255,7 @@ export const SERVICES_DATA = {
       {
         title: 'Monolithic Architecture Bottlenecks vs Serverless Next.js',
         challenge: 'Legacy monolithic backends suffer from high server maintenance costs, slow cold starts, and cascading server crashes during traffic spikes from commercial advertising campaigns and flash sales.',
-        solution: 'We engineer serverless Next.js 15 App Router applications running on global edge nodes with automated resource scaling, sub-100ms API response latencies, and guaranteed 99.99% system availability.'
+        solution: 'We engineer serverless Next.js 15 App Router applications running on global edge nodes with automated resource scaling, sub-100ms API response latencies, and high-availability system architecture targeting enterprise-grade uptime.'
       },
       {
         title: 'Database Connection Exhaustion & Complex Query Latency',
@@ -282,7 +282,7 @@ export const SERVICES_DATA = {
       'Production-Grade Next.js 15 Full-Stack Application',
       'Relational PostgreSQL Database Architecture & Migrations',
       'Type-Safe REST / Serverless API Endpoints with Zod',
-      'Guaranteed Core Web Vitals (LCP < 1.8s, INP < 80ms)',
+      'Optimised Core Web Vitals (targeting LCP < 1.8s, INP < 80ms)',
       'Automated CI/CD Deployment Pipeline & Telemetry',
       'Complete Source Code Ownership & Transfer'
     ],
@@ -388,7 +388,7 @@ export const SERVICES_DATA = {
     metaTitle: 'SEO & Generative AI Jaipur',
     metaDescription: 'Generative Engine Optimization (GEO) and technical SEO in Jaipur. Dominate Google search rankings, Perplexity citations, and ChatGPT AI Search.',
     questionH2: 'How Does Generative Engine Optimization (GEO) Secure B2B Market Dominance in India?',
-    citabilityAnswer: 'Traditional search engine optimization solely targeted Google blue hyperlinks through keyword density and external backlinks. However, modern commercial discovery in Jaipur and across India is increasingly synthesized by generative engines such as SearchGPT, Google AI Overviews, and Perplexity. Siyara Innovations bridges this technical transition by combining rigorous technical SEO with advanced Generative Engine Optimization (GEO). We model your business entity into linked Schema.org knowledge graphs and architect your on-page copy into high information-gain syntactic passages. By achieving strict Core Web Vitals benchmarks—Largest Contentful Paint under 1.8 seconds, Cumulative Layout Shift under 0.02, and Interaction to Next Paint under 80 milliseconds—our client web properties ensure uninterrupted crawlability for both traditional search bots and autonomous AI retrieval agents. This dual-track methodology guarantees your brand is cited as the authoritative regional recommendation whenever potential buyers query commercial requirements.',
+    citabilityAnswer: 'Traditional search engine optimization solely targeted Google blue hyperlinks through keyword density and external backlinks. However, modern commercial discovery in Jaipur and across India is increasingly synthesized by generative engines such as SearchGPT, Google AI Overviews, and Perplexity. Siyara Innovations bridges this technical transition by combining rigorous technical SEO with advanced Generative Engine Optimization (GEO). We model your business entity into linked Schema.org knowledge graphs and architect your on-page copy into high information-gain syntactic passages. By achieving strict Core Web Vitals benchmarks—Largest Contentful Paint under 1.8 seconds, Cumulative Layout Shift under 0.02, and Interaction to Next Paint under 80 milliseconds—our client web properties ensure uninterrupted crawlability for both traditional search bots and autonomous AI retrieval agents. This dual-track methodology improves your brand\'s chances of being cited when potential buyers query commercial requirements.',
     deepDive: [
       {
         title: 'Syntactic Passage Citability vs Blue Links',
@@ -403,7 +403,7 @@ export const SERVICES_DATA = {
       {
         title: 'Local Google Map Pack & Commercial Corridor Dominance',
         challenge: 'Regional businesses in Jaipur lose lucrative local clients to competitors because their Google Business Profile lacks citation authority and geo-tagged reviews.',
-        solution: 'We engineer hyper-local citation frameworks across Malviya Nagar, C-Scheme, Vaishali Nagar, and Sitapura, achieving dominant 3-Pack placement for high-intent queries.'
+        solution: 'We engineer hyper-local citation frameworks across Jaipur\'s key commercial corridors — C-Scheme, Vaishali Nagar, Sitapura, and more — achieving strong 3-Pack placement for high-intent local queries.'
       }
     ],
     techStack: [
@@ -2024,7 +2024,7 @@ export default async function ServiceDetailPage({ params }) {
           <div className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-[#0B110F] border border-[#D9B45F]/20">
             <div className="flex items-center gap-2.5 mb-6">
               <ShieldCheck className="w-5 h-5 text-[#D9B45F]" />
-              <h3 className="font-serif text-lg sm:text-xl text-[#F3EFE3]">Guaranteed Deliverables</h3>
+              <h3 className="font-serif text-lg sm:text-xl text-[#F3EFE3]">Service Deliverables</h3>
             </div>
             <div className="space-y-3.5">
               {(service.deliverables || service.subServices).map((deliv, idx) => (
@@ -2115,7 +2115,7 @@ export default async function ServiceDetailPage({ params }) {
             COMMERCIAL CLARITY
           </span>
           <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
-            Transparent Investment Tiers (INR)
+            Service Options
           </h2>
           <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
             Clear, scope-governed engineering contracts without hidden software markups or agency shortcuts.

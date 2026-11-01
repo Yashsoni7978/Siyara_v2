@@ -62,7 +62,7 @@ export default function Footer() {
               </Link>
 
               <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-6 max-w-sm">
-                A digital architecture studio building connected systems for Jaipur businesses.
+                A web design and SEO agency building high-performance digital solutions for businesses in Jaipur and across India.
               </p>
             </div>
 
