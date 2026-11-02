@@ -152,7 +152,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task B5: Navigation & Footer Update
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `99a271d`  
 **Evidence:**
 - `src/components/layout/Navbar.jsx`: Configured primary navigation links to `Home`, `Services`, `Work`, `Insights`, `About`, `Contact` + direct WhatsApp CTA (`WHATSAPP STUDIO` linking to `wa.me/919587269209`).
 - `src/components/home/Footer.jsx`:
@@ -163,7 +163,12 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task B6: Sitemap & robots.txt
-**Status:** 🔄 IN PROGRESS
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- `public/robots.txt` verified: specifies `Sitemap: https://www.siyaradigitals.com/sitemap.xml` with standard crawler access rules.
+- `app/robots.js` verified: configures Next.js crawler directives and points `sitemap` to `https://www.siyaradigitals.com/sitemap.xml`.
+- `app/sitemap.js` verified: output inspected via `.next/server/app/sitemap.xml.body` — exactly 27 canonical, indexable URLs (7 core studio pages, 4 core services, 4 indexable industries, 3 legal pages, and 13 indexable articles). Real ISO publication dates used for article entries; zero noindexed or 301-redirected URLs present in sitemap.
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ---
 
@@ -197,3 +202,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `48932b3` | B2 | Add 301 redirects for old/incorrect URLs, update all internal links |
 | `a1c76c9` | B3 | Create new service pages and industries hub |
 | `143b27a` | B4 | Add noindex to non-core industries, secondary services, 18 articles |
+| `99a271d` | B5 | Update nav and footer to core pages only, remove noindex links |
