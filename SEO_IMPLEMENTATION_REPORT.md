@@ -211,7 +211,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task C3: Internal Link Map
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `4c1974a`  
 **Evidence:**
 - `src/components/home/WhatWeDo.jsx`: Updated homepage service grid to showcase strictly the 4 Core Services in priority order (`Website Design & Development`, `Search Engine Optimization (SEO)`, `Social Media Marketing`, `Brand Strategy & Identity`), passing direct link equity to indexable core routes.
 - `src/components/home/Industries.jsx`: Filtered homepage industry showcase strictly to the 4 Core Indexable Verticals (`Healthcare & Clinics`, `Interior Design`, `Event Management`, `Real Estate`), and added an explicit link to the `/industries` hub.
@@ -225,6 +225,16 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task C4: Structured Data Validation
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- Global Organization Graph: Verified rendered on 100% of routes via `app/layout.jsx:94` and `src/components/common/JsonLd.jsx`. Graph cleanly links `Organization`, `ProfessionalService`, and `WebSite` entities with canonical IDs, official logo, verified descriptions, and `areaServed` (Jaipur, Rajasthan, India). Zero founder or individual references.
+- Core Service Schemas: Verified `Service` schema rendered with `OfferCatalog` and `provider` referencing Organization graph on all core service pages (`web-design-development`, `seo-services`, `social-media-marketing`, `branding`).
+- Article Schemas: Verified `BlogPosting` schema rendered on all insight routes with ISO dates, canonical `mainEntityOfPage`, and `author` strictly set to `Organization` (`https://www.siyaradigitals.com/#organization`).
+- FAQPage Schemas: Verified `FAQPage` schema rendered strictly on pages with visible accordion/question UI (`app/faq/page.jsx`, `app/industries/page.jsx`, article pages, and service pages) avoiding Google unrendered content penalties.
+- **Verification Script:** Executed `scratch/test_schemas.cjs` directly testing built production HTML files in `.next/server/app/`, confirming all JSON-LD blocks parse as valid JSON without deprecations.
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
+
+### Task C5: Alt Text Audit
 **Status:** 🔄 IN PROGRESS
 
 ## Phase D: Proof Engine
@@ -258,3 +268,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `c45115d` | B6 | Sitemap includes only indexable URLs, robots.txt verified |
 | `7bb4997` | C1 | Homepage title, H1, meta description, and tagline alignment |
 | `1be3635` | C2 | Service and industry content deduplication and boilerplate removal |
+| `4c1974a` | C3 | Internal link map updates for homepage core services/industries and articles |
