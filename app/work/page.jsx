@@ -2,7 +2,7 @@ import Work from '../../src/views/Work';
 import { projectsData } from '../../src/data/projectsData';
 
 export const metadata = {
-  title: 'Web Design & Digital Portfolio Jaipur',
+  title: 'Web Design Portfolio Jaipur',
   description: 'Explore live digital architectures, Next.js web builds, and branding systems engineered for healthcare, real estate, and retail clients in Jaipur.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/work',
@@ -11,7 +11,7 @@ export const metadata = {
     type: 'website',
     url: 'https://www.siyaradigitals.com/work',
     siteName: 'Siyara Innovations',
-    title: 'Web Design & Digital Portfolio Jaipur | Siyara Innovations',
+    title: 'Web Design Portfolio Jaipur | Siyara Innovations',
     description: 'Explore live digital architectures, Next.js web builds, and branding systems engineered for healthcare, real estate, and retail clients in Jaipur.',
     images: [
       {

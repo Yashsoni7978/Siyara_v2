@@ -17,7 +17,7 @@ import {
 import JsonLd, { buildBreadcrumbs, buildServiceSchema, buildFaqSchema } from '../../../src/components/common/JsonLd';
 
 export const metadata = {
-  title: 'SEO Services in Jaipur | Siyara Innovations',
+  title: 'SEO Services in Jaipur',
   description: 'Professional SEO services in Jaipur. We optimize search rankings, Google 3-Pack visibility, and structured data to drive high-intent business inquiries.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/services/seo-services',

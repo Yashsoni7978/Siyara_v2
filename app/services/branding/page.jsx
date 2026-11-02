@@ -16,7 +16,7 @@ import {
 import JsonLd, { buildBreadcrumbs, buildServiceSchema, buildFaqSchema } from '../../../src/components/common/JsonLd';
 
 export const metadata = {
-  title: 'Brand Strategy & Logo Design Jaipur | Siyara',
+  title: 'Brand Strategy & Logo Design',
   description: 'Bespoke brand strategy and visual identity design in Jaipur. We create distinct logos, design systems, messaging guidelines, and brand assets that build trust.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/services/branding',
@@ -25,7 +25,7 @@ export const metadata = {
     type: 'website',
     url: 'https://www.siyaradigitals.com/services/branding',
     siteName: 'Siyara Innovations',
-    title: 'Brand Strategy & Logo Design Jaipur | Siyara Innovations',
+    title: 'Brand Strategy & Logo Design | Siyara Innovations',
     description: 'Bespoke brand strategy and visual identity design in Jaipur. We create distinct logos, design systems, messaging guidelines, and brand assets that build trust.',
     images: [
       {

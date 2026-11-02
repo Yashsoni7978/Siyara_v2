@@ -5,7 +5,7 @@ import { BUSINESS_CONFIG } from '../../src/config/business';
 
 export const metadata = {
   title: 'Web Development & SEO FAQ Jaipur',
-  description: 'Answers to common questions regarding Next.js web development, local SEO timelines, pricing, and project onboarding with Siyara in Jaipur.',
+  description: 'Answers to common client questions regarding Next.js web development, local SEO timelines, project deliverables, and onboarding with Siyara in Jaipur.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/faq',
   },

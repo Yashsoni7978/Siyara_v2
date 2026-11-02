@@ -5,7 +5,7 @@ import { siteConfig } from '@/data/siteConfig';
 
 export const metadata = {
   title: 'Event Management Web Design Jaipur',
-  description: 'High-converting portfolio websites, luxury wedding showcase systems, and local SEO for event planners and management companies in Jaipur.',
+  description: 'High-converting portfolio websites, luxury wedding showcase systems, and local SEO for event planners and event management companies in Jaipur.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/industries/event-management',
   },

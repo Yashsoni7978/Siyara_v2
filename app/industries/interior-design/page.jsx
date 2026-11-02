@@ -5,7 +5,7 @@ import { siteConfig } from '@/data/siteConfig';
 
 export const metadata = {
   title: 'Interior Design Web Studio Jaipur',
-  description: 'Bespoke Next.js portfolio websites, visual design architectures, and local luxury SEO for architects and interior design studios in Jaipur.',
+  description: 'Bespoke Next.js portfolio websites, editorial visual galleries, and local luxury SEO for architects and interior design studios in Jaipur, India.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/industries/interior-design',
   },

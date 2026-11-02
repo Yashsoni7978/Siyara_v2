@@ -16,7 +16,7 @@ import {
 import JsonLd, { buildBreadcrumbs, buildFaqSchema } from '../../src/components/common/JsonLd';
 
 export const metadata = {
-  title: 'Industries We Serve | Siyara Innovations Jaipur',
+  title: 'Industries We Serve in Jaipur',
   description: 'Specialized web design, SEO, and digital growth systems tailored for healthcare, interior design, event management, and real estate in Jaipur and India.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/industries',
@@ -25,7 +25,7 @@ export const metadata = {
     type: 'website',
     url: 'https://www.siyaradigitals.com/industries',
     siteName: 'Siyara Innovations',
-    title: 'Industries We Serve | Siyara Innovations Jaipur',
+    title: 'Industries We Serve in Jaipur | Siyara Innovations',
     description: 'Specialized web design, SEO, and digital growth systems tailored for healthcare, interior design, event management, and real estate in Jaipur and India.',
     images: [
       {

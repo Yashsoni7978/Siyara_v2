@@ -5,7 +5,7 @@ import { siteConfig } from '@/data/siteConfig';
 
 export const metadata = {
   title: 'Real Estate Web Development Jaipur',
-  description: 'Custom Next.js real estate portals, luxury project showcase architectures, and lead generation systems for builders and brokers in Jaipur.',
+  description: 'Custom Next.js real estate portals, luxury property showcase platforms, and high-intent lead generation systems for builders and brokers in Jaipur.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/industries/real-estate',
   },

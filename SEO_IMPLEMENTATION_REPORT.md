@@ -420,6 +420,53 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Exact Number of Visible Projects:** **16**
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
+
+### Task 3: Metadata Lengths Strict Compliance (Title <= 60 chars, Description 140–160 chars)
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- Sitewide audit executed across all 31 indexable canonical URLs.
+- Fixed 6 title tags exceeding 60 characters (accounting for Next.js layout title template ` | Siyara Innovations` and HTML entities).
+- Fixed 6 meta descriptions under 140 characters, expanding them to between 140 and 160 characters.
+- **Result:** **0 pages exceed 60 characters in title; 0 pages fall outside 140–160 characters in description.**
+
+#### Metadata Before & After Audit Table (All 31 Indexable URLs)
+
+| URL | Title Before (Len) | Title After (Len) | Desc Before (Len) | Desc After (Len) | Compliance |
+|---|---|---|---|---|---|
+| `/` | 58 | `Web Design & SEO Agency in Jaipur | Siyara Innovations` (58) | 152 | 152 | ✅ PASS |
+| `/about` | 52 | `About Our Digital Studio Jaipur | Siyara Innovations` (52) | 141 | 141 | ✅ PASS |
+| `/services` | 57 | `Web Design & SEO Services Jaipur | Siyara Innovations` (57) | 144 | 144 | ✅ PASS |
+| `/work` | 62 ⚠️ | `Web Design Portfolio Jaipur | Siyara Innovations` (48) | 146 | 146 | ✅ PASS |
+| `/contact` | 53 | `Contact Web Design Studio Jaipur | Siyara Innovations` (53) | 142 | 142 | ✅ PASS |
+| `/insights` | 61 ⚠️ | `Digital Insights & Guides Jaipur | Siyara Innovations` (57) | 141 | 141 | ✅ PASS |
+| `/industries` | 68 ⚠️ | `Industries We Serve in Jaipur | Siyara Innovations` (50) | 152 | 152 | ✅ PASS |
+| `/services/web-design-development` | 50 | `Website Design Company Jaipur | Siyara Innovations` (50) | 152 | 152 | ✅ PASS |
+| `/services/seo-services` | 64 ⚠️ | `SEO Services in Jaipur | Siyara Innovations` (43) | 152 | 152 | ✅ PASS |
+| `/services/social-media-marketing` | 71 ⚠️ | `Social Media Marketing Jaipur | Siyara Innovations` (50) | 150 | 150 | ✅ PASS |
+| `/services/branding` | 69 ⚠️ | `Brand Strategy & Logo Design | Siyara Innovations` (53) | 159 | 159 | ✅ PASS |
+| `/industries/healthcare` | 58 | `Clinic & Doctor Web Design Jaipur | Siyara Innovations` (58) | 139 ⚠️ | 149 | ✅ PASS |
+| `/industries/interior-design` | 54 | `Interior Design Web Studio Jaipur | Siyara Innovations` (54) | 139 ⚠️ | 145 | ✅ PASS |
+| `/industries/event-management` | 55 | `Event Management Web Design Jaipur | Siyara Innovations` (55) | 137 ⚠️ | 143 | ✅ PASS |
+| `/industries/real-estate` | 55 | `Real Estate Web Development Jaipur | Siyara Innovations` (55) | 138 ⚠️ | 147 | ✅ PASS |
+| `/faq` | 57 | `Web Development & SEO FAQ Jaipur | Siyara Innovations` (57) | 138 ⚠️ | 150 | ✅ PASS |
+| `/privacy` | 51 | `Privacy Policy · Jaipur Studio | Siyara Innovations` (51) | 135 ⚠️ | 149 | ✅ PASS |
+| `/terms` | 53 | `Terms of Service · Jaipur Studio | Siyara Innovations` (53) | 141 | 141 | ✅ PASS |
+| `/insights/website-cost-jaipur` | 54 | `Website Cost in Jaipur 2026 Guide | Siyara Innovations` (54) | 155 | 155 | ✅ PASS |
+| `/insights/seo-services-cost-jaipur` | 53 | `SEO Services Cost in Jaipur 2026 | Siyara Innovations` (53) | 155 | 155 | ✅ PASS |
+| `/insights/real-estate-website-development-jaipur-rera` | 58 | `Real Estate Website Jaipur RERA Guide | Siyara Innovations` (58) | 142 | 142 | ✅ PASS |
+| `/insights/clinic-hospital-website-design-jaipur` | 55 | `Clinic Website Design Jaipur Guide | Siyara Innovations` (55) | 153 | 153 | ✅ PASS |
+| `/insights/luxury-interior-designer-portfolio-website-jaipur` | 59 | `Interior Designer Website Jaipur Guide | Siyara Innovations` (59) | 150 | 150 | ✅ PASS |
+| `/insights/wedding-event-planner-website-design-jaipur` | 57 | `Wedding Planner Website Jaipur Guide | Siyara Innovations` (57) | 153 | 153 | ✅ PASS |
+| `/insights/best-web-design-company-jaipur` | 56 | `Best Web Design Company Jaipur 2026 | Siyara Innovations` (56) | 153 | 153 | ✅ PASS |
+| `/insights/top-technical-seo-agency-jaipur` | 57 | `Top Technical SEO Agency Jaipur 2026 | Siyara Innovations` (57) | 152 | 152 | ✅ PASS |
+| `/insights/local-seo-jaipur-checklist` | 52 | `Local SEO Jaipur Checklist 2026 | Siyara Innovations` (52) | 147 | 147 | ✅ PASS |
+| `/insights/why-your-jaipur-business-needs-a-professional-website-in-2026` | 56 | `Why Jaipur Brands Need Website 2026 | Siyara Innovations` (56) | 155 | 155 | ✅ PASS |
+| `/insights/how-to-choose-a-web-design-agency-in-jaipur` | 56 | `Hiring a Web Agency in Jaipur Guide | Siyara Innovations` (56) | 155 | 155 | ✅ PASS |
+| `/insights/website-development-cost-in-india-business-guide` | 53 | `Website Cost in India 2026 Guide | Siyara Innovations` (53) | 155 | 155 | ✅ PASS |
+| `/insights/local-seo-guide-jaipur-businesses` | 54 | `Hyper-Local SEO Guide Jaipur 2026 | Siyara Innovations` (54) | 150 | 150 | ✅ PASS |
+
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
+
 ## Commit History
 
 | Commit | Task | Description |

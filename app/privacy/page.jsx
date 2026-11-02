@@ -5,7 +5,7 @@ import { BUSINESS_CONFIG } from '../../src/config/business';
 
 export const metadata = {
   title: 'Privacy Policy · Jaipur Studio',
-  description: 'Privacy Policy for Siyara Innovations. Learn how our Jaipur digital studio protects your data, communications, and project information.',
+  description: 'Privacy Policy for Siyara Innovations. Learn how our Jaipur digital studio protects your client data, inquiries, communications, and project details.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/privacy',
   },

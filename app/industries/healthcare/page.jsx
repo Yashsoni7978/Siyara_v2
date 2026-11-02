@@ -5,7 +5,7 @@ import { siteConfig } from '@/data/siteConfig';
 
 export const metadata = {
   title: 'Clinic & Doctor Web Design Jaipur',
-  description: 'Custom Next.js clinic websites, appointment booking funnels, and local medical SEO for doctors and healthcare centers in Jaipur, Rajasthan.',
+  description: 'Custom Next.js clinic websites, appointment booking funnels, and local medical SEO for doctors, clinics, and healthcare centers in Jaipur, Rajasthan.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/industries/healthcare',
   },

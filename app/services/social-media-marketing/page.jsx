@@ -16,7 +16,7 @@ import {
 import JsonLd, { buildBreadcrumbs, buildServiceSchema, buildFaqSchema } from '../../../src/components/common/JsonLd';
 
 export const metadata = {
-  title: 'Social Media Marketing Jaipur | Siyara Innovations',
+  title: 'Social Media Marketing Jaipur',
   description: 'Strategic social media marketing in Jaipur. We deliver creative content, audience growth, targeted ad campaigns, and brand storytelling that converts.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/services/social-media-marketing',

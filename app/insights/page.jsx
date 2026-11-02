@@ -2,7 +2,7 @@ import BlogClient from '../blog/BlogClient';
 import JsonLd, { buildBreadcrumbs } from '../../src/components/common/JsonLd';
 
 export const metadata = {
-  title: 'Digital Insights & SEO Guides Jaipur',
+  title: 'Digital Insights & Guides Jaipur',
   description: 'Strategic perspectives on Next.js web engineering, SEO algorithms, generative search, and brand positioning from the Siyara studio in Jaipur.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/insights',
@@ -11,7 +11,7 @@ export const metadata = {
     type: 'website',
     url: 'https://www.siyaradigitals.com/insights',
     siteName: 'Siyara Innovations',
-    title: 'Digital Insights & SEO Guides Jaipur | Siyara Innovations',
+    title: 'Digital Insights & Guides Jaipur | Siyara Innovations',
     description: 'Strategic perspectives on Next.js web engineering, SEO algorithms, generative search, and brand positioning from the Siyara studio in Jaipur.',
     images: [
       {
