@@ -235,7 +235,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task C5: Alt Text Audit
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `ac5a9e9`  
 **Evidence:**
 - Automated sitewide scan executed via `scratch/audit_alt_text.cjs` inspecting all image `alt` attributes across JSX/JS components.
 - Zero personal names (`Yash`, `Soni`) detected in any `alt` attribute.
@@ -249,7 +249,17 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task C6: GSC Data Audit
-**Status:** 🔄 IN PROGRESS
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- Directory inspection conducted in `seo-audit-data/`.
+- Confirmed that `seo-audit-data/gsc_queries.csv` does not exist in the repository.
+- Cross-referenced `seo-audit-data/ANSWERS.md`: documented evidence confirms previous keyword lists were compiled as hypotheses/guesses (`[GUESS]`) without direct Search Console export verification.
+- Confirmed that our Ground Truth priority ordering (Website Design & Development, SEO, Social Media Marketing, Brand Strategy for 4 core industries in Jaipur/pan-India) provides the authoritative keyword strategy for all indexed metadata and content.
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
+
+---
+
+## Phase D: Proof Engine
 
 ## Phase D: Proof Engine
 **Status:** 🔜 PENDING
@@ -284,3 +294,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `1be3635` | C2 | Service and industry content deduplication and boilerplate removal |
 | `4c1974a` | C3 | Internal link map updates for homepage core services/industries and articles |
 | `81867ac` | C4 | Structured data validation across organization, services, articles, and faqs |
+| `ac5a9e9` | C5 | Audit alt text and eliminate personal names and obsolete phrasing |
