@@ -225,7 +225,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task C4: Structured Data Validation
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `81867ac`  
 **Evidence:**
 - Global Organization Graph: Verified rendered on 100% of routes via `app/layout.jsx:94` and `src/components/common/JsonLd.jsx`. Graph cleanly links `Organization`, `ProfessionalService`, and `WebSite` entities with canonical IDs, official logo, verified descriptions, and `areaServed` (Jaipur, Rajasthan, India). Zero founder or individual references.
 - Core Service Schemas: Verified `Service` schema rendered with `OfferCatalog` and `provider` referencing Organization graph on all core service pages (`web-design-development`, `seo-services`, `social-media-marketing`, `branding`).
@@ -235,6 +235,20 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task C5: Alt Text Audit
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- Automated sitewide scan executed via `scratch/audit_alt_text.cjs` inspecting all image `alt` attributes across JSX/JS components.
+- Zero personal names (`Yash`, `Soni`) detected in any `alt` attribute.
+- Refined 5 hero/artwork `alt` attributes to ensure natural, contextual accessibility descriptions free of obsolete architecture phrasing:
+  - `src/components/about/AboutHero.jsx` → `alt="Siyara Innovations Web Design & SEO Studio"`
+  - `src/components/contact/ContactHero.jsx` → `alt="Siyara Innovations Studio Inquiry Experience"`
+  - `src/components/home/Philosophy.jsx` → `alt="Siyara Innovations Studio Design Craft"`
+  - `src/components/services/ServicesHero.jsx` → `alt="Siyara Innovations Services Overview"`
+  - `src/components/work/WorkHero.jsx` → `alt="Siyara Innovations Web Design & SEO Portfolio Showcase"`
+- Verified article author avatar `alt` strings map dynamically to `article.author.name` (`Siyara Innovations`).
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
+
+### Task C6: GSC Data Audit
 **Status:** 🔄 IN PROGRESS
 
 ## Phase D: Proof Engine
@@ -269,3 +283,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `7bb4997` | C1 | Homepage title, H1, meta description, and tagline alignment |
 | `1be3635` | C2 | Service and industry content deduplication and boilerplate removal |
 | `4c1974a` | C3 | Internal link map updates for homepage core services/industries and articles |
+| `81867ac` | C4 | Structured data validation across organization, services, articles, and faqs |

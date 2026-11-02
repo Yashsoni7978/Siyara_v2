@@ -19,7 +19,7 @@ export default function WorkHero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero_work_bg.webp"
-          alt="Siyara Innovations Digital Architecture Artwork"
+          alt="Siyara Innovations Web Design & SEO Portfolio Showcase"
           priority
           fill
           sizes="100vw"

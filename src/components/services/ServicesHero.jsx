@@ -43,7 +43,7 @@ export default function ServicesHero() {
       <div className="absolute inset-0 w-full h-full pointer-events-none z-[1] overflow-hidden select-none">
         <Image
           src="/images/services_hero_bg.webp"
-          alt="Services Ecosystem"
+          alt="Siyara Innovations Services Overview"
           priority
           fill
           sizes="100vw"

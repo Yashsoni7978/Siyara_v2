@@ -26,7 +26,7 @@ export default function ContactHero() {
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
         <Image
           src="/images/contact_hero.webp"
-          alt="Siyara Contact Architecture"
+          alt="Siyara Innovations Studio Inquiry Experience"
           priority
           fill
           sizes="100vw"

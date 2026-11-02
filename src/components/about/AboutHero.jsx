@@ -85,7 +85,7 @@ export default function AboutHero() {
             <div className="relative w-full max-w-[360px] sm:max-w-[420px] aspect-[3/4] rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(12,107,82,0.5)] border border-[#D9B45F]/20">
               <Image
                 src="/images/about-tech-visual.webp"
-                alt="Digital Technology Architecture"
+                alt="Siyara Innovations Web Design & SEO Studio"
                 priority
                 width={896}
                 height={1200}
