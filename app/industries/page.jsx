@@ -241,15 +241,13 @@ export default function IndustriesHubPage() {
             Additional Industry Capabilities
           </p>
           <div className="flex flex-wrap justify-center items-center gap-3 text-xs font-sans text-[#ECE7D8]/80">
-            <Link href="/industries/ecommerce" className="hover:text-[#D9B45F] transition-colors">E-Commerce &amp; D2C</Link>
+            <span>E-Commerce &amp; D2C</span>
             <span className="text-[#0C6B52]">·</span>
-            <Link href="/industries/education" className="hover:text-[#D9B45F] transition-colors">Education &amp; Institutes</Link>
+            <span>Education &amp; Institutes</span>
             <span className="text-[#0C6B52]">·</span>
-            <Link href="/industries/hospitality" className="hover:text-[#D9B45F] transition-colors">Hospitality &amp; Resorts</Link>
+            <span>Jewellery &amp; Luxury</span>
             <span className="text-[#0C6B52]">·</span>
-            <Link href="/industries/jewellery-luxury" className="hover:text-[#D9B45F] transition-colors">Jewellery &amp; Luxury</Link>
-            <span className="text-[#0C6B52]">·</span>
-            <Link href="/industries/manufacturing" className="hover:text-[#D9B45F] transition-colors">Industrial Manufacturing</Link>
+            <span>Industrial Manufacturing</span>
           </div>
         </div>
 

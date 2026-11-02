@@ -112,7 +112,7 @@ export default function ServicesHero() {
               className="mb-10 max-w-lg"
             >
               <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Strategy, brand, technology, visibility, and growth - built as one connected system for businesses in Jaipur, not generic templates.
+                Brand, web design, SEO, and social marketing - built with unified precision for businesses in Jaipur and across India, not generic templates.
               </p>
             </motion.div>
 

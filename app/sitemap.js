@@ -4,17 +4,6 @@ import { getApprovedCaseStudies } from '../src/data/caseStudies';
 export const dynamic = "force-static";
 
 const NOINDEX_ARTICLES = new Set([
-  'new-digital-ecosystem-strategy-technology-growth',
-  'what-is-digital-architecture',
-  'how-to-choose-digital-architecture-studio-rajasthan',
-  'building-digital-strategy-drives-growth',
-  'what-is-brand-strategy-framework',
-  'what-makes-a-high-performing-website',
-  'how-to-get-more-enquiries-from-your-website',
-  'how-to-rank-chatgpt-perplexity-india',
-  'nextjs-vs-wordpress-seo-core-web-vitals',
-  'fix-crawled-currently-not-indexed-google-search-console',
-  'seo-geo-search-visibility-prepare-for-ai-search',
   'custom-nextjs-website-price-india',
   'ecommerce-website-development-cost-india',
   'mobile-app-development-cost-jaipur',
@@ -22,6 +11,16 @@ const NOINDEX_ARTICLES = new Set([
   'coaching-institute-school-website-design-jaipur',
   'b2b-manufacturing-website-sitapura-vki-jaipur',
   'jewellery-website-design-jaipur-johari-bazaar',
+  'how-to-rank-chatgpt-perplexity-india',
+  'nextjs-vs-wordpress-seo-core-web-vitals',
+  'best-web-design-company-jaipur',
+  'new-digital-growth-strategy-technology',
+  'building-digital-strategy-drives-growth',
+  'fix-crawled-currently-not-indexed-google-search-console',
+  'seo-geo-search-visibility-prepare-for-ai-search',
+  'what-makes-a-high-performing-website',
+  'what-is-digital-architecture',
+  'how-to-choose-digital-architecture-studio-rajasthan',
 ]);
 
 export default async function sitemap() {

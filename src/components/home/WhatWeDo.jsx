@@ -97,9 +97,9 @@ export default function WhatWeDo() {
           className="mb-12 sm:mb-20 max-w-3xl"
         >
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.05] sm:leading-[0.98] break-words">
-            One connected system, <br />
+            Four core disciplines, <br />
             four core disciplines <br />
-            working as one <span className="text-[#D9B45F] font-normal">connected system.</span>
+            working as one <span className="text-[#D9B45F] font-normal">focused partnership.</span>
           </h2>
         </motion.div>
 

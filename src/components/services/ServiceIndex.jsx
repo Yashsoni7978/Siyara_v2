@@ -83,7 +83,7 @@ export default function ServiceIndex({ onNavigate }) {
     {
       id: '05',
       name: 'CONVERSION',
-      tagline: 'CRO, landing experiences, funnels and conversion architecture.',
+      tagline: 'Lead generation, landing experiences, and conversion optimization.',
       description: 'High-intent lead capture funnels, CRO testing, and frictionless client conversion pathways.',
       icon: Filter,
       slug: '/services/crm-lead-systems',

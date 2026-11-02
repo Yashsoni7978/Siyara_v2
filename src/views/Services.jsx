@@ -52,21 +52,21 @@ export default function Services({ onNavigate }) {
             MORE SPECIALIZED CAPABILITIES
           </span>
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-sans text-[#9D9B91]">
-            <Link href="/services/ecommerce-development" className="hover:text-[#D9B45F] transition-colors">E-Commerce</Link>
+            <span>E-Commerce</span>
             <span className="text-[#D9B45F]/30">·</span>
-            <Link href="/services/mobile-app-development" className="hover:text-[#D9B45F] transition-colors">Mobile Apps</Link>
+            <span>Mobile Apps</span>
             <span className="text-[#D9B45F]/30">·</span>
-            <Link href="/services/ui-ux-design" className="hover:text-[#D9B45F] transition-colors">UI/UX Design</Link>
+            <span>UI/UX Design</span>
             <span className="text-[#D9B45F]/30">·</span>
-            <Link href="/services/ai-automation" className="hover:text-[#D9B45F] transition-colors">AI &amp; Automation</Link>
+            <span>AI &amp; Automation</span>
             <span className="text-[#D9B45F]/30">·</span>
-            <Link href="/services/growth-optimization" className="hover:text-[#D9B45F] transition-colors">Growth &amp; CRO</Link>
+            <span>Growth &amp; CRO</span>
             <span className="text-[#D9B45F]/30">·</span>
-            <Link href="/services/content-creative" className="hover:text-[#D9B45F] transition-colors">Content &amp; Creative</Link>
+            <span>Content &amp; Creative</span>
             <span className="text-[#D9B45F]/30">·</span>
-            <Link href="/services/crm-lead-systems" className="hover:text-[#D9B45F] transition-colors">CRM Systems</Link>
+            <span>CRM Systems</span>
             <span className="text-[#D9B45F]/30">·</span>
-            <Link href="/services/performance-marketing" className="hover:text-[#D9B45F] transition-colors">Performance Marketing</Link>
+            <span>Performance Marketing</span>
           </div>
         </div>
       </section>

@@ -40,12 +40,40 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // 1. Featured article old slug redirect (Task 3)
       {
         source: '/insights/new-digital-ecosystem-strategy-technology-growth',
         destination: '/insights/new-digital-growth-strategy-technology',
         permanent: true,
       },
-
+      // 2. Hospitality industry redirect (Task 3 & Ground Truth 4)
+      {
+        source: '/industries/hospitality',
+        destination: '/industries',
+        permanent: true,
+      },
+      // 3. Four approved consolidation redirects (Task 3)
+      {
+        source: '/insights/seo-geo-search-visibility-prepare-for-ai-search',
+        destination: '/insights/how-to-rank-chatgpt-perplexity-india',
+        permanent: true,
+      },
+      {
+        source: '/insights/what-makes-a-high-performing-website',
+        destination: '/insights/why-your-jaipur-business-needs-a-professional-website-in-2026',
+        permanent: true,
+      },
+      {
+        source: '/insights/what-is-digital-architecture',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/insights/how-to-choose-digital-architecture-studio-rajasthan',
+        destination: '/insights/how-to-choose-a-web-design-agency-in-jaipur',
+        permanent: true,
+      },
+      // 4. Portfolio and service legacy aliases
       {
         source: '/portfolio',
         destination: '/work',
@@ -62,11 +90,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/industries/hospitality',
-        destination: '/industries',
-        permanent: true,
-      },
-      {
         source: '/services/app-development',
         destination: '/services/mobile-app-development',
         permanent: true,
@@ -76,9 +99,6 @@ const nextConfig = {
         destination: '/services/ai-automation',
         permanent: true,
       },
-      // ==========================================
-      // SEO Overhaul — 301 Redirects (B2)
-      // ==========================================
       {
         source: '/digital-architecture-studio-jaipur',
         destination: '/',
@@ -109,15 +129,7 @@ const nextConfig = {
         destination: '/services/branding',
         permanent: true,
       },
-      {
-        source: '/insights/best-web-design-company-jaipur',
-        destination: '/insights/how-to-choose-a-web-design-agency-in-jaipur',
-        permanent: true,
-      },
-      // ==========================================
-      // /blog → /insights Canonical Unification
-      // Eliminates duplicate content & GSC penalties
-      // ==========================================
+      // 5. /blog -> /insights Canonical Unification
       {
         source: '/blog',
         destination: '/insights',

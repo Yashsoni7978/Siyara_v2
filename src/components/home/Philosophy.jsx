@@ -43,7 +43,7 @@ export default function Philosophy() {
             <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[0.98] tracking-tight mb-6 sm:mb-8 uppercase break-words">
               ELEVATING BRANDS <br />
               THROUGH <br />
-              <span className="text-[#D9B45F] font-normal">CONNECTED SYSTEMS.</span>
+              <span className="text-[#D9B45F] font-normal">INTEGRATED SOLUTIONS.</span>
             </h2>
 
             <div className="max-w-md mb-6 sm:mb-8">

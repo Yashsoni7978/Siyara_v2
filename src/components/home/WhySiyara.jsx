@@ -75,7 +75,7 @@ export default function WhySiyara() {
               not <span className="text-[#0C6B52] font-normal">services.</span>
             </h2>
             <p className="font-sans text-sm sm:text-base text-[#101613] font-normal leading-relaxed max-w-md">
-              Strategy, design and engineering work as one connected system here, not three vendors stitched together after the fact.
+              Strategy, design and development work together seamlessly here, not three vendors stitched together after the fact.
             </p>
           </motion.div>
 

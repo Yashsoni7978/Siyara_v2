@@ -55,10 +55,10 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
     setTimeout(() => setCopied(false), 2500);
   };
 
-  const handleShareTwitter = () => {
+  const handleShareWhatsapp = () => {
     const url = encodeURIComponent(window.location.href);
-    const text = encodeURIComponent(`Check out this insight from Siyara Innovations: "${article.title}"`);
-    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+    const text = encodeURIComponent(`Check out this insight from Siyara Innovations: "${article.title}" ${window.location.href}`);
+    window.open(`https://wa.me/?text=${text}`, '_blank');
   };
 
   const handleShareLinkedin = () => {
@@ -164,11 +164,11 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
               </span>
               
               <button
-                onClick={handleShareTwitter}
+                onClick={handleShareWhatsapp}
                 className="w-9 h-9 border border-[#D4AF37]/20 bg-[#063C2D]/20 hover:border-[#D4AF37] hover:bg-[#063C2D] text-[#CFC9BB] hover:text-[#F3EFE4] flex items-center justify-center transition-all"
-                title="Share on Twitter"
+                title="Share on WhatsApp"
               >
-                <Twitter className="w-4 h-4" />
+                <MessageCircle className="w-4 h-4" />
               </button>
 
               <button

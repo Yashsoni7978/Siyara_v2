@@ -171,7 +171,7 @@ export default function Hero() {
             {/* Supporting Copy - Immediate render */}
             <div className="mb-8 sm:mb-10 max-w-lg">
               <p className="font-sans text-sm sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Siyara Innovations is a Jaipur-based web design and SEO agency: brand strategy, websites, SEO, and social media marketing delivered as one connected system, not disconnected campaigns.
+                Siyara Innovations is a Jaipur-based web design and SEO agency: brand strategy, websites, SEO, and social media marketing delivered as one integrated team, not disconnected campaigns.
               </p>
             </div>
 
