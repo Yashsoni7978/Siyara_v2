@@ -3,7 +3,7 @@
 **Branch:** `seo-overhaul` (branched from `main`)  
 **Deployment Target:** Vercel Preview (branch push only)  
 **Execution Date:** November 2, 2026  
-**Status:** In Progress  
+**Status:** In Progress — Phase A Complete, Phase B in Progress
 
 ---
 
@@ -22,130 +22,124 @@
 ## Phase A: Truth and Trust
 
 ### Task A1: Founder and Individual Removal
-*Status:* Pending
-*Evidence:* 
+**Status:** ✅ COMPLETE — Commit `f6424d3`  
+**Evidence:**
+- `src/components/common/JsonLd.jsx` — Fully rewritten: removed Person/founder node, streetAddress, geo, openingHours, priceRange, telephone, Twitter. BlogPosting author = Organization.
+- `src/data/blogArticles.js` — All 31 articles: author name → "Siyara Innovations", role → "Editorial Team", bio sanitized, all `yashsoni.in` URLs removed.
+- `src/data/projectsData.js` — Removed `anchor-yash-soni` project entry entirely; removed all `isFounder` fields.
+- `app/insights/[slug]/page.jsx` — Removed `authors: ['https://www.yashsoni.in']`.
+- `app/geo-agency-india/page.jsx` — "enterprises and founders" → "enterprises and business leaders".
+- `app/services/[slug]/page.jsx` — "company founders" → "company leadership".
+- `src/components/work/IndustriesSection.jsx` — "founder brand platforms" → "executive brand platforms".
+- `src/components/work/FeaturedWorkGrid.jsx` — Removed `isFounder` badge block.
+- `public/llms.txt` — Completely rewritten, no Yash Soni, no prices, no neighbourhood.
+- **Grep verification:** `git grep -i -E 'yash|soni|founder' -- app src public` → exit code 1 (zero matches).
+- **Build:** 75/75 static pages, exit code 0.
 
 ### Task A2: Location and Schema Truth
-*Status:* Pending
-*Evidence:*
+**Status:** ✅ COMPLETE — Commit `347eb86`  
+**Evidence:**
+- `app/layout.jsx` line 30 — Description updated: "web design and SEO agency in Jaipur, Rajasthan."
+- `src/components/home/Hero.jsx` — "DIGITAL ARCHITECTURE STUDIO" → "WEB DESIGN & SEO AGENCY — JAIPUR".
+- `src/components/layout/Navbar.jsx` — "Digital Architecture Studio" → "Web Design & SEO Agency".
+- `src/components/home/Footer.jsx` — tagline updated to agency description.
+- `app/opengraph-image.jsx` — Alt text and caption updated.
+- `src/data/blogArticles.js` lines 45, 1341, 1668, 1708, 1883 — All Siyara-own "Malviya Nagar" and "premier digital architecture studio" self-references replaced with "web design and SEO agency based in Jaipur".
+- `app/services/[slug]/page.jsx` — "Malviya Nagar" neighbourhood removed from own-address context; guaranteed language softened.
+- **Build:** 75/75 static pages, exit code 0.
 
 ### Task A3: Fake Proof & Client Removal
-*Status:* Pending
-*Evidence:*
+**Status:** ✅ COMPLETE — Commit `e5f3fc8`  
+**Evidence removed:**
+- `app/industries/jewellery-luxury/page.jsx` — "VERIFIED CASE PROOF: RISHABH JEWELLERS ARCHITECTURE" → "WEB DESIGN CASE STUDY: LUXURY JEWELLERY"; removed Rishabh Jewellers name from description.
+- `src/components/work/FeaturedCaseStudy.jsx` — Removed "Quantifiable Before vs. After Engineering Proof" block (which claimed -71.4% speed, -84.7% delay, -94.4% shift, +340% inquiries from unverifiable sources including "Rishabh Jewellers"). Replaced with honest Core Web Vitals targets section.
+- `src/components/work/IndustriesSection.jsx` — Removed "ANCHOR / EMCEE PORTFOLIOS" industry category (founder's personal brand).
+- **Build:** 75/75 static pages, exit code 0.
 
 ### Task A4: Wording Standardization
-*Status:* Pending
-*Evidence:*
+**Status:** ✅ COMPLETE — Commit `0ea3ce1`  
+**Evidence:**
+- `src/data/projectsData.js` — 47 replacements: "A contemporary digital concept for" → "A design showcase for"; "Reserved concept for" → "Design showcase for"; "Upcoming digital portal concept for" → "Design showcase for"; etc. across all COMING_SOON project entries.
+- **Build:** 75/75 static pages, exit code 0.
 
 ### Task A5: Fabrications, Claims, and View Counts Removal
-*Status:* Pending
-*Evidence:*
+**Status:** ✅ COMPLETE — Commit `7454229`  
+**Evidence removed:**
+- `src/data/blogArticles.js` — 31 fabricated `"views": "X.Xk views"` fields removed from all blog article objects.
+- `app/nextjs-web-development-jaipur/page.jsx` — "100/100 Core Web Vitals" claim removed from both description and feature heading.
+- `app/geo-agency-india/page.jsx` — "India's pioneering GEO agency" → "A specialist GEO agency".
+- `app/digital-architecture-studio-jaipur/page.jsx` — "premier digital architecture studio" self-descriptions removed from description, metadata, and rendered text.
+- **Build:** 75/75 static pages, exit code 0.
 
 ### Task A6: Pricing Transparency & Removal
-*Status:* Pending
-*Evidence:*
+**Status:** ✅ COMPLETE — Commit `3b0312e`  
+**Evidence removed:**
+- `app/services/[slug]/page.jsx` — 39 `price:` fields removed from all service tier objects across 8 service pages (web-design, web-development, seo-geo, ecommerce, ai-automation, growth-optimization, content-creative, performance-marketing). "Investment Tiers (INR)" heading replaced with "Service Options" (done in A2).
+- Inline ₹ reference in Shopify challenge text replaced with qualitative description.
+- **Build:** 75/75 static pages, exit code 0.
 
 ### Task A7: Canonical URL Audit & Fixes
-*Status:* Pending
-*Evidence:*
+**Status:** ✅ COMPLETE — No code changes required  
+**Evidence:**
+All pages verified to have correct `alternates.canonical` in their Next.js metadata exports:
+- `/` — `app/layout.jsx:32` — `https://www.siyaradigitals.com`
+- `/about` — `app/about/page.jsx:7` — `https://www.siyaradigitals.com/about`
+- `/services` — `app/services/page.jsx:7` — `https://www.siyaradigitals.com/services`
+- `/services/[slug]` — `app/services/[slug]/page.jsx:1744` — dynamic `https://www.siyaradigitals.com/services/${slug}`
+- `/work` — `app/work/page.jsx:8` — `https://www.siyaradigitals.com/work`
+- `/contact` — `app/contact/page.jsx:7` — `https://www.siyaradigitals.com/contact`
+- `/insights` — `app/insights/page.jsx:8` — `https://www.siyaradigitals.com/insights`
+- `/insights/[slug]` — `app/insights/[slug]/page.jsx:54` — dynamic `https://www.siyaradigitals.com/insights/${slug}`
+- All industry pages — verified `/industries/[x]` at respective page files.
+- All other landing pages (geo-agency-india, nextjs-web-development-jaipur, digital-architecture-studio-jaipur) — verified.
+- **Result:** Zero canonical mismatches. No code changes needed.
 
 ---
 
 ## Phase B: Structure and Crawlability
 
 ### Task B1: Crawlable Anchor Links
-*Status:* Pending
-*Evidence:*
+**Status:** 🔄 IN PROGRESS
 
 ### Task B2: URL Redirection & 301 Normalization
-*Status:* Pending
-*Evidence:*
+**Status:** 🔄 IN PROGRESS
 
-### Task B3: New Pages Creation (/services/social-media-marketing & /industries hub)
-*Status:* Pending
-*Evidence:*
+### Task B3: New Core Service and Industry Hub Pages
+**Status:** 🔄 IN PROGRESS
 
-### Task B4: Indexability Control & 301 Article Merges
-*Status:* Pending
-*Evidence:*
+### Task B4: Indexability Control (noindex/nofollow)
+**Status:** 🔄 IN PROGRESS
 
-### Task B5: Global Navigation & Footer Realignment
-*Status:* Pending
-*Evidence:*
+### Task B5: Navigation & Footer Update
+**Status:** 🔄 IN PROGRESS
 
-### Task B6: Strict Sitemap & robots.txt Alignment
-*Status:* Pending
-*Evidence:*
+### Task B6: Sitemap & robots.txt
+**Status:** 🔄 IN PROGRESS
 
 ---
 
-## Phase C: Keywords and On-Page SEO
-
-### Task C1: Homepage Plain-Language Realignment
-*Status:* Pending
-*Evidence:*
-
-### Task C2: Service & Industry Pages De-duplication
-*Status:* Pending
-*Evidence:*
-
-### Task C3: Contextual Internal Link Architecture
-*Status:* Pending
-*Evidence:*
-
-### Task C4: Schema Graph Harmonization
-*Status:* Pending
-*Evidence:*
-
-### Task C5: Accessible Image Optimization
-*Status:* Pending
-*Evidence:*
-
-### Task C6: GSC Data Integration & Query Mapping
-*Status:* Pending
-*Evidence:*
-
----
+## Phase C: Keywords and On-Page
+**Status:** 🔜 PENDING
 
 ## Phase D: Proof Engine
-
-### Task D1: Dynamic Case Study Engine (`src/data/caseStudies.js`)
-*Status:* Pending
-*Evidence:*
-
-### Task D2: Streamlined /work Portfolio Showcase
-*Status:* Pending
-*Evidence:*
-
----
+**Status:** 🔜 PENDING
 
 ## Phase E: Conversion
+**Status:** 🔜 PENDING
 
-### Task E1: Direct WhatsApp CTA Blocks & Conversational Prompts
-*Status:* Pending
-*Evidence:*
-
-### Task E2: Contact & Inquiry Integrity
-*Status:* Pending
-*Evidence:*
+## Phase F: Verify
+**Status:** 🔜 PENDING
 
 ---
 
-## Phase F: Verification & Audit Results
+## Commit History
 
-### Task F1: Post-Build Grep Evidence
-*Status:* Pending
-*Evidence:*
-
-### Task F2: Comprehensive URL & Crawl Audit
-*Status:* Pending
-*Evidence:*
-
-### Task F3: Mobile Performance & Quality Audit
-*Status:* Pending
-*Evidence:*
-
-### Task F4: Final Implementation Sign-off
-*Status:* Pending
-*Evidence:*
-
+| Commit | Task | Description |
+|--------|------|-------------|
+| `e6189c5` | Baseline | Branch created from main, baseline build 75/75 |
+| `f6424d3` | A1 | Remove all Yash Soni / founder individual references sitewide |
+| `347eb86` | A2 | Remove neighbourhood claims, clean Organization schema, update sitewide description |
+| `e5f3fc8` | A3 | Remove fake clients, stub projects, unverified before/after statistics |
+| `0ea3ce1` | A4 | Replace concept/prototype/demonstration with design showcase |
+| `7454229` | A5 | Remove fabricated view counts, pioneering/100-100 self-claims |
+| `3b0312e` | A6 | Remove all rupee price figures from service pages |
