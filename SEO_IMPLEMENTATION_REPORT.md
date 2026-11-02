@@ -111,7 +111,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 75/75 static pages compiled successfully (exit code 0).
 
 ### Task B2: URL Redirection & 301 Normalization
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `48932b3`  
 **Evidence:**
 - `next.config.js`: Added 9 permanent 301 redirects:
   - `/digital-architecture-studio-jaipur` → `/`
@@ -124,20 +124,20 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
   - `/industries/fitness` → `/industries`
   - `/insights/best-web-design-company-jaipur` → `/insights/how-to-choose-a-web-design-agency-in-jaipur`
 - Removed legacy `/industries → /services` redirect so `/industries` hub can resolve directly.
-- Updated all internal links pointing to redirected targets:
-  - `src/data/blogArticles.js`: replaced all `/services/web-development`, `/services/seo-geo`, `/services/brand-strategy`, and `/insights/best-web-design-company-jaipur` occurrences.
-  - `src/components/home/WhatWeDo.jsx`: updated `/services/brand-strategy` → `/services/branding`, `/services/seo-geo` → `/services/seo-services`.
-  - `src/components/services/ServiceIndex.jsx`: updated `/services/brand-strategy` → `/services/branding`, `/services/seo-geo` → `/services/seo-services`.
-  - `src/components/home/Footer.jsx`: updated links to `/services/branding`, `/services/seo-services`, and `/industries/healthcare`.
-  - `app/services/page.jsx`: updated links to `/services/branding`, `/services/seo-services`.
-  - `app/sitemap.js`: removed `/digital-architecture-studio-jaipur`, `/nextjs-web-development-jaipur`, `/geo-agency-india`, and `/industries/hospitality`.
+- Updated all internal links pointing to redirected targets in `src/data/blogArticles.js`, `src/components/home/WhatWeDo.jsx`, `src/components/services/ServiceIndex.jsx`, `src/components/home/Footer.jsx`, `app/services/page.jsx`, `src/components/home/Industries.jsx`, and `app/sitemap.js`.
 - **Build:** 75/75 static pages compiled successfully (exit code 0).
 
 ### Task B3: New Core Service and Industry Hub Pages
-**Status:** 🔄 IN PROGRESS
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- `app/services/seo-services/page.jsx`: Created comprehensive SEO service page (700+ words) targeting search rankings, local Google 3-Pack, Core Web Vitals, Schema.org markup, and FAQs with FAQPage + Service schema. Title: 44 chars, Description: 151 chars. WhatsApp CTA included.
+- `app/services/social-media-marketing/page.jsx`: Created Social Media Marketing page (700+ words) covering Meta & LinkedIn ads, video/reels production, visual aesthetics, and community engagement. Title: 51 chars, Description: 147 chars. WhatsApp CTA included.
+- `app/services/branding/page.jsx`: Created Brand Strategy & Logo Design page (700+ words) covering brand positioning, logo systems, design tokens, and brand guidelines. Title: 44 chars, Description: 159 chars. WhatsApp CTA included.
+- `app/industries/page.jsx`: Created `/industries` hub page listing strictly the 4 indexable core industries (Healthcare, Interior Design, Events, Real Estate) with deep-dive summaries, key deliverables, FAQs, and WhatsApp conversion CTA. Title: 48 chars, Description: 154 chars.
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task B4: Indexability Control (noindex/nofollow)
-**Status:** 🔜 PENDING
+**Status:** 🔄 IN PROGRESS
 
 ### Task B5: Navigation & Footer Update
 **Status:** 🔜 PENDING
@@ -174,3 +174,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `3b0312e` | A6 | Remove all rupee price figures from service pages |
 | `a8b7553` | A7 | Canonical audit confirmed correct on all pages, no changes required |
 | `a2270a9` | B1 | Replace onClick nav with Link href, fix legacy /blog links, fix dead anchors |
+| `48932b3` | B2 | Add 301 redirects for old/incorrect URLs, update all internal links |
