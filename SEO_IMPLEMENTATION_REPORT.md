@@ -175,7 +175,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 ## Phase C: Keywords and On-Page
 
 ### Task C1: Homepage Tagline, Title, and H1 Alignment
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `7bb4997`  
 **Evidence:**
 - `app/layout.jsx`:
   - Homepage `<title>` configured to `Web Design & SEO Agency in Jaipur | Siyara Innovations` (default title, OpenGraph title, Twitter title).
@@ -196,6 +196,21 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task C2: Service/Industry Content Deduplication
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- `app/services/[slug]/page.jsx`:
+  - Replaced boilerplate header `"Engineering Deep Dive & Architectural Solutions"` with `"Technical Approach & Problem Solving"`.
+  - Replaced `"Siyara Architectural Solution:"` label with `"Siyara Solution & Approach:"`.
+  - Replaced `"The 4-Phase Architectural Engineering Process"` with `"The 4-Phase Delivery & Engineering Process"`.
+  - Replaced CTA text `"BOOK AN ARCHITECTURAL CONSULTATION"` with `"START A PROJECT CONVERSATION"`.
+  - Replaced eyebrow `"ARCHITECTURAL BRIEF & CITABILITY"` with `"SERVICE OVERVIEW & SPECIFICATIONS"`.
+  - Replaced footer copy `"In-depth architectural breakdowns..."` with `"In-depth service breakdowns, technical standards, and implementation playbooks from our studio team."`.
+- Audited all 4 indexable industry routes (`/industries/healthcare`, `/industries/interior-design`, `/industries/event-management`, `/industries/real-estate`):
+  - Verified each vertical features 100% unique, domain-specific H2 headlines, problem statements, deliverables, and case study narratives (e.g. Clinical Digital Excellence for Healthcare vs. Spatial Storytelling for Interior Design).
+  - Confirmed zero shared architectural boilerplate across indexable industry pages.
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
+
+### Task C3: Internal Link Map
 **Status:** 🔄 IN PROGRESS
 
 ## Phase D: Proof Engine
@@ -227,3 +242,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `143b27a` | B4 | Add noindex to non-core industries, secondary services, 18 articles |
 | `99a271d` | B5 | Update nav and footer to core pages only, remove noindex links |
 | `c45115d` | B6 | Sitemap includes only indexable URLs, robots.txt verified |
+| `7bb4997` | C1 | Homepage title, H1, meta description, and tagline alignment |

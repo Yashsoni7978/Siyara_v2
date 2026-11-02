@@ -1847,7 +1847,7 @@ export default async function ServiceDetailPage({ params }) {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:-translate-y-0.5 min-h-[44px]"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>BOOK AN ARCHITECTURAL CONSULTATION</span>
+              <span>START A PROJECT CONVERSATION</span>
             </a>
             <Link
               href="/work"
@@ -1867,7 +1867,7 @@ export default async function ServiceDetailPage({ params }) {
           
           <div className="relative z-10">
             <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.24em] text-[#D9B45F] uppercase block mb-2 sm:mb-3">
-              ARCHITECTURAL BRIEF &amp; CITABILITY
+              SERVICE OVERVIEW &amp; SPECIFICATIONS
             </span>
             <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
               {service.questionH2}
@@ -1907,7 +1907,7 @@ export default async function ServiceDetailPage({ params }) {
               TECHNICAL PROBLEM SOLVING
             </span>
             <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
-              Engineering Deep Dive &amp; Architectural Solutions
+              Technical Approach &amp; Problem Solving
             </h2>
             <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
               How Siyara Innovations deconstructs critical technological bottlenecks to deliver unmatched speed, authority, and conversion velocity.
@@ -1937,7 +1937,7 @@ export default async function ServiceDetailPage({ params }) {
                   </div>
                   <div>
                     <span className="text-[10px] font-bold uppercase tracking-wider text-[#18A982] block mb-1.5">
-                      Siyara Architectural Solution:
+                      Siyara Solution &amp; Approach:
                     </span>
                     <p className="text-xs text-[#ECE7D8] font-light leading-relaxed">
                       {item.solution}
@@ -2021,7 +2021,7 @@ export default async function ServiceDetailPage({ params }) {
             DELIVERY ROADMAP
           </span>
           <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
-            The 4-Phase Architectural Engineering Process
+            The 4-Phase Delivery &amp; Engineering Process
           </h2>
           <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
             From initial requirements scoping to zero-downtime production deployment with rigorous telemetry surveillance.
@@ -2191,7 +2191,7 @@ export default async function ServiceDetailPage({ params }) {
               Related Engineering Guides &amp; Cost Breakdowns
             </h2>
             <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-3 font-light leading-relaxed">
-              In-depth architectural breakdowns, investment tiers, and technical implementation playbooks authored by our studio architects.
+              In-depth service breakdowns, technical standards, and implementation playbooks from our studio team.
             </p>
           </div>
 
