@@ -69,7 +69,7 @@ export const caseStudies = [
     approved: true
   },
   {
-    slug: 'ember-and-ivory-events',
+    slug: 'ember-ivory-events',
     name: 'Ember & Ivory Events',
     industry: 'Event Management',
     summary: 'A visual showcase platform for luxury wedding and experiential event planners across Rajasthan, featuring immersive event galleries and inquiry qualification.',

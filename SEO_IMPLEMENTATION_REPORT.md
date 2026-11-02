@@ -262,24 +262,34 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 ## Phase D: Proof Engine
 
 ### Task D1: Case Studies Data and Dynamic Route
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `6717074`  
 **Evidence:**
 - `src/data/caseStudies.js`: Created central proof engine dataset with strictly typed fields (`slug, name, industry, summary, whatWeBuilt[], stack[], demoUrl, screenshot, results[], approved`).
-  - 4 approved entries with live Vercel demo URLs: `shri-property` (Real Estate), `dr-rajeshwari-sharma` (Healthcare), `studio-mitti` (Interior Design), and `ember-and-ivory-events` (Event Management).
+  - 4 approved entries with live Vercel demo URLs: `shri-property` (Real Estate), `dr-rajeshwari-sharma` (Healthcare), `studio-mitti` (Interior Design), and `ember-ivory-events` (Event Management).
   - 1 unapproved draft entry: `aura-wellness-clinic` (`approved: false`), demonstrating strict approval gating.
 - `app/work/[slug]/page.jsx`: Created dynamic case study route:
   - `generateStaticParams()` filters strictly on `approved: true`.
   - Next.js `notFound()` invoked for unapproved or non-existent slugs.
   - Complete Schema.org metadata: `BreadcrumbList` and `CreativeWork` linked to `@id: https://www.siyaradigitals.com/#organization`.
   - Live preview button, verified technical deliverables checklist, tech stack badges, and topic-specific WhatsApp studio CTA.
-- `app/sitemap.js`: Updated sitemap generator to dynamically fetch `getApprovedCaseStudies()`, outputting only the 4 approved URLs (`/work/shri-property`, `/work/dr-rajeshwari-sharma`, `/work/studio-mitti`, `/work/ember-and-ivory-events`).
+- `app/sitemap.js`: Updated sitemap generator to dynamically fetch `getApprovedCaseStudies()`, outputting only the 4 approved URLs (`/work/shri-property`, `/work/dr-rajeshwari-sharma`, `/work/studio-mitti`, `/work/ember-ivory-events`).
 - **Build:** 83/83 static pages compiled successfully (exit code 0).
 
 ### Task D2: Portfolio Page (/work) Alignment
-**Status:** 🔄 IN PROGRESS
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- `src/components/work/FeaturedWorkGrid.jsx`:
+  - Connected dynamically to `getApprovedCaseStudies()`: projects matching approved slugs now display a distinguished gold `CASE STUDY` badge.
+  - Cards with approved case studies wrap with crawlable `<Link href={`/work/${project.slug}`}>` anchors, directly channeling crawl equity and user navigation to individual proof pages.
+  - Non-case-study live showcases retain direct external live demo links (`target="_blank"`), while design showcase concepts safely open preview modals without broken links.
+- `src/components/work/FeaturedCaseStudy.jsx`:
+  - Integrated dual-action CTA block: primary button links directly to `/work/shri-property` (`VIEW FULL CASE STUDY`), secondary button links to live Vercel demonstration (`LIVE DEMO`).
+- **Build:** 83/83 static pages compiled successfully (exit code 0).
+
+---
 
 ## Phase E: Conversion
-**Status:** 🔜 PENDING
+**Status:** 🔄 IN PROGRESS
 
 ## Phase F: Verify
 **Status:** 🔜 PENDING
@@ -310,3 +320,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `81867ac` | C4 | Structured data validation across organization, services, articles, and faqs |
 | `ac5a9e9` | C5 | Audit alt text and eliminate personal names and obsolete phrasing |
 | `4f9bd4e` | C6 | Audit GSC data presence and record keyword grounding evidence |
+| `6717074` | D1 | Case studies data, dynamic work slug route, and sitemap inclusion |

@@ -99,15 +99,22 @@ export default function FeaturedCaseStudy() {
                 </div>
               </div>
 
-              <div className="pt-2 sm:pt-4">
+              <div className="flex flex-wrap items-center gap-3 pt-2 sm:pt-4">
+                <Link
+                  href="/work/shri-property"
+                  className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-8 py-3.5 bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-sans font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-xl group rounded-sm"
+                >
+                  <span>VIEW FULL CASE STUDY</span>
+                  <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </Link>
                 <a
                   href="https://shri-properties.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-8 py-3.5 bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-sans font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-xl group rounded-sm"
+                  className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2 px-6 py-3.5 border border-[#101613]/30 hover:border-[#0B5E49] text-[#101613] hover:text-[#0B5E49] text-xs font-sans font-semibold tracking-[0.2em] uppercase transition-all rounded-sm"
                 >
-                  <span>EXPLORE DEMONSTRATION</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <span>LIVE DEMO</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
               </div>
             </motion.div>

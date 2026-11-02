@@ -4,12 +4,15 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, Plus, Sparkles } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { getApprovedCaseStudies } from '../../data/caseStudies';
 import { projectsData } from '../../data/projectsData';
 import ComingSoonModal from './ComingSoonModal';
 
 export default function FeaturedWorkGrid({ selectedIndustry, onClearFilter }) {
   const [showAll, setShowAll] = useState(false);
   const [activeComingSoonProject, setActiveComingSoonProject] = useState(null);
+  const approvedCaseStudySlugs = new Set(getApprovedCaseStudies().map((s) => s.slug));
 
   // Filter projects based on selectedIndustry
   const filteredProjects = selectedIndustry === 'ALL'
@@ -107,6 +110,7 @@ export default function FeaturedWorkGrid({ selectedIndustry, onClearFilter }) {
           >
             {displayedProjects.map((project, idx) => {
               const isComingSoon = project.status === 'COMING_SOON';
+              const hasApprovedCaseStudy = approvedCaseStudySlugs.has(project.slug);
               
               // First 2 projects in 'ALL' view get 6 cols each on desktop for visual weight
               const isFirstRow = selectedIndustry === 'ALL' && idx < 2;
@@ -144,7 +148,11 @@ export default function FeaturedWorkGrid({ selectedIndustry, onClearFilter }) {
                     <div className="flex items-center gap-2">
                       
 
-                      {isComingSoon ? (
+                      {hasApprovedCaseStudy ? (
+                        <span className="font-sans text-[9px] sm:text-[10px] font-bold tracking-[0.2em] text-[#D9B45F] uppercase px-2.5 py-1 bg-[#D9B45F]/15 border border-[#D9B45F]/40 backdrop-blur-md">
+                          CASE STUDY
+                        </span>
+                      ) : isComingSoon ? (
                         <span className="font-sans text-[9px] sm:text-[10px] font-bold tracking-[0.2em] text-[#D4AF37] uppercase px-2.5 py-1 bg-[#D4AF37]/15 border border-[#D4AF37]/40 backdrop-blur-md flex items-center gap-1">
                           <Sparkles className="w-2.5 h-2.5" />
                           <span>COMING SOON</span>
@@ -198,7 +206,11 @@ export default function FeaturedWorkGrid({ selectedIndustry, onClearFilter }) {
                   transition={{ duration: 0.5, delay: (idx % 3) * 0.05 }}
                   className={`${colSpan}`}
                 >
-                  {isComingSoon ? (
+                  {hasApprovedCaseStudy ? (
+                    <Link href={`/work/${project.slug}`}>
+                      {cardContent}
+                    </Link>
+                  ) : isComingSoon ? (
                     <div onClick={(e) => handleCardClick(e, project)}>
                       {cardContent}
                     </div>
