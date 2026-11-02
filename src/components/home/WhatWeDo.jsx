@@ -11,45 +11,31 @@ export default function WhatWeDo() {
   const services = [
     {
       id: '01',
-      title: 'BRAND STRATEGY & IDENTITY',
-      subtitle: 'Positioning, naming, visual identity, messaging',
-      href: '/services/branding',
-      icon: Edit3,
-    },
-    {
-      id: '02',
-      title: 'WEBSITE DESIGN & DEVELOPMENT (JAIPUR)',
-      subtitle: 'Websites and web applications built for speed and conversion',
+      title: 'WEBSITE DESIGN & DEVELOPMENT',
+      subtitle: 'High-performance websites and web applications built on Next.js 15 for speed, security, and conversion.',
       href: '/services/web-design-development',
       icon: Code,
     },
     {
-      id: '03',
-      title: 'SEO & GEO OPTIMIZATION',
-      subtitle: 'Search visibility across Google and AI answer engines',
+      id: '02',
+      title: 'SEARCH ENGINE OPTIMIZATION (SEO)',
+      subtitle: 'Technical SEO, Google 3-Pack local rankings, and AI answer engine visibility across Jaipur and India.',
       href: '/services/seo-services',
       icon: Search,
     },
     {
-      id: '04',
-      title: 'DIGITAL MARKETING & GROWTH',
-      subtitle: 'Paid media, social, and performance marketing',
-      href: '/services/performance-marketing',
+      id: '03',
+      title: 'SOCIAL MEDIA MARKETING',
+      subtitle: 'Targeted Meta and LinkedIn campaigns, organic storytelling, and high-engagement creative reels.',
+      href: '/services/social-media-marketing',
       icon: Megaphone,
     },
     {
-      id: '05',
-      title: 'AI & BUSINESS AUTOMATION',
-      subtitle: 'Intelligent workflows that replace manual ops',
-      href: '/services/ai-automation',
-      icon: Sparkles,
-    },
-    {
-      id: '06',
-      title: 'GROWTH SYSTEMS & CRO',
-      subtitle: 'Analytics, conversion optimization, scalable growth',
-      href: '/services/crm-lead-systems',
-      icon: TrendingUp,
+      id: '04',
+      title: 'BRAND STRATEGY & IDENTITY',
+      subtitle: 'Category positioning, visual identity systems, typography, and brand messaging that commands authority.',
+      href: '/services/branding',
+      icon: Edit3,
     },
   ];
 
@@ -112,8 +98,8 @@ export default function WhatWeDo() {
         >
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.05] sm:leading-[0.98] break-words">
             One connected system, <br />
-            eight disciplines <br />
-            working <span className="text-[#D9B45F] font-normal">together.</span>
+            four core disciplines <br />
+            working as one <span className="text-[#D9B45F] font-normal">connected system.</span>
           </h2>
         </motion.div>
 
@@ -143,7 +129,7 @@ export default function WhatWeDo() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '80px 0px' }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-4 relative z-10"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-4 relative z-10"
           >
             {services.map((service, index) => {
               const Icon = service.icon;

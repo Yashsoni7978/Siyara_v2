@@ -12,14 +12,6 @@ export default function Industries() {
   const industries = [
     {
       id: '01',
-      name: 'REAL ESTATE',
-      href: '/industries/real-estate',
-      description: 'Architectural web platforms, high-conversion property showcases, and automated lead acquisition for builders & developers.',
-      image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80',
-      tag: 'Luxury Properties & Developers',
-    },
-    {
-      id: '02',
       name: 'HEALTHCARE & CLINICS',
       href: '/industries/healthcare',
       description: 'Patient trust funnels, medical specialization showcases, and high-ranking local GEO search optimization for Jaipur doctors.',
@@ -27,15 +19,7 @@ export default function Industries() {
       tag: 'Clinics & Medical Groups',
     },
     {
-      id: '03',
-      name: 'JEWELLERY & LUXURY',
-      href: '/industries/jewellery-luxury',
-      description: 'Bespoke Next.js flagships, macro gemstone portfolios, and local luxury SEO for heritage jewellery houses.',
-      image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=80',
-      tag: 'Heritage & Fine Jewellery',
-    },
-    {
-      id: '04',
+      id: '02',
       name: 'INTERIOR DESIGN',
       href: '/industries/interior-design',
       description: 'High-aesthetic spatial portfolios, editorial case studies, and affluent client inquiry acquisition for architects & designers.',
@@ -43,28 +27,20 @@ export default function Industries() {
       tag: 'Interior Designers & Architects',
     },
     {
-      id: '05',
-      name: 'HOSPITALITY & RESORTS',
-      href: '/industries/healthcare',
-      description: 'Direct booking engines, destination wedding showcases, and local tourism SEO for boutique heritage hotels.',
-      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80',
-      tag: 'Hotels & Heritage Havelis',
+      id: '03',
+      name: 'EVENT MANAGEMENT',
+      href: '/industries/event-management',
+      description: 'High-converting event portfolios, wedding production showcases, and corporate event inquiry systems across Rajasthan.',
+      image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80',
+      tag: 'Luxury Weddings & Event Curators',
     },
     {
-      id: '06',
-      name: 'E-COMMERCE & D2C',
-      href: '/industries/ecommerce',
-      description: 'Headless Next.js storefronts, sub-second product pages, and Google Shopping SEO for retail brands.',
-      image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=80',
-      tag: 'Direct-to-Consumer Brands',
-    },
-    {
-      id: '07',
-      name: 'MANUFACTURING & EXPORT',
-      href: '/industries/manufacturing',
-      description: 'Industrial B2B catalogs, RFQ intake funnels, and international export SEO for manufacturers and mills.',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80',
-      tag: 'Industrial & B2B Exporters',
+      id: '04',
+      name: 'REAL ESTATE',
+      href: '/industries/real-estate',
+      description: 'Architectural web platforms, high-conversion property showcases, and automated lead acquisition for builders & developers.',
+      image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80',
+      tag: 'Luxury Properties & Developers',
     },
   ];
 
@@ -253,6 +229,17 @@ export default function Industries() {
             </div>
           </motion.div>
 
+        </div>
+
+        {/* Industry Hub Link */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/industries"
+            className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] text-[#D9B45F] hover:text-[#E8C979] uppercase transition-colors"
+          >
+            <span>Explore All Industry Solutions</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
       </div>
     </section>

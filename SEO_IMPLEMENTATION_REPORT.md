@@ -196,7 +196,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task C2: Service/Industry Content Deduplication
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `1be3635`  
 **Evidence:**
 - `app/services/[slug]/page.jsx`:
   - Replaced boilerplate header `"Engineering Deep Dive & Architectural Solutions"` with `"Technical Approach & Problem Solving"`.
@@ -211,6 +211,20 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task C3: Internal Link Map
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- `src/components/home/WhatWeDo.jsx`: Updated homepage service grid to showcase strictly the 4 Core Services in priority order (`Website Design & Development`, `Search Engine Optimization (SEO)`, `Social Media Marketing`, `Brand Strategy & Identity`), passing direct link equity to indexable core routes.
+- `src/components/home/Industries.jsx`: Filtered homepage industry showcase strictly to the 4 Core Indexable Verticals (`Healthcare & Clinics`, `Interior Design`, `Event Management`, `Real Estate`), and added an explicit link to the `/industries` hub.
+- `src/data/blogArticles.js`: Replaced 39 non-core/dead internal service links to point directly to relevant Core Services:
+  - 19 instances of `/services/performance-engineering` → `/services/web-design-development`
+  - 5 instances of `/services/digital-architecture` → `/services/web-design-development`
+  - 12 instances of `/services/conversion-architecture` → `/services/web-design-development`
+  - 1 instance of `/services/content-systems` → `/services/branding`
+  - 2 instances of `/services/analytics-attribution` → `/services/seo-services`
+- Resulting architecture guarantees that all homepage links and article body links channel crawl equity exclusively into the 4 Core Services and 4 Core Industries.
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
+
+### Task C4: Structured Data Validation
 **Status:** 🔄 IN PROGRESS
 
 ## Phase D: Proof Engine
@@ -243,3 +257,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `99a271d` | B5 | Update nav and footer to core pages only, remove noindex links |
 | `c45115d` | B6 | Sitemap includes only indexable URLs, robots.txt verified |
 | `7bb4997` | C1 | Homepage title, H1, meta description, and tagline alignment |
+| `1be3635` | C2 | Service and industry content deduplication and boilerplate removal |
