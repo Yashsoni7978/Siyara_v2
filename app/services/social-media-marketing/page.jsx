@@ -189,7 +189,7 @@ export default function SocialMediaMarketingPage() {
                 2. Short-Form Video &amp; Reels Production
               </h3>
               <p className="text-xs sm:text-sm text-[#9D9B91] leading-relaxed font-light mb-4">
-                Short-form vertical video is the fastest vehicle for organic reach and brand intimacy. We structure engaging hooks, behind-the-scenes walkthroughs, project showcases, and founder perspectives that hold audience attention.
+                Short-form vertical video is the fastest vehicle for organic reach and brand intimacy. We structure engaging hooks, behind-the-scenes walkthroughs, project showcases, and leadership perspectives that hold audience attention.
               </p>
             </div>
             <ul className="space-y-2 border-t border-[#0C6B52]/30 pt-4 text-xs text-[#ECE7D8]/80">
@@ -232,7 +232,7 @@ export default function SocialMediaMarketingPage() {
             </div>
             <ul className="space-y-2 border-t border-[#0C6B52]/30 pt-4 text-xs text-[#ECE7D8]/80">
               <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-[#D9B45F]" /> Direct message triage and lead qualification</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-[#D9B45F]" /> Thought leadership on LinkedIn for B2B founders</li>
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-[#D9B45F]" /> Thought leadership on LinkedIn for B2B leaders</li>
               <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-[#D9B45F]" /> Monthly commercial inquiry and engagement reporting</li>
             </ul>
           </div>

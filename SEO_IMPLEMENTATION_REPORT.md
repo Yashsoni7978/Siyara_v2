@@ -303,7 +303,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 83/83 static pages compiled successfully (exit code 0).
 
 ### Task E2: Contact Experience & Lead Preservation
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `9218c88`  
 **Evidence:**
 - `/contact` (`app/contact/page.jsx`, `src/components/contact/ContactIntake.jsx`): Verified multi-section contact experience including structured project brief intake, capability selector, and direct WhatsApp studio fallback.
 - `src/components/contact/ContactIntake.jsx`:
@@ -319,6 +319,21 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 ---
 
 ## Phase F: Verification & Audit
+
+### Task F1: Post-Build Grep Verification
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- Automated verification script `scratch/verify_f1.cjs` executed against all 83 compiled production HTML files in `.next/server/app/`:
+  - `Yash | Soni | Founder`: **0 matches** across all built HTML pages.
+  - `Rishabh Jewellers`: **0 matches** across all built HTML pages.
+  - Rupee symbol (`₹`): **0 matches** across all service pages (`.next/server/app/services/*.html`).
+  - `tel:` links: **0 matches** sitewide.
+  - Internal links to `/blog`: **0 matches** sitewide.
+- Replaced residual occurrences of "founder" in `app/services/social-media-marketing/page.jsx` with "leadership" and "business leaders".
+- Eliminated residual rupee references in `app/services/[slug]/page.jsx` and added sanitization on related guide excerpts.
+- **Build:** 83/83 static pages compiled successfully (exit code 0).
+
+### Task F2: Crawl & Audit
 **Status:** 🔄 IN PROGRESS
 
 ---
@@ -350,3 +365,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `6717074` | D1 | Case studies data, dynamic work slug route, and sitemap inclusion |
 | `c9feb94` | D2 | Portfolio page alignment with approved case studies and live demos |
 | `fd3fed4` | E1 | Topic-specific WhatsApp CTAs, floating mobile trigger, and no-tel audit |
+| `9218c88` | E2 | Contact form validation, core capability alignment, and analytics event |

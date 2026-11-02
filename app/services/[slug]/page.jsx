@@ -1196,7 +1196,7 @@ export const SERVICES_DATA = {
     deepDive: [
       {
         title: 'The Leaky Bucket: Pouring Ad Budgets into Unoptimized Funnels',
-        challenge: 'Businesses spend ₹1,00,000+ monthly on paid ads only to send traffic to confusing pages with 65%+ bounce rates, burning marketing capital.',
+        challenge: 'Businesses spend significant budgets monthly on paid ads only to send traffic to confusing pages with 65%+ bounce rates, burning marketing capital.',
         solution: 'We audit user friction points and build dedicated, high-speed Next.js campaign landing pages that achieve conversion rates exceeding 4.5%.'
       },
       {
@@ -1684,7 +1684,7 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Enterprise Performance Scale',
-        idealFor: 'National D2C brands, luxury jewellery exporters, and multi-crore enterprises spending ₹5,00,000+ monthly on media.',
+        idealFor: 'National D2C brands, luxury jewellery exporters, and established enterprises scaling high-volume media campaigns.',
         features: [
           'Omnichannel Google, Meta, and LinkedIn Ads',
           'Dedicated full-stack landing page developer',
@@ -1712,7 +1712,7 @@ export const SERVICES_DATA = {
       },
       {
         q: 'What is the minimum recommended advertising spend for paid campaigns?',
-        a: 'We typically recommend a minimum ad spend of ₹30,000 to ₹50,000 per month on Google or Meta to ensure sufficient statistical data for algorithmic bid optimization and consistent lead flow.'
+        a: 'We typically recommend a dedicated monthly advertising budget on Google or Meta to ensure sufficient statistical data for algorithmic bid optimization and consistent lead flow.'
       },
       {
         q: 'How do you prevent ad spend waste on unqualified clicks?',
@@ -2217,10 +2217,10 @@ export default async function ServiceDetailPage({ params }) {
                     </span>
                   </div>
                   <h3 className="font-serif text-base sm:text-xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug font-normal line-clamp-2">
-                    {article.title}
+                    {article.title?.replace(/₹/g, 'INR ')}
                   </h3>
                   <p className="font-sans text-xs sm:text-sm text-[#9D9B91] line-clamp-2 mt-2.5 font-light leading-relaxed">
-                    {article.excerpt}
+                    {article.excerpt?.replace(/₹/g, 'INR ')}
                   </p>
                 </div>
                 <div className="mt-5 pt-3.5 border-t border-[#18A982]/10 flex items-center justify-between text-xs font-medium text-[#18A982] group-hover:text-[#D9B45F] transition-colors">
