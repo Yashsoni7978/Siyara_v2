@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import SectionConnector from '../components/common/SectionConnector.jsx';
 import ServicesHero from '../components/services/ServicesHero.jsx';
 import ServiceIndex from '../components/services/ServiceIndex.jsx';
@@ -44,6 +45,32 @@ export default function Services({ onNavigate }) {
       {/* 05 - SPECIALIST APPLICATIONS & INDUSTRIES (DARK) */}
       <ServicesApplications />
 
+      {/* MORE SPECIALIZED SERVICES */}
+      <section className="py-12 bg-[#080B0A] border-t border-[#D9B45F]/15">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <span className="text-[11px] font-sans font-semibold tracking-[0.2em] text-[#D9B45F] uppercase block mb-3">
+            MORE SPECIALIZED CAPABILITIES
+          </span>
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-sans text-[#9D9B91]">
+            <Link href="/services/ecommerce-development" className="hover:text-[#D9B45F] transition-colors">E-Commerce</Link>
+            <span className="text-[#D9B45F]/30">·</span>
+            <Link href="/services/mobile-app-development" className="hover:text-[#D9B45F] transition-colors">Mobile Apps</Link>
+            <span className="text-[#D9B45F]/30">·</span>
+            <Link href="/services/ui-ux-design" className="hover:text-[#D9B45F] transition-colors">UI/UX Design</Link>
+            <span className="text-[#D9B45F]/30">·</span>
+            <Link href="/services/ai-automation" className="hover:text-[#D9B45F] transition-colors">AI &amp; Automation</Link>
+            <span className="text-[#D9B45F]/30">·</span>
+            <Link href="/services/growth-optimization" className="hover:text-[#D9B45F] transition-colors">Growth &amp; CRO</Link>
+            <span className="text-[#D9B45F]/30">·</span>
+            <Link href="/services/content-creative" className="hover:text-[#D9B45F] transition-colors">Content &amp; Creative</Link>
+            <span className="text-[#D9B45F]/30">·</span>
+            <Link href="/services/crm-lead-systems" className="hover:text-[#D9B45F] transition-colors">CRM Systems</Link>
+            <span className="text-[#D9B45F]/30">·</span>
+            <Link href="/services/performance-marketing" className="hover:text-[#D9B45F] transition-colors">Performance Marketing</Link>
+          </div>
+        </div>
+      </section>
+
       {/* CONNECTOR 06: DARK -> DARK */}
       <SectionConnector fromDark={true} toDark={true} />
 
@@ -52,4 +79,3 @@ export default function Services({ onNavigate }) {
     </div>
   );
 }
-

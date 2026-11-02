@@ -1737,7 +1737,15 @@ export async function generateMetadata({ params }) {
   const service = SERVICES_DATA[slug];
   if (!service) return {};
 
+  const isSecondary = slug !== 'web-design-development';
+
   return {
+    ...(isSecondary && {
+      robots: {
+        index: false,
+        follow: false,
+      },
+    }),
     title: service.metaTitle,
     description: service.metaDescription,
     alternates: {

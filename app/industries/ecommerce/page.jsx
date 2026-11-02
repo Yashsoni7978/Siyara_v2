@@ -17,6 +17,10 @@ import { BUSINESS_CONFIG } from '../../../src/config/business';
 import JsonLd, { buildBreadcrumbs, buildServiceSchema, buildFaqSchema } from '../../../src/components/common/JsonLd';
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
   title: 'E-Commerce Website Development Jaipur',
   description: 'Headless Next.js e-commerce development, sub-second checkout speeds, and organic shopping SEO for retail and D2C brands in Jaipur, Rajasthan.',
   alternates: {

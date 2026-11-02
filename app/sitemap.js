@@ -1,7 +1,27 @@
 import { FEATURED_ARTICLE, BLOG_ARTICLES } from '../src/data/blogArticles';
-import { SERVICES_DATA } from './services/[slug]/page';
 
 export const dynamic = "force-static";
+
+const NOINDEX_ARTICLES = new Set([
+  'new-digital-ecosystem-strategy-technology-growth',
+  'what-is-digital-architecture',
+  'how-to-choose-digital-architecture-studio-rajasthan',
+  'building-digital-strategy-drives-growth',
+  'what-is-brand-strategy-framework',
+  'what-makes-a-high-performing-website',
+  'how-to-get-more-enquiries-from-your-website',
+  'how-to-rank-chatgpt-perplexity-india',
+  'nextjs-vs-wordpress-seo-core-web-vitals',
+  'fix-crawled-currently-not-indexed-google-search-console',
+  'seo-geo-search-visibility-prepare-for-ai-search',
+  'custom-nextjs-website-price-india',
+  'ecommerce-website-development-cost-india',
+  'mobile-app-development-cost-jaipur',
+  'hotel-resort-website-design-rajasthan',
+  'coaching-institute-school-website-design-jaipur',
+  'b2b-manufacturing-website-sitapura-vki-jaipur',
+  'jewellery-website-design-jaipur-johari-bazaar',
+]);
 
 export default async function sitemap() {
   const baseUrl = 'https://www.siyaradigitals.com';
@@ -15,6 +35,7 @@ export default async function sitemap() {
     { path: '/work', priority: 0.9, changeFrequency: 'weekly' },
     { path: '/contact', priority: 0.85, changeFrequency: 'monthly' },
     { path: '/insights', priority: 0.85, changeFrequency: 'weekly' },
+    { path: '/industries', priority: 0.85, changeFrequency: 'weekly' },
   ].map((route) => ({
     url: `${baseUrl}${route.path}`,
     lastModified: currentDate,
@@ -22,34 +43,25 @@ export default async function sitemap() {
     priority: route.priority,
   }));
 
-  // 2. High-Intent Commercial Target Landers
-  const commercialRoutes = [
+  // 2. 4 Core Services ONLY (Secondary services are noindexed)
+  const coreServiceRoutes = [
+    '/services/web-design-development',
+    '/services/seo-services',
+    '/services/social-media-marketing',
+    '/services/branding',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: currentDate,
     changeFrequency: 'weekly',
-    priority: 0.95,
-  }));
-
-  // 3. Dedicated Service Disciplines (/services/*)
-  const serviceSlugs = Object.keys(SERVICES_DATA);
-  const serviceRoutes = serviceSlugs.map((slug) => ({
-    url: `${baseUrl}/services/${slug}`,
-    lastModified: currentDate,
-    changeFrequency: 'monthly',
     priority: 0.9,
   }));
 
-  // 4. Industry Verticals (/industries/*)
-  const industryRoutes = [
-    '/industries/real-estate',
+  // 3. 4 Indexable Industry Verticals ONLY (per Owner Default D3)
+  const indexableIndustryRoutes = [
     '/industries/healthcare',
-    '/industries/jewellery-luxury',
-    '/industries/education',
-    '/industries/ecommerce',
-    '/industries/manufacturing',
-    '/industries/event-management',
     '/industries/interior-design',
+    '/industries/event-management',
+    '/industries/real-estate',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: currentDate,
@@ -57,7 +69,7 @@ export default async function sitemap() {
     priority: 0.88,
   }));
 
-  // 5. Legal & Compliance Routes
+  // 4. Legal & Compliance Routes
   const legalRoutes = ['/faq', '/privacy', '/terms'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: currentDate,
@@ -65,11 +77,11 @@ export default async function sitemap() {
     priority: 0.5,
   }));
 
-  // 6. Dynamic Editorial & Insights Articles (/insights/* ONLY — canonical)
-  // /blog/* is permanently redirected to /insights/* via next.config.js
+  // 5. Indexable Editorial Articles ONLY (filtering out 18 noindexed articles)
   const allArticles = [FEATURED_ARTICLE, ...BLOG_ARTICLES];
+  const indexableArticles = allArticles.filter((art) => !NOINDEX_ARTICLES.has(art.slug));
 
-  const insightRoutes = allArticles.map((article) => {
+  const insightRoutes = indexableArticles.map((article) => {
     let articleDate = currentDate;
     try {
       if (article.date) {
@@ -89,9 +101,8 @@ export default async function sitemap() {
 
   return [
     ...coreRoutes,
-    ...commercialRoutes,
-    ...serviceRoutes,
-    ...industryRoutes,
+    ...coreServiceRoutes,
+    ...indexableIndustryRoutes,
     ...legalRoutes,
     ...insightRoutes,
   ];

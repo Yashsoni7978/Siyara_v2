@@ -16,6 +16,10 @@ import { BUSINESS_CONFIG } from '../../../src/config/business';
 import JsonLd, { buildBreadcrumbs, buildServiceSchema, buildFaqSchema } from '../../../src/components/common/JsonLd';
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
   title: 'Education & Institute Web Design Jaipur',
   description: 'Scalable Next.js websites, student admission funnels, and local education SEO for schools, coaching centers, and colleges in Jaipur, Rajasthan.',
   alternates: {

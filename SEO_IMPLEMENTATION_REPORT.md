@@ -128,7 +128,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 75/75 static pages compiled successfully (exit code 0).
 
 ### Task B3: New Core Service and Industry Hub Pages
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `a1c76c9`  
 **Evidence:**
 - `app/services/seo-services/page.jsx`: Created comprehensive SEO service page (700+ words) targeting search rankings, local Google 3-Pack, Core Web Vitals, Schema.org markup, and FAQs with FAQPage + Service schema. Title: 44 chars, Description: 151 chars. WhatsApp CTA included.
 - `app/services/social-media-marketing/page.jsx`: Created Social Media Marketing page (700+ words) covering Meta & LinkedIn ads, video/reels production, visual aesthetics, and community engagement. Title: 51 chars, Description: 147 chars. WhatsApp CTA included.
@@ -137,10 +137,22 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task B4: Indexability Control (noindex/nofollow)
-**Status:** 🔄 IN PROGRESS
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- Added `robots: { index: false, follow: false }` to 5 non-core industry routes:
+  - `app/industries/education/page.jsx`
+  - `app/industries/ecommerce/page.jsx`
+  - `app/industries/manufacturing/page.jsx`
+  - `app/industries/jewellery-luxury/page.jsx`
+  - `app/industries/hospitality/page.jsx`
+- Added dynamic `robots: { index: false, follow: false }` to all secondary service pages in `app/services/[slug]/page.jsx` (`ecommerce-development`, `mobile-app-development`, `ui-ux-design`, `ai-automation`, `growth-optimization`, `content-creative`, `crm-lead-systems`, `performance-marketing`).
+- Added dynamic `robots: { index: false, follow: false }` to 18 specific articles in `app/insights/[slug]/page.jsx`.
+- Cleaned `app/sitemap.js` to strictly contain only indexable canonical URLs (core pages, 4 core services, 4 indexable industries + hub, and indexable articles).
+- Added a discrete "More Specialized Capabilities" section to `/services` (`src/views/Services.jsx`) keeping secondary services accessible to users without diluting crawl budget.
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task B5: Navigation & Footer Update
-**Status:** 🔜 PENDING
+**Status:** 🔄 IN PROGRESS
 
 ### Task B6: Sitemap & robots.txt
 **Status:** 🔜 PENDING
@@ -175,3 +187,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `a8b7553` | A7 | Canonical audit confirmed correct on all pages, no changes required |
 | `a2270a9` | B1 | Replace onClick nav with Link href, fix legacy /blog links, fix dead anchors |
 | `48932b3` | B2 | Add 301 redirects for old/incorrect URLs, update all internal links |
+| `a1c76c9` | B3 | Create new service pages and industries hub |

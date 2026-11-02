@@ -17,6 +17,10 @@ import { BUSINESS_CONFIG } from '../../../src/config/business';
 import JsonLd, { buildBreadcrumbs, buildServiceSchema, buildFaqSchema } from '../../../src/components/common/JsonLd';
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
   title: 'Hospitality & Resort Web Design Jaipur',
   description: 'Direct booking Next.js websites, luxury heritage showcases, and local SEO for boutique hotels and resorts in Jaipur, Rajasthan.',
   alternates: {
