@@ -130,7 +130,7 @@ export default function RealEstateIndustryPage() {
           </h1>
 
           <p className="font-sans text-sm sm:text-lg text-[#9D9B91] font-light leading-relaxed max-w-2xl mb-8 sm:mb-10">
-            Multi-crore real estate investments demand digital experiences that reflect true architectural prestige. We engineer custom web platforms, interactive project showcases, and search systems for luxury property developers and premier brokerages.
+            Multi-crore real estate investments demand digital experiences that reflect true architectural prestige. We engineer custom web platforms, interactive project showcases, and search systems for luxury property developers and specialized brokerages.
           </p>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
@@ -330,7 +330,7 @@ export default function RealEstateIndustryPage() {
                 Real Estate Website Development Jaipur: RERA Compliance & High-Converting Buyer Portals
               </h3>
               <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
-                Learn how top real estate builders, townships, and commercial developers in Jaipur engineer high-trust portals with interactive masterplans and automated CRM lead capture.
+                Learn how modern real estate builders, townships, and commercial developers in Jaipur engineer high-trust portals with interactive masterplans and automated CRM lead capture.
               </p>
             </div>
             <div className="shrink-0">

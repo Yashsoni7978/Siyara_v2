@@ -166,7 +166,7 @@ export default function InteriorDesignIndustryPage() {
               Why Slow Portfolio Websites Damage Designer Credibility.
             </h2>
             <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed mb-4 sm:mb-6 font-light">
-              Most design firms upload uncompressed 15MB architectural photographs to template websites. The result is a slow, laggy experience where images take 6+ seconds to load. Affluent homeowners evaluating a ₹50-lakh interior renovation will not wait for a laggy page to render.
+              Most design firms upload uncompressed 15MB architectural photographs to template websites. The result is a slow, laggy experience where images take 6+ seconds to load. Affluent homeowners evaluating a significant luxury interior renovation will not wait for a laggy page to render.
             </p>
             <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed font-light">
               Siyara Innovations applies custom image optimization pipelines: full-resolution visual clarity, responsive aspect ratios, editorial whitespace, and zero layout shift.

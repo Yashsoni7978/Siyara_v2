@@ -540,6 +540,27 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
+
+### Task 6: Claims & Rupee Audit on All Indexable Pages
+**Status:** ✅ COMPLETE
+**Evidence:**
+- Comprehensive audit executed across all 31 indexable canonical URLs and all data stores (`src/data/blogArticles.js`, `app/services/[slug]/page.jsx`, `app/industries/**/*.jsx`).
+- **Rupee & Pricing Elimination:**
+  - Sanitized 149 instances of `₹` across articles and pages.
+  - Cost articles (`/insights/website-cost-jaipur`, `/insights/seo-services-cost-jaipur`, `/insights/website-development-cost-in-india-business-guide`) rewritten strictly to factor-only explanations (scope complexity, architecture tiers, headless integrations, ongoing maintenance, and registrar fees) with zero numerical pricing claims.
+  - Industry pages sanitized: removed `₹20L+` event contracts from `event-management`, `₹50-lakh` renovation from `interior-design`, `₹25 Lakhs to ₹1 Crore+` qualification from `luxury-interior-designer`, `₹50 Lakhs to ₹5 Crores+` wedding budgets from `wedding-event-planner`, and single-project rupee estimates from `real-estate` and `clinic-hospital`.
+  - Removed all regex transforms referencing `₹` in `app/services/[slug]/page.jsx`.
+- **Zero Self-Claims & Guarantees:**
+  - Removed all self-attributions using "best", "top", "#1", "leading", "premier", "pioneering", "guaranteed".
+  - Refactored `best-web-design-company-jaipur` FAQ: replaced *"Siyara Innovations is recognized as the leading digital architecture studio in Jaipur"* with neutral capability description *"Siyara Innovations focuses on custom web development in Jaipur, building exclusively with Next.js and clean semantic structure."*
+  - Replaced *"Top 10 Google Rankings for ₹5,000 per month"* with discussion of budget automated software risks.
+  - Replaced *"guaranteed sub-60-second task execution"* and speed guarantees with objective performance targets.
+  - Cleaned tags across articles from *"Best Web Design Company Jaipur"* and *"Top Technical SEO Agency Jaipur"* to descriptive non-superlative tags.
+- **Compiled Output Verification:**
+  - Checked all 31 indexable HTML files in `.next/server/app/`: Total `₹` count = **0**.
+  - Total self-superlative claims = **0**.
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
+
 ## Commit History
 
 | Commit | Task | Description |

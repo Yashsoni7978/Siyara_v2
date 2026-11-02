@@ -166,7 +166,7 @@ export default function EventManagementIndustryPage() {
               Why Instagram Alone Isn't Enough to Win Luxury Weddings.
             </h2>
             <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed mb-4 sm:mb-6 font-light">
-              While social media builds initial interest, high-budget corporate clients and NRI destination wedding families demand institutional credibility before signing ₹20L+ event contracts. A broken or non-existent website signals lack of professional infrastructure.
+              While social media builds initial interest, high-budget corporate clients and NRI destination wedding families demand institutional credibility before signing high-value luxury event contracts. A broken or non-existent website signals lack of professional infrastructure.
             </p>
             <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed font-light">
               Siyara Innovations bridges this gap: cinematic event reels, structured venue guides, transparent vendor coordination outlines, and instant WhatsApp inquiry flows that convert attention into signed bookings.

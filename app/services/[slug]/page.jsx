@@ -181,7 +181,7 @@ export const SERVICES_DATA = {
         features: [
           'Bespoke Figma UI/UX design',
           'Mobile-first layout (360px–430px)',
-          'Core Web Vitals guarantee (LCP < 1.8s)',
+          'Core Web Vitals optimization (targeting LCP < 2.5s)',
           'Brand typography & color system',
           'WhatsApp click-to-chat funnel'
         ]
@@ -329,7 +329,7 @@ export const SERVICES_DATA = {
           'Redis edge caching & rate limiting',
           'Third-party API & payment integrations',
           'Automated CI/CD deployment pipeline',
-          'Core Web Vitals SLA guarantee'
+          'Core Web Vitals performance targets'
         ]
       },
       {
@@ -721,7 +721,7 @@ export const SERVICES_DATA = {
         features: [
           'Next.js headless storefront build',
           'Razorpay & Cashfree UPI integration',
-          'Sub-1.8s mobile LCP guarantee',
+          'Sub-2.5s mobile LCP performance targets',
           'Shiprocket logistics webhook sync',
           'Complete Product Schema.org setup'
         ]
@@ -1037,7 +1037,7 @@ export const SERVICES_DATA = {
       },
       {
         q: 'Do you test UI designs on actual mobile smartphone screens?',
-        a: 'Yes. All interactive prototypes are previewed and tested directly on real iOS and Android physical devices across small (360px) to large (430px+) viewports to guarantee ergonomic thumb-reachability.'
+        a: 'Yes. All interactive prototypes are previewed and tested directly on real iOS and Android physical devices across small (360px) to large (430px+) viewports to ensure ergonomic thumb-reachability.'
       },
       {
         q: 'Can we hire Siyara just for UI/UX design if we already have an internal engineering team?',
@@ -1057,7 +1057,7 @@ export const SERVICES_DATA = {
     metaTitle: 'AI Business Automation Jaipur',
     metaDescription: 'Custom AI business automation and intelligent AI agents in Jaipur. Automate customer support, multi-step workflows, and document intelligence pipelines.',
     questionH2: 'How Can Custom AI Agents and Workflow Automation Scale Jaipur Enterprises?',
-    citabilityAnswer: 'Growing B2B enterprises, manufacturing firms, and medical clinics in Jaipur frequently hit an operational ceiling where valuable senior personnel spend hours daily on repetitive administrative data entry, manual document processing, and delayed customer triage. Siyara Innovations engineers custom AI business automation and autonomous AI agent systems that eliminate operational bottlenecks and scale business capacity without increasing payroll overhead. We construct intelligent webhook pipelines and autonomous LLM tool-calling agents that instantly capture customer inquiries from websites, WhatsApp, and email, extract structured data from unstructured contracts and invoices, and execute multi-step workflows across internal software platforms in real time. By integrating serverless API endpoints with models like Claude and GPT-4o, our systems guarantee sub-60-second task execution and 99.8% extraction accuracy. With enterprise-grade data encryption, private Retrieval-Augmented Generation (RAG) vector stores, and zero reliance on fragile third-party tools, your business achieves 24/7 operational velocity, superior customer satisfaction, and measurable cost reductions across Jaipur and pan-India markets.',
+    citabilityAnswer: 'Growing B2B enterprises, manufacturing firms, and medical clinics in Jaipur frequently hit an operational ceiling where valuable senior personnel spend hours daily on repetitive administrative data entry, manual document processing, and delayed customer triage. Siyara Innovations engineers custom AI business automation and autonomous AI agent systems that eliminate operational bottlenecks and scale business capacity without increasing payroll overhead. We construct intelligent webhook pipelines and autonomous LLM tool-calling agents that instantly capture customer inquiries from websites, WhatsApp, and email, extract structured data from unstructured contracts and invoices, and execute multi-step workflows across internal software platforms in real time. By integrating serverless API endpoints with models like Claude and GPT-4o, our systems achieve rapid task execution and verified extraction accuracy. With enterprise-grade data encryption, private Retrieval-Augmented Generation (RAG) vector stores, and zero reliance on fragile third-party tools, your business achieves 24/7 operational velocity, superior customer satisfaction, and measurable cost reductions across Jaipur and pan-India markets.',
     deepDive: [
       {
         title: 'The 4-Hour Customer Response Delay That Destroys Conversion',
@@ -1533,7 +1533,7 @@ export const SERVICES_DATA = {
           'Instant WhatsApp chat routing',
           'Zod schema input validation',
           'Google Sheets & email notification sync',
-          'Sub-1.8s page loading speed guarantee'
+          'Sub-2.5s page loading speed targets'
         ]
       },
       {
@@ -1602,7 +1602,7 @@ export const SERVICES_DATA = {
       {
         title: 'Wasted Ad Spend Due to Low Quality Scores',
         challenge: 'Slow landing pages result in Google Ads Quality Scores of 3/10 or 4/10, forcing businesses to pay 50% more per click than competitors.',
-        solution: 'Our sub-1.8s Next.js campaign landing pages achieve 9/10 Quality Scores, slashing required CPC bids by up to 30% while securing top ad positions.'
+        solution: 'Our sub-1.8s Next.js campaign landing pages achieve 9/10 Quality Scores, improving Quality Scores to help reduce required CPC bids while improving ad visibility.'
       },
       {
         title: 'Poor Ad Creative Differentiation in Competitive Spaces',
@@ -2106,7 +2106,7 @@ export default async function ServiceDetailPage({ params }) {
               features: [
                 'Custom Next.js static build',
                 'Mobile-first UX (360px–430px)',
-                'Core Web Vitals guarantee (LCP < 1.8s)',
+                'Core Web Vitals optimization (targeting LCP < 2.5s)',
                 'Local SEO & Google Maps setup',
                 'WhatsApp click-to-chat funnel'
               ]
@@ -2217,10 +2217,10 @@ export default async function ServiceDetailPage({ params }) {
                     </span>
                   </div>
                   <h3 className="font-serif text-base sm:text-xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug font-normal line-clamp-2">
-                    {article.title?.replace(/₹/g, 'INR ')}
+                    {article.title}
                   </h3>
                   <p className="font-sans text-xs sm:text-sm text-[#9D9B91] line-clamp-2 mt-2.5 font-light leading-relaxed">
-                    {article.excerpt?.replace(/₹/g, 'INR ')}
+                    {article.excerpt}
                   </p>
                 </div>
                 <div className="mt-5 pt-3.5 border-t border-[#18A982]/10 flex items-center justify-between text-xs font-medium text-[#18A982] group-hover:text-[#D9B45F] transition-colors">
