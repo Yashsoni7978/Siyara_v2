@@ -265,6 +265,68 @@ export default function SeoServicesPage() {
         </div>
       </section>
 
+      
+      {/* 4.5. RELATED SEO ARTICLES & GUIDES */}
+      <section className="px-4 sm:px-8 lg:px-16 max-w-4xl mx-auto mb-16 sm:mb-24">
+        <div className="text-center mb-8">
+          <span className="text-xs font-sans font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-2 block">
+            EDITORIAL PERSPECTIVES
+          </span>
+          <h2 className="font-serif text-2xl sm:text-3xl text-[#F3EFE3] font-normal">
+            Technical SEO & Search Strategy Guides
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Link
+            href="/insights/seo-services-cost-jaipur"
+            className="p-5 rounded-xl bg-[#0D1412] border border-[#0C6B52]/30 hover:border-[#D9B45F]/50 transition-colors group"
+          >
+            <h3 className="font-serif text-base text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors mb-2">
+              SEO Services Cost in Jaipur (2026 Guide)
+            </h3>
+            <p className="text-xs text-[#9D9B91] font-light leading-relaxed">
+              Explore Jaipur SEO agency retainer models, technical deliverables, and local search scope factors.
+            </p>
+          </Link>
+
+          <Link
+            href="/insights/top-technical-seo-agency-jaipur"
+            className="p-5 rounded-xl bg-[#0D1412] border border-[#0C6B52]/30 hover:border-[#D9B45F]/50 transition-colors group"
+          >
+            <h3 className="font-serif text-base text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors mb-2">
+              How to Choose a Technical SEO Agency in Jaipur
+            </h3>
+            <p className="text-xs text-[#9D9B91] font-light leading-relaxed">
+              Seven non-negotiable technical criteria: crawl budget control, schema engineering, and Core Web Vitals.
+            </p>
+          </Link>
+
+          <Link
+            href="/insights/local-seo-jaipur-checklist"
+            className="p-5 rounded-xl bg-[#0D1412] border border-[#0C6B52]/30 hover:border-[#D9B45F]/50 transition-colors group"
+          >
+            <h3 className="font-serif text-base text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors mb-2">
+              Local SEO Jaipur: 10-Point Checklist
+            </h3>
+            <p className="text-xs text-[#9D9B91] font-light leading-relaxed">
+              Google Business Profile optimization, local citation accuracy, and map ranking strategies.
+            </p>
+          </Link>
+
+          <Link
+            href="/insights/local-seo-guide-jaipur-businesses"
+            className="p-5 rounded-xl bg-[#0D1412] border border-[#0C6B52]/30 hover:border-[#D9B45F]/50 transition-colors group"
+          >
+            <h3 className="font-serif text-base text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors mb-2">
+              Hyper-Local SEO Guide for Jaipur Businesses
+            </h3>
+            <p className="text-xs text-[#9D9B91] font-light leading-relaxed">
+              Geo-targeted keywords, commercial citation directories, and localized schema structures.
+            </p>
+          </Link>
+        </div>
+      </section>
+
       {/* 5. WHATSAPP CONVERSION CTA */}
       <section className="px-4 sm:px-8 lg:px-16 max-w-4xl mx-auto">
         <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-[#063C2D] via-[#071E18] to-[#070A09] border border-[#D9B45F]/40 text-center relative overflow-hidden shadow-2xl">

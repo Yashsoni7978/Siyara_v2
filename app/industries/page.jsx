@@ -234,6 +234,25 @@ export default function IndustriesHubPage() {
               </div>
             );
           })}
+
+        {/* Additional Sectors We Support */}
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-[#0C6B52]/30 text-center">
+          <p className="text-xs font-sans text-[#9D9B91] uppercase tracking-[0.16em] mb-4">
+            Additional Industry Capabilities
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-3 text-xs font-sans text-[#ECE7D8]/80">
+            <Link href="/industries/ecommerce" className="hover:text-[#D9B45F] transition-colors">E-Commerce &amp; D2C</Link>
+            <span className="text-[#0C6B52]">·</span>
+            <Link href="/industries/education" className="hover:text-[#D9B45F] transition-colors">Education &amp; Institutes</Link>
+            <span className="text-[#0C6B52]">·</span>
+            <Link href="/industries/hospitality" className="hover:text-[#D9B45F] transition-colors">Hospitality &amp; Resorts</Link>
+            <span className="text-[#0C6B52]">·</span>
+            <Link href="/industries/jewellery-luxury" className="hover:text-[#D9B45F] transition-colors">Jewellery &amp; Luxury</Link>
+            <span className="text-[#0C6B52]">·</span>
+            <Link href="/industries/manufacturing" className="hover:text-[#D9B45F] transition-colors">Industrial Manufacturing</Link>
+          </div>
+        </div>
+
         </div>
       </section>
 
