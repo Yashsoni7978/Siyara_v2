@@ -5,37 +5,32 @@ import { siteConfig } from '@/data/siteConfig';
 
 export default function Footer() {
   const servicesLinks = [
-    { name: 'Web Design & Development', href: '/services/web-design-development' },
-    { name: 'Branding & Identity', href: '/services/branding' },
-    { name: 'SEO & GEO Optimization', href: '/services/seo-services' },
-    { name: 'Performance Marketing', href: '/services/performance-marketing' },
-    { name: 'AI & Business Automation', href: '/services/ai-automation' },
-    { name: 'Digital Growth Systems', href: '/services/growth-optimization' },
+    { name: 'Website Design & Development', href: '/services/web-design-development' },
+    { name: 'Search Engine Optimization (SEO)', href: '/services/seo-services' },
+    { name: 'Social Media Marketing', href: '/services/social-media-marketing' },
+    { name: 'Brand Strategy & Identity', href: '/services/branding' },
   ];
 
   const industryLinks = [
-    { name: 'Doctors & Clinics', href: '/industries/healthcare' },
-    { name: 'Real Estate Developers', href: '/industries/real-estate' },
-    { name: 'Jewellery & Luxury', href: '/industries/jewellery-luxury' },
-    { name: 'Interior Designers', href: '/industries/interior-design' },
-    { name: 'Boutique Hotels & Resorts', href: '/industries/healthcare' },
-    { name: 'Event Management', href: '/industries/event-management' },
-    { name: 'E-Commerce & Retail', href: '/industries/ecommerce' },
+    { name: 'Healthcare & Specialized Clinics', href: '/industries/healthcare' },
+    { name: 'Luxury Interior Design', href: '/industries/interior-design' },
+    { name: 'Events & Experiences', href: '/industries/event-management' },
+    { name: 'Real Estate & Luxury Spaces', href: '/industries/real-estate' },
   ];
 
   const companyLinks = [
     { name: 'About Siyara', href: '/about' },
-    { name: 'Why Siyara', href: '/about' },
     { name: 'Our Work', href: '/work' },
-    { name: 'Blog & Insights', href: '/insights' },
+    { name: 'Insights & Editorial', href: '/insights' },
+    { name: 'Frequently Asked Questions', href: '/faq' },
     { name: 'Contact Studio', href: '/contact' },
   ];
 
   const resourceLinks = [
+    { name: 'Website Cost in Jaipur', href: '/insights/website-cost-jaipur' },
     { name: 'Website Cost in India', href: '/insights/website-development-cost-in-india-business-guide' },
     { name: 'Local SEO Guide Jaipur', href: '/insights/local-seo-guide-jaipur-businesses' },
-    { name: 'High-Performance Websites', href: '/insights/what-makes-a-high-performing-website' },
-    { name: 'Choosing an Agency', href: '/insights/how-to-choose-a-web-design-agency-in-jaipur' },
+    { name: 'Choosing a Web Agency', href: '/insights/how-to-choose-a-web-design-agency-in-jaipur' },
   ];
 
   return (
@@ -87,7 +82,7 @@ export default function Footer() {
                 className="font-sans text-xs font-semibold text-[#F3EFE3] hover:text-[#D9B45F] transition-colors flex items-center gap-2"
               >
                 <MessageCircle className="w-3.5 h-3.5 text-[#D9B45F]" />
-                <span>WhatsApp Us</span>
+                <span>WhatsApp Us (+91 95872 69209)</span>
                 <ArrowUpRight className="w-3 h-3 text-[#D9B45F] ml-auto" />
               </a>
             </div>
@@ -99,7 +94,7 @@ export default function Footer() {
             {/* CAPABILITIES */}
             <div>
               <h3 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
-                CAPABILITIES
+                CORE SERVICES
               </h3>
               <ul className="flex flex-col gap-3">
                 {servicesLinks.map((link) => (
@@ -153,10 +148,10 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* GUIDES & CONTACT */}
+            {/* RESOURCES & LOCATION */}
             <div>
               <h3 className="font-sans text-xs font-semibold tracking-[0.2em] text-[#D9B45F] uppercase mb-5">
-                RESOURCES
+                INSIGHTS
               </h3>
               <ul className="flex flex-col gap-3 mb-6">
                 {resourceLinks.map((link) => (
@@ -199,7 +194,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-[#9D9B91]">
           <div className="flex items-center gap-2 text-center sm:text-left">
             <span className="font-serif font-bold tracking-[0.2em] text-[#F3EFE3]">SIYARA✦</span>
-            <span>© 2026 Siyara. All rights reserved.</span>
+            <span>© 2026 Siyara Innovations. All rights reserved.</span>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-[11px] tracking-wider text-[#9D9B91]">

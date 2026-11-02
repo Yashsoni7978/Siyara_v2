@@ -137,7 +137,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task B4: Indexability Control (noindex/nofollow)
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `143b27a`  
 **Evidence:**
 - Added `robots: { index: false, follow: false }` to 5 non-core industry routes:
   - `app/industries/education/page.jsx`
@@ -148,14 +148,22 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - Added dynamic `robots: { index: false, follow: false }` to all secondary service pages in `app/services/[slug]/page.jsx` (`ecommerce-development`, `mobile-app-development`, `ui-ux-design`, `ai-automation`, `growth-optimization`, `content-creative`, `crm-lead-systems`, `performance-marketing`).
 - Added dynamic `robots: { index: false, follow: false }` to 18 specific articles in `app/insights/[slug]/page.jsx`.
 - Cleaned `app/sitemap.js` to strictly contain only indexable canonical URLs (core pages, 4 core services, 4 indexable industries + hub, and indexable articles).
-- Added a discrete "More Specialized Capabilities" section to `/services` (`src/views/Services.jsx`) keeping secondary services accessible to users without diluting crawl budget.
+- Added a discrete "More specialized capabilities" section to `/services` (`src/views/Services.jsx`) keeping secondary services accessible to users without diluting crawl budget.
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task B5: Navigation & Footer Update
-**Status:** 🔄 IN PROGRESS
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- `src/components/layout/Navbar.jsx`: Configured primary navigation links to `Home`, `Services`, `Work`, `Insights`, `About`, `Contact` + direct WhatsApp CTA (`WHATSAPP STUDIO` linking to `wa.me/919587269209`).
+- `src/components/home/Footer.jsx`:
+  - Updated Core Services column to strictly the 4 core disciplines: `Website Design & Development`, `Search Engine Optimization (SEO)`, `Social Media Marketing`, `Brand Strategy & Identity`.
+  - Updated Industries column to strictly the 4 indexable sectors: `Healthcare & Specialized Clinics`, `Luxury Interior Design`, `Events & Experiences`, `Real Estate & Luxury Spaces` (removed "Boutique Hotels & Resorts" and links to noindexed industries).
+  - Cleaned Resources column to strictly link to indexable articles.
+  - Retained verified WhatsApp and email contact info, plus Privacy, Terms, FAQ, and Sitemap links.
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task B6: Sitemap & robots.txt
-**Status:** 🔜 PENDING
+**Status:** 🔄 IN PROGRESS
 
 ---
 
@@ -188,3 +196,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `a2270a9` | B1 | Replace onClick nav with Link href, fix legacy /blog links, fix dead anchors |
 | `48932b3` | B2 | Add 301 redirects for old/incorrect URLs, update all internal links |
 | `a1c76c9` | B3 | Create new service pages and industries hub |
+| `143b27a` | B4 | Add noindex to non-core industries, secondary services, 18 articles |
