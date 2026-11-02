@@ -219,7 +219,7 @@ export default function IndustriesSection() {
                 {/* Information */}
                 <div>
                   <div className="text-[10px] font-sans tracking-[0.22em] text-[#D9B45F] uppercase font-bold mb-1">
-                    REPRESENTATIVE PROJECT SHOWCASE
+                    DELIVERED PROJECT
                   </div>
                   <h3 className="font-serif text-3xl text-[#F3EFE3] font-normal leading-tight mb-2">
                     {currentIndustry.project.name}
