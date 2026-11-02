@@ -256,7 +256,7 @@ export default function EventManagementIndustryPage() {
               PROVEN DEMONSTRATIONS
             </span>
             <h2 className="font-serif text-2xl sm:text-4xl text-[#F3EFE3] break-words">
-              Event & Wedding Web Architecture & Demonstration Prototypes.
+              Event & Wedding Web Architecture & Delivered Project Showcases.
             </h2>
           </div>
           <Link
@@ -278,7 +278,7 @@ export default function EventManagementIndustryPage() {
                 Bespoke Event & Wedding Management Studio Concept
               </h3>
               <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
-                Interactive prototype demonstrating bespoke event and wedding architecture: palace celebration showcases in Rajasthan, spatial scenography, and luxury enquiry intake funnels.
+                Interactive live platform engineered for bespoke event and wedding architecture: palace celebration showcases in Rajasthan, spatial scenography, and luxury enquiry intake funnels.
               </p>
             </div>
             <a
@@ -287,7 +287,7 @@ export default function EventManagementIndustryPage() {
               rel="noopener noreferrer"
               className="text-xs font-sans font-semibold tracking-wider text-[#D9B45F] hover:underline flex items-center gap-1.5"
             >
-              <span>Explore Demonstration Prototype</span>
+              <span>Explore Live Demo</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -301,7 +301,7 @@ export default function EventManagementIndustryPage() {
                 Heritage Destination & Celebration Venue Concept
               </h3>
               <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
-                Interactive prototype demonstrating destination retreat and celebration venue architecture: immersive visual storytelling, heritage booking protocols, and experiential luxury presentation.
+                Interactive live platform engineered for destination retreat and celebration venue architecture: immersive visual storytelling, heritage booking protocols, and experiential luxury presentation.
               </p>
             </div>
             <a
@@ -310,7 +310,7 @@ export default function EventManagementIndustryPage() {
               rel="noopener noreferrer"
               className="text-xs font-sans font-semibold tracking-wider text-[#D9B45F] hover:underline flex items-center gap-1.5"
             >
-              <span>Explore Demonstration Prototype</span>
+              <span>Explore Live Demo</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>

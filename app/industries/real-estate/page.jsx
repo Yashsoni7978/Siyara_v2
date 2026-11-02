@@ -256,7 +256,7 @@ export default function RealEstateIndustryPage() {
               PROVEN DEMONSTRATIONS
             </span>
             <h2 className="font-serif text-2xl sm:text-4xl text-[#F3EFE3] break-words">
-              Real Estate Web Architecture & Demonstration Prototypes.
+              Real Estate Web Architecture & Delivered Project Showcases.
             </h2>
           </div>
           <Link
@@ -278,7 +278,7 @@ export default function RealEstateIndustryPage() {
                 Luxury Developer Platform Concept
               </h3>
               <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
-                Interactive prototype demonstrating flagship real estate developer architecture: multi-project residential showcases across cities, floor plan visualization, and direct consultation funnels.
+                Interactive live platform engineered for flagship real estate developer architecture: multi-project residential showcases across cities, floor plan visualization, and direct consultation funnels.
               </p>
             </div>
             <a
@@ -287,7 +287,7 @@ export default function RealEstateIndustryPage() {
               rel="noopener noreferrer"
               className="text-xs font-sans font-semibold tracking-wider text-[#D9B45F] hover:underline flex items-center gap-1.5"
             >
-              <span>Explore Demonstration Prototype</span>
+              <span>Explore Live Demo</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -301,7 +301,7 @@ export default function RealEstateIndustryPage() {
                 Property Brokerage & Listing Engine Concept
               </h3>
               <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
-                Interactive prototype demonstrating property brokerage architecture: 12 dynamic listings, instant client-side filters, structured property schema, and WhatsApp visit scheduling.
+                Interactive live platform engineered for property brokerage architecture: 12 dynamic listings, instant client-side filters, structured property schema, and WhatsApp visit scheduling.
               </p>
             </div>
             <a
@@ -310,7 +310,7 @@ export default function RealEstateIndustryPage() {
               rel="noopener noreferrer"
               className="text-xs font-sans font-semibold tracking-wider text-[#D9B45F] hover:underline flex items-center gap-1.5"
             >
-              <span>Explore Demonstration Prototype</span>
+              <span>Explore Live Demo</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>

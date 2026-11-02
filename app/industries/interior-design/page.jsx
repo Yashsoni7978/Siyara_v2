@@ -258,7 +258,7 @@ export default function InteriorDesignIndustryPage() {
             Artisanal Spatial Studio Concept
           </h2>
           <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-6">
-            Interactive prototype demonstrating web design solutions for architectural and interior design studios: earthy editorial typography, high-resolution material curation with modern React image optimization, and private consultation intake funnels.
+            Interactive live platform engineered for web design solutions for architectural and interior design studios: earthy editorial typography, high-resolution material curation with modern React image optimization, and private consultation intake funnels.
           </p>
           <div className="flex items-center gap-4">
             <a
@@ -267,7 +267,7 @@ export default function InteriorDesignIndustryPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs font-sans font-bold tracking-wider text-[#D9B45F] hover:underline"
             >
-              <span>Explore Demonstration Prototype</span>
+              <span>Explore Live Demo</span>
               <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>

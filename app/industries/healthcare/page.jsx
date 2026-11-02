@@ -253,10 +253,10 @@ export default function HealthcareIndustryPage() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
           <div>
             <span className="text-xs font-sans font-bold tracking-widest text-[#D9B45F] block mb-2 uppercase">
-              PROVEN CRAFT & DEMONSTRATIONS
+              PROVEN CRAFT & DELIVERED SHOWCASES
             </span>
             <h2 className="font-serif text-2xl sm:text-4xl text-[#F3EFE3] break-words">
-              Clinical Web Architecture & Demonstration Prototypes.
+              Clinical Web Architecture & Delivered Project Showcases.
             </h2>
           </div>
           <Link
@@ -278,7 +278,7 @@ export default function HealthcareIndustryPage() {
                 Specialist Dental Portal Concept
               </h3>
               <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
-                Interactive prototype demonstrating multi-speciality dental clinic architecture: procedural guides, patient consultation booking flow, and local medical schema.
+                Interactive live platform engineered for multi-speciality dental clinic architecture: procedural guides, patient consultation booking flow, and local medical schema.
               </p>
             </div>
             <a
@@ -287,7 +287,7 @@ export default function HealthcareIndustryPage() {
               rel="noopener noreferrer"
               className="text-xs font-sans font-semibold tracking-wider text-[#D9B45F] hover:underline flex items-center gap-1.5"
             >
-              <span>Explore Demonstration Prototype</span>
+              <span>Explore Live Demo</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -301,7 +301,7 @@ export default function HealthcareIndustryPage() {
                 Consultant Practice Portal Concept
               </h3>
               <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
-                Interactive prototype demonstrating solo physician practice architecture: verified credential trust presentation, OPD schedule displays, and patient orientation.
+                Interactive live platform engineered for solo physician practice architecture: verified credential trust presentation, OPD schedule displays, and patient orientation.
               </p>
             </div>
             <a
@@ -310,7 +310,7 @@ export default function HealthcareIndustryPage() {
               rel="noopener noreferrer"
               className="text-xs font-sans font-semibold tracking-wider text-[#D9B45F] hover:underline flex items-center gap-1.5"
             >
-              <span>Explore Demonstration Prototype</span>
+              <span>Explore Live Demo</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -324,7 +324,7 @@ export default function HealthcareIndustryPage() {
                 Multispecialty Hospital Portal Concept
               </h3>
               <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed mb-6">
-                Interactive prototype demonstrating large hospital portal architecture: 16-department navigation, specialist consultant directory, and emergency orientation.
+                Interactive live platform engineered for large hospital portal architecture: 16-department navigation, specialist consultant directory, and emergency orientation.
               </p>
             </div>
             <a
@@ -333,7 +333,7 @@ export default function HealthcareIndustryPage() {
               rel="noopener noreferrer"
               className="text-xs font-sans font-semibold tracking-wider text-[#D9B45F] hover:underline flex items-center gap-1.5"
             >
-              <span>Explore Demonstration Prototype</span>
+              <span>Explore Live Demo</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
