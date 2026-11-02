@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from 'next/server.js';
 
 // In-memory rate limiting (per serverless instance)
 const rateLimitMap = new Map();

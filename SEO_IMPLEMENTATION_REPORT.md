@@ -674,6 +674,29 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - *Lighthouse Sandbox Note:* Running the dynamic `lighthouse` CLI binary requires an uninstalled npm package and active outbound network access, which is blocked by the secure sandbox environment. Production static bundle metrics, 100% static HTML generation, zero JavaScript hydration bloat, and sub-170 kB First Load JS establish strong mobile performance alignment with Google Core Web Vitals standards.
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
+
+### Task 10: Contact Form Automated Code-Level Test & Vercel Environment Variables
+**Status:** ✅ COMPLETE
+**Evidence:**
+- Built and executed automated regression test suite (`scratch/test_contact_api.cjs`) verifying all serverless endpoints, validation bounds, and provider handling in `app/api/contact/route.js`.
+- **Test Suite Results (7/7 Passed — 100%):**
+  1. `Validation: Missing name returns 400` (Status 400, `success: false`, clean error message).
+  2. `Validation: Invalid email format returns 400` (Status 400, `success: false`).
+  3. `Validation: Details under 5 characters returns 400` (Status 400, `success: false`).
+  4. `Spam Protection: Honeypot field (b_website) triggers silent rejection 400` (Status 400, bot submission blocked).
+  5. `Honest Error Handling: Returns 503 and WhatsApp referral when Resend/Webhook is unconfigured` (Status 503; verified zero false-positive success responses).
+  6. `Rate Limiting: 5 requests succeed; 6th request blocked with 429` (Enforces max 5 requests per 10-minute sliding window per client IP).
+  7. `Capability Alignment: All 4 core services pass schema validation` (Verified `Website Design & Development`, `Search Engine Optimization (SEO)`, `Social Media Marketing`, and `Brand Strategy & Identity` pass payload checks).
+- **Client Analytics & UI Robustness:**
+  - Verified `src/components/contact/ContactIntake.jsx`: `window.gtag('event', 'generate_lead')` is defensively guarded with `typeof window !== 'undefined' && typeof window.gtag === 'function'`, preventing submission failures when analytics or ad-blockers are active.
+  - WhatsApp fallback URL generator encodes all inquiry parameters dynamically (`https://wa.me/919587269209?text=...`).
+- **Required Vercel Environment Variables:**
+  - `RESEND_API_KEY`: Required. API key from Resend dashboard (`re_...`) for transactional brief notifications.
+  - `RESEND_FROM_EMAIL`: Optional. Verified sending domain address (e.g. `Siyara Innovations <briefs@siyaradigitals.com>`; defaults to `onboarding@resend.dev` for development).
+  - `CONTACT_NOTIFICATION_EMAIL`: Optional. Destination inbox for lead notifications (defaults to `info@siyaradigitals.com`).
+  - `CONTACT_WEBHOOK_URL`: Optional. Backup webhook URL (Zapier, Make, Telegram, or internal CRM endpoint) for automated lead intake.
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
+
 ## Commit History
 
 | Commit | Task | Description |
