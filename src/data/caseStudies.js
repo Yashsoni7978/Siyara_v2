@@ -24,7 +24,7 @@ export const caseStudies = [
       '100% Core Web Vitals target compliance',
       'Direct WhatsApp inquiry flow eliminating form friction'
     ],
-    approved: true
+    approved: false
   },
   {
     slug: 'dr-rajeshwari-sharma',
@@ -45,7 +45,7 @@ export const caseStudies = [
       'Transparent procedure information and FAQs',
       'Zero tracking bloat maintaining patient privacy'
     ],
-    approved: true
+    approved: false
   },
   {
     slug: 'studio-mitti',
@@ -66,7 +66,7 @@ export const caseStudies = [
       'Clean typography hierarchy highlighting project craftsmanship',
       'Direct client qualification via WhatsApp and private intake'
     ],
-    approved: true
+    approved: false
   },
   {
     slug: 'ember-ivory-events',
@@ -87,7 +87,7 @@ export const caseStudies = [
       'Streamlined date inquiry and guest-count scoping',
       'High-speed image loading via modern AVIF/WebP formats'
     ],
-    approved: true
+    approved: false
   },
   {
     // TODO: Client and founder verification pending before public release

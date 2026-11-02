@@ -374,6 +374,32 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 ---
 
+
+## Phase G: Founder Directives & Rigorous Refinements (Tasks 1–12)
+
+### Task 1: Case Studies Lockdown & Repo Fact Audit
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- Set `approved: false` on ALL entries in `src/data/caseStudies.js` (`shri-property`, `dr-rajeshwari-sharma`, `studio-mitti`, `ember-ivory-events`, `aura-wellness-clinic`).
+- Route & template preservation: `app/work/[slug]/page.jsx` remains fully functional; `generateStaticParams()` returns `[]`, pre-rendering 0 case study pages. Any direct request cleanly returns 404 (`notFound()`).
+- Sitemap removal: `app/sitemap.js` verified emitting 0 `/work/` child URLs.
+- Portfolio links/badges removed: `src/components/work/FeaturedWorkGrid.jsx` displays zero `CASE STUDY` badges and wraps no cards in `/work/<slug>` links; `src/components/work/FeaturedCaseStudy.jsx` replaced internal case study link with direct `EXPLORE LIVE DEMO` button pointing to `https://shri-properties.vercel.app/`.
+- Updated section titles: Replaced `FEATURED CASE STUDY` with `FEATURED PROJECT SHOWCASE` and `REPRESENTATIVE CASE STUDY` with `REPRESENTATIVE PROJECT SHOWCASE` in `FeaturedCaseStudy.jsx` and `IndustriesSection.jsx`.
+- **Fact Provenance Audit (Repo vs. Self-Written):**
+  1. `shri-property`:
+     - From Repo: Name (`Shri Property`, `src/data/projectsData.js:42`), Industry (`Real Estate`, line 43), Demo URL (`https://shri-properties.vercel.app/`, line 47), Screenshot image (`https://images.unsplash.com/photo-1600585154526-990dced4db0d`, line 51), Base summary (derived from line 45).
+     - Self-Written / Synthesized: `whatWeBuilt` (Property Catalog, Listing Search & Filter, WhatsApp routing, RealEstateAgent schema), `stack` (Next.js 15, React 19, Tailwind CSS, Vercel Edge Network), `results` (Core Web Vitals targets).
+  2. `dr-rajeshwari-sharma`:
+     - From Repo: Name (`Dr. Rajeshwari Sharma`, `src/data/projectsData.js:12`), Industry (`Healthcare`, line 13), Demo URL (`https://dr-rajeshwari-sharma-medical-websit.vercel.app/`, line 17), Screenshot image (`https://images.unsplash.com/photo-1576091160399-112ba8d25d1d`, line 21), Base summary (derived from line 15).
+     - Self-Written / Synthesized: `whatWeBuilt` (Procedure Guides, Patient Booking, MedicalClinic schema, Accessible UI), `stack` (Next.js 15, React 19, Tailwind CSS, Schema.org), `results` (Navigation benchmarks, privacy).
+  3. `studio-mitti`:
+     - From Repo: Name (`Studio Mitti`, `src/data/projectsData.js:102`), Industry (`Interior Design`, line 103), Demo URL (`https://studio-mitti-nu.vercel.app/`, line 107), Screenshot image (`https://images.unsplash.com/photo-1618221195710-dd6b41faaea6`, line 111), Base summary (derived from line 105).
+     - Self-Written / Synthesized: `whatWeBuilt` (Gallery Grid, Narrative Layouts, Materials Showcase, Consultation Intake), `stack` (Next.js 15, React 19, Tailwind CSS, Framer Motion), `results` (Zero layout shift targets).
+  4. `ember-ivory-events`:
+     - From Repo: Name (`Ember & Ivory Events`, `src/data/projectsData.js:222`), Industry (`Event Management`, line 223), Demo URL (`https://ember-ivory-events.vercel.app/`, line 227), Screenshot image (`https://images.unsplash.com/photo-1511795409834-ef04bbd61622`, line 231), Base summary (derived from line 225).
+     - Self-Written / Synthesized: `whatWeBuilt` (Storytelling Grids, Wedding Catalog, Consultation Funnel, EventVenue schema), `stack` (Next.js 15, React 19, Tailwind CSS, Next/Image), `results` (Mobile-first speed goals).
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
+
 ## Commit History
 
 | Commit | Task | Description |

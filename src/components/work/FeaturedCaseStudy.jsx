@@ -29,7 +29,7 @@ export default function FeaturedCaseStudy() {
               </span>
               <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
               <span className="text-[11px] sm:text-[12px] font-sans font-bold tracking-[0.24em] text-[#0B5E49] uppercase">
-                FEATURED CASE STUDY
+                FEATURED PROJECT SHOWCASE
               </span>
             </motion.div>
 
@@ -73,7 +73,7 @@ export default function FeaturedCaseStudy() {
               className="space-y-6"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ECE7D8] border border-[#B9923F]/40 text-[10px] font-sans tracking-[0.2em] text-[#0B5E49] uppercase font-bold">
-                REAL ESTATE ARCHITECTURAL DEMONSTRATION
+                REAL ESTATE PROJECT SHOWCASE
               </div>
 
               <h3 className="font-serif text-2xl sm:text-4xl text-[#101613] leading-tight font-normal break-words">
@@ -100,21 +100,14 @@ export default function FeaturedCaseStudy() {
               </div>
 
               <div className="flex flex-wrap items-center gap-3 pt-2 sm:pt-4">
-                <Link
-                  href="/work/shri-property"
-                  className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-8 py-3.5 bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-sans font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-xl group rounded-sm"
-                >
-                  <span>VIEW FULL CASE STUDY</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </Link>
                 <a
                   href="https://shri-properties.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2 px-6 py-3.5 border border-[#101613]/30 hover:border-[#0B5E49] text-[#101613] hover:text-[#0B5E49] text-xs font-sans font-semibold tracking-[0.2em] uppercase transition-all rounded-sm"
+                  className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-8 py-3.5 bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-sans font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-xl group rounded-sm"
                 >
-                  <span>LIVE DEMO</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <span>EXPLORE LIVE DEMO</span>
+                  <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
             </motion.div>
