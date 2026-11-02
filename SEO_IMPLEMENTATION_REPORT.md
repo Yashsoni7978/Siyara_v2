@@ -291,7 +291,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 ## Phase E: Conversion
 
 ### Task E1: WhatsApp CTAs and Frictionless Intake
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `fd3fed4`  
 **Evidence:**
 - Dedicated WhatsApp conversion blocks with topic-specific prefilled messages implemented across all key templates:
   - Service detail routes (`app/services/[slug]/page.jsx`): dynamically prefilled with service title (`"Hi Siyara Innovations, I would like to discuss [service.name] for my business."`).
@@ -303,10 +303,23 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 83/83 static pages compiled successfully (exit code 0).
 
 ### Task E2: Contact Experience & Lead Preservation
-**Status:** 🔄 IN PROGRESS
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- `/contact` (`app/contact/page.jsx`, `src/components/contact/ContactIntake.jsx`): Verified multi-section contact experience including structured project brief intake, capability selector, and direct WhatsApp studio fallback.
+- `src/components/contact/ContactIntake.jsx`:
+  - Reordered capability selector options to prioritize Core Services: `Website Design & Development` (default), `Search Engine Optimization (SEO)`, `Social Media Marketing`, `Brand Strategy & Identity`.
+  - Added automated Google Analytics lead conversion event dispatch (`gtag('event', 'generate_lead')`) upon successful form submission.
+- `/api/contact` (`app/api/contact/route.js`):
+  - In-memory rate limiting enforced (5 submissions per 10-minute window per IP).
+  - Silent anti-spam honeypot detection (`b_website`).
+  - Strict input sanitization and length bounds validation.
+  - Dual delivery provider architecture: Resend API with Webhook fallback; honest 503 error handling that redirects users to WhatsApp if no provider is configured, ensuring no user inquiry is silently discarded.
+- **Build:** 83/83 static pages compiled successfully (exit code 0).
 
-## Phase F: Verify
-**Status:** 🔜 PENDING
+---
+
+## Phase F: Verification & Audit
+**Status:** 🔄 IN PROGRESS
 
 ---
 
@@ -336,3 +349,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `4f9bd4e` | C6 | Audit GSC data presence and record keyword grounding evidence |
 | `6717074` | D1 | Case studies data, dynamic work slug route, and sitemap inclusion |
 | `c9feb94` | D2 | Portfolio page alignment with approved case studies and live demos |
+| `fd3fed4` | E1 | Topic-specific WhatsApp CTAs, floating mobile trigger, and no-tel audit |

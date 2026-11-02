@@ -11,7 +11,7 @@ export default function ContactIntake() {
     name: '',
     email: '',
     company: '',
-    selectedCapability: 'Brand',
+    selectedCapability: 'Website Design & Development',
     details: '',
     budget: '',
     timeline: '',
@@ -25,13 +25,12 @@ export default function ContactIntake() {
   });
 
   const capabilityOptions = [
-    'Brand',
-    'Website / Digital Experience',
+    'Website Design & Development',
+    'Search Engine Optimization (SEO)',
+    'Social Media Marketing',
+    'Brand Strategy & Identity',
     'E-Commerce',
-    'Digital Marketing',
-    'SEO & Visibility',
     'AI & Automation',
-    'Analytics',
     'Something Else',
   ];
 
@@ -76,12 +75,19 @@ export default function ContactIntake() {
       const result = await response.json();
 
       if (result.success) {
+        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+          window.gtag('event', 'generate_lead', {
+            event_category: 'Contact',
+            event_label: formData.selectedCapability,
+            value: 1,
+          });
+        }
         setStatus({ submitting: false, submitted: true, error: null });
         setFormData({
           name: '',
           email: '',
           company: '',
-          selectedCapability: 'Brand',
+          selectedCapability: 'Website Design & Development',
           details: '',
           budget: '',
           timeline: '',
