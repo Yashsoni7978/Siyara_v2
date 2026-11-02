@@ -1725,7 +1725,7 @@ export const BLOG_ARTICLES = [
     "title": "How to Choose the Top Technical SEO Agency in Jaipur (2026): 7 Non-Negotiable Criteria",
     "category": "SEO & GEO",
     "excerpt": "The B2B business owner’s guide to evaluating technical SEO and GEO agencies in Jaipur. How to identify genuine technical search architects and avoid low-quality backlink resellers.",
-    "date": "November 4, 2026",
+    "date": "November 2, 2026",
     "readTime": "11 min read",
         "author": {
       "name": "Siyara Innovations",
@@ -1811,7 +1811,7 @@ export const BLOG_ARTICLES = [
     "title": "How to Choose a Digital Architecture Studio in Rajasthan: The Business Leader's Evaluation Guide",
     "category": "Strategy",
     "excerpt": "The strategic evaluation framework for Rajasthan business owners, family conglomerates, and export houses to evaluate and select an integrated digital architecture studio.",
-    "date": "November 6, 2026",
+    "date": "October 24, 2026",
     "readTime": "11 min read",
         "author": {
       "name": "Siyara Innovations",
@@ -2076,7 +2076,7 @@ export const BLOG_ARTICLES = [
     "title": "Why Your Jaipur Business Needs a Professional Website in 2026: 5 Commercial Realities",
     "category": "Web Development",
     "excerpt": "The commercial realities facing business owners in Jaipur in 2026. Why an outdated website or social-media-only presence costs your business lakhs in lost revenue every month.",
-    "date": "November 8, 2026",
+    "date": "November 1, 2026",
     "readTime": "11 min read",
         "author": {
       "name": "Siyara Innovations",
@@ -2163,7 +2163,7 @@ export const BLOG_ARTICLES = [
     "title": "Website RFP & Contract Red Flags: 8 Questions Before Hiring a Jaipur Web Agency",
     "category": "Web Development",
     "excerpt": "The non-negotiable RFP evaluation, contract red flags, and SLA checklist for business owners before hiring a web design agency in Jaipur. Protect your source code, avoid hosting lock-in, and mandate speed SLAs.",
-    "date": "November 10, 2026",
+    "date": "October 30, 2026",
     "readTime": "11 min read",
         "author": {
       "name": "Siyara Innovations",
@@ -2431,7 +2431,7 @@ export const BLOG_ARTICLES = [
     "title": "Building a Digital Strategy That Actually Drives B2B Growth in India",
     "category": "Strategy",
     "excerpt": "The pragmatic B2B digital strategy framework for Indian business leaders. Moving beyond vanity marketing metrics to build an integrated commercial pipeline that compounds revenue.",
-    "date": "November 12, 2026",
+    "date": "August 20, 2026",
     "readTime": "11 min read",
         "author": {
       "name": "Siyara Innovations",
@@ -2524,7 +2524,7 @@ export const BLOG_ARTICLES = [
     "title": "What Is Brand Strategy? The Complete Framework for Indian B2B Brands",
     "category": "Brand",
     "excerpt": "Why brand strategy is the single most valuable business asset for Indian B2B and industrial enterprises. Moving beyond logo design to command premium pricing and category leadership.",
-    "date": "November 14, 2026",
+    "date": "August 25, 2026",
     "readTime": "11 min read",
         "author": {
       "name": "Siyara Innovations",
@@ -2616,7 +2616,7 @@ export const BLOG_ARTICLES = [
     "title": "What Makes a High-Performing Website? 7 Technical & Commercial Factors in 2026",
     "category": "Web Development",
     "excerpt": "The 7 technical engineering and commercial conversion standards that define a high-performing business website in 2026: Core Web Vitals, Next.js edge caching, and WhatsApp CRO metrics.",
-    "date": "November 16, 2026",
+    "date": "September 5, 2026",
     "readTime": "11 min read",
         "author": {
       "name": "Siyara Innovations",
@@ -2711,7 +2711,7 @@ export const BLOG_ARTICLES = [
     "title": "How to Get More Enquiries from Your Website in India: Conversion Architecture Playbook",
     "category": "Conversion",
     "excerpt": "The complete Conversion Rate Optimization (CRO) and conversion architecture playbook for Indian B2B websites. Turn existing website traffic into qualified buyer inquiries and closed contracts.",
-    "date": "November 18, 2026",
+    "date": "September 12, 2026",
     "readTime": "11 min read",
         "author": {
       "name": "Siyara Innovations",

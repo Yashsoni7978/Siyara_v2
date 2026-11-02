@@ -101,6 +101,11 @@ export default async function sitemap() {
       articleDate = currentDate;
     }
 
+    if (articleDate > currentDate) {
+      articleDate = currentDate;
+    }
+
+
     return {
       url: `${baseUrl}/insights/${article.slug}`,
       lastModified: articleDate,

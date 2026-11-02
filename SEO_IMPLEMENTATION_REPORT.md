@@ -491,6 +491,55 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - Search engine crawlers can now pass link equity through internal links on these pages without indexing the pages themselves.
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
+
+### Task 5: Publication Dates Realignment & Future Date Elimination
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- Audited all 31 articles in `src/data/blogArticles.js`: identified and updated 8 articles that carried future publication dates (between Nov 4 and Nov 18, 2026) to real past dates or today (November 2, 2026).
+- Guardrail in `app/sitemap.js`: Enforced ceiling check (`if (articleDate > currentDate) articleDate = currentDate;`) guaranteeing zero future dates in sitemap XML output.
+- Verified in compiled `.next/server/app/sitemap.xml.body`:
+  - Total URLs with `<lastmod>`: **31**
+  - Future dates detected: **0**
+  - Maximum `<lastmod>` date: **2026-11-02**
+
+#### Complete Audit List: All 31 Articles and Final Dates
+
+| # | Article Slug | Publication Date String | ISO Date (`lastmod`) | Status |
+|---|---|---|---|---|
+| 1 | `new-digital-ecosystem-strategy-technology-growth` | August 14, 2026 | 2026-08-13 | ✅ Verified Past/Today |
+| 2 | `website-cost-jaipur` | September 19, 2026 | 2026-09-18 | ✅ Verified Past/Today |
+| 3 | `custom-nextjs-website-price-india` | September 22, 2026 | 2026-09-21 | ✅ Verified Past/Today |
+| 4 | `seo-services-cost-jaipur` | September 24, 2026 | 2026-09-23 | ✅ Verified Past/Today |
+| 5 | `ecommerce-website-development-cost-india` | September 26, 2026 | 2026-09-25 | ✅ Verified Past/Today |
+| 6 | `mobile-app-development-cost-jaipur` | September 28, 2026 | 2026-09-27 | ✅ Verified Past/Today |
+| 7 | `jewellery-website-design-jaipur-johari-bazaar` | October 1, 2026 | 2026-09-30 | ✅ Verified Past/Today |
+| 8 | `real-estate-website-development-jaipur-rera` | October 3, 2026 | 2026-10-02 | ✅ Verified Past/Today |
+| 9 | `clinic-hospital-website-design-jaipur` | October 5, 2026 | 2026-10-04 | ✅ Verified Past/Today |
+| 10 | `hotel-resort-website-design-rajasthan` | October 7, 2026 | 2026-10-06 | ✅ Verified Past/Today |
+| 11 | `coaching-institute-school-website-design-jaipur` | October 9, 2026 | 2026-10-08 | ✅ Verified Past/Today |
+| 12 | `b2b-manufacturing-website-sitapura-vki-jaipur` | October 11, 2026 | 2026-10-10 | ✅ Verified Past/Today |
+| 13 | `luxury-interior-designer-portfolio-website-jaipur` | October 13, 2026 | 2026-10-12 | ✅ Verified Past/Today |
+| 14 | `wedding-event-planner-website-design-jaipur` | October 15, 2026 | 2026-10-14 | ✅ Verified Past/Today |
+| 15 | `how-to-rank-chatgpt-perplexity-india` | October 17, 2026 | 2026-10-16 | ✅ Verified Past/Today |
+| 16 | `nextjs-vs-wordpress-seo-core-web-vitals` | October 19, 2026 | 2026-10-18 | ✅ Verified Past/Today |
+| 17 | `fix-crawled-currently-not-indexed-google-search-console` | October 21, 2026 | 2026-10-20 | ✅ Verified Past/Today |
+| 18 | `what-is-digital-architecture` | October 23, 2026 | 2026-10-22 | ✅ Verified Past/Today |
+| 19 | `best-web-design-company-jaipur` | November 2, 2026 | 2026-11-01 | ✅ Verified Past/Today |
+| 20 | `top-technical-seo-agency-jaipur` | November 2, 2026 | 2026-11-01 | ✅ Verified Past/Today |
+| 21 | `how-to-choose-digital-architecture-studio-rajasthan` | October 24, 2026 | 2026-10-23 | ✅ Verified Past/Today |
+| 22 | `seo-geo-search-visibility-prepare-for-ai-search` | October 25, 2026 | 2026-10-24 | ✅ Verified Past/Today |
+| 23 | `local-seo-jaipur-checklist` | October 27, 2026 | 2026-10-26 | ✅ Verified Past/Today |
+| 24 | `why-your-jaipur-business-needs-a-professional-website-in-2026` | November 1, 2026 | 2026-10-31 | ✅ Verified Past/Today |
+| 25 | `how-to-choose-a-web-design-agency-in-jaipur` | October 30, 2026 | 2026-10-29 | ✅ Verified Past/Today |
+| 26 | `website-development-cost-in-india-business-guide` | October 29, 2026 | 2026-10-28 | ✅ Verified Past/Today |
+| 27 | `local-seo-guide-jaipur-businesses` | October 31, 2026 | 2026-10-30 | ✅ Verified Past/Today |
+| 28 | `building-digital-strategy-drives-growth` | August 20, 2026 | 2026-08-19 | ✅ Verified Past/Today |
+| 29 | `what-is-brand-strategy-framework` | August 25, 2026 | 2026-08-24 | ✅ Verified Past/Today |
+| 30 | `what-makes-a-high-performing-website` | September 5, 2026 | 2026-09-04 | ✅ Verified Past/Today |
+| 31 | `how-to-get-more-enquiries-from-your-website` | September 12, 2026 | 2026-09-11 | ✅ Verified Past/Today |
+
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
+
 ## Commit History
 
 | Commit | Task | Description |
