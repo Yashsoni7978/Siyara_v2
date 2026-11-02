@@ -378,7 +378,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 ## Phase G: Founder Directives & Rigorous Refinements (Tasks 1–12)
 
 ### Task 1: Case Studies Lockdown & Repo Fact Audit
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `6158fe4`
 **Evidence:**
 - Set `approved: false` on ALL entries in `src/data/caseStudies.js` (`shri-property`, `dr-rajeshwari-sharma`, `studio-mitti`, `ember-ivory-events`, `aura-wellness-clinic`).
 - Route & template preservation: `app/work/[slug]/page.jsx` remains fully functional; `generateStaticParams()` returns `[]`, pre-rendering 0 case study pages. Any direct request cleanly returns 404 (`notFound()`).
@@ -402,7 +402,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 
 ### Task 2: Stubs Elimination & Real Delivered Projects Enforcement
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `10899b1`
 **Evidence:**
 - Cleaned `src/data/projectsData.js`: Removed all 68 `COMING_SOON` stubs and placeholder entries. `projectsData` now exports strictly the **16 verified delivered projects** that feature live demonstration URLs.
 - Zero stubs rendered anywhere:
@@ -422,7 +422,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 
 ### Task 3: Metadata Lengths Strict Compliance (Title <= 60 chars, Description 140–160 chars)
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `02b482c`  
 **Evidence:**
 - Sitewide audit executed across all 31 indexable canonical URLs.
 - Fixed 6 title tags exceeding 60 characters (accounting for Next.js layout title template ` | Siyara Innovations` and HTML entities).
@@ -469,7 +469,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 
 ### Task 4: Robots Directives Normalization (index: false, follow: true)
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `5b05b46`
 **Evidence:**
 - Audited all noindexed templates across `app/` and updated robots metadata configuration from `follow: false` to `follow: true` (`noindex, follow`):
   - 5 non-core industries: `app/industries/ecommerce/page.jsx`, `app/industries/education/page.jsx`, `app/industries/hospitality/page.jsx`, `app/industries/jewellery-luxury/page.jsx`, `app/industries/manufacturing/page.jsx`.
@@ -493,7 +493,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 
 ### Task 5: Publication Dates Realignment & Future Date Elimination
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `be969e0`
 **Evidence:**
 - Audited all 31 articles in `src/data/blogArticles.js`: identified and updated 8 articles that carried future publication dates (between Nov 4 and Nov 18, 2026) to real past dates or today (November 2, 2026).
 - Guardrail in `app/sitemap.js`: Enforced ceiling check (`if (articleDate > currentDate) articleDate = currentDate;`) guaranteeing zero future dates in sitemap XML output.
@@ -542,7 +542,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 
 ### Task 6: Claims & Rupee Audit on All Indexable Pages
-**Status:** ✅ COMPLETE
+**Status:** ✅ COMPLETE — Commit `991cdd6`
 **Evidence:**
 - Comprehensive audit executed across all 31 indexable canonical URLs and all data stores (`src/data/blogArticles.js`, `app/services/[slug]/page.jsx`, `app/industries/**/*.jsx`).
 - **Rupee & Pricing Elimination:**
@@ -563,7 +563,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 
 ### Task 7: Jargon Counts & Reduction (Zero Digital Architecture, Ecosystem, Conversion Architecture)
-**Status:** ✅ COMPLETE
+**Status:** ✅ COMPLETE — Commit `2707223`
 **Evidence:**
 - Conducted full-corpus audit across all 31 indexable canonical HTML pages for the 5 target jargon terms.
 - **Enforcement Rules Executed:**
@@ -613,7 +613,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 
 ### Task 8: Text Similarity Audit & Deduplication
-**Status:** ✅ COMPLETE
+**Status:** ✅ COMPLETE — Commit `93602b4`
 **Evidence:**
 - Extracted and normalized visible body text (excluding global header, navigation, footer, scripts, and styling) across the 4 core service pages and the 4 core industry pages.
 - Evaluated pairwise similarity using:
@@ -646,7 +646,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 
 ### Task 9: Evidence — Internal Link Map, Lighthouse Assessment & Orphan Audit
-**Status:** ✅ COMPLETE
+**Status:** ✅ COMPLETE — Commit `86319d5`
 **Evidence:**
 - Extracted all internal `<a href="...">` links across all 69 prerendered HTML pages (2,312 total internal link instances recorded in `scratch/full_link_map.json`).
 - **Orphan Pages Audit:**
@@ -676,7 +676,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 
 ### Task 10: Contact Form Automated Code-Level Test & Vercel Environment Variables
-**Status:** ✅ COMPLETE
+**Status:** ✅ COMPLETE — Commit `b062029`
 **Evidence:**
 - Built and executed automated regression test suite (`scratch/test_contact_api.cjs`) verifying all serverless endpoints, validation bounds, and provider handling in `app/api/contact/route.js`.
 - **Test Suite Results (7/7 Passed — 100%):**
@@ -699,7 +699,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 
 ### Task 11: Post-Build Grep Audit Verification
-**Status:** ✅ COMPLETE
+**Status:** ✅ COMPLETE — Commit `957bd69`
 **Evidence:**
 - Executed comprehensive regex grep sweeps across all 69 prerendered production HTML pages in `.next/server/app/`.
 
@@ -720,6 +720,27 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `href="/blog"` (Legacy Blog Links) | All 69 Compiled URLs | **0** | ✅ PASS — All links point to canonical `/insights` publication routes. |
 
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
+
+### Task 12: Finalization, Verification & Remote Branch Deployment
+**Status:** ✅ COMPLETE — Commit `3e838c9`
+**Evidence:**
+- Fully updated and validated the entire Commit History covering baseline, Phase A–F, and Phase G (Tasks 1–12).
+- Verified production build clean compilation: 79/79 static pages prerendered with 0 errors (`node_modules\\.bin\\next.cmd build`).
+- Git branch `seo-overhaul` pushed to remote repository (`origin/seo-overhaul`) for automated Vercel preview deployment.
+- Branch safety strictly preserved: `main` branch remains untouched and pristine; direct production deployment was not triggered.
+- Full compliance with all founder ground truth directives:
+  - 0 founder/individual names across all 69 rendered HTML files.
+  - 0 rupee pricing figures on all 31 canonical indexable pages.
+  - 0 unverified claims, guarantees, or superlative badges.
+  - 0 telephone (`tel:`) links sitewide; WhatsApp click-to-chat + email intake exclusively active.
+  - 0 dead anchors (`href="#"`) and 0 legacy `/blog` references.
+  - All 31 canonical indexable pages compliant with strict title (<= 60 chars) and meta description (140–160 chars) bounds.
+  - All 16 visible portfolio showcases represent verified delivered projects with active live demo URLs.
+  - Dynamic `/work/[slug]` case study detail route returns 404 cleanly until founder-verified metrics are supplied.
+- **Pending Non-Technical Owner Actions (Outside Code Scope):**
+  1. Founder review & verification of factual client metrics for the 5 case studies in `src/data/caseStudies.js` before setting `approved: true`.
+  2. Supplying Google Search Console verification HTML file or DNS TXT token to `public/` when ready to activate search monitoring.
+  3. Configuring production Vercel environment variables (`RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `CONTACT_NOTIFICATION_EMAIL`, `CONTACT_WEBHOOK_URL`) for direct transactional email delivery from the contact form.
 
 ## Commit History
 
@@ -753,3 +774,15 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `cf22f72` | F2 | Crawl and audit verification of canonicals, H1s, titles, and noindex flags |
 | `f8f18eb` | F3 | Finalize SEO implementation report with complete audit evidence |
 | `b921ef4` | F4 | Document remote push and Vercel preview deployment |
+| `6158fe4` | Task 1 | Set approved:false on all case studies, remove from sitemap/work, document fact provenance |
+| `10899b1` | Task 2 | Remove stubs, enforce 16 delivered projects with live demo links on /work |
+| `02b482c` | Task 3 | Enforce strict title <= 60 chars and description 140-160 chars on all indexable pages |
+| `5b05b46` | Task 4 | Set index:false, follow:true on all noindexed pages |
+| `be969e0` | Task 5 | Eliminate future article dates and cap sitemap lastModified to today |
+| `991cdd6` | Task 6 | Claims and pricing audit - remove unsourced stats, self-claims, and rupee figures on indexable pages |
+| `2707223` | Task 7 | Jargon reduction - eliminate digital architecture, ecosystem, and conversion architecture, restrict GEO and Next.js |
+| `93602b4` | Task 8 | Text similarity audit and deduplication matrix - verify under 30% pairwise similarity across services and industries |
+| `86319d5` | Task 9 | Internal link map, orphan audit, and mobile bundle performance evidence |
+| `b062029` | Task 10 | Contact form automated test suite and Vercel environment variables specification |
+| `957bd69` | Task 11 | Post-build grep verification - confirm zero personal names, rupees, dead anchors, tel links, or blog references |
+| `3e838c9` | Task 12 | Finalize SEO implementation report, verify build, and push seo-overhaul branch |
