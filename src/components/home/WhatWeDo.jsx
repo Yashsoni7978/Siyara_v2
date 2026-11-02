@@ -13,7 +13,7 @@ export default function WhatWeDo() {
       id: '01',
       title: 'BRAND STRATEGY & IDENTITY',
       subtitle: 'Positioning, naming, visual identity, messaging',
-      href: '/services/brand-strategy',
+      href: '/services/branding',
       icon: Edit3,
     },
     {
@@ -27,7 +27,7 @@ export default function WhatWeDo() {
       id: '03',
       title: 'SEO & GEO OPTIMIZATION',
       subtitle: 'Search visibility across Google and AI answer engines',
-      href: '/services/seo-geo',
+      href: '/services/seo-services',
       icon: Search,
     },
     {

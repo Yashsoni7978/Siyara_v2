@@ -51,18 +51,13 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/industries',
-        destination: '/services',
-        permanent: true,
-      },
-      {
         source: '/industries/fitness',
-        destination: '/services',
+        destination: '/industries',
         permanent: true,
       },
       {
         source: '/industries/hospitality',
-        destination: '/services',
+        destination: '/industries',
         permanent: true,
       },
       {
@@ -73,6 +68,44 @@ const nextConfig = {
       {
         source: '/services/ai-agents',
         destination: '/services/ai-automation',
+        permanent: true,
+      },
+      // ==========================================
+      // SEO Overhaul — 301 Redirects (B2)
+      // ==========================================
+      {
+        source: '/digital-architecture-studio-jaipur',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/nextjs-web-development-jaipur',
+        destination: '/services/web-design-development',
+        permanent: true,
+      },
+      {
+        source: '/geo-agency-india',
+        destination: '/services/seo-services',
+        permanent: true,
+      },
+      {
+        source: '/services/web-development',
+        destination: '/services/web-design-development',
+        permanent: true,
+      },
+      {
+        source: '/services/seo-geo',
+        destination: '/services/seo-services',
+        permanent: true,
+      },
+      {
+        source: '/services/brand-strategy',
+        destination: '/services/branding',
+        permanent: true,
+      },
+      {
+        source: '/insights/best-web-design-company-jaipur',
+        destination: '/insights/how-to-choose-a-web-design-agency-in-jaipur',
         permanent: true,
       },
       // ==========================================

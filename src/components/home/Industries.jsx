@@ -45,7 +45,7 @@ export default function Industries() {
     {
       id: '05',
       name: 'HOSPITALITY & RESORTS',
-      href: '/industries/hospitality',
+      href: '/industries/healthcare',
       description: 'Direct booking engines, destination wedding showcases, and local tourism SEO for boutique heritage hotels.',
       image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80',
       tag: 'Hotels & Heritage Havelis',

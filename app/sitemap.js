@@ -24,9 +24,6 @@ export default async function sitemap() {
 
   // 2. High-Intent Commercial Target Landers
   const commercialRoutes = [
-    '/digital-architecture-studio-jaipur',
-    '/nextjs-web-development-jaipur',
-    '/geo-agency-india',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: currentDate,
@@ -48,7 +45,6 @@ export default async function sitemap() {
     '/industries/real-estate',
     '/industries/healthcare',
     '/industries/jewellery-luxury',
-    '/industries/hospitality',
     '/industries/education',
     '/industries/ecommerce',
     '/industries/manufacturing',

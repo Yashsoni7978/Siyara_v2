@@ -79,7 +79,7 @@
 - **Build:** 75/75 static pages, exit code 0.
 
 ### Task A7: Canonical URL Audit & Fixes
-**Status:** ✅ COMPLETE — No code changes required  
+**Status:** ✅ COMPLETE — Commit `a8b7553`  
 **Evidence:**
 All pages verified to have correct `alternates.canonical` in their Next.js metadata exports:
 - `/` — `app/layout.jsx:32` — `https://www.siyaradigitals.com`
@@ -99,22 +99,51 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 ## Phase B: Structure and Crawlability
 
 ### Task B1: Crawlable Anchor Links
-**Status:** 🔄 IN PROGRESS
+**Status:** ✅ COMPLETE — Commit `a2270a9`  
+**Evidence:**
+- `src/components/blog/ArticleCard.jsx`: Replaced `onClick` handling with Next.js `<Link href={`/insights/${article.slug}`}>` wrapping the card so search engine crawlers discover clean HTML `<a href="...">` links.
+- `src/components/blog/FeaturedArticle.jsx`: Replaced `onClick` with `<Link href={`/insights/${article.slug}`}>`.
+- `app/not-found.jsx`: Updated legacy `/blog` link to `/insights`.
+- `app/blog/BlogClient.jsx`: Updated programmatic routing to `/insights/${article.slug}` instead of `/blog/${article.slug}`.
+- `src/views/Blog.jsx`: Added `onSelectArticle` prop forwarding support.
+- `src/components/blog/BlogPost.jsx`: Replaced "View All Articles" `<button onClick={onBack}>` with `<Link href="/insights">`.
+- `src/components/home/SelectedWork.jsx`: Replaced dead `#project-${currentProject.id}` hash anchor with `<Link href="/work">`.
+- **Build:** 75/75 static pages compiled successfully (exit code 0).
 
 ### Task B2: URL Redirection & 301 Normalization
-**Status:** 🔄 IN PROGRESS
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- `next.config.js`: Added 9 permanent 301 redirects:
+  - `/digital-architecture-studio-jaipur` → `/`
+  - `/nextjs-web-development-jaipur` → `/services/web-design-development`
+  - `/geo-agency-india` → `/services/seo-services`
+  - `/services/web-development` → `/services/web-design-development`
+  - `/services/seo-geo` → `/services/seo-services`
+  - `/services/brand-strategy` → `/services/branding`
+  - `/industries/hospitality` → `/industries`
+  - `/industries/fitness` → `/industries`
+  - `/insights/best-web-design-company-jaipur` → `/insights/how-to-choose-a-web-design-agency-in-jaipur`
+- Removed legacy `/industries → /services` redirect so `/industries` hub can resolve directly.
+- Updated all internal links pointing to redirected targets:
+  - `src/data/blogArticles.js`: replaced all `/services/web-development`, `/services/seo-geo`, `/services/brand-strategy`, and `/insights/best-web-design-company-jaipur` occurrences.
+  - `src/components/home/WhatWeDo.jsx`: updated `/services/brand-strategy` → `/services/branding`, `/services/seo-geo` → `/services/seo-services`.
+  - `src/components/services/ServiceIndex.jsx`: updated `/services/brand-strategy` → `/services/branding`, `/services/seo-geo` → `/services/seo-services`.
+  - `src/components/home/Footer.jsx`: updated links to `/services/branding`, `/services/seo-services`, and `/industries/healthcare`.
+  - `app/services/page.jsx`: updated links to `/services/branding`, `/services/seo-services`.
+  - `app/sitemap.js`: removed `/digital-architecture-studio-jaipur`, `/nextjs-web-development-jaipur`, `/geo-agency-india`, and `/industries/hospitality`.
+- **Build:** 75/75 static pages compiled successfully (exit code 0).
 
 ### Task B3: New Core Service and Industry Hub Pages
 **Status:** 🔄 IN PROGRESS
 
 ### Task B4: Indexability Control (noindex/nofollow)
-**Status:** 🔄 IN PROGRESS
+**Status:** 🔜 PENDING
 
 ### Task B5: Navigation & Footer Update
-**Status:** 🔄 IN PROGRESS
+**Status:** 🔜 PENDING
 
 ### Task B6: Sitemap & robots.txt
-**Status:** 🔄 IN PROGRESS
+**Status:** 🔜 PENDING
 
 ---
 
@@ -143,3 +172,5 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `0ea3ce1` | A4 | Replace concept/prototype/demonstration with design showcase |
 | `7454229` | A5 | Remove fabricated view counts, pioneering/100-100 self-claims |
 | `3b0312e` | A6 | Remove all rupee price figures from service pages |
+| `a8b7553` | A7 | Canonical audit confirmed correct on all pages, no changes required |
+| `a2270a9` | B1 | Replace onClick nav with Link href, fix legacy /blog links, fix dead anchors |

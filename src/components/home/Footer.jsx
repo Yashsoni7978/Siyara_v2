@@ -6,8 +6,8 @@ import { siteConfig } from '@/data/siteConfig';
 export default function Footer() {
   const servicesLinks = [
     { name: 'Web Design & Development', href: '/services/web-design-development' },
-    { name: 'Branding & Identity', href: '/services/brand-strategy' },
-    { name: 'SEO & GEO Optimization', href: '/services/seo-geo' },
+    { name: 'Branding & Identity', href: '/services/branding' },
+    { name: 'SEO & GEO Optimization', href: '/services/seo-services' },
     { name: 'Performance Marketing', href: '/services/performance-marketing' },
     { name: 'AI & Business Automation', href: '/services/ai-automation' },
     { name: 'Digital Growth Systems', href: '/services/growth-optimization' },
@@ -18,7 +18,7 @@ export default function Footer() {
     { name: 'Real Estate Developers', href: '/industries/real-estate' },
     { name: 'Jewellery & Luxury', href: '/industries/jewellery-luxury' },
     { name: 'Interior Designers', href: '/industries/interior-design' },
-    { name: 'Boutique Hotels & Resorts', href: '/industries/hospitality' },
+    { name: 'Boutique Hotels & Resorts', href: '/industries/healthcare' },
     { name: 'Event Management', href: '/industries/event-management' },
     { name: 'E-Commerce & Retail', href: '/industries/ecommerce' },
   ];

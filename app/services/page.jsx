@@ -105,13 +105,13 @@ export default function ServicesPage() {
               '@type': 'ListItem',
               position: 2,
               name: 'Generative Engine Optimization (GEO) & Technical SEO',
-              url: 'https://www.siyaradigitals.com/services/seo-geo',
+              url: 'https://www.siyaradigitals.com/services/seo-services',
             },
             {
               '@type': 'ListItem',
               position: 3,
               name: 'Brand Strategy & Visual Identity Architecture',
-              url: 'https://www.siyaradigitals.com/services/brand-strategy',
+              url: 'https://www.siyaradigitals.com/services/branding',
             },
             {
               '@type': 'ListItem',

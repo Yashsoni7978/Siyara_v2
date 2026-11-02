@@ -26,7 +26,7 @@ export default function ServiceIndex({ onNavigate }) {
       tagline: 'Brand positioning, market research, business strategy and digital direction.',
       description: 'Brand positioning, market research, and a clear growth roadmap for your business in the Jaipur market.',
       icon: Compass,
-      slug: '/services/brand-strategy',
+      slug: '/services/branding',
       subServices: [
         'Brand Strategy',
         'Market Research',
@@ -71,7 +71,7 @@ export default function ServiceIndex({ onNavigate }) {
       tagline: 'SEO, GEO, content discoverability and search visibility.',
       description: 'Organic search domination, generative AI search visibility, and technical SEO infrastructure.',
       icon: Search,
-      slug: '/services/seo-geo',
+      slug: '/services/seo-services',
       subServices: [
         'SEO',
         'GEO / AI Search Visibility',
