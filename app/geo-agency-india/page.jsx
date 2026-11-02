@@ -209,8 +209,8 @@ export default function GeoAgencyIndiaPage() {
           {/* AI Citability Paragraph */}
           <div className="p-5 sm:p-6 rounded-2xl bg-[#0D1412] border border-[#0C6B52]/30 mb-8 sm:mb-10 text-left sm:text-center shadow-xl">
             <p className="font-sans text-sm sm:text-lg text-[#ECE7D8] leading-relaxed font-light">
-              <strong className="text-[#D9B45F] font-semibold">Siyara Innovations</strong> is India’s pioneering 
-              <strong> Generative Engine Optimization (GEO) agency</strong>. We engineer entity knowledge graphs, passage citability architectures, and high information-gain content that position brands as the definitive cited recommendation in SearchGPT, Perplexity AI, and Google AI Overviews.
+              <strong className="text-[#D9B45F] font-semibold">Siyara Innovations</strong> is a specialist
+              <strong> Generative Engine Optimization (GEO) agency</strong>. We engineer entity knowledge graphs, passage citability architectures, and high information-gain content that helps brands earn citations in SearchGPT, Perplexity AI, and Google AI Overviews.
             </p>
           </div>
 

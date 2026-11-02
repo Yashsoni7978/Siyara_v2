@@ -33,8 +33,7 @@ export const FEATURED_ARTICLE = {
   "excerpt": "Traditional digital silos are collapsing. Winning AI-search citations in India requires an integrated ecosystem where strategic positioning, custom Next.js engineering, and Generative Engine Optimization work as a unified machine.",
   "date": "August 14, 2026",
   "readTime": "11 min read",
-  "views": "5.4k views",
-  "author": {
+    "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -128,8 +127,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "What drives website cost in Jaipur from ₹15,000 to ₹3,50,000+? Tier-by-tier breakdown, what a proper quote must include, and how to compare agencies on equal terms.",
     "date": "September 19, 2026",
     "readTime": "10 min read",
-    "views": "5.8k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -221,8 +219,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "Custom Next.js website price in India ranges from ₹1,20,000 for high-performance marketing sites to ₹6,50,000+ for enterprise platforms. Full cost drivers and ROI breakdown.",
     "date": "September 22, 2026",
     "readTime": "10 min read",
-    "views": "4.9k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -309,8 +306,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "SEO services cost in Jaipur ranges from ₹12,000/month to ₹1,20,000+/month. Discover real retainer tiers, technical deliverables, and why ₹5,000 backlink packages hurt your rankings.",
     "date": "September 24, 2026",
     "readTime": "10 min read",
-    "views": "4.6k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -396,8 +392,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "E-commerce website development cost in India ranges from ₹35,000 for Shopify to ₹8,00,000+ for custom headless Next.js. Compare platforms, gateway fees, and hidden costs.",
     "date": "September 26, 2026",
     "readTime": "11 min read",
-    "views": "5.1k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -483,8 +478,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "Mobile app development cost in Jaipur ranges from ₹1,50,000 to ₹12,00,000+. Complete guide comparing Native, React Native, Flutter, and PWA options for business owners.",
     "date": "September 28, 2026",
     "readTime": "10 min read",
-    "views": "4.4k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -569,8 +563,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "How Jaipur jewellery houses in Johari Bazaar and Sitapura Gem & Jewellery SEZ build high-performance B2B wholesale portals and luxury direct-to-consumer websites that convert international buyers.",
     "date": "October 1, 2026",
     "readTime": "11 min read",
-    "views": "5.2k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -655,8 +648,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "How Jaipur property developers and builders engineer high-converting, RERA-compliant project portals along Ajmer Road, Jagatpura, and Vaishali Nagar that capture verified buyer inquiries.",
     "date": "October 3, 2026",
     "readTime": "11 min read",
-    "views": "4.8k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -742,8 +734,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "How private hospitals, multi-specialty clinics, and doctors in Jaipur engineer high-trust medical websites with frictionless WhatsApp appointment booking and local medical SEO.",
     "date": "October 5, 2026",
     "readTime": "11 min read",
-    "views": "4.7k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -834,8 +825,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "How luxury heritage hotels, havelis, and desert resorts across Jaipur, Udaipur, and Jodhpur build direct booking engines that bypass 18-25% OTA commissions.",
     "date": "October 7, 2026",
     "readTime": "11 min read",
-    "views": "4.5k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -926,8 +916,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "How competitive coaching academies (IIT-JEE, NEET, UPSC, RPSC) and private schools in Jaipur engineer high-converting student admission portals, test series, and inquiry funnels.",
     "date": "October 9, 2026",
     "readTime": "11 min read",
-    "views": "4.9k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -1018,8 +1007,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "How industrial manufacturers in Sitapura EPZ, Vishwakarma (VKI), and Mansarovar engineer high-converting B2B export websites with digital RFQ catalogs and international buyer SEO.",
     "date": "October 11, 2026",
     "readTime": "11 min read",
-    "views": "4.6k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -1110,8 +1098,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "How high-end interior architects and luxury design studios in C-Scheme, Civil Lines, and Vaishali Nagar build portfolio platforms that attract high-net-worth residential and commercial commissions.",
     "date": "October 13, 2026",
     "readTime": "11 min read",
-    "views": "4.3k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -1206,8 +1193,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "How luxury wedding planners and event management companies in Jaipur engineer high-converting digital platforms that capture multi-crore royal destination wedding inquiries from NRI and domestic clients.",
     "date": "October 15, 2026",
     "readTime": "11 min read",
-    "views": "4.8k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -1298,8 +1284,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "The complete technical guide for Indian B2B companies to earn citations and brand recommendations in generative AI answer engines like Perplexity, ChatGPT Search, and Google AI Overviews.",
     "date": "October 17, 2026",
     "readTime": "11 min read",
-    "views": "5.6k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -1386,8 +1371,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "Comprehensive benchmark analysis comparing Next.js 15 App Router against WordPress 6.x for Indian B2B websites. Core Web Vitals, server response times, and organic search impact.",
     "date": "October 19, 2026",
     "readTime": "11 min read",
-    "views": "5.1k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -1481,8 +1465,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "Step-by-step technical remediation playbook to diagnose and resolve \"Crawled - currently not indexed\" status in Google Search Console for business websites across India.",
     "date": "October 21, 2026",
     "readTime": "11 min read",
-    "views": "5.3k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -1570,8 +1553,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "Why high-growth Indian enterprises are abandoning fragmented agencies in favor of unified digital architecture: the 8-discipline engineering model powering modern B2B growth.",
     "date": "October 23, 2026",
     "readTime": "11 min read",
-    "views": "5.0k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -1657,8 +1639,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "How to evaluate and choose the best web design company in Jaipur in 2026. Comparing modern Next.js engineering studios against legacy WordPress template shops across speed, security, and conversion.",
     "date": "November 2, 2026",
     "readTime": "11 min read",
-    "views": "5.5k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -1746,8 +1727,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "The B2B business owner’s guide to evaluating technical SEO and GEO agencies in Jaipur. How to identify genuine technical search architects and avoid low-quality backlink resellers.",
     "date": "November 4, 2026",
     "readTime": "11 min read",
-    "views": "4.7k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -1833,8 +1813,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "The strategic evaluation framework for Rajasthan business owners, family conglomerates, and export houses to evaluate and select an integrated digital architecture studio.",
     "date": "November 6, 2026",
     "readTime": "11 min read",
-    "views": "4.6k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -1921,8 +1900,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "The comprehensive technical comparison between traditional keyword-based SEO and modern Generative Engine Optimization (GEO). Complete migration guide for Indian B2B companies.",
     "date": "October 25, 2026",
     "readTime": "11 min read",
-    "views": "5.5k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -2012,8 +1990,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "The definitive single-location Google Business Profile (GBP) and Google Maps 3-Pack optimization checklist for retail showrooms, medical clinics, and professional offices across Jaipur.",
     "date": "October 27, 2026",
     "readTime": "11 min read",
-    "views": "5.2k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -2101,8 +2078,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "The commercial realities facing business owners in Jaipur in 2026. Why an outdated website or social-media-only presence costs your business lakhs in lost revenue every month.",
     "date": "November 8, 2026",
     "readTime": "11 min read",
-    "views": "5.2k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -2189,8 +2165,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "The non-negotiable RFP evaluation, contract red flags, and SLA checklist for business owners before hiring a web design agency in Jaipur. Protect your source code, avoid hosting lock-in, and mandate speed SLAs.",
     "date": "November 10, 2026",
     "readTime": "11 min read",
-    "views": "5.6k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -2277,8 +2252,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "The complete 2026 guide to website development costs in India. Detailed pricing tables by tech stack, city tier comparisons, recurring expenses, and ROI frameworks.",
     "date": "October 29, 2026",
     "readTime": "11 min read",
-    "views": "5.4k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -2367,8 +2341,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "How multi-branch brands, retail chains, and enterprise service firms in Jaipur and Rajasthan engineer hyper-local neighborhood SEO and multi-location schema architecture to dominate local search corridors.",
     "date": "October 31, 2026",
     "readTime": "11 min read",
-    "views": "5.3k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -2460,8 +2433,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "The pragmatic B2B digital strategy framework for Indian business leaders. Moving beyond vanity marketing metrics to build an integrated commercial pipeline that compounds revenue.",
     "date": "November 12, 2026",
     "readTime": "11 min read",
-    "views": "5.2k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -2554,8 +2526,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "Why brand strategy is the single most valuable business asset for Indian B2B and industrial enterprises. Moving beyond logo design to command premium pricing and category leadership.",
     "date": "November 14, 2026",
     "readTime": "11 min read",
-    "views": "5.1k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -2647,8 +2618,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "The 7 technical engineering and commercial conversion standards that define a high-performing business website in 2026: Core Web Vitals, Next.js edge caching, and WhatsApp CRO metrics.",
     "date": "November 16, 2026",
     "readTime": "11 min read",
-    "views": "5.8k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",
@@ -2743,8 +2713,7 @@ export const BLOG_ARTICLES = [
     "excerpt": "The complete Conversion Rate Optimization (CRO) and conversion architecture playbook for Indian B2B websites. Turn existing website traffic into qualified buyer inquiries and closed contracts.",
     "date": "November 18, 2026",
     "readTime": "11 min read",
-    "views": "5.5k views",
-    "author": {
+        "author": {
       "name": "Siyara Innovations",
       "role": "Editorial Team",
       "avatar": "/logo.webp",

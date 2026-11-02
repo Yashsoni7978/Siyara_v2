@@ -16,7 +16,7 @@ import { BUSINESS_CONFIG } from '../../src/config/business';
 
 export const metadata = {
   title: 'Digital Architecture Studio Jaipur',
-  description: 'Jaipur premier digital architecture studio engineering unified Next.js web applications, local SEO systems, and brand dominance for enterprises.',
+  description: 'A web design and SEO agency in Jaipur engineering unified Next.js web applications, local SEO systems, and brand dominance for enterprises.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/digital-architecture-studio-jaipur',
   },
@@ -161,7 +161,7 @@ export default function DigitalArchitectureStudioJaipurPage() {
           { '@type': 'State', 'name': 'Rajasthan' },
           { '@type': 'Country', 'name': 'India' },
         ],
-        'description': 'Premier digital architecture studio in Jaipur delivering unified Next.js web systems, technical SEO, generative engine optimization, and brand identity systems.',
+        'description': 'Web design and SEO agency in Jaipur delivering unified Next.js web systems, technical SEO, generative engine optimization, and brand identity systems.',
       },
       {
         '@type': 'FAQPage',

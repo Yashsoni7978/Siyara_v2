@@ -17,7 +17,7 @@ import { BUSINESS_CONFIG } from '../../src/config/business';
 
 export const metadata = {
   title: 'Next.js Web Development Jaipur',
-  description: 'Custom Next.js 15 and React web application development in Jaipur. Sub-second load speeds, App Router architecture, and 100/100 Core Web Vitals.',
+  description: 'Custom Next.js 15 and React web application development in Jaipur. Sub-second load speeds, App Router architecture, and optimised Core Web Vitals.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/nextjs-web-development-jaipur',
   },
@@ -54,7 +54,7 @@ const TECH_SPECS = [
   },
   {
     icon: Gauge,
-    title: '100/100 Core Web Vitals Engineering',
+    title: 'Core Web Vitals Engineering',
     desc: 'We engineer front-ends with sub-2.0s Largest Contentful Paint (LCP), zero Cumulative Layout Shift (CLS < 0.02), and instantaneous responsiveness (INP < 80ms).',
     features: ['AVIF & WebP Next-Gen Formats', 'Zero Render-Blocking Scripts', 'Font Subsetting & Swap Preload'],
   },
