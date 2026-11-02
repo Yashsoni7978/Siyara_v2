@@ -177,7 +177,6 @@ export const SERVICES_DATA = {
     pricingTiers: [
       {
         tier: 'Corporate Showcase Website',
-        price: '₹35,000 – ₹75,000',
         idealFor: 'Boutique firms, professional clinics, and regional studios requiring an authoritative visual identity.',
         features: [
           'Bespoke Figma UI/UX design',
@@ -189,7 +188,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'High-Growth Brand Portal',
-        price: '₹75,000 – ₹1,80,000',
         idealFor: 'Expanding B2B enterprises, luxury retailers, and property builders requiring headless CMS and dynamic content.',
         features: [
           'Headless CMS (Sanity / Strapi)',
@@ -201,7 +199,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Flagship Luxury Web Experience',
-        price: '₹1,80,000 – ₹4,50,000+',
         idealFor: 'Heritage jewellery houses, 5-star resorts, and multi-location brands demanding bespoke interactive design.',
         features: [
           'Custom interactive micro-animations',
@@ -315,7 +312,6 @@ export const SERVICES_DATA = {
     pricingTiers: [
       {
         tier: 'Custom Web Application MVP',
-        price: '₹75,000 – ₹1,50,000',
         idealFor: 'Startups and service businesses building custom client portals, booking engines, or internal workflow tools.',
         features: [
           'Full-stack Next.js 15 & React 19',
@@ -327,7 +323,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Enterprise Scaled Platform',
-        price: '₹1,50,000 – ₹3,50,000',
         idealFor: 'Established enterprises requiring multi-tenant SaaS architecture, complex role permissions, and API integrations.',
         features: [
           'Multi-role RBAC security architecture',
@@ -339,7 +334,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Flagship Bespoke System',
-        price: '₹3,50,000 – ₹7,50,000+',
         idealFor: 'High-volume marketplace platforms, logistics operators, and corporate groups demanding custom microservices.',
         features: [
           'Distributed serverless microservices',
@@ -453,7 +447,6 @@ export const SERVICES_DATA = {
     pricingTiers: [
       {
         tier: 'Local GBP & Technical SEO',
-        price: '₹30,000 – ₹55,000/mo',
         idealFor: 'Single-location Jaipur clinics, legal advocates, and retail stores targeting local neighborhood search.',
         features: [
           'Google Business Profile 3-Pack ranking',
@@ -465,7 +458,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Regional Authority & GEO',
-        price: '₹55,000 – ₹1,10,000/mo',
         idealFor: 'Expanding Rajasthan enterprises, real estate builders, and healthcare centers seeking state-wide market dominance.',
         features: [
           'Full Generative Engine Optimization (GEO)',
@@ -477,7 +469,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'National GEO Enterprise',
-        price: '₹1,10,000 – ₹2,50,000+/mo',
         idealFor: 'Industrial manufacturers, gemstone exporters, and luxury hospitality chains competing pan-India and globally.',
         features: [
           'Enterprise multi-country SEO architecture',
@@ -591,7 +582,6 @@ export const SERVICES_DATA = {
     pricingTiers: [
       {
         tier: 'Strategic Positioning Sprint',
-        price: '₹45,000 – ₹85,000',
         idealFor: 'Emerging service companies and medical clinics needing clear market differentiation and commercial messaging.',
         features: [
           'Category positioning & competitor audit',
@@ -603,7 +593,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Complete Brand Architecture',
-        price: '₹85,000 – ₹1,80,000',
         idealFor: 'Established B2B manufacturers, real estate developers, and lifestyle brands preparing for multi-city expansion.',
         features: [
           'Complete Brand Architecture Bible',
@@ -615,7 +604,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Enterprise Luxury Rebrand',
-        price: '₹1,80,000 – ₹3,50,000+',
         idealFor: 'Heritage jewellery houses, luxury resorts, and high-ticket investment firms establishing institutional prestige.',
         features: [
           'Bespoke luxury brand identity & crest',
@@ -668,7 +656,7 @@ export const SERVICES_DATA = {
     deepDive: [
       {
         title: 'Shopify App Subscription Creep vs Headless Decoupling',
-        challenge: 'Standard Shopify stores rely on 15+ third-party apps for basic features like reviews, WhatsApp alerts, and filters, bloating monthly fees by ₹30,000+ while crushing page speed.',
+        challenge: 'Standard Shopify stores rely on 15+ third-party apps for basic features like reviews, WhatsApp alerts, and filters, adding significant monthly overhead while crushing page speed.',
         solution: 'We build native Next.js frontends with custom serverless endpoints, replacing slow third-party apps with ultra-lightweight code and zero recurring app fees.'
       },
       {
@@ -729,7 +717,6 @@ export const SERVICES_DATA = {
     pricingTiers: [
       {
         tier: 'D2C Starter Headless',
-        price: '₹75,000 – ₹1,50,000',
         idealFor: 'Growing boutique brands, luxury jewellery stores, and artisan retailers transitioning to custom e-commerce.',
         features: [
           'Next.js headless storefront build',
@@ -741,7 +728,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Scaled D2C Enterprise',
-        price: '₹1,50,000 – ₹3,20,000',
         idealFor: 'High-volume consumer brands processing 500+ monthly orders requiring instant filtering and custom loyalty funnels.',
         features: [
           'Full MedusaJS or Shopify Storefront build',
@@ -753,7 +739,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Global Multi-Currency Flagship',
-        price: '₹3,20,000 – ₹6,50,000+',
         idealFor: 'International gemstone and textile exporters requiring multi-currency, multi-warehouse, and ERP sync.',
         features: [
           'Global multi-currency geo-pricing engine',
@@ -867,7 +852,6 @@ export const SERVICES_DATA = {
     pricingTiers: [
       {
         tier: 'Progressive Web App (PWA)',
-        price: '₹65,000 – ₹1,40,000',
         idealFor: 'B2B client portals, coaching institutes, and ordering portals wanting instant mobile access without App Store fees.',
         features: [
           'Next.js PWA with service worker offline sync',
@@ -879,7 +863,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Cross-Platform Native App',
-        price: '₹1,40,000 – ₹3,50,000',
         idealFor: 'Consumer startups, healthcare booking apps, and luxury brand portals requiring dedicated iOS and Android presence.',
         features: [
           'Unified React Native iOS and Android build',
@@ -891,7 +874,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Enterprise Mobile Ecosystem',
-        price: '₹3,50,000 – ₹7,50,000+',
         idealFor: 'Logistics fleets, multi-branch clinics, and industrial manufacturers demanding offline database sync and custom backend.',
         features: [
           'Full offline-first database synchronization',
@@ -1005,7 +987,6 @@ export const SERVICES_DATA = {
     pricingTiers: [
       {
         tier: 'Core Product UX Sprint',
-        price: '₹40,000 – ₹80,000',
         idealFor: 'Startups and existing websites needing a focused UI/UX overhaul of key conversion flows and mobile navigation.',
         features: [
           'User journey & funnel friction audit',
@@ -1017,7 +998,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Comprehensive Web App System',
-        price: '₹80,000 – ₹1,70,000',
         idealFor: 'Full-featured web applications, client portals, and corporate digital flagships requiring complete design systems.',
         features: [
           'Full interactive prototype (15-25 screens)',
@@ -1029,7 +1009,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Enterprise Multi-Platform System',
-        price: '₹1,70,000 – ₹3,50,000+',
         idealFor: 'Large enterprises and funded software companies maintaining synchronized web, iOS, and Android product suites.',
         features: [
           'Multi-platform responsive Figma architecture',
@@ -1143,7 +1122,6 @@ export const SERVICES_DATA = {
     pricingTiers: [
       {
         tier: 'Lead Capture & Triage Automation',
-        price: '₹35,000 – ₹70,000',
         idealFor: 'Small businesses and clinics wanting automated instant WhatsApp qualification and calendar scheduling.',
         features: [
           'WhatsApp Business Cloud API bot',
@@ -1155,7 +1133,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Scaled CRM & Workflow Pipeline',
-        price: '₹70,000 – ₹1,60,000',
         idealFor: 'B2B manufacturers, real estate developers, and corporate agencies managing multiple lead generation channels.',
         features: [
           'Bidirectional Zoho/HubSpot CRM sync',
@@ -1167,7 +1144,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Enterprise AI RAG Architecture',
-        price: '₹1,60,000 – ₹3,50,000+',
         idealFor: 'Enterprises requiring private AI assistants trained on proprietary catalogs, legal contracts, or technical SOPs.',
         features: [
           'Private RAG AI agent with vector database',
@@ -1281,7 +1257,6 @@ export const SERVICES_DATA = {
     pricingTiers: [
       {
         tier: 'Foundational Analytics Audit',
-        price: '₹35,000 – ₹60,000',
         idealFor: 'Businesses wanting accurate conversion tracking, server-side GA4 setup, and an objective funnel friction audit.',
         features: [
           'Server-side GA4 & GTM setup',
@@ -1293,7 +1268,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Active CRO Experimentation',
-        price: '₹60,000 – ₹1,40,000/mo',
         idealFor: 'Growing commercial websites and D2C brands generating over 10,000 monthly visitors ready to lift conversion rates.',
         features: [
           'Monthly structured A/B testing sprints',
@@ -1305,7 +1279,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Enterprise Full-Funnel Growth',
-        price: '₹1,40,000 – ₹2,80,000/mo',
         idealFor: 'High-spending advertisers and multi-product enterprises seeking full-funnel CAC reduction and LTV expansion.',
         features: [
           'Full-funnel customer journey optimization',
@@ -1419,7 +1392,6 @@ export const SERVICES_DATA = {
     pricingTiers: [
       {
         tier: 'Core Visual Identity',
-        price: '₹40,000 – ₹75,000',
         idealFor: 'Boutique studios, clinics, and professional consultants requiring an authoritative visual trademark and digital assets.',
         features: [
           'Primary & secondary logo system',
@@ -1431,7 +1403,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Comprehensive Brand Suite',
-        price: '₹75,000 – ₹1,60,000',
         idealFor: 'High-growth consumer brands and commercial firms requiring full physical collateral and digital design token sync.',
         features: [
           'Complete brand identity style manual',
@@ -1443,7 +1414,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Luxury Flagship Overhaul',
-        price: '₹1,60,000 – ₹3,20,000+',
         idealFor: 'Heritage jewellery houses, luxury resorts, and high-ticket architectural studios demanding bespoke creative direction.',
         features: [
           'Bespoke luxury crest & signature mark',
@@ -1557,7 +1527,6 @@ export const SERVICES_DATA = {
     pricingTiers: [
       {
         tier: 'Dual Funnel Architecture',
-        price: '₹35,000 – ₹65,000',
         idealFor: 'Service businesses wanting a frictionless mobile lead capture form synchronized with instant WhatsApp routing.',
         features: [
           'High-converting mobile lead form',
@@ -1569,7 +1538,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Complete CRM Pipeline',
-        price: '₹65,000 – ₹1,50,000',
         idealFor: 'Growing commercial firms requiring bidirectional sync with Zoho, HubSpot, or Salesforce CRM systems.',
         features: [
           'Full CRM API bidirectional integration',
@@ -1581,7 +1549,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Omnichannel Enterprise Engine',
-        price: '₹1,50,000 – ₹3,00,000+',
         idealFor: 'Multi-branch real estate developers, private hospitals, and national B2B brands managing thousands of monthly leads.',
         features: [
           'Multi-channel lead ingestion architecture',
@@ -1695,7 +1662,6 @@ export const SERVICES_DATA = {
     pricingTiers: [
       {
         tier: 'Local Search Lead Generation',
-        price: '₹25,000 – ₹45,000/mo',
         idealFor: 'Single-location clinics, local legal practices, and regional retail showrooms targeting immediate high-intent local searchers.',
         features: [
           'Google Search Ads campaign management',
@@ -1707,7 +1673,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Multi-Channel Commercial Growth',
-        price: '₹45,000 – ₹95,000/mo',
         idealFor: 'High-growth B2B manufacturers, real estate developers, and lifestyle brands scaling qualified inquiries across India.',
         features: [
           'Google Search + Meta (Instagram/FB) Ads',
@@ -1719,7 +1684,6 @@ export const SERVICES_DATA = {
       },
       {
         tier: 'Enterprise Performance Scale',
-        price: '₹95,000 – ₹2,00,000+/mo',
         idealFor: 'National D2C brands, luxury jewellery exporters, and multi-crore enterprises spending ₹5,00,000+ monthly on media.',
         features: [
           'Omnichannel Google, Meta, and LinkedIn Ads',
@@ -2126,7 +2090,6 @@ export default async function ServiceDetailPage({ params }) {
           {(service.pricingTiers || [
             {
               tier: 'Foundational Architecture',
-              price: '₹35,000 – ₹75,000',
               idealFor: 'Single-location clinics, boutique firms, and local showrooms establishing high-trust digital authority.',
               features: [
                 'Custom Next.js static build',
@@ -2138,7 +2101,6 @@ export default async function ServiceDetailPage({ params }) {
             },
             {
               tier: 'Scale & Commercial Enterprise',
-              price: '₹75,000 – ₹1,80,000',
               idealFor: 'High-growth B2B manufacturers, real estate developers, and private hospitals scaling regional inquiries.',
               features: [
                 'Dynamic multi-page architecture',
@@ -2150,7 +2112,6 @@ export default async function ServiceDetailPage({ params }) {
             },
             {
               tier: 'Bespoke Flagship Platform',
-              price: '₹1,80,000 – ₹5,00,000+',
               idealFor: 'Multi-crore jewellery exporters, luxury hotel chains, and national enterprises demanding custom software.',
               features: [
                 'Bespoke full-stack web engineering',
