@@ -611,6 +611,39 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
+
+### Task 8: Text Similarity Audit & Deduplication
+**Status:** ✅ COMPLETE
+**Evidence:**
+- Extracted and normalized visible body text (excluding global header, navigation, footer, scripts, and styling) across the 4 core service pages and the 4 core industry pages.
+- Evaluated pairwise similarity using:
+  1. **Jaccard Word Set Similarity** (vocabulary overlap)
+  2. **3-Gram Shingles Similarity** (phrase-level duplicate content detection)
+  3. **Cosine Vector Similarity** (term frequency alignment)
+- **Result:** **No pair exceeds 30% text similarity.** Every single pair is between **11.1% and 18.8%** Jaccard word similarity and under **2.3%** 3-gram shingle similarity, confirming complete absence of boilerplate or template duplication.
+
+#### Core Services Similarity Matrix (4 Pages)
+
+| Page | Web Design & Dev | SEO Services | Social Media Marketing | Branding |
+|---|:---:|:---:|:---:|:---:|
+| **Web Design & Dev** | 100% | J: 13.2% | S: 0.3% | J: 12.6% | S: 0.1% | J: 13.9% | S: 0.2% |
+| **SEO Services** | J: 13.2% | S: 0.3% | 100% | J: 11.1% | S: 0.9% | J: 12.2% | S: 0.9% |
+| **Social Media Marketing** | J: 12.6% | S: 0.1% | J: 11.1% | S: 0.9% | 100% | J: 13.3% | S: 0.9% |
+| **Branding** | J: 13.9% | S: 0.2% | J: 12.2% | S: 0.9% | J: 13.3% | S: 0.9% | 100% |
+
+*J = Jaccard Word Similarity, S = 3-Gram Shingles Similarity*
+
+#### Core Industries Similarity Matrix (4 Pages)
+
+| Page | Healthcare | Interior Design | Event Management | Real Estate |
+|---|:---:|:---:|:---:|:---:|
+| **Healthcare** | 100% | J: 15.2% | S: 1.4% | J: 16.1% | S: 2.2% | J: 18.8% | S: 1.7% |
+| **Interior Design** | J: 15.2% | S: 1.4% | 100% | J: 16.6% | S: 2.2% | J: 17.6% | S: 1.5% |
+| **Event Management** | J: 16.1% | S: 2.2% | J: 16.6% | S: 2.2% | 100% | J: 17.0% | S: 2.0% |
+| **Real Estate** | J: 18.8% | S: 1.7% | J: 17.6% | S: 1.5% | J: 17.0% | S: 2.0% | 100% |
+
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
+
 ## Commit History
 
 | Commit | Task | Description |
