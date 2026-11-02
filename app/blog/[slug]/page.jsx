@@ -10,7 +10,7 @@ export async function generateStaticParams() {
 }
 
 export const metadata = {
-  robots: 'noindex, nofollow',
+  robots: 'noindex, follow',
 };
 
 export default async function BlogSlugRedirectPage({ params }) {

@@ -18,7 +18,7 @@ import JsonLd, { buildBreadcrumbs, buildServiceSchema, buildFaqSchema } from '..
 export const metadata = {
   robots: {
     index: false,
-    follow: false,
+    follow: true,
   },
   title: 'Education & Institute Web Design Jaipur',
   description: 'Scalable Next.js websites, student admission funnels, and local education SEO for schools, coaching centers, and colleges in Jaipur, Rajasthan.',

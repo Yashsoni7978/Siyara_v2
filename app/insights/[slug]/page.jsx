@@ -73,7 +73,7 @@ export async function generateMetadata({ params }) {
     ...(isNoindex && {
       robots: {
         index: false,
-        follow: false,
+        follow: true,
       },
     }),
     title: formattedTitle,

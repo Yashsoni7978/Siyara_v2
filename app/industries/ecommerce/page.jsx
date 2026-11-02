@@ -19,7 +19,7 @@ import JsonLd, { buildBreadcrumbs, buildServiceSchema, buildFaqSchema } from '..
 export const metadata = {
   robots: {
     index: false,
-    follow: false,
+    follow: true,
   },
   title: 'E-Commerce Website Development Jaipur',
   description: 'Headless Next.js e-commerce development, sub-second checkout speeds, and organic shopping SEO for retail and D2C brands in Jaipur, Rajasthan.',

@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
   if (!study) {
     return {
       title: 'Project Not Found | Siyara Innovations',
-      robots: { index: false, follow: false },
+      robots: { index: false, follow: true },
     };
   }
 

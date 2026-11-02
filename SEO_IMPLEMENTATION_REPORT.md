@@ -467,6 +467,30 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
+
+### Task 4: Robots Directives Normalization (index: false, follow: true)
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- Audited all noindexed templates across `app/` and updated robots metadata configuration from `follow: false` to `follow: true` (`noindex, follow`):
+  - 5 non-core industries: `app/industries/ecommerce/page.jsx`, `app/industries/education/page.jsx`, `app/industries/hospitality/page.jsx`, `app/industries/jewellery-luxury/page.jsx`, `app/industries/manufacturing/page.jsx`.
+  - Secondary services: `app/services/[slug]/page.jsx` (dynamically applies `index: false, follow: true` to non-core services).
+  - Non-core insight articles: `app/insights/[slug]/page.jsx` (dynamically applies `index: false, follow: true` to the 18 noindexed articles).
+  - Draft case studies: `app/work/[slug]/page.jsx` (`index: false, follow: true`).
+  - Legacy redirect pages: `app/blog/page.jsx`, `app/blog/[slug]/page.jsx` (`noindex, follow`).
+  - Custom 404 page: `app/not-found.jsx` (`index: false, follow: true`).
+- Verified in compiled HTML (`.next/server/app/**/*.html`):
+  - `industries/ecommerce.html` -> `noindex, follow`
+  - `industries/education.html` -> `noindex, follow`
+  - `industries/hospitality.html` -> `noindex, follow`
+  - `industries/jewellery-luxury.html` -> `noindex, follow`
+  - `industries/manufacturing.html` -> `noindex, follow`
+  - `services/ecommerce-development.html` -> `noindex, follow`
+  - `services/ai-automation.html` -> `noindex, follow`
+  - `insights/what-is-digital-architecture.html` -> `noindex, follow`
+  - `insights/hotel-resort-website-design-rajasthan.html` -> `noindex, follow`
+- Search engine crawlers can now pass link equity through internal links on these pages without indexing the pages themselves.
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
+
 ## Commit History
 
 | Commit | Task | Description |

@@ -19,7 +19,7 @@ import JsonLd, { buildBreadcrumbs, buildServiceSchema, buildFaqSchema } from '..
 export const metadata = {
   robots: {
     index: false,
-    follow: false,
+    follow: true,
   },
   title: 'Luxury Jewellery Web Design Jaipur',
   description: 'Bespoke Next.js websites, high-trust digital flagships, and local luxury SEO for jewellery brands and gemstone exporters in Jaipur, Rajasthan.',

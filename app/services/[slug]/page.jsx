@@ -1743,7 +1743,7 @@ export async function generateMetadata({ params }) {
     ...(isSecondary && {
       robots: {
         index: false,
-        follow: false,
+        follow: true,
       },
     }),
     title: service.metaTitle,

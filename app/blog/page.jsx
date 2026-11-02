@@ -4,7 +4,7 @@
 import { redirect } from 'next/navigation';
 
 export const metadata = {
-  robots: 'noindex, nofollow',
+  robots: 'noindex, follow',
 };
 
 export default function BlogRedirectPage() {

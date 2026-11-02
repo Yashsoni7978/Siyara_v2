@@ -19,7 +19,7 @@ import JsonLd, { buildBreadcrumbs, buildServiceSchema, buildFaqSchema } from '..
 export const metadata = {
   robots: {
     index: false,
-    follow: false,
+    follow: true,
   },
   title: 'Manufacturing & Export Web Design Jaipur',
   description: 'Industrial Next.js websites, B2B procurement catalog architectures, and international export SEO for manufacturers in Jaipur, Rajasthan.',
