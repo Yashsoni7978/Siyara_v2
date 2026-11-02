@@ -1,6 +1,6 @@
 
 const NOINDEX_ARTICLES = new Set([
-  'new-digital-ecosystem-strategy-technology-growth',
+  'new-digital-growth-strategy-technology',
   'what-is-digital-architecture',
   'how-to-choose-digital-architecture-studio-rajasthan',
   'building-digital-strategy-drives-growth',

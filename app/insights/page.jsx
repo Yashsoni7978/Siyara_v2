@@ -3,7 +3,7 @@ import JsonLd, { buildBreadcrumbs } from '../../src/components/common/JsonLd';
 
 export const metadata = {
   title: 'Digital Insights & Guides Jaipur',
-  description: 'Strategic perspectives on Next.js web engineering, SEO algorithms, generative search, and brand positioning from the Siyara studio in Jaipur.',
+  description: 'Strategic perspectives on custom web development, SEO algorithms, generative search, and brand positioning from the Siyara studio in Jaipur.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/insights',
   },
@@ -12,7 +12,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/insights',
     siteName: 'Siyara Innovations',
     title: 'Digital Insights & Guides Jaipur | Siyara Innovations',
-    description: 'Strategic perspectives on Next.js web engineering, SEO algorithms, generative search, and brand positioning from the Siyara studio in Jaipur.',
+    description: 'Strategic perspectives on custom web development, SEO algorithms, generative search, and brand positioning from the Siyara studio in Jaipur.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -26,7 +26,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Digital Insights & SEO Guides Jaipur | Siyara Innovations',
-    description: 'Strategic perspectives on Next.js web engineering, SEO algorithms, generative search, and brand positioning from the Siyara studio in Jaipur.',
+    description: 'Strategic perspectives on custom web development, SEO algorithms, generative search, and brand positioning from the Siyara studio in Jaipur.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };

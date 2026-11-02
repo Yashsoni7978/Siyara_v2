@@ -41,6 +41,12 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/insights/new-digital-ecosystem-strategy-technology-growth',
+        destination: '/insights/new-digital-growth-strategy-technology',
+        permanent: true,
+      },
+
+      {
         source: '/portfolio',
         destination: '/work',
         permanent: true,

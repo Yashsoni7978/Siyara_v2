@@ -5,7 +5,7 @@ import { siteConfig } from '@/data/siteConfig';
 
 export const metadata = {
   title: 'Real Estate Web Development Jaipur',
-  description: 'Custom Next.js real estate portals, luxury property showcase platforms, and high-intent lead generation systems for builders and brokers in Jaipur.',
+  description: 'Custom real estate property portals, luxury project showcase platforms, and high-intent lead generation systems for builders and brokers in Jaipur.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/industries/real-estate',
   },
@@ -14,7 +14,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/industries/real-estate',
     siteName: 'Siyara Innovations',
     title: 'Real Estate Web Development Jaipur | Siyara Innovations',
-    description: 'Custom Next.js real estate portals, luxury project showcase architectures, and lead generation systems for builders and brokers in Jaipur.',
+    description: 'Custom real estate portals, luxury project showcase platforms, and lead generation systems for builders and brokers in Jaipur.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -28,7 +28,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Real Estate Web Development Jaipur | Siyara Innovations',
-    description: 'Custom Next.js real estate portals, luxury project showcase architectures, and lead generation systems for builders and brokers in Jaipur.',
+    description: 'Custom real estate portals, luxury project showcase platforms, and lead generation systems for builders and brokers in Jaipur.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };
@@ -63,7 +63,7 @@ export default function RealEstateIndustryPage() {
       {
         '@type': 'Service',
         'name': 'Real Estate Website Development & Lead Systems Jaipur',
-        'serviceType': 'Real Estate Digital Architecture',
+        'serviceType': 'Real Estate Web Development',
         'provider': { '@id': 'https://www.siyaradigitals.com/#organization' },
         'areaServed': { '@type': 'City', 'name': 'Jaipur' },
         'description': 'Luxury residential property showcases, developer portals, interactive floor plans, real estate SEO, and automated lead capture for Jaipur developers and brokerages.',
@@ -97,7 +97,7 @@ export default function RealEstateIndustryPage() {
       desc: 'Dedicated compliance footers, registration number callouts, and structured legal disclosures to reinforce institutional credibility.',
     },
     {
-      title: 'High-Performance Next.js Engineering',
+      title: 'High-Performance Web Engineering',
       desc: 'Optimized page load times that prevent buyer bounce rates during heavy ad traffic surges on Google Ads and Meta campaigns.',
     },
   ];
@@ -118,7 +118,7 @@ export default function RealEstateIndustryPage() {
           <div className="flex items-center gap-3 mb-5 sm:mb-6">
             <span className="h-[1px] w-8 bg-[#D9B45F]" />
             <span className="text-[11px] sm:text-xs font-sans font-semibold tracking-[0.16em] sm:tracking-[0.24em] text-[#D9B45F] uppercase">
-              REAL ESTATE DIGITAL ARCHITECTURE · JAIPUR
+              REAL ESTATE WEB PLATFORMS · JAIPUR
             </span>
           </div>
 

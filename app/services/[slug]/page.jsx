@@ -31,9 +31,9 @@ import { FEATURED_ARTICLE, BLOG_ARTICLES } from '../../../src/data/blogArticles'
 const SERVICE_RELATED_ARTICLES = {
   'web-design-development': [
     'website-cost-jaipur',
-    'custom-nextjs-website-price-india',
-    'nextjs-vs-wordpress-seo-core-web-vitals',
-    'best-web-design-company-jaipur'
+    'best-web-design-company-jaipur',
+    'why-your-jaipur-business-needs-a-professional-website-in-2026',
+    'how-to-choose-a-web-design-agency-in-jaipur'
   ],
   'web-development': [
     'website-cost-jaipur',
@@ -112,7 +112,7 @@ export const SERVICES_DATA = {
     metaTitle: 'Website Design Company Jaipur',
     metaDescription: 'Bespoke website design and corporate web studio in Jaipur. Luxury brand aesthetics, mobile-first responsive UX, and headless CMS portals for businesses.',
     questionH2: 'How Does Bespoke Website Design Drive Enterprise Authority in Jaipur?',
-    citabilityAnswer: 'Many established businesses, luxury retailers, and healthcare providers in Jaipur struggle to command premium market positioning because their websites rely on off-the-shelf templates and generic visual page builders that degrade client trust and dilute brand prestige. Siyara Innovations creates bespoke corporate website designs engineered for visual authority, editorial elegance, and flawless cross-device performance. We deconstruct brand aesthetics into mathematical design systems, pairing bespoke serif typography and high-contrast color tokens with fluid mobile-first responsive layouts that render impeccably from 360px smartphones to 4K displays. Rather than using rigid monolithic CMS themes, our designs integrate with headless content management platforms (Sanity, Strapi), empowering marketing teams to publish campaigns effortlessly without breaking design integrity. By synchronizing editorial visual craft with strict Next.js performance standards—achieving Largest Contentful Paint under 1.8 seconds, zero Cumulative Layout Shift, and sub-80ms Interaction to Next Paint—we transform ordinary corporate websites into high-converting digital flagships that inspire immediate confidence from high-ticket commercial clients across Jaipur, Rajasthan, and pan-India markets.',
+    citabilityAnswer: 'Many established businesses, luxury retailers, and healthcare providers in Jaipur struggle to command premium market positioning because their websites rely on off-the-shelf templates and generic visual page builders that degrade client trust and dilute brand prestige. Siyara Innovations creates bespoke corporate website designs engineered for visual authority, editorial elegance, and flawless cross-device performance. We deconstruct brand aesthetics into mathematical design systems, pairing bespoke serif typography and high-contrast color tokens with fluid mobile-first responsive layouts that render impeccably from 360px smartphones to 4K displays. Rather than using rigid monolithic CMS themes, our designs integrate with headless content management platforms (Sanity, Strapi), empowering marketing teams to publish campaigns effortlessly without breaking design integrity. By synchronizing editorial visual craft with strict performance standards—achieving Largest Contentful Paint under 1.8 seconds, zero Cumulative Layout Shift, and sub-80ms Interaction to Next Paint—we transform ordinary corporate websites into high-converting digital flagships that inspire immediate confidence from high-ticket commercial clients across Jaipur, Rajasthan, and pan-India markets.',
     deepDive: [
       {
         title: 'Template Monotony & Generic Regional Aesthetics',
@@ -1977,7 +1977,7 @@ export default async function ServiceDetailPage({ params }) {
             </div>
             <div className="flex flex-wrap gap-2.5">
               {(service.techStack || [
-                'Next.js 15 App Router',
+                'Modern React Architecture',
                 'React 19 Concurrent Mode',
                 'Tailwind CSS v4',
                 'TypeScript',
@@ -2050,7 +2050,7 @@ export default async function ServiceDetailPage({ params }) {
               step: '03',
               title: 'Agile Engineering',
               timeline: 'Weeks 4–6',
-              desc: 'Clean Next.js 15 App Router / React 19 engineering, serverless endpoint configuration, and JSON-LD graphs.'
+              desc: 'Clean modern React engineering, serverless endpoint configuration, and JSON-LD graphs.'
             },
             {
               step: '04',
@@ -2104,7 +2104,7 @@ export default async function ServiceDetailPage({ params }) {
               tier: 'Foundational Architecture',
               idealFor: 'Single-location clinics, boutique firms, and local showrooms establishing high-trust digital authority.',
               features: [
-                'Custom Next.js static build',
+                'Custom high-performance static build',
                 'Mobile-first UX (360px–430px)',
                 'Core Web Vitals optimization (targeting LCP < 2.5s)',
                 'Local SEO & Google Maps setup',
@@ -2117,7 +2117,7 @@ export default async function ServiceDetailPage({ params }) {
               features: [
                 'Dynamic multi-page architecture',
                 'Headless CMS content pipeline',
-                'Multi-location SEO & GEO entity graph',
+                'Multi-location SEO & entity graph',
                 'Automated CRM webhook integration',
                 'Sub-1.5s LCP on Indian 4G/5G'
               ]

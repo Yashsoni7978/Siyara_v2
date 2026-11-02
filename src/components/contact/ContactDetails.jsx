@@ -12,7 +12,7 @@ export default function ContactDetails() {
     {
       id: '01',
       title: 'NEW PROJECTS',
-      description: 'For brands looking to build, redesign or scale connected digital architecture.',
+      description: 'For brands looking to build, redesign or grow their online presence.',
       contactText: siteConfig.email,
       href: `mailto:${siteConfig.email}`,
       icon: Mail,

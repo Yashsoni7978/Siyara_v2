@@ -63,7 +63,7 @@ export default function EventManagementIndustryPage() {
       {
         '@type': 'Service',
         'name': 'Event Management Company Website Development & Marketing Jaipur',
-        'serviceType': 'Event Industry Digital Architecture',
+        'serviceType': 'Event Industry Web Solutions',
         'provider': { '@id': 'https://www.siyaradigitals.com/#organization' },
         'areaServed': { '@type': 'City', 'name': 'Jaipur' },
         'description': 'Celebration storytelling portals, destination wedding showcases, corporate event capability systems, and high-ticket event inquiry funnels in Jaipur, Rajasthan.',
@@ -118,7 +118,7 @@ export default function EventManagementIndustryPage() {
           <div className="flex items-center gap-3 mb-5 sm:mb-6">
             <span className="h-[1px] w-8 bg-[#D9B45F]" />
             <span className="text-[11px] sm:text-xs font-sans font-semibold tracking-[0.16em] sm:tracking-[0.24em] text-[#D9B45F] uppercase">
-              EVENT & WEDDING DIGITAL ARCHITECTURE · JAIPUR
+              EVENT & WEDDING WEB PLATFORMS · JAIPUR
             </span>
           </div>
 

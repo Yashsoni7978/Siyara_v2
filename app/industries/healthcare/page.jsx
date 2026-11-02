@@ -5,7 +5,7 @@ import { siteConfig } from '@/data/siteConfig';
 
 export const metadata = {
   title: 'Clinic & Doctor Web Design Jaipur',
-  description: 'Custom Next.js clinic websites, appointment booking funnels, and local medical SEO for doctors, clinics, and healthcare centers in Jaipur, Rajasthan.',
+  description: 'Custom healthcare clinic websites, appointment booking funnels, and local medical SEO for doctors, clinics, and healthcare centers in Jaipur, Rajasthan.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/industries/healthcare',
   },
@@ -14,7 +14,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/industries/healthcare',
     siteName: 'Siyara Innovations',
     title: 'Clinic & Doctor Web Design Jaipur | Siyara Innovations',
-    description: 'Custom Next.js clinic websites, appointment booking funnels, and local medical SEO for doctors and healthcare centers in Jaipur, Rajasthan.',
+    description: 'Custom healthcare clinic websites, appointment booking funnels, and local medical SEO for doctors and healthcare centers in Jaipur, Rajasthan.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -28,7 +28,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Clinic & Doctor Web Design Jaipur | Siyara Innovations',
-    description: 'Custom Next.js clinic websites, appointment booking funnels, and local medical SEO for doctors and healthcare centers in Jaipur, Rajasthan.',
+    description: 'Custom healthcare clinic websites, appointment booking funnels, and local medical SEO for doctors and healthcare centers in Jaipur, Rajasthan.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };
@@ -94,7 +94,7 @@ export default function HealthcareIndustryPage() {
     },
     {
       title: 'Optimized Mobile Performance',
-      desc: 'Minimal patient drop-off on mobile networks. Built on Next.js 15 for fast, responsive page transitions.',
+      desc: 'Minimal patient drop-off on mobile networks. Engineered for fast, responsive mobile page transitions.',
     },
     {
       title: 'Patient Privacy & Ethical Compliance',
@@ -169,7 +169,7 @@ export default function HealthcareIndustryPage() {
               Most clinic websites in Jaipur are built on slow WordPress templates crowded with medical clip-art, complex contact forms, and broken mobile menus. When a patient in pain is looking for an emergency dentist or specialized physician, a 4-second loading delay causes them to hit the back button and call the next listing.
             </p>
             <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed font-light">
-              Siyara Innovations replaces slow bloat with custom Next.js engineering: fast, responsive page loads, clear doctor credentials, transparent treatment overviews, and one-tap WhatsApp appointment booking.
+              Siyara Innovations replaces slow bloat with custom web engineering: fast, responsive page loads, clear doctor credentials, transparent treatment overviews, and one-tap WhatsApp appointment booking.
             </p>
           </div>
 

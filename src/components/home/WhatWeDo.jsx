@@ -12,7 +12,7 @@ export default function WhatWeDo() {
     {
       id: '01',
       title: 'WEBSITE DESIGN & DEVELOPMENT',
-      subtitle: 'High-performance websites and web applications built on Next.js 15 for speed, security, and conversion.',
+      subtitle: 'High-performance websites and web applications engineered for speed, security, and conversion.',
       href: '/services/web-design-development',
       icon: Code,
     },

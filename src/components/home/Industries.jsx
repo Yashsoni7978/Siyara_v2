@@ -14,7 +14,7 @@ export default function Industries() {
       id: '01',
       name: 'HEALTHCARE & CLINICS',
       href: '/industries/healthcare',
-      description: 'Patient trust funnels, medical specialization showcases, and high-ranking local GEO search optimization for Jaipur doctors.',
+      description: 'Patient trust funnels, medical specialization showcases, and local search engine optimization for Jaipur doctors.',
       image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80',
       tag: 'Clinics & Medical Groups',
     },

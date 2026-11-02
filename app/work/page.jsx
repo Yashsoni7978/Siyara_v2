@@ -3,7 +3,7 @@ import { projectsData } from '../../src/data/projectsData';
 
 export const metadata = {
   title: 'Web Design Portfolio Jaipur',
-  description: 'Explore live digital architectures, Next.js web builds, and branding systems engineered for healthcare, real estate, and retail clients in Jaipur.',
+  description: 'Explore delivered client websites, custom web applications, and branding systems engineered for healthcare, real estate, and retail clients in Jaipur.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/work',
   },
@@ -12,7 +12,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/work',
     siteName: 'Siyara Innovations',
     title: 'Web Design Portfolio Jaipur | Siyara Innovations',
-    description: 'Explore live digital architectures, Next.js web builds, and branding systems engineered for healthcare, real estate, and retail clients in Jaipur.',
+    description: 'Explore delivered client websites, custom web applications, and branding systems engineered for healthcare, real estate, and retail clients in Jaipur.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -26,7 +26,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design & Digital Portfolio Jaipur | Siyara Innovations',
-    description: 'Explore live digital architectures, Next.js web builds, and branding systems engineered for healthcare, real estate, and retail clients in Jaipur.',
+    description: 'Explore delivered client websites, custom web applications, and branding systems engineered for healthcare, real estate, and retail clients in Jaipur.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };
@@ -59,10 +59,10 @@ export default function WorkPage() {
         '@id': 'https://www.siyaradigitals.com/work#portfolio',
         'url': 'https://www.siyaradigitals.com/work',
         'name': 'Siyara Innovations Client Portfolio & Architectural Showcases',
-        'description': 'Live digital architectures, Next.js web applications, and enterprise brand systems engineered for clients in Jaipur and across India.',
+        'description': 'Delivered client websites, custom web applications, and brand systems engineered for clients in Jaipur and across India.',
         'mainEntity': {
           '@type': 'ItemList',
-          'name': 'Featured Digital Architecture Projects',
+          'name': 'Featured Delivered Projects',
           'numberOfItems': liveShowcases.length,
           'itemListElement': liveShowcases.map((project, idx) => ({
             '@type': 'ListItem',

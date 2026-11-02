@@ -5,7 +5,7 @@ import { siteConfig } from '@/data/siteConfig';
 
 export const metadata = {
   title: 'Interior Design Web Studio Jaipur',
-  description: 'Bespoke Next.js portfolio websites, editorial visual galleries, and local luxury SEO for architects and interior design studios in Jaipur, India.',
+  description: 'Bespoke design portfolio websites, editorial visual galleries, and local luxury SEO for architects and interior design studios in Jaipur, India.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/industries/interior-design',
   },
@@ -14,7 +14,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/industries/interior-design',
     siteName: 'Siyara Innovations',
     title: 'Interior Design Web Studio Jaipur | Siyara Innovations',
-    description: 'Bespoke Next.js portfolio websites, visual design architectures, and local luxury SEO for architects and interior design studios in Jaipur.',
+    description: 'Bespoke design portfolio websites, visual project galleries, and local luxury SEO for architects and interior design studios in Jaipur.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -28,7 +28,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Interior Design Web Studio Jaipur | Siyara Innovations',
-    description: 'Bespoke Next.js portfolio websites, visual design architectures, and local luxury SEO for architects and interior design studios in Jaipur.',
+    description: 'Bespoke design portfolio websites, visual project galleries, and local luxury SEO for architects and interior design studios in Jaipur.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };
@@ -97,7 +97,7 @@ export default function InteriorDesignIndustryPage() {
       desc: 'Dedicated architectural press mentions, design awards, and client editorial features organized to command premium design fees.',
     },
     {
-      title: 'High-Performance Next.js Architecture',
+      title: 'High-Performance Web Architecture',
       desc: 'Heavy photography loads responsively. Smooth mobile viewing for clients reviewing your work on smartphones.',
     },
   ];
@@ -258,7 +258,7 @@ export default function InteriorDesignIndustryPage() {
             Artisanal Spatial Studio Concept
           </h2>
           <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-6">
-            Interactive prototype demonstrating digital architecture for architectural and interior design studios: earthy editorial typography, high-resolution material curation with Next.js image optimization, and private consultation intake funnels.
+            Interactive prototype demonstrating web design solutions for architectural and interior design studios: earthy editorial typography, high-resolution material curation with modern React image optimization, and private consultation intake funnels.
           </p>
           <div className="flex items-center gap-4">
             <a

@@ -16,7 +16,7 @@ export default function Results() {
     {
       id: '02',
       title: 'VISIBILITY',
-      label: 'Organic search and AI answer-engine visibility (SEO + GEO)',
+      label: 'Organic search and AI answer-engine visibility (SEO)',
       category: 'Visibility',
       icon: Search,
     },
@@ -48,8 +48,8 @@ export default function Results() {
     'LOCAL & TECHNICAL SEO',
     'EDITORIAL BRAND IDENTITY',
     'HIGH-CONVERSION UI/UX',
-    'GEO SEARCH VISIBILITY',
-    'NEXT.JS WEB PERFORMANCE',
+    'SEARCH VISIBILITY & RANKINGS',
+    'HIGH-SPEED WEB PERFORMANCE',
   ];
 
   return (

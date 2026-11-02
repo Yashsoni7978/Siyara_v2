@@ -23,7 +23,7 @@ export default function WhySiyara() {
     {
       id: '03',
       title: 'BUILT TO PERFORM',
-      description: 'Sites built on Next.js for speed, Core Web Vitals, and real SEO - not just visuals.',
+      description: 'Websites engineered for speed, Core Web Vitals, and real SEO - not just visuals.',
       icon: ShieldCheck,
     },
     {

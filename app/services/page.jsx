@@ -2,7 +2,7 @@ import Services from '../../src/views/Services';
 
 export const metadata = {
   title: 'Web Design & SEO Services Jaipur',
-  description: 'Explore Siyara Innovations services: custom Next.js web development, local SEO, social media marketing, and brand architecture in Jaipur, India.',
+  description: 'Explore Siyara Innovations services: custom web development, local SEO, social media marketing, and strategic branding for businesses in Jaipur, India.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/services',
   },
@@ -11,7 +11,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/services',
     siteName: 'Siyara Innovations',
     title: 'Web Design & SEO Services Jaipur | Siyara Innovations',
-    description: 'Explore Siyara Innovations services: custom Next.js web development, local SEO, social media marketing, and brand architecture in Jaipur, India.',
+    description: 'Explore Siyara Innovations services: custom web development, local SEO, social media marketing, and strategic branding for businesses in Jaipur, India.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -25,7 +25,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design & SEO Services Jaipur | Siyara Innovations',
-    description: 'Explore Siyara Innovations services: custom Next.js web development, local SEO, social media marketing, and brand architecture in Jaipur, India.',
+    description: 'Explore Siyara Innovations services: custom web development, local SEO, social media marketing, and strategic branding for businesses in Jaipur, India.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };
@@ -57,7 +57,7 @@ export default function ServicesPage() {
         'serviceType': 'Web Development',
         'provider': { '@id': 'https://www.siyaradigitals.com/#organization' },
         'areaServed': { '@type': 'City', 'name': 'Jaipur' },
-        'description': 'Custom Next.js website design and web development for interior designers, event managers, medical clinics, and small businesses.',
+        'description': 'Custom website design and web development for interior designers, event managers, medical clinics, and small businesses.',
         'hasOfferCatalog': {
           '@type': 'OfferCatalog',
           'name': 'Web Solutions',
@@ -88,8 +88,8 @@ export default function ServicesPage() {
         '@type': 'CollectionPage',
         '@id': 'https://www.siyaradigitals.com/services#catalog',
         'url': 'https://www.siyaradigitals.com/services',
-        'name': 'Siyara Innovations Digital Architecture & Engineering Services Catalog',
-        'description': 'Comprehensive digital architecture, Next.js engineering, Generative Engine Optimization (GEO), and brand positioning services.',
+        'name': 'Siyara Innovations Web Design & SEO Services Catalog',
+        'description': 'Comprehensive website design, technical SEO, social media marketing, and brand strategy services.',
         mainEntity: {
           '@type': 'ItemList',
           name: 'Core Service Disciplines',
@@ -98,13 +98,13 @@ export default function ServicesPage() {
             {
               '@type': 'ListItem',
               position: 1,
-              name: 'Custom Next.js Web Development & Engineering',
+              name: 'Custom Website Design & Development',
               url: 'https://www.siyaradigitals.com/services/web-design-development',
             },
             {
               '@type': 'ListItem',
               position: 2,
-              name: 'Generative Engine Optimization (GEO) & Technical SEO',
+              name: 'Search Engine Optimization (SEO) & Visibility',
               url: 'https://www.siyaradigitals.com/services/seo-services',
             },
             {
@@ -140,7 +140,7 @@ export default function ServicesPage() {
             {
               '@type': 'ListItem',
               position: 8,
-              name: 'Growth Systems, Paid Ads CRO & Conversion Architecture',
+              name: 'Growth Systems, Paid Ads CRO & Conversion Pathways',
               url: 'https://www.siyaradigitals.com/services/growth-optimization',
             },
             {

@@ -5,7 +5,7 @@ import { BUSINESS_CONFIG } from '../../src/config/business';
 
 export const metadata = {
   title: 'Web Development & SEO FAQ Jaipur',
-  description: 'Answers to common client questions regarding Next.js web development, local SEO timelines, project deliverables, and onboarding with Siyara in Jaipur.',
+  description: 'Answers to common client questions regarding custom web development, local SEO timelines, project deliverables, and onboarding with Siyara in Jaipur.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/faq',
   },
@@ -14,7 +14,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/faq',
     siteName: 'Siyara Innovations',
     title: 'Web Development & SEO FAQ Jaipur | Siyara Innovations',
-    description: 'Answers to common questions regarding Next.js web development, local SEO timelines, pricing, and project onboarding with Siyara in Jaipur.',
+    description: 'Answers to common questions regarding custom web development, local SEO timelines, pricing, and project onboarding with Siyara in Jaipur.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -28,7 +28,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Development & SEO FAQ Jaipur | Siyara Innovations',
-    description: 'Answers to common questions regarding Next.js web development, local SEO timelines, pricing, and project onboarding with Siyara in Jaipur.',
+    description: 'Answers to common questions regarding custom web development, local SEO timelines, pricing, and project onboarding with Siyara in Jaipur.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
 };
@@ -36,7 +36,7 @@ export const metadata = {
 const FAQS = [
   {
     q: 'What digital services does Siyara Innovations provide in Jaipur?',
-    a: 'Siyara Innovations provides four core digital disciplines: custom web development (Next.js, React, Tailwind CSS), search engine optimization (local SEO, technical audits, content architecture), social media marketing (growth strategy, aesthetic content production), and strategic branding (visual identity, logos, brand guidelines).',
+    a: 'Siyara Innovations provides four core digital disciplines: custom web development (modern React frameworks, Tailwind CSS), search engine optimization (local SEO, technical audits, content architecture), social media marketing (growth strategy, aesthetic content production), and strategic branding (visual identity, logos, brand guidelines).',
   },
   {
     q: 'Which industries and niches do you specialize in?',
@@ -44,10 +44,10 @@ const FAQS = [
   },
   {
     q: 'How does your project onboarding and discovery process work?',
-    a: 'Every engagement begins with an intake review where we analyze your current digital presence, competitors, and target audience. Following a tailored proposal and scope alignment, we execute projects through design prototyping, modern Next.js development, rigorous SEO audits, and post-launch performance monitoring.',
+    a: 'Every engagement begins with an intake review where we analyze your current digital presence, competitors, and target audience. Following a tailored proposal and scope alignment, we execute projects through design prototyping, custom web development, rigorous SEO audits, and post-launch performance monitoring.',
   },
   {
-    q: 'How long does a custom Next.js website take to build?',
+    q: 'How long does a custom website take to build?',
     a: 'Standard custom business websites typically require 3 to 5 weeks from initial wireframes to production deployment. More complex multi-page web applications with custom booking funnels or deep industry resource hubs require 6 to 8 weeks depending on scope and asset delivery.',
   },
   {

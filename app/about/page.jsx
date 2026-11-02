@@ -2,7 +2,7 @@ import About from '../../src/views/About';
 
 export const metadata = {
   title: 'About Our Digital Studio Jaipur',
-  description: 'Learn how Siyara Innovations engineers connected Next.js websites, local SEO, and brand identity systems for businesses in Jaipur, Rajasthan.',
+  description: 'Learn how Siyara Innovations engineers custom high-performance websites, local SEO, and brand identity systems for businesses in Jaipur, Rajasthan.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/about',
   },
@@ -11,7 +11,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/about',
     siteName: 'Siyara Innovations',
     title: 'About Our Digital Studio Jaipur | Siyara Innovations',
-    description: 'Learn how Siyara Innovations engineers connected Next.js websites, local SEO, and brand identity systems for businesses in Jaipur, Rajasthan.',
+    description: 'Learn how Siyara Innovations engineers custom high-performance websites, local SEO, and brand identity systems for businesses in Jaipur, Rajasthan.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -25,7 +25,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'About Our Digital Studio Jaipur | Siyara Innovations',
-    description: 'Learn how Siyara Innovations engineers connected Next.js websites, local SEO, and brand identity systems for businesses in Jaipur, Rajasthan.',
+    description: 'Learn how Siyara Innovations engineers custom high-performance websites, local SEO, and brand identity systems for businesses in Jaipur, Rajasthan.',
     images: ['https://www.siyaradigitals.com/images/siyaradigitals_og_image.png'],
   },
 };

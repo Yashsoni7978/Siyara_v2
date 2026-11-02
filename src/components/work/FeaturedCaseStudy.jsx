@@ -209,7 +209,7 @@ export default function FeaturedCaseStudy() {
               <div>
                 <div className="text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">MOBILE LCP TARGET</div>
                 <div className="text-2xl sm:text-3xl font-serif font-bold text-[#101613] mb-2">&lt;1.8s</div>
-                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">Largest Contentful Paint target on Next.js 15 with edge delivery — within Google&apos;s Good threshold.</p>
+                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">Largest Contentful Paint target on custom web builds 15 with edge delivery — within Google&apos;s Good threshold.</p>
               </div>
               <div className="mt-4 pt-3 border-t border-[#0B5E49]/15 text-[10px] font-sans font-bold text-[#0B5E49] uppercase tracking-widest flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" /><span>Google CWV Good</span>

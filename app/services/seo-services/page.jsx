@@ -225,15 +225,15 @@ export default function SeoServicesPage() {
                 <Globe className="w-5 h-5" />
               </div>
               <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE3] font-normal mb-3">
-                4. Schema.org & AI Search Visibility
+                4. Schema.org & Generative Engine Optimization (GEO)
               </h3>
               <p className="text-xs sm:text-sm text-[#9D9B91] leading-relaxed font-light mb-4">
-                As generative engines like Google AI Overviews, Perplexity, and ChatGPT Search synthesize search results, structured data becomes critical. We deploy connected JSON-LD schemas that clearly define your organization, services, reviews, and FAQs.
+                As generative engines like Google AI Overviews, Perplexity, and ChatGPT Search synthesize search results, Generative Engine Optimization (GEO) and structured data become critical. We deploy connected JSON-LD schemas that clearly define your organization, services, reviews, and FAQs.
               </p>
             </div>
             <ul className="space-y-2 border-t border-[#0C6B52]/30 pt-4 text-xs text-[#ECE7D8]/80">
               <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-[#D9B45F]" /> Organization, Service &amp; FAQPage schemas</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-[#D9B45F]" /> Passage-level answer formatting for AI retrieval</li>
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-[#D9B45F]" /> Generative Engine Optimization (GEO) passage formatting</li>
               <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-[#D9B45F]" /> Entity disambiguation and knowledge graph nodes</li>
             </ul>
           </div>

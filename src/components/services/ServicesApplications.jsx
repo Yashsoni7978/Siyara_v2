@@ -13,7 +13,7 @@ export default function ServicesApplications() {
       id: '01',
       name: 'REAL ESTATE',
       icon: Home,
-      tagline: 'High-yield digital architecture for premier developments, luxury brokerages & real estate funds.',
+      tagline: 'High-yield web platforms for property developments, brokerages & real estate firms.',
       details: 'Digital systems for developers, luxury brokerages, and real estate funds in and around Jaipur - property portals, interactive floor plans, and buyer acquisition funnels that actually convert.',
       ctaText: 'APPLY SYSTEM TO REAL ESTATE',
     },
