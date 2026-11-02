@@ -163,7 +163,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task B6: Sitemap & robots.txt
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `c45115d`  
 **Evidence:**
 - `public/robots.txt` verified: specifies `Sitemap: https://www.siyaradigitals.com/sitemap.xml` with standard crawler access rules.
 - `app/robots.js` verified: configures Next.js crawler directives and points `sitemap` to `https://www.siyaradigitals.com/sitemap.xml`.
@@ -173,7 +173,30 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 ---
 
 ## Phase C: Keywords and On-Page
-**Status:** 🔜 PENDING
+
+### Task C1: Homepage Tagline, Title, and H1 Alignment
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- `app/layout.jsx`:
+  - Homepage `<title>` configured to `Web Design & SEO Agency in Jaipur | Siyara Innovations` (default title, OpenGraph title, Twitter title).
+  - Meta description updated to: `"Siyara Innovations is a web design and SEO agency in Jaipur. We build fast websites, manage SEO, and grow brands for businesses in Jaipur and pan-India."` (exactly 152 characters, explicitly naming target audience).
+- `src/components/home/Hero.jsx`:
+  - Semantic H1 established on the homepage eyebrow: `<h1 className="...">Web Design &amp; SEO Agency in Jaipur</h1>`.
+  - Converted secondary display slogan ("WE BUILD BRANDS THAT DOMINATE") into decorative presentation container (`role="presentation"`), ensuring single semantic H1 on page.
+  - Replaced legacy `/#work` anchor with clean `<Link href="/work">`.
+- `src/components/home/Philosophy.jsx`:
+  - Replaced "DIGITAL ARCHITECTURE." with "CONNECTED SYSTEMS."
+  - Replaced "Enduring architecture" with "Enduring digital performance".
+- `src/components/home/Results.jsx`:
+  - Replaced "CUSTOM WEB ARCHITECTURE" deliverable tag with "CUSTOM WEB DEVELOPMENT".
+  - Replaced abstract "digital architectures" copy with "We design and build websites, SEO systems, and brand identities that expand reach and generate measurable business growth."
+- `src/components/about/Studio.jsx`:
+  - Cleaned image alt text from "Siyara Digital Architecture Studio workspace" to "Siyara Innovations studio workspace in Jaipur".
+- **Verification:** Built `.next/server/app/index.html` inspected: Title is `Web Design &amp; SEO Agency in Jaipur | Siyara Innovations`, H1 text is `Web Design &amp; SEO Agency in Jaipur`, Description is 152 characters.
+- **Build:** 79/79 static pages compiled successfully (exit code 0).
+
+### Task C2: Service/Industry Content Deduplication
+**Status:** 🔄 IN PROGRESS
 
 ## Phase D: Proof Engine
 **Status:** 🔜 PENDING
@@ -203,3 +226,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `a1c76c9` | B3 | Create new service pages and industries hub |
 | `143b27a` | B4 | Add noindex to non-core industries, secondary services, 18 articles |
 | `99a271d` | B5 | Update nav and footer to core pages only, remove noindex links |
+| `c45115d` | B6 | Sitemap includes only indexable URLs, robots.txt verified |

@@ -44,7 +44,7 @@ export default function Results() {
   ];
 
   const coreDeliverables = [
-    'CUSTOM WEB ARCHITECTURE',
+    'CUSTOM WEB DEVELOPMENT',
     'LOCAL & TECHNICAL SEO',
     'EDITORIAL BRAND IDENTITY',
     'HIGH-CONVERSION UI/UX',
@@ -89,10 +89,10 @@ export default function Results() {
             Real Outcomes for <span className="text-[#0B5E49] font-normal">Jaipur Brands</span>
           </h2>
           <p className="font-sans text-sm text-[#101613] font-normal leading-relaxed mb-6 max-w-lg">
-            We design and engineer digital architectures that expand brand reach, improve visibility, and generate measurable revenue.
+            We design and build websites, SEO systems, and brand identities that expand reach and generate measurable business growth.
           </p>
           <a
-            href="#work"
+            href="/work"
             className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-6 py-3.5 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.18em] uppercase transition-[background-color,border-color,box-shadow] duration-300 shadow-lg group rounded-full"
           >
             <span>EXPLORE SELECTED WORK</span>

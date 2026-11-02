@@ -140,15 +140,15 @@ export default function Hero() {
             {/* Eyebrow - Immediate render */}
             <div className="flex items-center gap-3 mb-4 sm:mb-6">
               <span className="h-[1px] w-6 sm:w-8 bg-[#D9B45F]/60" />
-              <span className="text-[10px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] sm:tracking-[0.26em] text-[#D9B45F] uppercase">
-                WEB DESIGN & SEO AGENCY — JAIPUR
-              </span>
+              <h1 className="text-[10px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] sm:tracking-[0.26em] text-[#D9B45F] uppercase m-0 p-0">
+                Web Design &amp; SEO Agency in Jaipur
+              </h1>
             </div>
 
             {/* Headline - Immediate render, responsive mobile sizing */}
             <div className="mb-5 sm:mb-6">
-              <h1
-                aria-label="Web Design Company and Digital Marketing Agency in Jaipur — Siyara Innovations"
+              <div
+                role="presentation"
                 className="font-serif leading-[1.0] tracking-tight break-words"
               >
                 {/* Line 1: WE BUILD BRANDS */}
@@ -165,7 +165,7 @@ export default function Hero() {
                 <span className="block text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-normal leading-[0.92] sm:leading-[0.88] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]">
                   DOMINATE.
                 </span>
-              </h1>
+              </div>
             </div>
 
             {/* Supporting Copy - Immediate render */}
@@ -186,7 +186,7 @@ export default function Hero() {
               </Link>
 
               <Link
-                href="/#work"
+                href="/work"
                 className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 border border-[#F3EFE3]/25 hover:border-[#D9B45F]/60 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.16em] sm:tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#070A09]/40 backdrop-blur-sm min-h-[48px]"
               >
                 <span>EXPLORE OUR WORK</span>

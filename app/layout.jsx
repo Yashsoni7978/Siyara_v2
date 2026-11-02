@@ -24,10 +24,10 @@ const manrope = Manrope({
 export const metadata = {
   metadataBase: new URL('https://www.siyaradigitals.com'),
   title: {
-    default: 'Web Design Company & SEO Services Jaipur | Siyara Innovations',
+    default: 'Web Design & SEO Agency in Jaipur | Siyara Innovations',
     template: '%s | Siyara Innovations',
   },
-  description: 'Siyara Innovations is a web design and SEO agency in Jaipur, Rajasthan. We build high-performance websites, manage SEO, and grow brands for businesses across India.',
+  description: 'Siyara Innovations is a web design and SEO agency in Jaipur. We build fast websites, manage SEO, and grow brands for businesses in Jaipur and pan-India.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com',
   },
@@ -35,22 +35,22 @@ export const metadata = {
     type: 'website',
     url: 'https://www.siyaradigitals.com',
     siteName: 'Siyara Innovations',
-    title: 'Web Design Company & SEO Services Jaipur | Siyara Innovations',
-    description: 'Siyara Innovations is a web design and SEO agency in Jaipur, Rajasthan. We build high-performance websites, manage SEO, and grow brands for businesses across India.',
+    title: 'Web Design & SEO Agency in Jaipur | Siyara Innovations',
+    description: 'Siyara Innovations is a web design and SEO agency in Jaipur. We build fast websites, manage SEO, and grow brands for businesses in Jaipur and pan-India.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
         width: 1200,
         height: 630,
-        alt: 'Siyara Innovations · Digital Marketing & Web Design Agency in Jaipur',
+        alt: 'Siyara Innovations · Web Design & SEO Agency in Jaipur',
       },
     ],
     locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Company & SEO Services Jaipur | Siyara Innovations',
-    description: 'Siyara Innovations is a web design and SEO agency in Jaipur, Rajasthan. We build high-performance websites, manage SEO, and grow brands for businesses across India.',
+    title: 'Web Design & SEO Agency in Jaipur | Siyara Innovations',
+    description: 'Siyara Innovations is a web design and SEO agency in Jaipur. We build fast websites, manage SEO, and grow brands for businesses in Jaipur and pan-India.',
     images: ['https://www.siyaradigitals.com/images/siyara_og_image.png'],
   },
   icons: {
