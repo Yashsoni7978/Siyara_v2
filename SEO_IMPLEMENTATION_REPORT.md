@@ -249,7 +249,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 79/79 static pages compiled successfully (exit code 0).
 
 ### Task C6: GSC Data Audit
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `4f9bd4e`  
 **Evidence:**
 - Directory inspection conducted in `seo-audit-data/`.
 - Confirmed that `seo-audit-data/gsc_queries.csv` does not exist in the repository.
@@ -261,8 +261,22 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 
 ## Phase D: Proof Engine
 
-## Phase D: Proof Engine
-**Status:** 🔜 PENDING
+### Task D1: Case Studies Data and Dynamic Route
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- `src/data/caseStudies.js`: Created central proof engine dataset with strictly typed fields (`slug, name, industry, summary, whatWeBuilt[], stack[], demoUrl, screenshot, results[], approved`).
+  - 4 approved entries with live Vercel demo URLs: `shri-property` (Real Estate), `dr-rajeshwari-sharma` (Healthcare), `studio-mitti` (Interior Design), and `ember-and-ivory-events` (Event Management).
+  - 1 unapproved draft entry: `aura-wellness-clinic` (`approved: false`), demonstrating strict approval gating.
+- `app/work/[slug]/page.jsx`: Created dynamic case study route:
+  - `generateStaticParams()` filters strictly on `approved: true`.
+  - Next.js `notFound()` invoked for unapproved or non-existent slugs.
+  - Complete Schema.org metadata: `BreadcrumbList` and `CreativeWork` linked to `@id: https://www.siyaradigitals.com/#organization`.
+  - Live preview button, verified technical deliverables checklist, tech stack badges, and topic-specific WhatsApp studio CTA.
+- `app/sitemap.js`: Updated sitemap generator to dynamically fetch `getApprovedCaseStudies()`, outputting only the 4 approved URLs (`/work/shri-property`, `/work/dr-rajeshwari-sharma`, `/work/studio-mitti`, `/work/ember-and-ivory-events`).
+- **Build:** 83/83 static pages compiled successfully (exit code 0).
+
+### Task D2: Portfolio Page (/work) Alignment
+**Status:** 🔄 IN PROGRESS
 
 ## Phase E: Conversion
 **Status:** 🔜 PENDING
@@ -295,3 +309,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `4c1974a` | C3 | Internal link map updates for homepage core services/industries and articles |
 | `81867ac` | C4 | Structured data validation across organization, services, articles, and faqs |
 | `ac5a9e9` | C5 | Audit alt text and eliminate personal names and obsolete phrasing |
+| `4f9bd4e` | C6 | Audit GSC data presence and record keyword grounding evidence |

@@ -1,4 +1,5 @@
 import { FEATURED_ARTICLE, BLOG_ARTICLES } from '../src/data/blogArticles';
+import { getApprovedCaseStudies } from '../src/data/caseStudies';
 
 export const dynamic = "force-static";
 
@@ -77,7 +78,16 @@ export default async function sitemap() {
     priority: 0.5,
   }));
 
-  // 5. Indexable Editorial Articles ONLY (filtering out 18 noindexed articles)
+  // 5. Approved Production Case Studies ONLY
+  const approvedStudies = getApprovedCaseStudies();
+  const caseStudyRoutes = approvedStudies.map((study) => ({
+    url: `${baseUrl}/work/${study.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
+  // 6. Indexable Editorial Articles ONLY (filtering out 18 noindexed articles)
   const allArticles = [FEATURED_ARTICLE, ...BLOG_ARTICLES];
   const indexableArticles = allArticles.filter((art) => !NOINDEX_ARTICLES.has(art.slug));
 
@@ -104,6 +114,7 @@ export default async function sitemap() {
     ...coreServiceRoutes,
     ...indexableIndustryRoutes,
     ...legalRoutes,
+    ...caseStudyRoutes,
     ...insightRoutes,
   ];
 }
