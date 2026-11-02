@@ -27,9 +27,9 @@ export default function Footer() {
   ];
 
   const resourceLinks = [
+    { name: 'Website Enquiries Playbook', href: '/insights/how-to-get-more-enquiries-from-your-website' },
+    { name: 'Brand Strategy Framework', href: '/insights/what-is-brand-strategy-framework' },
     { name: 'Website Cost in Jaipur', href: '/insights/website-cost-jaipur' },
-    { name: 'Website Cost in India', href: '/insights/website-development-cost-in-india-business-guide' },
-    { name: 'Local SEO Guide Jaipur', href: '/insights/local-seo-guide-jaipur-businesses' },
     { name: 'Choosing a Web Agency', href: '/insights/how-to-choose-a-web-design-agency-in-jaipur' },
   ];
 

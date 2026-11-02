@@ -1,27 +1,8 @@
-import { FEATURED_ARTICLE, BLOG_ARTICLES } from '../src/data/blogArticles';
+import { APPROVED_INDEXABLE_ARTICLES, FEATURED_ARTICLE, BLOG_ARTICLES } from '../src/data/blogArticles';
 import { getApprovedCaseStudies } from '../src/data/caseStudies';
 
 export const dynamic = "force-static";
 
-const NOINDEX_ARTICLES = new Set([
-  'custom-nextjs-website-price-india',
-  'ecommerce-website-development-cost-india',
-  'mobile-app-development-cost-jaipur',
-  'hotel-resort-website-design-rajasthan',
-  'coaching-institute-school-website-design-jaipur',
-  'b2b-manufacturing-website-sitapura-vki-jaipur',
-  'jewellery-website-design-jaipur-johari-bazaar',
-  'how-to-rank-chatgpt-perplexity-india',
-  'nextjs-vs-wordpress-seo-core-web-vitals',
-  'best-web-design-company-jaipur',
-  'new-digital-growth-strategy-technology',
-  'building-digital-strategy-drives-growth',
-  'fix-crawled-currently-not-indexed-google-search-console',
-  'seo-geo-search-visibility-prepare-for-ai-search',
-  'what-makes-a-high-performing-website',
-  'what-is-digital-architecture',
-  'how-to-choose-digital-architecture-studio-rajasthan',
-]);
 
 export default async function sitemap() {
   const baseUrl = 'https://www.siyaradigitals.com';
@@ -88,7 +69,7 @@ export default async function sitemap() {
 
   // 6. Indexable Editorial Articles ONLY (filtering out 18 noindexed articles)
   const allArticles = [FEATURED_ARTICLE, ...BLOG_ARTICLES];
-  const indexableArticles = allArticles.filter((art) => !NOINDEX_ARTICLES.has(art.slug));
+  const indexableArticles = allArticles.filter((art) => APPROVED_INDEXABLE_ARTICLES.has(art.slug));
 
   const insightRoutes = indexableArticles.map((article) => {
     let articleDate = currentDate;

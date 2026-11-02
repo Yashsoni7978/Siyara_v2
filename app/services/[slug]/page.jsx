@@ -30,9 +30,9 @@ import { FEATURED_ARTICLE, BLOG_ARTICLES } from '../../../src/data/blogArticles'
 // Topical Silo: Service to Related Engineering Guides & Cost Breakdowns
 const SERVICE_RELATED_ARTICLES = {
   'web-design-development': [
+    'how-to-get-more-enquiries-from-your-website',
     'website-cost-jaipur',
     'best-web-design-company-jaipur',
-    'why-your-jaipur-business-needs-a-professional-website-in-2026',
     'how-to-choose-a-web-design-agency-in-jaipur'
   ],
   'web-development': [

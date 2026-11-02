@@ -145,6 +145,15 @@ export default function BrandingServicePage() {
             <p>
               At Siyara Innovations, we begin every branding engagement by mapping your market context. We identify what makes your firm irreplaceable, articulate your unique value propositions, and translate that positioning into a cohesive visual language. The result is a memorable brand presence that commands pricing power and inspires institutional confidence across digital and physical mediums.
             </p>
+            <div className="pt-2">
+              <Link
+                href="/insights/what-is-brand-strategy-framework"
+                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-[#D9B45F] hover:text-[#E8C979] transition-colors"
+              >
+                <span>Read our Brand Strategy Framework Guide</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
