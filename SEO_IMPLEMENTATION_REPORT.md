@@ -276,7 +276,7 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 - **Build:** 83/83 static pages compiled successfully (exit code 0).
 
 ### Task D2: Portfolio Page (/work) Alignment
-**Status:** ✅ COMPLETE — Commit pending  
+**Status:** ✅ COMPLETE — Commit `c9feb94`  
 **Evidence:**
 - `src/components/work/FeaturedWorkGrid.jsx`:
   - Connected dynamically to `getApprovedCaseStudies()`: projects matching approved slugs now display a distinguished gold `CASE STUDY` badge.
@@ -289,6 +289,20 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 ---
 
 ## Phase E: Conversion
+
+### Task E1: WhatsApp CTAs and Frictionless Intake
+**Status:** ✅ COMPLETE — Commit pending  
+**Evidence:**
+- Dedicated WhatsApp conversion blocks with topic-specific prefilled messages implemented across all key templates:
+  - Service detail routes (`app/services/[slug]/page.jsx`): dynamically prefilled with service title (`"Hi Siyara Innovations, I would like to discuss [service.name] for my business."`).
+  - Standalone core service pages (`branding`, `seo-services`, `social-media-marketing`): customized intake copy prefilled for brand strategy, SEO, or social media.
+  - Industry vertical routes (`healthcare`, `interior-design`, `event-management`, `real-estate`): customized prefilled messages matching the specific sector.
+  - Editorial article pages (`src/components/blog/BlogPost.jsx`): inserted luxury WhatsApp Consultation card dynamically passing the article headline.
+- Mobile Floating Action Button verified in `src/components/layout/FloatingContact.jsx`: persists on mobile viewports globally linking to `wa.me/919587269209`.
+- Verified 0 `tel:` or voice call links sitewide; all phone communications directed strictly to WhatsApp Business chat and verified email (`info@siyaradigitals.com`).
+- **Build:** 83/83 static pages compiled successfully (exit code 0).
+
+### Task E2: Contact Experience & Lead Preservation
 **Status:** 🔄 IN PROGRESS
 
 ## Phase F: Verify
@@ -321,3 +335,4 @@ All pages verified to have correct `alternates.canonical` in their Next.js metad
 | `ac5a9e9` | C5 | Audit alt text and eliminate personal names and obsolete phrasing |
 | `4f9bd4e` | C6 | Audit GSC data presence and record keyword grounding evidence |
 | `6717074` | D1 | Case studies data, dynamic work slug route, and sitemap inclusion |
+| `c9feb94` | D2 | Portfolio page alignment with approved case studies and live demos |

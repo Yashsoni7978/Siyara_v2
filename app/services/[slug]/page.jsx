@@ -1815,6 +1815,10 @@ export default async function ServiceDetailPage({ params }) {
     ],
   };
 
+  const whatsappInquiryUrl = `https://wa.me/919587269209?text=${encodeURIComponent(
+    `Hi Siyara Innovations, I would like to discuss ${service.name} for my business.`
+  )}`;
+
   return (
     <div className="bg-[#070A09] text-[#F3EFE3] min-h-screen pt-24 sm:pt-32 pb-20 sm:pb-24 selection:bg-[#071E18] selection:text-[#D9B45F]">
       <JsonLd schema={fullSchema} />
@@ -1841,7 +1845,7 @@ export default async function ServiceDetailPage({ params }) {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
             <a
-              href={BUSINESS_CONFIG.whatsappUrl}
+              href={whatsappInquiryUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:-translate-y-0.5 min-h-[44px]"
@@ -2163,7 +2167,7 @@ export default async function ServiceDetailPage({ params }) {
                 </div>
               </div>
               <a
-                href={BUSINESS_CONFIG.whatsappUrl}
+                href={whatsappInquiryUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`w-full py-3 px-4 rounded-full text-xs font-bold tracking-wider uppercase text-center transition-all min-h-[44px] flex items-center justify-center gap-2 ${
@@ -2275,7 +2279,7 @@ export default async function ServiceDetailPage({ params }) {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
             <a
-              href={BUSINESS_CONFIG.whatsappUrl}
+              href={whatsappInquiryUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/20 hover:scale-105 min-h-[44px]"

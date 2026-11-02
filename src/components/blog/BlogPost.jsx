@@ -17,7 +17,8 @@ import {
   Bookmark, 
   Sparkles,
   ArrowUpRight,
-  User
+  User,
+  MessageCircle
 } from 'lucide-react';
 import ArticleCard from './ArticleCard.jsx';
 import NewsletterCTA from './NewsletterCTA.jsx';
@@ -392,6 +393,32 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
               {article.author.bio || 'Author at Siyara Innovations focusing on strategic positioning and enterprise technology.'}
             </p>
           </div>
+        </div>
+
+        {/* WhatsApp Consultation & Strategy CTA */}
+        <div className="max-w-4xl mx-auto mt-16 p-8 sm:p-10 rounded-2xl border border-[#D9B45F]/35 bg-gradient-to-br from-[#063C2D]/40 via-[#080B0A] to-[#080B0A] shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="max-w-xl text-center sm:text-left">
+            <span className="text-[10px] sm:text-xs font-sans font-bold tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
+              DISCUSS YOUR PROJECT
+            </span>
+            <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE4] font-normal mb-2">
+              Have questions about {article.title}?
+            </h3>
+            <p className="font-sans text-xs sm:text-sm text-[#CFC9BB]/80 font-light leading-relaxed">
+              Connect directly with Siyara Innovations on WhatsApp to discuss your website design, SEO, social media, or branding requirements in Jaipur.
+            </p>
+          </div>
+          <a
+            href={`https://wa.me/919587269209?text=${encodeURIComponent(
+              `Hi Siyara Innovations, I read your article "${article.title}" and would like to discuss a project for my business.`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:-translate-y-0.5 shrink-0"
+          >
+            <MessageCircle className="w-4 h-4" />
+            <span>Chat on WhatsApp</span>
+          </a>
         </div>
 
         {/* Related Recommended Insights */}
