@@ -8,7 +8,7 @@ export default function BlogClient() {
   const router = useRouter();
 
   const handleSelectArticle = (article) => {
-    router.push(`/blog/${article.slug}`);
+    router.push(`/insights/${article.slug}`);
   };
 
   return <Blog onSelectArticle={handleSelectArticle} />;

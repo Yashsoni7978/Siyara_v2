@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -405,13 +407,13 @@ export default function BlogPost({ article, allArticles = [], onBack, onSelectAr
                 </h3>
               </div>
 
-              <button
-                onClick={onBack}
+              <Link
+                href="/insights"
                 className="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-[#D4AF37] uppercase tracking-wider hover:text-[#E5C378]"
               >
                 <span>View All Articles</span>
                 <ArrowUpRight className="w-4 h-4" />
-              </button>
+              </Link>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

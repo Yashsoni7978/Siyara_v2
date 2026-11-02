@@ -57,7 +57,7 @@ export default function NotFound() {
           </Link>
 
           <Link
-            href="/blog"
+            href="/insights"
             className="inline-flex items-center gap-2 px-8 py-3.5 border border-[#D9B45F]/30 hover:border-[#D9B45F]/70 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.16em] uppercase rounded-full transition-all duration-300 bg-[#071E18]/40"
           >
             <span>INSIGHTS</span>

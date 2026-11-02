@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState, useMemo, useEffect } from 'react';
 import BlogHero from '../components/blog/BlogHero.jsx';
@@ -12,7 +12,7 @@ import { BLOG_CATEGORIES, FEATURED_ARTICLE, BLOG_ARTICLES } from '../data/blogAr
 
 const ARTICLES_PER_PAGE = 6;
 
-export default function Blog({ onNavigate }) {
+export default function Blog({ onNavigate, onSelectArticle }) {
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -69,6 +69,10 @@ export default function Blog({ onNavigate }) {
   };
 
   const handleSelectArticle = (article) => {
+    if (onSelectArticle) {
+      onSelectArticle(article);
+      return;
+    }
     setSelectedArticle(article);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
