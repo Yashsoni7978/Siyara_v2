@@ -108,7 +108,7 @@ export default function ServicesApplications() {
           transition={{ duration: 0.7 }}
           className="mb-16 max-w-3xl"
         >
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98]">
+          <h2 className="font-roboto text-4xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[0.98]">
             WHERE THE SYSTEM <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">
               IS APPLIED.
@@ -180,15 +180,15 @@ export default function ServicesApplications() {
                         <span className="h-[1px] flex-grow bg-[#D9B45F]/20" />
                       </div>
 
-                      <h3 className="font-serif text-3xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight mb-4">
+                      <h3 className="font-roboto text-3xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight mb-4">
                         {cat.name} <span className="text-[#D9B45F] font-normal">SYSTEM.</span>
                       </h3>
 
-                      <p className="font-sans text-sm sm:text-base text-[#D9B45F] font-medium leading-relaxed mb-6">
+                      <p className="font-lora text-sm sm:text-base text-[#D9B45F] font-medium leading-relaxed mb-6">
                         {cat.tagline}
                       </p>
 
-                      <p className="font-sans text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-8">
+                      <p className="font-lora text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-8">
                         {cat.details}
                       </p>
                     </div>

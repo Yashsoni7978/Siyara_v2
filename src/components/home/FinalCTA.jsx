@@ -46,7 +46,7 @@ export default function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '80px 0px' }}
           transition={{ duration: 0.5 }}
-          className="font-serif text-3xl sm:text-6xl lg:text-8xl text-[#101613] font-normal leading-[1.05] sm:leading-[0.96] tracking-tight mb-6 sm:mb-8 max-w-4xl mx-auto break-words"
+          className="font-roboto text-3xl sm:text-6xl lg:text-8xl text-[#101613] font-normal leading-[1.05] sm:leading-[0.96] tracking-tight mb-6 sm:mb-8 max-w-4xl mx-auto break-words"
         >
           READY TO BUILD <br />
           SOMETHING <span className="text-[#0B5E49] font-normal">BETTER?</span>

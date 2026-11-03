@@ -33,13 +33,13 @@ export default function Insights() {
         {/* Editorial Headline */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-end mb-8 sm:mb-12">
           <div className="lg:col-span-8">
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[1.05] sm:leading-[0.98] tracking-tight break-words">
+            <h2 className="font-roboto text-3xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[1.05] sm:leading-[0.98] tracking-tight break-words">
               THINKING BEYOND <br />
               THE <span className="text-[#0B5E49] font-normal">WEBSITE.</span>
             </h2>
           </div>
           <div className="lg:col-span-4 flex lg:justify-end flex-col items-start lg:items-end">
-            <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-sm mb-4">
+            <p className="font-lora text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-sm mb-4">
               Strategic insights on digital growth, brand positioning, search intelligence, and conversion engineering.
             </p>
             <Link
@@ -71,11 +71,11 @@ export default function Insights() {
                 </span>
               </div>
 
-              <h3 className="font-serif text-xl sm:text-3xl lg:text-4xl text-[#101613] font-normal leading-snug sm:leading-tight mb-3 sm:mb-4 group-hover:text-[#0B5E49] transition-colors break-words">
+              <h3 className="font-roboto text-xl sm:text-3xl lg:text-4xl text-[#101613] font-normal leading-snug sm:leading-tight mb-3 sm:mb-4 group-hover:text-[#0B5E49] transition-colors break-words">
                 {leadArticle.title}
               </h3>
 
-              <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-xl mb-6 sm:mb-8">
+              <p className="font-lora text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed max-w-xl mb-6 sm:mb-8">
                 {leadArticle.excerpt}
               </p>
             </div>
@@ -123,11 +123,11 @@ export default function Insights() {
                     {article.category}
                   </span>
 
-                  <h4 className="font-serif text-xl sm:text-2xl text-[#101613] font-normal leading-snug mb-3 group-hover:text-[#0B5E49] transition-colors">
+                  <h4 className="font-roboto text-xl sm:text-2xl text-[#101613] font-normal leading-snug mb-3 group-hover:text-[#0B5E49] transition-colors">
                     {article.title}
                   </h4>
 
-                  <p className="font-sans text-xs text-[#101613]/70 font-light leading-relaxed mb-4 line-clamp-2">
+                  <p className="font-lora text-xs text-[#101613]/70 font-light leading-relaxed mb-4 line-clamp-2">
                     {article.excerpt}
                   </p>
                 </div>

@@ -1,5 +1,5 @@
-import { APPROVED_INDEXABLE_ARTICLES, FEATURED_ARTICLE, BLOG_ARTICLES } from '../src/data/blogArticles';
-import { getApprovedCaseStudies } from '../src/data/caseStudies';
+import { APPROVED_INDEXABLE_ARTICLES, FEATURED_ARTICLE, BLOG_ARTICLES } from '../src/data/blogArticles.js';
+import { getApprovedCaseStudies } from '../src/data/caseStudies.js';
 
 export const dynamic = "force-static";
 

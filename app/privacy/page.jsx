@@ -77,10 +77,10 @@ export default function PrivacyPage() {
               LEGAL DOCUMENTATION
             </span>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-[#F3EFE3] mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-roboto font-normal text-[#F3EFE3] mb-4">
             Privacy Policy
           </h1>
-          <p className="text-sm font-sans text-[#9D9B91]">
+          <p className="text-sm font-lora text-[#9D9B91]">
             Effective Date: October 21, 2026 · Governing Location: Jaipur, Rajasthan, India
           </p>
         </div>
@@ -88,7 +88,7 @@ export default function PrivacyPage() {
         {/* Content Body */}
         <div className="space-y-10 text-sm sm:text-base font-sans leading-relaxed text-[#D2CEC4]">
           <section className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-serif text-[#F3EFE3] font-normal">
+            <h2 className="text-xl sm:text-2xl font-roboto text-[#F3EFE3] font-normal">
               1. Overview & Commitment
             </h2>
             <p>
@@ -100,7 +100,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-serif text-[#F3EFE3] font-normal">
+            <h2 className="text-xl sm:text-2xl font-roboto text-[#F3EFE3] font-normal">
               2. Information We Collect
             </h2>
             <p>We collect information only when voluntarily submitted by you or collected passively for performance diagnostics:</p>
@@ -118,7 +118,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-serif text-[#F3EFE3] font-normal">
+            <h2 className="text-xl sm:text-2xl font-roboto text-[#F3EFE3] font-normal">
               3. Purpose & Legal Basis for Processing
             </h2>
             <p>The information we collect is strictly utilized for:</p>
@@ -132,7 +132,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-serif text-[#F3EFE3] font-normal">
+            <h2 className="text-xl sm:text-2xl font-roboto text-[#F3EFE3] font-normal">
               4. Service Providers & Third-Party Infrastructure
             </h2>
             <p>
@@ -146,7 +146,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-serif text-[#F3EFE3] font-normal">
+            <h2 className="text-xl sm:text-2xl font-roboto text-[#F3EFE3] font-normal">
               5. Data Retention & Security
             </h2>
             <p>
@@ -155,7 +155,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-serif text-[#F3EFE3] font-normal">
+            <h2 className="text-xl sm:text-2xl font-roboto text-[#F3EFE3] font-normal">
               6. Your Rights
             </h2>
             <p>
@@ -164,7 +164,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-serif text-[#F3EFE3] font-normal">
+            <h2 className="text-xl sm:text-2xl font-roboto text-[#F3EFE3] font-normal">
               7. Notice on Legal Review
             </h2>
             <p className="text-xs text-[#9D9B91] italic bg-[#0E1513] p-4 rounded border border-[#0B5E49]/20">
@@ -173,7 +173,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-4 border-t border-[#0B5E49]/30 pt-8">
-            <h2 className="text-xl sm:text-2xl font-serif text-[#F3EFE3] font-normal">
+            <h2 className="text-xl sm:text-2xl font-roboto text-[#F3EFE3] font-normal">
               8. Contact Details
             </h2>
             <p>For any questions or data concerns regarding this policy, please reach out to:</p>

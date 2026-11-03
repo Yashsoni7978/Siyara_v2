@@ -1,70 +1,109 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Sparkles, ArrowDown } from 'lucide-react';
+import { ArrowDown, BookOpen, Sparkles } from 'lucide-react';
 
 export default function BlogHero() {
   return (
-    <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 bg-[#080B0A] overflow-hidden">
-      {/* Deep Atmospheric Background Effects */}
-      <div className="absolute inset-0 bg-radial from-[#063C2D]/40 via-[#080B0A]/90 to-[#080B0A] pointer-events-none" />
-      
-      {/* Subtle Gold Particles / Energy Orbs */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#19A878]/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/4 right-10 w-64 h-64 bg-[#D4AF37]/5 rounded-full blur-[90px] pointer-events-none animate-pulse-glow" />
-
-      {/* Decorative Grid Mesh overlay */}
-      <div 
-        className="absolute inset-0 opacity-[0.04] pointer-events-none" 
+    <section
+      id="insights-hero"
+      aria-label="Insights Editorial Hero"
+      className="relative pt-32 pb-14 md:pt-36 md:pb-18 bg-[#080B0A] text-[#F3EFE4] overflow-hidden"
+    >
+      {/* Ambient Gradient Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#080B0A] via-[#05261C] to-[#041710] pointer-events-none" />
+      <div
+        className="absolute top-1/4 right-1/4 w-[600px] h-[400px] rounded-full pointer-events-none opacity-20"
         style={{
-          backgroundImage: `linear-gradient(#D4AF37 1px, transparent 1px), linear-gradient(90deg, #D4AF37 1px, transparent 1px)`,
-          backgroundSize: '80px 80px'
+          background: 'radial-gradient(circle at center, rgba(25, 168, 120, 0.35) 0%, transparent 70%)',
+        }}
+      />
+      <div
+        className="absolute -top-20 left-1/4 w-[500px] h-[300px] rounded-full pointer-events-none opacity-15"
+        style={{
+          background: 'radial-gradient(circle at center, rgba(212, 175, 55, 0.3) 0%, transparent 70%)',
         }}
       />
 
-      <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumbs" className="flex items-center gap-2 text-xs font-roboto text-[#C5D2CE]/70 mb-6">
+          <Link href="/" className="hover:text-[#E5C378] transition-colors">Home</Link>
+          <span>/</span>
+          <span className="text-[#E5C378] font-medium">Insights</span>
+        </nav>
+
         <div className="max-w-4xl">
           {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#D4AF37]/30 bg-[#063C2D]/30 mb-6 backdrop-blur-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-            <span className="font-sans text-[11px] font-semibold tracking-[0.25em] text-[#D4AF37] uppercase">
-              SIYARA INSIGHTS
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center gap-2.5 mb-5 sm:mb-6"
+          >
+            <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.24em] text-[#D4AF37] uppercase">
+              — SIYARA RESEARCH &amp; EDITORIAL PUBLICATION —
             </span>
-          </div>
+          </motion.div>
 
-          {/* Main Editorial Display Heading */}
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl font-light text-[#F3EFE4] leading-[1.08] tracking-tight mb-6 sm:mb-8 break-words">
-            Ideas that shape the{' '}
-            <span className="font-normal text-gold-gradient">
-              digital future.
+          {/* Master Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-roboto text-4xl sm:text-6xl lg:text-[70px] font-normal text-[#F3EFE4] leading-[1.08] tracking-tight mb-6 sm:mb-8"
+          >
+            Perspectives for the next era of{' '}
+            <span className="font-lora italic text-[#E5C378]">
+              digital growth.
             </span>
-          </h1>
+          </motion.h1>
 
-          {/* Supporting Perspective Line */}
-          <p className="font-sans text-sm sm:text-base md:text-xl text-[#CFC9BB]/90 font-light leading-relaxed max-w-2xl">
-            Insights, strategies and perspectives on building brands, technology and growth in a rapidly changing digital world.
-          </p>
+          {/* Supporting Copy */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="font-lora text-sm sm:text-base lg:text-[18px] text-[#C5D2CE] font-light leading-relaxed max-w-2xl mb-10 sm:mb-12"
+          >
+            Practical insights, engineering playbooks, and strategic perspectives from Siyara Innovations — helping forward-thinking businesses build resilient brands, fast digital experiences, and measurable commercial growth.
+          </motion.p>
         </div>
 
-        {/* Fine Editorial Accent Strip */}
-        <motion.div 
-          initial={{ opacity: 0, scaleX: 0 }}
-          animate={{ opacity: 1, scaleX: 1 }}
-          transition={{ duration: 0.8, delay: 0.35 }}
-          className="mt-14 pt-8 border-t border-[#D4AF37]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-sans text-[#CFC9BB]/70"
+        {/* Editorial Focus Area Strip */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="pt-8 border-t border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs font-roboto text-[#C5D2CE]/75"
         >
-          <div className="flex items-center gap-4">
-            <span className="text-[#D4AF37] font-sans uppercase tracking-widest text-[10px]">PUB · VOL 04</span>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span className="text-[#D4AF37] font-semibold uppercase tracking-wider text-[11px]">
+              CORE DISCIPLINES:
+            </span>
+            <span>Brand Strategy</span>
             <span className="w-1 h-1 rounded-full bg-[#19A878]" />
-            <span className="tracking-wider">Thought Leadership & Intelligence</span>
+            <span>Web Development</span>
+            <span className="w-1 h-1 rounded-full bg-[#19A878]" />
+            <span>SEO &amp; GEO</span>
+            <span className="w-1 h-1 rounded-full bg-[#19A878]" />
+            <span>E-Commerce</span>
+            <span className="w-1 h-1 rounded-full bg-[#19A878]" />
+            <span>Growth Systems</span>
           </div>
 
-          <div className="flex items-center gap-2 text-[#CFC9BB]/60 text-[11px] tracking-wider uppercase group cursor-pointer hover:text-[#D9B45F] transition-colors">
-            <span>Explore Articles</span>
-            <ArrowDown className="w-3.5 h-3.5 text-[#D9B45F] transition-transform duration-300 group-hover:translate-y-0.5" />
-          </div>
+          <a
+            href="#featured-insight"
+            className="inline-flex items-center gap-1.5 text-xs text-[#E5C378] hover:text-white uppercase tracking-wider font-semibold transition-colors group"
+          >
+            <span>Featured Insight</span>
+            <ArrowDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-y-0.5" />
+          </a>
         </motion.div>
+
       </div>
     </section>
   );

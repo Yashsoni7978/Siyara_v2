@@ -2,180 +2,105 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Cpu, Search, Target, ShieldCheck, TrendingUp } from 'lucide-react';
+import { Cpu, Search, Target, ShieldCheck, ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Results() {
-  const proofPillars = [
+  const easeCustom = [0.16, 1, 0.3, 1];
+
+  const metrics = [
     {
       id: '01',
-      title: 'PERFORMANCE',
-      label: 'Core Web Vitals and load-speed work on every build',
-      category: 'Performance',
+      metric: '< 1.8s',
+      label: 'TARGET LCP PERFORMANCE',
+      description: 'Strict Core Web Vitals optimization on every production build.',
       icon: Cpu,
     },
     {
       id: '02',
-      title: 'VISIBILITY',
-      label: 'Organic search and AI answer-engine visibility (SEO)',
-      category: 'Visibility',
+      metric: '100%',
+      label: 'STRUCTURED SEO DATA',
+      description: 'Comprehensive Schema.org graphs for Google & AI search visibility.',
       icon: Search,
     },
     {
       id: '03',
-      title: 'CONVERSION',
-      label: 'Funnel and UX architecture built around how people actually decide',
-      category: 'Conversion',
+      metric: '16',
+      label: 'DELIVERED PROJECTS',
+      description: 'Interactive commercial platforms with live verified demonstrations.',
       icon: Target,
     },
     {
       id: '04',
-      title: 'DELIVERY',
-      label: 'Structured milestones and QA before anything ships',
-      category: 'Delivery',
+      metric: '0',
+      label: 'TEMPLATE MONOTONY',
+      description: '100% bespoke engineering in Next.js, Tailwind CSS & headless architecture.',
       icon: ShieldCheck,
     },
-    {
-      id: '05',
-      title: 'OPTIMIZATION',
-      label: 'Ongoing CRO and reporting after launch',
-      category: 'Optimization',
-      icon: TrendingUp,
-    },
-  ];
-
-  const coreDeliverables = [
-    'CUSTOM WEB DEVELOPMENT',
-    'LOCAL & TECHNICAL SEO',
-    'EDITORIAL BRAND IDENTITY',
-    'HIGH-CONVERSION UI/UX',
-    'SEARCH VISIBILITY & RANKINGS',
-    'HIGH-SPEED WEB PERFORMANCE',
   ];
 
   return (
-    <section id="work" className="relative py-16 sm:py-20 bg-[#F3EFE3] overflow-hidden">
-      {/* Editorial Ivory Atmosphere */}
-      <div className="absolute inset-0 ivory-texture pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-70 pointer-events-none" />
+    <section
+      id="results"
+      aria-label="Measurable Performance Results"
+      className="relative pt-10 sm:pt-12 lg:pt-14 pb-5 sm:pb-6 bg-[#F3EFE4] text-[#080B0A] overflow-hidden"
+    >
+      {/* Background Ivory Editorial Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE4] via-[#ECE7D8]/50 to-[#F3EFE4] opacity-80 pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
-        
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.4 }}
-          className="flex items-center gap-3 mb-8 sm:mb-10"
-        >
-          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
-            06
+        <div className="mb-6 sm:mb-8 text-center max-w-2xl mx-auto">
+          <span className="text-[11px] font-roboto font-semibold tracking-[0.24em] text-[#063C2D] uppercase block mb-1.5 sm:mb-2">
+            ENGINEERING EXCELLENCE
           </span>
-          <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
-            Proof & Deliverables
-          </span>
-        </motion.div>
-
-        {/* Header Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.5 }}
-          className="mb-10 sm:mb-12 max-w-3xl"
-        >
-          <h2 className="font-serif text-3xl sm:text-5xl lg:text-5xl xl:text-6xl text-[#101613] font-normal leading-[1.05] sm:leading-[0.98] tracking-tight uppercase mb-4 break-words">
-            Real Outcomes for <span className="text-[#0B5E49] font-normal">Jaipur Brands</span>
+          <h2 className="font-roboto text-2xl sm:text-3xl lg:text-4xl font-normal text-[#080B0A] tracking-tight leading-tight">
+            Measurable Standards &amp; Quality Benchmarks
           </h2>
-          <p className="font-sans text-sm text-[#101613] font-normal leading-relaxed mb-6 max-w-lg">
-            We design and build websites, SEO systems, and brand identities that expand reach and generate measurable business growth.
-          </p>
-          <a
-            href="/work"
-            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-6 py-3.5 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.18em] uppercase transition-[background-color,border-color,box-shadow] duration-300 shadow-lg group rounded-full"
-          >
-            <span>EXPLORE SELECTED WORK</span>
-            <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </a>
-        </motion.div>
+        </div>
 
-        {/* 5 Proof Pillars Container */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '80px 0px' }}
-          variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { staggerChildren: 0.03 } },
-          }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12"
-        >
-          {proofPillars.map((item) => {
+        {/* 4-Column Continuous Editorial Results Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          {metrics.map((item, idx) => {
             const Icon = item.icon;
             return (
               <motion.div
                 key={item.id}
-                variants={{
-                  hidden: { opacity: 0, y: 15 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-                }}
-                className="p-5 sm:p-6 bg-[#ECE7D8] border border-[#B9923F]/30 hover:border-[#0B5E49]/60 rounded-none transition-[border-color,transform,box-shadow] duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-md"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-20px' }}
+                transition={{ duration: 0.4, delay: idx * 0.08, ease: easeCustom }}
+                className="p-5 sm:p-6 rounded-2xl bg-white/60 border border-[#063C2D]/10 hover:border-[#19A878]/40 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-md"
               >
-                {/* Icon */}
-                <div className="w-10 h-10 rounded-full border border-[#0B5E49]/30 bg-[#F3EFE3] flex items-center justify-center text-[#0B5E49] group-hover:bg-[#0B5E49] group-hover:text-[#F3EFE3] group-hover:border-[#0B5E49] mb-6 transition-colors">
-                  <Icon className="w-4 h-4 stroke-[1.75]" />
-                </div>
-
-                {/* Pillar Title */}
-                <div className="font-sans text-xs font-bold text-[#0B5E49] tracking-[0.12em] uppercase mb-2">
-                  {item.title}
-                </div>
-
-                {/* Label */}
-                <p className="font-sans text-[11px] text-[#101613] font-medium leading-snug mb-4">
-                  {item.label}
-                </p>
-
-                {/* Divider & Category */}
-                <div className="pt-3 border-t border-[#B9923F]/20">
-                  <span className="text-[9px] font-sans tracking-[0.16em] text-[#B9923F] uppercase font-semibold">
-                    {item.category}
-                  </span>
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-[#063C2D]/10 text-[#063C2D] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                    <Icon className="w-5 h-5 stroke-[1.8]" />
+                  </div>
+                  <div className="font-roboto text-3xl sm:text-4xl font-bold text-[#063C2D] tracking-tight mb-1">
+                    {item.metric}
+                  </div>
+                  <div className="font-roboto text-xs font-semibold tracking-wider text-[#080B0A]/80 uppercase mb-2">
+                    {item.label}
+                  </div>
+                  <p className="font-lora text-xs text-[#080B0A]/70 leading-relaxed font-light">
+                    {item.description}
+                  </p>
                 </div>
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
 
-        {/* Client Brand Strip - Tags Approach */}
-        {/* TODO: link once case study pages exist */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.5 }}
-          className="pt-12 border-t border-[#101613]/10 flex flex-col items-center justify-center gap-8"
-        >
-          <div className="flex items-center gap-2 text-xs font-sans tracking-[0.2em] text-[#0B5E49] uppercase font-bold text-center">
-            <span>Core Capabilities & Deliverables</span>
-          </div>
-
-          <div className="flex flex-wrap justify-center items-center gap-3 lg:gap-4 max-w-4xl mx-auto">
-            {coreDeliverables.map((item) => (
-              <div
-                key={item}
-                className="px-5 py-2.5 rounded-full border border-[#B9923F]/30 bg-[#ECE7D8] hover:border-[#0B5E49]/60 hover:bg-[#F3EFE3] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3 group cursor-default shadow-sm"
-              >
-                <div className="w-1.5 h-1.5 rounded-full bg-[#B9923F]/60 group-hover:bg-[#0B5E49] transition-colors" />
-                <span className="font-sans text-xs sm:text-[13px] tracking-[0.15em] text-[#101613]/80 group-hover:text-[#101613] transition-colors uppercase font-semibold">
-                  {item}
-                </span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
+        {/* Bottom CTA Affordance */}
+        <div className="mt-8 text-center">
+          <Link
+            href="/work"
+            className="inline-flex items-center gap-2 text-xs font-roboto font-semibold tracking-[0.16em] uppercase text-[#063C2D] hover:text-[#19A878] transition-colors"
+          >
+            <span>Explore All 16 Delivered Projects</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </Link>
+        </div>
       </div>
     </section>
   );

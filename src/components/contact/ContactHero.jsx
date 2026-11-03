@@ -1,95 +1,154 @@
 'use client';
 
 import React from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowUpRight, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { ArrowDown, MessageCircle, ArrowUpRight, ShieldCheck, Clock, Users } from 'lucide-react';
+import { siteConfig } from '@/data/siteConfig';
+import { trackEvent, AnalyticsEvents } from '@/utils/analytics';
 
 export default function ContactHero() {
-  const shouldReduceMotion = useReducedMotion();
-  const easeCustom = [0.16, 1, 0.3, 1];
-
-  const fadeUp = (delayMs) => ({
-    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, delay: delayMs / 1000, ease: easeCustom },
-    },
-  });
+  const handleWhatsAppClick = () => {
+    trackEvent(AnalyticsEvents.CONTACT_WHATSAPP_CLICKED, { source: 'hero_secondary_cta' });
+  };
 
   return (
     <section
-      className="relative min-h-screen pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24 bg-[#070A09] text-[#F3EFE3] overflow-hidden flex items-center"
+      id="contact-hero"
+      aria-label="Contact Siyara Innovations"
+      className="relative min-h-[85svh] pt-32 pb-16 lg:pt-36 lg:pb-24 bg-[#080B0A] text-[#F3EFE4] overflow-hidden flex items-center"
     >
-      {/* FULL-WIDTH HERO BACKGROUND IMAGE */}
-      <div className="absolute inset-0 z-0 select-none pointer-events-none">
-        <Image
-          src="/images/contact_hero.webp"
-          alt="Siyara Innovations Studio Inquiry Experience"
-          priority
-          fill
-          sizes="100vw"
-          className="object-cover object-[75%_center] sm:object-[70%_center] md:object-[68%_center] lg:object-right"
-        />
-        {/* Subtle dark gradient overlay for optimal left-side text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070A09]/95 via-[#070A09]/75 to-transparent lg:via-[#070A09]/30" />
-      </div>
+      {/* Ambient Gradient Glows (Siyara Obsidian & Emerald Atmosphere) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#080B0A] via-[#05261C] to-[#041710] pointer-events-none" />
+      <div
+        className="absolute top-1/4 right-1/4 w-[600px] h-[450px] rounded-full pointer-events-none opacity-20"
+        style={{
+          background: 'radial-gradient(circle at center, rgba(25, 168, 120, 0.35) 0%, transparent 70%)',
+        }}
+      />
+      <div
+        className="absolute -top-20 left-1/4 w-[500px] h-[300px] rounded-full pointer-events-none opacity-15"
+        style={{
+          background: 'radial-gradient(circle at center, rgba(212, 175, 55, 0.3) 0%, transparent 70%)',
+        }}
+      />
 
-      <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-12 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          {/* LEFT COLUMN: Dominant Editorial Messaging in Open Negative Space */}
-          <div className="lg:col-span-7 xl:col-span-8 flex flex-col justify-center relative z-20">
-            
-            {/* Eyebrow */}
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-[1px] w-8 bg-[#D9B45F]/60" />
-              <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.26em] text-[#D9B45F] uppercase">
-                SIYARA INVITATION
-              </span>
-            </div>
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
+        
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumbs" className="flex items-center gap-2 text-xs font-roboto text-[#C5D2CE]/70 mb-6">
+          <Link href="/" className="hover:text-[#E5C378] transition-colors">Home</Link>
+          <span>/</span>
+          <span className="text-[#E5C378] font-medium">Contact</span>
+        </nav>
 
-            {/* Master Headline */}
-            <div className="mb-6">
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal leading-[1.08] sm:leading-[0.96] tracking-tight text-[#F3EFE3] break-words">
-                <span className="block">LET'S BUILD</span>
-                <span className="block">SOMETHING</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26]">
-                  WORTH BUILDING.
+        <div className="max-w-4xl">
+          {/* Eyebrow */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-2.5 mb-5 sm:mb-6"
+          >
+            <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.24em] text-[#D4AF37] uppercase">
+              — LET&apos;S START A CONVERSATION —
+            </span>
+          </motion.div>
+
+          {/* Master Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="font-roboto text-4xl sm:text-6xl lg:text-[72px] font-normal text-[#F3EFE4] leading-[1.08] tracking-tight mb-6 sm:mb-8"
+          >
+            Have a Project{' '}
+            <span className="font-lora italic text-[#E5C378]">
+              in Mind?
+            </span>
+          </motion.h1>
+
+          {/* Supporting Copy */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="font-lora text-sm sm:text-base lg:text-[18px] text-[#C5D2CE] font-light leading-relaxed max-w-2xl mb-10 sm:mb-12"
+          >
+            Tell us what you&apos;re building, where you want to go, and how we can help you get there. Every project starts with a clear, strategic conversation.
+          </motion.p>
+
+          {/* Dual Action CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5 mb-14 sm:mb-16"
+          >
+            <a
+              href="#inquiry-form"
+              className="inline-flex items-center justify-center min-h-[48px] gap-2.5 px-8 py-3.5 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs sm:text-sm font-roboto font-bold tracking-[0.14em] rounded-full transition-all duration-300 shadow-xl hover:-translate-y-0.5 group"
+            >
+              <span>Submit Project Inquiry</span>
+              <ArrowDown className="w-4 h-4 transition-transform duration-200 group-hover:translate-y-0.5" />
+            </a>
+
+            <a
+              href={siteConfig.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleWhatsAppClick}
+              className="inline-flex items-center justify-center min-h-[48px] gap-2.5 px-8 py-3.5 border border-[#E5C378]/50 bg-[#063C2D]/50 hover:bg-[#063C2D] text-[#F3EFE4] hover:text-[#E5C378] text-xs sm:text-sm font-roboto font-medium tracking-[0.14em] rounded-full transition-all duration-300 shadow-lg hover:-translate-y-0.5 group"
+            >
+              <MessageCircle className="w-4 h-4 text-[#19A878]" />
+              <span>Message on WhatsApp</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-[#E5C378] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+          </motion.div>
+
+          {/* Assurance Standard Strip */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-white/10"
+          >
+            <div className="flex items-start gap-3">
+              <Users className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
+              <div>
+                <span className="font-roboto text-xs font-bold uppercase tracking-wider text-[#F3EFE4] block mb-0.5">
+                  Direct Studio Directors
                 </span>
-              </h1>
+                <p className="font-lora text-xs text-[#C5D2CE]/80 leading-relaxed">
+                  You speak directly with lead architects, not account managers.
+                </p>
+              </div>
             </div>
 
-            {/* Supporting Copy */}
-            <div className="mb-8 sm:mb-10 max-w-lg">
-              <p className="font-sans text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Tell us where you want to go. We'll help architect the digital system to get you there - built for Jaipur's market.
-              </p>
+            <div className="flex items-start gap-3">
+              <Clock className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
+              <div>
+                <span className="font-roboto text-xs font-bold uppercase tracking-wider text-[#F3EFE4] block mb-0.5">
+                  Prompt Scoping Response
+                </span>
+                <p className="font-lora text-xs text-[#C5D2CE]/80 leading-relaxed">
+                  Every inquiry receives a thoughtful strategic assessment.
+                </p>
+              </div>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5">
-              <a
-                href="#intake"
-                className="inline-flex items-center justify-center min-h-[48px] gap-2.5 px-8 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
-              >
-                <span>START A CONVERSATION</span>
-                <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
-              </a>
-
-              <a
-                href="#contact-direct"
-                className="inline-flex items-center justify-center min-h-[48px] gap-2 px-8 py-3.5 border border-[#F3EFE3]/25 hover:border-[#D9B45F]/60 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#070A09]/40 backdrop-blur-sm"
-              >
-                <span>BOOK A STRATEGY SESSION</span>
-                <ArrowRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-1 transition-transform" />
-              </a>
+            <div className="flex items-start gap-3">
+              <ShieldCheck className="w-4 h-4 text-[#19A878] shrink-0 mt-0.5" />
+              <div>
+                <span className="font-roboto text-xs font-bold uppercase tracking-wider text-[#F3EFE4] block mb-0.5">
+                  Transparent Proposals
+                </span>
+                <p className="font-lora text-xs text-[#C5D2CE]/80 leading-relaxed">
+                  Fixed scopes, clear deliverables, and no hidden surprises.
+                </p>
+              </div>
             </div>
-          </div>
-
-          {/* RIGHT COLUMN: Open space showcasing the background communication artwork */}
-          <div className="hidden lg:block lg:col-span-5 xl:col-span-4" />
+          </motion.div>
 
         </div>
       </div>

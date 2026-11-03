@@ -1,92 +1,179 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+'use client';
+
+import React, { useRef, useState, useEffect } from 'react';
+import { motion, useInView, useReducedMotion } from 'framer-motion';
+import { Award, Briefcase, Globe, Layers } from 'lucide-react';
+
+function Counter({ target, suffix = '', prefix = '' }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-40px' });
+  const [count, setCount] = useState(target);
+
+  useEffect(() => {
+    const prefersReducedMotion =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion || !isInView) return;
+
+    const duration = 1200;
+    const startTime = performance.now();
+    setCount(0);
+
+    const frame = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(ease * target));
+
+      if (progress < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        setCount(target);
+      }
+    };
+
+    requestAnimationFrame(frame);
+  }, [isInView, target]);
+
+  return (
+    <span ref={ref} className="tabular-nums">
+      {prefix}{count}{suffix}
+    </span>
+  );
+}
 
 export default function Numbers() {
+  const shouldReduceMotion = useReducedMotion();
   const easeCustom = [0.16, 1, 0.3, 1];
 
-  const stats = [
+  const verifiedMetrics = [
     {
       id: '01',
-      number: '100+',
-      label: 'PROJECTS DELIVERED',
-      description: 'For businesses across Jaipur and beyond.',
+      number: 60,
+      suffix: '+',
+      label: 'Client Engagements Delivered',
+      context: 'Partnered with growing enterprises across Jaipur, pan-India, and select international markets to engineer digital solutions.',
+      icon: Briefcase,
     },
     {
       id: '02',
-      number: '50+',
-      label: 'BUSINESSES GROWN',
-      description: 'Through strategy, design, and execution that actually connects.',
+      number: 110,
+      suffix: '+',
+      label: 'Digital Projects Launched',
+      context: 'Encompassing custom Next.js web applications, e-commerce storefronts, and brand identity systems.',
+      icon: Layers,
     },
     {
       id: '03',
-      number: '4+',
-      label: 'YEARS OF EXPERIENCE',
-      description: 'Building digital systems that hold up.',
+      number: 12,
+      suffix: '',
+      label: 'Industry Verticals Mastered',
+      context: 'Specialized architectures across healthcare, luxury jewellery, hospitality, fashion, real estate, and culinary venues.',
+      icon: Globe,
     },
     {
       id: '04',
-      number: '1',
-      label: 'MISSION',
-      description: 'To help Jaipur businesses show up the way they actually deserve to.',
+      number: 6,
+      suffix: '+',
+      label: 'Years Combined Background',
+      context: 'Combined professional engineering, UI/UX systems design, and commercial growth optimization experience.',
+      icon: Award,
     },
   ];
 
   return (
-    <section id="numbers" className="relative py-16 sm:py-20 bg-[#F3EFE3] text-[#101613] overflow-hidden">
-      {/* Editorial Ivory Background */}
-      <div className="absolute inset-0 ivory-texture pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-80 pointer-events-none" />
+    <section
+      id="experience-impact"
+      aria-label="Experience & Verified Impact"
+      className="relative py-20 sm:py-24 lg:py-28 bg-[#F3EFE4] text-[#080B0A] overflow-hidden border-t border-[#080B0A]/10"
+    >
+      {/* Subtle Warm Ivory Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE4] via-[#ECE7D8]/50 to-[#F3EFE4] opacity-80 pointer-events-none" />
+      
+      {/* Architectural Background Grid Texture */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.035]"
+        style={{
+          backgroundImage:
+            'linear-gradient(to right, #080B0A 1px, transparent 1px), linear-gradient(to bottom, #080B0A 1px, transparent 1px)',
+          backgroundSize: '80px 80px',
+        }}
+      />
 
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
-        {/* Eyebrow */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.5, ease: easeCustom }}
-          className="flex items-center gap-3 mb-10 sm:mb-16"
-        >
-          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
-            04
+        {/* Section Identifier */}
+        <div className="flex items-center gap-3 mb-6 sm:mb-8">
+          <span className="text-xs font-roboto font-medium tracking-[0.24em] text-[#B9923F]">
+            06
           </span>
-          <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
-            PROOF & METRICS
+          <span className="w-8 h-[1px] bg-[#063C2D]/30" />
+          <span className="text-[11px] sm:text-xs font-roboto font-semibold tracking-[0.24em] text-[#063C2D] uppercase">
+            EXPERIENCE &amp; IMPACT
           </span>
-        </motion.div>
+        </div>
 
-        {/* 4 Large Editorial Numbers Grid with Thin Dividers */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 border-t border-[#B9923F]/30 pt-8 sm:pt-12">
-          {stats.map((stat, idx) => (
-            <motion.div
-              key={stat.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '80px 0px' }}
-              transition={{ duration: 0.5, delay: 0.04 * idx, ease: easeCustom }}
-              className={`flex flex-col justify-between p-5 sm:p-6 lg:p-0 lg:px-8 rounded-xl lg:rounded-none bg-[#ECE7D8]/60 lg:bg-transparent border border-[#0B5E49]/10 lg:border-none relative ${
-                idx !== 0 ? 'lg:border-l lg:border-[#B9923F]/30' : ''
-              }`}
-            >
-              <div>
-                {/* Large Number */}
-                <div className="font-serif text-6xl sm:text-7xl lg:text-8xl text-[#0B5E49] font-normal leading-none mb-4 tracking-tight">
-                  {stat.number}
+        {/* Section Headline */}
+        <div className="max-w-3xl mb-12 sm:mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '60px 0px' }}
+            transition={{ duration: 0.5, ease: easeCustom }}
+            className="font-roboto text-3xl sm:text-4xl lg:text-5xl font-normal text-[#080B0A] leading-[1.12] sm:leading-[1.08] tracking-tight mb-4"
+          >
+            Work that moves{' '}
+            <span className="italic font-roboto text-[#063C2D]">
+              businesses forward.
+            </span>
+          </motion.h2>
+          <p className="font-lora text-sm sm:text-base text-[#101613]/75 font-light leading-relaxed max-w-2xl">
+            Substantiated metrics reflecting genuine studio capability and commercial execution delivered across diverse industry engagements.
+          </p>
+        </div>
+
+        {/* 4 Metric Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          {verifiedMetrics.map((stat, idx) => {
+            const Icon = stat.icon;
+            return (
+              <motion.div
+                key={stat.id}
+                initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '60px 0px' }}
+                transition={{ duration: 0.5, delay: 0.05 * idx, ease: easeCustom }}
+                className="p-8 rounded-3xl bg-[#ECE7D8]/80 border border-[#063C2D]/15 shadow-sm flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-[10px] font-roboto font-semibold tracking-[0.2em] text-[#B9923F] uppercase">
+                      METRIC {stat.id}
+                    </span>
+                    <Icon className="w-4 h-4 text-[#063C2D]/60" />
+                  </div>
+
+                  <div className="font-roboto text-4xl sm:text-5xl lg:text-6xl font-normal text-[#080B0A] mb-2 tracking-tight">
+                    <Counter target={stat.number} suffix={stat.suffix} />
+                  </div>
+
+                  <h3 className="font-roboto text-base font-semibold text-[#080B0A] mb-2">
+                    {stat.label}
+                  </h3>
+
+                  <p className="font-lora text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed">
+                    {stat.context}
+                  </p>
                 </div>
 
-                {/* Label */}
-                <h3 className="font-sans text-xs font-bold tracking-[0.18em] text-[#101613] uppercase mb-2">
-                  {stat.label}
-                </h3>
-
-                {/* Description */}
-                <p className="font-sans text-xs text-[#101613]/70 font-light leading-relaxed">
-                  {stat.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+                <div className="pt-4 mt-6 border-t border-[#080B0A]/10 flex items-center justify-between text-[10px] font-roboto font-medium tracking-wider text-[#063C2D] uppercase">
+                  <span>Verified Studio Record</span>
+                  <span>✦</span>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
       </div>

@@ -1,121 +1,102 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { motion, useReducedMotion } from 'framer-motion';
 
 export default function OurStory() {
+  const shouldReduceMotion = useReducedMotion();
   const easeCustom = [0.16, 1, 0.3, 1];
 
   return (
-    <section id="story" className="relative py-16 sm:py-20 bg-[#F3EFE3] text-[#101613] overflow-hidden">
-      {/* Ivory Editorial Background */}
-      <div className="absolute inset-0 ivory-texture pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-80 pointer-events-none" />
-
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+    <section
+      id="our-story"
+      aria-label="02 — Our Story"
+      className="relative py-20 sm:py-24 lg:py-28 bg-[#F4EFE6] text-[#080B0A] overflow-hidden"
+    >
+      <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
-        {/* Section Eyebrow */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.5, ease: easeCustom }}
-          className="flex items-center gap-3 mb-8 sm:mb-10"
-        >
-          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
+        {/* Section Identifier */}
+        <div className="flex items-center gap-2.5 mb-8 sm:mb-10">
+          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#C99742]">
             02
           </span>
-          <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
-            THE ORIGIN
+          <span className="text-xs sm:text-sm text-[#080B0A]/40 font-normal">—</span>
+          <span className="text-[11px] sm:text-xs font-roboto font-bold tracking-[0.22em] text-[#080B0A] uppercase">
+            OUR STORY
           </span>
-        </motion.div>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        {/* 2-Column Balanced Composition */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* LEFT COLUMN: Editorial Story Copy */}
-          <div className="lg:col-span-6 flex flex-col justify-center">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '80px 0px' }}
-              transition={{ duration: 0.6, ease: easeCustom }}
-              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.12] sm:leading-[1.08] tracking-tight text-[#101613] mb-6 sm:mb-8 break-words"
-            >
-              Siyara Innovations started because Jaipur businesses deserved better than templates and copy-paste strategy.
-            </motion.h2>
+          {/* LEFT COLUMN: Narrative */}
+          <motion.div
+            initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.6, ease: easeCustom }}
+            className="lg:col-span-6 flex flex-col justify-start"
+          >
+            {/* Primary Headline */}
+            <h2 className="font-lora text-3xl sm:text-4xl lg:text-[46px] font-normal text-[#080B0A] leading-[1.15] tracking-tight mb-4">
+              More than services.<br />
+              A <span className="italic text-[#C99742]">connected way</span><br />
+              of thinking.
+            </h2>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '80px 0px' }}
-              transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
-              className="flex flex-col gap-4 sm:gap-5 max-w-lg text-sm sm:text-base font-sans text-[#101613]/70 leading-relaxed font-light"
-            >
+            {/* Gold Underline Accent */}
+            <div className="w-16 h-[2px] bg-[#C99742] mb-8" />
+
+            {/* Editorial Story Text */}
+            <div className="space-y-4 font-lora text-sm sm:text-base text-[#2D3230] leading-relaxed max-w-xl">
               <p>
-                We saw good businesses - with real quality behind them - lose customers to competitors who simply looked and showed up better online. So we started Siyara to close that gap.
+                Siyara Innovations was founded to solve a common challenge — great ideas often lose impact when strategy, design, technology and growth work in isolation.
               </p>
               <p>
-                Today we partner with Jaipur businesses to build digital systems that aren’t just well-designed, but built to perform, convert, and grow.
+                We bring these pieces together, so your brand moves forward with{' '}
+                <strong className="font-semibold text-[#080B0A]">clarity, consistency and real business impact</strong>.
               </p>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
 
-          {/* RIGHT COLUMN: Asymmetric Editorial Composition */}
-          <div className="lg:col-span-6 relative">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: '80px 0px' }}
-              transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
-              className="relative mx-auto max-w-md lg:max-w-none"
-            >
-              <div className="relative grid grid-cols-12 items-center">
-                
-                {/* Main Dark Studio Environment Image */}
-                <div className="col-start-1 col-end-10 row-start-1 relative z-10 bg-[#070A09] border border-[#B9923F]/30 p-1 shadow-xl">
-                  <div className="relative aspect-[4/5] sm:aspect-[4/4.5] overflow-hidden bg-[#071E18]">
-                    <Image
-                      src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
-                      alt="Siyara Studio workspace"
-                      width={800}
-                      height={1000}
-                      className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#070A09]/90 via-transparent to-transparent" />
-                    <div className="absolute bottom-4 left-4 text-[10px] font-sans text-[#D9B45F] tracking-widest uppercase">
-                      SIYARA WORKSPACE
-                    </div>
-                  </div>
-                </div>
+          {/* RIGHT COLUMN: Brand Craft / Studio Workspace Visual with Architectural Gold Brackets */}
+          <motion.div
+            initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.6, delay: 0.1, ease: easeCustom }}
+            className="lg:col-span-6 flex justify-center lg:justify-end"
+          >
+            <div className="relative w-full max-w-[500px]">
+              {/* Architectural Gold Bracket: Top-Right */}
+              <div 
+                aria-hidden="true"
+                className="absolute -top-3.5 -right-3.5 sm:-top-4 sm:-right-4 w-32 sm:w-40 h-24 sm:h-28 border-t-2 border-r-2 border-[#C99742]/80 z-20 pointer-events-none" 
+              />
+              
+              {/* Architectural Gold Bracket: Bottom-Left */}
+              <div 
+                aria-hidden="true"
+                className="absolute -bottom-3.5 -left-3.5 sm:-bottom-4 sm:-left-4 w-32 sm:w-40 h-24 sm:h-28 border-b-2 border-l-2 border-[#C99742]/80 z-20 pointer-events-none" 
+              />
 
-                {/* Layered Deep Emerald Card with Gold "S" Watermark (Overlapping) */}
-                <div className="col-start-7 col-end-13 row-start-1 mt-24 sm:mt-32 relative z-20 bg-[#071E18] border border-[#D9B45F]/40 p-4 sm:p-8 shadow-[0_20px_40px_rgba(7,10,9,0.5)] flex flex-col justify-between aspect-square hover:-translate-y-2 transition-transform duration-500">
-                  <div className="font-serif text-4xl sm:text-6xl text-[#D9B45F] opacity-40 font-bold leading-none">
-                    S
-                  </div>
-                  <div className="text-right">
-                    <div className="text-[10px] font-sans text-[#F3EFE3] tracking-widest uppercase mb-1">
-                      SIYARA✦
-                    </div>
-                    <div className="text-[9px] font-sans text-[#D9B45F] tracking-widest uppercase font-semibold">
-                      DIGITAL STUDIO
-                    </div>
-                  </div>
-                </div>
-
+              {/* Photo Container */}
+              <div className="relative overflow-hidden shadow-2xl aspect-[16/11] w-full bg-[#E5DEC9]">
+                <Image
+                  src="/images/about-story-workspace.webp"
+                  alt="Siyara Innovations studio workspace with branded monogram mug, laptop and daylight"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 500px"
+                  className="object-cover object-center"
+                  priority
+                />
               </div>
-
-              {/* Gold Script Callout "Built Different." at bottom right */}
-              <div className="absolute -bottom-5 sm:-bottom-6 right-2 sm:right-4 z-30 font-serif text-3xl sm:text-5xl text-[#B9923F] tracking-wide pointer-events-none max-w-full truncate">
-                Built Different.
-              </div>
-
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
 
         </div>
+
       </div>
     </section>
   );

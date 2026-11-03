@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Compass, Edit3, Code, Rocket, TrendingUp, ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Process() {
   const [activeStep, setActiveStep] = useState(0);
@@ -79,11 +80,11 @@ export default function Process() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-7"
           >
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.05] sm:leading-[0.98] mb-4 break-words">
+            <h2 className="font-roboto text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.05] sm:leading-[0.98] mb-4 break-words">
               Our proven 6-step <br />
               process to <span className="text-[#D9B45F] font-normal">success.</span>
             </h2>
-            <p className="font-sans text-sm sm:text-base text-[#9D9B91] font-light max-w-lg leading-relaxed">
+            <p className="font-lora text-sm sm:text-base text-[#9D9B91] font-light max-w-lg leading-relaxed">
               A structured approach that ensures clarity, quality and measurable results at every step.
             </p>
           </motion.div>
@@ -95,13 +96,13 @@ export default function Process() {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="lg:col-span-5 flex lg:justify-end"
           >
-            <a
-              href="#contact"
+            <Link
+              href="/services#services-process"
               className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2 px-7 py-3.5 border border-[#D9B45F] bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase transition-[background-color,box-shadow,transform] duration-300 shadow-lg group rounded-full"
             >
               <span>VIEW DETAILED PROCESS</span>
               <ArrowUpRight className="w-4 h-4 text-[#101613] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
+            </Link>
           </motion.div>
         </div>
 
@@ -175,7 +176,7 @@ export default function Process() {
                   </h3>
 
                   {/* Description */}
-                  <p className="font-sans text-[11px] text-[#9D9B91] font-light leading-relaxed max-w-[160px]">
+                  <p className="font-lora text-[11px] text-[#9D9B91] font-light leading-relaxed max-w-[160px]">
                     {step.description}
                   </p>
                 </motion.div>

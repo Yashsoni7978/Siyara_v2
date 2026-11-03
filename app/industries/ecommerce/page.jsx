@@ -22,7 +22,7 @@ export const metadata = {
     follow: true,
   },
   title: 'E-Commerce Website Development Jaipur',
-  description: 'Headless Next.js e-commerce development, sub-second checkout speeds, and organic shopping SEO for retail and D2C brands in Jaipur, Rajasthan.',
+  description: 'Headless Next.js e-commerce development, streamlined checkout speeds, and organic shopping SEO for retail and D2C brands in Jaipur, Rajasthan.',
   alternates: {
     canonical: 'https://www.siyaradigitals.com/industries/ecommerce',
   },
@@ -31,7 +31,7 @@ export const metadata = {
     url: 'https://www.siyaradigitals.com/industries/ecommerce',
     siteName: 'Siyara Innovations',
     title: 'E-Commerce Website Development Jaipur | Siyara Innovations',
-    description: 'Headless Next.js e-commerce development, sub-second checkout speeds, and organic shopping SEO for retail and D2C brands in Jaipur, Rajasthan.',
+    description: 'Headless Next.js e-commerce development, streamlined checkout speeds, and organic shopping SEO for retail and D2C brands in Jaipur, Rajasthan.',
     images: [
       {
         url: 'https://www.siyaradigitals.com/images/siyara_og_image.png',
@@ -52,7 +52,7 @@ export const metadata = {
 
 const CAPABILITIES = [
   'Headless Next.js 15 E-Commerce Architecture',
-  'Instant Sub-Second Product Page Rendering',
+  'High-Performance Product Page Rendering',
   'UPI, Razorpay & International Payment Gateways',
   'Product & AggregateRating Schema Injection',
   'Conversion Rate Optimization (CRO) & Abandonment Funnels',
@@ -61,7 +61,7 @@ const CAPABILITIES = [
 const FAQS = [
   {
     q: 'How does headless Next.js e-commerce improve store sales in Jaipur?',
-    a: 'Every 1-second improvement in page load speed increases mobile e-commerce conversions by up to 20%. Next.js eliminates checkout delays and catalog lag.',
+    a: 'Every 1-second improvement in page load speed increases mobile e-commerce conversions by up to 20%. Next.js helps minimize checkout delays and catalog lag.',
   },
   {
     q: 'Which payment gateways are supported for Indian businesses?',
@@ -115,12 +115,12 @@ export default function EcommerceIndustryPage() {
             </span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F3EFE3] leading-[1.12] sm:leading-[1.1] break-words mb-5 sm:mb-6">
+          <h1 className="font-roboto text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#F3EFE3] leading-[1.12] sm:leading-[1.1] break-words mb-5 sm:mb-6">
             E-Commerce Website Development in Jaipur
           </h1>
 
-          <p className="font-sans text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light">
-            Headless Next.js online stores, sub-second product catalog speeds, and organic shopping SEO engineered for retail and D2C brands.
+          <p className="font-lora text-sm sm:text-lg text-[#9D9B91] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-light">
+            Headless Next.js online stores, high-speed product catalog speeds, and organic shopping SEO engineered for retail and D2C brands.
           </p>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 sm:gap-4">
@@ -153,12 +153,12 @@ export default function EcommerceIndustryPage() {
             <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-3">
               RETAIL VELOCITY & CITABILITY
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
+            <h2 className="font-roboto text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F3EFE3] mb-4 sm:mb-6 break-words">
               Why Choose Headless Next.js Architecture for E-Commerce Brands in Jaipur?
             </h2>
             <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#070A09]/80 border border-[#18A982]/20 mb-6">
-              <p className="font-sans text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
-                Traditional e-commerce stores running on standard monolithic plugins or unoptimized third-party hosted themes suffer from slow mobile product rendering, cart checkout friction, and poor Google organic ranking. Siyara Innovations delivers high-velocity headless e-commerce architectures powered by Next.js 15, React 19, and serverless payment APIs. By separating front-end presentation from back-end inventory catalogs, our builds load catalog collections and product detail pages with instantaneous sub-second response times. Our engineering stack guarantees Largest Contentful Paint (LCP) under 1.8 seconds, Cumulative Layout Shift (CLS) under 0.02, and Interaction to Next Paint (INP) under 80 milliseconds. Furthermore, we implement complete Product, AggregateRating, and OfferCatalog Schema.org markup alongside localized Indian payment gateways (UPI, Cards, NetBanking). This technical foundation enables Jaipur lifestyle, apparel, handicraft, and D2C brands to rank on Google Shopping, get recommended in generative search engines like SearchGPT, and convert high-intent shoppers with maximum transaction velocity.
+              <p className="font-lora text-xs sm:text-base text-[#ECE7D8] leading-relaxed font-light">
+                Traditional e-commerce stores running on standard monolithic plugins or unoptimized third-party hosted themes suffer from slow mobile product rendering, cart checkout friction, and poor Google organic ranking. Siyara Innovations delivers high-velocity headless e-commerce architectures powered by Next.js 15, React 19, and serverless payment APIs. By separating front-end presentation from back-end inventory catalogs, our builds load catalog collections and product detail pages with rapid response times. Our engineering builds target fast visual load times, stable layouts, and responsive mobile interactions. Furthermore, we implement complete Product, AggregateRating, and OfferCatalog Schema.org markup alongside localized Indian payment gateways (UPI, Cards, NetBanking). This technical foundation enables Jaipur lifestyle, apparel, handicraft, and D2C brands to rank on Google Shopping, get recommended in generative search engines like SearchGPT, and convert high-intent shoppers with maximum transaction velocity.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-[#9D9B91]">
@@ -189,7 +189,7 @@ export default function EcommerceIndustryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
             HEADLESS COMMERCE FEATURES
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] break-words">
             Engineered for Retail Revenue
           </h2>
         </div>
@@ -220,10 +220,10 @@ export default function EcommerceIndustryPage() {
                 <BookOpen className="w-3.5 h-3.5" />
                 <span>EXECUTIVE INDUSTRY PLAYBOOK</span>
               </div>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
+              <h3 className="font-roboto text-xl sm:text-2xl text-[#F3EFE3] group-hover:text-[#D9B45F] transition-colors leading-snug">
                 E-Commerce Website Development Cost in India (2026 Guide): Shopify vs Custom Next.js
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
+              <p className="font-lora text-xs sm:text-sm text-[#9D9B91] mt-2 font-light leading-relaxed">
                 A rigorous breakdown comparing Shopify versus bespoke Next.js headless architectures, Core Web Vitals impact on conversion rate, and real cost of ownership.
               </p>
             </div>
@@ -246,7 +246,7 @@ export default function EcommerceIndustryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-2">
             KNOWLEDGE BASE
           </span>
-          <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
+          <h2 className="font-roboto text-2xl sm:text-3xl font-normal text-[#F3EFE3] break-words">
             Frequently Asked Questions
           </h2>
         </div>
@@ -257,11 +257,11 @@ export default function EcommerceIndustryPage() {
               key={idx}
               className="p-5 sm:p-6 rounded-xl bg-[#0B110F] border border-[#18A982]/15 hover:border-[#D9B45F]/30 transition-all"
             >
-              <h3 className="font-serif text-base sm:text-xl text-[#F3EFE3] mb-2 flex items-start gap-2.5">
+              <h3 className="font-roboto text-base sm:text-xl text-[#F3EFE3] mb-2 flex items-start gap-2.5">
                 <HelpCircle className="w-4 h-4 text-[#D9B45F] shrink-0 mt-1" />
                 <span>{faq.q}</span>
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#9D9B91] leading-relaxed pl-6">
+              <p className="font-lora text-xs sm:text-sm text-[#9D9B91] leading-relaxed pl-6">
                 {faq.a}
               </p>
             </div>
@@ -275,10 +275,10 @@ export default function EcommerceIndustryPage() {
           <span className="text-xs font-semibold tracking-[0.24em] text-[#D9B45F] uppercase block mb-3">
             SCALE YOUR ONLINE RETAIL REVENUE
           </span>
-          <h2 className="font-serif text-2xl sm:text-4xl font-normal text-[#F3EFE3] mb-4 break-words">
+          <h2 className="font-roboto text-2xl sm:text-4xl font-normal text-[#F3EFE3] mb-4 break-words">
             Build a High-Speed Headless E-Commerce Store in Jaipur
           </h2>
-          <p className="font-sans text-xs sm:text-base text-[#9D9B91] max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed">
+          <p className="font-lora text-xs sm:text-base text-[#9D9B91] max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed">
             Connect directly with our e-commerce architects via WhatsApp to audit your online store speed and checkout funnel.
           </p>
 

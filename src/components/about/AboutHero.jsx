@@ -2,100 +2,119 @@
 
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function AboutHero() {
   const shouldReduceMotion = useReducedMotion();
-
   const easeCustom = [0.16, 1, 0.3, 1];
 
-  const fadeUp = (delayMs) => ({
-    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, delay: delayMs / 1000, ease: easeCustom },
-    },
-  });
-
   return (
-    <section className="relative min-h-screen pt-28 pb-16 sm:pt-36 sm:pb-20 lg:pt-48 lg:pb-32 bg-[#070A09] text-[#F3EFE3] overflow-hidden flex items-center">
-      {/* Obsidian Base Canvas */}
-      <div className="absolute inset-0 bg-[#070A09] z-0" />
-
-      {/* Atmospheric Background (Existing glow treatment without physical images) */}
-      <div className="absolute right-[5%] lg:right-[15%] top-1/2 -translate-y-1/2 w-[320px] h-[320px] sm:w-[450px] sm:h-[450px] lg:w-[650px] lg:h-[650px] bg-gradient-to-tr from-[#071E18]/40 via-[#0C6B52]/10 to-transparent blur-3xl rounded-full pointer-events-none z-[1]" />
+    <section 
+      id="about-hero" 
+      aria-label="About Siyara Innovations Hero"
+      className="relative min-h-[85vh] pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-20 lg:pb-24 bg-[#080B0A] text-[#F3EFE4] overflow-hidden flex items-center"
+    >
+      {/* Background Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#063C2D]/35 via-[#080B0A] to-[#080B0A] pointer-events-none" />
+      <div
+        className="absolute top-1/4 left-1/4 -translate-x-1/2 w-[600px] h-[600px] rounded-full pointer-events-none opacity-30"
+        style={{
+          background: 'radial-gradient(circle at center, rgba(25, 168, 120, 0.2) 0%, transparent 70%)',
+        }}
+      />
       
-      {/* Subtle Architectural Grid / Overlays for the right side to let it breathe */}
-      <div className="absolute right-0 top-0 bottom-0 w-1/3 border-l border-[#D9B45F]/5 bg-gradient-to-l from-[#071E18]/10 to-transparent pointer-events-none z-[1] hidden lg:block" />
-      <div className="absolute right-1/4 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-[#D9B45F]/10 to-transparent pointer-events-none z-[1] hidden lg:block" />
+      {/* Architectural Background Lines */}
+      <div className="absolute right-0 top-0 bottom-0 w-1/3 border-l border-[#D4AF37]/10 bg-gradient-to-l from-[#063C2D]/15 to-transparent pointer-events-none hidden lg:block" />
 
-      <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-12 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
           {/* LEFT COLUMN: Editorial Hero Content */}
-          <div className="lg:col-span-8 xl:col-span-7 flex flex-col justify-center relative z-20">
-            
-            {/* Eyebrow */}
-            <div className="flex items-center gap-3 mb-6 sm:mb-8">
-              <span className="h-[1px] w-8 bg-[#D9B45F]/60" />
-              <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.26em] text-[#D9B45F] uppercase">
+          <motion.div 
+            initial={false}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: easeCustom }}
+            className="lg:col-span-7 flex flex-col justify-center"
+          >
+            {/* Section Identifier */}
+            <div className="flex items-center gap-2.5 mb-6 sm:mb-8">
+              <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#D4AF37]">
+                01
+              </span>
+              <span className="text-xs sm:text-sm text-[#D4AF37]/50 font-normal">—</span>
+              <span className="text-[11px] sm:text-xs font-roboto font-bold tracking-[0.22em] text-[#F3EFE4] uppercase">
                 ABOUT SIYARA
               </span>
             </div>
 
-            {/* Main Heading */}
-            <div className="mb-6 sm:mb-8">
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-normal leading-[1.12] sm:leading-[1.1] tracking-tight text-[#F3EFE3] max-w-full break-words">
-                We build digital systems for Jaipur businesses - strategy, design, and technology, connected.
-              </h1>
-            </div>
-
-            {/* Supporting Copy */}
-            <div className="mb-8 sm:mb-10 max-w-lg space-y-4">
-              <p className="font-sans text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Siyara Innovations brings strategy, design, technology, and growth together to solve real problems for Jaipur businesses - not abstract “digital experiences.”
-              </p>
-              <p className="font-sans text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light leading-relaxed">
-                We believe every part of a business’s digital presence should work as one system, not six disconnected pieces.
-              </p>
-            </div>
-
-            {/* Optional Brand Statement */}
-            <div className="mb-8 sm:mb-10 flex items-center gap-4">
-              <span className="text-[10px] sm:text-[11px] font-sans font-semibold tracking-[0.2em] text-[#9D9B91]/70 uppercase">
-               BASED IN JAIPUR &middot; BUILT FOR JAIPUR
+            {/* Main Headline */}
+            <h1 className="font-lora text-3xl sm:text-5xl lg:text-[52px] xl:text-[58px] font-normal leading-[1.12] sm:leading-[1.1] tracking-tight text-[#F3EFE4] mb-6 sm:mb-8">
+              We turn ambitious ideas into{' '}
+              <span className="italic text-[#E5C378]">
+                meaningful digital experiences.
               </span>
+            </h1>
+
+            {/* Brand Introduction — Cleaned of 'digital architecture studio' phrase */}
+            <div className="max-w-xl space-y-4 mb-8 sm:mb-10">
+              <p className="font-lora text-base sm:text-lg text-[#C5D2CE] font-light leading-relaxed">
+                Siyara Innovations unites brand strategy, bespoke web engineering, and commercial growth systems into one connected discipline.
+              </p>
+              <p className="font-lora text-sm sm:text-base text-[#9D9B91] font-light leading-relaxed">
+                We believe that good businesses should not have to navigate disconnected vendors, fragmented tools, and inconsistent digital execution. We design and engineer cohesive systems built to scale.
+              </p>
             </div>
 
-            {/* CTA */}
-            <div>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <a
-                href="#story"
-                className="inline-flex items-center justify-center min-h-[48px] px-8 rounded-full bg-[#D9B45F] text-[#070A09] text-[11px] font-sans font-bold tracking-[0.2em] uppercase hover:bg-[#E8C979] transition-all duration-300 shadow-lg shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
+                href="#our-story"
+                className="inline-flex items-center justify-center min-h-[48px] px-8 rounded-full bg-[#D4AF37] hover:bg-[#c9a34e] text-[#080B0A] text-xs font-roboto font-bold tracking-[0.16em] uppercase transition-all duration-300 shadow-xl shadow-[#D4AF37]/20 hover:scale-105 active:scale-100"
               >
-                OUR STORY &rarr;
+                <span>OUR STORY</span>
+                <ArrowRight className="w-4 h-4 ml-2" />
               </a>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center min-h-[48px] px-8 rounded-full border border-white/20 hover:border-[#D4AF37] text-[#F3EFE4] hover:text-[#D4AF37] text-xs font-roboto font-semibold tracking-[0.16em] uppercase transition-all duration-300 bg-white/[0.03]"
+              >
+                <span>START A PROJECT</span>
+                <ArrowUpRight className="w-4 h-4 ml-2" />
+              </Link>
             </div>
+          </motion.div>
 
-          </div>
-
-          {/* RIGHT COLUMN: Technology Visualization */}
-          <div className="lg:col-span-4 xl:col-span-5 relative mt-8 lg:mt-0 flex justify-center items-center">
-            <div className="relative w-full max-w-[360px] sm:max-w-[420px] aspect-[3/4] rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(12,107,82,0.5)] border border-[#D9B45F]/20">
+          {/* RIGHT COLUMN: Brand Identity Artwork */}
+          <motion.div
+            initial={false}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, ease: easeCustom }}
+            className="lg:col-span-5 relative flex justify-center items-center"
+          >
+            <div className="relative w-full max-w-[440px] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-[#D4AF37]/25 group bg-[#063C2D]/20">
               <Image
-                src="/images/about-tech-visual.webp"
-                alt="Siyara Innovations Web Design & SEO Studio"
+                src="/images/siyara_hero_artwork.webp"
+                alt="Siyara Innovations Brand Identity & Digital Systems Artwork"
                 priority
-                width={896}
-                height={1200}
-                className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-1000 ease-out"
+                fill
+                sizes="(max-width: 768px) 100vw, 440px"
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              {/* Internal shadow/gradient for blending */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#070A09] via-transparent to-[#071E18]/40 pointer-events-none" />
-              <div className="absolute inset-0 ring-1 ring-inset ring-[#D9B45F]/10 rounded-3xl pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#080B0A]/80 via-transparent to-transparent pointer-events-none" />
+
+              {/* Studio Emblem Badge */}
+              <div className="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-[#080B0A]/85 border border-[#D4AF37]/30 backdrop-blur-md">
+                <span className="text-[10px] font-roboto font-semibold tracking-[0.2em] text-[#D4AF37] uppercase block mb-1">
+                  SIYARA INNOVATIONS
+                </span>
+                <p className="font-lora text-xs text-[#F3EFE4]/90 font-light leading-snug">
+                  Strategy · Design · Technology · Growth
+                </p>
+              </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

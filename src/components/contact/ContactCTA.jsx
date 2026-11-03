@@ -1,73 +1,72 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import { ArrowUpRight, ArrowDown, MessageCircle } from 'lucide-react';
+import { siteConfig } from '@/data/siteConfig';
+import { trackEvent, AnalyticsEvents } from '@/utils/analytics';
 
 export default function ContactCTA() {
-  const easeCustom = [0.16, 1, 0.3, 1];
+  const handleWhatsAppClick = () => {
+    trackEvent(AnalyticsEvents.CONTACT_WHATSAPP_CLICKED, { source: 'bottom_cta' });
+  };
 
   return (
-    <section className="relative py-20 sm:py-24 bg-[#070A09] text-[#F3EFE3] overflow-hidden">
-      {/* Background Deep Emerald Atmosphere */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#070A09] via-[#071E18]/40 to-[#070A09] opacity-90 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#071E18]/40 blur-3xl rounded-full pointer-events-none" />
+    <section
+      id="contact-closing-cta"
+      aria-label="Contact Closing Call to Action"
+      className="relative py-24 sm:py-28 lg:py-32 bg-[#080B0A] text-[#F3EFE4] overflow-hidden text-center"
+    >
+      {/* Background Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#080B0A] via-[#05261C] to-[#041710] pointer-events-none" />
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] rounded-full pointer-events-none opacity-20"
+        style={{
+          background: 'radial-gradient(circle at center, rgba(212, 175, 55, 0.25) 0%, transparent 70%)',
+        }}
+      />
 
-      {/* Quiet Orbital Vector Pattern */}
-      <svg className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[540px] h-[540px] pointer-events-none opacity-20" viewBox="0 0 540 540">
-        <circle cx="270" cy="270" r="260" fill="none" stroke="#D9B45F" strokeWidth="0.75" strokeDasharray="4 10" />
-        <circle cx="270" cy="270" r="180" fill="none" stroke="#0C6B52" strokeWidth="0.75" />
-      </svg>
-
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 text-center">
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
-        {/* Section Headline */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.6, ease: easeCustom }}
-          className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[0.96] tracking-tight mb-4 sm:mb-6 max-w-3xl mx-auto break-words"
-        >
-          HAVE AN IDEA? <br />
-          LET'S GIVE IT <span className="text-[#D9B45F] font-normal">A SYSTEM.</span>
-        </motion.h2>
+        <div className="mb-6 sm:mb-8">
+          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.24em] text-[#D4AF37] uppercase">
+            — READY TO BUILD SOMETHING EXTRAORDINARY? —
+          </span>
+        </div>
 
-        {/* Supporting Copy */}
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
-          className="font-sans text-sm sm:text-base lg:text-lg text-[#9D9B91] font-light max-w-lg mx-auto mb-8 sm:mb-12 leading-relaxed"
-        >
-          Let's turn your next opportunity into a digital system built to grow.
-        </motion.p>
+        <h2 className="font-roboto text-4xl sm:text-5xl lg:text-[58px] text-[#F3EFE4] font-normal leading-[1.1] tracking-tight mb-5 sm:mb-6 max-w-3xl mx-auto">
+          Let&apos;s Build a System Built for{' '}
+          <span className="font-lora italic text-[#E5C378]">
+            Measurable Growth.
+          </span>
+        </h2>
 
-        {/* Action Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.6, delay: 0.05, ease: easeCustom }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5"
-        >
+        <p className="font-lora text-sm sm:text-base text-[#C5D2CE] font-light max-w-xl mx-auto mb-10 sm:mb-12 leading-relaxed">
+          Connect directly with our studio directors for project scoping, deliverables planning, and transparent fixed-investment proposals.
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <a
-            href="#intake"
-            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-8 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
+            href="#inquiry-form"
+            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[46px] gap-2 px-9 py-3.5 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs font-roboto font-bold tracking-[0.14em] rounded-full transition-all duration-300 shadow-xl hover:-translate-y-0.5"
           >
-            <span>START A PROJECT</span>
-            <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+            <span>Complete Project Brief</span>
+            <ArrowDown className="w-4 h-4 stroke-[2.5]" />
           </a>
 
           <a
-            href="#contact-direct"
-            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2 px-8 py-3.5 border border-[#F3EFE3]/25 hover:border-[#D9B45F]/60 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#070A09]/40 backdrop-blur-sm"
+            href={siteConfig.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleWhatsAppClick}
+            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[46px] gap-2.5 px-9 py-3.5 border border-[#E5C378]/50 bg-[#063C2D]/60 hover:bg-[#063C2D] text-[#F3EFE4] hover:text-[#E5C378] text-xs font-roboto font-medium tracking-[0.14em] rounded-full transition-all duration-300 shadow-xl hover:-translate-y-0.5"
           >
-            <span>BOOK A STRATEGY SESSION</span>
-            <ArrowRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-1 transition-transform" />
+            <MessageCircle className="w-4 h-4 text-[#19A878]" />
+            <span>Message on WhatsApp</span>
+            <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />
           </a>
-        </motion.div>
+        </div>
 
       </div>
     </section>

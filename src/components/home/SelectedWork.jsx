@@ -1,215 +1,405 @@
 'use client';
 
+import React, { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { ArrowUpRight, ArrowRight, ArrowLeft } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
-import Image from 'next/image';
-import { projectsData } from '../../data/projectsData';
-
 export default function SelectedWork() {
+  const carouselRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const projects = projectsData.slice(0, 4);
+  // Mouse drag state
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeftStart = useRef(0);
 
-  const currentProject = projects[activeIndex];
+  // The 6 verified projects with authentic commercial challenges, deliverables, and outcomes
+  const projects = [
+    {
+      id: '01',
+      slug: 'anchor-ritika',
+      name: 'Anchor Ritvika Solanki',
+      industry: 'Events & Media',
+      category: 'EVENT & MEDIA PLATFORM',
+      challenge: 'Needed a performant portfolio platform to showcase stage productions, high-profile wedding events, and manage media inquiries.',
+      delivered: 'Bespoke Next.js media portfolio with high-speed video embeds, stage lookbooks, and direct inquiry capture pipeline.',
+      verifiedDeliverable: 'Live Portfolio · Media Architecture · Direct Booking Pipeline',
+      tags: ['Next.js Platform', 'Media Architecture', 'Inquiry Pipeline'],
+      image: '/images/portfolio/anchor-ritika-clean.webp',
+      link: 'https://anchor-ritika.vercel.app/',
+      isGoldAccent: true,
+    },
+    {
+      id: '02',
+      slug: 'aranya-resort',
+      name: 'Aranya Resort & Retreat',
+      industry: 'Hospitality',
+      category: 'HOSPITALITY & LUXURY',
+      challenge: 'Udaipur sanctuary built around Mewar architecture required an online presence reflecting its heritage luxury and suites.',
+      delivered: 'Architectural web experience, suite discovery, Mewar heritage storytelling, and direct reservation engine integration.',
+      verifiedDeliverable: 'Heritage Architecture · Reservation Engine · 0.4s Initial Paint',
+      tags: ['Hospitality Platform', 'Reservation Engine', 'Heritage Branding'],
+      image: '/images/portfolio/aranya-resort-clean.webp',
+      link: 'https://aranya-website-woad.vercel.app/',
+      isGoldAccent: false,
+    },
+    {
+      id: '03',
+      slug: 'ember-ivory-events',
+      name: 'Ember & Ivory Events',
+      industry: 'Luxury Events',
+      category: 'EVENTS & EXPERIENCES',
+      challenge: 'Luxury event production studio needed a visual storytelling showcase for high-concept destination celebrations.',
+      delivered: 'Editorial event portfolio, curated campaign galleries, celebration lookbooks, and high-touch inquiry capture.',
+      verifiedDeliverable: 'Editorial Event Showcase · High-Touch Lead Funnel · Curated Lookbook',
+      tags: ['Editorial Showcase', 'Lead Funnel', 'Campaign Galleries'],
+      image: '/images/portfolio/ember-ivory-clean.webp',
+      link: 'https://ember-ivory-events.vercel.app/',
+      isGoldAccent: true,
+    },
+    {
+      id: '04',
+      slug: 'tarini',
+      name: 'Tarini Bridal Studio',
+      industry: 'Fashion Couture',
+      category: 'FASHION & COUTURE',
+      challenge: 'Bridal couture label required an elegant digital storefront to showcase bespoke collections and drive boutique consultations.',
+      delivered: 'Digital couture storefront, curated collection browsing, client wishlist flow, and consultation booking integration.',
+      verifiedDeliverable: 'Couture Storefront · Wishlist Flow · Boutique Consultation Pipeline',
+      tags: ['Couture Storefront', 'Wishlist Flow', 'Appointment Booking'],
+      image: '/images/portfolio/tarini-bridal-clean.webp',
+      link: 'https://tarini-bridal.vercel.app/',
+      isGoldAccent: false,
+    },
+    {
+      id: '05',
+      slug: 'noor',
+      name: 'Noor Restaurant',
+      industry: 'Food & Beverage',
+      category: 'FOOD & BEVERAGE',
+      challenge: 'Contemporary Indian dining venue in Jaipur required a distinctive digital brand presence and dining reservation workflow.',
+      delivered: 'Gastronomy-focused brand identity, interactive dining and banquet menus, and table reservation integration.',
+      verifiedDeliverable: 'Restaurant Brand Strategy · Interactive Menus · Table Booking System',
+      tags: ['Restaurant Branding', 'Interactive Menus', 'Table Reservations'],
+      image: '/images/portfolio/noor-restaurant-clean.webp',
+      link: 'https://noor-nine-beta.vercel.app/',
+      isGoldAccent: true,
+    },
+    {
+      id: '06',
+      slug: 'meridian-properties',
+      name: 'Meridian Properties',
+      industry: 'Real Estate',
+      category: 'REAL ESTATE & PROPTECH',
+      challenge: 'Jaipur property brokerage required live listing discovery, fast client-side filters, and Schema.org real estate rich snippets.',
+      delivered: 'Dynamic property platform with 12 live listings, instant search and filtering, and comprehensive Schema.org infrastructure.',
+      verifiedDeliverable: 'Live Property Engine · Schema.org Real Estate Data · 0.4s Fast Initial Paint',
+      tags: ['Property Engine', 'Schema.org Markup', 'Fast Initial Paint'],
+      image: '/images/portfolio/internal-platform-clean.webp',
+      link: 'https://meridian-properties-nine.vercel.app/',
+      isGoldAccent: false,
+    },
+  ];
+
+  const updateScrollState = () => {
+    if (!carouselRef.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+    setCanScrollLeft(scrollLeft > 10);
+    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+
+    // Calculate active slide index based on card width
+    const cardWidth = 380;
+    const current = Math.min(
+      projects.length - 1,
+      Math.max(0, Math.round(scrollLeft / cardWidth))
+    );
+    setActiveIndex(current);
+  };
+
+  useEffect(() => {
+    const el = carouselRef.current;
+    if (!el) return;
+    el.addEventListener('scroll', updateScrollState, { passive: true });
+    updateScrollState();
+    return () => el.removeEventListener('scroll', updateScrollState);
+  }, []);
+
+  const scroll = (direction) => {
+    if (!carouselRef.current) return;
+    const distance = 390;
+    carouselRef.current.scrollBy({
+      left: direction === 'left' ? -distance : distance,
+      behavior: 'smooth',
+    });
+  };
+
+  const scrollToSlide = (index) => {
+    if (!carouselRef.current) return;
+    const cards = carouselRef.current.querySelectorAll('.portfolio-card');
+    if (cards[index]) {
+      cards[index].scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'start',
+      });
+    }
+  };
+
+  // Mouse drag-to-scroll handlers
+  const handleMouseDown = (e) => {
+    isDragging.current = true;
+    startX.current = e.pageX - carouselRef.current.offsetLeft;
+    scrollLeftStart.current = carouselRef.current.scrollLeft;
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging.current) return;
+    e.preventDefault();
+    const x = e.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX.current) * 1.5;
+    carouselRef.current.scrollLeft = scrollLeftStart.current - walk;
+  };
+
+  const handleMouseUp = () => {
+    isDragging.current = false;
+  };
 
   return (
-    <section id="work" className="relative py-16 sm:py-20 bg-[#F3EFE3] overflow-hidden">
-      {/* Editorial Ivory Atmosphere */}
-      <div className="absolute inset-0 ivory-texture pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#F3EFE3] via-[#ECE7D8]/60 to-[#F3EFE3] opacity-70 pointer-events-none" />
-      <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-[#0B5E49]/05 blur-3xl rounded-full pointer-events-none" />
+    <section
+      id="work"
+      aria-label="Selected Engagements & Platforms"
+      className="relative pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24 bg-[#06140F] text-[#F3EFE4] overflow-hidden border-b border-[#D4AF37]/15"
+    >
+      {/* Background Deep Emerald Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#070A09] via-[#061812] to-[#070A09] pointer-events-none" />
+      <div
+        className="absolute top-1/4 right-0 w-[600px] h-[600px] rounded-full pointer-events-none opacity-20"
+        style={{
+          background: 'radial-gradient(circle at center, rgba(11, 94, 73, 0.35) 0%, transparent 70%)',
+        }}
+      />
+      <div
+        className="absolute bottom-0 left-10 w-[500px] h-[500px] rounded-full pointer-events-none opacity-15"
+        style={{
+          background: 'radial-gradient(circle at center, rgba(212, 175, 55, 0.2) 0%, transparent 70%)',
+        }}
+      />
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
-          transition={{ duration: 0.4 }}
-          className="flex items-center gap-3 mb-8 sm:mb-12"
-        >
-          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
-            02
-          </span>
-          <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#0B5E49] uppercase">
-            Selected Work Showcase
-          </span>
-        </motion.div>
-
-        {/* Section Layout Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-          
-          {/* Left Column: Project Metadata & Copy */}
-          <div className="lg:col-span-4 flex flex-col justify-center">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentProject.id}
-                initial={{ opacity: 0, x: -12 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 12 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="text-xs font-sans text-[#B9923F] font-bold tracking-widest mb-2 sm:mb-3">
-                  {currentProject.id} / 04
-                </div>
-
-                <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#101613] font-normal leading-[1.05] sm:leading-[0.98] mb-3 sm:mb-4 break-words">
-                  {currentProject.title}
-                </h2>
-
-                <p className="font-sans text-xs sm:text-base text-[#0B5E49] font-medium mb-2 sm:mb-3">
-                  {currentProject.tagline}
-                </p>
-
-                <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed mb-4 sm:mb-6">
-                  {currentProject.description}
-                </p>
-
-                {/* Service Tags */}
-                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-6 sm:mb-8">
-                  {currentProject.services.map((service) => (
-                    <span
-                      key={service}
-                      className="px-2.5 py-0.5 sm:px-3 sm:py-1 bg-[#ECE7D8] border border-[#B9923F]/30 text-[9px] sm:text-[10px] font-sans tracking-[0.14em] sm:tracking-[0.16em] text-[#101613]/80 uppercase font-semibold"
-                    >
-                      {service}
-                    </span>
-                  ))}
-                </div>
-
-                {/* CTA Button */}
-                <Link
-                  href="/work"
-                  className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-4 border border-[#0B5E49] bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-semibold tracking-[0.16em] sm:tracking-[0.18em] uppercase transition-all duration-300 shadow-lg group min-h-[44px]"
-                >
-                  <span>VIEW ALL WORK</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </Link>
-              </motion.div>
-            </AnimatePresence>
+        {/* ========================================================================= */}
+        {/* SECTION HEADER                                                            */}
+        {/* ========================================================================= */}
+        <div className="mb-10 sm:mb-12 lg:mb-14">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3 mb-5 sm:mb-6">
+            <span className="text-xs font-roboto font-medium tracking-[0.24em] text-[#D4AF37]">
+              07
+            </span>
+            <span className="w-8 h-[1px] bg-[#D4AF37]/40" />
+            <span className="text-[11px] sm:text-xs font-roboto font-semibold tracking-[0.22em] text-[#D4AF37] uppercase">
+              SELECTED ENGAGEMENTS &amp; PLATFORMS
+            </span>
           </div>
 
-          {/* Center Column: Dominant Project Website Laptop Visual */}
-          <div className="lg:col-span-5 relative">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentProject.id}
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.98 }}
-                transition={{ duration: 0.4 }}
-                className="relative"
-              >
-                {/* Laptop Display Outer Frame */}
-                <div className="relative rounded-t-xl bg-[#101613] border border-[#B9923F]/30 p-2 sm:p-3 shadow-2xl overflow-hidden">
-                  {/* Laptop Top Bar */}
-                  <div className="flex items-center justify-between px-3 py-1 bg-[#070A09] rounded-t-lg border-b border-white/5 mb-1">
-                    <div className="flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-[#FF5F56]/80" />
-                      <span className="w-2 h-2 rounded-full bg-[#FFBD2E]/80" />
-                      <span className="w-2 h-2 rounded-full bg-[#27C93F]/80" />
-                    </div>
-                    <div className="text-[9px] font-sans text-[#9D9B91]/50 truncate max-w-[160px]">
-                      {currentProject.title.toLowerCase().replace(/\s+/g, '')}.com
-                    </div>
-                    <div className="w-6" />
-                  </div>
-
-                  {/* Laptop Screen Content showing selected project UI */}
-                  <div className="relative bg-[#070A09] rounded-md overflow-hidden aspect-[16/10] border border-white/5">
-                    {/* Project Hero Image */}
-                    <Image
-                      src={currentProject.image}
-                      alt={currentProject.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover opacity-45 mix-blend-luminosity"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#070A09] via-[#070A09]/60 to-transparent" />
-
-                    {/* Website Header Bar inside mockup */}
-                    <div className="relative z-10 flex items-center justify-between p-2.5 sm:p-4 border-b border-white/10">
-                      <span className="font-serif text-xs sm:text-sm font-bold text-[#D9B45F]">
-                        {currentProject.brandLogo}
-                      </span>
-                      <div className="flex items-center gap-2 sm:gap-3 text-[7px] tracking-widest text-[#9D9B91]">
-                        <span>HOME</span>
-                        <span>ABOUT</span>
-                        <span className="hidden sm:inline">COLLECTION</span>
-                        <span>CONTACT</span>
-                      </div>
-                    </div>
-
-                    {/* Website Inner Content inside mockup */}
-                    <div className="relative z-10 p-3 sm:p-6 flex flex-col justify-center h-[calc(100%-35px)] sm:h-[calc(100%-40px)] max-w-xs">
-                      <h3 className="font-serif text-base sm:text-2xl text-[#F3EFE3] leading-tight mb-1 sm:mb-2 line-clamp-2">
-                        {currentProject.heroHeadline}
-                      </h3>
-                      <p className="text-[8px] sm:text-[9px] text-[#9D9B91] font-light mb-2 sm:mb-4 leading-relaxed line-clamp-2">
-                        {currentProject.heroSubline}
-                      </p>
-                      <div className="inline-flex items-center px-2 py-1 sm:px-3 sm:py-1.5 bg-[#D9B45F]/20 border border-[#D9B45F]/50 text-[#D9B45F] text-[7px] sm:text-[8px] font-semibold tracking-widest uppercase w-fit">
-                        {currentProject.ctaText}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Laptop Base */}
-                <div className="h-2.5 sm:h-3 bg-gradient-to-b from-[#1A201C] to-[#070A09] rounded-b-xl border-x border-b border-white/10 shadow-2xl relative">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 sm:w-20 h-1 bg-[#101613] rounded-b-md" />
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Right Column: Editorial Numerical Project Index (01 - 04) */}
-          <div className="lg:col-span-3 flex flex-col justify-center">
-            <div className="flex flex-col gap-6 border-l border-[#B9923F]/30 pl-6">
-              {projects.map((project, idx) => {
-                const isActive = idx === activeIndex;
-                return (
-                  <button
-                    key={project.id}
-                    onClick={() => setActiveIndex(idx)}
-                    className="flex items-center gap-4 text-left group focus:outline-none py-1"
-                  >
-                    <span
-                      className={`text-xs font-sans font-semibold transition-colors duration-300 ${
-                        isActive ? 'text-[#B9923F]' : 'text-[#101613]/40 group-hover:text-[#101613]'
-                      }`}
-                    >
-                      {project.id}
-                    </span>
-
-                    <span
-                      className={`font-serif text-base sm:text-lg transition-all duration-300 ${
-                        isActive
-                          ? 'text-[#0B5E49] translate-x-1 font-medium'
-                          : 'text-[#101613]/70 group-hover:text-[#101613]'
-                      }`}
-                    >
-                      {project.title}
-                    </span>
-
-                    {isActive && (
-                      <motion.div
-                        layoutId="activeIndicator"
-                        className="w-1.5 h-1.5 rounded-full bg-[#0B5E49] ml-auto shadow-[0_0_8px_#0B5E49]"
-                      />
-                    )}
-                  </button>
-                );
-              })}
+          {/* Heading (Left) & Supporting Text + Archive Link (Right) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+            {/* Left Column: Heading */}
+            <div className="lg:col-span-7 xl:col-span-7">
+              <h2 className="font-roboto text-3xl sm:text-5xl lg:text-[50px] xl:text-[56px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight">
+                Brands, Platforms &amp;<br />
+                <span className="italic font-roboto text-[#D4AF37]">Real Impact.</span>
+              </h2>
             </div>
+
+            {/* Right Column: Supporting Description + Explore All Link */}
+            <div className="lg:col-span-5 xl:col-span-5 flex flex-col justify-between items-start lg:items-end">
+              <p className="font-lora text-xs sm:text-sm text-[#A5B8AA]/85 font-normal leading-relaxed max-w-sm mb-3 lg:text-right">
+                A curated showcase of commercial digital platforms, brand architecture and web systems engineered across high-potential industries.
+              </p>
+
+              <Link
+                href="/work"
+                className="inline-flex items-center gap-2 text-xs font-roboto font-semibold tracking-[0.18em] text-[#D4AF37] hover:text-[#E5C378] uppercase transition-colors group"
+              >
+                <span>EXPLORE ALL PROJECTS (85)</span>
+                <ArrowRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* ========================================================================= */}
+        {/* HORIZONTAL PORTFOLIO CAROUSEL WITH PREV/NEXT ARROWS                      */}
+        {/* ========================================================================= */}
+        <div className="relative group/carousel">
+          
+          {/* Previous Arrow Button */}
+          <button
+            type="button"
+            aria-label="Previous Project"
+            onClick={() => scroll('left')}
+            className={`hidden md:flex absolute -left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full border border-white/20 bg-[#070A09]/90 backdrop-blur-md text-[#F3EFE4] items-center justify-center shadow-xl transition-all duration-200 cursor-pointer ${
+              canScrollLeft ? 'opacity-90 hover:opacity-100 hover:border-[#D4AF37] hover:text-[#D4AF37] scale-100' : 'opacity-30 pointer-events-none'
+            }`}
+          >
+            <ArrowLeft className="w-4 h-4 stroke-[1.75]" />
+          </button>
+
+          {/* Next Arrow Button */}
+          <button
+            type="button"
+            aria-label="Next Project"
+            onClick={() => scroll('right')}
+            className={`hidden md:flex absolute -right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full border border-white/20 bg-[#070A09]/90 backdrop-blur-md text-[#F3EFE4] items-center justify-center shadow-xl transition-all duration-200 cursor-pointer ${
+              canScrollRight ? 'opacity-90 hover:opacity-100 hover:border-[#D4AF37] hover:text-[#D4AF37] scale-100' : 'opacity-30 pointer-events-none'
+            }`}
+          >
+            <ArrowRight className="w-4 h-4 stroke-[1.75]" />
+          </button>
+
+          {/* Scrollable Track */}
+          <div
+            ref={carouselRef}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseUp}
+            className="flex flex-row gap-5 sm:gap-6 overflow-x-auto scrollbar-none snap-x snap-mandatory py-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 cursor-grab active:cursor-grabbing select-none"
+            style={{
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+              WebkitOverflowScrolling: 'touch',
+            }}
+          >
+            {projects.map((project) => {
+              const isGold = project.isGoldAccent;
+
+              return (
+                <div
+                  key={project.id}
+                  className={`portfolio-card shrink-0 snap-start w-[310px] sm:w-[350px] lg:w-[370px] min-h-[490px] rounded-[22px] overflow-hidden flex flex-col justify-between border transition-all duration-300 group shadow-[0_16px_40px_rgba(0,0,0,0.5)] ${
+                    isGold
+                      ? 'border-[#D4AF37]/30 hover:border-[#D4AF37]/70 bg-[#070D0A]'
+                      : 'border-[#0B5A43]/40 hover:border-[#19A878]/70 bg-[#06120E]'
+                  }`}
+                >
+                  <Link
+                    href={project.link}
+                    aria-label={`View ${project.name} Case Study`}
+                    className="flex flex-col h-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/70 rounded-[22px]"
+                  >
+                    {/* Top Visual Image Frame */}
+                    <div className="relative w-full h-[200px] sm:h-[215px] overflow-hidden bg-[#0A1410] shrink-0">
+                      <Image
+                        src={project.image}
+                        alt={`${project.name} - ${project.industry}`}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                        sizes="(max-width: 768px) 350px, 370px"
+                      />
+                      
+                      {/* Gentle Image Scrims for Top Badge Legibility */}
+                      <div className="absolute inset-0 bg-gradient-to-b from-[#070A09]/60 via-transparent to-[#070A09]/80 pointer-events-none" />
+
+                      {/* Top Floating Badge Bar */}
+                      <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+                        <span className="px-2.5 py-1 rounded-full border border-white/20 bg-[#080B0A]/75 backdrop-blur-md text-[10px] font-roboto font-semibold tracking-[0.16em] text-[#D4AF37] uppercase">
+                          {project.id} · {project.category}
+                        </span>
+
+                        <div className="w-7 h-7 rounded-full border border-white/20 bg-[#080B0A]/75 backdrop-blur-md flex items-center justify-center text-[#F3EFE4] group-hover:border-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#080B0A] transition-colors">
+                          <ArrowUpRight className="w-3.5 h-3.5 stroke-[2]" />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Lower Editorial Storytelling Panel */}
+                    <div className="p-5 sm:p-6 flex flex-col justify-between flex-1 relative z-10 border-t border-white/[0.08]">
+                      <div>
+                        {/* Project Heading */}
+                        <h3 className="font-roboto text-xl sm:text-[22px] text-[#F3EFE4] font-normal leading-snug group-hover:text-[#D4AF37] transition-colors">
+                          {project.name}
+                        </h3>
+
+                        {/* Industry / Business Discipline */}
+                        <div className="text-[11px] font-roboto font-medium tracking-[0.14em] text-[#A5B8AA]/75 uppercase mt-0.5">
+                          {project.industry}
+                        </div>
+
+                        {/* Requirement / Challenge Story */}
+                        <div className="mt-3 text-xs font-lora text-[#A5B8AA] leading-relaxed line-clamp-2">
+                          <span className="text-[#D4AF37] font-roboto font-semibold tracking-wider text-[9.5px] uppercase block mb-0.5">
+                            Challenge
+                          </span>
+                          {project.challenge}
+                        </div>
+
+                        {/* Siyara Delivery */}
+                        <div className="mt-2.5 text-xs font-lora text-[#C2D1C7] leading-relaxed line-clamp-2">
+                          <span className="text-[#19A878] font-roboto font-semibold tracking-wider text-[9.5px] uppercase block mb-0.5">
+                            Siyara Delivered
+                          </span>
+                          {project.delivered}
+                        </div>
+
+                        {/* Deliverables Tags */}
+                        <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-white/[0.08]">
+                          {project.tags.map((tag, tIdx) => (
+                            <span
+                              key={tIdx}
+                              className="px-2 py-0.5 rounded-md border border-white/10 bg-white/[0.03] text-[9.5px] font-roboto font-medium tracking-[0.08em] text-[#A5B8AA]"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Bottom Action Affordance */}
+                      <div className="mt-4 pt-3 flex items-center justify-between border-t border-white/[0.08]">
+                        <span className="text-xs font-roboto font-semibold tracking-[0.14em] text-[#D4AF37] group-hover:text-[#E5C378] uppercase inline-flex items-center gap-1.5 transition-colors">
+                          <span>Explore Case Study</span>
+                          <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
+                        </span>
+
+                        <span className="text-[10px] font-roboto tracking-wider text-white/35 uppercase">
+                          Live Demo ↗
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* ========================================================================= */}
+          {/* SLIM PAGINATION INDICATORS                                                */}
+          {/* ========================================================================= */}
+          <div className="flex items-center justify-center gap-2 mt-8 sm:mt-10">
+            {projects.map((p, idx) => {
+              const isActive = activeIndex === idx;
+              return (
+                <button
+                  key={p.id}
+                  type="button"
+                  aria-label={`Go to slide ${idx + 1}`}
+                  onClick={() => scrollToSlide(idx)}
+                  className={`h-1 rounded-full transition-all duration-300 cursor-pointer ${
+                    isActive ? 'w-8 bg-[#D4AF37]' : 'w-5 bg-white/20 hover:bg-white/40'
+                  }`}
+                />
+              );
+            })}
           </div>
 
         </div>
+
       </div>
     </section>
   );

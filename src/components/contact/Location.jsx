@@ -28,12 +28,12 @@ export default function Location() {
                 <span className="h-[1px] w-8 bg-[#D4AF37]/50" />
               </div>
 
-              <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F3EFE4] font-normal leading-[1.08] mb-4 break-words">
+              <h2 className="font-roboto text-3xl sm:text-5xl lg:text-6xl text-[#F3EFE4] font-normal leading-[1.08] mb-4 break-words">
                 Jaipur, Rajasthan, <br />
                 <span className="text-[#19A878] ">India</span>
               </h2>
 
-              <p className="font-sans text-sm sm:text-base text-[#CFC9BB]/80 font-light leading-relaxed mb-6 sm:mb-8 max-w-md">
+              <p className="font-lora text-sm sm:text-base text-[#CFC9BB]/80 font-light leading-relaxed mb-6 sm:mb-8 max-w-md">
                 We work with ambitious businesses across India and beyond, combining strategic vision with high-impact digital craftsmanship.
               </p>
 

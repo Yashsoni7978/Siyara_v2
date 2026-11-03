@@ -20,6 +20,7 @@ export const projectsData = [
       "LEAD ACQUISITION"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://shri-properties.vercel.app/",
     "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "SHRI PROPERTY",
@@ -44,6 +45,7 @@ export const projectsData = [
       "STRUCTURED DATA"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://meridian-properties-nine.vercel.app/",
     "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "MERIDIAN",
@@ -68,6 +70,7 @@ export const projectsData = [
       "CREDENTIAL TRUST"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://dr-rajeshwari-sharma-medical-websit.vercel.app/",
     "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "DR. RAJESHWARI",
@@ -92,6 +95,7 @@ export const projectsData = [
       "PATIENT CARE"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://varena-hospital.vercel.app/",
     "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "VARENA HOSPITAL",
@@ -116,6 +120,7 @@ export const projectsData = [
       "APPOINTMENT BOOKING"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://smile-craft-six.vercel.app/",
     "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "SMILECRAFT",
@@ -140,6 +145,7 @@ export const projectsData = [
       "LUXURY RETREAT"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://aranya-website-woad.vercel.app/",
     "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "ARANYA RESORT",
@@ -164,6 +170,7 @@ export const projectsData = [
       "DESIGN STUDIO"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://ember-ivory-events.vercel.app/",
     "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "BLOOM STUDIO",
@@ -188,6 +195,7 @@ export const projectsData = [
       "LUXURY EXPERIENCES"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://ember-ivory-events.vercel.app/",
     "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "EMBER & IVORY",
@@ -212,6 +220,7 @@ export const projectsData = [
       "SHOWCASE"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://anchor-ritika.vercel.app/",
     "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "RITVIKA SOLANKI",
@@ -236,6 +245,7 @@ export const projectsData = [
       "SHOPPING FLOW"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://tarini-bridal.vercel.app/",
     "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "TARINI",
@@ -260,6 +270,7 @@ export const projectsData = [
       "UNIFIED D2C"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://rivaara.vercel.app/",
     "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "RIVAARA",
@@ -284,6 +295,7 @@ export const projectsData = [
       "CHECKOUT OPTIMIZATION"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://nettle-and-clay.vercel.app/",
     "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "NETTLE & CLAY",
@@ -308,6 +320,7 @@ export const projectsData = [
       "CASE STUDY PAGES"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://studio-mitti-nu.vercel.app/",
     "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "STUDIO MITTI",
@@ -332,6 +345,7 @@ export const projectsData = [
       "DINING EXPERIENCE"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://noor-nine-beta.vercel.app/",
     "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "NOOR",
@@ -356,6 +370,7 @@ export const projectsData = [
       "LEAD QUALIFICATION"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://parvaah-ai.vercel.app/",
     "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "PRAVAAH AI",
@@ -380,6 +395,7 @@ export const projectsData = [
       "PERSONAL FINANCE"
     ],
     "status": "LIVE",
+    "classification": "LIVE_DEMO",
     "link": "https://folio-beta-flax-17.vercel.app/",
     "image": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
     "brandLogo": "FOLIO",
@@ -419,4 +435,129 @@ export const getIndustryCategories = () => {
   return categories.filter(
     (cat) => cat.id === 'ALL' || (counts[cat.id] && counts[cat.id] > 0)
   );
+};
+
+export const PROJECT_CLASSIFICATIONS = {
+  DELIVERED_PROJECT: 'DELIVERED_PROJECT',
+  INTERNAL_PROJECT: 'INTERNAL_PROJECT',
+  LIVE_DEMO: 'LIVE_DEMO',
+  CONCEPT: 'CONCEPT',
+};
+
+export const CLASSIFICATION_CONFIG = {
+  DELIVERED_PROJECT: {
+    id: 'DELIVERED_PROJECT',
+    label: 'Delivered Client Project',
+    shortLabel: 'Delivered',
+    badgeText: 'Delivered Client Project',
+    description: 'Custom client platform engineered, deployed, and operating in production under an external commercial engagement.',
+    badgeClass: 'bg-[#063C2D]/60 text-[#19A878] border-[#19A878]/35',
+  },
+  INTERNAL_PROJECT: {
+    id: 'INTERNAL_PROJECT',
+    label: 'Internal Brand Platform',
+    shortLabel: 'Internal Brand',
+    badgeText: 'Internal Brand Platform',
+    description: 'A live digital platform engineered and operated in-house for studio leadership initiatives and media management.',
+    badgeClass: 'bg-[#063C2D]/60 text-[#19A878] border-[#19A878]/35',
+  },
+  LIVE_DEMO: {
+    id: 'LIVE_DEMO',
+    label: 'Live Demonstration',
+    shortLabel: 'Live Demo',
+    badgeText: 'Live Interactive Demo',
+    description: 'A fully functional web application engineered by Siyara Innovations to demonstrate real-time performance, layout hierarchy, and user interaction patterns.',
+    badgeClass: 'bg-[#D9B45F]/15 text-[#D9B45F] border-[#D9B45F]/35',
+  },
+  CONCEPT: {
+    id: 'CONCEPT',
+    label: 'Design Concept',
+    shortLabel: 'Concept',
+    badgeText: 'Design Concept',
+    description: 'A strategic design prototype exploring visual identity, user experience, and responsive interface workflows.',
+    badgeClass: 'bg-white/5 text-[#A5B8AA] border-white/10',
+  },
+};
+
+export const getClassificationCategories = () => {
+  const counts = { ALL: projectsData.length, DELIVERED_PROJECT: 0, INTERNAL_PROJECT: 0, LIVE_DEMO: 0, CONCEPT: 0 };
+  projectsData.forEach(p => {
+    if (counts[p.classification] !== undefined) counts[p.classification]++;
+  });
+
+  const categories = [
+    { id: 'ALL', name: 'All Work', count: counts.ALL },
+  ];
+  if (counts.DELIVERED_PROJECT > 0) {
+    categories.push({ id: 'DELIVERED_PROJECT', name: 'Delivered Projects', count: counts.DELIVERED_PROJECT });
+  }
+  if (counts.LIVE_DEMO > 0) {
+    categories.push({ id: 'LIVE_DEMO', name: 'Live Demos', count: counts.LIVE_DEMO });
+  }
+  if (counts.CONCEPT > 0) {
+    categories.push({ id: 'CONCEPT', name: 'Concepts', count: counts.CONCEPT });
+  }
+  if (counts.INTERNAL_PROJECT > 0) {
+    categories.push({ id: 'INTERNAL_PROJECT', name: 'Internal Brand', count: counts.INTERNAL_PROJECT });
+  }
+
+  return categories;
+};
+
+export const getDisciplineCategories = () => {
+  const counts = {
+    ALL: projectsData.length,
+    WEBSITES: 0,
+    ECOMMERCE: 0,
+    BRAND: 0,
+    GROWTH: 0,
+    CONCEPTS: 0,
+  };
+
+  projectsData.forEach((p) => {
+    const ind = p.industry;
+    if (ind === 'E-Commerce' || ind === 'Fashion') {
+      counts.ECOMMERCE++;
+    } else if (
+      ind === 'Events' ||
+      ind === 'Anchor / Emcee' ||
+      ind === 'Food & Beverage' ||
+      ind === 'Interior & Spatial Design'
+    ) {
+      counts.BRAND++;
+    } else if (ind === 'Fintech') {
+      counts.GROWTH++;
+    } else {
+      counts.WEBSITES++;
+    }
+
+    if (p.classification === 'CONCEPT') {
+      counts.CONCEPTS++;
+    }
+  });
+
+  return [
+    { id: 'ALL', name: 'All Work', count: counts.ALL },
+    { id: 'WEBSITES', name: 'Websites & Digital Experiences', count: counts.WEBSITES },
+    { id: 'ECOMMERCE', name: 'E-commerce', count: counts.ECOMMERCE },
+    { id: 'BRAND', name: 'Brand & Creative', count: counts.BRAND },
+    { id: 'GROWTH', name: 'Marketing & Growth', count: counts.GROWTH },
+    { id: 'CONCEPTS', name: 'Concepts & Experiments', count: counts.CONCEPTS },
+  ];
+};
+
+export const getFeaturedProjects = () => {
+  const prioritySlugs = [
+    'aranya-resort',
+    'tarini',
+    'anchor-ritvika-solanki',
+    'shri-property',
+    'noor',
+    'dr-rajeshwari-sharma',
+    'varena-hospital',
+    'pravaah-ai',
+  ];
+  return prioritySlugs
+    .map((slug) => projectsData.find((p) => p.slug === slug))
+    .filter(Boolean);
 };

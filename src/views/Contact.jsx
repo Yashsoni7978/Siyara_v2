@@ -13,26 +13,26 @@ export default function Contact({ onNavigate }) {
   }, []);
 
   return (
-    <div className="bg-[#070A09] text-[#F3EFE3] selection:bg-[#071E18] selection:text-[#D9B45F]">
-      {/* 01 — HERO / INVITATION (DARK) */}
+    <div className="bg-[#080B0A] text-[#F3EFE4] selection:bg-[#063C2D] selection:text-[#D4AF37]">
+      {/* 01 — HERO / INVITATION (DARK OBSIDIAN / EMERALD) */}
       <ContactHero />
 
       {/* CONNECTOR 01: DARK → IVORY */}
       <SectionConnector fromDark={true} />
 
-      {/* 02 — PROJECT INTAKE (IVORY) */}
+      {/* 02 — PROJECT INTAKE & INQUIRY FORM (WARM IVORY) */}
       <ContactIntake />
 
       {/* CONNECTOR 02: IVORY → DARK */}
       <SectionConnector fromDark={false} />
 
-      {/* 03 — DIRECT PATHWAYS & CONVERSATION (DARK) */}
+      {/* 03 — VERIFIED DIRECT CHANNELS (DARK EMERALD / OBSIDIAN) */}
       <ContactDetails />
 
       {/* CONNECTOR 03: DARK -> DARK */}
       <SectionConnector fromDark={true} toDark={true} />
 
-      {/* 04 — FINAL CTA (DARK) */}
+      {/* 04 — CLOSING CONVERSATION CTA (DARK OBSIDIAN) */}
       <ContactCTA />
     </div>
   );

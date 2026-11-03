@@ -69,25 +69,25 @@ export default function ComingSoonModal({ project, onClose }) {
           </div>
 
           {/* Title & Tagline */}
-          <h3 className="font-serif text-3xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight mb-3">
+          <h3 className="font-roboto text-3xl sm:text-4xl text-[#F3EFE3] font-normal leading-tight mb-3">
             {project.name}
           </h3>
 
           {project.projectType && (
-            <p className="font-sans text-xs text-[#D4AF37] font-semibold tracking-widest uppercase mb-4">
+            <p className="font-lora text-xs text-[#D4AF37] font-semibold tracking-widest uppercase mb-4">
               {project.projectType}
             </p>
           )}
 
           {/* Description */}
-          <p className="font-sans text-xs sm:text-sm text-[#F3EFE3]/80 font-light leading-relaxed mb-6 border-l border-[#D4AF37]/30 pl-4 py-1">
+          <p className="font-lora text-xs sm:text-sm text-[#F3EFE3]/80 font-light leading-relaxed mb-6 border-l border-[#D4AF37]/30 pl-4 py-1">
             {project.description}
           </p>
 
           {/* Notice Box */}
           <div className="bg-[#101613] border border-white/10 p-4 mb-8 flex items-start gap-3">
             <Lock className="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5" />
-            <p className="font-sans text-xs text-[#F3EFE3]/70 leading-relaxed font-light">
+            <p className="font-lora text-xs text-[#F3EFE3]/70 leading-relaxed font-light">
               This project is part of our upcoming portfolio archive. The full digital experience and case study will be published once the system launches.
             </p>
           </div>

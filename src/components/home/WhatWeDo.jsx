@@ -1,211 +1,314 @@
 'use client';
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Edit3, Code, Search, Megaphone, Sparkles, TrendingUp } from 'lucide-react';
+import React from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
+import {
+  TrendingUp,
+  Sparkles,
+  Code2,
+  Search,
+  Megaphone,
+  Bot,
+  ArrowRight,
+  ArrowUpRight,
+} from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function WhatWeDo() {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const shouldReduceMotion = useReducedMotion();
 
+  // The 6 official core services with exact required copy and mapped luxury artwork
   const services = [
     {
       id: '01',
-      title: 'WEBSITE DESIGN & DEVELOPMENT',
-      subtitle: 'High-performance websites and web applications engineered for speed, security, and conversion.',
-      href: '/services/web-design-development',
-      icon: Code,
+      title: 'Growth Systems & CRO',
+      description:
+        'Data-driven CRO, funnel analysis and analytics architecture to turn existing website traffic into paying clients and measurable commercial return.',
+      href: '/services/crm-lead-systems',
+      icon: TrendingUp,
+      isDark: false, // Light Ivory Card
+      image: '/images/services/service-growth-systems.webp',
+      imageAlt: 'Luxury marble plinth with green marble growth chart and golden upward arrow',
+      objectPosition: 'object-[75%_center] sm:object-[70%_bottom] lg:object-right-bottom',
+      overlayGradient:
+        'linear-gradient(180deg, rgba(243, 239, 228, 0.35) 0%, rgba(243, 239, 228, 0.10) 25%, rgba(243, 239, 228, 0.70) 52%, rgba(243, 239, 228, 0.94) 74%, #F3EFE4 100%)',
     },
     {
       id: '02',
-      title: 'SEARCH ENGINE OPTIMIZATION (SEO)',
-      subtitle: 'Technical SEO, Google 3-Pack local rankings, and AI answer engine visibility across Jaipur and India.',
-      href: '/services/seo-services',
-      icon: Search,
+      title: 'Brand Strategy & Identity',
+      description:
+        'Distinctive positioning, visual identities and design guidelines that help businesses command recognition and stand out in competitive markets.',
+      href: '/services/branding',
+      icon: Sparkles,
+      isDark: true, // Dark Emerald Card
+      image: '/images/services/service-brand-strategy.webp',
+      imageAlt: 'Luxury emerald green leather brand book, gold monogram and bespoke stationery',
+      objectPosition: 'object-[75%_center] sm:object-right',
+      overlayGradient:
+        'linear-gradient(180deg, rgba(6, 26, 19, 0.35) 0%, rgba(6, 26, 19, 0.10) 25%, rgba(6, 24, 18, 0.68) 52%, rgba(6, 20, 15, 0.94) 74%, #061A13 100%)',
     },
     {
       id: '03',
-      title: 'SOCIAL MEDIA MARKETING',
-      subtitle: 'Targeted Meta and LinkedIn campaigns, organic storytelling, and high-engagement creative reels.',
-      href: '/services/social-media-marketing',
-      icon: Megaphone,
+      title: 'Website Design & Development',
+      description:
+        'Custom, lightning-fast Next.js digital platforms engineered for flawless mobile experience, search visibility and conversion.',
+      href: '/services/web-design-development',
+      icon: Code2,
+      isDark: false, // Light Ivory Card
+      image: '/images/services/service-web-development.webp',
+      imageAlt: 'Modern laptop and smartphone workspace displaying luxury Aarsika fragrance website',
+      objectPosition: 'object-[75%_center] sm:object-right',
+      overlayGradient:
+        'linear-gradient(180deg, rgba(243, 239, 228, 0.35) 0%, rgba(243, 239, 228, 0.10) 25%, rgba(243, 239, 228, 0.70) 52%, rgba(243, 239, 228, 0.94) 74%, #F3EFE4 100%)',
     },
     {
       id: '04',
-      title: 'BRAND STRATEGY & IDENTITY',
-      subtitle: 'Category positioning, visual identity systems, typography, and brand messaging that commands authority.',
-      href: '/services/branding',
-      icon: Edit3,
+      title: 'SEO & GEO Optimization',
+      description:
+        'Advanced technical SEO and Generative Engine Optimization ensuring your brand ranks across Google search, AI Overviews and answer engines.',
+      href: '/services/seo-services',
+      icon: Search,
+      isDark: true, // Dark Emerald Card
+      image: '/images/services/service-seo-geo.webp',
+      imageAlt: 'Gold magnifying glass with Google AI Overview pill on emerald marble workspace',
+      objectPosition: 'object-center sm:object-center',
+      overlayGradient:
+        'linear-gradient(180deg, rgba(6, 26, 19, 0.35) 0%, rgba(6, 26, 19, 0.10) 25%, rgba(6, 24, 18, 0.68) 52%, rgba(6, 20, 15, 0.94) 74%, #061A13 100%)',
+    },
+    {
+      id: '05',
+      title: 'Digital Marketing & Growth',
+      description:
+        'High-intent paid search, targeted media campaigns and performance creative focused on acquiring qualified business enquiries at low CAC.',
+      href: '/services/social-media-marketing',
+      icon: Megaphone,
+      isDark: false, // Light Ivory Card
+      image: '/images/services/service-digital-marketing.webp',
+      imageAlt: 'Digital campaign performance analytics dashboard with Google and Meta badges',
+      objectPosition: 'object-[75%_center] sm:object-right',
+      overlayGradient:
+        'linear-gradient(180deg, rgba(243, 239, 228, 0.35) 0%, rgba(243, 239, 228, 0.10) 25%, rgba(243, 239, 228, 0.70) 52%, rgba(243, 239, 228, 0.94) 74%, #F3EFE4 100%)',
+    },
+    {
+      id: '06',
+      title: 'AI & Business Automation',
+      description:
+        'Bespoke AI-powered customer workflows, CRM integration and operational automation to eliminate manual tasks and scale efficiently.',
+      href: '/services/ai-automation',
+      icon: Bot,
+      isDark: true, // Dark Emerald Card
+      image: '/images/services/service-ai-automation.webp',
+      imageAlt: 'Tablet and smartphone showcasing automated lead workflows and CRM pipelines',
+      objectPosition: 'object-[75%_center] sm:object-right',
+      overlayGradient:
+        'linear-gradient(180deg, rgba(6, 26, 19, 0.35) 0%, rgba(6, 26, 19, 0.10) 25%, rgba(6, 24, 18, 0.68) 52%, rgba(6, 20, 15, 0.94) 74%, #061A13 100%)',
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.04,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 15 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
-    },
-  };
-
   return (
-    <section id="services" className="relative py-14 sm:py-20 bg-[#070A09] border-t border-[#D9B45F]/15 overflow-hidden">
-      {/* Background Emerald-Black Atmosphere */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#071E18]/60 via-[#070A09] to-[#070A09] opacity-80 pointer-events-none" />
-      <div 
-        className="absolute top-1/3 left-10 w-[500px] h-[500px] rounded-full pointer-events-none" 
+    <section
+      id="services"
+      aria-label="Siyara Innovations Services and Disciplines"
+      className="relative py-16 sm:py-20 lg:py-22 bg-[#070A09] text-[#F3EFE4] overflow-hidden border-t border-[#D9B45F]/15"
+    >
+      {/* Background Emerald Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#06261D]/50 via-[#070A09] to-[#070A09] opacity-90 pointer-events-none" />
+      <div
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full pointer-events-none opacity-40"
         style={{
-          background: 'radial-gradient(circle at center, rgba(12, 107, 82, 0.22) 0%, transparent 70%)',
+          background: 'radial-gradient(circle at center, rgba(25, 168, 120, 0.16) 0%, transparent 70%)',
         }}
       />
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
-        
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.4 }}
-          className="flex items-center gap-3 mb-6 sm:mb-10"
-        >
-          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
-            01
-          </span>
-          <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
-            What We Do
-          </span>
-        </motion.div>
-
-        {/* Section Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.5 }}
-          className="mb-12 sm:mb-20 max-w-3xl"
-        >
-          <h2 className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#F3EFE3] font-normal leading-[1.05] sm:leading-[0.98] break-words">
-            Four core disciplines, <br />
-            four core disciplines <br />
-            working as one <span className="text-[#D9B45F] font-normal">focused partnership.</span>
-          </h2>
-        </motion.div>
-
-        {/* Continuous Flowing Line & Node Flow (Desktop Horizontal / Mobile Responsive) */}
-        <div className="relative pt-4 sm:pt-8 pb-8 sm:pb-12">
-          
-          {/* Continuous Glowing SVG Line (Desktop) */}
-          <div className="hidden lg:block absolute top-[60px] left-0 right-0 h-[2px] z-0">
-            <div className="w-full h-full bg-gradient-to-r from-[#0C6B52]/20 via-[#D9B45F]/40 to-[#0C6B52]/20" />
-            <svg className="absolute -top-[5px] left-0 w-full h-[12px]" xmlns="http://www.w3.org/2000/svg">
-              <line
-                x1="0"
-                y1="6"
-                x2="100%"
-                y2="6"
-                stroke="#D9B45F"
-                strokeWidth="1.5"
-                strokeDasharray="6 6"
-                className="opacity-50"
-              />
-            </svg>
-          </div>
-
-          {/* 6 Service Nodes Array */}
+        {/* Section Header: Editorial Two-Column Header */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end mb-10 sm:mb-14 lg:mb-14">
+          {/* Left Column: Label and Large Editorial Headline */}
           <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '80px 0px' }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-4 relative z-10"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '60px 0px' }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-7 xl:col-span-7"
           >
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              const isHovered = hoveredIndex === index;
+            {/* Small Label */}
+            <div className="flex items-center gap-3 mb-5 sm:mb-6">
+              <span className="text-[11px] sm:text-xs font-sans font-semibold tracking-[0.24em] text-[#D4AF37] uppercase">
+                02 — OUR SERVICES
+              </span>
+              <span className="w-10 sm:w-14 h-[1px] bg-[#D4AF37]/50 inline-block" />
+            </div>
 
-              return (
+            {/* Main Headline */}
+            <h2 className="font-roboto text-3xl sm:text-5xl lg:text-[50px] xl:text-[56px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight">
+              One connected system,<br />
+              six disciplines<br />
+              working <span className="text-[#D4AF37] italic font-roboto">together.</span>
+            </h2>
+          </motion.div>
+
+          {/* Right Column: Supporting Description and CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '60px 0px' }}
+            transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-5 xl:col-span-5 flex flex-col justify-end lg:items-start space-y-5"
+          >
+            <p className="font-lora text-xs sm:text-sm text-[#A5B8AA] font-light leading-relaxed max-w-md">
+              Siyara Innovations brings strategy, creativity and technology together to help businesses build stronger brands, better digital experiences and measurable growth.
+            </p>
+
+            <div>
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full border border-[#D4AF37]/45 hover:border-[#D4AF37] text-[#F3EFE4] hover:bg-[#D4AF37]/10 text-xs font-sans font-medium tracking-[0.18em] uppercase transition-all duration-200 group"
+              >
+                <span>EXPLORE ALL SERVICES</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* 6-Card Grid: Desktop 3x2, Tablet 2 Cols, Mobile 1 Col */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            const isDark = service.isDark;
+
+            return (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 22 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '60px 0px' }}
+                transition={{
+                  duration: shouldReduceMotion ? 0.2 : 0.45,
+                  delay: shouldReduceMotion ? 0 : index * 0.08,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+              >
                 <Link
-                  key={service.id}
                   href={service.href}
-                  aria-label={`Explore ${service.title} services in Jaipur`}
-                  className="block group"
+                  aria-label={`Explore ${service.title}`}
+                  className="block group h-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/70 rounded-[22px]"
                 >
-                  <motion.div
-                    variants={itemVariants}
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
-                    className="flex flex-col items-center text-center cursor-pointer p-4 sm:p-2 rounded-xl bg-[#0B110F]/60 sm:bg-transparent border sm:border-0 border-white/5"
+                  <div
+                    className={`relative rounded-[22px] sm:rounded-[24px] overflow-hidden p-5 sm:p-6 flex flex-col justify-between min-h-[390px] sm:min-h-[410px] lg:min-h-[415px] xl:min-h-[435px] transition-all duration-350 border ${
+                      isDark
+                        ? 'bg-[#061A13] border-[#0B5A43]/30 hover:border-[#D4AF37]/60 shadow-[0_12px_36px_rgba(0,0,0,0.45)] hover:shadow-[0_20px_48px_rgba(6,60,45,0.35)]'
+                        : 'bg-[#F3EFE4] border-[#E5E0D2] hover:border-[#063C2D]/60 shadow-[0_12px_36px_rgba(0,0,0,0.18)] hover:shadow-[0_20px_48px_rgba(0,0,0,0.25)]'
+                    }`}
                   >
-                    {/* Node Circle Container */}
-                    <div className="relative mb-4 sm:mb-6">
-                      {/* Glowing Halo on Hover */}
-                      <div
-                        className={`absolute -inset-3 rounded-full bg-[#18A982]/20 blur-md transition-opacity duration-300 ${
-                          isHovered ? 'opacity-100' : 'opacity-0'
-                        }`}
+                    {/* Background Artwork Layer (Integrated 1:1 Composition) */}
+                    <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.imageAlt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className={`object-cover ${service.objectPosition} ${
+                          shouldReduceMotion ? '' : 'group-hover:scale-[1.03]'
+                        } transition-transform duration-500 ease-out`}
                       />
 
-                      {/* Node Circular Icon Container */}
+                      {/* Directional Translucent Overlay for Contrast & Readability */}
                       <div
-                        className={`relative w-14 h-14 rounded-full flex items-center justify-center border transition-all duration-300 ${
-                          isHovered
-                            ? 'border-[#D9B45F] bg-[#071E18] text-[#D9B45F] scale-110 shadow-[0_0_20px_rgba(217,180,95,0.3)]'
-                            : 'border-[#D9B45F]/30 bg-[#070A09] text-[#D9B45F] group-hover:border-[#D9B45F]'
-                        }`}
-                      >
-                        <Icon className="w-5 h-5 stroke-[1.75] transition-transform duration-300 group-hover:scale-110" />
-                      </div>
-
-                      {/* Subtle Node Indicator Dot */}
-                      <div
-                        className={`absolute -bottom-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full transition-colors duration-300 ${
-                          isHovered ? 'bg-[#D9B45F]' : 'bg-[#D9B45F]/30'
-                        }`}
+                        className="absolute inset-0 pointer-events-none transition-opacity duration-300"
+                        style={{ background: service.overlayGradient }}
                       />
                     </div>
 
-                    {/* Service Title */}
-                    <h3
-                      className={`font-sans text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase mb-2 transition-all duration-300 leading-snug ${
-                        isHovered ? 'text-[#D9B45F] -translate-y-0.5' : 'text-[#F3EFE3]'
-                      }`}
-                    >
-                      {service.title}
-                    </h3>
+                    {/* Top Control Bar: Number, Circular Icon, and Circular Arrow CTA */}
+                    <div className="relative z-10 flex items-center justify-between w-full">
+                      <div className="flex items-center gap-2.5">
+                        <span
+                          className={`text-xs font-sans font-semibold tracking-[0.24em] ${
+                            isDark ? 'text-[#D4AF37]' : 'text-[#063C2D]'
+                          }`}
+                        >
+                          {service.id}
+                        </span>
 
-                    {/* Service Description */}
-                    <p className="font-sans text-[11px] text-[#9D9B91] font-light leading-relaxed max-w-[200px] sm:max-w-[160px]">
-                      {service.subtitle}
-                    </p>
-                  </motion.div>
+                        <div
+                          className={`w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full flex items-center justify-center transition-transform duration-300 ${
+                            shouldReduceMotion ? '' : 'group-hover:scale-105'
+                          } ${
+                            isDark
+                              ? 'border border-[#D4AF37]/35 bg-[#063C2D]/75 text-[#E5C378] backdrop-blur-sm shadow-sm'
+                              : 'border border-[#063C2D]/20 bg-[#063C2D] text-[#F3EFE4] shadow-sm'
+                          }`}
+                        >
+                          <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[1.8]" />
+                        </div>
+                      </div>
+
+                      {/* Circular Arrow CTA */}
+                      <div
+                        className={`w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full flex items-center justify-center transition-all duration-300 ${
+                          isDark
+                            ? 'border border-white/25 bg-[#06241B]/60 text-[#F3EFE4] backdrop-blur-sm group-hover:border-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#080B0A]'
+                            : 'border border-[#080B0A]/20 bg-white/75 text-[#080B0A] backdrop-blur-sm group-hover:border-[#063C2D] group-hover:bg-[#063C2D] group-hover:text-[#F3EFE4]'
+                        }`}
+                      >
+                        <ArrowRight
+                          className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 ${
+                            shouldReduceMotion ? '' : 'group-hover:translate-x-1'
+                          }`}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Bottom Editorial Content Panel */}
+                    <div className="relative z-10 mt-auto pt-4">
+                      {/* Subtle accent indicator */}
+                      <div className="mb-2">
+                        <span
+                          className={`inline-block w-7 h-[2px] rounded-full ${
+                            isDark ? 'bg-[#D4AF37]/70' : 'bg-[#063C2D]/70'
+                          }`}
+                        />
+                      </div>
+
+                      {/* Service Heading */}
+                      <h3
+                        className={`font-roboto text-xl sm:text-[23px] lg:text-[21px] xl:text-[24px] font-normal leading-[1.18] tracking-tight transition-colors duration-200 ${
+                          isDark
+                            ? 'text-[#F3EFE4] group-hover:text-white'
+                            : 'text-[#080B0A] group-hover:text-[#063C2D]'
+                        }`}
+                      >
+                        {service.title}
+                      </h3>
+
+                      {/* Service Description */}
+                      <p
+                        className={`font-lora text-xs sm:text-[12.5px] leading-relaxed mt-2 line-clamp-3 ${
+                          isDark ? 'text-[#C2D1C7] font-light' : 'text-[#1E2823] font-normal'
+                        }`}
+                      >
+                        {service.description}
+                      </p>
+
+                      {/* Visible Navigation Affordance */}
+                      <div className="mt-3 pt-2.5 flex items-center justify-between border-t border-black/[0.06] dark:border-white/[0.08]">
+                        <span
+                          className={`text-[10.5px] sm:text-[11px] font-roboto font-medium tracking-[0.16em] uppercase inline-flex items-center gap-1.5 transition-transform duration-200 group-hover:translate-x-0.5 ${
+                            isDark ? 'text-[#D4AF37]' : 'text-[#063C2D]'
+                          }`}
+                        >
+                          <span>Explore Discipline</span>
+                          <ArrowRight className="w-3 h-3 stroke-[2]" />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </Link>
-              );
-            })}
-          </motion.div>
-
-        </div>
-
-        {/* See full system link */}
-        <div className="mt-12 flex items-center gap-3">
-          <span className="h-[1px] w-8 bg-[#D9B45F]/40" />
-          <Link
-            href="/services"
-            className="font-sans text-xs font-semibold tracking-[0.18em] text-[#9D9B91] hover:text-[#D9B45F] transition-colors uppercase"
-          >
-            See the full system on the Services page
-          </Link>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

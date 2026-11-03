@@ -1,181 +1,142 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowUpRight, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import React from 'react';
 import Image from 'next/image';
+import { motion, useReducedMotion } from 'framer-motion';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import { siteConfig } from '@/data/siteConfig';
 
 export default function ServicesHero() {
   const shouldReduceMotion = useReducedMotion();
-  const [isMobile, setIsMobile] = useState(false);
-  const heroRef = useRef(null);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
   const easeCustom = [0.16, 1, 0.3, 1];
 
   const fadeUp = (delayMs) => ({
-    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 18 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, delay: delayMs / 1000, ease: easeCustom },
+      transition: { duration: 0.65, delay: delayMs / 1000, ease: easeCustom },
     },
   });
 
   return (
     <section
-      ref={heroRef}
-      className="relative min-h-[100svh] pt-32 pb-20 lg:pt-36 lg:pb-24 bg-[#070A09] overflow-hidden flex items-center"
+      id="services-hero"
+      aria-label="Services Hero"
+      className="relative min-h-[85svh] pt-32 pb-16 lg:pt-36 lg:pb-20 bg-[#080B0A] text-[#F3EFE4] overflow-hidden flex items-center"
     >
-      {/* LAYER 01: Obsidian Black Canvas Base */}
-      <div className="absolute inset-0 bg-[#070A09] z-0" />
+      {/* Background Atmosphere: Deep Emerald & Obsidian Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#080B0A] via-[#05261C] to-[#041710] pointer-events-none" />
 
-      {/* LAYER 02: PURE FULL HERO IMAGE BACKGROUND */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none z-[1] overflow-hidden select-none">
-        <Image
-          src="/images/services_hero_bg.webp"
-          alt="Siyara Innovations Services Overview"
-          priority
-          fill
-          sizes="100vw"
-          className="object-contain object-right lg:object-right opacity-100 pointer-events-none lg:-translate-x-8 xl:-translate-x-16"
-        />
-        {/* Subtle left-side gradient veil for optimal typography contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070A09]/85 via-[#070A09]/40 to-transparent lg:via-[#070A09]/20 pointer-events-none" />
-      </div>
+      {/* Subtle Radial Glow */}
+      <div
+        className="absolute top-1/3 right-1/4 -translate-y-1/2 w-[700px] h-[500px] rounded-full pointer-events-none opacity-25"
+        style={{
+          background: 'radial-gradient(circle at center, rgba(25, 168, 120, 0.35) 0%, transparent 70%)',
+        }}
+      />
+      <div
+        className="absolute -top-24 left-1/4 w-[500px] h-[300px] rounded-full pointer-events-none opacity-15"
+        style={{
+          background: 'radial-gradient(circle at center, rgba(212, 175, 55, 0.3) 0%, transparent 70%)',
+        }}
+      />
 
-      <div className="max-w-[1500px] mx-auto pl-5 pr-6 sm:pl-6 sm:pr-8 lg:pl-10 lg:pr-12 xl:pl-16 xl:pr-12 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-
-          {/* LEFT COLUMN: ~45% Width Editorial Typography sitting in open negative space */}
-          <div className="lg:col-span-6 xl:col-span-5 flex flex-col justify-center relative z-20">
+      <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+          
+          {/* LEFT COLUMN: Editorial Typography & Actions */}
+          <div className="lg:col-span-7 flex flex-col justify-center">
             
-            {/* Eyebrow */}
+            {/* Eyebrow Label */}
             <motion.div
               initial="hidden"
               animate="visible"
-              variants={fadeUp(350)}
-              className="flex items-center gap-3 mb-6"
+              variants={fadeUp(150)}
+              className="flex items-center gap-2.5 mb-5 sm:mb-6"
             >
-              <span className="h-[1px] w-8 bg-[#D9B45F]/60" />
-              <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.26em] text-[#D9B45F] uppercase">
-                SIYARA SERVICES
+              <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#D4AF37] uppercase">
+                — OUR SERVICES —
               </span>
             </motion.div>
 
-            {/* Headline - single H1, Jaipur-first */}
-            <div className="mb-6">
-              <h1 className="font-serif leading-[0.96] tracking-tight">
-                <motion.span
-                  initial="hidden"
-                  animate="visible"
-                  variants={fadeUp(500)}
-                  className="block text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal text-[#F3EFE3]"
-                >
-                  OUR DIGITAL
-                </motion.span>
-
-                <motion.span
-                  initial="hidden"
-                  animate="visible"
-                  variants={fadeUp(700)}
-                  className="block text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] drop-shadow-[0_4px_30px_rgba(217,180,95,0.22)]"
-                >
-                  CAPABILITIES,
-                </motion.span>
-
-                <motion.span
-                  initial="hidden"
-                  animate="visible"
-                  variants={fadeUp(820)}
-                  className="block text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-normal text-[#F3EFE3]"
-                >
-                  BUILT FOR JAIPUR BUSINESSES.
-                </motion.span>
-              </h1>
-            </div>
+            {/* Main Headline */}
+            <motion.h1
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp(300)}
+              className="font-roboto text-4xl sm:text-5xl lg:text-[54px] xl:text-[60px] font-normal text-[#F3EFE4] leading-[1.1] tracking-tight mb-5 sm:mb-6"
+            >
+              Digital Solutions<br />
+              Built for<br />
+              <span className="font-lora italic text-[#E5C378]">Real Business Growth.</span>
+            </motion.h1>
 
             {/* Supporting Copy */}
+            <motion.p
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp(450)}
+              className="font-lora text-sm sm:text-base lg:text-[17px] text-[#C5D2CE] font-light leading-relaxed max-w-xl mb-8 sm:mb-10"
+            >
+              We help brands grow through strategy, creativity and technology. Explore our services designed to solve real challenges and create measurable impact.
+            </motion.p>
+
+            {/* Dual CTAs */}
             <motion.div
               initial="hidden"
               animate="visible"
-              variants={fadeUp(850)}
-              className="mb-10 max-w-lg"
+              variants={fadeUp(600)}
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5"
             >
-              <p className="font-sans text-base sm:text-lg text-[#9D9B91] font-light leading-relaxed">
-                Brand, web design, SEO, and social marketing - built with unified precision for businesses in Jaipur and across India, not generic templates.
-              </p>
+              {/* Primary: Explore All Services */}
+              <a
+                href="#disciplines"
+                className="inline-flex items-center justify-center min-h-[48px] gap-2.5 px-8 py-3.5 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs sm:text-sm font-roboto font-bold tracking-[0.14em] rounded-full transition-all duration-300 shadow-xl hover:-translate-y-0.5 group"
+              >
+                <span>Explore All Services</span>
+                <ArrowDown className="w-4 h-4 stroke-[2.5] transition-transform duration-300 group-hover:translate-y-0.5" />
+              </a>
+
+              {/* Secondary: Talk to Our Team */}
+              <a
+                href={siteConfig.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Talk to our team on WhatsApp"
+                className="inline-flex items-center justify-center min-h-[48px] gap-2.5 px-8 py-3.5 border border-[#E5C378]/50 bg-[#063C2D]/50 hover:bg-[#063C2D] text-[#F3EFE4] hover:text-[#E5C378] text-xs sm:text-sm font-roboto font-medium tracking-[0.14em] rounded-full transition-all duration-300 shadow-lg hover:-translate-y-0.5 group"
+              >
+                <span>Talk to Our Team</span>
+                <ArrowUpRight className="w-4 h-4 stroke-[2] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
             </motion.div>
 
-            {/* Action CTAs */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp(950)}
-              className="flex flex-wrap items-center gap-5"
-            >
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
-              >
-                <span>START A PROJECT</span>
-                <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
-              </Link>
-
-              <Link
-                href="/services#services-capabilities"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-[#F3EFE3]/25 hover:border-[#D9B45F]/60 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 group bg-[#070A09]/40 backdrop-blur-sm"
-              >
-                <span>EXPLORE OUR SYSTEM</span>
-                <ArrowRight className="w-4 h-4 text-[#D9B45F] group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </motion.div>
           </div>
 
+          {/* RIGHT COLUMN: Flowing Emerald & Champagne Gold Abstract Artwork */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.25, ease: easeCustom }}
+            className="lg:col-span-5 flex justify-center lg:justify-end relative"
+          >
+            <div className="relative w-full max-w-[460px] lg:max-w-none aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden shadow-2xl bg-[#03150E]/80">
+              <Image
+                src="/images/siyara_hero_artwork.webp"
+                alt="Siyara Innovations flowing emerald and champagne gold luxury abstract visual"
+                fill
+                sizes="(max-width: 1024px) 100vw, 550px"
+                className="object-cover object-center"
+                priority
+              />
+              {/* Subtle ambient soft edges */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#080B0A]/70 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10 pointer-events-none" />
+            </div>
+          </motion.div>
+
         </div>
-      </div>
-
-      {/* BOTTOM LEFT: Scroll Indicator Line */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.6 }}
-        className="absolute bottom-8 left-8 sm:left-12 z-20 flex flex-col items-center gap-3 hidden sm:flex"
-      >
-        <div className="w-[1px] h-10 bg-gradient-to-b from-[#D9B45F] to-transparent relative">
-          <div className="w-1.5 h-1.5 bg-[#D9B45F] rounded-full absolute top-0 -left-[2.5px] animate-ping" />
-        </div>
-        <span className="text-[9px] font-sans tracking-[0.24em] text-[#9D9B91]/60 uppercase">
-          SCROLL
-        </span>
-      </motion.div>
-
-      {/* BOTTOM RIGHT: Connected Capabilities Information Plaque */}
-      <div className="absolute right-6 sm:right-10 lg:right-14 bottom-10 sm:bottom-12 z-20 hidden md:flex flex-col items-start px-6 py-3.5 rounded-lg border border-[#D9B45F]/40 bg-[#070A09]/85 backdrop-blur-md shadow-[0_0_25px_rgba(7,10,9,0.9)] select-none pointer-events-none">
-        <span className="font-sans text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] text-[#D9B45F] uppercase whitespace-nowrap">
-          CONNECTED CAPABILITIES
-        </span>
-        <span className="font-sans text-[11px] sm:text-xs font-light tracking-[0.04em] text-[#E5E0D4] mt-0.5 whitespace-nowrap">
-          Strategy. Technology. Growth.
-        </span>
-      </div>
-
-      {/* HERO BOTTOM CONNECTOR: Thin horizontal gold line with ONE central glowing gold point */}
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D9B45F]/35 to-transparent z-20 flex items-center justify-center">
-        <div className="w-1.5 h-1.5 rounded-full bg-[#D9B45F] shadow-[0_0_8px_#D9B45F] -translate-y-[0.5px]" />
       </div>
     </section>
   );
 }
-
-
-

@@ -1,153 +1,232 @@
+'use client';
+
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Search, Compass, Edit3, Code, Rocket, TrendingUp } from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { Search, Compass, Edit3, Code, Rocket, TrendingUp, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function Approach() {
   const [activeStep, setActiveStep] = useState(0);
+  const shouldReduceMotion = useReducedMotion();
   const easeCustom = [0.16, 1, 0.3, 1];
 
-  const steps = [
+  const stages = [
     {
       id: '01',
       title: 'DISCOVER',
-      description: 'We start by understanding your business, your customers, and what’s actually not working today.',
+      subtitle: 'Audit & Clarity',
+      description: 'We analyze your commercial model, current digital gaps, and user behavior before proposing solutions.',
+      deliverable: 'Business & Brand Audit',
       icon: Search,
     },
     {
       id: '02',
       title: 'STRATEGIZE',
-      description: 'We map a plan with clear priorities - not a generic checklist of deliverables.',
+      subtitle: 'Architecture & Roadmap',
+      description: 'We define the technical stack, brand positioning, and conversion architecture to guide all execution.',
+      deliverable: 'Strategic Blueprint',
       icon: Compass,
     },
     {
       id: '03',
       title: 'DESIGN',
-      description: 'We design around how your customers actually decide, not just how things look.',
+      subtitle: 'UI/UX & Identity',
+      description: 'We design bespoke interfaces with refined typographic hierarchy, responsive pacing, and brand prestige.',
+      deliverable: 'Bespoke UI/UX System',
       icon: Edit3,
     },
     {
       id: '04',
       title: 'DEVELOP',
-      description: 'We build on modern, fast, maintainable code - nothing bolted together.',
+      subtitle: 'Next.js Engineering',
+      description: 'We build with clean Next.js code, edge caching, responsive image optimization, and semantic Schema.org markup.',
+      deliverable: 'Next.js Architecture',
       icon: Code,
     },
     {
       id: '05',
       title: 'LAUNCH',
-      description: 'We launch with a clear rollout plan and QA, not a rushed handoff.',
+      subtitle: 'QA & Deployment',
+      description: 'We conduct multi-viewport QA, performance stress testing, and structured rollouts with zero downtime.',
+      deliverable: 'Production Deployment',
       icon: Rocket,
     },
     {
       id: '06',
       title: 'GROW',
-      description: 'We keep optimizing after launch based on real data, not assumptions.',
+      subtitle: 'Optimization & Scale',
+      description: 'We optimize post-launch performance based on verified user data, search traction, and conversion metrics.',
+      deliverable: 'Continuous Scale & CRO',
       icon: TrendingUp,
     },
   ];
 
   return (
-    <section id="approach" className="relative py-16 sm:py-20 bg-[#070A09] text-[#F3EFE3] overflow-hidden">
-      {/* Deep Emerald Background Haze */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#070A09] via-[#071E18]/40 to-[#070A09] opacity-90 pointer-events-none" />
-      <div className="absolute right-[10%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0C6B52]/15 blur-3xl rounded-full pointer-events-none" />
+    <section
+      id="process"
+      aria-label="Our Six-Step Process and Methodology"
+      className="relative py-20 sm:py-24 lg:py-28 bg-[#080B0A] text-[#F3EFE4] overflow-hidden border-t border-[#D4AF37]/15"
+    >
+      {/* Background Deep Emerald Glow */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#063C2D]/35 via-[#080B0A] to-[#080B0A] pointer-events-none" />
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] rounded-full pointer-events-none opacity-25"
+        style={{
+          background: 'radial-gradient(circle at center, rgba(25, 168, 120, 0.2) 0%, transparent 70%)',
+        }}
+      />
 
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
-        {/* Eyebrow */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '80px 0px' }}
-          transition={{ duration: 0.5, ease: easeCustom }}
-          className="flex items-center gap-3 mb-8 sm:mb-10"
-        >
-          <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D9B45F]">
+        {/* Section Identifier */}
+        <div className="flex items-center gap-3 mb-6 sm:mb-8">
+          <span className="text-xs font-roboto font-medium tracking-[0.24em] text-[#D4AF37]">
             05
           </span>
-          <span className="h-[1px] w-8 bg-[#D9B45F]/50" />
-          <span className="text-[11px] sm:text-[12px] font-sans font-semibold tracking-[0.22em] text-[#D9B45F] uppercase">
-            METHODOLOGY
+          <span className="w-8 h-[1px] bg-[#D4AF37]/50" />
+          <span className="text-[11px] sm:text-xs font-roboto font-semibold tracking-[0.24em] text-[#F3EFE4] uppercase">
+            OUR PROCESS
           </span>
-        </motion.div>
-
-        {/* Section Headline */}
-        <div className="mb-12 sm:mb-20 max-w-2xl">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '80px 0px' }}
-            transition={{ duration: 0.6, ease: easeCustom }}
-            className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F3EFE3] font-normal leading-[1.08] sm:leading-[1.04] break-words"
-          >
-            A disciplined process, built around how <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26] font-normal">Jaipur businesses actually grow.</span>
-          </motion.h2>
         </div>
 
-        {/* 6 Connected Steps Timeline (Horizontal Desktop / Vertical Mobile) */}
-        <div className="relative pt-6 pb-12">
+        {/* Section Headline */}
+        <div className="max-w-3xl mb-12 sm:mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '60px 0px' }}
+            transition={{ duration: 0.5, ease: easeCustom }}
+            className="font-roboto text-3xl sm:text-4xl lg:text-5xl font-normal text-[#F3EFE4] leading-[1.12] sm:leading-[1.08] tracking-tight mb-4"
+          >
+            Every stage connected.{' '}
+            <span className="italic font-roboto text-[#E5C378]">
+              Every decision intentional.
+            </span>
+          </motion.h2>
+          <p className="font-lora text-sm sm:text-base text-[#9D9B91] font-light leading-relaxed max-w-2xl">
+            A disciplined, six-stage methodology ensuring complete transparency and predictable delivery from initial consultation to continuous commercial growth.
+          </p>
+        </div>
+
+        {/* DESKTOP TIMELINE (Horizontal Progression: lg and above) */}
+        <div className="hidden lg:block relative pt-4 pb-4">
           
-          {/* Connecting Line (Desktop) */}
-          <div className="hidden lg:block absolute top-[52px] left-0 right-0 h-[1px] z-0">
-            <div className="w-full h-full bg-[#D9B45F]/20" />
-            <div
-              className="h-full bg-[#D9B45F] transition-all duration-500 shadow-[0_0_8px_#D9B45F]"
-              style={{ width: `${((activeStep + 1) / steps.length) * 100}%` }}
-            />
+          {/* Continuous Rail Line */}
+          <div className="relative mb-8 px-4">
+            <div className="w-full h-[2px] bg-white/10 rounded-full relative">
+              <div 
+                className="h-full bg-gradient-to-r from-[#063C2D] via-[#D4AF37] to-[#D4AF37] rounded-full transition-all duration-300"
+                style={{ width: `${((activeStep + 1) / stages.length) * 100}%` }}
+              />
+            </div>
+            
+            {/* Stage Indicators */}
+            <div className="absolute -top-[5px] left-4 right-4 flex justify-between pointer-events-none">
+              {stages.map((_, idx) => (
+                <div
+                  key={idx}
+                  className={`w-3 h-3 rounded-full border-2 transition-all duration-300 ${
+                    idx <= activeStep
+                      ? 'bg-[#D4AF37] border-[#080B0A] scale-110 shadow-[0_0_8px_#D4AF37]'
+                      : 'bg-[#080B0A] border-white/30'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
 
-          {/* 6 Stages Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-4 relative z-10">
-            {steps.map((step, idx) => {
-              const Icon = step.icon;
+          {/* 6 Horizontal Cards */}
+          <div className="grid grid-cols-6 gap-3 xl:gap-4">
+            {stages.map((stg, idx) => {
+              const Icon = stg.icon;
               const isActive = idx === activeStep;
 
               return (
-                <motion.div
-                  key={step.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '80px 0px' }}
-                  transition={{ duration: 0.5, delay: 0.03 * idx, ease: easeCustom }}
+                <div
+                  key={stg.id}
                   onClick={() => setActiveStep(idx)}
                   onMouseEnter={() => setActiveStep(idx)}
-                  className="flex flex-col items-center text-center group cursor-pointer p-4 sm:p-0 rounded-xl sm:rounded-none bg-[#071E18]/20 sm:bg-transparent border border-[#D9B45F]/15 sm:border-none"
+                  className={`group relative rounded-2xl p-5 xl:p-6 transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[350px] ${
+                    isActive
+                      ? 'bg-gradient-to-b from-[#063C2D]/50 via-[#080B0A] to-[#063C2D]/30 border border-[#D4AF37]/50 shadow-xl -translate-y-1'
+                      : 'bg-white/[0.02] hover:bg-[#063C2D]/20 border border-white/10 hover:border-[#D4AF37]/30'
+                  }`}
                 >
-                  {/* Node Circle Container */}
-                  <div className="relative mb-6">
-                    <div
-                      className={`w-14 h-14 rounded-full flex items-center justify-center border transition-all duration-300 ${
-                        isActive
-                          ? 'border-[#D9B45F] bg-[#071E18] text-[#D9B45F] scale-105 shadow-[0_0_20px_rgba(217,180,95,0.3)]'
-                          : 'border-[#D9B45F]/30 bg-[#070A09] text-[#9D9B91] group-hover:border-[#D9B45F]/60'
-                      }`}
-                    >
-                      <Icon className="w-5 h-5 stroke-[1.75]" />
+                  <div>
+                    <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+                      <span className={`text-[11px] font-roboto font-semibold tracking-widest ${isActive ? 'text-[#D4AF37]' : 'text-white/60'}`}>
+                        STAGE {stg.id}
+                      </span>
+                      {idx < stages.length - 1 && (
+                        <ArrowRight className={`w-3.5 h-3.5 ${isActive ? 'text-[#D4AF37]' : 'text-white/20'}`} />
+                      )}
                     </div>
+
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 border transition-colors ${
+                      isActive ? 'bg-[#D4AF37]/20 border-[#D4AF37] text-[#D4AF37]' : 'bg-[#063C2D]/40 border-white/10 text-white/70'
+                    }`}>
+                      <Icon className="w-5 h-5" />
+                    </div>
+
+                    <h3 className="font-roboto text-base font-semibold text-[#F3EFE4] mb-1">
+                      {stg.title}
+                    </h3>
+                    <span className="text-[10px] font-roboto text-[#19A878] tracking-wider uppercase block mb-3">
+                      {stg.subtitle}
+                    </span>
+
+                    <p className="font-lora text-xs text-[#9D9B91] leading-relaxed font-light">
+                      {stg.description}
+                    </p>
                   </div>
 
-                  {/* Step Number */}
-                  <span className="text-xs font-sans text-[#D9B45F] font-bold tracking-widest mb-1">
-                    {step.id}
-                  </span>
-
-                  {/* Title */}
-                  <h3
-                    className={`font-sans text-xs font-bold tracking-[0.18em] uppercase mb-2 transition-colors duration-300 ${
-                      isActive ? 'text-[#D9B45F]' : 'text-[#F3EFE3]'
-                    }`}
-                  >
-                    {step.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="font-sans text-xs text-[#9D9B91] font-light leading-relaxed max-w-[160px]">
-                    {step.description}
-                  </p>
-                </motion.div>
+                  <div className="pt-3 border-t border-white/5">
+                    <span className="text-[10px] font-roboto font-medium text-[#D4AF37] tracking-wider uppercase block truncate">
+                      {stg.deliverable}
+                    </span>
+                  </div>
+                </div>
               );
             })}
           </div>
 
+        </div>
+
+        {/* MOBILE & TABLET TIMELINE (Vertical Progression: under lg) */}
+        <div className="lg:hidden relative pl-6 sm:pl-8 border-l-2 border-[#D4AF37]/30 space-y-6 sm:space-y-8">
+          {stages.map((stg, idx) => {
+            const Icon = stg.icon;
+            return (
+              <div key={stg.id} className="relative">
+                {/* Node on vertical line */}
+                <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-[#D4AF37] border-4 border-[#080B0A]" />
+
+                <div className="p-5 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#063C2D]/50 border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center shrink-0">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-roboto font-semibold tracking-wider text-[#D4AF37] uppercase block">
+                        STAGE {stg.id} · {stg.subtitle}
+                      </span>
+                      <h3 className="font-roboto text-base sm:text-lg font-semibold text-[#F3EFE4]">
+                        {stg.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <p className="font-lora text-xs sm:text-sm text-[#9D9B91] font-light leading-relaxed mb-3">
+                    {stg.description}
+                  </p>
+
+                  <div className="flex items-center gap-2 text-[11px] font-roboto text-[#19A878]">
+                    <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                    <span>{stg.deliverable}</span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
       </div>

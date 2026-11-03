@@ -19,7 +19,7 @@ export default function WorkHero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero_work_bg.webp"
-          alt="Siyara Innovations Web Design & SEO Portfolio Showcase"
+          alt="Siyara Innovations Digital Architecture Artwork"
           priority
           fill
           sizes="100vw"
@@ -57,16 +57,16 @@ export default function WorkHero() {
             </div>
 
             {/* Main Editorial Headline */}
-            <h1 className="font-serif text-4xl sm:text-7xl lg:text-8xl text-[#F3EFE3] font-normal leading-[0.96] tracking-tight mb-6 max-w-xl break-words">
+            <h1 className="font-roboto text-4xl sm:text-7xl lg:text-8xl text-[#F3EFE3] font-normal leading-[0.96] tracking-tight mb-6 max-w-xl break-words">
               Brands <br />
-              <span className="italic font-normal text-[#D4AF37] font-serif">
+              <span className="italic font-normal text-[#D4AF37] font-roboto">
                 in Action.
               </span>
             </h1>
 
             {/* Supporting Copy */}
-            <p className="font-sans text-sm sm:text-base text-[#F3EFE3]/85 font-light leading-relaxed max-w-[540px] mb-8">
-              A showcase of {totalProjects} delivered projects across {totalIndustries} industries: turning bold ideas into live digital platforms.
+            <p className="font-lora text-sm sm:text-base text-[#F3EFE3]/85 font-light leading-relaxed max-w-[540px] mb-8">
+              A digital showcase of 85 multi-industry platforms, live demonstrations, and concepts from our 110+ completed business engagements.
             </p>
 
             {/* Primary CTA (Rectangular / Editorial) */}
@@ -88,19 +88,19 @@ export default function WorkHero() {
               className="flex flex-wrap items-center gap-8 sm:gap-12 pt-6 border-t border-[#D4AF37]/25 w-full max-w-lg"
             >
               <div className="flex flex-col">
-                <span className="font-serif text-2xl sm:text-3xl font-normal text-[#D4AF37]">
-                  {totalProjects}
+                <span className="font-roboto text-2xl sm:text-3xl font-normal text-[#D4AF37]">
+                  110+
                 </span>
                 <span className="text-[9px] font-sans font-semibold tracking-[0.2em] text-[#F3EFE3]/70 uppercase mt-0.5">
-                  PROJECTS
+                  DELIVERED PROJECTS
                 </span>
               </div>
 
               <div className="h-8 w-[1px] bg-[#D4AF37]/20" />
 
               <div className="flex flex-col">
-                <span className="font-serif text-2xl sm:text-3xl font-normal text-[#D4AF37]">
-                  {totalIndustries}
+                <span className="font-roboto text-2xl sm:text-3xl font-normal text-[#D4AF37]">
+                  12
                 </span>
                 <span className="text-[9px] font-sans font-semibold tracking-[0.2em] text-[#F3EFE3]/70 uppercase mt-0.5">
                   INDUSTRIES
@@ -110,11 +110,11 @@ export default function WorkHero() {
               <div className="h-8 w-[1px] bg-[#D4AF37]/20" />
 
               <div className="flex flex-col">
-                <span className="font-serif text-2xl sm:text-3xl font-normal text-[#D4AF37]">
-                  1
+                <span className="font-roboto text-2xl sm:text-3xl font-normal text-[#D4AF37]">
+                  60+
                 </span>
                 <span className="text-[9px] font-sans font-semibold tracking-[0.2em] text-[#F3EFE3]/70 uppercase mt-0.5">
-                  DIGITAL DISCIPLINE
+                  CLIENTS SERVED
                 </span>
               </div>
             </motion.div>

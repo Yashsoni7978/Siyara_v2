@@ -26,7 +26,7 @@ export default function NotFound() {
         </div>
 
         {/* Headline */}
-        <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl font-normal leading-[0.95] text-[#F3EFE3] mb-6">
+        <h1 className="font-roboto text-5xl sm:text-7xl lg:text-8xl font-normal leading-[0.95] text-[#F3EFE3] mb-6">
           LOST IN THE <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E8C979] via-[#D9B45F] to-[#B38F26]">
             ARCHITECTURE.
@@ -34,7 +34,7 @@ export default function NotFound() {
         </h1>
 
         {/* Subcopy */}
-        <p className="font-sans text-sm sm:text-base text-[#9D9B91] font-light leading-relaxed max-w-md mx-auto mb-10">
+        <p className="font-lora text-sm sm:text-base text-[#9D9B91] font-light leading-relaxed max-w-md mx-auto mb-10">
           The page or system resource you are looking for has been moved, archived, or does not exist on this domain.
         </p>
 

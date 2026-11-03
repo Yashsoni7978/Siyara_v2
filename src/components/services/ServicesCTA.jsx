@@ -42,7 +42,7 @@ export default function ServicesCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.8, ease: easeCustom }}
-          className="font-serif text-4xl sm:text-6xl lg:text-8xl text-[#F3EFE3] font-normal leading-[0.96] tracking-tight mb-8 max-w-4xl mx-auto"
+          className="font-roboto text-4xl sm:text-6xl lg:text-8xl text-[#F3EFE3] font-normal leading-[0.96] tracking-tight mb-8 max-w-4xl mx-auto"
         >
           READY TO BUILD <br />
           SOMETHING <span className="text-[#D9B45F] font-normal">BETTER?</span>

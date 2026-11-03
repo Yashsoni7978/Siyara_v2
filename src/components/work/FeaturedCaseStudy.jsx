@@ -29,7 +29,7 @@ export default function FeaturedCaseStudy() {
               </span>
               <span className="h-[1px] w-8 bg-[#0B5E49]/30" />
               <span className="text-[11px] sm:text-[12px] font-sans font-bold tracking-[0.24em] text-[#0B5E49] uppercase">
-                FEATURED PROJECT SHOWCASE
+                FEATURED CASE STUDY
               </span>
             </motion.div>
 
@@ -38,7 +38,7 @@ export default function FeaturedCaseStudy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '80px 0px' }}
               transition={{ duration: 0.6, delay: 0.05 }}
-              className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[1.06] sm:leading-[1.02] break-words"
+              className="font-roboto text-3xl sm:text-5xl lg:text-7xl text-[#101613] font-normal leading-[1.06] sm:leading-[1.02] break-words"
             >
               From Vision <br className="hidden sm:block" />
               <span className="italic text-[#0B5E49]">to a Digital Legacy.</span>
@@ -46,7 +46,7 @@ export default function FeaturedCaseStudy() {
           </div>
 
           <div className="lg:col-span-4 flex flex-col justify-between h-full pt-2">
-            <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed mb-6">
+            <p className="font-lora text-xs sm:text-sm text-[#101613]/70 font-light leading-relaxed mb-6">
               A complete digital architectural demonstration engineered for luxury real estate developers, establishing high brand authority across multi-project residential portfolios.
             </p>
 
@@ -73,14 +73,14 @@ export default function FeaturedCaseStudy() {
               className="space-y-6"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ECE7D8] border border-[#B9923F]/40 text-[10px] font-sans tracking-[0.2em] text-[#0B5E49] uppercase font-bold">
-                REAL ESTATE PROJECT SHOWCASE
+                REAL ESTATE ARCHITECTURAL DEMONSTRATION
               </div>
 
-              <h3 className="font-serif text-2xl sm:text-4xl text-[#101613] leading-tight font-normal break-words">
+              <h3 className="font-roboto text-2xl sm:text-4xl text-[#101613] leading-tight font-normal break-words">
                 Luxury Real Estate Platform
               </h3>
 
-              <p className="font-sans text-xs sm:text-sm text-[#101613]/80 font-light leading-relaxed">
+              <p className="font-lora text-xs sm:text-sm text-[#101613]/80 font-light leading-relaxed">
                 Engineered as a comprehensive luxury property developer demonstration, this system models interactive tour walkthroughs, high-intent lead funnel architecture, and Schema.org SEO structure for competitive builders.
               </p>
 
@@ -99,14 +99,14 @@ export default function FeaturedCaseStudy() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center gap-3 pt-2 sm:pt-4">
+              <div className="pt-2 sm:pt-4">
                 <a
                   href="https://shri-properties.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-8 py-3.5 bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-sans font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-xl group rounded-sm"
                 >
-                  <span>EXPLORE LIVE DEMO</span>
+                  <span>EXPLORE DEMONSTRATION</span>
                   <ArrowUpRight className="w-4 h-4 text-[#F3EFE3] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
@@ -150,7 +150,7 @@ export default function FeaturedCaseStudy() {
 
                   {/* Header Bar inside Mockup */}
                   <div className="relative z-10 flex items-center justify-between p-5 border-b border-white/15">
-                    <span className="font-serif text-base font-bold text-[#D9B45F] tracking-widest">
+                    <span className="font-roboto text-base font-bold text-[#D9B45F] tracking-widest">
                       SHRI PROPERTY
                     </span>
                     <div className="flex items-center gap-4 text-[8px] tracking-[0.2em] text-[#F3EFE3] font-sans uppercase">
@@ -166,7 +166,7 @@ export default function FeaturedCaseStudy() {
                     <span className="text-[9px] font-sans text-[#D9B45F] tracking-[0.24em] uppercase mb-2 font-bold">
                       FLAGSHIP REAL ESTATE
                     </span>
-                    <h4 className="font-serif text-2xl sm:text-4xl text-[#F3EFE3] leading-none mb-3 font-normal">
+                    <h4 className="font-roboto text-2xl sm:text-4xl text-[#F3EFE3] leading-none mb-3 font-normal">
                       Architectural Estates.
                     </h4>
                     <p className="text-[10px] text-[#9D9B91] font-light leading-relaxed mb-6">
@@ -188,51 +188,101 @@ export default function FeaturedCaseStudy() {
 
         </div>
 
-        {/* CORE WEB VITALS TARGETS */}
+        {/* ARCHITECTURAL ENGINEERING PILLARS */}
         <div className="mt-14 sm:mt-20 pt-10 sm:pt-14 border-t border-[#0B5E49]/15">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-12">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ECE7D8] border border-[#B9923F]/40 text-[10px] font-sans tracking-[0.24em] text-[#0B5E49] uppercase font-bold mb-3">
                 <Activity className="w-3.5 h-3.5 text-[#B9923F]" />
-                <span>CORE WEB VITALS TARGETS</span>
+                <span>ARCHITECTURAL ENGINEERING STANDARDS</span>
               </div>
-              <h3 className="font-serif text-2xl sm:text-4xl text-[#101613] font-normal break-words">
-                Performance Standards We Engineer To
+              <h3 className="font-roboto text-2xl sm:text-4xl text-[#101613] font-normal break-words">
+                Engineered for Performance &amp; Discovery
               </h3>
             </div>
-            <p className="font-sans text-xs sm:text-sm text-[#101613]/70 font-light max-w-md leading-relaxed">
-              These are the technical benchmarks we target on every project — verified against Google&apos;s Core Web Vitals thresholds.
+            <p className="font-lora text-xs sm:text-sm text-[#101613]/70 font-light max-w-md leading-relaxed">
+              Every prototype and demonstration is built to strict engineering benchmarks, ensuring responsive speed, structural stability, and search indexability.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {/* Metric 1 */}
             <div className="p-5 sm:p-6 bg-[#ECE7D8]/80 border border-[#0B5E49]/20 rounded-xl flex flex-col justify-between">
               <div>
-                <div className="text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">MOBILE LCP TARGET</div>
-                <div className="text-2xl sm:text-3xl font-serif font-bold text-[#101613] mb-2">&lt;1.8s</div>
-                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">Largest Contentful Paint target on custom web builds 15 with edge delivery — within Google&apos;s Good threshold.</p>
+                <div className="flex items-center justify-between text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">
+                  <span>MOBILE RENDERING</span>
+                  <span className="text-[#0B5E49] bg-[#0B5E49]/10 px-2 py-0.5 rounded text-[10px] font-bold">EDGE SSR</span>
+                </div>
+                <div className="mb-2">
+                  <span className="text-xl sm:text-2xl font-roboto font-bold text-[#101613]">Fast Initial Paint</span>
+                </div>
+                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">
+                  Edge-rendered Next.js architecture designed to eliminate server response latency and deliver responsive visual delivery across mobile networks.
+                </p>
               </div>
               <div className="mt-4 pt-3 border-t border-[#0B5E49]/15 text-[10px] font-sans font-bold text-[#0B5E49] uppercase tracking-widest flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" /><span>Google CWV Good</span>
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" />
+                <span>Targeted CWV Benchmarks</span>
               </div>
             </div>
+
+            {/* Metric 2 */}
             <div className="p-5 sm:p-6 bg-[#ECE7D8]/80 border border-[#0B5E49]/20 rounded-xl flex flex-col justify-between">
               <div>
-                <div className="text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">LAYOUT SHIFT (CLS)</div>
-                <div className="text-2xl sm:text-3xl font-serif font-bold text-[#101613] mb-2">&lt;0.02</div>
-                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">Cumulative Layout Shift minimised via strict aspect-ratio asset reservation across all screen sizes.</p>
+                <div className="flex items-center justify-between text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">
+                  <span>LAYOUT STABILITY</span>
+                  <span className="text-[#0B5E49] bg-[#0B5E49]/10 px-2 py-0.5 rounded text-[10px] font-bold">ASSET RESERVED</span>
+                </div>
+                <div className="mb-2">
+                  <span className="text-xl sm:text-2xl font-roboto font-bold text-[#101613]">Zero Shift Targets</span>
+                </div>
+                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">
+                  Strict aspect-ratio asset reservation and font preload optimizations designed to eliminate visual jumping during mobile browsing.
+                </p>
               </div>
               <div className="mt-4 pt-3 border-t border-[#0B5E49]/15 text-[10px] font-sans font-bold text-[#0B5E49] uppercase tracking-widest flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" /><span>Stable Layouts</span>
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" />
+                <span>Stable Layout Flow</span>
               </div>
             </div>
+
+            {/* Metric 3 */}
             <div className="p-5 sm:p-6 bg-[#ECE7D8]/80 border border-[#0B5E49]/20 rounded-xl flex flex-col justify-between">
               <div>
-                <div className="text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">INPUT DELAY (INP)</div>
-                <div className="text-2xl sm:text-3xl font-serif font-bold text-[#101613] mb-2">&lt;80ms</div>
-                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">Interaction to Next Paint target with React 19 primitives, removing heavy third-party scripts.</p>
+                <div className="flex items-center justify-between text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">
+                  <span>INPUT FIDELITY</span>
+                  <span className="text-[#0B5E49] bg-[#0B5E49]/10 px-2 py-0.5 rounded text-[10px] font-bold">REACT 19</span>
+                </div>
+                <div className="mb-2">
+                  <span className="text-xl sm:text-2xl font-roboto font-bold text-[#101613]">Lean Client Bundles</span>
+                </div>
+                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">
+                  Interaction to Next Paint engineered by replacing legacy scripts with lean React Server Components for immediate touch response.
+                </p>
               </div>
               <div className="mt-4 pt-3 border-t border-[#0B5E49]/15 text-[10px] font-sans font-bold text-[#0B5E49] uppercase tracking-widest flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" /><span>Responsive Interactions</span>
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" />
+                <span>Responsive Mobile Touch</span>
+              </div>
+            </div>
+
+            {/* Metric 4 */}
+            <div className="p-5 sm:p-6 bg-[#ECE7D8]/80 border border-[#0B5E49]/20 rounded-xl flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between text-[11px] font-sans font-bold tracking-wider text-[#0B5E49] uppercase mb-3">
+                  <span>STRUCTURED DISCOVERY</span>
+                  <span className="text-[#B9923F] bg-[#B9923F]/15 px-2 py-0.5 rounded text-[10px] font-bold">SEO + GEO</span>
+                </div>
+                <div className="mb-2">
+                  <span className="text-xl sm:text-2xl font-roboto font-bold text-[#101613]">Structured Schemas</span>
+                </div>
+                <p className="text-xs text-[#101613]/70 font-light leading-relaxed">
+                  Clean JSON-LD schemas and semantic markup designed for multi-engine indexing across traditional search and AI answer engines.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-[#0B5E49]/15 text-[10px] font-sans font-bold text-[#0B5E49] uppercase tracking-widest flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#B9923F]" />
+                <span>Search &amp; AI Visibility</span>
               </div>
             </div>
           </div>
