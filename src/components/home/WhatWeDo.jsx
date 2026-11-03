@@ -142,7 +142,7 @@ export default function WhatWeDo() {
 
             {/* Main Headline */}
             <h2 className="font-roboto text-3xl sm:text-5xl lg:text-[50px] xl:text-[56px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight">
-              One connected system,<br />
+              One integrated studio,<br />
               six disciplines<br />
               working <span className="text-[#D4AF37] italic font-roboto">together.</span>
             </h2>

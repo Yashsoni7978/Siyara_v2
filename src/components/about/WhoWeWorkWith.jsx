@@ -10,13 +10,10 @@ export default function WhoWeWorkWith() {
   const easeCustom = [0.16, 1, 0.3, 1];
 
   const industries = [
-    { name: 'Healthcare', href: '/industries/healthcare' },
-    { name: 'Real Estate', href: '/industries/real-estate' },
-    { name: 'Fashion & Lifestyle', href: '/industries/fashion-lifestyle' },
-    { name: 'Food & Beverage', href: '/industries/food-beverage' },
-    { name: 'Travel & Tourism', href: '/industries/travel-tourism' },
-    { name: 'Events', href: '/industries/event-management' },
-    { name: 'Professional Services', href: '/services' },
+    { name: 'Healthcare & Clinics', href: '/industries/healthcare' },
+    { name: 'Interior & Spatial Design', href: '/industries/interior-design' },
+    { name: 'Event Management & Weddings', href: '/industries/event-management' },
+    { name: 'Real Estate & Developers', href: '/industries/real-estate' },
   ];
 
   return (
