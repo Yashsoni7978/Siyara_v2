@@ -127,18 +127,18 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
                   href={siteConfig.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Book a Strategy Session on WhatsApp"
+                  aria-label="Discuss Your Project on WhatsApp"
                   className="inline-flex items-center justify-center min-h-[48px] gap-2.5 px-8 py-3.5 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs sm:text-sm font-roboto font-bold tracking-[0.14em] rounded-full transition-all duration-300 shadow-xl hover:-translate-y-0.5 group"
                 >
-                  <span>Book a Strategy Session</span>
+                  <span>Discuss Your Project</span>
                   <ArrowUpRight className="w-4 h-4 stroke-[2.5] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
 
                 <Link
-                  href="/work"
+                  href="/services"
                   className="inline-flex items-center justify-center min-h-[48px] gap-2.5 px-8 py-3.5 border border-[#E5C378]/50 bg-[#063C2D]/50 hover:bg-[#063C2D] text-[#F3EFE4] hover:text-[#E5C378] text-xs sm:text-sm font-roboto font-medium tracking-[0.14em] rounded-full transition-all duration-300 shadow-lg hover:-translate-y-0.5 group"
                 >
-                  <span>Explore Case Studies</span>
+                  <span>Explore Our Services</span>
                   <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </Link>
               </motion.div>
@@ -721,10 +721,10 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
               href={siteConfig.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Connect on WhatsApp"
+              aria-label="Discuss Your Project on WhatsApp"
               className="w-full sm:w-auto inline-flex items-center justify-center min-h-[46px] gap-2 px-9 py-3.5 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs font-roboto font-bold tracking-[0.14em] rounded-full transition-all duration-300 shadow-xl hover:-translate-y-0.5"
             >
-              <span>Book a Strategy Session</span>
+              <span>Discuss Your Project</span>
               <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
             </a>
 
