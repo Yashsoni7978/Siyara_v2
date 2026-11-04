@@ -621,12 +621,12 @@ export const SERVICES_DATA = {
       "Algolia / MeiliSearch Instant Search"
     ],
     "deliverables": [
-      "High-Performance Next.js Storefront System",
-      "Instant Client-Side Filtering & Search Engine",
-      "One-Click Mobile Checkout Funnel (Razorpay/UPI)",
-      "Automated Shipping & Tracking Webhook Sync",
-      "Automated Schema.org Product & AggregateOffer Graphs",
-      "Reduced Dependency on Third-Party App Subscriptions"
+      "Bespoke Online Store Design & High-Performance Next.js Storefront",
+      "Product Catalogue Architecture & Category Taxonomy Structure",
+      "Frictionless Shopping Cart & One-Click Mobile Checkout (Razorpay/UPI)",
+      "Domestic & Global Payment Gateway Integration (Razorpay, Cashfree, Stripe)",
+      "Automated Order, Inventory & Logistics Workflows (Shiprocket/Delhivery)",
+      "Scalable Store Management, Product Schemas & Instant Client-Side Search"
     ],
     "process": [
       {
@@ -702,15 +702,15 @@ export const SERVICES_DATA = {
     ],
     "disciplineTag": "07 — E-COMMERCE",
     "benchmarks": [
-      "High-Performance Storefront Code",
-      "Faceted Client-Side Product Search",
-      "Integrated Domestic & Global Payments",
+      "High-Performance Storefront Architecture",
+      "Faceted Product Filtering & Search",
+      "Domestic & Global Payment Gateways",
       "Structured Product Schema Markup"
     ],
     "heroHeadlineMain": "High-Converting E-commerce Flagships",
     "heroHeadlineAccent": "Engineered to Scale.",
     "heroSubtitle": "We build bespoke e-commerce platforms engineered for premium catalogue presentation, lightning-quick checkout flows, and maximum average order value.",
-    "heroImage": "/images/services/service-digital-marketing.webp",
+    "heroImage": "/images/website-conversion-optimization-journey.webp",
     "industryApplications": [
       {
         "name": "Jewellery & Luxury Goods",
@@ -737,7 +737,7 @@ export const SERVICES_DATA = {
     "metaTitle": "Mobile App Development Jaipur",
     "metaDescription": "Cross-platform React Native and Progressive Web App (PWA) development in Jaipur. 60fps native performance, offline sync, and App Store readiness.",
     "questionH2": "Why Are React Native & Progressive Web Apps the Smartest Mobile Investment?",
-    "citabilityAnswer": "Traditional dual-native mobile app development requires separate engineering teams for iOS (Swift) and Android (Kotlin), doubling development budgets, delaying release schedules, and creating inconsistent user experiences. Siyara Innovations engineers enterprise-grade mobile applications using unified React Native framework and modern Progressive Web Applications (PWA). By maintaining a single, high-performance TypeScript codebase, our mobile applications compile into native iOS and Android binaries delivering 60 frames-per-second fluid animations, hardware-accelerated gestures, biometric authentication, and push notifications at approximately half the cost of separate native builds. Furthermore, our Progressive Web Apps allow Indian B2B clients to bypass App Store download friction entirely, offering instant home-screen installability, offline data caching via service workers, and zero 30% app store commission fees. This dual-track approach ensures rapid time-to-market, minimal maintenance overhead, and maximum user engagement.",
+    "citabilityAnswer": "Developing successful business mobile applications requires strategic planning, platform selection, and clean technical execution across Android and iOS ecosystems. Siyara Innovations delivers end-to-end mobile application development, offering cross-platform engineering (including React Native) and modern Progressive Web Applications (PWA) tailored to commercial requirements. We design touch-first user interfaces with intuitive thumb-zone navigation, integrate secure authentication and serverless backend APIs, and configure local data caching for dependable performance across variable networks. From initial planning and architecture scoping to automated store build pipelines, App Store submission, and post-launch maintenance, our studio delivers secure, maintainable mobile applications that drive commercial engagement.",
     "deepDive": [
       {
         "title": "Dual-Native Cost Overhead vs React Native Unified Velocity",
@@ -766,12 +766,12 @@ export const SERVICES_DATA = {
       "Fastlane Automated Store Build Pipelines"
     ],
     "deliverables": [
-      "Single Codebase Native iOS & Android Compilation",
-      "Fluid Mobile Gestures & Native Transitions",
-      "Offline Mode Caching & Background Data Sync",
-      "Biometric Authentication (FaceID & Fingerprint)",
-      "App Store & Google Play Publishing Assistance",
-      "Complete Source Code Handover & Build Documentation"
+      "Business Mobile App Planning & Technical Architecture Roadmapping",
+      "Cross-Platform Android & iOS Application Engineering",
+      "Ergonomic Touch-First UX/UI Design & Interactive Flow Prototypes",
+      "Secure Backend, Serverless API & Real-Time Database Integration",
+      "User Authentication, Account Management & Biometric Security",
+      "Multi-Device Testing, App Store Deployment & Ongoing Maintenance"
     ],
     "process": [
       {
@@ -808,14 +808,14 @@ export const SERVICES_DATA = {
     ],
     "relatedServices": [
       {
-        "slug": "web-development",
-        "title": "Custom Web Application & Next.js Development",
-        "desc": "Unified backend APIs, PostgreSQL databases, and shared TypeScript models."
+        "slug": "web-design-development",
+        "title": "Website Design & Digital Brand Experience",
+        "desc": "Unified backend APIs, cloud databases, and shared TypeScript design systems."
       },
       {
         "slug": "ui-ux-design",
         "title": "UI/UX Product Design & Digital Interfaces",
-        "desc": "Mobile-first ergonomics, intuitive gestures, and platform-native UI patterns."
+        "desc": "Mobile-first ergonomics, intuitive touch gestures, and platform-native UI patterns."
       },
       {
         "slug": "ai-automation",
@@ -855,7 +855,7 @@ export const SERVICES_DATA = {
     "heroHeadlineMain": "Cross-Platform Applications &",
     "heroHeadlineAccent": "Progressive Web Apps.",
     "heroSubtitle": "Native-feel iOS and Android applications and high-performance Progressive Web Apps that deliver seamless mobile customer engagement.",
-    "heroImage": "/images/services/service-web-development.webp",
+    "heroImage": "/images/digital-architecture-systems-framework.webp",
     "industryApplications": [
       {
         "name": "Hospitality & Resorts",
@@ -911,12 +911,12 @@ export const SERVICES_DATA = {
       "Atomic Design Component Hierarchies"
     ],
     "deliverables": [
-      "High-Fidelity Interactive Figma Prototype",
-      "Complete Atomic Design Component System",
-      "CSS Variables & Tailwind Token Handoff File",
-      "Mobile Responsive Specs (360px to 1920px)",
-      "Usability Testing Reports & Interaction Notes",
-      "Exported Vector Icons & Optimized Media Assets"
+      "User Research, Commercial Discovery & Heuristic Usability Audits",
+      "Information Architecture (IA) Mapping & Navigation Structuring",
+      "User Journey Flows & Low-Fidelity Interactive Wireframes",
+      "High-Fidelity Interface Design with Bespoke Visual Hierarchy",
+      "Interactive, Clickable Figma Prototypes for Mobile & Desktop",
+      "Complete Atomic Design System & WCAG 2.1 AA Accessibility Specs"
     ],
     "process": [
       {
@@ -958,14 +958,14 @@ export const SERVICES_DATA = {
         "desc": "Transform design systems into living, accessible web experiences."
       },
       {
-        "slug": "web-development",
-        "title": "Custom Web Application & Next.js Development",
-        "desc": "Seamless engineering handoff with reusable React Server Components."
+        "slug": "mobile-app-development",
+        "title": "Cross-Platform Mobile Application Development",
+        "desc": "Extend design tokens and UX patterns to iOS and Android applications."
       },
       {
-        "slug": "brand-strategy",
+        "slug": "branding",
         "title": "Brand Strategy & Market Positioning",
-        "desc": "Ensure every user interaction reinforces category brand positioning."
+        "desc": "Ensure every user interface touchpoint reinforces brand positioning."
       }
     ],
     "faqs": [
@@ -1027,7 +1027,7 @@ export const SERVICES_DATA = {
     "metaTitle": "AI Business Automation Jaipur",
     "metaDescription": "Custom AI business automation and intelligent AI agents in Jaipur. Automate customer support, multi-step workflows, and document intelligence pipelines.",
     "questionH2": "How Do Custom AI Agents Eliminate Repetitive Enterprise Overhead?",
-    "citabilityAnswer": "Growing B2B enterprises, manufacturing firms, and medical clinics in Jaipur frequently hit an operational ceiling where valuable senior personnel spend hours daily on repetitive administrative data entry, manual document processing, and delayed customer triage. Siyara Innovations engineers custom AI business automation and autonomous AI agent systems that eliminate operational bottlenecks and scale business capacity without increasing payroll overhead. We construct intelligent webhook pipelines and autonomous LLM tool-calling agents that instantly capture customer inquiries from websites, WhatsApp, and email, extract structured data from unstructured contracts and invoices, and execute multi-step workflows across internal software platforms in real time. By integrating serverless API endpoints with models like Claude and GPT-4o, our systems are engineered for rapid sub-minute task execution and reliable data extraction. With enterprise-grade data encryption, private Retrieval-Augmented Generation (RAG) vector stores, and zero reliance on fragile third-party tools, your business achieves 24/7 operational velocity, superior customer satisfaction, and measurable cost reductions across Jaipur and pan-India markets.",
+    "citabilityAnswer": "Growing enterprises frequently encounter operational ceilings where valuable staff spend extensive time on repetitive manual data entry, customer triage, and document processing. Siyara Innovations engineers tailored business workflow automations and intelligent AI-assisted systems that eliminate administrative bottlenecks and scale operational capacity responsibly. We construct robust webhook pipelines that capture inquiries from websites and WhatsApp, structure data from contracts and invoices, and synchronize records across business tools in real time. Crucially, our architectures emphasize responsible AI implementation: routine triage is automated while sensitive or complex interactions feature clear human escalation protocols, ensuring your team retains complete oversight and control.",
     "deepDive": [
       {
         "title": "The 4-Hour Customer Response Delay That Destroys Conversion",
@@ -1056,12 +1056,12 @@ export const SERVICES_DATA = {
       "Automated PDF & Invoice Generation Engines"
     ],
     "deliverables": [
-      "Automated Instant WhatsApp Lead Triage Bot",
-      "Serverless API Webhook Integration Pipeline",
-      "CRM Bidirectional Sync (Zoho/HubSpot/Sheets)",
-      "Automated Email Nurture & Calendar Booking",
-      "Internal AI Document & SOP Retrieval System",
-      "Full Operational Telemetry & Error Alerting"
+      "Business Workflow Automation & Repetitive Task Reduction Systems",
+      "Intelligent Inbound Lead Triage & Structured Qualification Pipelines",
+      "WhatsApp Business & Multi-Channel Communication Automation",
+      "Seamless Middleware Integration Across CRMs & Business Software Platforms",
+      "Secure AI-Assisted Document Processing & Internal Knowledge Retrieval",
+      "Responsible AI Implementation Framework with Defined Human Oversight"
     ],
     "process": [
       {
@@ -1108,9 +1108,9 @@ export const SERVICES_DATA = {
         "desc": "Measure the impact of automated interactions on commercial pipeline conversion."
       },
       {
-        "slug": "web-development",
-        "title": "Custom Web Application & Next.js Development",
-        "desc": "Deploy serverless API handlers and secure cloud database connections."
+        "slug": "web-design-development",
+        "title": "Website Design & Digital Brand Experience",
+        "desc": "Integrate automated lead capture triggers and webhook handlers into web frontends."
       }
     ],
     "faqs": [
@@ -1120,19 +1120,19 @@ export const SERVICES_DATA = {
       },
       {
         "q": "Are client data and inquiries kept secure during AI processing?",
-        "a": "Yes. All data pipelines utilize strict AES-256 encryption protocols, serverless execution nodes, and adhere to global data privacy standards. Your proprietary business data is never used to train public AI models."
+        "a": "Yes. All data pipelines utilize strict AES-256 encryption protocols, serverless execution nodes, and adhere to standard data privacy practices. Your proprietary business data is never used to train public AI models."
       },
       {
         "q": "How does WhatsApp Business API integration work for lead qualification?",
-        "a": "When a prospect clicks a WhatsApp button on your website, our automated bot instantly greets them, asks 2-3 key qualifying questions (such as budget and timeline), and routes qualified leads directly to your sales reps."
+        "a": "When a prospect initiates a chat from your website, an automated workflow instantly greets them, gathers key qualification criteria (such as project scope and timeline), and routes qualified leads directly to the appropriate team member."
       },
       {
-        "q": "What is the typical return on investment (ROI) timeline for automation?",
-        "a": "Most clients recoup their investment within 30 to 60 days by saving 15+ hours of manual administrative staff time per week and preventing valuable inbound leads from dropping off due to delayed responses."
+        "q": "How does human oversight remain integrated with automated workflows?",
+        "a": "Responsible implementation is central to our engineering. All high-stakes decisions, complex negotiations, and critical client touchpoints include defined escalation protocols that route directly to designated human team members. Automation handles repetitive initial triage and administrative formatting, keeping your staff fully informed and in control."
       },
       {
         "q": "Do you offer ongoing technical maintenance for automation workflows?",
-        "a": "Yes. We provide continuous monitoring retainers that track API uptime, handle third-party platform updates, and fine-tune AI prompts as your business operations expand."
+        "a": "Yes. We provide continuous monitoring retainers that track API uptime, handle third-party platform updates, and fine-tune automation rules as your business operations expand."
       }
     ],
     "disciplineTag": "05 — AUTOMATION & BUSINESS SYSTEMS",
@@ -1201,12 +1201,12 @@ export const SERVICES_DATA = {
       "PostgreSQL Lead Scoring Databases"
     ],
     "deliverables": [
-      "Server-Side GA4 & Meta CAPI Event Tracking",
-      "Comprehensive Funnel Drop-off & Heatmap Audit",
-      "Custom A/B Experimentation Design & Execution",
-      "Executive Revenue Attribution Dashboard",
-      "Form & WhatsApp Conversion Rate Uplift Sprints",
-      "Monthly CRO Strategic Review & Roadmap"
+      "Comprehensive Website & Funnel Conversion Friction Audits",
+      "User Journey Mapping & Targeted Landing Page Optimization",
+      "Call-to-Action (CTA) Positioning & Form Completion Improvement Sprints",
+      "Server-Side GA4 & Meta CAPI Event Measurement Infrastructure",
+      "Continuous Hypothesis-Driven A/B & Multivariate Experimentation",
+      "Executive Attribution Telemetry & Commercial Reporting Dashboards"
     ],
     "process": [
       {
@@ -1253,8 +1253,8 @@ export const SERVICES_DATA = {
         "desc": "Reduce delays in inquiry handling and capture qualified visitor intent."
       },
       {
-        "slug": "seo-geo",
-        "title": "Generative Engine Optimization (GEO) & Technical SEO",
+        "slug": "seo-services",
+        "title": "Search Engine Optimization (SEO)",
         "desc": "Ensure high-intent organic visitors enter clear inquiry pathways."
       }
     ],
@@ -1346,12 +1346,12 @@ export const SERVICES_DATA = {
       "Digital Asset Management Guidelines"
     ],
     "deliverables": [
-      "Comprehensive Brand Guidelines & Logo Hierarchy",
-      "Commercial Website Copywriting & Messaging Guide",
-      "Custom Vector Iconography System",
-      "Editorial Typography Scales & Hierarchy Specifications",
-      "Optimized Web-Ready Digital Asset Repository",
-      "Tailwind CSS & Code-Ready Design Token Specifications"
+      "Brand Content Planning & Multi-Channel Editorial Strategy",
+      "High-Engagement Social Media Creatives & Campaign Visual Concepts",
+      "Bespoke Graphic Design & Production-Ready Vector Asset Suites",
+      "Video & Motion Creative Direction for Digital Touchpoints",
+      "High-Conversion Marketing Copywriting & Visual Storytelling",
+      "Brand Style Guidelines for Unified Commercial Communication"
     ],
     "process": [
       {
@@ -1388,7 +1388,7 @@ export const SERVICES_DATA = {
     ],
     "relatedServices": [
       {
-        "slug": "brand-strategy",
+        "slug": "branding",
         "title": "Brand Strategy & Market Positioning",
         "desc": "Infuse strategic positioning into every visual asset, mark, and brand guideline."
       },
@@ -1435,7 +1435,7 @@ export const SERVICES_DATA = {
     "heroHeadlineMain": "Creative & Content Engineered to",
     "heroHeadlineAccent": "Resonate & Convert.",
     "heroSubtitle": "We craft compelling editorial stories, distinctive art direction, and conversion-focused copy that transforms casual browsers into loyal brand advocates.",
-    "heroImage": "/images/services/service_brand_identity.webp",
+    "heroImage": "/images/brand-positioning-identity-system.webp",
     "industryApplications": [
       {
         "name": "Fashion & Lifestyle Labels",
@@ -1491,12 +1491,12 @@ export const SERVICES_DATA = {
       "PostgreSQL Lead Pipeline Storage"
     ],
     "deliverables": [
-      "Dual-Track Lead Funnel (WhatsApp + Enterprise Form)",
-      "Automated Instant CRM Sync & Field Mapping",
-      "Serverless Webhook Data Validation Pipeline",
-      "Interactive Instant Calendar Booking Engine",
-      "Real-Time Lead SMS/WhatsApp Notification to Sales",
-      "Conversion Drop-Off Analytics Integration"
+      "Multi-Channel Inbound Lead Capture & Intelligent Triage Systems",
+      "CRM Setup, Configuration & Field Mapping (Zoho / HubSpot / Salesforce)",
+      "Instant WhatsApp Follow-Up Routing & Automated Lead Assignment",
+      "End-to-End Sales Pipeline Visibility & Activity Tracking Telemetry",
+      "Executive Commercial Performance Dashboards & Conversion Reports",
+      "Seamless Integration with Invoicing, Email & Core Business Processes"
     ],
     "process": [
       {
@@ -1605,7 +1605,7 @@ export const SERVICES_DATA = {
     "serviceType": "Performance Marketing & Paid Advertising",
     "h1Title": "Performance Marketing Agency in Jaipur",
     "metaTitle": "Performance Marketing Jaipur",
-    "metaDescription": "High-ROI Google Ads and Meta paid advertising campaigns in Jaipur. Precision audience targeting synchronized with sub-second Next.js landing pages.",
+    "metaDescription": "Disciplined Google Ads and Meta paid advertising campaigns in Jaipur. Precision audience targeting synchronized with sub-second Next.js landing pages.",
     "questionH2": "How Does Synchronizing Paid Ads with Custom Landing Pages Lower Acquisition Cost?",
     "citabilityAnswer": "A high percentage of paid advertising budgets in Jaipur are wasted because Google and Meta ad campaigns direct clicks to slow, generic landing pages with low Quality Scores and high bounce rates. Siyara Innovations aligns performance marketing directly with high-velocity connected digital systems. We build tailored, dedicated Next.js landing pages for every ad campaign, achieving rapid load times and strong Core Web Vitals (LCP < 1.8s, CLS < 0.05, INP < 100ms). These technical benchmarks support higher Google Ads Quality Scores and lower cost-per-click. Combined with precise audience targeting and focused messaging, our campaigns provide visitors with clear, low-friction pathways to inquire via WhatsApp or lead forms.",
     "deepDive": [
@@ -1636,12 +1636,12 @@ export const SERVICES_DATA = {
       "Custom UTM Parameter Tracking Engines"
     ],
     "deliverables": [
-      "Google Search & Local Services Ad Campaigns",
-      "Meta (Instagram & Facebook) High-Intent Funnels",
-      "Dedicated High-Performance Next.js Campaign Landers",
-      "Server-Side Conversion Tracking & CAPI Setup",
-      "Continuous Ad Creative & Copywriting Sprints",
-      "Weekly Executive ROI & CAC Attribution Reports"
+      "High-Intent Paid Search (Google Ads) & Paid Social Campaign Planning",
+      "Commercial Keyword Intent Research & Demographic Audience Modeling",
+      "Dedicated High-Performance Next.js Campaign Landing Page Builds",
+      "Message-to-Ad Creative Alignment for Improved Relevance & Quality Scores",
+      "Server-Side Conversion Tracking Setup (Google Enhanced Conversions & Meta CAPI)",
+      "Continuous Campaign Measurement, Query Pruning & Bid Optimization Sprints"
     ],
     "process": [
       {
@@ -1723,9 +1723,9 @@ export const SERVICES_DATA = {
       "Transparent Monthly Retainer Structure"
     ],
     "heroHeadlineMain": "Disciplined Paid Campaigns Delivering",
-    "heroHeadlineAccent": "Verified ROI.",
+    "heroHeadlineAccent": "Disciplined Returns.",
     "heroSubtitle": "We manage precision paid acquisition campaigns across Meta, Google Ads, and LinkedIn with high-converting landing experiences and disciplined budget allocation.",
-    "heroImage": "/images/services/service_digital_marketing.webp",
+    "heroImage": "/images/business-analytics-decision-system.webp",
     "industryApplications": [
       {
         "name": "Premium Real Estate",
