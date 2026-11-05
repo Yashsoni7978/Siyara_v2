@@ -49,7 +49,7 @@ export default function ContactCTA() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <a
             href="#inquiry-form"
-            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[46px] gap-2 px-9 py-3.5 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs font-roboto font-bold tracking-[0.14em] rounded-full transition-all duration-300 shadow-xl hover:-translate-y-0.5"
+            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[46px] gap-2 px-9 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-roboto font-bold tracking-[0.14em] rounded-full transition-all duration-300 shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
           >
             <span>Complete Project Brief</span>
             <ArrowDown className="w-4 h-4 stroke-[2.5]" />
@@ -60,7 +60,7 @@ export default function ContactCTA() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsAppClick}
-            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[46px] gap-2.5 px-9 py-3.5 border border-[#E5C378]/50 bg-[#063C2D]/60 hover:bg-[#063C2D] text-[#F3EFE4] hover:text-[#E5C378] text-xs font-roboto font-medium tracking-[0.14em] rounded-full transition-all duration-300 shadow-xl hover:-translate-y-0.5"
+            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[46px] gap-2.5 px-9 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-roboto font-medium tracking-[0.14em] rounded-full transition-all duration-300 shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
           >
             <MessageCircle className="w-4 h-4 text-[#19A878]" />
             <span>Message on WhatsApp</span>

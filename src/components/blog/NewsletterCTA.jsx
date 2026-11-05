@@ -67,7 +67,7 @@ export default function NewsletterCTA() {
                   href="https://wa.me/918000923769?text=Hello%20Siyara%20team,%20I'd%20like%20to%20receive%20your%20digital%20growth%20insights."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#19A878] text-[#080B0A] font-sans text-xs font-semibold tracking-wider uppercase rounded-full hover:bg-[#19A878]/90 transition-colors"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] font-sans text-xs font-semibold tracking-wider uppercase rounded-full transition-all duration-300 shadow-sm hover:shadow-[0_0_12px_rgba(25,168,120,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
                 >
                   <MessageSquare className="w-3.5 h-3.5" />
                   <span>WhatsApp Updates</span>
@@ -76,7 +76,7 @@ export default function NewsletterCTA() {
                   href="https://www.linkedin.com/company/siyaradigital"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 border border-[#D4AF37]/50 bg-[#080B0A] text-[#D4AF37] font-sans text-xs font-semibold tracking-wider uppercase rounded-full hover:border-[#D4AF37] hover:text-[#F3EFE4] transition-colors"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] font-sans text-xs font-semibold tracking-wider uppercase rounded-full transition-all duration-300 shadow-sm hover:shadow-[0_0_12px_rgba(25,168,120,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
                 >
                   <Linkedin className="w-3.5 h-3.5" />
                   <span>LinkedIn</span>
@@ -97,7 +97,7 @@ export default function NewsletterCTA() {
                 />
                 <button
                   type="submit"
-                  className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-[#D4AF37] bg-[#D4AF37] hover:bg-[#E5C378] text-[#080B0A] font-semibold text-xs tracking-[0.16em] uppercase transition-all duration-300 shadow-lg rounded-full"
+                  className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] font-semibold text-xs tracking-[0.16em] uppercase transition-all duration-300 shadow-lg hover:shadow-[0_0_14px_rgba(25,168,120,0.22)] rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
                 >
                   <span>SUBSCRIBE</span>
                   <ArrowRight className="w-3.5 h-3.5" />

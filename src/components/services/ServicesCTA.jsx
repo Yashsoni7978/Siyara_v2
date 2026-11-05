@@ -69,7 +69,7 @@ export default function ServicesCTA() {
         >
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2.5 px-9 py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 active:translate-y-0"
+            className="inline-flex items-center gap-2.5 px-9 py-4 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
           >
             <span>START A PROJECT</span>
             <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
@@ -77,7 +77,7 @@ export default function ServicesCTA() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-9 py-4 border border-[#D9B45F]/40 hover:border-[#D9B45F] bg-[#071E18]/60 hover:bg-[#071E18] text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-lg"
+            className="inline-flex items-center gap-2 px-9 py-4 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
           >
             <Calendar className="w-4 h-4 text-[#D9B45F]" />
             <span>BOOK A STRATEGY SESSION</span>

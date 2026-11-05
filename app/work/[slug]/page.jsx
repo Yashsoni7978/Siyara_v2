@@ -453,7 +453,7 @@ export default async function ProjectDetailPage({ params }) {
               <div className="space-y-3">
                 <a
                   href={`mailto:${siteConfig.email}?subject=${encodeURIComponent(`Project Inquiry: ${project.name}`)}&body=${encodeURIComponent(`Hello Siyara Innovations,\n\nI would like to discuss a project similar to ${project.name} in the ${project.industry} category.\n\nPlease let me know your availability for an introductory scoping discussion.\n\nThank you.`)}`}
-                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-[#19A878] hover:bg-[#1EB884] text-[#080B0A] font-sans text-xs font-bold tracking-wider uppercase transition-colors"
+                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] font-sans text-xs font-bold tracking-wider uppercase transition-all duration-300 shadow-lg hover:shadow-[0_0_14px_rgba(25,168,120,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
                 >
                   <Mail className="w-3.5 h-3.5" />
                   <span>Email Studio</span>
@@ -463,7 +463,7 @@ export default async function ProjectDetailPage({ params }) {
                   href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(`Hello Siyara Innovations, I would like to discuss a project similar to ${project.name}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full border border-white/20 hover:border-[#19A878] bg-white/5 text-[#F3EFE4] font-sans text-xs font-semibold tracking-wider uppercase transition-colors"
+                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] font-sans text-xs font-semibold tracking-wider uppercase transition-all duration-300 shadow-lg hover:shadow-[0_0_14px_rgba(25,168,120,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
                 >
                   <MessageCircle className="w-3.5 h-3.5 text-[#19A878]" />
                   <span>WhatsApp Studio</span>

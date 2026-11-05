@@ -479,7 +479,7 @@ export default function ServicesDisciplines() {
                 <div>
                   <Link
                     href={active.slug}
-                    className="inline-flex items-center justify-center min-h-[46px] gap-2 px-8 py-3.5 bg-[#E5C378] hover:bg-[#D4AF37] text-[#080B0A] text-xs sm:text-sm font-roboto font-bold tracking-[0.14em] rounded-full transition-all duration-300 shadow-lg hover:-translate-y-0.5 group"
+                    className="inline-flex items-center justify-center min-h-[46px] gap-2 px-8 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs sm:text-sm font-roboto font-bold tracking-[0.14em] rounded-full transition-all duration-300 shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] hover:-translate-y-0.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
                   >
                     <span>{active.ctaText}</span>
                     <ArrowUpRight className="w-4 h-4 stroke-[2.5] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

@@ -181,10 +181,10 @@ export default function WhatWeDo() {
             <div>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full border border-[#D4AF37]/45 hover:border-[#D4AF37] text-[#F3EFE4] hover:bg-[#D4AF37]/10 text-xs font-sans font-medium tracking-[0.18em] uppercase transition-all duration-200 group"
+                className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-sans font-medium tracking-[0.18em] uppercase transition-all duration-300 shadow-sm hover:shadow-[0_0_14px_rgba(25,168,120,0.22)] group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
               >
                 <span>EXPLORE ALL SERVICES</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#F3EFE4] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
             </div>
           </motion.div>

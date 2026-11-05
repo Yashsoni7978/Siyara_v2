@@ -195,7 +195,7 @@ export default function ServicesApplications() {
 
                     <a
                       href="#contact"
-                      className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 w-fit shadow-lg shadow-[#D9B45F]/15"
+                      className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 w-fit shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
                     >
                       <span>{cat.ctaText}</span>
                       <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />

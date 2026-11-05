@@ -344,7 +344,7 @@ export default function ContactIntake() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackEvent(AnalyticsEvents.CONTACT_WHATSAPP_CLICKED, { source: 'success_screen' })}
-                  className="w-full sm:w-auto inline-flex items-center justify-center min-h-[46px] gap-2 px-7 py-3 bg-[#063C2D] hover:bg-[#080B0A] text-[#F3EFE4] text-xs font-roboto font-bold tracking-[0.12em] uppercase rounded-full transition-all duration-300 shadow-md"
+                  className="w-full sm:w-auto inline-flex items-center justify-center min-h-[46px] gap-2 px-7 py-3 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-roboto font-bold tracking-[0.12em] uppercase rounded-full transition-all duration-300 shadow-md hover:shadow-[0_0_14px_rgba(25,168,120,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
                 >
                   <MessageCircle className="w-4 h-4 text-[#19A878]" />
                   <span>Connect on WhatsApp Now</span>
@@ -354,7 +354,7 @@ export default function ContactIntake() {
                 <button
                   type="button"
                   onClick={handleResetForm}
-                  className="w-full sm:w-auto px-7 py-3 rounded-full border border-[#080B0A]/20 hover:border-[#080B0A] text-[#080B0A] text-xs font-roboto font-semibold tracking-[0.12em] uppercase transition-colors"
+                  className="w-full sm:w-auto px-7 py-3 rounded-full bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-roboto font-semibold tracking-[0.12em] uppercase transition-all duration-300 shadow-sm hover:shadow-[0_0_12px_rgba(25,168,120,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
                 >
                   Submit Another Brief
                 </button>
@@ -392,7 +392,7 @@ export default function ContactIntake() {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => trackEvent(AnalyticsEvents.CONTACT_WHATSAPP_CLICKED, { source: 'error_banner' })}
-                      className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#063C2D] hover:bg-[#080B0A] text-[#F3EFE4] text-xs font-roboto font-bold tracking-wider uppercase rounded-full transition-colors shadow-sm"
+                      className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-roboto font-bold tracking-wider uppercase rounded-full transition-all duration-300 shadow-sm hover:shadow-[0_0_12px_rgba(25,168,120,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
                     >
                       <MessageCircle className="w-4 h-4 text-[#19A878]" />
                       <span>Send This Brief on WhatsApp Instead</span>
@@ -724,7 +724,7 @@ export default function ContactIntake() {
                   <button
                     type="submit"
                     disabled={status.submitting}
-                    className="inline-flex items-center justify-center min-h-[48px] gap-2.5 px-9 py-3.5 bg-[#080B0A] hover:bg-[#063C2D] text-[#F3EFE4] text-xs font-roboto font-bold tracking-[0.14em] uppercase rounded-full transition-all duration-300 shadow-xl hover:-translate-y-0.5 disabled:opacity-60 disabled:hover:translate-y-0"
+                    className="inline-flex items-center justify-center min-h-[48px] gap-2.5 px-9 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-roboto font-bold tracking-[0.14em] uppercase rounded-full transition-all duration-300 shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] hover:-translate-y-0.5 disabled:opacity-60 disabled:hover:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
                   >
                     {status.submitting ? (
                       <>
@@ -744,7 +744,7 @@ export default function ContactIntake() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => trackEvent(AnalyticsEvents.CONTACT_WHATSAPP_CLICKED, { source: 'form_inline_option' })}
-                    className="inline-flex items-center justify-center min-h-[48px] gap-2 px-6 py-3.5 border border-[#080B0A]/20 hover:border-[#080B0A] text-[#080B0A] text-xs font-roboto font-semibold tracking-wider uppercase rounded-full transition-colors"
+                    className="inline-flex items-center justify-center min-h-[48px] gap-2 px-6 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-roboto font-semibold tracking-wider uppercase rounded-full transition-all duration-300 shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
                   >
                     <MessageCircle className="w-4 h-4 text-[#063C2D]" />
                     <span>Or Discuss on WhatsApp</span>

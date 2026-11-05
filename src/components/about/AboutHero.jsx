@@ -66,14 +66,14 @@ export default function AboutHero() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <a
                 href="#our-story"
-                className="inline-flex items-center justify-center min-h-[48px] px-8 rounded-full bg-[#D4AF37] hover:bg-[#c9a34e] text-[#080B0A] text-xs font-roboto font-bold tracking-[0.16em] uppercase transition-all duration-300 shadow-xl shadow-[#D4AF37]/20 hover:scale-105 active:scale-100"
+                className="inline-flex items-center justify-center min-h-[48px] px-8 rounded-full bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-roboto font-bold tracking-[0.16em] uppercase transition-all duration-300 shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] hover:scale-105 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
               >
                 <span>OUR STORY</span>
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center min-h-[48px] px-8 rounded-full border border-white/20 hover:border-[#D4AF37] text-[#F3EFE4] hover:text-[#D4AF37] text-xs font-roboto font-semibold tracking-[0.16em] uppercase transition-all duration-300 bg-white/[0.03]"
+                className="inline-flex items-center justify-center min-h-[48px] px-8 rounded-full bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-roboto font-semibold tracking-[0.16em] uppercase transition-all duration-300 shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
               >
                 <span>START A PROJECT</span>
                 <ArrowUpRight className="w-4 h-4 ml-2" />

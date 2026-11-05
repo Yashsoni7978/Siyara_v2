@@ -290,7 +290,7 @@ export default function ServiceIndex({ onNavigate }) {
 
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] sm:tracking-[0.18em] uppercase transition-all duration-300 w-full sm:w-fit group shadow-md rounded-full min-h-[44px]"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-bold tracking-[0.16em] sm:tracking-[0.18em] uppercase transition-all duration-300 w-full sm:w-fit group shadow-md hover:shadow-[0_0_14px_rgba(25,168,120,0.22)] rounded-full min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
                 >
                   <span>REQUEST {currentDiscipline.name} AUDIT</span>
                   <ArrowUpRight className="w-4 h-4 text-[#101613] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

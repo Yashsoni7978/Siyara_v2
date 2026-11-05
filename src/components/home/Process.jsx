@@ -98,7 +98,7 @@ export default function Process() {
           >
             <Link
               href="/services#services-process"
-              className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2 px-7 py-3.5 border border-[#D9B45F] bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase transition-[background-color,box-shadow,transform] duration-300 shadow-lg group rounded-full"
+              className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2 px-7 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-bold tracking-[0.16em] uppercase transition-all duration-300 shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] group rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
             >
               <span>VIEW DETAILED PROCESS</span>
               <ArrowUpRight className="w-4 h-4 text-[#101613] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

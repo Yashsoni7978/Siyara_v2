@@ -219,14 +219,14 @@ export default function GeoAgencyIndiaPage() {
               href={BUSINESS_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 min-h-[48px]"
+              className="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 text-xs font-bold tracking-[0.16em] uppercase transition-all duration-300 hover:shadow-[#D9B45F]/30 hover:-translate-y-0.5 min-h-[48px] bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] rounded-full shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
             >
               <MessageCircle className="w-4 h-4 shrink-0" />
               <span>CONSULT OUR GEO ARCHITECT</span>
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 border border-[#ECE7D8]/20 hover:border-[#D9B45F] text-[#ECE7D8] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.16em] uppercase rounded-full transition-all duration-300 bg-[#070A09]/60 backdrop-blur-sm min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 text-xs font-semibold tracking-[0.16em] uppercase transition-all duration-300 min-h-[48px] bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] rounded-full shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
             >
               <span>REQUEST AI VISIBILITY AUDIT</span>
               <ArrowRight className="w-4 h-4 shrink-0" />
@@ -387,14 +387,14 @@ export default function GeoAgencyIndiaPage() {
               href={BUSINESS_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/20 hover:scale-105 min-h-[48px]"
+              className="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 hover:scale-105 min-h-[48px] bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] rounded-full shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
             >
               <MessageCircle className="w-4 h-4 shrink-0" />
               <span>CONSULT VIA WHATSAPP</span>
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 border border-[#ECE7D8]/30 hover:border-[#D9B45F] text-[#ECE7D8] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.18em] uppercase rounded-full transition-all duration-300 bg-[#070A09]/80 min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 min-h-[48px] bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] rounded-full shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
             >
               <span>INQUIRY FORM</span>
               <ArrowRight className="w-4 h-4 shrink-0" />

@@ -138,7 +138,7 @@ export default function InteriorDesignIndustryPage() {
               href={whatsappInquiryUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#070A09] text-xs font-sans font-bold tracking-[0.16em] uppercase transition-all duration-300 rounded-full shadow-lg min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 text-xs font-sans font-bold tracking-[0.16em] uppercase transition-all duration-300 min-h-[48px] bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] rounded-full shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
             >
               <MessageCircle className="w-4 h-4 shrink-0" />
               <span>DISCUSS YOUR PORTFOLIO ON WHATSAPP</span>
@@ -146,7 +146,7 @@ export default function InteriorDesignIndustryPage() {
 
             <Link
               href="/work"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 border border-[#D9B45F]/30 hover:border-[#D9B45F] text-[#F3EFE3] text-xs font-sans font-semibold tracking-[0.16em] uppercase rounded-full transition-all duration-300 min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-xs font-sans font-semibold tracking-[0.16em] uppercase transition-all duration-300 min-h-[48px] bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] rounded-full shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
             >
               <span>EXPLORE PORTFOLIO SHOWCASES</span>
               <ArrowRight className="w-4 h-4 text-[#D9B45F] shrink-0" />
@@ -293,7 +293,7 @@ export default function InteriorDesignIndustryPage() {
             <div className="shrink-0">
               <Link
                 href="/insights/luxury-interior-designer-portfolio-website-jaipur"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase rounded-full transition-all duration-300 shadow-lg shadow-[#D9B45F]/15 hover:scale-105 min-h-[44px] w-full md:w-auto"
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-xs font-bold tracking-[0.16em] uppercase transition-all duration-300 hover:scale-105 min-h-[44px] w-full md:w-auto bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] rounded-full shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
               >
                 <span>Read Full Playbook</span>
                 <ArrowRight className="w-4 h-4" />
@@ -317,7 +317,7 @@ export default function InteriorDesignIndustryPage() {
             href={whatsappInquiryUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-9 py-3.5 sm:py-4 bg-[#D9B45F] hover:bg-[#E8C979] text-[#070A09] text-xs font-sans font-bold tracking-[0.16em] uppercase transition-all duration-300 rounded-full shadow-xl min-h-[48px] w-full sm:w-auto"
+            className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-9 py-3.5 sm:py-4 text-xs font-sans font-bold tracking-[0.16em] uppercase transition-all duration-300 min-h-[48px] w-full sm:w-auto bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] rounded-full shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
           >
             <MessageCircle className="w-4 h-4 shrink-0" />
             <span>DISCUSS INTERIOR PORTFOLIO ON WHATSAPP</span>

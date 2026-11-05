@@ -73,7 +73,7 @@ export default function FinalCTA() {
         >
           <Link
             href="/contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-9 py-3.5 bg-[#101613] hover:bg-[#0B5E49] text-[#F3EFE3] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl hover:-translate-y-0.5"
+            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-9 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
           >
             <span>START A PROJECT</span>
             <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
@@ -84,7 +84,7 @@ export default function FinalCTA() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat with our team on WhatsApp"
-            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-9 py-3.5 border border-[#0B5E49]/30 bg-[#071E18] text-[#F3EFE3] hover:bg-[#0B5E49] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl hover:-translate-y-0.5"
+            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] gap-2.5 px-9 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-bold tracking-[0.18em] uppercase rounded-full transition-all duration-300 shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
           >
             <MessageCircle className="w-4 h-4 text-[#D9B45F]" />
             <span>TALK ON WHATSAPP</span>

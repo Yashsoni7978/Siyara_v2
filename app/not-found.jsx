@@ -42,7 +42,7 @@ export default function NotFound() {
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:shadow-[#D9B45F]/30"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-bold tracking-[0.16em] uppercase rounded-full transition-all duration-300 shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>RETURN HOME</span>
@@ -50,7 +50,7 @@ export default function NotFound() {
 
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 px-8 py-3.5 border border-[#D9B45F]/30 hover:border-[#D9B45F]/70 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.16em] uppercase rounded-full transition-all duration-300 bg-[#071E18]/40"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-semibold tracking-[0.16em] uppercase rounded-full transition-all duration-300 shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
           >
             <span>SERVICES</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -58,7 +58,7 @@ export default function NotFound() {
 
           <Link
             href="/insights"
-            className="inline-flex items-center gap-2 px-8 py-3.5 border border-[#D9B45F]/30 hover:border-[#D9B45F]/70 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.16em] uppercase rounded-full transition-all duration-300 bg-[#071E18]/40"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-semibold tracking-[0.16em] uppercase rounded-full transition-all duration-300 shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
           >
             <span>INSIGHTS</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -66,7 +66,7 @@ export default function NotFound() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-3.5 border border-[#D9B45F]/30 hover:border-[#D9B45F]/70 text-[#F3EFE3] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.16em] uppercase rounded-full transition-all duration-300 bg-[#071E18]/40"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-semibold tracking-[0.16em] uppercase rounded-full transition-all duration-300 shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
           >
             <span>CONTACT</span>
             <ArrowUpRight className="w-3.5 h-3.5" />

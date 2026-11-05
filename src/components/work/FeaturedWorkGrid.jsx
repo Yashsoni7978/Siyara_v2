@@ -241,7 +241,7 @@ export default function FeaturedWorkGrid({
           <div className="mt-14 text-center">
             <button
               onClick={() => setDisplayLimit((prev) => prev + 12)}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-[#0B5E49] bg-[#0B5E49] hover:bg-[#063C2D] text-[#F3EFE4] font-sans text-xs font-bold tracking-[0.16em] uppercase transition-all duration-300 shadow-lg shadow-[#0B5E49]/20 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B5E49]"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] font-sans text-xs font-bold tracking-[0.16em] uppercase transition-all duration-300 shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
             >
               <Plus className="w-4 h-4" />
               <span>Load More Projects ({filteredProjects.length - displayLimit} Remaining)</span>

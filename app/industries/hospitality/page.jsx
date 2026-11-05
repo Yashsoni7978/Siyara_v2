@@ -128,14 +128,14 @@ export default function HospitalityIndustryPage() {
               href={BUSINESS_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/15 hover:-translate-y-0.5 min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 text-xs font-bold tracking-[0.16em] uppercase transition-all duration-300 hover:-translate-y-0.5 min-h-[48px] bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] rounded-full shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
             >
               <MessageCircle className="w-4 h-4 shrink-0" />
               <span>CONSULT VIA WHATSAPP</span>
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 border border-[#ECE7D8]/20 hover:border-[#D9B45F] text-[#ECE7D8] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.16em] uppercase rounded-full transition-all duration-300 bg-[#070A09]/60 min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 text-xs font-semibold tracking-[0.16em] uppercase transition-all duration-300 min-h-[48px] bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] rounded-full shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
             >
               <span>HOTEL PROJECT INTAKE</span>
               <ArrowRight className="w-4 h-4 shrink-0" />
@@ -230,7 +230,7 @@ export default function HospitalityIndustryPage() {
             <div className="shrink-0">
               <Link
                 href="/insights/hotel-resort-website-design-rajasthan"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase rounded-full transition-all duration-300 shadow-lg shadow-[#D9B45F]/15 hover:scale-105 min-h-[44px] w-full md:w-auto"
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-xs font-bold tracking-[0.16em] uppercase transition-all duration-300 hover:scale-105 min-h-[44px] w-full md:w-auto bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] rounded-full shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
               >
                 <span>Read Full Playbook</span>
                 <ArrowRight className="w-4 h-4" />
@@ -287,14 +287,14 @@ export default function HospitalityIndustryPage() {
               href={BUSINESS_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 bg-[#D9B45F] hover:bg-[#E8C979] text-[#101613] text-xs font-bold tracking-[0.16em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D9B45F]/20 hover:scale-105 min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 text-xs font-bold tracking-[0.16em] uppercase transition-all duration-300 hover:scale-105 min-h-[48px] bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] rounded-full shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
             >
               <MessageCircle className="w-4 h-4 shrink-0" />
               <span>WHATSAPP CONSULTATION</span>
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 border border-[#ECE7D8]/20 hover:border-[#D9B45F] text-[#ECE7D8] hover:text-[#D9B45F] text-xs font-semibold tracking-[0.16em] uppercase rounded-full transition-all duration-300 min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 text-xs font-semibold tracking-[0.16em] uppercase transition-all duration-300 min-h-[48px] bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] rounded-full shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
             >
               <span>INQUIRY FORM</span>
               <ArrowRight className="w-4 h-4 shrink-0" />

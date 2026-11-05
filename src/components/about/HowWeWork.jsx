@@ -223,7 +223,7 @@ export default function HowWeWork() {
 
           <Link
             href="/services"
-            className="inline-flex items-center justify-center min-h-[44px] px-8 rounded-full bg-[#063C2D] hover:bg-[#0B5A43] text-[#F3EFE4] text-xs font-roboto font-semibold tracking-[0.16em] uppercase transition-colors flex-shrink-0"
+            className="inline-flex items-center justify-center min-h-[44px] px-8 rounded-full bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-roboto font-semibold tracking-[0.16em] uppercase transition-all duration-300 shadow-md hover:shadow-[0_0_14px_rgba(25,168,120,0.22)] flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
           >
             <span>VIEW ALL SERVICES</span>
             <ArrowUpRight className="w-4 h-4 ml-2 text-[#D4AF37]" />
