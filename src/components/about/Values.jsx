@@ -9,14 +9,14 @@ export default function Values() {
 
   // Restrained Gold Line-Art Icons
   const ChessKnightIcon = () => (
-    <svg 
-      className="w-7 h-7 text-[#C99742]" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="1.6" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
+    <svg
+      className="w-7 h-7 text-[#7A5813]"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       aria-hidden="true"
     >
       <path d="M19 21H5a2 2 0 0 1-2-2c0-.8.4-1.5 1-1.8l3-1.2v-2a6 6 0 0 1 1.2-3.6L10 8c-.6-.7-.9-1.6-.9-2.5 0-2.2 1.8-4 4-4 .6 0 1.2.1 1.7.4.9.5 1.5 1.4 1.7 2.4.6 2.7-1 5.3-3.6 5.8l-1.4.3v1.6l4 1.6c1 .4 1.5 1.4 1.5 2.4v5a2 2 0 0 1-2 2Z" />
@@ -25,14 +25,14 @@ export default function Values() {
   );
 
   const ShieldCrossIcon = () => (
-    <svg 
-      className="w-7 h-7 text-[#C99742]" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="1.6" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
+    <svg
+      className="w-7 h-7 text-[#7A5813]"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       aria-hidden="true"
     >
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
@@ -42,14 +42,14 @@ export default function Values() {
   );
 
   const ZapIcon = () => (
-    <svg 
-      className="w-7 h-7 text-[#C99742]" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="1.6" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
+    <svg
+      className="w-7 h-7 text-[#7A5813]"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       aria-hidden="true"
     >
       <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
@@ -57,14 +57,14 @@ export default function Values() {
   );
 
   const UsersIcon = () => (
-    <svg 
-      className="w-7 h-7 text-[#C99742]" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="1.6" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
+    <svg
+      className="w-7 h-7 text-[#7A5813]"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       aria-hidden="true"
     >
       <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
@@ -75,14 +75,14 @@ export default function Values() {
   );
 
   const RefreshIcon = () => (
-    <svg 
-      className="w-7 h-7 text-[#C99742]" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="1.6" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
+    <svg
+      className="w-7 h-7 text-[#7A5813]"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       aria-hidden="true"
     >
       <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
@@ -99,10 +99,10 @@ export default function Values() {
       className="relative pt-12 sm:pt-16 pb-20 sm:pb-24 lg:pb-28 bg-[#F4EFE6] text-[#080B0A] overflow-hidden"
     >
       <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
+
         {/* Section Identifier */}
         <div className="flex items-center gap-2.5 mb-8 sm:mb-10">
-          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#C99742]">
+          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#7A5813]">
             06
           </span>
           <span className="text-xs sm:text-sm text-[#080B0A]/40 font-normal">—</span>
@@ -113,7 +113,7 @@ export default function Values() {
 
         {/* 2-Column Balanced Composition */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-          
+
           {/* LEFT COLUMN: Headline & Vertical Gold Divider Line */}
           <motion.div
             initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 15 }}
@@ -126,14 +126,14 @@ export default function Values() {
               <h2 className="font-lora text-3xl sm:text-4xl lg:text-[46px] font-normal text-[#080B0A] leading-[1.15] tracking-tight">
                 The principles<br />
                 behind everything<br />
-                <span className="italic text-[#C99742]">we build.</span>
+                <span className="italic text-[#7A5813]">we build.</span>
               </h2>
             </div>
 
             {/* Vertical Gold Divider Line (Desktop) */}
-            <div 
+            <div
               aria-hidden="true"
-              className="hidden lg:block w-[1.5px] bg-[#C99742]/40 self-stretch mx-4 shrink-0" 
+              className="hidden lg:block w-[1.5px] bg-[#C99742]/40 self-stretch mx-4 shrink-0"
             />
           </motion.div>
 

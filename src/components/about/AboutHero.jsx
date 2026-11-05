@@ -32,12 +32,7 @@ export default function AboutHero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
           {/* LEFT COLUMN: Editorial Hero Content */}
-          <motion.div 
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: easeCustom }}
-            className="lg:col-span-7 flex flex-col justify-center"
-          >
+          <div className="lg:col-span-7 flex flex-col justify-center min-h-[calc(100svh-160px)] lg:min-h-0">
             {/* Section Identifier */}
             <div className="flex items-center gap-2.5 mb-6 sm:mb-8">
               <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#D4AF37]">
@@ -84,20 +79,16 @@ export default function AboutHero() {
                 <ArrowUpRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
-          </motion.div>
+          </div>
 
           {/* RIGHT COLUMN: Brand Identity Artwork */}
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, ease: easeCustom }}
-            className="lg:col-span-5 relative flex justify-center items-center"
-          >
+          <div className="lg:col-span-5 relative flex justify-center items-center">
             <div className="relative w-full max-w-[440px] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-[#D4AF37]/25 group bg-[#063C2D]/20">
               <Image
                 src="/images/siyara_hero_artwork.webp"
                 alt="Siyara Innovations Brand Identity & Digital Systems Artwork"
                 priority
+                fetchPriority="high"
                 fill
                 sizes="(max-width: 768px) 100vw, 440px"
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -114,7 +105,7 @@ export default function AboutHero() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

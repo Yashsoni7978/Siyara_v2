@@ -290,14 +290,14 @@ export default function ContactIntake() {
         {/* Section Header */}
         <div className="max-w-3xl mb-12 sm:mb-16">
           <div className="flex items-center gap-2.5 mb-5">
-            <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#C99742] uppercase">
+            <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#7A5813] uppercase">
               — PROJECT SCOPING &amp; INTAKE —
             </span>
           </div>
 
           <h2 className="font-roboto text-3xl sm:text-4xl lg:text-[46px] font-normal text-[#080B0A] leading-[1.12] tracking-tight mb-4">
             Start a Direct Project{' '}
-            <span className="font-lora italic text-[#C99742]">
+            <span className="font-lora italic text-[#7A5813]">
               Inquiry.
             </span>
           </h2>
@@ -325,7 +325,7 @@ export default function ContactIntake() {
                 <CheckCircle2 className="w-8 h-8 stroke-[2.2]" />
               </div>
 
-              <span className="text-xs font-roboto font-semibold tracking-widest text-[#C99742] uppercase block mb-2">
+              <span className="text-xs font-roboto font-semibold tracking-widest text-[#7A5813] uppercase block mb-2">
                 Inquiry Received
               </span>
 
@@ -418,7 +418,7 @@ export default function ContactIntake() {
 
               {/* ── SECTION A: CONTACT & COMPANY PARTICULARS ──────────────── */}
               <div className="space-y-6">
-                <h3 className="font-roboto text-xs font-bold uppercase tracking-[0.16em] text-[#C99742] pb-2 border-b border-[#080B0A]/10">
+                <h3 className="font-roboto text-xs font-bold uppercase tracking-[0.16em] text-[#7A5813] pb-2 border-b border-[#080B0A]/10">
                   1. Your Identity &amp; Organization
                 </h3>
 
@@ -444,10 +444,10 @@ export default function ContactIntake() {
                       placeholder="e.g. Vikram Sharma"
                       aria-invalid={Boolean(errors.name)}
                       aria-describedby={errors.name ? 'name-error' : undefined}
-                      className={`w-full px-4 py-3 text-sm font-roboto bg-[#EFE9DC] border rounded-lg text-[#080B0A] placeholder-[#080B0A]/35 focus:outline-none transition-colors ${
+                      className={`w-full px-4 py-3 text-base sm:text-sm font-roboto bg-[#EFE9DC] border rounded-lg text-[#080B0A] placeholder-[#080B0A]/35 focus:outline-none transition-colors ${
                         errors.name && touched.name
                           ? 'border-rose-500 focus:border-rose-600'
-                          : 'border-[#080B0A]/15 focus:border-[#C99742]'
+                          : 'border-[#080B0A]/15 focus:border-[#7A5813]'
                       }`}
                     />
                     {errors.name && touched.name && (
@@ -478,10 +478,10 @@ export default function ContactIntake() {
                       placeholder="vikram@company.com"
                       aria-invalid={Boolean(errors.email)}
                       aria-describedby={errors.email ? 'email-error' : undefined}
-                      className={`w-full px-4 py-3 text-sm font-roboto bg-[#EFE9DC] border rounded-lg text-[#080B0A] placeholder-[#080B0A]/35 focus:outline-none transition-colors ${
+                      className={`w-full px-4 py-3 text-base sm:text-sm font-roboto bg-[#EFE9DC] border rounded-lg text-[#080B0A] placeholder-[#080B0A]/35 focus:outline-none transition-colors ${
                         errors.email && touched.email
                           ? 'border-rose-500 focus:border-rose-600'
-                          : 'border-[#080B0A]/15 focus:border-[#C99742]'
+                          : 'border-[#080B0A]/15 focus:border-[#7A5813]'
                       }`}
                     />
                     {errors.email && touched.email && (
@@ -513,10 +513,10 @@ export default function ContactIntake() {
                       placeholder="e.g. Atelier Living or Private Practice"
                       aria-invalid={Boolean(errors.company)}
                       aria-describedby={errors.company ? 'company-error' : undefined}
-                      className={`w-full px-4 py-3 text-sm font-roboto bg-[#EFE9DC] border rounded-lg text-[#080B0A] placeholder-[#080B0A]/35 focus:outline-none transition-colors ${
+                      className={`w-full px-4 py-3 text-base sm:text-sm font-roboto bg-[#EFE9DC] border rounded-lg text-[#080B0A] placeholder-[#080B0A]/35 focus:outline-none transition-colors ${
                         errors.company && touched.company
                           ? 'border-rose-500 focus:border-rose-600'
-                          : 'border-[#080B0A]/15 focus:border-[#C99742]'
+                          : 'border-[#080B0A]/15 focus:border-[#7A5813]'
                       }`}
                     />
                     {errors.company && touched.company && (
@@ -532,7 +532,7 @@ export default function ContactIntake() {
                       htmlFor="contact-phone"
                       className="block text-xs font-roboto font-semibold tracking-wider uppercase text-[#080B0A] mb-2"
                     >
-                      Phone / WhatsApp Number <span className="text-[#080B0A]/40 font-normal">(Optional)</span>
+                      Phone / WhatsApp Number <span className="text-[#080B0A]/65 font-normal">(Optional)</span>
                     </label>
                     <input
                       type="tel"
@@ -545,10 +545,10 @@ export default function ContactIntake() {
                       placeholder="+91 98765 43210"
                       aria-invalid={Boolean(errors.phone)}
                       aria-describedby={errors.phone ? 'phone-error' : undefined}
-                      className={`w-full px-4 py-3 text-sm font-roboto bg-[#EFE9DC] border rounded-lg text-[#080B0A] placeholder-[#080B0A]/35 focus:outline-none transition-colors ${
+                      className={`w-full px-4 py-3 text-base sm:text-sm font-roboto bg-[#EFE9DC] border rounded-lg text-[#080B0A] placeholder-[#080B0A]/35 focus:outline-none transition-colors ${
                         errors.phone && touched.phone
                           ? 'border-rose-500 focus:border-rose-600'
-                          : 'border-[#080B0A]/15 focus:border-[#C99742]'
+                          : 'border-[#080B0A]/15 focus:border-[#7A5813]'
                       }`}
                     />
                     {errors.phone && touched.phone && (
@@ -565,7 +565,7 @@ export default function ContactIntake() {
                     htmlFor="contact-website"
                     className="block text-xs font-roboto font-semibold tracking-wider uppercase text-[#080B0A] mb-2"
                   >
-                    Current Website or Digital Presence <span className="text-[#080B0A]/40 font-normal">(Optional)</span>
+                    Current Website or Digital Presence <span className="text-[#080B0A]/65 font-normal">(Optional)</span>
                   </label>
                   <input
                     type="text"
@@ -575,7 +575,7 @@ export default function ContactIntake() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     placeholder="https://yourbrand.com (optional)"
-                    className="w-full px-4 py-3 text-sm font-roboto bg-[#EFE9DC] border border-[#080B0A]/15 rounded-lg text-[#080B0A] placeholder-[#080B0A]/35 focus:outline-none focus:border-[#C99742] transition-colors"
+                    className="w-full px-4 py-3 text-base sm:text-sm font-roboto bg-[#EFE9DC] border border-[#080B0A]/15 rounded-lg text-[#080B0A] placeholder-[#080B0A]/35 focus:outline-none focus:border-[#7A5813] transition-colors"
                   />
                 </div>
               </div>
@@ -583,10 +583,10 @@ export default function ContactIntake() {
               {/* ── SECTION B: SERVICE REQUIRED (8 DISCIPLINES + NOT SURE) ─ */}
               <div className="space-y-4 pt-4">
                 <div className="flex items-center justify-between pb-2 border-b border-[#080B0A]/10">
-                  <h3 className="font-roboto text-xs font-bold uppercase tracking-[0.16em] text-[#C99742]">
+                  <h3 className="font-roboto text-xs font-bold uppercase tracking-[0.16em] text-[#7A5813]">
                     2. Service Discipline Required <span className="text-rose-600">*</span>
                   </h3>
-                  <span className="text-[11px] font-roboto text-[#080B0A]/50">
+                  <span className="text-[11px] font-roboto text-[#080B0A]/65">
                     Select the primary discipline
                   </span>
                 </div>
@@ -623,10 +623,10 @@ export default function ContactIntake() {
               {/* ── SECTION C: PROJECT DESCRIPTION (REQUIRED) ─────────────── */}
               <div className="space-y-4 pt-4">
                 <div className="flex items-center justify-between pb-2 border-b border-[#080B0A]/10">
-                  <h3 className="font-roboto text-xs font-bold uppercase tracking-[0.16em] text-[#C99742]">
+                  <h3 className="font-roboto text-xs font-bold uppercase tracking-[0.16em] text-[#7A5813]">
                     3. Project Description &amp; Objectives <span className="text-rose-600">*</span>
                   </h3>
-                  <span className="text-[11px] font-roboto text-[#080B0A]/50">
+                  <span className="text-[11px] font-roboto text-[#080B0A]/65">
                     Min. 10 characters
                   </span>
                 </div>
@@ -643,10 +643,10 @@ export default function ContactIntake() {
                     placeholder="Tell us what you're building, key challenges, deliverables needed, and what a successful outcome looks like..."
                     aria-invalid={Boolean(errors.details)}
                     aria-describedby={errors.details ? 'details-error' : undefined}
-                    className={`w-full p-4 text-sm font-roboto bg-[#EFE9DC] border rounded-lg text-[#080B0A] placeholder-[#080B0A]/35 focus:outline-none transition-colors resize-y min-h-[130px] ${
+                    className={`w-full p-4 text-base sm:text-sm font-roboto bg-[#EFE9DC] border rounded-lg text-[#080B0A] placeholder-[#080B0A]/35 focus:outline-none transition-colors resize-y min-h-[130px] ${
                       errors.details && touched.details
                         ? 'border-rose-500 focus:border-rose-600'
-                        : 'border-[#080B0A]/15 focus:border-[#C99742]'
+                        : 'border-[#080B0A]/15 focus:border-[#7A5813]'
                     }`}
                   />
                   {errors.details && touched.details && (
@@ -660,8 +660,8 @@ export default function ContactIntake() {
               {/* ── SECTION D: OPTIONAL PARAMETERS (BUDGET & TIMELINE) ────── */}
               <div className="space-y-6 pt-4">
                 <div className="pb-2 border-b border-[#080B0A]/10">
-                  <h3 className="font-roboto text-xs font-bold uppercase tracking-[0.16em] text-[#C99742]">
-                    4. Scope Parameters <span className="text-[#080B0A]/40 font-normal">(Optional)</span>
+                  <h3 className="font-roboto text-xs font-bold uppercase tracking-[0.16em] text-[#7A5813]">
+                    4. Scope Parameters <span className="text-[#080B0A]/65 font-normal">(Optional)</span>
                   </h3>
                 </div>
 

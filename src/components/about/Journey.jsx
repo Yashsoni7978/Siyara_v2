@@ -40,7 +40,7 @@ export default function Journey() {
         
         {/* Section Identifier */}
         <div className="flex items-center gap-2.5 mb-8 sm:mb-10">
-          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#C99742]">
+          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#7A5813]">
             05
           </span>
           <span className="text-xs sm:text-sm text-[#080B0A]/40 font-normal">—</span>

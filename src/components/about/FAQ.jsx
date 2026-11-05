@@ -41,7 +41,7 @@ export default function FAQ() {
         
         {/* Section Identifier */}
         <div className="flex items-center gap-2.5 mb-8 sm:mb-10">
-          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#C99742]">
+          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#7A5813]">
             11
           </span>
           <span className="text-xs sm:text-sm text-[#080B0A]/40 font-normal">—</span>
@@ -63,7 +63,7 @@ export default function FAQ() {
           >
             <h2 className="font-lora text-3xl sm:text-4xl lg:text-[46px] font-normal text-[#080B0A] leading-[1.15] tracking-tight mb-4">
               Still have<br />
-              <span className="italic text-[#C99742]">questions?</span>
+              <span className="italic text-[#7A5813]">questions?</span>
             </h2>
             <p className="font-lora text-xs sm:text-sm text-[#4A504D] leading-relaxed max-w-sm">
               A few quick answers to help you understand how we work.
@@ -88,10 +88,10 @@ export default function FAQ() {
                     className="w-full flex items-center justify-between text-left group gap-4 cursor-pointer"
                     aria-expanded={isOpen}
                   >
-                    <span className="font-roboto font-bold text-sm sm:text-base text-[#080B0A] group-hover:text-[#C99742] transition-colors leading-snug">
+                    <span className="font-roboto font-bold text-sm sm:text-base text-[#080B0A] group-hover:text-[#7A5813] transition-colors leading-snug">
                       {faq.q}
                     </span>
-                    <span className="text-[#C99742] text-sm shrink-0 font-bold transition-transform duration-200">
+                    <span className="text-[#7A5813] text-sm shrink-0 font-bold transition-transform duration-200">
                       {isOpen ? '—' : '+'}
                     </span>
                   </button>

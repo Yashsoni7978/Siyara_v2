@@ -13,7 +13,7 @@ export default function BlogControls({
   totalResults
 }) {
   return (
-    <section className="relative pt-6 pb-10 bg-[#080B0A] border-b border-[#D4AF37]/15">
+    <section className="relative pt-6 pb-10 bg-[#080B0A] border-b border-[#D4AF37]/15 overflow-hidden">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           
@@ -51,7 +51,7 @@ export default function BlogControls({
           </div>
 
           {/* Right Controls: Search + Results Counter */}
-          <div className="flex items-center gap-4 w-full lg:w-auto shrink-0 justify-between lg:justify-end">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 w-full lg:w-auto justify-between lg:justify-end">
             {typeof totalResults === 'number' && (
               <div className="flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-widest text-[#D4AF37]/90 shrink-0">
                 <Sparkles className="w-3 h-3 text-[#19A878]" />
@@ -62,7 +62,7 @@ export default function BlogControls({
             )}
 
             {/* Minimalist Editorial Search Control */}
-            <div className="relative w-full sm:w-72 lg:w-64 shrink-0">
+            <div className="relative w-full sm:w-72 lg:w-64">
               <div className="relative flex items-center">
                 <Search className="w-4 h-4 text-[#D4AF37] absolute left-3.5 pointer-events-none" />
                 <input

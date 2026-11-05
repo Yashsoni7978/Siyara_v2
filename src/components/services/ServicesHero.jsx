@@ -10,12 +10,12 @@ export default function ServicesHero() {
   const shouldReduceMotion = useReducedMotion();
   const easeCustom = [0.16, 1, 0.3, 1];
 
-  const fadeUp = (delayMs) => ({
+  const fadeUp = (delayMs = 0) => ({
     hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 18 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.65, delay: delayMs / 1000, ease: easeCustom },
+      transition: { duration: 0.35, ease: easeCustom },
     },
   });
 
@@ -46,11 +46,11 @@ export default function ServicesHero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
           {/* LEFT COLUMN: Editorial Typography & Actions */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
+          <div className="lg:col-span-7 flex flex-col justify-center min-h-[calc(100svh-160px)] lg:min-h-0">
             
             {/* Eyebrow Label */}
             <motion.div
-              initial="hidden"
+              initial={false}
               animate="visible"
               variants={fadeUp(150)}
               className="flex items-center gap-2.5 mb-5 sm:mb-6"
@@ -62,7 +62,7 @@ export default function ServicesHero() {
 
             {/* Main Headline */}
             <motion.h1
-              initial="hidden"
+              initial={false}
               animate="visible"
               variants={fadeUp(300)}
               className="font-roboto text-4xl sm:text-5xl lg:text-[54px] xl:text-[60px] font-normal text-[#F3EFE4] leading-[1.1] tracking-tight mb-5 sm:mb-6"
@@ -74,7 +74,7 @@ export default function ServicesHero() {
 
             {/* Supporting Copy */}
             <motion.p
-              initial="hidden"
+              initial={false}
               animate="visible"
               variants={fadeUp(450)}
               className="font-lora text-sm sm:text-base lg:text-[17px] text-[#C5D2CE] font-light leading-relaxed max-w-xl mb-8 sm:mb-10"
@@ -84,7 +84,7 @@ export default function ServicesHero() {
 
             {/* Dual CTAs */}
             <motion.div
-              initial="hidden"
+              initial={false}
               animate="visible"
               variants={fadeUp(600)}
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5"
@@ -114,26 +114,22 @@ export default function ServicesHero() {
           </div>
 
           {/* RIGHT COLUMN: Flowing Emerald & Champagne Gold Abstract Artwork */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.25, ease: easeCustom }}
-            className="lg:col-span-5 flex justify-center lg:justify-end relative"
-          >
+          <div className="lg:col-span-5 flex justify-center lg:justify-end relative">
             <div className="relative w-full max-w-[460px] lg:max-w-none aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden shadow-2xl bg-[#03150E]/80">
               <Image
                 src="/images/siyara_hero_artwork.webp"
                 alt="Siyara Innovations flowing emerald and champagne gold luxury abstract visual"
                 fill
-                sizes="(max-width: 1024px) 100vw, 550px"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 550px"
                 className="object-cover object-center"
                 priority
+                fetchPriority="high"
               />
               {/* Subtle ambient soft edges */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#080B0A]/70 via-transparent to-transparent pointer-events-none" />
               <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10 pointer-events-none" />
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

@@ -45,7 +45,7 @@ export default function ContactHero() {
         <div className="max-w-4xl">
           {/* Eyebrow */}
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="flex items-center gap-2.5 mb-5 sm:mb-6"
@@ -57,7 +57,7 @@ export default function ContactHero() {
 
           {/* Master Headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-roboto text-4xl sm:text-6xl lg:text-[72px] font-normal text-[#F3EFE4] leading-[1.08] tracking-tight mb-6 sm:mb-8"
@@ -70,7 +70,7 @@ export default function ContactHero() {
 
           {/* Supporting Copy */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="font-lora text-sm sm:text-base lg:text-[18px] text-[#C5D2CE] font-light leading-relaxed max-w-2xl mb-10 sm:mb-12"

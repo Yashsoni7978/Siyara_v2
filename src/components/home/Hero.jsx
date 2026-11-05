@@ -1,16 +1,33 @@
 'use client';
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight, ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+function usePrefersReducedMotion() {
+  const [matches, setMatches] = useState(false);
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setMatches(mq.matches);
+    const handler = (e) => setMatches(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+  return matches;
+}
+
 export default function Hero() {
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = usePrefersReducedMotion();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const timerRef = useRef(null);
+  const isFirstRender = useRef(true);
+
+  useEffect(() => {
+    isFirstRender.current = false;
+  }, []);
 
   // The 5 official service slides with dedicated visual assets and copy
   const slides = [
@@ -151,41 +168,73 @@ export default function Hero() {
       aria-label="Siyara Innovations Services Showcase"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="relative min-h-[92svh] sm:min-h-[100svh] pt-28 sm:pt-32 lg:pt-36 pb-20 sm:pb-24 lg:pb-28 bg-[#080B0A] text-[#F3EFE4] overflow-hidden flex items-center select-none"
+      onTouchStart={() => setIsPaused(true)}
+      onTouchEnd={() => setIsPaused(false)}
+      onTouchCancel={() => setIsPaused(false)}
+      className="relative min-h-[100svh] pt-28 sm:pt-32 lg:pt-36 pb-20 sm:pb-24 lg:pb-28 bg-[#080B0A] text-[#F3EFE4] overflow-hidden flex items-center select-none"
     >
       {/* ========================================================================= */}
       {/* BACKGROUND IMAGE SLIDER (Smooth 800ms Crossfade)                           */}
       {/* ========================================================================= */}
       <div className="absolute inset-0 z-0">
-        <AnimatePresence mode="sync">
-          <motion.div
-            key={slide.id}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              duration: shouldReduceMotion ? 0.2 : 0.85,
-              ease: [0.16, 1, 0.3, 1],
+        <div
+          key="slide-0-static"
+          className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-out ${
+            currentSlide === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+          }`}
+        >
+          <Image
+            src={slides[0].image}
+            alt={slides[0].alt}
+            fill
+            priority
+            fetchPriority="high"
+            className={`object-cover ${slides[0].objectPosition}`}
+            sizes="100vw"
+            quality={75}
+          />
+
+          {/* Directional Vignette Overlay Tailored Per Slide: subtle ~50% opacity near text, ~20% in middle, 0% on right */}
+          <div
+            className="absolute inset-0 hidden sm:block pointer-events-none transition-opacity duration-700"
+            style={{ background: slides[0].overlayGradient }}
+          />
+
+          {/* Mobile Viewport Scrim: gentle top-to-bottom blend ensuring text readability over light areas without dark boxes */}
+          <div
+            className="absolute inset-0 sm:hidden pointer-events-none"
+            style={{
+              background:
+                'linear-gradient(180deg, rgba(8, 11, 10, 0.82) 0%, rgba(8, 11, 10, 0.65) 38%, rgba(6, 20, 15, 0.40) 60%, transparent 82%)',
             }}
-            className="absolute inset-0 w-full h-full"
+          />
+
+          {/* Gentle Top Vignette for Floating Navbar Integration */}
+          <div className="absolute top-0 inset-x-0 h-24 sm:h-28 bg-gradient-to-b from-[#080B0A]/40 to-transparent pointer-events-none" />
+
+          {/* Subtle Bottom Vignette for Slider Controls */}
+          <div className="absolute bottom-0 inset-x-0 h-24 sm:h-28 bg-gradient-to-t from-[#080B0A]/35 to-transparent pointer-events-none" />
+        </div>
+
+        {currentSlide !== 0 && (
+          <div
+            key={`slide-${currentSlide}`}
+            className="absolute inset-0 w-full h-full z-10 transition-opacity duration-700 ease-out"
           >
             <Image
               src={slide.image}
               alt={slide.alt}
               fill
-              priority={currentSlide === 0}
               className={`object-cover ${slide.objectPosition}`}
               sizes="100vw"
-              quality={90}
+              quality={75}
             />
 
-            {/* Directional Vignette Overlay Tailored Per Slide: subtle ~50% opacity near text, ~20% in middle, 0% on right */}
             <div
-              className="absolute inset-0 hidden sm:block pointer-events-none transition-opacity duration-700"
+              className="absolute inset-0 hidden sm:block pointer-events-none"
               style={{ background: slide.overlayGradient }}
             />
 
-            {/* Mobile Viewport Scrim: gentle top-to-bottom blend ensuring text readability over light areas without dark boxes */}
             <div
               className="absolute inset-0 sm:hidden pointer-events-none"
               style={{
@@ -194,13 +243,11 @@ export default function Hero() {
               }}
             />
 
-            {/* Gentle Top Vignette for Floating Navbar Integration */}
             <div className="absolute top-0 inset-x-0 h-24 sm:h-28 bg-gradient-to-b from-[#080B0A]/40 to-transparent pointer-events-none" />
 
-            {/* Subtle Bottom Vignette for Slider Controls */}
             <div className="absolute bottom-0 inset-x-0 h-24 sm:h-28 bg-gradient-to-t from-[#080B0A]/35 to-transparent pointer-events-none" />
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        )}
       </div>
 
       {/* ========================================================================= */}
@@ -216,58 +263,47 @@ export default function Hero() {
             }}
           />
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={slide.id}
-              initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: shouldReduceMotion ? 0 : -15 }}
-              transition={{
-                duration: shouldReduceMotion ? 0.2 : 0.45,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-            >
-              {/* Category Eyebrow */}
-              <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D4AF37] drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
-                  {slide.id}
-                </span>
-                <span className="w-8 h-[1px] bg-[#D4AF37]/50" />
-                <span className="text-[10.5px] sm:text-xs font-sans font-semibold tracking-[0.24em] text-[#D4AF37] uppercase drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
-                  {slide.category}
-                </span>
-              </div>
+          <div key={slide.id} className="transition-opacity duration-300">
+            {/* Category Eyebrow */}
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+              <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#D4AF37] drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
+                {slide.id}
+              </span>
+              <span className="w-8 h-[1px] bg-[#D4AF37]/50" />
+              <span className="text-[10.5px] sm:text-xs font-sans font-semibold tracking-[0.24em] text-[#D4AF37] uppercase drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
+                {slide.category}
+              </span>
+            </div>
 
-              {/* Main Headline (h1 for SEO) */}
-              <h1 className="font-roboto text-3xl sm:text-5xl lg:text-[64px] xl:text-[72px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight mb-4 sm:mb-6 drop-shadow-[0_2px_14px_rgba(0,0,0,0.6)]">
-                {slide.headline}
-              </h1>
+            {/* Main Headline (h1 for SEO) */}
+            <h1 className="font-roboto text-3xl sm:text-5xl lg:text-[64px] xl:text-[72px] text-[#F3EFE4] font-normal leading-[1.08] tracking-tight mb-4 sm:mb-6 drop-shadow-[0_2px_14px_rgba(0,0,0,0.6)]">
+              {slide.headline}
+            </h1>
 
-              {/* Service Description */}
-              <p className="font-lora text-sm sm:text-base lg:text-[18px] text-[#ECE7D8]/95 font-normal leading-relaxed max-w-xl mb-8 sm:mb-10 drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)]">
-                {slide.description}
-              </p>
+            {/* Service Description */}
+            <p className="font-lora text-sm sm:text-base lg:text-[18px] text-[#ECE7D8]/95 font-normal leading-relaxed max-w-xl mb-8 sm:mb-10 drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)]">
+              {slide.description}
+            </p>
 
-              {/* Dual Action CTAs */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-                <Link
-                  href={slide.primaryCta.href}
-                  className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3 sm:py-3.5 bg-[#D4AF37] hover:bg-[#E5C378] text-[#080B0A] text-xs sm:text-[13px] font-roboto font-medium tracking-[0.14em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D4AF37]/15 hover:shadow-[#D4AF37]/30 hover:-translate-y-0.5 active:translate-y-0 min-h-[46px] group"
-                >
-                  <span>{slide.primaryCta.text}</span>
-                  <ArrowUpRight className="w-4 h-4 stroke-[2.2] text-[#080B0A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </Link>
+            {/* Dual Action CTAs */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+              <Link
+                href={slide.primaryCta.href}
+                className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3 sm:py-3.5 bg-[#D4AF37] hover:bg-[#E5C378] text-[#080B0A] text-xs sm:text-[13px] font-roboto font-medium tracking-[0.14em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D4AF37]/15 hover:shadow-[#D4AF37]/30 hover:-translate-y-0.5 active:translate-y-0 min-h-[46px] group"
+              >
+                <span>{slide.primaryCta.text}</span>
+                <ArrowUpRight className="w-4 h-4 stroke-[2.2] text-[#080B0A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </Link>
 
-                <Link
-                  href={slide.secondaryCta.href}
-                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 border border-[#F3EFE4]/25 hover:border-[#D4AF37]/60 text-[#F3EFE4] hover:text-[#D4AF37] bg-[#080B0A]/40 backdrop-blur-sm text-xs sm:text-[13px] font-roboto font-medium tracking-[0.14em] uppercase rounded-full transition-all duration-300 group min-h-[46px]"
-                >
-                  <span>{slide.secondaryCta.text}</span>
-                  <ArrowRight className="w-4 h-4 text-[#D4AF37] group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+              <Link
+                href={slide.secondaryCta.href}
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 border border-[#F3EFE4]/25 hover:border-[#D4AF37]/60 text-[#F3EFE4] hover:text-[#D4AF37] bg-[#080B0A]/40 backdrop-blur-sm text-xs sm:text-[13px] font-roboto font-medium tracking-[0.14em] uppercase rounded-full transition-all duration-300 group min-h-[46px]"
+              >
+                <span>{slide.secondaryCta.text}</span>
+                <ArrowRight className="w-4 h-4 text-[#D4AF37] group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -278,7 +314,7 @@ export default function Hero() {
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
           
           {/* Left: Minimal Pagination Dashes */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2">
             {slides.map((s, idx) => {
               const isActive = currentSlide === idx;
               return (
@@ -287,10 +323,14 @@ export default function Hero() {
                   type="button"
                   aria-label={`Go to slide ${idx + 1}`}
                   onClick={() => goToSlide(idx)}
-                  className={`h-1 rounded-full transition-all duration-300 cursor-pointer shadow-sm ${
-                    isActive ? 'w-8 sm:w-10 bg-[#D4AF37]' : 'w-4 sm:w-5 bg-white/35 hover:bg-white/60'
-                  }`}
-                />
+                  className="relative min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer focus:outline-none focus-visible:ring-1 focus-visible:ring-[#D4AF37] rounded"
+                >
+                  <span
+                    className={`h-1 rounded-full transition-all duration-300 shadow-sm block ${
+                      isActive ? 'w-8 sm:w-10 bg-[#D4AF37]' : 'w-4 sm:w-5 bg-white/35 hover:bg-white/60'
+                    }`}
+                  />
+                </button>
               );
             })}
           </div>
@@ -309,7 +349,7 @@ export default function Hero() {
               type="button"
               aria-label="Previous Slide"
               onClick={prevSlide}
-              className="w-10 h-10 rounded-full border border-white/25 hover:border-[#D4AF37] bg-[#080B0A]/60 hover:bg-[#080B0A]/85 backdrop-blur-md text-[#F3EFE4] hover:text-[#D4AF37] flex items-center justify-center transition-all cursor-pointer shadow-lg active:scale-95"
+              className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full border border-white/25 hover:border-[#D4AF37] bg-[#080B0A]/60 hover:bg-[#080B0A]/85 backdrop-blur-md text-[#F3EFE4] hover:text-[#D4AF37] flex items-center justify-center transition-all cursor-pointer shadow-lg active:scale-95"
             >
               <ArrowLeft className="w-4 h-4 stroke-[1.75]" />
             </button>
@@ -319,7 +359,7 @@ export default function Hero() {
               type="button"
               aria-label="Next Slide"
               onClick={nextSlide}
-              className="w-10 h-10 rounded-full border border-white/20 hover:border-[#D4AF37] bg-[#080B0A]/70 backdrop-blur-md text-[#F3EFE4] hover:text-[#D4AF37] flex items-center justify-center transition-all cursor-pointer shadow-lg active:scale-95"
+              className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full border border-white/20 hover:border-[#D4AF37] bg-[#080B0A]/70 backdrop-blur-md text-[#F3EFE4] hover:text-[#D4AF37] flex items-center justify-center transition-all cursor-pointer shadow-lg active:scale-95"
             >
               <ArrowRight className="w-4 h-4 stroke-[1.75]" />
             </button>

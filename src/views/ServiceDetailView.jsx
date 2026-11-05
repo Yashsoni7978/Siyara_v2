@@ -28,12 +28,12 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
     setOpenFaqIdx(openFaqIdx === idx ? null : idx);
   };
 
-  const fadeUp = (delayMs) => ({
+  const fadeUp = (delayMs = 0) => ({
     hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 18 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.65, delay: delayMs / 1000, ease: easeCustom },
+      transition: { duration: 0.35, ease: easeCustom },
     },
   });
 
@@ -79,11 +79,11 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
             
             {/* LEFT COLUMN: Editorial Typography & Actions */}
-            <div className="lg:col-span-7 flex flex-col justify-center">
+            <div className="lg:col-span-7 flex flex-col justify-center min-h-[calc(100svh-160px)] lg:min-h-0">
               
               {/* Eyebrow Label */}
               <motion.div
-                initial="hidden"
+                initial={false}
                 animate="visible"
                 variants={fadeUp(150)}
                 className="flex items-center gap-2.5 mb-5 sm:mb-6"
@@ -95,7 +95,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
 
               {/* Main Headline */}
               <motion.h1
-                initial="hidden"
+                initial={false}
                 animate="visible"
                 variants={fadeUp(300)}
                 className="font-roboto text-3xl sm:text-4xl lg:text-[50px] xl:text-[56px] font-normal text-[#F3EFE4] leading-[1.12] tracking-tight mb-5 sm:mb-6"
@@ -108,7 +108,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
 
               {/* Supporting Copy */}
               <motion.p
-                initial="hidden"
+                initial={false}
                 animate="visible"
                 variants={fadeUp(450)}
                 className="font-lora text-sm sm:text-base lg:text-[17px] text-[#C5D2CE] font-light leading-relaxed max-w-xl mb-8 sm:mb-10"
@@ -118,7 +118,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
 
               {/* Dual CTAs */}
               <motion.div
-                initial="hidden"
+                initial={false}
                 animate="visible"
                 variants={fadeUp(600)}
                 className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5"
@@ -146,24 +146,20 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
             </div>
 
             {/* RIGHT COLUMN: Service-Specific Luxury Abstract Artwork */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.25, ease: easeCustom }}
-              className="lg:col-span-5 flex justify-center lg:justify-end relative"
-            >
+            <div className="lg:col-span-5 flex justify-center lg:justify-end relative">
               <div className="relative w-full max-w-[460px] lg:max-w-none aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden shadow-2xl bg-[#03150E]/80 border border-[#D4AF37]/20">
                 <Image
                   src={service.heroImage || '/images/services/service-brand-strategy.webp'}
                   alt={`${service.name} visual`}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 550px"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 550px"
                   className="object-cover object-center"
                   priority
+                  fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080B0A]/70 via-transparent to-transparent pointer-events-none" />
               </div>
-            </motion.div>
+            </div>
 
           </div>
         </div>
@@ -184,7 +180,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
           
           {/* Eyebrow */}
           <div className="flex items-center gap-2.5 mb-6">
-            <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#C99742] uppercase">
+            <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#7A5813] uppercase">
               — STRATEGIC OVERVIEW —
             </span>
           </div>
@@ -210,7 +206,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
               'Full Cross-Device Optimization'
             ]).map((badge, idx) => (
               <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-[13px] font-roboto font-medium text-[#080B0A]">
-                <CheckCircle2 className="w-4 h-4 text-[#C99742] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#7A5813] shrink-0" />
                 <span>{badge}</span>
               </div>
             ))}
@@ -232,7 +228,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
             
             {/* Eyebrow */}
             <div className="flex items-center gap-2.5 mb-6">
-              <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#C99742] uppercase">
+              <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#7A5813] uppercase">
                 — COMMERCIAL DIAGNOSIS —
               </span>
             </div>
@@ -242,7 +238,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
               <div>
                 <h2 className="font-roboto text-3xl sm:text-4xl lg:text-[44px] font-normal text-[#080B0A] leading-[1.12] tracking-tight">
                   The Critical Challenges<br />
-                  <span className="font-lora italic text-[#C99742]">We Solve.</span>
+                  <span className="font-lora italic text-[#7A5813]">We Solve.</span>
                 </h2>
               </div>
               <div className="lg:border-l lg:border-[#080B0A]/15 lg:pl-8 max-w-md">
@@ -262,7 +258,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
                   } flex flex-col justify-between`}
                 >
                   <div>
-                    <span className="text-xs font-roboto font-bold text-[#C99742] tracking-widest block mb-2">
+                    <span className="text-xs font-roboto font-bold text-[#7A5813] tracking-widest block mb-2">
                       0{idx + 1} — CASE ANALYSIS
                     </span>
                     <h3 className="font-roboto font-bold text-lg sm:text-xl text-[#080B0A] leading-snug mb-4">
@@ -309,7 +305,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
           
           {/* Eyebrow */}
           <div className="flex items-center gap-2.5 mb-6">
-            <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#C99742] uppercase">
+            <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#7A5813] uppercase">
               — SPECIFICATIONS &amp; DELIVERABLES —
             </span>
           </div>
@@ -319,7 +315,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
             {/* Left: Technology Stack / Frameworks Deployed */}
             <div className="lg:col-span-5 p-7 sm:p-8 rounded-2xl bg-[#EFE9DC] border border-[#080B0A]/8">
               <div className="flex items-center gap-2.5 mb-6">
-                <Cpu className="w-5 h-5 text-[#C99742]" />
+                <Cpu className="w-5 h-5 text-[#7A5813]" />
                 <h3 className="font-roboto font-bold text-lg sm:text-xl text-[#080B0A]">
                   Engineered With
                 </h3>
@@ -348,7 +344,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
             {/* Right: Key Deliverables Checklist */}
             <div className="lg:col-span-7 p-7 sm:p-8 rounded-2xl bg-[#EFE9DC] border border-[#080B0A]/8">
               <div className="flex items-center gap-2.5 mb-6">
-                <ShieldCheck className="w-5 h-5 text-[#C99742]" />
+                <ShieldCheck className="w-5 h-5 text-[#7A5813]" />
                 <h3 className="font-roboto font-bold text-lg sm:text-xl text-[#080B0A]">
                   Key Deliverables &amp; Outcomes
                 </h3>
@@ -356,7 +352,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
               <div className="space-y-4">
                 {(service.deliverables || service.subServices).map((deliv, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#C99742]/15 text-[#C99742] flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-5 h-5 rounded-full bg-[#C99742]/15 text-[#7A5813] flex items-center justify-center shrink-0 mt-0.5">
                       <CheckCircle2 className="w-3.5 h-3.5 stroke-[2.5]" />
                     </div>
                     <span className="font-lora text-xs sm:text-sm text-[#2D3230] leading-relaxed">
@@ -490,7 +486,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
             
             {/* Eyebrow */}
             <div className="flex items-center gap-2.5 mb-6">
-              <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#C99742] uppercase">
+              <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#7A5813] uppercase">
                 — SECTOR APPLICATIONS —
               </span>
             </div>
@@ -500,7 +496,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
               <div>
                 <h2 className="font-roboto text-3xl sm:text-4xl lg:text-[44px] font-normal text-[#080B0A] leading-[1.12] tracking-tight">
                   Tailored for High-Consideration<br />
-                  <span className="font-lora italic text-[#C99742]">Commercial Sectors.</span>
+                  <span className="font-lora italic text-[#7A5813]">Commercial Sectors.</span>
                 </h2>
               </div>
               <div className="lg:border-l lg:border-[#080B0A]/15 lg:pl-8 max-w-md">
@@ -518,7 +514,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
                   className="p-6 sm:p-7 rounded-2xl bg-[#EFE9DC]/80 border border-[#080B0A]/8 flex flex-col justify-between"
                 >
                   <div>
-                    <span className="text-xs font-roboto font-bold text-[#C99742] tracking-wider block mb-2">
+                    <span className="text-xs font-roboto font-bold text-[#7A5813] tracking-wider block mb-2">
                       0{idx + 1}
                     </span>
                     <h3 className="font-roboto font-bold text-base sm:text-lg text-[#080B0A] mb-2 leading-snug">
@@ -549,7 +545,7 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
             
             {/* Eyebrow */}
             <div className="flex items-center gap-2.5 mb-6">
-              <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#C99742] uppercase">
+              <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#7A5813] uppercase">
                 — CONNECTED DISCIPLINES —
               </span>
             </div>
@@ -577,14 +573,14 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
                   className="group p-6 sm:p-7 rounded-2xl bg-[#EFE9DC]/80 hover:bg-[#EFE9DC] border border-[#080B0A]/8 hover:border-[#C99742]/50 transition-all duration-300 shadow-xs hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
                 >
                   <div>
-                    <h3 className="font-roboto font-bold text-base sm:text-lg text-[#080B0A] group-hover:text-[#C99742] transition-colors mb-2 leading-snug">
+                    <h3 className="font-roboto font-bold text-base sm:text-lg text-[#080B0A] group-hover:text-[#7A5813] transition-colors mb-2 leading-snug">
                       {rel.title}
                     </h3>
                     <p className="font-lora text-xs sm:text-[13px] text-[#4A504D] leading-relaxed mb-6">
                       {rel.desc}
                     </p>
                   </div>
-                  <div className="pt-3 border-t border-[#080B0A]/8 flex items-center justify-between text-xs font-roboto font-bold tracking-[0.1em] text-[#080B0A] group-hover:text-[#C99742] uppercase transition-colors">
+                  <div className="pt-3 border-t border-[#080B0A]/8 flex items-center justify-between text-xs font-roboto font-bold tracking-[0.1em] text-[#080B0A] group-hover:text-[#7A5813] uppercase transition-colors">
                     <span>Explore Discipline</span>
                     <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.2] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </div>
@@ -612,13 +608,13 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
               {/* Left Column: Heading & Subtitle */}
               <div className="lg:col-span-5">
                 <div className="flex items-center gap-2.5 mb-5">
-                  <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#C99742] uppercase">
+                  <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.22em] text-[#7A5813] uppercase">
                     — FREQUENTLY ASKED QUESTIONS —
                   </span>
                 </div>
                 <h2 className="font-lora text-3xl sm:text-4xl lg:text-[44px] font-normal text-[#080B0A] leading-[1.15] tracking-tight mb-4">
                   Common Questions<br />
-                  <span className="italic text-[#C99742]">About {service.name}.</span>
+                  <span className="italic text-[#7A5813]">About {service.name}.</span>
                 </h2>
                 <p className="font-lora text-xs sm:text-sm text-[#4A504D] leading-relaxed max-w-sm">
                   Clear answers regarding deliverables, collaboration models, engineering standards, and timelines.
@@ -637,10 +633,10 @@ export default function ServiceDetailView({ service, relatedArticles = [] }) {
                         className="w-full flex items-center justify-between text-left group gap-4 cursor-pointer focus:outline-none"
                         aria-expanded={isOpen}
                       >
-                        <span className="font-roboto font-bold text-sm sm:text-base text-[#080B0A] group-hover:text-[#C99742] transition-colors leading-snug">
+                        <span className="font-roboto font-bold text-sm sm:text-base text-[#080B0A] group-hover:text-[#7A5813] transition-colors leading-snug">
                           {faq.q}
                         </span>
-                        <span className="text-[#C99742] text-sm shrink-0 font-bold transition-transform duration-200">
+                        <span className="text-[#7A5813] text-sm shrink-0 font-bold transition-transform duration-200">
                           {isOpen ? '—' : '+'}
                         </span>
                       </button>

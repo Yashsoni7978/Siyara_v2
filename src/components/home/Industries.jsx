@@ -214,7 +214,6 @@ export default function Industries() {
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                       sizes="(max-width: 1024px) 100vw, 50vw"
-                      priority
                     />
                     {/* Subtle Overlay for Polish */}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#070A09]/40 via-transparent to-transparent pointer-events-none" />

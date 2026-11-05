@@ -81,9 +81,6 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
       </head>
       <body className={`${roboto.variable} ${lora.variable} bg-[#080B0A] text-[#F3EFE4] antialiased selection:bg-[#063C2D] selection:text-[#19A878] overflow-x-hidden font-lora`}>
         {/* Skip to Main Content Link for Keyboard Accessibility */}

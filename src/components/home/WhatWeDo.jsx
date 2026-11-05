@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import {
   TrendingUp,
@@ -17,6 +17,23 @@ import Link from 'next/link';
 
 export default function WhatWeDo() {
   const shouldReduceMotion = useReducedMotion();
+  const [imagesVisible, setImagesVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    if (!sectionRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setImagesVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '150px' }
+    );
+    observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   // The 6 official core services with exact required copy and mapped luxury artwork
   const services = [
@@ -108,6 +125,7 @@ export default function WhatWeDo() {
 
   return (
     <section
+      ref={sectionRef}
       id="services"
       aria-label="Siyara Innovations Services and Disciplines"
       className="relative py-16 sm:py-20 lg:py-22 bg-[#070A09] text-[#F3EFE4] overflow-hidden border-t border-[#D9B45F]/15"
@@ -204,15 +222,17 @@ export default function WhatWeDo() {
                   >
                     {/* Background Artwork Layer (Integrated 1:1 Composition) */}
                     <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
-                      <Image
-                        src={service.image}
-                        alt={service.imageAlt}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className={`object-cover ${service.objectPosition} ${
-                          shouldReduceMotion ? '' : 'group-hover:scale-[1.03]'
-                        } transition-transform duration-500 ease-out`}
-                      />
+                      {imagesVisible && (
+                        <Image
+                          src={service.image}
+                          alt={service.imageAlt}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className={`object-cover ${service.objectPosition} ${
+                            shouldReduceMotion ? '' : 'group-hover:scale-[1.03]'
+                          } transition-transform duration-500 ease-out`}
+                        />
+                      )}
 
                       {/* Directional Translucent Overlay for Contrast & Readability */}
                       <div

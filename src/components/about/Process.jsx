@@ -45,7 +45,7 @@ export default function Process() {
         
         {/* Section Identifier */}
         <div className="flex items-center gap-2.5 mb-6">
-          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#C99742]">
+          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#7A5813]">
             09
           </span>
           <span className="text-xs sm:text-sm text-[#080B0A]/40 font-normal">—</span>
@@ -90,7 +90,7 @@ export default function Process() {
                 {/* Circular Numbered Node Marker */}
                 <div 
                   aria-hidden="true"
-                  className="w-6 h-6 rounded-full border border-[#C99742] bg-[#F4EFE6] text-[10px] text-[#C99742] font-semibold flex items-center justify-center mb-6 shadow-sm"
+                  className="w-6 h-6 rounded-full border border-[#C99742] bg-[#F4EFE6] text-[10px] text-[#7A5813] font-semibold flex items-center justify-center mb-6 shadow-sm"
                 >
                   {item.num}
                 </div>
@@ -124,7 +124,7 @@ export default function Process() {
               {/* Circular Numbered Node Marker */}
               <div 
                 aria-hidden="true"
-                className="absolute -left-8 top-0.5 w-6 h-6 rounded-full border border-[#C99742] bg-[#F4EFE6] text-[10px] text-[#C99742] font-semibold flex items-center justify-center shadow-sm z-10"
+                className="absolute -left-8 top-0.5 w-6 h-6 rounded-full border border-[#C99742] bg-[#F4EFE6] text-[10px] text-[#7A5813] font-semibold flex items-center justify-center shadow-sm z-10"
               >
                 {item.num}
               </div>

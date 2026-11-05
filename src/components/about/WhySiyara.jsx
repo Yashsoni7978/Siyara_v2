@@ -44,7 +44,7 @@ export default function WhySiyara() {
         
         {/* Section Identifier */}
         <div className="flex items-center gap-2.5 mb-8 sm:mb-10">
-          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#C99742]">
+          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#7A5813]">
             04
           </span>
           <span className="text-xs sm:text-sm text-[#080B0A]/40 font-normal">—</span>
@@ -64,7 +64,7 @@ export default function WhySiyara() {
           >
             <h2 className="font-lora text-3xl sm:text-4xl lg:text-[46px] font-normal text-[#080B0A] leading-[1.15] tracking-tight">
               Architected for clarity.<br />
-              <span className="italic text-[#C99742]">Engineered to endure.</span>
+              <span className="italic text-[#7A5813]">Engineered to endure.</span>
             </h2>
           </motion.div>
 
@@ -99,7 +99,7 @@ export default function WhySiyara() {
               } flex flex-col justify-start`}
             >
               {/* Restrained Numbered Label */}
-              <span className="text-xs font-roboto font-bold tracking-[0.2em] text-[#C99742] mb-4 block">
+              <span className="text-xs font-roboto font-bold tracking-[0.2em] text-[#7A5813] mb-4 block">
                 {diff.num}
               </span>
 

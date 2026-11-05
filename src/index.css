@@ -423,3 +423,10 @@
 /* ── Ivory section warm tint ─────────────────────────────────────── */
 .bg-ivory { background-color: #F3EFE3; }
 .bg-warm-ivory { background-color: #ECE7D8; }
+
+
+/* ── Performance: CSS Containment for Off-Screen Sections ───────── */
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
+}

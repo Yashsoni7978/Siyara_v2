@@ -82,7 +82,7 @@ export default function WhySiyara() {
         <div className="mb-14 sm:mb-16 lg:mb-20">
           {/* Small Section Label */}
           <div className="flex items-center gap-3 mb-6 sm:mb-8">
-            <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#B9923F]">
+            <span className="text-xs font-sans font-medium tracking-[0.24em] text-[#7A5813]">
               02
             </span>
             <span className="w-8 h-[1px] bg-[#B9923F]/40" />
@@ -183,7 +183,7 @@ export default function WhySiyara() {
                         {/* Number Indicator */}
                         <div
                           className={`font-roboto text-2xl lg:text-3xl font-light leading-none ${
-                            isEmerald ? 'text-[#E5C378]' : 'text-[#D4AF37]'
+                            isEmerald ? 'text-[#E5C378]' : 'text-[#7A5813]'
                           }`}
                         >
                           {principle.id}
@@ -276,7 +276,7 @@ export default function WhySiyara() {
                         className={`font-roboto text-2xl lg:text-3xl font-light leading-none transition-colors ${
                           isEmerald
                             ? 'text-[#E5C378] group-hover:text-[#D4AF37]'
-                            : 'text-[#D4AF37] group-hover:text-[#B9923F]'
+                            : 'text-[#7A5813] group-hover:text-[#6E4F10]'
                         }`}
                       >
                         {principle.id}
@@ -346,7 +346,7 @@ export default function WhySiyara() {
                   <div className="flex items-center gap-3">
                     <span
                       className={`font-roboto text-base font-medium ${
-                        isEmerald ? 'text-[#E5C378]' : 'text-[#D4AF37]'
+                        isEmerald ? 'text-[#E5C378]' : 'text-[#7A5813]'
                       }`}
                     >
                       {principle.id}

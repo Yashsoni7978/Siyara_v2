@@ -21,7 +21,7 @@ export default function SelectedWork() {
   const projects = [
     {
       id: '01',
-      slug: 'anchor-ritika',
+      slug: 'anchor-ritvika-solanki',
       name: 'Anchor Ritvika Solanki',
       industry: 'Events & Media',
       category: 'EVENT & MEDIA PLATFORM',
@@ -226,7 +226,7 @@ export default function SelectedWork() {
                 href="/work"
                 className="inline-flex items-center gap-2 text-xs font-roboto font-semibold tracking-[0.18em] text-[#D4AF37] hover:text-[#E5C378] uppercase transition-colors group"
               >
-                <span>EXPLORE ALL PROJECTS (85)</span>
+                <span>EXPLORE ALL PROJECTS</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -289,7 +289,7 @@ export default function SelectedWork() {
                   }`}
                 >
                   <Link
-                    href={project.link}
+                    href={`/work/${project.slug}`}
                     aria-label={`View ${project.name} Case Study`}
                     className="flex flex-col h-full focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/70 rounded-[22px]"
                   >
@@ -367,8 +367,8 @@ export default function SelectedWork() {
                           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
                         </span>
 
-                        <span className="text-[10px] font-roboto tracking-wider text-white/35 uppercase">
-                          Live Demo ↗
+                        <span className="text-[10px] font-roboto tracking-wider text-white/60 uppercase">
+                          View Project ↗
                         </span>
                       </div>
                     </div>

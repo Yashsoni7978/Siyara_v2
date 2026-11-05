@@ -43,7 +43,7 @@ export default function SelectedWork() {
         
         {/* Section Identifier */}
         <div className="flex items-center gap-2.5 mb-6">
-          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#C99742]">
+          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#7A5813]">
             10
           </span>
           <span className="text-xs sm:text-sm text-[#080B0A]/40 font-normal">—</span>
@@ -88,10 +88,10 @@ export default function SelectedWork() {
                 </div>
 
                 {/* Card Label: Sector in Gold + Title with Arrow */}
-                <div className="flex items-center gap-1.5 text-xs sm:text-[13px] font-roboto font-medium group-hover:text-[#C99742] transition-colors">
-                  <span className="font-bold text-[#C99742]">{project.sector}</span>
-                  <span className="text-[#080B0A] group-hover:text-[#C99742] transition-colors">{project.title}</span>
-                  <span className="text-xs text-[#080B0A]/60 group-hover:text-[#C99742] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200">
+                <div className="flex items-center gap-1.5 text-xs sm:text-[13px] font-roboto font-medium group-hover:text-[#7A5813] transition-colors">
+                  <span className="font-bold text-[#7A5813]">{project.sector}</span>
+                  <span className="text-[#080B0A] group-hover:text-[#7A5813] transition-colors">{project.title}</span>
+                  <span className="text-xs text-[#080B0A]/60 group-hover:text-[#7A5813] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200">
                     ↗
                   </span>
                 </div>

@@ -372,7 +372,6 @@ export default function ServicesDisciplines() {
                     fill
                     sizes="(max-width: 1024px) 100vw, 600px"
                     className="object-cover object-center"
-                    priority
                   />
                   {/* Atmospheric dark gradient overlay for text readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#063C2D]/95 via-[#063C2D]/50 to-transparent pointer-events-none" />

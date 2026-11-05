@@ -33,8 +33,7 @@ export default function FeaturedArticle({ article, onSelectArticle }) {
                 src={article.image}
                 alt={article.title}
                 fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 40vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 440px"
                 className="object-cover object-center opacity-85 group-hover:scale-105 group-hover:opacity-95 transition-all duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#080B0A] via-[#080B0A]/30 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-[#080B0A]/40 lg:to-[#080B0A]" />

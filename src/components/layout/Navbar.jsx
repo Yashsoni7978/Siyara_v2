@@ -105,7 +105,6 @@ export default function Navbar() {
                 alt="Siyara Innovations Emblem"
                 width={80}
                 height={80}
-                priority
                 className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -193,7 +192,6 @@ export default function Navbar() {
                 alt="Siyara Innovations Emblem"
                 width={72}
                 height={72}
-                priority
                 className="w-full h-full object-contain"
               />
             </div>

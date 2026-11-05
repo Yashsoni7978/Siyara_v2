@@ -18,7 +18,7 @@ export default function OurStory() {
         
         {/* Section Identifier */}
         <div className="flex items-center gap-2.5 mb-8 sm:mb-10">
-          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#C99742]">
+          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#7A5813]">
             02
           </span>
           <span className="text-xs sm:text-sm text-[#080B0A]/40 font-normal">—</span>
@@ -41,7 +41,7 @@ export default function OurStory() {
             {/* Primary Headline */}
             <h2 className="font-lora text-3xl sm:text-4xl lg:text-[46px] font-normal text-[#080B0A] leading-[1.15] tracking-tight mb-4">
               More than services.<br />
-              A <span className="italic text-[#C99742]">connected way</span><br />
+              A <span className="italic text-[#7A5813]">connected way</span><br />
               of thinking.
             </h2>
 
@@ -89,7 +89,6 @@ export default function OurStory() {
                   fill
                   sizes="(max-width: 1024px) 100vw, 500px"
                   className="object-cover object-center"
-                  priority
                 />
               </div>
             </div>

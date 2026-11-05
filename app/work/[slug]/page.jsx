@@ -168,7 +168,7 @@ export default async function ProjectDetailPage({ params }) {
       />
 
       {/* ── SECTION 01: PROJECT HERO ─────────────────────────────────── */}
-      <header className="relative pt-32 sm:pt-40 pb-16 sm:pb-24 border-b border-white/10 overflow-hidden bg-gradient-to-b from-[#080B0A] via-[#0B110F] to-[#080B0A]">
+      <header className="relative min-h-[100svh] sm:min-h-0 pt-32 sm:pt-40 pb-16 sm:pb-24 border-b border-white/10 overflow-hidden bg-gradient-to-b from-[#080B0A] via-[#0B110F] to-[#080B0A]">
         {/* Ambient Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-emerald-glow opacity-60 pointer-events-none blur-3xl" />
 
@@ -277,14 +277,15 @@ export default async function ProjectDetailPage({ params }) {
       </header>
 
       {/* ── SECTION 02: HERO VISUAL SHOWCASE ─────────────────────────── */}
-      <section className="relative -mt-6 sm:-mt-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 z-20">
+      <section className="relative mt-4 sm:-mt-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 z-20">
         <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-sm overflow-hidden border border-white/15 shadow-2xl bg-[#0B110F]">
           <Image
             src={project.image}
             alt={`${project.name} digital interface preview`}
             fill
             priority
-            sizes="(max-width: 1400px) 100vw, 1400px"
+            fetchPriority="high"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#080B0A] via-transparent to-transparent opacity-60" />

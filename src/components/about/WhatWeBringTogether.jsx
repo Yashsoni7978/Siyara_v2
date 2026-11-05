@@ -12,7 +12,7 @@ export default function WhatWeBringTogether() {
       title: 'Brand Strategy',
       description: 'Positioning, messaging and long-term brand direction.',
       icon: (
-        <svg className="w-6 h-6 text-[#C99742]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <svg className="w-6 h-6 text-[#7A5813]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
           <path d="m22 12.5-8.58 3.91a2 2 0 0 1-1.66 0L2.6 12.5" />
           <path d="m22 17.5-8.58 3.91a2 2 0 0 1-1.66 0L2.6 17.5" />
@@ -23,7 +23,7 @@ export default function WhatWeBringTogether() {
       title: 'Discoverability & Marketing',
       description: 'Visibility, reach and performance across digital channels.',
       icon: (
-        <svg className="w-6 h-6 text-[#C99742]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <svg className="w-6 h-6 text-[#7A5813]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="m3 11 18-5v12L3 13v-2z" />
           <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
         </svg>
@@ -33,7 +33,7 @@ export default function WhatWeBringTogether() {
       title: 'Automation & Systems',
       description: 'Smarter workflows, lead systems and business operations.',
       icon: (
-        <svg className="w-6 h-6 text-[#C99742]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <svg className="w-6 h-6 text-[#7A5813]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <line x1="4" x2="20" y1="6" y2="6" />
           <line x1="4" x2="20" y1="12" y2="12" />
           <line x1="4" x2="20" y1="18" y2="18" />
@@ -50,7 +50,7 @@ export default function WhatWeBringTogether() {
       title: 'Creative & Content',
       description: 'Visuals, storytelling and content that build brand value.',
       icon: (
-        <svg className="w-6 h-6 text-[#C99742]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <svg className="w-6 h-6 text-[#7A5813]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
           <path d="m15 5 4 4" />
         </svg>
@@ -60,7 +60,7 @@ export default function WhatWeBringTogether() {
       title: 'Web & Digital Experiences',
       description: 'High-performance websites and digital platforms.',
       icon: (
-        <svg className="w-6 h-6 text-[#C99742]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <svg className="w-6 h-6 text-[#7A5813]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <polyline points="16 18 22 12 16 6" />
           <polyline points="8 6 2 12 8 18" />
         </svg>
@@ -70,7 +70,7 @@ export default function WhatWeBringTogether() {
       title: 'Analytics & Growth',
       description: 'Data-led insights and ongoing performance improvement.',
       icon: (
-        <svg className="w-6 h-6 text-[#C99742]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <svg className="w-6 h-6 text-[#7A5813]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <line x1="18" x2="18" y1="20" y2="10" />
           <line x1="12" x2="12" y1="20" y2="4" />
           <line x1="6" x2="6" y1="20" y2="14" />
@@ -86,10 +86,10 @@ export default function WhatWeBringTogether() {
       className="relative py-20 sm:py-24 lg:py-28 bg-[#F4EFE6] text-[#080B0A] overflow-hidden"
     >
       <div className="max-w-[1320px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
+
         {/* Section Identifier */}
         <div className="flex items-center gap-2.5 mb-12 sm:mb-16">
-          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#C99742]">
+          <span className="text-xs sm:text-sm font-roboto font-semibold tracking-[0.2em] text-[#7A5813]">
             07
           </span>
           <span className="text-xs sm:text-sm text-[#080B0A]/40 font-normal">—</span>
@@ -102,7 +102,7 @@ export default function WhatWeBringTogether() {
         {/* DESKTOP DIAGRAM: Left 3 Items — Clean Connector — Central Logo — Connector — Right 3 Items */}
         {/* ========================================================================= */}
         <div className="hidden lg:grid grid-cols-12 gap-4 items-center">
-          
+
           {/* LEFT 3 DISCIPLINES */}
           <div className="col-span-4 space-y-10 pr-2">
             {leftDisciplines.map((item, idx) => (
@@ -129,24 +129,24 @@ export default function WhatWeBringTogether() {
 
           {/* LEFT CLEAN CONNECTOR BRACE SVG (Thin, Non-wavy architectural lines) */}
           <div className="col-span-1 flex items-center justify-center h-full min-h-[260px]">
-            <svg 
-              className="w-full h-[240px] text-[#C99742]/50" 
-              viewBox="0 0 60 240" 
-              fill="none" 
+            <svg
+              className="w-full h-[240px] text-[#7A5813]/50"
+              viewBox="0 0 60 240"
+              fill="none"
               preserveAspectRatio="none"
               aria-hidden="true"
             >
-              <path 
-                d="M 5 20 H 25 C 40 20, 50 100, 55 120 C 50 140, 40 220, 25 220 H 5" 
-                stroke="currentColor" 
-                strokeWidth="1.2" 
-                fill="none" 
+              <path
+                d="M 5 20 H 25 C 40 20, 50 100, 55 120 C 50 140, 40 220, 25 220 H 5"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                fill="none"
               />
-              <path 
-                d="M 5 120 H 55" 
-                stroke="currentColor" 
-                strokeWidth="1.2" 
-                fill="none" 
+              <path
+                d="M 5 120 H 55"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                fill="none"
               />
             </svg>
           </div>
@@ -171,24 +171,24 @@ export default function WhatWeBringTogether() {
 
           {/* RIGHT CLEAN CONNECTOR BRACE SVG (Thin, Non-wavy architectural lines) */}
           <div className="col-span-1 flex items-center justify-center h-full min-h-[260px]">
-            <svg 
-              className="w-full h-[240px] text-[#C99742]/50" 
-              viewBox="0 0 60 240" 
-              fill="none" 
+            <svg
+              className="w-full h-[240px] text-[#7A5813]/50"
+              viewBox="0 0 60 240"
+              fill="none"
               preserveAspectRatio="none"
               aria-hidden="true"
             >
-              <path 
-                d="M 55 20 H 35 C 20 20, 10 100, 5 120 C 10 140, 20 220, 35 220 H 55" 
-                stroke="currentColor" 
-                strokeWidth="1.2" 
-                fill="none" 
+              <path
+                d="M 55 20 H 35 C 20 20, 10 100, 5 120 C 10 140, 20 220, 35 220 H 55"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                fill="none"
               />
-              <path 
-                d="M 55 120 H 5" 
-                stroke="currentColor" 
-                strokeWidth="1.2" 
-                fill="none" 
+              <path
+                d="M 55 120 H 5"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                fill="none"
               />
             </svg>
           </div>
