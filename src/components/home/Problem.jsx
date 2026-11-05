@@ -6,7 +6,8 @@ import { Plus, Minus, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Problem() {
-  const [expandedId, setExpandedId] = useState('01');
+  // All accordion items start collapsed by default
+  const [expandedId, setExpandedId] = useState(null);
 
   const challenges = [
     {

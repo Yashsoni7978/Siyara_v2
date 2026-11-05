@@ -200,12 +200,21 @@ export default function Hero() {
             style={{ background: slides[0].overlayGradient }}
           />
 
-          {/* Mobile Viewport Scrim: gentle top-to-bottom blend ensuring text readability over light areas without dark boxes */}
+          {/* Mobile Viewport Scrim: rich emerald-obsidian gradient ensuring crisp white typography & CTA contrast over bright imagery */}
           <div
             className="absolute inset-0 sm:hidden pointer-events-none"
             style={{
               background:
-                'linear-gradient(180deg, rgba(8, 11, 10, 0.82) 0%, rgba(8, 11, 10, 0.65) 38%, rgba(6, 20, 15, 0.40) 60%, transparent 82%)',
+                'linear-gradient(180deg, rgba(8, 11, 10, 0.88) 0%, rgba(8, 11, 10, 0.78) 25%, rgba(6, 24, 18, 0.70) 50%, rgba(8, 11, 10, 0.72) 75%, rgba(8, 11, 10, 0.85) 100%)',
+            }}
+          />
+
+          {/* Mobile Directional Vignette: subtle radial cushion directly behind editorial text & actions */}
+          <div
+            className="absolute inset-0 sm:hidden pointer-events-none"
+            style={{
+              background:
+                'radial-gradient(ellipse at 35% 42%, rgba(8, 11, 10, 0.60) 0%, rgba(6, 20, 15, 0.35) 55%, transparent 85%)',
             }}
           />
 
@@ -255,11 +264,11 @@ export default function Hero() {
       {/* ========================================================================= */}
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 w-full relative z-10">
         <div className="max-w-xl lg:max-w-[540px] xl:max-w-[580px] relative">
-          {/* Subtle localized soft scrim directly behind text copy for effortless legibility without dark boxes */}
+          {/* Subtle localized soft scrim directly behind text copy for effortless legibility across all screen sizes */}
           <div
-            className="absolute -inset-4 sm:-inset-8 rounded-3xl pointer-events-none -z-10 opacity-60 blur-2xl hidden sm:block"
+            className="absolute -inset-4 sm:-inset-8 rounded-3xl pointer-events-none -z-10 opacity-70 blur-2xl block"
             style={{
-              background: 'radial-gradient(ellipse at 30% 45%, rgba(8, 11, 10, 0.45) 0%, rgba(6, 24, 18, 0.18) 60%, transparent 80%)',
+              background: 'radial-gradient(ellipse at 30% 45%, rgba(8, 11, 10, 0.65) 0%, rgba(6, 24, 18, 0.35) 60%, transparent 85%)',
             }}
           />
 
@@ -289,18 +298,18 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <Link
                 href={slide.primaryCta.href}
-                className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3 sm:py-3.5 bg-[#D4AF37] hover:bg-[#E5C378] text-[#080B0A] text-xs sm:text-[13px] font-roboto font-medium tracking-[0.14em] uppercase rounded-full transition-all duration-300 shadow-xl shadow-[#D4AF37]/15 hover:shadow-[#D4AF37]/30 hover:-translate-y-0.5 active:translate-y-0 min-h-[46px] group"
+                className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3 sm:py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs sm:text-[13px] font-roboto font-medium tracking-[0.14em] uppercase rounded-full transition-all duration-300 shadow-xl hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] hover:-translate-y-0.5 active:translate-y-0 min-h-[46px] group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
               >
                 <span>{slide.primaryCta.text}</span>
-                <ArrowUpRight className="w-4 h-4 stroke-[2.2] text-[#080B0A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <ArrowUpRight className="w-4 h-4 stroke-[2.2] text-[#F3EFE4] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
 
               <Link
                 href={slide.secondaryCta.href}
-                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 border border-[#F3EFE4]/25 hover:border-[#D4AF37]/60 text-[#F3EFE4] hover:text-[#D4AF37] bg-[#080B0A]/40 backdrop-blur-sm text-xs sm:text-[13px] font-roboto font-medium tracking-[0.14em] uppercase rounded-full transition-all duration-300 group min-h-[46px]"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs sm:text-[13px] font-roboto font-medium tracking-[0.14em] uppercase rounded-full transition-all duration-300 shadow-lg hover:shadow-[0_0_16px_rgba(25,168,120,0.25)] hover:-translate-y-0.5 active:translate-y-0 min-h-[46px] group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
               >
                 <span>{slide.secondaryCta.text}</span>
-                <ArrowRight className="w-4 h-4 text-[#D4AF37] group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 text-[#F3EFE4] group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>

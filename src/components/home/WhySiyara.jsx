@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function WhySiyara() {
   // Panel 02 (Integrated Team) is expanded by default, matching the approved reference design
-  const [expandedId, setExpandedId] = useState('02');
+  const [expandedId, setExpandedId] = useState(null);
 
   const principles = [
     {
@@ -115,10 +115,10 @@ export default function WhySiyara() {
               <div>
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#063C2D] text-[#F3EFE4] hover:bg-[#0B5A43] text-xs font-sans font-medium tracking-[0.16em] uppercase transition-all duration-200 shadow-sm group"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#152D24] hover:bg-[#1C3B30] border border-[#0B5741] hover:border-[#147A5C] text-[#F3EFE4] text-xs font-sans font-medium tracking-[0.16em] uppercase transition-all duration-300 shadow-sm hover:shadow-[0_0_14px_rgba(25,168,120,0.22)] group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#19A878]"
                 >
                   <span>OUR APPROACH</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-[#19A878] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <ArrowUpRight className="w-3.5 h-3.5 text-[#F3EFE4] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
             </div>
@@ -339,6 +339,7 @@ export default function WhySiyara() {
                 {/* Header Row (Always Clickable) */}
                 <button
                   type="button"
+                  aria-label={`Toggle ${principle.fullTitle} principle`}
                   onClick={() => handleToggle(principle.id)}
                   aria-expanded={isExpanded}
                   className="w-full p-4 sm:p-5 flex items-center justify-between text-left cursor-pointer focus:outline-none"
