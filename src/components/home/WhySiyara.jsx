@@ -61,6 +61,14 @@ export default function WhySiyara() {
     },
   ];
 
+
+  const prewarmImage = (src) => {
+    if (typeof window !== 'undefined' && src) {
+      const img = new window.Image();
+      img.src = src;
+    }
+  };
+
   const handleToggle = (id) => {
     setExpandedId((prev) => (prev === id ? null : id));
   };
@@ -147,6 +155,9 @@ export default function WhySiyara() {
                     ? 'flex-1 bg-[#063C2D] hover:bg-[#074735] border border-[#19A878]/25 hover:border-[#E5C378]/50 shadow-sm cursor-pointer group'
                     : 'flex-1 bg-[#F3EFE4] hover:bg-[#ECE7D8] border border-[#080B0A]/10 hover:border-[#D4AF37]/50 shadow-sm cursor-pointer group'
                 }`}
+                onMouseEnter={() => prewarmImage(principle.image)}
+                onFocus={() => prewarmImage(principle.image)}
+                onTouchStart={() => prewarmImage(principle.image)}
                 onClick={() => {
                   if (!isExpanded) handleToggle(principle.id);
                 }}
@@ -246,25 +257,14 @@ export default function WhySiyara() {
                       </div>
                     </motion.div>
 
-                    {/* Right Column: Architectural Visual */}
+                    {/* Right Column: Architectural Visual with Resilient Loading & Shimmer Skeleton */}
                     <motion.div
                       initial={{ opacity: 0, scale: 0.96 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-                      className="relative h-full w-[190px] lg:w-[230px] xl:w-[260px] shrink-0 rounded-2xl overflow-hidden shadow-inner border border-white/10"
+                      className="relative h-full w-[190px] lg:w-[230px] xl:w-[260px] shrink-0"
                     >
-                      <Image
-                        src={principle.image}
-                        alt={`${principle.fullTitle} Visual`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1200px) 230px, 260px"
-                      />
-                      <div
-                        className={`absolute inset-0 bg-gradient-to-t via-transparent to-transparent pointer-events-none ${
-                          isEmerald ? 'from-[#063C2D]/40' : 'from-[#F3EFE4]/40'
-                        }`}
-                      />
+                      <WhySiyaraCardVisual principle={principle} isEmerald={isEmerald} isMobile={false} />
                     </motion.div>
                   </div>
                 ) : (
@@ -341,6 +341,8 @@ export default function WhySiyara() {
                   type="button"
                   aria-label={`Toggle ${principle.fullTitle} principle`}
                   onClick={() => handleToggle(principle.id)}
+                  onMouseEnter={() => prewarmImage(principle.image)}
+                  onTouchStart={() => prewarmImage(principle.image)}
                   aria-expanded={isExpanded}
                   className="w-full p-4 sm:p-5 flex items-center justify-between text-left cursor-pointer focus:outline-none"
                 >
@@ -397,16 +399,8 @@ export default function WhySiyara() {
                       className="overflow-hidden"
                     >
                       <div className="px-5 pb-5 pt-1">
-                        {/* Architectural Visual */}
-                        <div className="relative w-full h-[160px] sm:h-[180px] rounded-xl overflow-hidden mb-4 border border-white/10">
-                          <Image
-                            src={principle.image}
-                            alt={`${principle.fullTitle} Visual`}
-                            fill
-                            className="object-cover"
-                            sizes="100vw"
-                          />
-                        </div>
+                        {/* Architectural Visual with Resilient Loading & Shimmer Skeleton */}
+                        <WhySiyaraCardVisual principle={principle} isEmerald={isEmerald} isMobile={true} />
 
                         {/* Lead */}
                         <p
@@ -487,5 +481,78 @@ export default function WhySiyara() {
 
       </div>
     </section>
+  );
+}
+
+/**
+ * WhySiyaraCardVisual - Robust Architectural Image Container
+ * Features:
+ * - Immediate eager loading upon card expansion (eliminates lazy-loading stall)
+ * - Luxury emerald & gold pulse shimmer skeleton (no blank boxes while fetching)
+ * - Smooth opacity transition on load (no pop-in or stutter)
+ * - Elegant branded fallback with geometric node if network fails
+ */
+function WhySiyaraCardVisual({ principle, isEmerald, isMobile = false }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <div
+      className={
+        isMobile
+          ? 'relative w-full h-[160px] sm:h-[180px] rounded-xl overflow-hidden mb-4 border border-white/10 bg-gradient-to-br from-[#06241B] via-[#083024] to-[#041A13]'
+          : 'relative h-full w-[190px] lg:w-[230px] xl:w-[260px] shrink-0 rounded-2xl overflow-hidden shadow-inner border border-white/10 bg-gradient-to-br from-[#06241B] via-[#083024] to-[#041A13]'
+      }
+    >
+      {/* 1. Shimmer Skeleton & Watermark (Active while image is fetching/decoding) */}
+      {!isLoaded && !hasError && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-0">
+          <div className="w-10 h-10 rounded-full border border-[#D4AF37]/30 bg-[#071E18]/80 flex items-center justify-center animate-pulse shadow-[0_0_12px_rgba(217,180,95,0.2)]">
+            <div className="w-3.5 h-3.5 bg-[#D4AF37]/70 rotate-45" />
+          </div>
+          <span className="text-[10px] font-sans tracking-[0.2em] uppercase text-[#E5C378]/70 mt-3 animate-pulse">
+            Loading Visual...
+          </span>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#19A878]/10 to-transparent animate-pulse" />
+        </div>
+      )}
+
+      {/* 2. Error Fallback (Prevents empty or broken boxes) */}
+      {hasError ? (
+        <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-gradient-to-br from-[#06241B] via-[#071E18] to-[#041A13] text-center z-10">
+          <div className="w-9 h-9 rounded-full border border-[#D4AF37]/40 bg-[#071E18] flex items-center justify-center mb-2.5 shadow-[0_0_10px_rgba(217,180,95,0.2)]">
+            <div className="w-3 h-3 bg-[#D4AF37] rotate-45" />
+          </div>
+          <span className="text-[11px] font-roboto font-medium uppercase tracking-[0.16em] text-[#E5C378]">
+            {principle.fullTitle}
+          </span>
+          <span className="text-[10px] font-lora italic text-[#A5B8AA]/80 mt-1">
+            Siyara Architectural Studio
+          </span>
+        </div>
+      ) : (
+        /* 3. The Image Component */
+        <Image
+          src={principle.image}
+          alt={`${principle.fullTitle} Visual`}
+          fill
+          loading="eager"
+          decoding="async"
+          onLoad={() => setIsLoaded(true)}
+          onError={() => setHasError(true)}
+          className={`object-cover transition-all duration-500 ease-out ${
+            isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+          }`}
+          sizes={isMobile ? '100vw' : '(max-width: 1200px) 230px, 260px'}
+        />
+      )}
+
+      {/* 4. Luxury Vignette Overlay */}
+      <div
+        className={`absolute inset-0 bg-gradient-to-t via-transparent to-transparent pointer-events-none z-10 ${
+          isEmerald ? 'from-[#063C2D]/50' : 'from-[#F3EFE4]/35'
+        }`}
+      />
+    </div>
   );
 }

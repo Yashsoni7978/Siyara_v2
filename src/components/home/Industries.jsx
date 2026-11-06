@@ -49,6 +49,14 @@ export default function Industries() {
     },
   ];
 
+
+  const prewarmImage = (src) => {
+    if (typeof window !== 'undefined' && src) {
+      const img = new window.Image();
+      img.src = src;
+    }
+  };
+
   const currentIndustry = industries[activeIndex] || industries[0];
 
   return (
@@ -198,27 +206,46 @@ export default function Industries() {
               className="block group"
               aria-label={`View ${currentIndustry.name} Industry Solutions`}
             >
-              <div className="relative w-full aspect-[16/9.5] sm:aspect-[16/9] rounded-[22px] lg:rounded-[26px] overflow-hidden border border-[#D4AF37]/35 group-hover:border-[#D4AF37]/70 shadow-[0_16px_40px_rgba(0,0,0,0.5)] bg-[#070A09] transition-all duration-300">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={currentIndustry.id}
-                    initial={{ opacity: 0, scale: 1.02 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                    className="absolute inset-0 w-full h-full"
-                  >
-                    <Image
-                      src={currentIndustry.image}
-                      alt={currentIndustry.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                    {/* Subtle Overlay for Polish */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#070A09]/40 via-transparent to-transparent pointer-events-none" />
-                  </motion.div>
-                </AnimatePresence>
+              <div className="relative w-full aspect-[16/9.5] sm:aspect-[16/9] rounded-[22px] lg:rounded-[26px] overflow-hidden border border-[#D4AF37]/35 group-hover:border-[#D4AF37]/70 shadow-[0_16px_40px_rgba(0,0,0,0.5)] bg-gradient-to-br from-[#06241B] via-[#082E23] to-[#041913] transition-all duration-300">
+                {/* 1. Permanent Luxury Shimmer Skeleton & Watermark Base (Eliminates pitch-black empty state) */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-0">
+                  <div className="w-12 h-12 rounded-full border border-[#D4AF37]/30 bg-[#071E18]/85 flex items-center justify-center shadow-[0_0_14px_rgba(217,180,95,0.2)]">
+                    <div className="w-4 h-4 bg-[#D4AF37]/70 rotate-45" />
+                  </div>
+                  <span className="text-[11px] font-sans tracking-[0.22em] uppercase text-[#E5C378]/70 mt-3 animate-pulse">
+                    Siyara Industry Solutions
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#19A878]/10 to-transparent animate-pulse pointer-events-none" />
+                </div>
+
+                {/* 2. Stacked Cross-Fade Image Layers (Zero blank flashes, instant 60fps switching, no repeated downloads) */}
+                {industries.map((item, idx) => {
+                  const isActive = activeIndex === idx;
+                  const isDefault = idx === 1; // Healthcare & Clinics is the initial active index
+
+                  return (
+                    <div
+                      key={item.id}
+                      className={`absolute inset-0 w-full h-full transition-opacity duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                        isActive ? 'opacity-100 z-10 pointer-events-auto' : 'opacity-0 z-0 pointer-events-none'
+                      }`}
+                      aria-hidden={!isActive}
+                    >
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        priority={isDefault}
+                        loading={isDefault ? 'eager' : 'lazy'}
+                        decoding="async"
+                        className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                      {/* Subtle Vignette & Polish Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#070A09]/50 via-transparent to-transparent pointer-events-none" />
+                    </div>
+                  );
+                })}
               </div>
             </Link>
           </div>
